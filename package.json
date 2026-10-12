@@ -1,0 +1,16 @@
+{
+  "name": "kagyu-tibetan",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Learn Classical Tibetan with sentence tiles. Static site, no build step.",
+  "type": "module",
+  "scripts": {
+    "build:content": "node scripts/build-content.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test site/src/engine/",
+    "serve": "npx serve site"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

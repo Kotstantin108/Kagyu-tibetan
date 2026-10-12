@@ -1,0 +1,288 @@
+# page | tib | enOrigin | en | ru | noteEn | noteRu
+# Source: Classical Tibetan Grammar Handbook, TLAN 101, Rangjung Yeshe Institute (2023).
+# enOrigin "textbook" = translation given in the handbook; "machine" = exercise sentence
+# translated by us (the handbook has no answer key). All Russian is machine.
+
+@set lesson-01
+3 | དགོན་པ་དམར་པོ་ | textbook | red monastery | красный монастырь | Adjectives follow the noun they modify. | Прилагательное стоит после существительного.
+3 | ཆོས་པ་བཟང་པོ་ | textbook | excellent Dharma practitioner | превосходный практикующий Дхарму
+3 | བདེ་བ་ཆེན་པོ་ | textbook | great bliss | великое блаженство
+3 | ཉི་མ་ཚ་པོ་ | textbook | hot sun | горячее солнце
+3 | སློབ་མ་བཟང་པོ་ | textbook | good student | хороший ученик
+3 | ཁང་པ་རྙིང་པ་ | textbook | old house | старый дом
+3 | སློབ་མ་གསར་པ་ | textbook | new student | новый ученик
+3 | བླ་མ་དམ་པ་ | textbook | sacred guru | священный гуру
+3 | ཆོས་མཆོག་ | textbook | supreme Dharma | высшая Дхарма
+3 | རྒྱལ་མོ་ངན་པ་ | textbook | bad queen | дурная царица
+2 | ཆོས་པ་ | textbook | Dharma practitioner | практикующий Дхарму | The ending particle པ་ makes "one who is associated with" the preceding word. | Конечная частица པ་ даёт значение «тот, кто связан с…».
+2 | རྟ་པ་ | textbook | horse rider | всадник
+2 | བོད་པ་ | textbook | Tibetan | тибетец
+2 | རྣལ་འབྱོར་པ་ | textbook | yogin | йогин
+2 | སངས་རྒྱས་པ་ | textbook | Buddhist | буддист
+2 | རྣལ་འབྱོར་མ་ | textbook | yoginī | йогини | མ་ and མོ་ can mark the feminine. | Частицы མ་ и མོ་ могут обозначать женский род.
+2 | རྒྱལ་མོ་ | textbook | queen | царица
+2 | ལྷ་མོ་ | textbook | goddess | богиня
+2 | བུ་མོ་ | textbook | daughter | дочь
+5 | ཐེག་པ་ཆེན་པོ་ | textbook | great vehicle, Mahāyāna | великая колесница, Махаяна
+5 | ཕྱག་རྒྱ་ཆེན་པོ་ | textbook | great symbol, Mahāmudrā | великий символ, Махамудра
+5 | ཐེག་པ་དམན་པ་ | textbook | inferior vehicle | малая колесница
+5 | རྫོགས་པ་ཆེན་པོ་ | textbook | the great perfection | великое совершенство
+5 | སྒྲོལ་མ་དཀར་པོ་ | textbook | White Tārā | Белая Тара
+5 | ཆོས་ཀྱི་སྐུ་ | textbook | dharma body (dharmakāya) | тело Дхармы (дхармакая)
+5 | ཉན་ཐོས་དང་རང་རྒྱལ་ | textbook | śrāvakas and pratyekabuddhas | шраваки и пратьекабудды
+5 | འཁོར་བ་དང་མྱ་ངན་ལས་འདས་པ་ | textbook | saṃsāra and nirvāṇa | сансара и нирвана
+6 | འདི་བླ་མ་ཡིན། | textbook | This is a guru. | Это гуру. | Demonstrative pronouns open the sentence; the linking verb ཡིན་ comes last. | Указательное местоимение стоит в начале, связка ཡིན་ — в конце.
+6 | བླ་མ་འདི་ | textbook | this lama | этот лама | Demonstrative adjectives follow the noun. | Указательное прилагательное стоит после существительного.
+6 | བླ་མ་དམ་པ་འདི་ | textbook | this sacred lama | этот священный лама
+6 | ལམ་འདི་ | textbook | this path | этот путь
+6 | ཁང་པ་དེ་ | textbook | that house | тот дом
+6 | བདེ་བ་འདི་ | textbook | this happiness | это счастье
+6 | རྟ་དེ་ | textbook | that horse | та лошадь
+6 | དགོན་པ་དཀར་པོ་དེ་ | textbook | that white monastery | тот белый монастырь
+6 | སློབ་མ་གསར་པ་འདི་ | textbook | this new student | этот новый ученик
+6 | བླ་མ་བཟང་པོ་འདི་ | textbook | this excellent guru | этот превосходный гуру
+7 | རྒྱལ་མོ་ངན་པ་དེ་ | textbook | that bad queen | та дурная царица
+7 | དཀྱིལ་འཁོར་ཆེན་པོ་འདི་ | textbook | this great maṇḍala | эта великая мандала
+7 | རྣལ་འབྱོར་པ་ཆེན་པོ་འདི་ | textbook | this great yogin | этот великий йогин
+7 | ལམ་ཞིག་ | textbook | a path | некий путь | The indefinite particle ཅིག་/ཞིག་/ཤིག་ follows the noun; its spelling depends on the preceding suffix letter. | Неопределённая частица ཅིག་/ཞིག་/ཤིག་ стоит после существительного; её написание зависит от суффикса предыдущего слога.
+7 | རྟ་ཞིག་ | textbook | a horse | некая лошадь
+7 | སངས་རྒྱས་ཤིག་ | textbook | a buddha | некий будда
+7 | དགོན་པ་རྙིང་པ་ཞིག་ | textbook | an old monastery | некий старый монастырь
+7 | ཁང་པ་གསར་པ་ཞིག་ | textbook | a new house | некий новый дом
+8 | ཆོས་རྣམས་ | textbook | dharmas | дхармы, явления | Plural particles རྣམས་ and དག་ come after the noun, adjective and demonstrative. | Частицы множественного числа རྣམས་ и དག་ ставятся после существительного, прилагательного и указательного слова.
+8 | བུམ་པ་རྣམས་ | textbook | vases | вазы
+8 | མདོ་དག་ | textbook | sūtras | сутры
+8 | དེ་རྣམས་ | textbook | those | те
+8 | དེ་དག་ | textbook | those | те
+8 | འདི་རྣམས་ | textbook | these | эти
+8 | འདི་དག་ | textbook | these | эти
+8 | དགོན་པ་དམར་པོ་འདི་དག་ | textbook | these red monasteries | эти красные монастыри
+8 | སློབ་མ་གསར་པ་རྣམས་ | textbook | the new students | новые ученики
+9 | བླ་མ་བཟང་པོ་དག་ | textbook | the excellent gurus | превосходные гуру
+9 | སངས་རྒྱས་དེ་ཚོ་ | textbook | those buddhas | те будды
+10 | དགོན་པ་གསར་པ་གསུམ་དེ་དག་ | textbook | those three new monasteries | те три новых монастыря | Order: noun + adjective + number + demonstrative + plural particle. | Порядок: существительное + прилагательное + числительное + указательное слово + частица мн. ч.
+10 | རྣལ་འབྱོར་མ་མཆོག་དགུ་དེ་རྣམས་ | textbook | those nine supreme yoginīs | те девять высших йогини
+10 | སློབ་མ་བཟང་པོ་བཞི་འདི་རྣམས་ | textbook | these four excellent students | эти четыре превосходных ученика
+10 | བུམ་པ་དཀར་པོ་གཉིས་དེ་རྣམས་ | textbook | those two white vases | те две белые вазы
+10 | རྟ་དཀར་པོ་ལྔ་འདི་དག་ཐམས་ཅད་ | textbook | all these five white horses | все эти пять белых лошадей
+9 | གཉིས་པོ་ | textbook | the (group of) two | эти двое (вместе) | པོ་ after a number means the group taken together. | པོ་ после числительного означает группу как целое.
+9 | གསུམ་པོ་ | textbook | the (group of) three | эти трое (вместе)
+9 | བཅུ་པོ་ | textbook | the (group of) ten | эти десять (вместе)
+10 | དགེ་བ་དང་མི་དགེ་བ་ | textbook | virtue and non-virtue | добродетель и недобродетель | དང་ separates the members of a list. | དང་ разделяет члены перечисления.
+10 | ཐབས་དང་ཤེས་རབ་ | textbook | method and wisdom | метод и мудрость
+10 | དཔལ་དང་ལྡན་པ་ | textbook | endowed with glory | наделённый славой | With words of possession, separation and relation, དང་ means "with" or "from". | Со словами обладания, отделения и связи དང་ значит «с» или «от».
+10 | འཁོར་དང་བཅས་པ་ | textbook | together with the retinue | вместе со свитой
+10 | སྤྲོས་པ་དང་བྲལ་བ་ | textbook | free from mental constructs | свободный от умопостроений
+10 | བླ་མ་དང་འབྲེལ་བ་ | textbook | associated with the guru | связанный с гуру
+11 | སངས་རྒྱས་དང་ཆོས་དང་དགེ་འདུན་གསུམ་ | textbook | Buddha, Dharma, and Saṅgha | Будда, Дхарма и Сангха | A list often ends with a number totalling its members. | Перечисление часто завершается числительным, подсчитывающим его члены.
+11 | སྦྱིན་པ་ཚུལ་ཁྲིམས་དང་བཟོད་པ་རྣམས་ | textbook | generosity, discipline, and patience | щедрость, дисциплина и терпение
+11 | ས་དང་པོ་ས་གཉིས་པ་ས་གསུམ་པ་དང་ས་བཞི་པ་རྣམས་ | textbook | the first, second, third, and fourth bhūmis | первый, второй, третий и четвёртый уровни
+11 | ཐེག་པ་དམན་པ་དང་ཐེག་པ་ཆེན་པོ་དང་གསང་སྔགས་ཐེག་པ་གསུམ་ | textbook | Hīnayāna, Mahāyāna, and Mantrayāna | Хинаяна, Махаяна и Мантраяна
+11 | དགོན་པ་དམར་པོ་རྣམས་དང་ཁང་པ་ནག་པོ་བརྒྱད་ | textbook | the red monasteries and the eight black houses | красные монастыри и восемь чёрных домов
+11 | བླ་མ་བཟང་པོ་འདི་དང་སློབ་མ་གསར་པ་གསུམ་དེ་དག་ | textbook | this excellent guru and those three new students | этот превосходный гуру и те три новых ученика
+11 | སྦྱིན་པ་དང་ཚུལ་ཁྲིམས་དང་བཟོད་པ་ལ་སོགས་པ་ | textbook | generosity, discipline, patience, and so forth | щедрость, дисциплина, терпение и так далее | ལ་སོགས་པ་ (often shortened to སོགས་) closes an open list. | ལ་སོགས་པ་ (часто сокращённо སོགས་) завершает незаконченный список.
+11 | འདོད་ཆགས་ཞེ་སྡང་གཏི་མུག་སོགས་ | textbook | desire, anger, ignorance, etc. | желание, гнев, неведение и прочее
+11 | ས་དང་ཆུ་དང་མེ་སོགས་ | textbook | earth, water, fire, and so forth | земля, вода, огонь и так далее
+11 | རྣལ་འབྱོར་པ་བཟང་པོ་གསུམ་དང་ཆོས་པ་བརྒྱ་ལ་སོགས་པ་ | textbook | the three excellent yogins, the hundred Dharma practitioners, and so on | три превосходных йогина, сто практикующих и так далее
+13 | ཆོས་ཟབ་མོ་ | machine | profound Dharma | глубокая Дхарма
+13 | བླ་མ་བཟང་པོ་རྣམས་ | machine | the excellent gurus | превосходные гуру
+13 | རྟ་དེ་དག་ཐམས་ཅད་ | machine | all those horses | все те лошади
+13 | དགེ་བ་བཟང་པོ་འདི་ | machine | this excellent virtue | эта превосходная добродетель
+13 | སློབ་མ་གསར་པ་མང་པོ་ | machine | many new students | много новых учеников
+13 | སྡུག་བསྔལ་ཆེན་པོ་དེ་ | machine | that great suffering | то великое страдание
+13 | ཡོན་ཏན་ཟབ་མོ་ཀུན་ | machine | all the profound qualities | все глубокие качества
+13 | སློབ་མ་གསར་པ་ཞིག་ | machine | a new student | некий новый ученик
+13 | དགེ་འདུན་ཆེན་པོ་འདི་ | machine | this great Saṅgha | эта великая Сангха
+13 | བླ་མ་བཟང་པོ་དེ་དག་ཐམས་ཅད་ | machine | all those excellent gurus | все те превосходные гуру
+13 | མི་བཟང་པོ་གསུམ་དེ་རྣམས་ཀུན་ | machine | all those three good men | все те трое хороших людей
+13 | སེམས་ངན་པ་ཞིག་ | machine | a bad mind | дурной ум
+13 | ཁང་པ་ཆེན་པོ་དགུ་འདི་དག་ཐམས་ཅད་ | machine | all these nine big houses | все эти девять больших домов
+13 | ཐེག་པ་ཆེན་པོ་འདི་ | machine | this Greater Vehicle | эта Великая колесница
+13 | ཆུ་ཚ་པོ་འདི་དག་ | machine | these hot waters | эти горячие воды
+13 | མདོ་ཟབ་མོ་དྲུག་དེ་དག་ཐམས་ཅད་ | machine | all those six profound sūtras | все те шесть глубоких сутр
+13 | སངས་རྒྱས་བཞི་པ་འདི་ | machine | this fourth Buddha | этот четвёртый Будда
+13 | སངས་རྒྱས་བཞི་པོ་དེ་དག་ཀུན་ | machine | all those four Buddhas | все те четверо Будд
+13 | སྡིག་པ་ཆེན་པོ་དེ་ | machine | that great evil deed | то великое злодеяние
+13 | དབང་ཟབ་མོ་བཞི་འདི་དག་ཐམས་ཅད་ | machine | all these four profound empowerments | все эти четыре глубоких посвящения
+13 | དགེ་བ་དང་སྡིག་པ་རྣམས་ | machine | virtues and evil deeds | добродетели и злодеяния
+14 | ཆོས་པ་གསར་པ་དང་བོད་པ་ཐམས་ཅད་ལ་སོགས་པ་ | machine | the new Dharma practitioners, all the Tibetans, and so forth | новые практикующие, все тибетцы и прочие
+14 | ཐེག་པ་ཆེན་པོ་དང་ཐེག་པ་དམན་པ་དང་རྡོ་རྗེ་ཐེག་པ་གསུམ་ | machine | the Greater Vehicle, the Lesser Vehicle, and the Vajra Vehicle | Великая колесница, Малая колесница и Ваджрная колесница
+14 | ཁང་པ་གསར་པ་གསུམ་དེ་དག་དང་དགོན་པ་རྙིང་པ་འདི་ | machine | those three new houses and this old monastery | те три новых дома и этот старый монастырь
+14 | ཡོན་ཏན་ཟབ་མོ་ཀུན་དང་ཤེས་རབ་ཆེན་པོ་འདི་ | machine | all the profound qualities and this great wisdom | все глубокие качества и эта великая мудрость
+14 | སློབ་མ་མང་པོ་དང་བླ་མ་རྣམས་ | machine | many students and the gurus | многие ученики и гуру
+14 | ཁང་པ་དམར་པོ་དང་ཁང་པ་ནག་པོ་ལ་སོགས་པ་ | machine | red houses, black houses, and so forth | красные дома, чёрные дома и прочее
+14 | བཀྲ་ཤིས་དང་ཚེ་རིང་དང་ཟླ་བ་གསུམ་ | machine | Tashi, Tsering, and Dawa | Таши, Цэринг и Дава
+14 | དགེ་འདུན་ཆེན་པོ་དེ་དག་ཐམས་ཅད་ | machine | all those great Saṅghas | все те великие Сангхи
+14 | སློབ་མ་བཟང་པོ་དང་བླ་མ་ངན་པ་སོགས་ | machine | good students, bad gurus, etc. | хорошие ученики, плохие гуру и прочие
+14 | ཉི་མ་དང་ཟླ་བ་གཉིས་ | machine | the sun and the moon | солнце и луна
+14 | རྣལ་འབྱོར་པ་དེ་དག་དང་རྒྱལ་མོ་གསར་པ་ལ་སོགས་པ་ | machine | those yogins, the new queen, and so forth | те йогины, новая царица и прочие
+
+@set lesson-02
+18 | སངས་རྒྱས་ཀྱི་བསྟན་པ་ | textbook | the teachings of the Buddha | учение Будды | A + connective particle + B = "B of A": translate from right to left. | A + соединительная частица + B = «B кого/чего A»: переводим справа налево.
+18 | བྱང་ཆུབ་སེམས་དཔའི་ཐེག་པ་ | textbook | the vehicle of the bodhisattva | колесница бодхисаттвы | After a final འ the connective particle is written as འི fused to the syllable. | После конечного འ соединительная частица пишется как འི, слитно со слогом.
+18 | རྒྱལ་མོའི་ཤེས་རབ་ | textbook | the wisdom of the queen | мудрость царицы | After an open syllable the connective particle is འི (or ཡི་ as a separate syllable). | После открытого слога соединительная частица — འི (или ཡི་ отдельным слогом).
+18 | བོད་ཀྱི་མི་ | textbook | people of Tibet | люди Тибета
+18 | བསྒོམ་པའི་དོན་ | textbook | the meaning of meditation | смысл медитации
+18 | དཀྱིལ་འཁོར་གྱི་ལྷ་ | textbook | the deities of the maṇḍala | божества мандалы
+18 | བོད་པ་དང་རྒྱ་གར་བའི་ཆོས་ལུགས་ཀུན་ | textbook | all the religious traditions of Tibetans and Indians | все религиозные традиции тибетцев и индийцев | The particle refers to the whole list before it. | Частица относится ко всему перечислению перед ней.
+18 | དགོན་པ་དཀར་པོའི་བླ་མ་བཟང་པོ་ | textbook | the excellent guru of the white monastery | превосходный гуру белого монастыря
+19 | སེམས་ཅན་ཐམས་ཅད་ཀྱི་མགོན་པོ་མཆོག་ | textbook | the supreme protector of all sentient beings | высший защитник всех живых существ
+19 | ཆོས་པ་བཟང་པོ་དེའི་གདམས་ངག་ | textbook | the oral instructions of that excellent Dharma practitioner | устные наставления того превосходного практикующего
+19 | བླ་མ་དང་སློབ་མའི་དགོན་པ་ | textbook | the monastery of the guru and the students | монастырь гуру и учеников
+19 | དབང་ཟབ་མོ་བཞིའི་ཆོ་ག་དང་དམ་ཚིག་ | textbook | the rituals and sacred commitments of the four profound empowerments | ритуалы и самаи четырёх глубоких посвящений
+19 | ཁང་པ་རྙིང་པ་མང་པོ་དེ་དག་གི་བདག་པོའི་ཕྲག་དོག་ | textbook | the jealousy of the owner of those many old houses | зависть владельца тех многих старых домов | With several connective particles, keep connecting from right to left. | При нескольких соединительных частицах продолжаем соединять справа налево.
+19 | བལ་ཡུལ་གྱི་དགོན་པ་དཀར་པོའི་བླ་མའི་བསྟན་པ་ | textbook | the teachings of the guru of the white monastery of Nepal | учение гуру белого монастыря Непала
+19 | ངའི་བླ་མ་ | textbook | my guru | мой гуру | Possessive pronouns are pronoun + connective particle. | Притяжательные местоимения — это местоимение + соединительная частица.
+19 | བདག་གི་ཁང་པ་དམར་པོ་ | textbook | my red house | мой красный дом
+19 | ཁྱོད་ཀྱི་སློབ་མ་བཟང་པོ་ | textbook | your excellent disciple | твой превосходный ученик
+19 | ཁོང་གི་ང་རྒྱལ་ཆེན་པོ་ | textbook | his great pride | его великая гордость
+19 | བདག་ཅག་གི་རྟ་དཀར་པོ་གསུམ་ | textbook | our three white horses | наши три белые лошади
+19 | བདག་གི་བླ་མའི་དགོན་པ་ | textbook | the monastery of my guru | монастырь моего гуру
+20 | བྱང་ཆུབ་ཀྱི་ལམ་ | textbook | the path to enlightenment | путь к пробуждению | Sometimes "of" is better rendered by another preposition: the path "of" enlightenment is the path "to" it. | Иногда вместо «кого/чего» лучше другой предлог: путь «пробуждения» — это путь «к» пробуждению.
+20 | མདུན་གྱི་ནམ་མཁའ་ | textbook | the space in front | пространство впереди
+20 | བླ་མའི་མཆོད་པ་ | textbook | the offerings for the guru | подношения гуру
+20 | དམ་པའི་ཆོས་ | textbook | sacred Dharma | священная Дхарма | An adjective can precede the noun when joined to it by a connective particle. | Прилагательное может стоять перед существительным, если соединено с ним соединительной частицей.
+20 | ཟབ་མོའི་ལམ་ | textbook | profound path | глубокий путь
+20 | རྫོགས་པའི་སངས་རྒྱས་ | textbook | perfect Buddha | совершенный Будда
+20 | དགེ་བའི་ལས་ | textbook | virtuous action | добродетельное действие
+20 | བོད་པའི་མི་ | textbook | Tibetan man | тибетец (тибетский человек)
+21 | འཆི་བདག་གི་གཤིན་རྗེ་ | textbook | the lord of death, Yama | владыка смерти, Яма | Apposition: two names for the same thing, joined by a connective particle. | Приложение: два названия одного и того же, соединённые частицей.
+21 | ཐེག་མཆོག་གི་རྡོ་རྗེ་ཐེག་པ་ | textbook | the supreme vehicle, Vajrayāna | высшая колесница, Ваджраяна
+21 | ནང་མཆོད་ཀྱི་བདུད་རྩི་ | textbook | the inner offering, nectar | внутреннее подношение, нектар
+21 | དམྱལ་བ་ལ་སོགས་པའི་ངན་སོང་ | textbook | hell and so forth, the lower realms | ад и прочие низшие миры
+21 | འཆི་བདག་གཤིན་རྗེ་ | textbook | the lord of death, Yama | владыка смерти Яма | Apposition without any particle. | Приложение без частицы.
+21 | ཆོས་ཀྱི་སྟོན་པ་སངས་རྒྱས་བཞི་པ་ | textbook | the teacher of the Dharma, the fourth Buddha | учитель Дхармы, четвёртый Будда
+21 | ནང་མཆོད་བདུད་རྩི་ | textbook | the inner offering, nectar | внутреннее подношение — нектар
+21 | སངས་རྒྱས་འོད་དཔག་མེད་ | textbook | Buddha Amitābha | Будда Амитабха
+22 | ཁོང་ནི་ | textbook | as for him, ... | что касается его, … | ནི་ emphasizes what precedes it; often best left untranslated. | ནི་ выделяет то, что стоит перед ней; часто её лучше не переводить.
+22 | བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ཐམས་ཅད་ནི་ | textbook | regarding all those bodhisattvas, ... | что касается всех тех бодхисаттв, …
+26 | བྱང་ཆུབ་སེམས་དཔའི་བསྟན་པ་ | machine | the teachings of the bodhisattva | учение бодхисаттвы
+26 | ལྷའི་དཀྱིལ་འཁོར་ | machine | the maṇḍala of the deity | мандала божества
+26 | བླ་མའི་ཡོན་ཏན་ | machine | the qualities of the guru | качества гуру
+26 | རྫོགས་པའི་སངས་རྒྱས་ཀྱི་གོ་འཕང་ | machine | the level of a perfect Buddha | уровень совершенного Будды
+26 | ཡོན་ཏན་དང་བདེ་བ་ཀུན་གྱི་འབྱུང་གནས་ | machine | the source of all qualities and happiness | источник всех качеств и счастья
+26 | མི་ལ་སོགས་པའི་སེམས་ཅན་ | machine | sentient beings such as humans | живые существа, такие как люди
+26 | ངའི་ཉོན་མོངས་ནི་ | machine | as for my afflictions, ... | что касается моих омрачений, …
+26 | འཕགས་པའི་ལམ་དམ་པ་ | machine | the sacred path of the noble ones | священный путь благородных
+26 | ཐར་པའི་བདེ་བ་ཆེན་པོ་ | machine | the great bliss of liberation | великое блаженство освобождения
+26 | དགེ་བའི་ལས་ཀྱི་འབྲས་བུ་ཀུན་ | machine | all the results of virtuous actions | все плоды добродетельных действий
+26 | བྱང་ཆུབ་སེམས་དཔའི་ཟབ་མོའི་ལམ་འདི་དག་ | machine | these profound paths of the bodhisattvas | эти глубокие пути бодхисаттв
+26 | ངན་སོང་གསུམ་གྱི་སེམས་ཅན་ཐམས་ཅད་ | machine | all the sentient beings of the three lower realms | все существа трёх низших миров
+26 | ཁོང་གི་སྙིང་རྗེ་ཆེན་པོ་ནི་ | machine | as for his great compassion, ... | что касается его великого сострадания, …
+26 | ཟབ་མོའི་ལམ་གྱི་བདེ་བ་ཆེན་པོ་ | machine | the great bliss of the profound path | великое блаженство глубокого пути
+26 | ཐེག་པ་དམན་པའི་ཐར་པའི་གོ་འཕང་ | machine | the level of liberation of the lesser vehicle | уровень освобождения малой колесницы
+26 | ཕྱིའི་མཆོད་པའི་མེ་ཏོག་ | machine | the flowers of the outer offering | цветы внешнего подношения
+26 | ཕྱིའི་མཆོད་པ་མེ་ཏོག་དང་མར་མེ་རྣམས་ | machine | the outer offerings, flowers and butter lamps | внешние подношения — цветы и светильники
+26 | ལྷ་ལ་སོགས་པའི་མཐོ་རིས་གསུམ་ | machine | the three higher realms, such as the gods | три высших мира, такие как мир богов
+27 | དགོན་པ་དཀར་པོའི་གྲྭ་པ་ཐམས་ཅད་ཀྱི་ཡོན་ཏན་ནི་ | machine | as for the qualities of all the monks of the white monastery, ... | что касается качеств всех монахов белого монастыря, …
+27 | ཁོང་གི་ཟབ་མོའི་ཡོན་ཏན་གྱི་རྒྱུ་ | machine | the cause of his profound qualities | причина его глубоких качеств
+27 | རྒྱ་གར་གྱི་ཆོས་ལུགས་མང་པོའི་གདམས་ངག་ | machine | the oral instructions of the many religious traditions of India | устные наставления многих религиозных традиций Индии
+27 | སངས་རྒྱས་ལ་སོགས་པའི་དཀོན་མཆོག་གསུམ་གྱི་བཟང་པོའི་མཆོད་པ་འདི་ | machine | this excellent offering to the Three Jewels, the Buddha and so forth | это превосходное подношение Трём Драгоценностям — Будде и прочим
+27 | ཁོང་གི་བླ་མའི་བསྟན་པ་ | machine | the teachings of his guru | учение его гуру
+27 | མཆོག་གི་དངོས་གྲུབ་ཀྱི་སངས་རྒྱས་ཉིད་ | machine | Buddhahood, the supreme accomplishment | состояние будды — высшее достижение
+27 | སློབ་མ་གསར་པ་གཉིས་དང་ཚེ་རིང་གི་ཁང་པ་དཀར་པོ་འདི་ | machine | this white house of the two new students and Tsering | этот белый дом двух новых учеников и Цэринга
+
+@set lesson-03
+31 | དགོན་པ་འདི་དཀར་པོ་ཡིན། | textbook | This monastery is white. | Этот монастырь белый. | ཡིན་ links a subject to its description; neither takes a particle, and the subject comes first. | ཡིན་ связывает подлежащее с его описанием; ни одно не получает частицы, подлежащее стоит первым.
+31 | བླ་མ་བཟང་པོ་དེ་རྣལ་འབྱོར་པ་ཡིན། | textbook | That excellent guru is a yogin. | Тот превосходный гуру — йогин.
+31 | ཆོས་ཐམས་ཅད་མི་རྟག་པ་ཡིན། | textbook | All phenomena are impermanent. | Все явления непостоянны.
+31 | འདོད་ཆགས་དང་ཞེ་སྡང་དང་གཏི་མུག་ལ་སོགས་པ་ནི་ཉོན་མོངས་ཡིན། | textbook | Desire, anger, ignorance, and so forth are afflictive emotions. | Желание, гнев, неведение и прочее — это омрачения. | ནི་ often marks the subject of a ཡིན་ sentence. | ནི་ часто отмечает подлежащее при связке ཡིན་.
+31 | དཀོན་མཆོག་གསུམ་ནི་སངས་རྒྱས་ཆོས་དང་དགེ་འདུན་ཡིན། | textbook | The Three Jewels are the Buddha, the Dharma, and the Saṅgha. | Три Драгоценности — это Будда, Дхарма и Сангха.
+31 | ཁྱོད་ནི་སློབ་མ་གསར་པ་མ་ཡིན། | textbook | You are not a new student. | Ты не новый ученик. | The negation of ཡིན་ is མ་ཡིན་ or མིན་. | Отрицание ཡིན་ — это མ་ཡིན་ или མིན་.
+31 | ཐེག་ཆེན་ནི་བྱང་ཆུབ་སེམས་དཔའི་ཐེག་པ་ཡིན། | textbook | The Greater Vehicle is the vehicle of the bodhisattvas. | Великая колесница — это колесница бодхисаттв.
+31 | ཁྱོད་ཀྱི་ཕ་ཡུལ་བོད་མིན། | textbook | Your homeland is not Tibet. | Твоя родина — не Тибет.
+32 | དགེ་བ་ནི་བདེ་བའི་རྒྱུ་ཡིན། | textbook | Virtue is the cause of happiness. | Добродетель — причина счастья.
+32 | སྡིག་པ་ནི་བདེ་བའི་རྒྱུ་མ་ཡིན། | textbook | Evil deeds are not the cause of happiness. | Дурные деяния — не причина счастья.
+32 | མི་དེ་རྣམས་ནི་རྒྱ་གར་བ་ཡིན། | textbook | Those men are Indians. | Те люди — индийцы.
+32 | ལམ་རིང་པོ་འདི་ཡང་དག་པ་མིན། | textbook | This long path is not authentic. | Этот долгий путь не подлинный.
+32 | འཁོར་བ་ནི་སྡུག་བསྔལ་གྱི་རྒྱ་མཚོ་ཆེན་པོ་ཡིན། | textbook | Saṃsāra is a great ocean of suffering. | Сансара — великий океан страдания.
+32 | ཆོས་ཀྱི་སྟོན་པ་ནི་འགྲོ་བའི་མགོན་པོ། | textbook | The teacher of the Dharma is the protector of beings. | Учитель Дхармы — защитник существ. | ཡིན་ is the only verb that is frequently omitted; here it is understood. | ཡིན་ — единственный глагол, который часто опускают; здесь он подразумевается.
+32 | ཡང་དག་པའི་ཆོས་པའི་ཡོན་ཏན་ནི་སྙིང་རྗེ་དང་མོས་གུས་སོགས་ཡིན། | textbook | The qualities of an authentic Dharma practitioner are compassion, devotion, etc. | Качества подлинного практикующего — сострадание, преданность и прочее.
+32 | བདག་གི་སྦྱིན་བདག་ཁོང་ཡིན། | textbook | My benefactor is him. | Мой благодетель — он.
+32 | འདུས་བྱས་ཐམས་ཅད་མི་རྟག་པ། | textbook | All conditioned things are impermanent. | Всё обусловленное непостоянно. | The first of the four seals of the Dharma; ཡིན་ is omitted. | Первая из четырёх печатей Дхармы; ཡིན་ опущен.
+32 | ཟག་བཅས་ཐམས་ཅད་སྡུག་བསྔལ་བ། | textbook | All defiled things are suffering. | Всё загрязнённое есть страдание.
+32 | ཆོས་ཐམས་ཅད་བདག་མེད་པ། | textbook | All phenomena are selfless. | Все явления лишены «я».
+32 | མྱ་ངན་ལས་འདས་པ་ཞི་བ། | textbook | Nirvāṇa is peace. | Нирвана есть покой.
+33 | ཆོས་པ་མང་པོ་ཡོད། | textbook | There are many Dharma practitioners. | Есть много практикующих Дхарму. | ཡོད་ states existence. Its negation is མེད་. | ཡོད་ выражает существование. Его отрицание — མེད་.
+33 | དགོན་པ་གསར་པ་དེ་དག་ཡོད། | textbook | There are those new monasteries. | Те новые монастыри существуют.
+33 | བདག་བལ་ཡུལ་ལ་ཡོད། | textbook | I am in Nepal. | Я в Непале. | The place of existence is marked by ལ་. | Место существования отмечается частицей ལ་.
+33 | བལ་ཡུལ་ལ་བདག་ཡོད། | textbook | I am in Nepal. | В Непале нахожусь я. | Word order is free with ཡོད་; putting the place first stresses it. | При ཡོད་ порядок слов свободный; место в начале подчёркивается.
+33 | བཀྲ་ཤིས་དང་བསོད་ནམས་ལྷ་ཁང་ལ་མེད། | textbook | Tashi and Sönam are not in the temple. | Таши и Сонама нет в храме.
+33 | གྲྭ་པའི་སྦྱིན་བདག་བོད་ལ་ཡོད། | textbook | The benefactor of the monk is in Tibet. | Благодетель монаха — в Тибете.
+33 | ཁོང་གི་ཕ་མ་མགྲོན་ཁང་ལ་ཡོད། | textbook | His parents are in the guesthouse. | Его родители в гостинице.
+33 | རིན་པོ་ཆེའི་རྒྱན་བླ་མའི་དགོན་པ་དམར་པོ་ལ་མེད། | textbook | The precious ornaments are not in the red monastery of the guru. | Драгоценных украшений нет в красном монастыре гуру.
+34 | ལྷ་མཁའ་འགྲོ་ཆོས་སྐྱོང་ཐམས་ཅད་ནི་དཀྱིལ་འཁོར་ལ་ཡོད། | textbook | All the deities, ḍākinīs, and Dharma protectors are in the maṇḍala. | Все божества, дакини и защитники Дхармы находятся в мандале.
+34 | བདག་ལ་ཁང་པ་ཆེན་པོ་ཞིག་ཡོད། | textbook | I have a big house. | У меня есть большой дом. | Possession: owner + ལ་, the thing possessed without particle, then ཡོད་. | Обладание: владелец + ལ་, предмет без частицы, затем ཡོད་.
+34 | ཁང་པ་ཆེན་པོ་ཞིག་བདག་ལ་ཡོད། | textbook | I have a big house. | Большой дом есть у меня.
+34 | ཟླ་བ་དང་ཚེ་རིང་ལ་ཁང་པ་གསར་པ་ཡོད། | textbook | Dawa and Tsering have a new house. | У Давы и Цэринга есть новый дом.
+34 | ཁོང་གི་ཕ་མ་ལ་དངུལ་མང་པོ་མེད། | textbook | His parents do not have a lot of money. | У его родителей немного денег.
+34 | ཁོང་གི་རྩ་བའི་བླ་མ་ལ་ཡོན་ཏན་མང་པོ་ཡོད། | textbook | His root guru has a lot of qualities. | У его коренного гуру много достоинств.
+34 | ཡུལ་འདིའི་རྒྱལ་པོ་ལ་དམག་དཔུང་ཆེན་པོ་མེད། | textbook | The king of this land does not have a big army. | У царя этой страны нет большого войска.
+34 | རྣལ་འབྱོར་པ་དེ་རྣམས་ལ་ཡོ་བྱད་མང་པོ་མེད། | textbook | Those yogins do not have many possessions. | У тех йогинов немного имущества.
+34 | ཡང་དག་པའི་ཡོན་ཏན་ཁྱེད་ལ་ཡོད། | textbook | You have authentic qualities. | У Вас есть подлинные качества.
+34 | ཚོང་ཁང་འདིའི་བདག་པོ་ལ་ནོར་མང་པོ་ཡོད། | textbook | The owner of this shop has a lot of wealth. | У владельца этой лавки много богатства.
+34 | ང་ལ་འདྲི་བ་ཞིག་ཡོད། | textbook | I have a question. | У меня есть вопрос.
+37 | སངས་རྒྱས་ཀྱིས་ཆོས་བསྟན། | textbook | The Buddha taught the Dharma. | Будда преподал Дхарму. | Transitive (ཐ་དད་) verb: agent + agentive particle, object without particle, verb last. | Переходный (ཐ་དད་) глагол: деятель + агентивная частица, объект без частицы, глагол в конце.
+37 | ངས་ཀུ་ཤུ་ཟ། | textbook | I eat an apple. | Я ем яблоко. | After an open syllable the agentive particle is ས fused to the word (ང་ + ས = ངས་). | После открытого слога агентивная частица ས сливается со словом (ང་ + ས = ངས་).
+37 | དགྲ་འདིས་ཆོས་པ་ལ་གནོད། | textbook | This enemy harms the Dharma practitioner. | Этот враг вредит практикующему. | Verbs of benefit and harm mark their object with ལ་. | Глаголы пользы и вреда отмечают объект частицей ལ་.
+37 | བླ་མ་བཟང་པོས་བསྟན་བཅོས་དེ་དག་འཆད། | textbook | The excellent guru explains those treatises. | Превосходный гуру объясняет те трактаты.
+37 | དམག་མི་དེས་དགྲ་རྣམས་གསོད། | textbook | That soldier kills the enemies. | Тот солдат убивает врагов.
+38 | ཁོང་གིས་ང་ལ་ལྟ། | textbook | He looks at me. | Он смотрит на меня.
+38 | དགོན་པའི་གྲྭ་པ་རྣམས་ཀྱིས་སྙིང་རྗེ་སྒོམ། | textbook | The monks of the monastery cultivate compassion. | Монахи монастыря взращивают сострадание.
+38 | ཚེ་རིང་གིས་འཁོར་ལོ་ཆེན་པོ་འདི་སྐོར། | textbook | Tsering turns this great wheel. | Цэринг вращает это большое колесо.
+38 | སངས་རྒྱས་ཀྱིས་འགྲོ་བ་ཀུན་སྒྲོལ། | textbook | The Buddha liberates all beings. | Будда освобождает всех существ.
+38 | མཚན་ལྡན་གྱི་བླ་མ་དེས་ལས་དང་པོ་པ་ལ་ཕན། | textbook | That qualified guru benefits the beginners. | Тот подлинный гуру помогает начинающим.
+38 | ཁྱོད་ཀྱིས་སྒྲ་སྙན་པོ་དེ་ལ་ཉན། | textbook | You listen to that melodious sound. | Ты слушаешь тот благозвучный звук.
+38 | བོད་པའི་བླ་མས་ཕྱག་ཆེན་གྱི་གདམས་ངག་སྟོན། | textbook | The Tibetan guru gives oral instructions on Mahāmudrā. | Тибетский гуру даёт устные наставления по Махамудре.
+38 | ཐེག་པ་ཆེན་པོའི་ཆོས་པ་ཀུན་གྱིས་བྱང་ཆུབ་ཀྱི་སེམས་སྐྱེད། | textbook | All the Dharma practitioners of the Greater Vehicle generate the mind of enlightenment. | Все практикующие Великой колесницы порождают ум пробуждения.
+38 | ཉི་མ་ཤར། | textbook | The sun rose. | Солнце взошло. | Intransitive (ཐ་མི་དད་) verb: the subject takes no particle. | Непереходный (ཐ་མི་དད་) глагол: подлежащее без частицы.
+38 | སེམས་ཅན་ཐམས་ཅད་ནི་འཁྲུལ། | textbook | All sentient beings are confused. | Все живые существа пребывают в заблуждении.
+38 | ཤིང་རྟའི་འཁོར་ལོ་འཁོར། | textbook | The wheels of the chariot turn. | Колёса повозки вращаются.
+38 | རྣལ་འབྱོར་མ་དེ་དག་ནི་གྲོལ། | textbook | Those yoginīs are liberated. | Те йогини освобождены.
+38 | ངེས་འབྱུང་ནི་སྐྱེ། | textbook | Renunciation arises. | Возникает отречение.
+39 | བསོད་ནམས་འཕེལ། | textbook | The merit increases. | Заслуга возрастает.
+39 | བླ་མའི་ཐུགས་དང་སློབ་མའི་ཡིད་འདྲེ། | textbook | The mind of the guru and the mind of the disciple mingle together. | Ум гуру и ум ученика сливаются воедино.
+39 | སློབ་མ་གསར་པ་ནི་བལ་ཡུལ་ལ་གནས། | textbook | The new student stays in Nepal. | Новый ученик живёт в Непале.
+39 | བདག་བོད་ལ་འགྲོ། | textbook | I go to Tibet. | Я еду в Тибет. | Verbs of motion take no agentive particle; the destination is marked by ལ་. | Глаголы движения не требуют агентивной частицы; цель движения отмечается ལ་.
+39 | ཁོང་བོད་ལ་འགྲོ། | textbook | He goes to Tibet. | Он едет в Тибет.
+39 | བལ་ཡུལ་ལ་གནས་པ་ | textbook | staying in Nepal | пребывание в Непале
+39 | ཨ་མས་དེར་ཀྱང་ཕྱིན། | textbook | Mother also went there. | Мама тоже пошла туда. | Sometimes the agent of a motion verb does take the agentive particle. | Иногда деятель при глаголе движения всё же получает агентивную частицу.
+40 | གྲྭ་པས་ཆོས་མ་བསྟན། | textbook | The monk did not teach the Dharma. | Монах не учил Дхарме. | མ་ negates past and imperative forms, མི་ present and future. | མ་ отрицает прошедшее и повеление, མི་ — настоящее и будущее.
+40 | ཁོང་གིས་ང་ལ་མི་ལྟ། | textbook | He does not look at me. | Он не смотрит на меня.
+41 | དགྲ་འདིས་ཆོས་པ་ལ་མི་གནོད། | textbook | This enemy does not harm the Dharma practitioner. | Этот враг не вредит практикующему.
+41 | ཉི་མ་ནི་མ་ཤར། | textbook | The sun did not rise. | Солнце не взошло.
+41 | སེམས་ཅན་ཐམས་ཅད་མི་འཁྲུལ། | textbook | Not all sentient beings are confused. | Не все живые существа заблуждаются.
+41 | ཤིང་རྟའི་འཁོར་ལོ་མི་འཁོར། | textbook | The wheels of the chariot do not turn. | Колёса повозки не вращаются.
+42 | དགེ་བ་ནི་བདེ་བའི་རྒྱུ་ཡིན་ནོ། | textbook | Virtue is the cause of happiness. | Добродетель — причина счастья. | The terminating particle repeats the final letter of the verb and adds ོ: ཡིན་ + ནོ་. | Завершающая частица повторяет последнюю букву глагола с гласной ོ: ཡིན་ + ནོ་.
+42 | ཆོས་ཐམས་ཅད་མི་རྟག་པའོ། | textbook | All phenomena are impermanent. | Все явления непостоянны. | After an open syllable the terminating particle is འོ fused to the word. | После открытого слога завершающая частица — слитное འོ.
+42 | བདག་བལ་ཡུལ་ལ་ཡོད་དོ། | textbook | I am in Nepal. | Я в Непале.
+42 | སངས་རྒྱས་ཀྱིས་ཆོས་བསྟན་ནོ། | textbook | The Buddha taught the Dharma. | Будда преподал Дхарму.
+42 | སེམས་ཅན་ཐམས་ཅད་ནི་འཁྲུལ་ལོ། | textbook | All sentient beings are confused. | Все живые существа заблуждаются.
+42 | སངས་རྒྱས་ཀྱིས་ཆོས་བསྟན་པའོ། | textbook | The Buddha taught the Dharma. | Будда преподал Дхарму. | པའོ་ can end any sentence regardless of the verb's last letter. | པའོ་ может завершать любое предложение независимо от последней буквы глагола.
+45 | སྟོན་པ་བླ་ན་མེད་པ་རྫོགས་པའི་སངས་རྒྱས་ཡིན་ནོ། | machine | The unsurpassed teacher is the perfect Buddha. | Непревзойдённый учитель — совершенный Будда.
+45 | སྐྱོབ་པ་བླ་ན་མེད་པ་ནི་དམ་པའི་ཆོས་ཡིན་ནོ། | machine | The unsurpassed protector is the sacred Dharma. | Непревзойдённый защитник — священная Дхарма.
+45 | འདྲེན་པ་བླ་ན་མེད་པ་ནི་འཕགས་པའི་དགེ་འདུན། | machine | The unsurpassed guide is the noble Saṅgha. | Непревзойдённый проводник — благородная Сангха.
+45 | བླ་མས་བཀའ་དང་བསྟན་བཅོས་འཆད་པའོ། | machine | The guru explains the words of the Buddha and the treatises. | Гуру объясняет слово Будды и трактаты.
+45 | མཚན་དང་ལྡན་པའི་བླ་མ་མང་པོ་མེད། | machine | There are not many qualified gurus. | Подлинных гуру немного.
+45 | བདག་ལ་འདོད་ཆགས་ལ་སོགས་པའི་ཉོན་མོངས་མང་པོ་ཡོད་དོ། | machine | I have many afflictions such as desire. | У меня много омрачений, таких как желание.
+45 | སྐྱབས་འགྲོ་དང་སེམས་བསྐྱེད་གཉིས་ཡོད་དོ། | machine | There are the two: going for refuge and generating bodhicitta. | Есть два момента: принятие прибежища и порождение бодхичитты.
+45 | འཁོར་ལོ་ནི་འཁོར་རོ། | machine | The wheel turns. | Колесо вращается.
+45 | ངན་སོང་ནི་དམྱལ་བ་ཡི་དྭགས་དུད་འགྲོ་ཡིན། | machine | The lower realms are the hells, the hungry ghosts, and the animals. | Низшие миры — это ады, голодные духи и животные.
+45 | བྱང་སེམས་རིན་པོ་ཆེ་སྐྱེ། | machine | Precious bodhicitta arises. | Возникает драгоценная бодхичитта.
+45 | བླ་མ་དེ་ལ་ཡང་དག་པའི་ཡོན་ཏན་མེད་དོ། | machine | That guru has no authentic qualities. | У того гуру нет подлинных качеств.
+45 | རྣལ་འབྱོར་པ་དེ་དག་གིས་མོས་གུས་སྒོམ་པའོ། | machine | Those yogins cultivate devotion. | Те йогины взращивают преданность.
+45 | ཁོང་ལ་མོས་གུས་ཡོད། | machine | He has devotion. | У него есть преданность.
+45 | དཀྱིལ་འཁོར་ལ་ལྷ་མཁའ་འགྲོ་ཆོས་སྐྱོང་ཡོད་དོ། | machine | In the maṇḍala there are deities, ḍākinīs, and Dharma protectors. | В мандале есть божества, дакини и защитники Дхармы.
+45 | ཉོན་མོངས་པས་ལས་སྐྱེད། | machine | Afflictions produce karma. | Омрачения порождают карму.
+45 | ལས་ཀྱིས་སྡུག་བསྔལ་སྐྱེད་དོ། | machine | Karma produces suffering. | Карма порождает страдание.
+45 | ཁོང་གིས་དགོན་པའི་གྲྭ་པ་ལ་མི་ལྟ། | machine | He does not look at the monks of the monastery. | Он не смотрит на монахов монастыря.
+45 | དགོན་པའི་གྲྭ་པ་ལ་ཁོང་གིས་མི་ལྟའོ། | machine | He does not look at the monks of the monastery. | На монахов монастыря он не смотрит.
+45 | བྱང་ཆུབ་སེམས་དཔའ་ནི་ཐེག་ཆེན་གྱི་ལམ་ལ་འཇུག་གོ | machine | The bodhisattva enters the path of the Greater Vehicle. | Бодхисаттва вступает на путь Великой колесницы. | After a final ག the shad is omitted. | После конечного ག шад не ставится.
+45 | འདུས་བྱས་ཐམས་ཅད་རྟག་པ་མིན་ནོ། | machine | All conditioned things are not permanent. | Всё обусловленное не является постоянным.
+46 | བདག་གིས་སྡུག་བསྔལ་གྱི་རྒྱུ་ལ་དཔྱོད། | machine | I investigate the cause of suffering. | Я исследую причину страдания.
+46 | སངས་རྒྱས་ཀྱིས་འགྲོ་བའི་དོན་མཛད་དོ། | machine | The Buddha accomplishes the benefit of beings. | Будда совершает благо существ.
+46 | འཁོར་བའི་བདེ་བ་ནི་སྡུག་བསྔལ་གྱི་རྒྱ་མཚོའོ། | machine | The happiness of saṃsāra is an ocean of suffering. | Счастье сансары — океан страдания.
+46 | བཀྲ་ཤིས་ཀྱིས་ཆོས་ཀྱི་མི་རྟག་པ་ལ་དམིགས་པའོ། | machine | Tashi focuses on the impermanence of phenomena. | Таши сосредоточивается на непостоянстве явлений.
+46 | བོད་ལ་ཁོང་མི་འགྲོའོ། | machine | He does not go to Tibet. | Он не едет в Тибет.
+46 | བདག་བལ་ཡུལ་ལ་མི་གནས། | machine | I do not stay in Nepal. | Я не остаюсь в Непале.
+46 | དགོན་པའི་བླ་མ་འདི་བལ་ཡུལ་ལ་བཞུགས་སོ། | machine | This guru of the monastery stays in Nepal. | Этот гуру монастыря пребывает в Непале.

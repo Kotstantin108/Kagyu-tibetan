@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#182943">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tibetan Tiles">
+<meta name="description" content="A tap-to-play Classical Tibetan sentence scramble with 10 beginner Dharma-language lessons.">
+<title>Tibetan Scramble Tiles — བོད་ཡིག</title>
+<style>
+:root{color-scheme:light;--navy:#182943;--gold:#c58e37;--goldsoft:#fff1d6;--ink:#24354a;--paper:#f8f5ee;--border:#d9dddf;--green:#2c7862;--rose:#a53d4a}
+*{box-sizing:border-box}
+html{min-height:100%;-webkit-text-size-adjust:100%}
+body{min-height:100vh;margin:0;background:radial-gradient(ellipse at top left,#efe9d7 0,transparent 50%),#f7f4ed;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible{outline:3px solid #4479bd;outline-offset:3px}
+[hidden]{display:none!important}
+.tib,.tile,.seal,.sentence-display{font-family:"Kailasa","Noto Sans Tibetan","Microsoft Himalaya","Jomolhari",sans-serif}
+.page{width:min(800px,calc(100% - 26px));margin:0 auto;padding:26px 0 54px}
+.heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:23px}
+.kicker{font-size:.72rem;letter-spacing:.17em;color:#886026;font-weight:850;text-transform:uppercase;margin-bottom:8px}
+h1{margin:0;font:700 clamp(1.85rem,5.2vw,2.65rem)/1.12 Georgia,serif;letter-spacing:-.025em;color:var(--navy)}
+.subtitle{font-size:.92rem;line-height:1.5;color:#607084;margin:10px 0 0;max-width:510px}
+.seal{flex:0 0 auto;display:grid;place-items:center;width:72px;height:72px;border-radius:20px;background:var(--navy);color:#f0c47d;font-size:28px;border:3px solid #e5d2a7}
+.panel{background:#fffefa;border:1px solid #e6dfd1;box-shadow:0 16px 45px #24354a13;border-radius:24px;overflow:hidden}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:20px 23px 15px;background:#fcfbf7}
+.progressline{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:#52657a;font-size:.87rem}
+.progressline strong{color:var(--navy)}.badge{background:#ebf4ef;color:#246a56;border-radius:999px;font-size:.75rem;padding:6px 10px;font-weight:750}
+.switch{display:flex;gap:2px;border:1px solid #d9dedf;background:#f0f0ed;border-radius:12px;padding:4px}
+.switch button{font-size:.8rem;color:#50637a;background:transparent;border:0;padding:9px 12px;border-radius:9px;font-weight:750}
+.switch button.selected{background:var(--navy);color:white;box-shadow:0 2px 8px #101e3027}
+.meter{height:6px;background:#e7e8e4}.meter >div{height:100%;width:0;background:linear-gradient(90deg,#d7a04d,#e0c37e);transition:width .25s}
+.body{padding:24px}
+.label{font-size:.74rem;letter-spacing:.11em;color:#8a642e;text-transform:uppercase;font-weight:850}
+.prompt{font:700 clamp(1.55rem,5vw,2.1rem)/1.3 Georgia,serif;margin:8px 0 7px;color:var(--navy)}
+.helper{margin:0;color:#607184;font-size:.92rem;line-height:1.5}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:27px 0 10px}
+.section-head h2{margin:0;font-size:.86rem;letter-spacing:.035em;color:#40526a}
+.counter{color:#77899b;font-size:.76rem}
+.answer,.rack{display:flex;align-content:center;align-items:center;flex-wrap:wrap;gap:12px;border-radius:17px;padding:14px;min-height:104px}
+.answer{background:#f3f6f4;border:2px dashed #a7b9b1}
+.rack{background:#fff6e6;border:2px solid #ead7b3}
+.placeholder{font-size:.89rem;line-height:1.5;color:#71847d;padding:7px}
+.tile{display:inline-flex;align-items:center;justify-content:center;text-align:center;position:relative;vertical-align:middle;user-select:none;-webkit-user-select:none;touch-action:manipulation;white-space:nowrap;line-height:2.15;min-height:70px;min-width:64px;padding:5px 15px 2px;border-radius:14px;font-size:clamp(1.55rem,5.5vw,2.1rem);color:var(--navy);border:2px solid #d4bd93;background:linear-gradient(#fffef8,#fff0d5);box-shadow:0 5px 0 #bda47e,0 7px 12px #4636201a;transition:transform .12s ease,box-shadow .12s ease}
+.tile:active{transform:translateY(3px);box-shadow:0 2px 0 #bda47e}
+.tile:hover{border-color:#a87b34}
+.answer .tile{background:linear-gradient(#e5f7ef,#d4eee2);border-color:#7aaf9c;box-shadow:0 5px 0 #70a28d}
+.tile .mini-index{position:absolute;right:6px;bottom:4px;line-height:1;font:700 .65rem system-ui,sans-serif;color:#9a865f}
+.answer .tile .mini-index{color:#53836d}
+.answer.correct{border-color:var(--green);background:#e7f4eb}
+.feedback{margin:17px 0 0;min-height:45px;border:1px solid #e1e6e8;border-radius:12px;background:#f7fafc;padding:12px 14px;color:#52677a;font-size:.9rem;line-height:1.42}
+.feedback.good{background:#e8f5ed;border-color:#b6dcc7;color:#22674b}
+.feedback.bad{background:#fff0f0;border-color:#efc5cb;color:#9e4050}
+.buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.action{border:1px solid #d0d9df;background:white;border-radius:12px;padding:12px 16px;color:#33465b;font-size:.9rem;font-weight:750}
+.action.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.action.next{background:var(--green);color:#fff;border-color:var(--green)}
+.action:disabled{opacity:.4;cursor:default}
+.lesson{border-radius:14px;margin-top:19px;padding:16px 18px;background:#fff9e9;border:1px solid #efdab1;font-size:.91rem;line-height:1.65}
+.lesson strong{color:#8c5c1d}
+.lesson .sentence-display{display:block;margin:8px 0;font-size:1.85rem;line-height:2;color:#193c56}
+.footer-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid #eee9e1;padding:16px 23px}
+.linkish{font-size:.83rem;background:transparent;border:1px solid #d8dedf;border-radius:9px;padding:9px 11px;color:#4a5d73;font-weight:650}
+.linkish:disabled{opacity:.32}
+.note{text-align:center;font-size:.79rem;line-height:1.5;color:#66778a;margin-top:18px}
+.note .tib{color:#866126;font-size:1.15rem}
+.no-script{padding:12px;border:1px solid #d6b270;border-radius:12px;margin-top:14px;color:#614c22;background:#fff3db;font-size:.88rem}
+@media(max-width:520px){.page{padding:17px 0 36px}.heading{margin-bottom:17px}.seal{width:60px;height:60px;font-size:24px}.topbar{padding:16px 15px 13px}.body{padding:19px 15px}.answer,.rack{min-height:115px;padding:12px;gap:10px}.tile{min-height:72px;min-width:57px;padding:4px 11px 0}.buttons .action{flex:1}.footer-nav{padding:14px 15px}.section-head{margin-top:22px}.feedback{min-height:54px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="heading">
+<div><div class="kicker">A little Dharma language game</div><h1>Tibetan Scramble Tiles</h1><p class="subtitle">Tap the big Tibetan tiles to arrange a sentence. No dragging needed — designed for phones.</p></div>
+<div class="seal" aria-hidden="true">ཨོཾ</div>
+</header>
+<section class="panel" aria-label="Tibetan reading and sentence building game">
+<div class="topbar">
+<div class="progressline"><span>Sentence <strong id="number">1</strong> of <strong id="total">10</strong></span><span id="score" class="badge">0 solved</span></div>
+<div class="switch" role="group" aria-label="Choose scramble style"><button type="button" class="selected" data-mode="words" aria-pressed="true">Word tiles</button><button type="button" data-mode="syllables" aria-pressed="false">Syllable tiles</button></div>
+</div>
+<div class="meter" aria-hidden="true"><div id="progress"></div></div>
+<div class="body">
+<div class="label">Build this sentence in Tibetan</div>
+<h2 id="english" class="prompt">I am a student.</h2>
+<p class="helper">Start by tapping one of the golden tiles below. Tap a green tile to return it.</p>
+<div class="section-head"><h2>① Your sentence</h2><span class="counter" id="answer-count">0 of 3 tiles</span></div>
+<div class="answer" id="answer" aria-label="Your sentence"><span class="placeholder">Your Tibetan sentence will appear here ↓</span></div>
+<div class="section-head"><h2>② Tap the scrambled tiles</h2><span class="counter" id="rack-count">3 available</span></div>
+<!-- These are real, visible HTML tiles, not created solely by JavaScript.
+     They remain visible even in previews that disable scripts. -->
+<div class="rack" id="rack" aria-label="Tibetan tiles available to arrange">
+<button class="tile" type="button" data-id="1">སློབ་མ་</button>
+<button class="tile" type="button" data-id="2">ཡིན།</button>
+<button class="tile" type="button" data-id="0">ང་</button>
+</div>
+<noscript><p class="no-script">The tiles above are visible, but this preview is not running JavaScript. To play interactively, download the HTML file and open it in a web browser such as Safari or Chrome.</p></noscript>
+<p id="feedback" class="feedback" role="status" aria-live="polite">The golden pieces are your tiles. Tap them in the right order! 🧩</p>
+<div class="buttons">
+<button type="button" class="action primary" id="check">✓ Check</button>
+<button type="button" class="action" id="hint">✦ Hint</button>
+<button type="button" class="action" id="reset">↺ Start over</button>
+<button type="button" class="action next" id="next" hidden>Next sentence →</button>
+</div>
+<section id="lesson" class="lesson" hidden aria-label="Tibetan answer and explanation"></section>
+</div>
+<div class="footer-nav"><button type="button" class="linkish" id="previous">← Previous</button><button type="button" class="linkish" id="reshuffle">⤨ Mix tiles</button><button type="button" class="linkish" id="skip">Skip →</button></div>
+</section>
+<p class="note"><span class="tib">བོད་ཡིག</span> · 10 beginner sentences · Buddhist vocabulary · Works offline in a browser</p>
+</main>
+<script>
+(function () {
+  'use strict';
+  // Each sentence is in standard Tibetan script. Tiles include the required tsheg.
+  const puzzles = [
+    {words:['ང་','སློབ་མ་','ཡིན།'],en:'I am a student.',tip:'ང་ means “I”; སློབ་མ་ means “student”; ཡིན་ means “am” here.'},
+    {words:['འདི་','དེབ་','ཡིན།'],en:'This is a book.',tip:'འདི་ is “this”, and དེབ་ is “book”. The copula usually comes last.'},
+    {words:['བླ་མ་','བཟང་པོ་','ཡིན།'],en:'The lama is good.',tip:'བླ་མ་ is “lama”; བཟང་པོ་ is “good”.'},
+    {words:['དགོན་པ་','ཆེན་པོ་','ཡིན།'],en:'The monastery is large.',tip:'དགོན་པ་ is “monastery”; ཆེན་པོ་ is “large” or “great”.'},
+    {words:['ཚེ་','ནི་','མི་རྟག་པ་','ཡིན།'],en:'Life is impermanent.',tip:'ཚེ་ means “life”; ནི་ highlights the topic; མི་རྟག་པ་ means “impermanent”.'},
+    {words:['འདི་','བླ་མའི་','དེབ་','ཡིན།'],en:'This is the lama’s book.',tip:'བླ་མའི་ means “the lama’s”; འི་ is the genitive ending.'},
+    {words:['སེམས་','ནི་','མི་རྟག་པ་','ཡིན།'],en:'The mind is impermanent.',tip:'སེམས་ is “mind”. Here ནི་ marks the topic of the sentence.'},
+    {words:['སངས་རྒྱས་','ལ་','ཕྱག་','འཚལ་ལོ།'],en:'I pay homage to the Buddha.',tip:'སངས་རྒྱས་ is “Buddha”; ལ་ marks the object of homage; ཕྱག་འཚལ་ means “pay homage”.'},
+    {words:['ཆོས་','ལ་','སྐྱབས་','སུ་','མཆི།'],en:'I take refuge in the Dharma.',tip:'ཆོས་ means “Dharma”; སྐྱབས་སུ་མཆི་ is a traditional expression of refuge.'},
+    {words:['སེམས་ཅན་','ཐམས་ཅད་','བདེ་བ་','ཐོབ་པར་','ཤོག།'],en:'May all sentient beings attain happiness.',tip:'སེམས་ཅན་ཐམས་ཅད་ is “all sentient beings”; ཤོག expresses aspiration or a wish.'}
+  ];
+  const byId = (id) => document.getElementById(id);
+  let current = 0;
+  let mode = 'words';
+  let available = [];
+  let chosen = [];
+  let complete = false;
+  let done = new Set();
+  try {
+    const remembered = JSON.parse(localStorage.getItem('tibetan-tile-v2-progress') || '[]');
+    if (Array.isArray(remembered)) done = new Set(remembered.filter(n => Number.isInteger(n) && n >= 0 && n < puzzles.length));
+  } catch (error) { /* Offline/private browsing is still playable. */ }
+  function save() {try {localStorage.setItem('tibetan-tile-v2-progress',JSON.stringify(Array.from(done)));}catch (error) {}}
+  function getParts() {
+    if (mode === 'words') return puzzles[current].words.slice();
+    const joined = puzzles[current].words.join('');
+    const pieces = joined.match(/[^་།]+(?:་|།)?/g);
+    return pieces || puzzles[current].words.slice();
+  }
+  function mixed(items) {
+    const result = items.slice();
+    for (let k = result.length-1; k > 0; k--) {
+      const pos = Math.floor(Math.random()*(k+1));
+      [result[k],result[pos]]=[result[pos],result[k]];
+    }
+    if (result.length > 1 && result.every((v,j)=>v.id===items[j].id)) [result[0],result[1]]=[result[1],result[0]];
+    return result;
+  }
+  function message(content, status) {const el=byId('feedback');el.textContent=content;el.className='feedback'+(status?' '+status:'');}
+  function tileButton(item, from) {
+    const btn = document.createElement('button');
+    btn.type='button'; btn.className='tile tib'; btn.textContent=item.text;
+    btn.dataset.id=String(item.id);
+    btn.title=from==='rack'?'Add tile to your sentence':'Return tile to the scramble';
+    btn.setAttribute('aria-label',(from==='rack'?'Add ':'Remove ')+item.text);
+    btn.addEventListener('click',function(){
+      if (complete) return;
+      if (from==='rack') { available=available.filter(x=>x.id!==item.id); chosen.push(item); }
+      else { chosen=chosen.filter(x=>x.id!==item.id); available.push(item); }
+      message('Nice! Keep arranging the pieces, then tap Check.','');render();
+    });
+    return btn;
+  }
+  function render() {
+    const count=getParts().length;
+    byId('number').textContent=String(current+1);
+    byId('total').textContent=String(puzzles.length);
+    byId('score').textContent=done.size+' solved';
+    byId('english').textContent=puzzles[current].en;
+    byId('progress').style.width=String(100*done.size/puzzles.length)+'%';
+    byId('answer-count').textContent=chosen.length+' of '+count+' tiles';
+    byId('rack-count').textContent=available.length+' available';
+    byId('previous').disabled=current===0;
+    byId('check').disabled=complete;
+    byId('hint').disabled=complete;
+    byId('reshuffle').disabled=complete;
+    byId('next').hidden=!complete;
+    const answer=byId('answer'),rack=byId('rack');
+    answer.replaceChildren();rack.replaceChildren();
+    if (!chosen.length) {
+      const prompt=document.createElement('span');prompt.className='placeholder';prompt.textContent='Your Tibetan sentence will appear here ↓';answer.appendChild(prompt);
+    }
+    chosen.forEach(v=>answer.appendChild(tileButton(v,'answer')));
+    available.forEach(v=>rack.appendChild(tileButton(v,'rack')));
+    answer.classList.toggle('correct',complete);
+  }
+  function begin() {
+    available=mixed(getParts().map((text,id)=>({text,id})));
+    chosen=[];complete=false;
+    byId('lesson').hidden=true;
+    byId('next').hidden=true;
+    message('The golden pieces are your tiles. Tap them in the right order! 🧩','');
+    render();
+  }
+  function check() {
+    if (complete) return;
+    const parts=getParts();
+    if (chosen.length < parts.length) {message('Place all '+parts.length+' tiles first ('+chosen.length+' placed).','bad');return;}
+    const mismatch=chosen.findIndex((v,j)=>v.id!==j);
+    if (mismatch!==-1) {message('Almost! Look again at the order, especially near position '+(mismatch+1)+'. You can tap green tiles to move them back.','bad');return;}
+    complete=true;done.add(current);save();
+    message('ལེགས་སོ། Excellent! You built the correct sentence. 🎉','good');
+    const lesson=byId('lesson');lesson.replaceChildren();
+    const label=document.createElement('strong');label.textContent='Your correct Tibetan sentence:';
+    const tibetan=document.createElement('span');tibetan.className='sentence-display';tibetan.textContent=puzzles[current].words.join('');
+    const explanation=document.createElement('div');explanation.textContent=puzzles[current].tip;
+    lesson.append(label,tibetan,explanation);lesson.hidden=false;
+    byId('next').textContent=current===puzzles.length-1?'Play again ↻':'Next sentence →';
+    render();
+  }
+  function hint() {
+    let pos=chosen.findIndex((v,j)=>v.id!==j);
+    if (pos===-1) pos=chosen.length;
+    if (pos>=getParts().length){message('All the tiles are placed. Try Check!','');return;}
+    const next=available.find(v=>v.id===pos);
+    if (!next) {message('A green tile is out of order. Try returning the tiles from position '+(pos+1)+' onwards.','');return;}
+    const el=Array.from(byId('rack').children).find(v=>v.dataset.id===String(next.id));
+    if (el) {el.style.outline='4px solid #b8771b';el.style.outlineOffset='2px';el.focus();}
+    message('Hint: the highlighted tile comes next.','');
+  }
+  function go(n) {current=Math.max(0,Math.min(puzzles.length-1,n));begin();}
+  byId('check').addEventListener('click',check);
+  byId('hint').addEventListener('click',hint);
+  byId('reset').addEventListener('click',begin);
+  byId('reshuffle').addEventListener('click',function(){available=mixed(available);render();message('The tiles have been mixed again.','');});
+  byId('previous').addEventListener('click',()=>go(current-1));
+  byId('skip').addEventListener('click',()=>go(current===puzzles.length-1?0:current+1));
+  byId('next').addEventListener('click',function(){
+    if(current===puzzles.length-1){done.clear();save();go(0);}else go(current+1);
+  });
+  document.querySelectorAll('[data-mode]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(mode===btn.dataset.mode) return;
+      mode=btn.dataset.mode;
+      document.querySelectorAll('[data-mode]').forEach(function(other){const active=other.dataset.mode===mode;other.classList.toggle('selected',active);other.setAttribute('aria-pressed',String(active));});
+      begin();
+    });
+  });
+  // First render is progressive enhancement: the initial rack above is plain HTML,
+  // so even JS-restricted previews show three large real tiles.
+  begin();
+})();
+</script>
+</body>
+</html>

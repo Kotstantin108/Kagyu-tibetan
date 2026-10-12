@@ -1,0 +1,131 @@
+// Validates site/data/{words,sentences,sets}.json.
+//   node scripts/validate.mjs
+// Exit code 1 on errors; warnings do not fail the run.
+
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const DATA = join(ROOT, 'site', 'data');
+const REQUIRED_LANGS = ['ru', 'en'];
+
+const errors = [];
+const warnings = [];
+const err = (m) => errors.push(m);
+const warn = (m) => warnings.push(m);
+
+function readJson(name) {
+  const raw = readFileSync(join(DATA, name), 'utf8');
+  // duplicate top-level keys are silently collapsed by JSON.parse, so count them in the raw text
+  return { raw, data: JSON.parse(raw) };
+}
+
+const { data: sets } = readJson('sets.json');
+const { raw: wordsRaw, data: words } = readJson('words.json');
+const { data: sentences } = readJson('sentences.json');
+
+// languages present anywhere in the data
+const langSet = new Set(REQUIRED_LANGS);
+for (const s of sets) for (const k of Object.keys(s.name || {})) langSet.add(k);
+for (const w of Object.values(words)) for (const k of Object.keys(w.tr || {})) langSet.add(k);
+for (const s of sentences) for (const k of Object.keys(s.tr || {})) langSet.add(k);
+const LANGS = [...langSet];
+
+// ---- duplicate ids ----
+const keyCounts = new Map();
+for (const m of wordsRaw.matchAll(/^  "([^"]+)": \{/gm)) keyCounts.set(m[1], (keyCounts.get(m[1]) || 0) + 1);
+for (const [k, n] of keyCounts) if (n > 1) err(`duplicate word id ${k} (${n} times)`);
+const sentIds = new Map();
+for (const s of sentences) sentIds.set(s.id, (sentIds.get(s.id) || 0) + 1);
+for (const [k, n] of sentIds) if (n > 1) err(`duplicate sentence id ${k} (${n} times)`);
+const setIds = new Map();
+for (const s of sets) setIds.set(s.id, (setIds.get(s.id) || 0) + 1);
+for (const [k, n] of setIds) if (n > 1) err(`duplicate set id ${k} (${n} times)`);
+
+// ---- sets ----
+const setOrder = new Map(sets.map((s) => [s.id, s.order]));
+for (const s of sets) {
+  for (const lang of REQUIRED_LANGS) if (!s.name || !s.name[lang]) warn(`set ${s.id}: missing ${lang} name`);
+}
+
+// ---- words ----
+const LATIN = /[A-Za-z]/;
+const TIB_ALLOWED = /^[ༀ-࿿]+$/u;
+const machine = {};
+const coverage = {};
+for (const lang of LANGS) { machine[lang] = { words: 0, sentences: 0 }; coverage[lang] = { words: 0, sentences: 0, notes: 0 }; }
+let wordCount = 0;
+for (const [id, w] of Object.entries(words)) {
+  if (!w.tib || !w.tib.trim()) err(`word ${id}: empty tib`);
+  else {
+    if (LATIN.test(w.tib)) err(`word ${id}: latin letters in tib "${w.tib}"`);
+    if (w.tib !== w.tib.trim() || /\s/.test(w.tib)) err(`word ${id}: whitespace in tib "${w.tib}"`);
+    if (!TIB_ALLOWED.test(w.tib)) err(`word ${id}: non-Tibetan characters in tib "${w.tib}"`);
+  }
+  for (const lang of REQUIRED_LANGS) if (!w.tr || !w.tr[lang]) warn(`word ${id}: missing ${lang} translation`);
+  if (!w.service && !setOrder.has(w.set)) err(`word ${id}: unknown set ${w.set}`);
+  if (w.service) continue;
+  wordCount++;
+  for (const lang of LANGS) {
+    if (w.tr && w.tr[lang]) coverage[lang].words++;
+    if (w.trOrigin && w.trOrigin[lang] === 'machine') machine[lang].words++;
+  }
+}
+
+// ---- sentences ----
+const used = new Set();
+const seen = new Set();
+const multiNew = [];
+let noteCount = 0;
+const ordered = [...sentences].sort((a, b) => (setOrder.get(a.set) ?? 1e9) - (setOrder.get(b.set) ?? 1e9));
+for (const s of ordered) {
+  if (!s.id) err('sentence without id');
+  if (!setOrder.has(s.set)) err(`sentence ${s.id}: unknown set ${s.set}`);
+  if (!Array.isArray(s.words) || !s.words.length) err(`sentence ${s.id}: empty words`);
+  const fresh = [];
+  for (const id of s.words || []) {
+    if (!words[id]) { err(`sentence ${s.id}: unknown word id ${id}`); continue; }
+    used.add(id);
+    if (!words[id].service && !seen.has(id)) { seen.add(id); fresh.push(id); }
+  }
+  if (fresh.length > 1) multiNew.push({ id: s.id, set: s.set, fresh });
+  for (const lang of REQUIRED_LANGS) if (!s.tr || !s.tr[lang]) warn(`sentence ${s.id}: missing ${lang} translation`);
+  if (s.note) {
+    noteCount++;
+    for (const lang of REQUIRED_LANGS) if (!s.note[lang]) warn(`sentence ${s.id}: note has no ${lang}`);
+  }
+  for (const lang of LANGS) {
+    if (s.tr && s.tr[lang]) coverage[lang].sentences++;
+    if (s.note && s.note[lang]) coverage[lang].notes++;
+    if (s.trOrigin && s.trOrigin[lang] === 'machine') machine[lang].sentences++;
+  }
+}
+
+// ---- per-set stats ----
+const perSet = sets.map((set) => ({
+  id: set.id,
+  words: Object.values(words).filter((w) => w.set === set.id && !w.service).length,
+  sentences: sentences.filter((s) => s.set === set.id).length,
+}));
+
+const unused = Object.entries(words).filter(([id, w]) => !w.service && !used.has(id));
+
+// ---- report ----
+console.log('== Sets ==');
+for (const p of perSet) console.log(`  ${p.id.padEnd(12)} words: ${String(p.words).padStart(4)}  sentences: ${String(p.sentences).padStart(4)}`);
+console.log(`  total        words: ${String(wordCount).padStart(4)}  sentences: ${String(sentences.length).padStart(4)}`);
+console.log('== Translations: coverage (machine) ==');
+for (const lang of LANGS) {
+  const c = coverage[lang]; const m = machine[lang];
+  console.log(`  ${lang}: words ${c.words}/${wordCount} (${m.words} machine), sentences ${c.sentences}/${sentences.length} (${m.sentences} machine), notes ${c.notes}/${noteCount}`);
+}
+console.log(`== Words not used in any sentence: ${unused.length} ==`);
+for (const [id, w] of unused) console.log(`  ${id} ${w.tib} (${w.set})`);
+console.log(`== Sentences introducing more than one new word: ${multiNew.length} ==`);
+for (const m of multiNew) console.log(`  ${m.id} (${m.set}): ${m.fresh.join(', ')}`);
+console.log(`== Warnings: ${warnings.length} ==`);
+for (const w of warnings) console.log('  ' + w);
+console.log(`== Errors: ${errors.length} ==`);
+for (const e of errors) console.log('  ' + e);
+process.exit(errors.length ? 1 : 0);

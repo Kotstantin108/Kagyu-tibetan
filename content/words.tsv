@@ -1,0 +1,357 @@
+# tib | en | ru | pos | page | flags
+# Source: Classical Tibetan Grammar Handbook, TLAN 101, Rangjung Yeshe Institute (2023 edition).
+# Page numbers are the printed ones. English glosses come from the handbook; Russian is machine.
+# flags: fused (particle glued to an open syllable), lemma=<tib>
+
+@set lesson-01
+ཆོས་ | Dharma; phenomenon | Дхарма; явление | noun | 2
+ལམ་ | path; or (and/or particle after ལ) | путь; или (частица «и/или» после ལ) | noun | 2
+རྟ་ | horse | лошадь | noun | 2
+བོད་ | Tibet | Тибет | noun | 2
+རྣལ་འབྱོར་ | yoga | йога | noun | 2
+ཉི་མ་ | sun; day | солнце; день | noun | 2
+ཁང་པ་ | house | дом | noun | 2
+བདེ་བ་ | happiness, bliss | счастье, блаженство | noun | 2
+དགེ་བ་ | virtue; virtuous | добродетель; добродетельный | noun | 2
+ལག་པ་ | hand | рука | noun | 2
+དགོན་པ་ | monastery | монастырь | noun | 2
+སློབ་མ་ | student, disciple | ученик | noun | 2
+ངོ་བོ་ | essence | сущность | noun | 2
+རྒྱལ་པོ་ | king | царь | noun | 2
+སྟོན་མོ་ | festival, feast | праздник, пир | noun | 2
+ཆོས་པ་ | Dharma practitioner | практикующий Дхарму | noun | 2
+རྟ་པ་ | horse rider | всадник | noun | 2
+བོད་པ་ | Tibetan (person) | тибетец | noun | 2
+རྣལ་འབྱོར་པ་ | yogin | йогин | noun | 2
+སངས་རྒྱས་ | Buddha | Будда | noun | 2
+སངས་རྒྱས་པ་ | Buddhist | буддист | noun | 2
+རྣལ་འབྱོར་མ་ | yoginī | йогини | noun | 2
+རྒྱལ་མོ་ | queen | царица | noun | 2
+ལྷ་ | god; deity | бог; божество | noun | 2
+ལྷ་མོ་ | goddess | богиня | noun | 2
+བུ་ | son | сын | noun | 2
+བུ་མོ་ | daughter | дочь | noun | 2
+བླ་མ་ | guru, lama | гуру, лама | noun | 3
+དབུ་མ་ | Middle Way (Madhyamaka) | Срединный путь (мадхьямака) | noun | 3
+མཆོག་ | supreme | высший, наивысший | adj | 3
+གསར་པ་ | new | новый | adj | 3
+རྙིང་པ་ | old | старый | adj | 3
+ངན་པ་ | bad, evil | плохой, дурной | adj | 3
+དམ་པ་ | sacred, holy | священный, святой | adj | 3
+བཟང་པོ་ | good, excellent | хороший, превосходный | adj | 3
+ཆེན་པོ་ | big, great | большой, великий | adj | 3
+ཚ་པོ་ | hot | горячий | adj | 3
+དམར་པོ་ | red | красный | adj | 3
+ཟབ་མོ་ | profound, deep | глубокий | adj | 3
+གྲང་མོ་ | cold | холодный | adj | 3
+སྔ་མ་ | former, past | прежний, прошлый | adj | 3
+འདོད་ཆགས་ | desire, attachment | желание, привязанность | noun | 4
+བརྩོན་འགྲུས་ | diligence | усердие | noun | 4
+འཇིགས་སྐྲག་ | fear | страх | noun | 4
+ཆེ་ཆུང་ | size | размер | noun | 4
+བཟང་ངན་ | quality (good and bad) | качество (хорошее и плохое) | noun | 4
+ཚ་གྲང་ | temperature | температура | noun | 4
+དཀྱིལ་འཁོར་ | maṇḍala | мандала | noun | 4
+སྨན་ཁང་ | hospital | больница | noun | 4
+ཟ་ཁང་ | restaurant | ресторан | noun | 4
+སྐར་རྩིས་ | astrology | астрология | noun | 4
+སེམས་ཅན་ | sentient being(s) | живые существа | noun | 4
+སྨན་ | medicine | лекарство | noun | 4
+སེམས་ | mind | ум | noun | 4
+སྙིང་རྗེ་ | compassion | сострадание | noun | 5
+རྡོ་རྗེ་ | vajra, diamond | ваджра, алмаз | noun | 5
+ཤེས་རབ་ | wisdom, discriminating knowledge | мудрость, различающее знание | noun | 5
+ཤེས་པ་ | knowing, knowledge; to know | знание; знать | noun | 5
+ཐེག་པ་ | vehicle, yāna | колесница, яна | noun | 5
+ཕྱག་རྒྱ་ | symbol, mudrā | символ, мудра | noun | 5
+ཐེག་དམན་ | Hīnayāna, the lesser vehicle | Хинаяна, малая колесница | noun | 5
+རྫོགས་ཆེན་ | Great Perfection (Dzogchen) | Великое совершенство (дзогчен) | noun | 5
+ཕྱག་ཆེན་ | Mahāmudrā | Махамудра | noun | 5
+སྒྲོལ་དཀར་ | White Tārā | Белая Тара | noun | 5
+ཆོས་སྐུ་ | dharmakāya | дхармакая | noun | 5
+ཉན་རང་ | śrāvakas and pratyekabuddhas | шраваки и пратьекабудды | noun | 5
+འཁོར་འདས་ | saṃsāra and nirvāṇa | сансара и нирвана | noun | 5
+དམན་པ་ | low, inferior | низший, малый | adj | 5
+རྫོགས་པ་ | perfection; perfect, complete | совершенство; совершенный, полный | noun | 5
+སྒྲོལ་མ་ | Tārā | Тара | noun | 5
+དཀར་པོ་ | white | белый | adj | 5
+སྐུ་ | body (h.) | тело (вежл.) | noun | 5
+ཉན་ཐོས་ | śrāvaka | шравака | noun | 5
+རང་རྒྱལ་ | pratyekabuddha | пратьекабудда | noun | 5
+འཁོར་བ་ | saṃsāra, cyclic existence; to turn | сансара, круговорот бытия; вращаться | noun | 5
+མྱ་ངན་ལས་འདས་པ་ | nirvāṇa | нирвана | noun | 5
+འདི་ | this | этот, это | pronoun | 6
+དེ་ | that; he, she, it; continuative particle after ད | тот, то; он, она, оно; продолжающая частица после ད | pronoun | 6
+ཡིན་ | is, am, are (linking verb) | есть, является (глагол-связка) | verb | 6
+ཅིག་ | a, an (indefinite particle after ག ད བ); imperative particle | неопределённая частица «некий» (после ག ད བ); частица повеления | particle | 7
+ཞིག་ | a, an (indefinite particle after ང ན མ འ ར ལ or no suffix); imperative particle | неопределённая частица «некий» (после ང ན མ འ ར ལ или без суффикса); частица повеления | particle | 7
+ཤིག་ | a, an (indefinite particle after ས); imperative particle | неопределённая частица «некий» (после ས); частица повеления | particle | 7
+རྣམས་ | plural particle | частица множественного числа | particle | 8
+དག་ | plural particle | частица множественного числа | particle | 8
+ཚོ་ | plural particle (colloquial) | частица множественного числа (разг.) | particle | 9
+བུམ་པ་ | vase | ваза, сосуд | noun | 8
+མདོ་ | sūtra | сутра | noun | 8
+གཅིག་ | one | один | number | 9
+གཉིས་ | two | два | number | 9
+གསུམ་ | three | три | number | 9
+བཞི་ | four | четыре | number | 9
+ལྔ་ | five | пять | number | 9
+དྲུག་ | six | шесть | number | 9
+བདུན་ | seven | семь | number | 9
+བརྒྱད་ | eight | восемь | number | 9
+དགུ་ | nine | девять | number | 9
+བཅུ་ | ten | десять | number | 9
+བརྒྱ་ | hundred | сто | number | 9
+སྟོང་ | thousand; to be empty (of) | тысяча; быть пустым (от) | number | 9
+དང་པོ་ | first | первый | number | 9
+གཉིས་པ་ | second | второй | number | 9
+གསུམ་པ་ | third | третий | number | 9
+བཞི་པ་ | fourth | четвёртый | number | 9
+ལྔ་པ་ | fifth | пятый | number | 9
+དྲུག་པ་ | sixth | шестой | number | 9
+བདུན་པ་ | seventh | седьмой | number | 9
+བརྒྱད་པ་ | eighth | восьмой | number | 9
+དགུ་པ་ | ninth | девятый | number | 9
+བཅུ་པ་ | tenth | десятый | number | 9
+བརྒྱ་པ་ | hundredth | сотый | number | 9
+གཉིས་པོ་ | the (group of) two, both | оба, двое (как группа) | number | 9
+གསུམ་པོ་ | the (group of) three | все трое (как группа) | number | 9
+བཞི་པོ་ | the (group of) four | все четверо (как группа) | number | 9
+བཅུ་པོ་ | the (group of) ten | все десять (как группа) | number | 9
+ཀུན་ | all | все, весь | pronoun | 10
+ཐམས་ཅད་ | all | все, весь | pronoun | 10
+དང་ | and; with (list particle) | и; с (частица перечисления) | particle | 10
+མི་དགེ་བ་ | non-virtue | недобродетель | noun | 10
+ཐབས་ | method, skilful means | метод, искусные средства | noun | 10
+ལྡན་པ་ | endowed with, possessing | обладающий, наделённый | verb | 10
+བཅས་པ་ | together with | вместе с | verb | 10
+འབྲེལ་བ་ | related, associated with | связанный с | verb | 10
+བྲལ་བ་ | free from, separated from | свободный от, лишённый | verb | 10
+དཔལ་ | glory | слава, величие | noun | 10
+འཁོར་ | retinue, surroundings; to turn (by itself) | свита, окружение; вращаться | noun | 10
+སྤྲོས་པ་ | mental constructs, elaboration | умопостроения | noun | 10
+དགེ་འདུན་ | Saṅgha | Сангха | noun | 11
+སྦྱིན་པ་ | generosity | щедрость | noun | 11
+ཚུལ་ཁྲིམས་ | discipline, ethics | дисциплина, нравственность | noun | 11
+བཟོད་པ་ | patience | терпение | noun | 11
+ས་ | earth, ground; bhūmi (bodhisattva level) | земля; бхуми (уровень бодхисаттвы) | noun | 11
+གསང་སྔགས་ | secret mantra | тайная мантра | noun | 11
+ནག་པོ་ | black | чёрный | adj | 11
+སོགས་ | and so forth, etc. | и так далее | particle | 11
+ལ་སོགས་པ་ | and so forth, et cetera | и так далее, и прочее | particle | 11
+ཞེ་སྡང་ | anger, aversion | гнев, неприязнь | noun | 11
+གཏི་མུག་ | ignorance, stupidity | неведение, тупость | noun | 11
+ཆུ་ | water | вода | noun | 11
+མེ་ | fire | огонь | noun | 11
+བྱང་ཆུབ་ | enlightenment (bodhi) | пробуждение (бодхи) | noun | 12
+སྡིག་པ་ | evil deed, wrong action | дурное деяние, злодеяние | noun | 12
+སྡུག་བསྔལ་ | suffering | страдание | noun | 12
+མང་པོ་ | many, a lot | много, многие | adj | 12
+མི་ | man, human; (before a verb) not | человек; (перед глаголом) не | noun | 14
+དབང་ | empowerment, initiation | посвящение | noun | 14
+ཡོན་ཏན་ | (excellent) quality | (благое) качество, достоинство | noun | 14
+ཟླ་བ་ | moon; month; Dawa (name) | луна; месяц; Дава (имя) | noun | 14
+བཀྲ་ཤིས་ | Tashi (name); auspiciousness | Таши (имя); благоприятствие | name | 14
+ཚེ་རིང་ | Tsering (name); long life | Цэринг (имя); долгая жизнь | name | 14
+
+@set lesson-02
+ང་ | I | я | pronoun | 16
+བདག་ | I (classical); self, ego | я (классич.); «я», эго | pronoun | 16
+ཁོ་བོ་ | I (literary) | я (книжн.) | pronoun | 16
+ངེད་ | I, we (literary) | я, мы (книжн.) | pronoun | 16
+ཁྱོད་ | you | ты | pronoun | 16
+ཁྱེད་ | you (h.) | Вы (вежл.) | pronoun | 16
+ཁོ་ | he | он | pronoun | 16
+མོ་ | she; terminating particle after མ | она; завершающая частица после མ | pronoun | 16
+ཁོང་ | he, she (h.) | он, она (вежл.) | pronoun | 16
+ཅག་ | plural particle (with pronouns) | частица мн. ч. (с местоимениями) | particle | 16
+ང་ཚོ་ | we | мы | pronoun | 16
+རང་ | self, oneself | сам, себя | pronoun | 17
+ཉིད་ | -self, itself (emphasis); -ness | сам, именно (усиление); -ость | particle | 17
+ཀྱི་ | of (connective particle after ད བ ས) | соединительная частица «кого/чего» (после ད བ ས) | particle | 17
+གི་ | of (connective particle after ག ང) | соединительная частица (после ག ང) | particle | 17
+གྱི་ | of (connective particle after ན མ ར ལ) | соединительная частица (после ན མ ར ལ) | particle | 17
+འི་ | of (connective particle fused to an open syllable) | соединительная частица, сливается с открытым слогом | particle | 17 | fused
+ཡི་ | of (connective particle as a separate syllable) | соединительная частица (отдельным слогом) | particle | 17
+སྟོང་པ་ | empty; to be empty of | пустой; быть пустым от | adj | 17
+སྟོང་པ་ཉིད་ | emptiness | пустота | noun | 17
+བསྟན་པ་ | teaching(s) | учение | noun | 18
+བྱང་ཆུབ་སེམས་དཔའ་ | bodhisattva | бодхисаттва | noun | 18
+བསྒོམ་པ་ | meditation | медитация | noun | 18
+དོན་ | meaning; benefit; object, purpose | смысл; благо; объект, цель | noun | 18
+རྒྱ་གར་བ་ | Indian (person) | индиец | noun | 18
+ཆོས་ལུགས་ | religious tradition | религиозная традиция | noun | 18
+མགོན་པོ་ | protector | защитник, покровитель | noun | 19
+གདམས་ངག་ | oral instruction | устное наставление | noun | 19
+ཆོ་ག་ | ritual | ритуал | noun | 19
+དམ་ཚིག་ | sacred commitment, samaya | самая, священное обязательство | noun | 19
+བདག་པོ་ | owner, master | владелец, хозяин | noun | 19
+ཕྲག་དོག་ | jealousy | зависть, ревность | noun | 19
+བལ་ཡུལ་ | Nepal | Непал | noun | 19
+ང་རྒྱལ་ | pride | гордость | noun | 19
+མདུན་ | front | перёд, передняя сторона | noun | 20
+ནམ་མཁའ་ | space, sky | пространство, небо | noun | 20
+མཆོད་པ་ | offering | подношение | noun | 20
+ལས་ | action, karma; from (source particle) | действие, карма; из, от (частица источника) | noun | 20
+འཆི་བདག་ | lord of death | владыка смерти | noun | 21
+གཤིན་རྗེ་ | Yama | Яма | name | 21
+ཐེག་མཆོག་ | the supreme vehicle | высшая колесница | noun | 21
+ནང་མཆོད་ | inner offering | внутреннее подношение | noun | 21
+བདུད་རྩི་ | nectar, amṛta | нектар, амрита | noun | 21
+དམྱལ་བ་ | hell; hell being | ад; существо ада | noun | 21
+ངན་སོང་ | lower realms | низшие миры | noun | 21
+སྟོན་པ་ | teacher; to teach | учитель; учить | noun | 21
+འོད་དཔག་མེད་ | Amitābha | Амитабха | name | 21
+ནི་ | emphasizing particle: as for ... | выделительная частица: что касается… | particle | 22
+དཀོན་མཆོག་ | Jewel (the Rare and Supreme) | Драгоценность (Редкое и Высшее) | noun | 22
+ཕ་ | father | отец | noun | 23
+ཡབ་ | father (h.) | отец (вежл.) | noun | 23
+མ་ | not (negation of past and imperative); mother | не (отрицание прошедшего и повеления); мать | particle | 23
+ཡུམ་ | mother (h.) | мать (вежл.) | noun | 23
+སྲས་ | son (h.) | сын (вежл.) | noun | 23
+ལུས་ | body | тело | noun | 23
+ངག་ | speech | речь | noun | 23
+གསུང་ | speech (h.); to speak (h.) | речь (вежл.); говорить (вежл.) | noun | 23
+ཡིད་ | mind | ум | noun | 23
+ཐུགས་ | mind (h.) | ум (вежл.) | noun | 23
+མགོ་ | head | голова | noun | 23
+དབུ་ | head (h.) | голова (вежл.) | noun | 23
+ཕྱག་ | hand (h.) | рука (вежл.) | noun | 23
+རྐང་པ་ | foot | нога | noun | 23
+ཞབས་ | foot (h.) | нога, стопа (вежл.) | noun | 23
+ཡིན་པ་ | to be (infinitive) | быть (инфинитив) | verb | 23
+ལགས་པ་ | to be (humilific) | быть (учтивая форма) | verb | 23
+གནས་པ་ | to stay, abide, live | пребывать, жить | verb | 23
+བཞུགས་པ་ | to stay, abide (h.) | пребывать (вежл.) | verb | 23
+བྱེད་པ་ | to do | делать | verb | 23
+མཛད་པ་ | to do (h.); deed | делать (вежл.); деяние | verb | 23
+མཁྱེན་པ་ | to know (h.) | знать (вежл.) | verb | 23
+རྒྱུ་ | cause | причина | noun | 24
+འབྲས་བུ་ | effect, fruition, result | плод, результат | noun | 24
+ཉོན་མོངས་ | affliction, kleśa | омрачение, клеша | noun | 24
+འཕགས་པ་ | noble; noble being (ārya) | благородный; благородное существо (арья) | noun | 24
+ཡི་དྭགས་ | hungry ghost (preta) | голодный дух (прета) | noun | 24
+དུད་འགྲོ་ | animal | животное | noun | 24
+མཐོ་རིས་ | higher realms | высшие миры | noun | 25
+རྒྱ་གར་ | India | Индия | noun | 25
+འབྱུང་གནས་ | source, origin | источник | noun | 27
+གོ་འཕང་ | level, state | уровень, состояние | noun | 27
+ཐར་པ་ | liberation | освобождение | noun | 27
+ཕྱི་ | outer, outside | внешний | adj | 27
+མེ་ཏོག་ | flower | цветок | noun | 27
+མར་མེ་ | butter lamp | масляный светильник | noun | 27
+གྲྭ་པ་ | monk | монах | noun | 27
+དངོས་གྲུབ་ | spiritual accomplishment (siddhi) | духовное достижение (сиддхи) | noun | 27
+ཟུང་འཇུག་ | unity, union | единство, союз | noun | 27
+
+@set lesson-03
+མི་རྟག་པ་ | impermanent; impermanence | непостоянный; непостоянство | adj | 31
+མིན་ | is not | не есть, не является | verb | 31
+ཐེག་ཆེན་ | the Greater Vehicle, Mahāyāna | Великая колесница, Махаяна | noun | 31
+ཕ་ཡུལ་ | homeland | родина | noun | 31
+རྒྱ་མཚོ་ | ocean | океан | noun | 32
+རིང་པོ་ | long | долгий, длинный | adj | 32
+ཡང་དག་པ་ | authentic, genuine | подлинный, истинный | adj | 32
+འགྲོ་བ་ | (wandering) beings; to go | (блуждающие) существа; идти | noun | 32
+མོས་གུས་ | devotion | преданность | noun | 32
+སྦྱིན་བདག་ | benefactor, sponsor | благодетель, спонсор | noun | 32
+འདུས་བྱས་ | conditioned thing, composite | обусловленное, составное | noun | 32
+ཟག་བཅས་ | defiled, contaminated | загрязнённое, омрачённое | noun | 32
+སྡུག་བསྔལ་བ་ | suffering (nominalized) | страдание (как состояние) | noun | 32
+བདག་མེད་པ་ | selfless, without self | лишённое «я», бессамостное | adj | 32
+ཞི་བ་ | peace; peaceful; to be at peace | покой; мирный; быть в покое | noun | 32
+ཡོད་ | to exist, there is; to have | существовать, быть, иметься | verb | 33
+མེད་ | not to exist, there is not | не существовать, не иметься | verb | 33
+ལ་ | to, in, at (la-dön particle); object marker | в, на, к (частица ла-дон); показатель объекта | particle | 33
+ལྷ་ཁང་ | temple | храм | noun | 33
+ཕ་མ་ | parents | родители | noun | 33
+མགྲོན་ཁང་ | guesthouse | гостиница | noun | 33
+རིན་པོ་ཆེ་ | precious; Rinpoche | драгоценный; Ринпоче | adj | 33
+རྒྱན་ | ornament | украшение | noun | 33
+མཁའ་འགྲོ་ | ḍākinī | дакини | noun | 34
+ཆོས་སྐྱོང་ | Dharma protector | защитник Дхармы | noun | 34
+དངུལ་ | money, silver | деньги, серебро | noun | 34
+རྩ་བ་ | root | корень | noun | 34
+ཡུལ་ | land, place, country | земля, место, страна | noun | 34
+དམག་དཔུང་ | army | войско | noun | 34
+ཡོ་བྱད་ | possessions, belongings | имущество | noun | 34
+ཚོང་ཁང་ | shop | лавка, магазин | noun | 34
+ནོར་ | wealth | богатство | noun | 34
+འདྲི་བ་ | question | вопрос | noun | 34
+ཀྱིས་ | agentive particle (after ད བ ས) | агентивная частица (после ད བ ས) | particle | 37
+གིས་ | agentive particle (after ག ང) | агентивная частица (после ག ང) | particle | 37
+གྱིས་ | agentive particle (after ན མ ར ལ) | агентивная частица (после ན མ ར ལ) | particle | 37
+ས་ | agentive particle fused to an open syllable | агентивная частица, сливается с открытым слогом | particle | 37 | fused
+ཡིས་ | agentive particle (as a separate syllable) | агентивная частица (отдельным слогом) | particle | 47
+བསྟན་ | taught (past of སྟོན་) | учил, преподал (прош. от སྟོན་) | verb | 37
+ཟ་ | to eat | есть, кушать | verb | 37
+ཀུ་ཤུ་ | apple | яблоко | noun | 37
+དགྲ་ | enemy | враг | noun | 37
+གནོད་ | to harm | вредить | verb | 37
+བསྟན་བཅོས་ | treatise, śāstra | трактат, шастра | noun | 37
+འཆད་ | to explain | объяснять | verb | 37
+དམག་མི་ | soldier | солдат | noun | 37
+གསོད་ | to kill | убивать | verb | 37
+ལྟ་ | to look at | смотреть | verb | 38
+སྒོམ་ | to meditate, cultivate | медитировать, взращивать | verb | 38
+འཁོར་ལོ་ | wheel | колесо | noun | 38
+སྐོར་ | to turn (something), spin | вращать | verb | 38
+སྒྲོལ་ | to liberate | освобождать | verb | 38
+མཚན་ལྡན་ | qualified | обладающий качествами, подлинный | adj | 38
+ལས་དང་པོ་པ་ | beginner | начинающий | noun | 38
+ཕན་ | to benefit, help | приносить пользу, помогать | verb | 38
+སྒྲ་ | sound | звук | noun | 38
+སྙན་པོ་ | melodious, pleasant | благозвучный | adj | 38
+ཉན་ | to listen | слушать | verb | 38
+སྟོན་ | to teach, show | учить, показывать | verb | 38
+སྐྱེད་ | to generate, produce | порождать | verb | 38
+ཤར་ | rose (past of འཆར་); east | взошло (прош. от འཆར་); восток | verb | 38
+འཁྲུལ་ | to be confused | заблуждаться, быть в заблуждении | verb | 38
+ཤིང་རྟ་ | chariot | колесница, повозка | noun | 38
+གྲོལ་ | to be liberated | освободиться | verb | 38
+ངེས་འབྱུང་ | renunciation | отречение | noun | 38
+སྐྱེ་ | to arise, be born | возникать, рождаться | verb | 38
+བསོད་ནམས་ | merit; Sönam (name) | заслуга; Сонам (имя) | noun | 39
+འཕེལ་ | to increase | возрастать | verb | 39
+འདྲེ་ | to mingle, mix together | смешиваться, сливаться | verb | 39
+གནས་ | to stay, dwell | пребывать, оставаться | verb | 39
+འགྲོ་ | to go | идти | verb | 39
+ཨ་མ་ | mother | мама | noun | 39
+ར་ | to, in, at (la-dön particle fused to an open syllable) | в, к (частица ла-дон, сливается с открытым слогом) | particle | 39 | fused
+ཀྱང་ | also, even (after ག ད བ ས) | тоже, даже (после ག ད བ ས) | particle | 39
+ཕྱིན་ | went (past of འགྲོ་) | пошёл (прош. от འགྲོ་) | verb | 39
+ནོ་ | terminating particle (after ན) | завершающая частица (после ན) | particle | 42
+དོ་ | terminating particle (after ད) | завершающая частица (после ད) | particle | 42
+ལོ་ | terminating particle (after ལ); year | завершающая частица (после ལ); год | particle | 42
+གོ་ | terminating particle (after ག); to understand | завершающая частица (после ག); понимать | particle | 42
+ངོ་ | terminating particle (after ང) | завершающая частица (после ང) | particle | 42
+བོ་ | terminating particle (after བ) | завершающая частица (после བ) | particle | 42
+རོ་ | terminating particle (after ར) | завершающая частица (после ར) | particle | 42
+སོ་ | terminating particle (after ས) | завершающая частица (после ས) | particle | 42
+ཏོ་ | terminating particle (after second suffix ད) | завершающая частица (после второго суффикса ད) | particle | 42
+འོ་ | terminating particle fused to an open syllable | завершающая частица, сливается с открытым слогом | particle | 42 | fused
+སྨོན་ལམ་ | aspiration prayer | молитва-устремление | noun | 43
+རྟག་པ་ | permanent; permanence | постоянный; постоянство | adj | 43
+བཀའ་ | words (of the Buddha) | слово (Будды) | noun | 43
+བྱང་སེམས་ | bodhicitta (abbr.) | бодхичитта (сокр.) | noun | 43
+སྒོམ་པ་ | meditation; to meditate | медитация; медитировать | noun | 43
+འཇུག་པ་ | to enter, engage; entrance | входить, вступать; вхождение | verb | 43
+འཇུག་ | to enter, engage | входить, вступать | verb | 43
+གཅོད་པ་ | to cut | резать, отсекать | verb | 44
+ལྟ་བ་ | view; to look at | воззрение; смотреть | noun | 44
+འཛིན་པ་ | to hold, grasp; apprehending subject | держать, цепляться; воспринимающий субъект | verb | 44
+གསུང་བ་ | to speak, say, teach (h.) | говорить, учить (вежл.) | verb | 44
+འཆད་པ་ | explanation; to explain | объяснение; объяснять | verb | 44
+སྐྱེད་པ་ | to generate, produce | порождать | verb | 44
+སྐྱེ་བ་ | birth; to arise, be born | рождение; возникать | verb | 44
+མཛད་ | to do (h.) | делать, совершать (вежл.) | verb | 46
+བཞུགས་ | to stay, abide (h.) | пребывать (вежл.) | verb | 46
+སྐྱོབ་པ་ | protector | защитник | noun | 46
+བླ་ན་མེད་པ་ | unsurpassed | непревзойдённый | adj | 46
+འདྲེན་པ་ | guide | проводник | noun | 46
+མཚན་ | name (h.); mark, characteristic | имя (вежл.); признак, качество | noun | 46
+སྐྱབས་འགྲོ་ | going for refuge | принятие прибежища | noun | 46
+སེམས་བསྐྱེད་ | generating bodhicitta | порождение бодхичитты | noun | 46
+དཔྱོད་ | to examine, investigate | исследовать | verb | 46
+དམིགས་པ་ | to observe, focus on; object of focus | сосредоточиваться, наблюдать; объект сосредоточения | verb | 46
+ཉོན་མོངས་པ་ | affliction (full form) | омрачение (полная форма) | noun | 46

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "lesson-01",
+    "name": {
+      "ru": "Урок 1. Существительные и именная группа",
+      "en": "Lesson 1. Nouns and the nominal group",
+      "de": "Lektion 1. Substantive und die Nominalgruppe",
+      "fr": "Leçon 1. Les noms et le groupe nominal",
+      "pl": "Lekcja 1. Rzeczowniki i grupa nominalna"
+    },
+    "order": 1
+  },
+  {
+    "id": "lesson-02",
+    "name": {
+      "ru": "Урок 2. Местоимения и соединительная частица",
+      "en": "Lesson 2. Pronouns and the connective particle",
+      "de": "Lektion 2. Pronomen und die Verbindungspartikel",
+      "fr": "Leçon 2. Les pronoms et la particule de liaison",
+      "pl": "Lekcja 2. Zaimki i partykuła łącząca"
+    },
+    "order": 2
+  },
+  {
+    "id": "lesson-03",
+    "name": {
+      "ru": "Урок 3. Глаголы: быть, существовать, действовать",
+      "en": "Lesson 3. Verbs: to be, to exist, to act",
+      "de": "Lektion 3. Verben: sein, existieren, handeln",
+      "fr": "Leçon 3. Les verbes : être, exister, agir",
+      "pl": "Lekcja 3. Czasowniki: być, istnieć, działać"
+    },
+    "order": 3
+  },
+  {
+    "id": "lesson-04",
+    "name": {
+      "ru": "Урок 4. Агентивная частица и повеление",
+      "en": "Lesson 4. The agentive particle and the imperative",
+      "de": "Lektion 4. Die Agenspartikel und der Imperativ",
+      "fr": "Leçon 4. La particule agentive et l'impératif",
+      "pl": "Lekcja 4. Partykuła agentywna i tryb rozkazujący"
+    },
+    "order": 4
+  },
+  {
+    "id": "lesson-05",
+    "name": {
+      "ru": "Урок 5. Частицы ла-дон",
+      "en": "Lesson 5. The la-dön particles",
+      "de": "Lektion 5. Die La-dön-Partikeln",
+      "fr": "Leçon 5. Les particules la-dön",
+      "pl": "Lekcja 5. Partykuły la-dön"
+    },
+    "order": 5
+  },
+  {
+    "id": "lesson-06",
+    "name": {
+      "ru": "Урок 6. Частицы источника и относительные обороты",
+      "en": "Lesson 6. Source particles and relative clauses",
+      "de": "Lektion 6. Herkunftspartikeln und Relativsätze",
+      "fr": "Leçon 6. Les particules d'origine et les propositions relatives",
+      "pl": "Lekcja 6. Partykuły źródła i zdania względne"
+    },
+    "order": 6
+  },
+  {
+    "id": "lesson-07",
+    "name": {
+      "ru": "Урок 7. Вспомогательные глаголы и связь предложений",
+      "en": "Lesson 7. Auxiliaries and clause connectors",
+      "de": "Lektion 7. Hilfsverben und Satzverknüpfungen",
+      "fr": "Leçon 7. Les auxiliaires et les connecteurs de propositions",
+      "pl": "Lekcja 7. Czasowniki posiłkowe i łączniki zdań"
+    },
+    "order": 7
+  }
+]
