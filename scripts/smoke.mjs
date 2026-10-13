@@ -60,6 +60,23 @@ for (const route of ['dict', 'grammar', 'stats', 'settings']) {
   check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), `#/${route}: no horizontal scroll`);
 }
 
+// theme toggle in the header: brand, button and language select on one line; click switches the theme
+await page.goto(`${base}/index.html#/play`);
+await page.waitForSelector('.rack .tile');
+const headerRow = await page.evaluate(() => {
+  const tops = ['.brand', '#theme-toggle', '#lang-select'].map((s) => document.querySelector(s).getBoundingClientRect());
+  const btn = document.getElementById('theme-toggle').getBoundingClientRect();
+  return { sameLine: tops.every((r) => Math.abs(r.top + r.height / 2 - tops[0].top - tops[0].height / 2) < 12), size: Math.min(btn.width, btn.height) };
+});
+check(headerRow.sameLine, 'header: brand, theme button and language select on one line');
+check(headerRow.size >= 44, 'header: theme button is at least 44px');
+const before = await page.evaluate(() => ({ dark: document.documentElement.dataset.theme === 'dark', color: document.querySelector('meta[name="theme-color"]').content }));
+await page.click('#theme-toggle');
+const after = await page.evaluate(() => ({ dark: document.documentElement.dataset.theme === 'dark', color: document.querySelector('meta[name="theme-color"]').content, pressed: document.getElementById('theme-toggle').getAttribute('aria-pressed'), setting: JSON.parse(localStorage.getItem('tib-progress')).settings.theme }));
+check(before.dark !== after.dark && before.color !== after.color, 'theme toggle switches the theme and meta theme-color');
+check(after.pressed === String(after.dark) && after.setting === (after.dark ? 'dark' : 'light'), 'theme toggle updates aria-pressed and the setting');
+check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'no horizontal scroll after the theme switch');
+
 check(errors.length === 0, `no console errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 await browser.close();

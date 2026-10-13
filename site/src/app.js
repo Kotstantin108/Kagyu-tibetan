@@ -42,21 +42,36 @@ function applyLang() {
     for (const l of LANGS) sel.append(h('option', { value: l }, STRINGS[l].langName));
   }
   sel.value = ctx.lang;
+  const btn = document.getElementById('theme-toggle');
+  if (btn) { const label = ctx.t('settings.themeToggle'); btn.setAttribute('aria-label', label); btn.title = label; }
+}
+
+function effectiveDark() {
+  const theme = store.get().settings.theme || 'auto';
+  return theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
 }
 
 function applyTheme() {
   const theme = store.get().settings.theme || 'auto';
   if (theme === 'auto') delete document.documentElement.dataset.theme;
   else document.documentElement.dataset.theme = theme;
+  const dark = effectiveDark();
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) {
-    const dark = theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    meta.content = dark ? '#111a2b' : '#182943';
+  if (meta) meta.content = dark ? '#111a2b' : '#182943';
+  const btn = document.getElementById('theme-toggle');
+  if (btn) {
+    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    if (ctx.t) { const label = ctx.t('settings.themeToggle'); btn.setAttribute('aria-label', label); btn.title = label; }
   }
 }
 
 document.getElementById('lang-select').addEventListener('change', (e) => {
   store.update((p) => setSetting(p, 'lang', e.target.value));
+});
+
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  const next = effectiveDark() ? 'light' : 'dark';
+  store.update((p) => setSetting(p, 'theme', next));
 });
 
 store.subscribe((p, source) => {

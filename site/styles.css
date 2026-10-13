@@ -108,7 +108,13 @@ select, input[type="text"], input[type="search"], textarea { color: var(--text);
 .brand-text { display: flex; flex-direction: column; min-width: 0; }
 .brand-title { font: 700 1.1rem/1.1 Georgia, serif; letter-spacing: -.02em; }
 .brand-sub { font-size: .72rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.lang-switch select { min-height: 44px; border: 1px solid var(--border); border-radius: 10px; padding: 0 10px; font: inherit; }
+.header-tools { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+.lang-switch select { min-height: 44px; max-width: 120px; border: 1px solid var(--border); border-radius: 10px; padding: 0 10px; font: inherit; background: var(--input-bg); color: var(--text); }
+.theme-toggle { width: 44px; height: 44px; padding: 0; border: 1px solid var(--border); border-radius: 10px; background: var(--input-bg); color: var(--brand); display: grid; place-items: center; }
+.theme-toggle svg { grid-area: 1 / 1; }
+.theme-toggle .icon-moon { display: none; }
+.theme-toggle[aria-pressed="true"] .icon-sun { display: none; }
+.theme-toggle[aria-pressed="true"] .icon-moon { display: block; }
 .tabs { display: flex; width: min(860px, calc(100% - 24px)); margin: 0 auto; gap: 2px; }
 .tabs a { flex: 1; text-align: center; min-height: 44px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--switch-text); font-weight: 700; font-size: .86rem; border-bottom: 3px solid transparent; padding: 6px 2px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .tabs a.active { color: var(--brand); border-bottom-color: var(--gold); }

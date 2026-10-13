@@ -121,6 +121,7 @@ export default {
     themeAuto: 'Jak w systemie',
     themeLight: 'Jasny',
     themeDark: 'Ciemny',
+    themeToggle: 'Ciemny motyw',
     tileMode: 'Kafelki',
     showWylie: 'Pokazuj Wylie pod kafelkami',
     data: 'Twoje postępy',

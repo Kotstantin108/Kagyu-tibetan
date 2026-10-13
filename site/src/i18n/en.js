@@ -121,6 +121,7 @@ export default {
     themeAuto: 'Follow the system',
     themeLight: 'Light',
     themeDark: 'Dark',
+    themeToggle: 'Dark theme',
     tileMode: 'Tiles',
     showWylie: 'Show Wylie under the tiles',
     data: 'Your progress',

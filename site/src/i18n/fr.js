@@ -121,6 +121,7 @@ export default {
     themeAuto: 'Comme le système',
     themeLight: 'Clair',
     themeDark: 'Sombre',
+    themeToggle: 'Thème sombre',
     tileMode: 'Tuiles',
     showWylie: 'Afficher le Wylie sous les tuiles',
     data: 'Vos progrès',

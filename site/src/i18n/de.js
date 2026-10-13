@@ -121,6 +121,7 @@ export default {
     themeAuto: 'Wie das System',
     themeLight: 'Hell',
     themeDark: 'Dunkel',
+    themeToggle: 'Dunkles Design',
     tileMode: 'Kacheln',
     showWylie: 'Wylie unter den Kacheln anzeigen',
     data: 'Dein Fortschritt',

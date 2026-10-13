@@ -121,6 +121,7 @@ export default {
     themeAuto: 'Как в системе',
     themeLight: 'Светлая',
     themeDark: 'Тёмная',
+    themeToggle: 'Тёмная тема',
     tileMode: 'Плитки',
     showWylie: 'Показывать Wylie под плитками',
     data: 'Ваш прогресс',
