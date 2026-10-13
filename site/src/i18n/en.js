@@ -7,6 +7,7 @@ export default {
   loading: 'Loading…',
   loadError: 'Could not load the course data. Reload the page to try again.',
   updated: 'A new version is ready. It will load on the next visit.',
+  moving: 'The app is moving to {url}. Move your progress with a code: Settings → Move to another device.',
   common: { cancel: 'Cancel', ok: 'OK', close: 'Close', yes: 'Yes', no: 'No' },
   play: {
     exercise: 'Exercise',

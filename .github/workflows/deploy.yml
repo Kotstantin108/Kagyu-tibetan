@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   push:
@@ -11,8 +11,14 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: true
+
+env:
+  # What GitHub Pages publishes. "site" = the app with a "we moved" banner
+  # (transition period); "redirect" = the one-page redirect to the server
+  # (switch planned for 2026-10-27, see README "Server").
+  PAGES_SOURCE: site
 
 jobs:
   check:
@@ -31,6 +37,35 @@ jobs:
       - name: Browser smoke test
         run: node scripts/smoke.mjs
 
+  deploy-server:
+    needs: check
+    # switched on with: gh variable set DEPLOY_SERVER --body true
+    if: ${{ vars.DEPLOY_SERVER == 'true' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: server
+      url: https://tibetan.itjoy.space/
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stamp the version
+        run: |
+          sed -i "s/VERSION: 'dev'/VERSION: '${GITHUB_SHA::7}'/" site/config.js
+          grep VERSION site/config.js
+      - name: Prepare the deploy key
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          printf '%s\n' "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/deploy_key ~/.ssh/known_hosts
+      - name: rsync site/ to the server
+        run: |
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
+            site/ deploy@itjoy.space:/var/www/tibetan.itjoy.space/
+      - name: Check the live site
+        run: |
+          curl -fsSI https://tibetan.itjoy.space/ | head -1
+          curl -fsS https://tibetan.itjoy.space/config.js | grep "VERSION: '${GITHUB_SHA::7}'"
+
   deploy:
     needs: check
     runs-on: ubuntu-latest
@@ -46,6 +81,6 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: ${{ env.PAGES_SOURCE }}
       - id: deployment
         uses: actions/deploy-pages@v4

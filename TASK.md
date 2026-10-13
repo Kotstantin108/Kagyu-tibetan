@@ -130,6 +130,14 @@ CSS-токены в `site/styles.css` под `:root[data-theme="dark"]` и
 
 ### Задача 4. Перенос сайта на свой сервер: https://tibetan.itjoy.space
 
+Состояние 2026-10-13: в репозитории готово всё (`server/setup.sh`, `server/nginx/*.conf`,
+`server/deploy_key.pub`, job `deploy-server` в workflow, `redirect/`, баннер о переезде
+на Pages, `SMOKE_URL`, README). Секреты `DEPLOY_SSH_KEY` и `DEPLOY_KNOWN_HOSTS` в репозитории
+поставлены. Осталось: (а) на сервере `scp -r server root@itjoy.space:/tmp/tibetan-server &&
+ssh root@itjoy.space 'bash /tmp/tibetan-server/setup.sh'`; (б) `gh variable set DEPLOY_SERVER
+--body true` и перезапуск workflow; (в) проверки из п. 3; (г) 2026-10-27 сменить
+`PAGES_SOURCE: site` на `redirect` в `.github/workflows/deploy.yml`.
+
 Факты о сервере (проверено 2026-10-13, доступ `ssh root@itjoy.space` по ключу без
 пароля): Ubuntu 24.04, nginx 1.24 слушает 80/443 (apache2 установлен, но неактивен),
 node v22, php, certbot, docker. Vhost-ы в `/etc/nginx/sites-enabled/*.conf`, корни в

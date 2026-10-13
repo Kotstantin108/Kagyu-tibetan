@@ -7,6 +7,7 @@ export default {
   loading: 'Ładowanie…',
   loadError: 'Nie udało się wczytać danych kursu. Odśwież stronę.',
   updated: 'Nowa wersja jest gotowa. Wczyta się przy następnym otwarciu.',
+  moving: 'Aplikacja przenosi się na {url}. Postępy przenieś kodem: Ustawienia → Przeniesienie na inne urządzenie.',
   common: { cancel: 'Anuluj', ok: 'OK', close: 'Zamknij', yes: 'Tak', no: 'Nie' },
   play: {
     exercise: 'Ćwiczenie',

@@ -123,9 +123,21 @@ function registerServiceWorker() {
   }).catch(() => { /* offline support is optional */ });
 }
 
+// Shown only on the old GitHub Pages address while it still serves the app
+// (until the redirect replaces it; see README, "Server").
+function movingBanner() {
+  const newUrl = ctx.config.SITE_URL;
+  if (!newUrl || !/\.github\.io$/.test(location.hostname)) return;
+  const host = newUrl.replace(/^https?:\/\//, '').replace(/\/+$/, '');
+  const [before, after] = ctx.t('moving').split('{url}');
+  const banner = h('div', { class: 'notice move-banner', role: 'status' }, before, h('a', { href: `${newUrl.replace(/\/+$/, '')}/${location.hash}` }, host), after || '');
+  document.querySelector('.header').after(banner);
+}
+
 async function main() {
   applyLang();
   applyTheme();
+  movingBanner();
   try {
     const [words, sentences, sets] = await Promise.all([loadJson('words.json'), loadJson('sentences.json'), loadJson('sets.json')]);
     sets.sort((a, b) => a.order - b.order);

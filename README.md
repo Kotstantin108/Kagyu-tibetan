@@ -9,7 +9,12 @@ sentences in 18 sets. Interface and translations in
 English, Russian, German, French and Polish (English is the textbook's
 language; the other four are machine translations from it).
 
-Live: https://kotstantin108.github.io/Kagyu-tibetan/
+Live: https://tibetan.itjoy.space/
+
+(The old address https://kotstantin108.github.io/Kagyu-tibetan/ shows the app
+with a "we moved" banner until **2026-10-27**, then becomes a redirect; progress
+does not travel between the two addresses by itself, use Settings → "Move to
+another device".)
 
 ## What it does
 
@@ -64,6 +69,10 @@ scripts/
   lib/wylie.mjs     re-exports site/src/engine/wylie.js for the scripts
   tools/pdf-tibetan-text.py  recovers Tibetan text from the textbook PDFs
   tools/make-icon.py         builds icons/icon.svg from the font's glyph outlines
+redirect/           one-page redirect published to GitHub Pages after the move (index.html + self-removing sw.js)
+server/
+  nginx/tibetan.itjoy.space.conf  vhost (caching headers, gzip, /api/ proxy)
+  setup.sh          one-time root setup of the server (deploy user, certificate, vhost, report-api)
 site/
   index.html, styles.css, config.js, manifest.webmanifest, sw.js
   fonts/            Noto Serif Tibetan (OFL)
@@ -76,7 +85,7 @@ site/
   src/sync.js       optional Google Drive sync
   src/transfer.js   progress <-> text code
   src/report.js     "report a problem" issue links
-.github/workflows/deploy.yml  validate + tests + smoke test, then publish site/ to GitHub Pages
+.github/workflows/deploy.yml  validate + tests + smoke test, then rsync site/ to the server and publish to GitHub Pages
 ```
 
 ## Data model notes
@@ -117,7 +126,7 @@ The app works fully without signing in. To enable sync between devices:
 4. **APIs & Services → Credentials → Create credentials → OAuth client ID**,
    type **Web application**. Under *Authorized JavaScript origins* add:
    - `http://localhost:3000` (and any other local port you use, e.g. `http://localhost:8000`)
-   - `https://<your-github-user>.github.io`
+   - `https://tibetan.itjoy.space`
    No redirect URI is needed (the token client uses a popup).
 5. Copy the client ID into `site/config.js`:
    ```js
@@ -135,7 +144,49 @@ paused, sign in again" and local work continues.
 ## Deploy
 
 Pushing to `main` runs the validator, the unit tests and the browser smoke
-test, stamps the commit hash into `site/config.js` (shown in settings and
-used as the service-worker cache name), then publishes `site/` to GitHub
-Pages (Settings → Pages → Source: GitHub Actions). All paths are relative, so
-the site also works from a sub-path such as `https://<user>.github.io/<repo>/`.
+test (job `check`), then two deploy jobs:
+
+- `deploy-server` stamps the commit hash into `site/config.js` (shown in
+  settings and used as the service-worker cache name) and `rsync`s `site/` to
+  `deploy@itjoy.space:/var/www/tibetan.itjoy.space/`. It needs the repository
+  secrets `DEPLOY_SSH_KEY` (private key of the `deploy` user) and
+  `DEPLOY_KNOWN_HOSTS` (`ssh-keyscan itjoy.space`), and runs only while the
+  repository variable `DEPLOY_SERVER` is `true`.
+- `deploy` publishes `${PAGES_SOURCE}` (set at the top of the workflow) to
+  GitHub Pages: `site` during the transition (the app with a banner about the
+  move), `redirect` afterwards (a page that sends the visitor to
+  https://tibetan.itjoy.space/ keeping the `#` route, and a `sw.js` that
+  removes the old caches and unregisters itself). Planned switch:
+  **2026-10-27**, two weeks after the banner went live on 2026-10-13.
+
+All paths in the app are relative, so it also works from a sub-path.
+
+## Server
+
+- **Host:** `itjoy.space` (Ubuntu 24.04, nginx). Site files:
+  `/var/www/tibetan.itjoy.space`, owner `deploy:www-data`. Vhost:
+  `/etc/nginx/sites-enabled/tibetan.itjoy.space.conf`, a copy of
+  `server/nginx/tibetan.itjoy.space.conf` (80 → 301 https, gzip, `fonts/` and
+  `icons/` immutable for a year, `sw.js` / `config.js` / `index.html` /
+  `data/*.json` `no-cache`, everything else 10 minutes, `/api/` proxied to
+  the report service on `127.0.0.1:8091`).
+- **First setup / re-apply:** `scp -r server root@itjoy.space:/tmp/tibetan-server`
+  and `ssh root@itjoy.space 'bash /tmp/tibetan-server/setup.sh'` (the deploy public key is `server/deploy_key.pub`).
+  The script is idempotent and does not touch other vhosts.
+- **Deploy user:** `deploy`, no password, one ssh key (restricted: no pty, no
+  forwarding) whose private half is the `DEPLOY_SSH_KEY` secret. To rotate:
+  `ssh-keygen -t ed25519 -f deploy_key`, re-run `setup.sh` with the new public
+  key, `gh secret set DEPLOY_SSH_KEY < deploy_key`, remove the old line from
+  `/home/deploy/.ssh/authorized_keys`.
+- **Certificate:** Let's Encrypt, `certbot certonly --webroot -w /var/www/html
+  -d tibetan.itjoy.space`; renewal is certbot's timer (`systemctl list-timers
+  certbot*`), check with `certbot renew --dry-run`.
+- **Checks after a deploy:** `curl -I https://tibetan.itjoy.space/` (200),
+  `curl -I https://tibetan.itjoy.space/sw.js` (`Cache-Control: no-cache`),
+  `curl -I https://tibetan.itjoy.space/fonts/NotoSerifTibetan-Regular.woff2`
+  (`font/woff2`, `immutable`), and the browser smoke test against the live site:
+  `SMOKE_URL=https://tibetan.itjoy.space node scripts/smoke.mjs`.
+- **report-api** (issues filed from the app, `server/report-api/`): service
+  `report-api.service` run as its own user, listening on `127.0.0.1:8091`;
+  its GitHub token lives in `/etc/report-api.env` (`GITHUB_TOKEN=…`, mode 600,
+  never in the repository).

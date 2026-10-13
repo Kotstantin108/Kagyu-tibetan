@@ -1,5 +1,7 @@
 // Browser smoke test: serves site/, opens it at phone width, plays one round.
 // Usage: node scripts/smoke.mjs   (needs: npm i -D playwright && npx playwright install chromium)
+//        SMOKE_URL=https://tibetan.itjoy.space node scripts/smoke.mjs   — run against a live site instead
+// The test never calls the report API: config.js in the repo has an empty REPORT_API.
 
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
@@ -9,19 +11,24 @@ import { chromium } from 'playwright';
 const ROOT = new URL('../site/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.woff2': 'font/woff2', '.svg': 'image/svg+xml', '.png': 'image/png', '.webmanifest': 'application/manifest+json' };
 
-const server = http.createServer(async (req, res) => {
-  const path = decodeURIComponent(new URL(req.url, 'http://x').pathname);
-  const file = join(ROOT, path === '/' ? 'index.html' : path);
-  try {
-    const body = await readFile(file);
-    res.writeHead(200, { 'Content-Type': TYPES[extname(file)] || 'application/octet-stream' });
-    res.end(body);
-  } catch {
-    res.writeHead(404); res.end('not found');
-  }
-});
-await new Promise((r) => server.listen(0, '127.0.0.1', r));
-const base = `http://127.0.0.1:${server.address().port}`;
+let server = null;
+let base = (process.env.SMOKE_URL || '').replace(/\/+$/, '');
+if (!base) {
+  server = http.createServer(async (req, res) => {
+    const path = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+    const file = join(ROOT, path === '/' ? 'index.html' : path);
+    try {
+      const body = await readFile(file);
+      res.writeHead(200, { 'Content-Type': TYPES[extname(file)] || 'application/octet-stream' });
+      res.end(body);
+    } catch {
+      res.writeHead(404); res.end('not found');
+    }
+  });
+  await new Promise((r) => server.listen(0, '127.0.0.1', r));
+  base = `http://127.0.0.1:${server.address().port}`;
+}
+console.log(`testing ${base}`);
 
 const failures = [];
 const check = (ok, msg) => { if (!ok) failures.push(msg); console.log(`${ok ? 'ok  ' : 'FAIL'} ${msg}`); };
@@ -80,6 +87,6 @@ check((await page.evaluate(() => document.documentElement.scrollWidth <= window.
 check(errors.length === 0, `no console errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 await browser.close();
-server.close();
+if (server) server.close();
 if (failures.length) { console.error(`\n${failures.length} check(s) failed`); process.exit(1); }
 console.log('\nsmoke test passed');

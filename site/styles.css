@@ -260,6 +260,8 @@ details.set summary .counter { font-weight: 500; flex: 0 0 auto; }
 .field.check label { display: flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 500; color: var(--text); }
 .field.check input { width: 22px; height: 22px; accent-color: var(--gold); }
 .notice { padding: 10px 12px; border-radius: 12px; background: var(--lesson-bg); border: 1px solid var(--lesson-border); color: var(--lesson-strong); font-size: .85rem; }
+.move-banner { width: min(860px, calc(100% - 24px)); margin: 12px auto 0; }
+.move-banner a { color: inherit; font-weight: 700; overflow-wrap: anywhere; }
 .sync-status { font-size: .85rem; color: var(--muted); margin-top: 8px; }
 .code-area { width: 100%; margin-top: 8px; border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; font: .8rem/1.3 ui-monospace, "Cascadia Mono", Consolas, monospace; resize: vertical; }
 .toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--toast-bg); color: var(--toast-text); padding: 10px 16px; border-radius: 12px; font-size: .9rem; z-index: 30; box-shadow: 0 8px 24px #0004; max-width: calc(100% - 32px); }

@@ -7,6 +7,7 @@ export default {
   loading: 'Chargement…',
   loadError: 'Impossible de charger les données du cours. Rechargez la page.',
   updated: 'Une nouvelle version est prête. Elle se chargera à la prochaine ouverture.',
+  moving: 'L’application déménage sur {url}. Transférez votre progression avec un code : Paramètres → Transférer vers un autre appareil.',
   common: { cancel: 'Annuler', ok: 'OK', close: 'Fermer', yes: 'Oui', no: 'Non' },
   play: {
     exercise: 'Exercice',

@@ -7,6 +7,7 @@ export default {
   loading: 'Wird geladen…',
   loadError: 'Die Kursdaten konnten nicht geladen werden. Lade die Seite neu.',
   updated: 'Eine neue Version ist bereit. Sie wird beim nächsten Öffnen geladen.',
+  moving: 'Die App zieht nach {url} um. Übertrage deinen Fortschritt mit einem Code: Einstellungen → Auf ein anderes Gerät übertragen.',
   common: { cancel: 'Abbrechen', ok: 'OK', close: 'Schließen', yes: 'Ja', no: 'Nein' },
   play: {
     exercise: 'Übung',

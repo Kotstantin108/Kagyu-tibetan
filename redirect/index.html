@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="3;url=https://tibetan.itjoy.space/">
+<title>Tibetan Tiles has moved — tibetan.itjoy.space</title>
+<link rel="canonical" href="https://tibetan.itjoy.space/">
+<script>
+  // Keep the route (#/dict, #/play/hard …) when sending the visitor to the new address.
+  (function () {
+    var target = 'https://tibetan.itjoy.space/' + (location.hash || '');
+    if ('serviceWorker' in navigator) {
+      // sw.js replaces the old service worker: it clears the caches and unregisters itself.
+      navigator.serviceWorker.register('./sw.js').catch(function () {});
+    }
+    setTimeout(function () { location.replace(target); }, 50);
+  }());
+</script>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f7f4ed; color: #24354a; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.45; padding: 16px; box-sizing: border-box; }
+  main { max-width: 520px; background: #fffefa; border: 1px solid #e6dfd1; border-radius: 16px; padding: 20px; }
+  h1 { font: 700 1.2rem/1.2 Georgia, serif; color: #182943; margin: 0 0 12px; }
+  p { margin: 0 0 10px; font-size: .95rem; }
+  a { color: #182943; font-weight: 700; }
+  .lang { color: #8a642e; font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; margin-top: 14px; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #111a2b; color: #e6e9ef; } main { background: #18233a; border-color: #2a3650; } h1, a { color: #f0c47d; } .lang { color: #d9b56a; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tibetan Tiles · བོད་ཡིག</h1>
+  <p class="lang">English</p>
+  <p>The app has moved to <a href="https://tibetan.itjoy.space/">tibetan.itjoy.space</a>. Move your progress with a code: Settings → Move to another device.</p>
+  <p class="lang">Русский</p>
+  <p>Приложение переехало на <a href="https://tibetan.itjoy.space/">tibetan.itjoy.space</a>. Прогресс перенесите кодом: Настройки → Перенос на другое устройство.</p>
+  <p class="lang">Deutsch</p>
+  <p>Die App ist nach <a href="https://tibetan.itjoy.space/">tibetan.itjoy.space</a> umgezogen. Übertrage deinen Fortschritt mit einem Code: Einstellungen → Auf ein anderes Gerät übertragen.</p>
+  <p class="lang">Français</p>
+  <p>L’application a déménagé sur <a href="https://tibetan.itjoy.space/">tibetan.itjoy.space</a>. Transférez votre progression avec un code : Paramètres → Transférer vers un autre appareil.</p>
+  <p class="lang">Polski</p>
+  <p>Aplikacja przeniosła się na <a href="https://tibetan.itjoy.space/">tibetan.itjoy.space</a>. Postępy przenieś kodem: Ustawienia → Przeniesienie na inne urządzenie.</p>
+</main>
+</body>
+</html>
