@@ -7,7 +7,7 @@
 //                   for users without a GitHub account; empty = use the prefilled-issue link only.
 // SUPPORT:          donation details for the "Support the project" page (#/support);
 //                   empty entries are hidden. paypal = a https://paypal.me/... link, sbp = phone number
-//                   for the Russian fast-payment system, cardGe / cardRu = card numbers, ibanGe + bankGe +
+//                   for the Russian fast-payment system (sbpBank = the recipient's bank), cardGe / cardRu = card numbers, ibanGe + bankGe +
 //                   swiftGe = Georgian bank transfer, recipient = name on the account.
 // VERSION:          written by the deploy workflow (git sha); "dev" locally.
 self.TIB_CONFIG = {
@@ -18,10 +18,11 @@ self.TIB_CONFIG = {
   SUPPORT: {
     paypal: '',
     sbp: '+7 962 222-18-13',
+    sbpBank: 'Сбербанк',
     cardRu: '',
     ibanGe: 'GE40CD0360000030890752',
     bankGe: 'JSC Credo Bank, Georgia',
-    swiftGe: '',
+    swiftGe: 'JSCRGE22',
     cardGe: '',
     other: '',
     recipient: 'Konstantin Vazhenin',

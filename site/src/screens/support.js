@@ -7,6 +7,7 @@ const METHODS = [
   // key in config.SUPPORT -> i18n label; `value` is shown in a copyable box, `link` as a button
   { key: 'paypal', label: 'support.paypal', link: true },
   { key: 'sbp', label: 'support.sbp' },
+  { key: 'sbpBank', label: 'support.sbpBank', plain: true },
   { key: 'cardRu', label: 'support.cardRu' },
   { key: 'ibanGe', label: 'support.ibanGe' },
   { key: 'bankGe', label: 'support.bankGe', plain: true },

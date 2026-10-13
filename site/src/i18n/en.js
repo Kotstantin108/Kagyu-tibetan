@@ -132,6 +132,7 @@ export default {
     ibanGe: 'IBAN (Georgian bank)',
     cardRu: 'Card (Russian bank)',
     sbp: 'SBP by phone number (Russia)',
+    sbpBank: 'Recipient’s bank (SBP)',
     bankGe: 'Bank',
     swiftGe: 'SWIFT / BIC',
     other: 'Other',
