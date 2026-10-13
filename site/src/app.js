@@ -10,6 +10,7 @@ import { renderDict } from './screens/dict.js';
 import { renderGrammar } from './screens/grammar.js';
 import { renderStats } from './screens/stats.js';
 import { renderSettings } from './screens/settings.js';
+import { renderSupport } from './screens/support.js';
 import { createSync } from './sync.js';
 
 const view = document.getElementById('view');
@@ -81,7 +82,7 @@ store.subscribe((p, source) => {
 });
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
 
-const screens = { play: renderPlay, dict: renderDict, grammar: renderGrammar, stats: renderStats, settings: renderSettings };
+const screens = { play: renderPlay, dict: renderDict, grammar: renderGrammar, stats: renderStats, settings: renderSettings, support: renderSupport };
 
 function route() {
   const m = location.hash.match(/^#\/(\w+)(?:\/(\w+))?/);

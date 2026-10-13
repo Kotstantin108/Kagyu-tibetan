@@ -37,8 +37,11 @@ another device".)
   the tiles as an option, 44px tap targets, no horizontal scroll at 360px.
 - **Progress stays on the device**; move it with a file, a text code (settings
   → "Move to another device"), or optional Google Drive sync.
-- **Report a problem** links open a prefilled GitHub issue for a sentence or
-  a word.
+- **Report a problem** sends a short message to the report service (an issue
+  appears in this repository) or opens a prefilled GitHub issue.
+- **Support the project** (`#/support`): the app is made in support of the
+  Buddhist centre in Batumi; payment details come from `SUPPORT` in
+  `site/config.js` (PayPal link, cards, IBAN; empty entries are hidden).
 
 ## Run locally
 

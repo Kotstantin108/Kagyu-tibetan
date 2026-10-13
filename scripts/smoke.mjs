@@ -90,7 +90,7 @@ check(await page.$eval('.lesson', (e) => !e.hidden), 'lesson block shown');
 const progress = await page.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')));
 check(Object.values(progress.words).some((w) => w.status === 'known' && w.due), 'words promoted and scheduled');
 
-for (const route of ['dict', 'grammar', 'stats', 'settings']) {
+for (const route of ['dict', 'grammar', 'stats', 'settings', 'support']) {
   await page.goto(`${base}/index.html#/${route}`);
   await page.waitForSelector('.panel');
   check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), `#/${route}: no horizontal scroll`);

@@ -51,6 +51,7 @@ const SHELL = [
   './src/screens/grammar.js',
   './src/screens/stats.js',
   './src/screens/settings.js',
+  './src/screens/support.js',
 ];
 
 self.addEventListener('install', (event) => {
