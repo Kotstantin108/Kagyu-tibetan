@@ -3,15 +3,19 @@
 // {
 //   schemaVersion: 1,
 //   updatedAt: ISO string,
-//   words: { id: { status: 'new'|'learning'|'known', updatedAt, seen, errors } },
+//   words: { id: { status: 'new'|'learning'|'known', updatedAt, seen, errors, level, due } },
+//     level: review level (index into REVIEW_INTERVALS), due: 'YYYY-MM-DD' of the next review
 //   sentences: { id: { solved, lastSolved } },
 //   streak: { current, best, lastDay, todayDate, todayCount },
-//   settings: { tileMode: 'words'|'syllables', lang }
+//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'wylie', lang, showWylie, theme, onboarded }
 // }
 
-import { SCHEMA_VERSION } from './config.js';
+import { SCHEMA_VERSION, REVIEW_INTERVALS, MANUAL_KNOWN_LEVEL } from './config.js';
+import { localDay, addDays } from './streak.js';
 
 export const STATUS = { NEW: 'new', LEARNING: 'learning', KNOWN: 'known' };
+
+const DAY_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 export function createProgress(now = new Date()) {
   return {
@@ -20,7 +24,7 @@ export function createProgress(now = new Date()) {
     words: {},
     sentences: {},
     streak: { current: 0, best: 0, lastDay: null, todayDate: null, todayCount: 0 },
-    settings: { tileMode: 'words', lang: null },
+    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, theme: 'auto', onboarded: false },
   };
 }
 
@@ -38,6 +42,8 @@ export function normalizeProgress(raw, now = new Date()) {
         updatedAt: typeof w.updatedAt === 'string' ? w.updatedAt : base.updatedAt,
         seen: Number.isFinite(w.seen) ? w.seen : 0,
         errors: Number.isFinite(w.errors) ? w.errors : 0,
+        level: Number.isInteger(w.level) && w.level >= 0 ? w.level : 0,
+        due: typeof w.due === 'string' && DAY_RE.test(w.due) ? w.due : null,
       };
     }
   }
@@ -61,9 +67,14 @@ export function normalizeProgress(raw, now = new Date()) {
     };
   }
   if (raw.settings && typeof raw.settings === 'object') {
+    const s = raw.settings;
     p.settings = {
-      tileMode: raw.settings.tileMode === 'syllables' ? 'syllables' : 'words',
-      lang: typeof raw.settings.lang === 'string' ? raw.settings.lang : null,
+      tileMode: s.tileMode === 'syllables' ? 'syllables' : 'words',
+      exercise: ['tiles', 'meaning', 'wylie'].includes(s.exercise) ? s.exercise : 'tiles',
+      lang: typeof s.lang === 'string' ? s.lang : null,
+      showWylie: s.showWylie === true,
+      theme: ['light', 'dark'].includes(s.theme) ? s.theme : 'auto',
+      onboarded: s.onboarded === true,
     };
   }
   return p;
@@ -78,32 +89,63 @@ export function isKnown(progress, id) {
   return wordStatus(progress, id) === STATUS.KNOWN;
 }
 
+/** A known word whose review day has come (or passed). */
+export function isDue(progress, id, today = localDay()) {
+  const w = progress.words[id];
+  return Boolean(w && w.status === STATUS.KNOWN && w.due && w.due <= today);
+}
+
+/** Ids of all words due for review today. */
+export function dueWords(progress, today = localDay()) {
+  return Object.keys(progress.words).filter((id) => isDue(progress, id, today));
+}
+
+/** Days until the next review at a given level. */
+export function intervalFor(level) {
+  return REVIEW_INTERVALS[Math.min(Math.max(level, 0), REVIEW_INTERVALS.length - 1)];
+}
+
 function touch(progress, now) {
   return { ...progress, updatedAt: now.toISOString() };
 }
 
-function wordEntry(progress, id, now) {
-  return progress.words[id] || { status: STATUS.NEW, updatedAt: now.toISOString(), seen: 0, errors: 0 };
+function blankEntry(iso) {
+  return { status: STATUS.NEW, updatedAt: iso, seen: 0, errors: 0, level: 0, due: null };
 }
 
-/** Set a word status directly (dictionary screen, "I know" / "learning" buttons). */
+function wordEntry(progress, id, now) {
+  return progress.words[id] || blankEntry(now.toISOString());
+}
+
+/** Known at `level`, next review after the level's interval. */
+function knownAt(entry, level, today, iso) {
+  return { ...entry, status: STATUS.KNOWN, level, due: addDays(today, intervalFor(level)), updatedAt: iso };
+}
+
+/**
+ * Set a word status directly (dictionary screen, "I know" / "learning" buttons).
+ * A manual "known" starts at MANUAL_KNOWN_LEVEL; anything else resets the schedule.
+ */
 export function setWordStatus(progress, id, status, now = new Date()) {
   const cur = wordEntry(progress, id, now);
-  const next = { ...cur, status, updatedAt: now.toISOString() };
+  const iso = now.toISOString();
+  const next = status === STATUS.KNOWN
+    ? knownAt(cur, MANUAL_KNOWN_LEVEL, localDay(now), iso)
+    : { ...cur, status, level: 0, due: null, updatedAt: iso };
   return touch({ ...progress, words: { ...progress.words, [id]: next } }, now);
 }
 
 /** The learner looked at a word's translation: known -> learning, new -> learning. */
 export function revealWord(progress, id, now = new Date()) {
   const cur = wordEntry(progress, id, now);
-  const next = { ...cur, status: STATUS.LEARNING, seen: cur.seen + 1, updatedAt: now.toISOString() };
+  const next = { ...cur, status: STATUS.LEARNING, level: 0, due: null, seen: cur.seen + 1, updatedAt: now.toISOString() };
   return touch({ ...progress, words: { ...progress.words, [id]: next } }, now);
 }
 
 /** The learner misplaced a tile of this word: errors + 1, known -> learning. */
 export function wordError(progress, id, now = new Date()) {
   const cur = wordEntry(progress, id, now);
-  const next = { ...cur, status: STATUS.LEARNING, errors: cur.errors + 1, updatedAt: now.toISOString() };
+  const next = { ...cur, status: STATUS.LEARNING, level: 0, due: null, errors: cur.errors + 1, updatedAt: now.toISOString() };
   return touch({ ...progress, words: { ...progress.words, [id]: next } }, now);
 }
 
@@ -116,26 +158,33 @@ export function seeWord(progress, id, now = new Date()) {
 
 /**
  * A sentence was assembled correctly.
- * `newWordIds` are the words that were new in this sentence; those not in
- * `revealedIds` (translation not peeked) become known, provided the sentence
- * introduced at most `promoteUpTo` new words (1 by default; the cold-start
- * screen passes 2 because its two-word phrases show every translation anyway).
+ * - `newWordIds` are the words that were not known in this sentence; those not
+ *   in `revealedIds` (translation not peeked) become known at level 0, provided
+ *   the sentence introduced at most `promoteUpTo` new words (1 by default; the
+ *   cold-start screen passes 2 because its two-word phrases show every
+ *   translation anyway).
+ * - every known word in `seenIds` that was due for review (and was not peeked)
+ *   moves one level up and gets a later review day.
  */
 export function recordSolved(progress, sentenceId, { newWordIds = [], revealedIds = [], seenIds = [], promoteUpTo = 1 } = {}, now = new Date()) {
   const iso = now.toISOString();
+  const today = localDay(now);
   let p = progress;
   const sent = p.sentences[sentenceId] || { solved: 0, lastSolved: null };
   p = { ...p, sentences: { ...p.sentences, [sentenceId]: { solved: sent.solved + 1, lastSolved: iso } } };
   const words = { ...p.words };
   for (const id of seenIds) {
-    const cur = words[id] || { status: STATUS.NEW, updatedAt: iso, seen: 0, errors: 0 };
-    words[id] = { ...cur, seen: cur.seen + 1 };
+    const cur = words[id] || blankEntry(iso);
+    let next = { ...cur, seen: cur.seen + 1 };
+    if (cur.status === STATUS.KNOWN && cur.due && cur.due <= today && !revealedIds.includes(id)) {
+      next = knownAt(next, cur.level + 1, today, iso);
+    }
+    words[id] = next;
   }
   if (newWordIds.length >= 1 && newWordIds.length <= promoteUpTo) {
     for (const id of newWordIds) {
       if (revealedIds.includes(id)) continue;
-      const cur = words[id] || { status: STATUS.NEW, updatedAt: iso, seen: 0, errors: 0 };
-      words[id] = { ...cur, status: STATUS.KNOWN, updatedAt: iso };
+      words[id] = knownAt(words[id] || blankEntry(iso), 0, today, iso);
     }
   }
   return touch({ ...p, words }, now);

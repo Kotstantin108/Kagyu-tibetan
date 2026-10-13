@@ -11,12 +11,17 @@ export function localDay(date = new Date()) {
   return `${y}-${m}-${d}`;
 }
 
-/** The day before a YYYY-MM-DD string (local calendar). */
-export function previousDay(day) {
+/** A YYYY-MM-DD string shifted by n days (local calendar). */
+export function addDays(day, n) {
   const [y, m, d] = day.split('-').map(Number);
   const dt = new Date(y, m - 1, d);
-  dt.setDate(dt.getDate() - 1);
+  dt.setDate(dt.getDate() + n);
   return localDay(dt);
+}
+
+/** The day before a YYYY-MM-DD string (local calendar). */
+export function previousDay(day) {
+  return addDays(day, -1);
 }
 
 /** Streak shown to the user: 0 if the last counted day is neither today nor yesterday. */

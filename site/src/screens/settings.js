@@ -1,24 +1,35 @@
-// Settings: language, tile mode, export/import/reset, Google sync.
+// Settings: language, theme, tiles, export/import/reset, transfer code, Google sync.
 
 import { h, toast, formatTime } from '../ui.js';
 import { STRINGS } from '../i18n/index.js';
 import { LANGS } from '../engine/config.js';
 import { setSetting, normalizeProgress } from '../engine/progress.js';
+import { mergeProgress } from '../engine/merge.js';
+import { encodeProgress, decodeProgress } from '../transfer.js';
 
 export function renderSettings(root, ctx) {
   const { store, t } = ctx;
   const p = store.get();
 
+  const select = (id, value, options, onChange) => {
+    const el = h('select', { id }, ...options.map(([v, label]) => h('option', { value: v, selected: v === value }, label)));
+    el.addEventListener('change', () => onChange(el.value));
+    return el;
+  };
+
   // language
-  const langSel = h('select', { id: 'settings-lang' }, ...LANGS.map((l) => h('option', { value: l, selected: l === ctx.lang }, STRINGS[l].langName)));
-  langSel.addEventListener('change', () => store.update((q) => setSetting(q, 'lang', langSel.value)));
+  const langSel = select('settings-lang', ctx.lang, LANGS.map((l) => [l, STRINGS[l].langName]), (v) => store.update((q) => setSetting(q, 'lang', v)));
   const machine = ctx.lang === 'en' ? null : h('div', { class: 'notice' }, t('settings.machineNotice', { lang: t('langIn') }));
 
-  // tile mode
-  const modeSel = h('select', {}, h('option', { value: 'words', selected: p.settings.tileMode === 'words' }, t('play.modeWords')), h('option', { value: 'syllables', selected: p.settings.tileMode === 'syllables' }, t('play.modeSyllables')));
-  modeSel.addEventListener('change', () => store.update((q) => setSetting(q, 'tileMode', modeSel.value)));
+  // theme
+  const themeSel = select('settings-theme', p.settings.theme || 'auto', [['auto', t('settings.themeAuto')], ['light', t('settings.themeLight')], ['dark', t('settings.themeDark')]], (v) => store.update((q) => setSetting(q, 'theme', v)));
 
-  // data
+  // tiles
+  const modeSel = select('settings-tiles', p.settings.tileMode, [['words', t('play.modeWords')], ['syllables', t('play.modeSyllables')]], (v) => store.update((q) => setSetting(q, 'tileMode', v)));
+  const wylieBox = h('input', { type: 'checkbox', id: 'settings-wylie', checked: p.settings.showWylie === true });
+  wylieBox.addEventListener('change', () => store.update((q) => setSetting(q, 'showWylie', wylieBox.checked)));
+
+  // data: export / import / reset
   const fileInput = h('input', { type: 'file', accept: 'application/json,.json', hidden: true });
   fileInput.addEventListener('change', async () => {
     const file = fileInput.files[0];
@@ -47,7 +58,27 @@ export function renderSettings(root, ctx) {
     toast(t('settings.resetDone'));
   } }, t('settings.reset'));
 
+  // transfer code
+  const codeArea = h('textarea', { class: 'code-area', rows: 3, spellcheck: 'false', placeholder: t('settings.codePlaceholder'), 'aria-label': t('settings.transfer') });
+  const copyBtn = h('button', { type: 'button', class: 'action', onClick: async () => {
+    const code = await encodeProgress(store.get());
+    codeArea.value = code;
+    try { await navigator.clipboard.writeText(code); toast(t('settings.codeCopied')); } catch { codeArea.select(); toast(t('settings.codeShown')); }
+  } }, t('settings.codeCopy'));
+  const applyBtn = h('button', { type: 'button', class: 'action', onClick: async () => {
+    try {
+      const remote = await decodeProgress(codeArea.value);
+      if (!confirm(t('settings.codeConfirm'))) return;
+      store.replace(mergeProgress(store.get(), remote), 'replace');
+      codeArea.value = '';
+      toast(t('settings.codeApplied'));
+    } catch {
+      toast(t('settings.codeError'));
+    }
+  } }, t('settings.codeApply'));
+
   // sync
+  let cleanup = null;
   let syncPanel = null;
   if (ctx.config.GOOGLE_CLIENT_ID && ctx.sync) {
     const status = h('div', { class: 'sync-status' });
@@ -62,7 +93,7 @@ export function renderSettings(root, ctx) {
       syncNow.hidden = !on;
       status.textContent = s.status === 'synced' ? t('settings.syncState.synced', { time: s.lastSync ? formatTime(s.lastSync, ctx.lang) : '' }) : t(`settings.syncState.${s.status}`);
     };
-    const unsub = ctx.sync.subscribe(renderSync);
+    cleanup = ctx.sync.subscribe(renderSync);
     renderSync();
     syncPanel = h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
       h('div', { class: 'label' }, t('settings.sync')),
@@ -70,20 +101,31 @@ export function renderSettings(root, ctx) {
       h('div', { class: 'buttons' }, signIn, syncNow, signOut),
       status,
     ));
-    syncPanel.dataset.unsub = '1';
-    root.append(syncPanel);
-    root.prepend(); // keep order below
-    renderSettings.cleanup = unsub;
   }
 
-  const main = h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
-    h('div', { class: 'field' }, h('label', { for: 'settings-lang' }, t('settings.language')), langSel, machine),
-    h('div', { class: 'field' }, h('label', {}, t('settings.tileMode')), modeSel),
-    h('div', { class: 'label' }, t('settings.data')),
-    h('div', { class: 'buttons' }, exportBtn, importBtn, resetBtn, fileInput),
-  ));
-  root.prepend(main);
-  root.append(h('section', { class: 'panel' }, h('div', { class: 'panel-body' }, h('div', { class: 'label' }, t('settings.about')), h('p', { class: 'helper' }, t('settings.aboutText')))));
+  root.append(
+    h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
+      h('div', { class: 'field' }, h('label', { for: 'settings-lang' }, t('settings.language')), langSel, machine),
+      h('div', { class: 'field' }, h('label', { for: 'settings-theme' }, t('settings.theme')), themeSel),
+      h('div', { class: 'field' }, h('label', { for: 'settings-tiles' }, t('settings.tileMode')), modeSel),
+      h('div', { class: 'field check' }, h('label', { for: 'settings-wylie' }, wylieBox, ' ', t('settings.showWylie'))),
+    )),
+    h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
+      h('div', { class: 'label' }, t('settings.data')),
+      h('div', { class: 'buttons' }, exportBtn, importBtn, resetBtn, fileInput),
+      h('div', { class: 'label', style: 'margin-top:18px' }, t('settings.transfer')),
+      h('p', { class: 'helper' }, t('settings.transferText')),
+      codeArea,
+      h('div', { class: 'buttons' }, copyBtn, applyBtn),
+    )),
+    syncPanel,
+    h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
+      h('div', { class: 'label' }, t('settings.about')),
+      h('p', { class: 'helper' }, t('settings.aboutText')),
+      ctx.config.REPO_URL ? h('p', { class: 'helper' }, h('a', { href: ctx.config.REPO_URL, target: '_blank', rel: 'noopener' }, t('settings.sourceCode'))) : null,
+      h('p', { class: 'fine' }, t('settings.version', { v: ctx.config.VERSION || 'dev' })),
+    )),
+  );
 
-  return () => { if (renderSettings.cleanup) { renderSettings.cleanup(); renderSettings.cleanup = null; } };
+  return () => { if (cleanup) cleanup(); };
 }

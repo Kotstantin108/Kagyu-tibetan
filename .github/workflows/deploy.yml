@@ -24,8 +24,12 @@ jobs:
           node-version: 22
       - name: Validate course data
         run: node scripts/validate.mjs
-      - name: Run tests
+      - name: Run unit tests
         run: node --test "site/src/**/*.test.js"
+      - name: Install Playwright
+        run: npm install --no-save playwright && npx playwright install --with-deps chromium
+      - name: Browser smoke test
+        run: node scripts/smoke.mjs
 
   deploy:
     needs: check
@@ -35,6 +39,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Stamp the version
+        run: sed -i "s/VERSION: 'dev'/VERSION: '${GITHUB_SHA::7}'/" site/config.js && grep VERSION site/config.js
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -5,12 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#182943">
 <meta name="description" content="Learn Classical Tibetan by assembling sentences from tiles.">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Tibetan Tiles">
 <title>Tibetan Tiles — བོད་ཡིག</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tibetan&display=swap">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="preload" href="./fonts/NotoSerifTibetan-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./styles.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23182943'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23f0c47d'%3E%E0%BD%A8%E0%BD%BC%E0%BD%BE%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
 </head>
 <body>
 <header class="header">
@@ -21,6 +25,7 @@
   <nav class="tabs" id="tabs" aria-label="Sections">
     <a href="#/play" data-route="play" data-i18n="nav.play">Play</a>
     <a href="#/dict" data-route="dict" data-i18n="nav.dict">Dictionary</a>
+    <a href="#/grammar" data-route="grammar" data-i18n="nav.grammar">Grammar</a>
     <a href="#/stats" data-route="stats" data-i18n="nav.stats">Progress</a>
     <a href="#/settings" data-route="settings" data-i18n="nav.settings">Settings</a>
   </nav>

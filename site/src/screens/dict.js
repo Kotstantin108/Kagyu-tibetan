@@ -1,13 +1,27 @@
-// Dictionary: sets with words, search, manual status marking.
+// Dictionary: sets with words, search, examples, manual status marking.
 
 import { h, clear } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
-import { setWordStatus, wordStatus, STATUS } from '../engine/progress.js';
+import { setWordStatus, wordStatus, isDue, STATUS } from '../engine/progress.js';
+import { renderTib } from '../engine/tib.js';
+import { localDay } from '../engine/streak.js';
+import { wordIssueUrl } from '../report.js';
 
 export function renderDict(root, ctx) {
   const { store, data, t } = ctx;
   const dict = data.words;
   const entries = Object.entries(dict).filter(([, w]) => !w.service);
+  const today = localDay();
+
+  // word id -> sentences using it (first three)
+  const examplesOf = new Map();
+  for (const s of data.sentences) {
+    for (const id of new Set(s.words)) {
+      if (!examplesOf.has(id)) examplesOf.set(id, []);
+      const list = examplesOf.get(id);
+      if (list.length < 3) list.push(s);
+    }
+  }
 
   const search = h('input', { class: 'search', type: 'search', placeholder: t('dict.search'), 'aria-label': t('dict.search') });
   const found = h('p', { class: 'fine' });
@@ -36,13 +50,36 @@ export function renderDict(root, ctx) {
   }
 
   function wordRow([id, w]) {
+    const p = store.get();
     const tr = pickTr(w.tr, ctx.lang);
-    const st = wordStatus(store.get(), id);
+    const st = wordStatus(p, id);
+    const e = p.words[id];
+    let meta = `${w.wylie} · ${w.pos} · ${t(`status.${st}`)}`;
+    if (st === STATUS.KNOWN && e && e.due) meta += isDue(p, id, today) ? ` · ${t('dict.dueNow')}` : ` · ${t('dict.dueOn', { date: e.due })}`;
+    const examples = examplesOf.get(id) || [];
+    const exBox = h('div', { class: 'examples', hidden: true });
+    const exBtn = examples.length ? h('button', {
+      type: 'button', class: 'linkish', 'aria-expanded': 'false',
+      onClick: () => {
+        const open = exBox.hidden;
+        exBox.hidden = !open;
+        exBtn.setAttribute('aria-expanded', String(open));
+        if (open && !exBox.childElementCount) {
+          for (const s of examples) {
+            exBox.append(h('div', { class: 'example' }, h('span', { class: 'tib' }, renderTib(s.words, dict)), h('span', { class: 'tr' }, pickTr(s.tr, ctx.lang).text)));
+          }
+          const issue = wordIssueUrl(ctx.config, id, w, tr.text, ctx.lang);
+          if (issue) exBox.append(h('p', { class: 'fine' }, h('a', { href: issue, target: '_blank', rel: 'noopener' }, t('play.report'))));
+        }
+      },
+    }, t('dict.examples', { n: examples.length })) : null;
     return h('div', { class: 'word-row' },
       h('div', {},
         h('div', { class: 'tib' }, w.tib),
         h('div', { class: 'tr' }, tr.text, tr.fallback ? ` (${tr.lang})` : ''),
-        h('div', { class: 'meta' }, `${w.wylie} · ${w.pos} · ${t(`status.${st}`)}`),
+        h('div', { class: 'meta' }, meta),
+        exBtn,
+        exBox,
       ),
       h('div', { class: 'controls' },
         statusButton(id, STATUS.KNOWN, t('dict.markKnown')),

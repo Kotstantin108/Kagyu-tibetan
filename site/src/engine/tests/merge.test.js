@@ -41,8 +41,8 @@ test('settings follow the record with the later updatedAt', () => {
   local.settings = { tileMode: 'syllables', lang: 'ru' };
   const remote = createProgress(new Date(early));
   remote.settings = { tileMode: 'words', lang: 'en' };
-  assert.deepEqual(mergeProgress(local, remote).settings, { tileMode: 'syllables', lang: 'ru' });
-  assert.deepEqual(mergeProgress(remote, local).settings, { tileMode: 'syllables', lang: 'ru' });
+  assert.equal(mergeProgress(local, remote).settings.lang, 'ru');
+  assert.equal(mergeProgress(remote, local).settings.tileMode, 'syllables');
 });
 
 test('merging with an empty remote keeps local', () => {

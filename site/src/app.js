@@ -1,12 +1,13 @@
-// Entry point: loads data, sets up the store, language and hash router.
+// Entry point: loads data, sets up the store, language, theme and hash router.
 
 import { createStore } from './store.js';
 import { makeT, detectLang, STRINGS } from './i18n/index.js';
 import { LANGS } from './engine/config.js';
 import { setSetting } from './engine/progress.js';
-import { h, clear } from './ui.js';
+import { h, clear, toast } from './ui.js';
 import { renderPlay } from './screens/play.js';
 import { renderDict } from './screens/dict.js';
+import { renderGrammar } from './screens/grammar.js';
 import { renderStats } from './screens/stats.js';
 import { renderSettings } from './screens/settings.js';
 import { createSync } from './sync.js';
@@ -20,6 +21,7 @@ const ctx = {
   lang: null,
   t: null,
   sync: null,
+  param: null,
   config: (window.TIB_CONFIG || {}),
   navigate(route) { location.hash = `#/${route}`; },
 };
@@ -42,30 +44,45 @@ function applyLang() {
   sel.value = ctx.lang;
 }
 
+function applyTheme() {
+  const theme = store.get().settings.theme || 'auto';
+  if (theme === 'auto') delete document.documentElement.dataset.theme;
+  else document.documentElement.dataset.theme = theme;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) {
+    const dark = theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    meta.content = dark ? '#111a2b' : '#182943';
+  }
+}
+
 document.getElementById('lang-select').addEventListener('change', (e) => {
   store.update((p) => setSetting(p, 'lang', e.target.value));
 });
 
 store.subscribe((p, source) => {
+  applyTheme();
   if (ctx.lang !== currentLang()) { applyLang(); render(); }
   else if (source === 'sync' || source === 'replace' || source === 'reset') render();
 });
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
 
-const screens = { play: renderPlay, dict: renderDict, stats: renderStats, settings: renderSettings };
+const screens = { play: renderPlay, dict: renderDict, grammar: renderGrammar, stats: renderStats, settings: renderSettings };
 
 function route() {
-  const m = location.hash.match(/^#\/(\w+)/);
-  return m && screens[m[1]] ? m[1] : 'play';
+  const m = location.hash.match(/^#\/(\w+)(?:\/(\w+))?/);
+  const name = m && screens[m[1]] ? m[1] : 'play';
+  return { name, param: m && screens[m[1]] ? m[2] || null : null };
 }
 
 let unmount = null;
 function render() {
   if (!ctx.data) return;
   const r = route();
-  document.querySelectorAll('#tabs a').forEach((a) => a.classList.toggle('active', a.dataset.route === r));
+  ctx.param = r.param;
+  document.querySelectorAll('#tabs a').forEach((a) => a.classList.toggle('active', a.dataset.route === r.name));
   if (unmount) { try { unmount(); } catch { /* ignore */ } unmount = null; }
   clear(view);
-  const res = screens[r](view, ctx);
+  const res = screens[r.name](view, ctx);
   if (typeof res === 'function') unmount = res;
   window.scrollTo(0, 0);
 }
@@ -78,8 +95,22 @@ async function loadJson(name) {
   return res.json();
 }
 
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator) || location.protocol === 'file:') return;
+  navigator.serviceWorker.register('./sw.js').then((reg) => {
+    reg.addEventListener('updatefound', () => {
+      const w = reg.installing;
+      if (!w) return;
+      w.addEventListener('statechange', () => {
+        if (w.state === 'installed' && navigator.serviceWorker.controller) toast(ctx.t('updated'), 4000);
+      });
+    });
+  }).catch(() => { /* offline support is optional */ });
+}
+
 async function main() {
   applyLang();
+  applyTheme();
   try {
     const [words, sentences, sets] = await Promise.all([loadJson('words.json'), loadJson('sentences.json'), loadJson('sets.json')]);
     sets.sort((a, b) => a.order - b.order);
@@ -92,6 +123,7 @@ async function main() {
   ctx.sync = createSync(ctx);
   if (!location.hash) location.hash = '#/play';
   render();
+  registerServiceWorker();
 }
 
 main();

@@ -1,9 +1,10 @@
-// Progress screen: streak, counts, progress by set, one-time sync promo.
+// Progress screen: streak, counts, reviews due, hard words, progress by set, one-time sync promo.
 
 import { h } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
-import { wordStatus, STATUS } from '../engine/progress.js';
+import { wordStatus, dueWords, STATUS } from '../engine/progress.js';
 import { effectiveStreak, remainingToday, localDay } from '../engine/streak.js';
+import { hardWords } from '../engine/hard.js';
 import { STREAK_MIN_PER_DAY } from '../engine/config.js';
 
 const PROMO_KEY = 'tib-sync-promo-dismissed';
@@ -16,6 +17,7 @@ export function renderStats(root, ctx) {
   const known = entries.filter(([id]) => wordStatus(p, id) === STATUS.KNOWN).length;
   const learning = entries.filter(([id]) => wordStatus(p, id) === STATUS.LEARNING).length;
   const solved = Object.values(p.sentences).reduce((n, s) => n + (s.solved || 0), 0);
+  const due = dueWords(p, today).filter((id) => data.words[id] && !data.words[id].service).length;
   const remaining = remainingToday(p.streak, today);
   const todayCount = p.streak.todayDate === today ? p.streak.todayCount : 0;
 
@@ -27,10 +29,33 @@ export function renderStats(root, ctx) {
       stat(p.streak.best, t('stats.best')),
       stat(known, t('stats.known')),
       stat(learning, t('stats.learning')),
+      stat(due, t('stats.due')),
       stat(solved, t('stats.solved')),
     ),
     h('p', { class: 'helper', style: 'margin-top:12px' }, remaining === 0 ? t('stats.todayDone') : t('stats.today', { n: Math.min(todayCount, STREAK_MIN_PER_DAY), min: STREAK_MIN_PER_DAY })),
+    h('p', { class: 'helper', style: 'margin-top:6px' }, due ? t('stats.dueText', { n: due }) : t('stats.dueNone')),
   )));
+
+  // hard words
+  const hard = hardWords(p, data.words, { limit: 10 });
+  const hardBody = h('div', { class: 'panel-body' }, h('div', { class: 'label' }, t('stats.hardWords')));
+  if (hard.length) {
+    hardBody.append(h('p', { class: 'helper' }, t('stats.hardWordsText')));
+    const list = h('div', { class: 'hard-list' });
+    for (const id of hard) {
+      const w = data.words[id];
+      const e = p.words[id];
+      list.append(h('div', { class: 'hard-row' },
+        h('span', { class: 'tib' }, w.tib),
+        h('span', { class: 'tr' }, pickTr(w.tr, ctx.lang).text),
+        h('span', { class: 'counter' }, t('stats.errors', { n: e.errors })),
+      ));
+    }
+    hardBody.append(list, h('div', { class: 'buttons' }, h('a', { class: 'action primary', href: '#/play/hard' }, t('stats.practiceHard'))));
+  } else {
+    hardBody.append(h('p', { class: 'helper' }, t('stats.hardWordsEmpty')));
+  }
+  root.append(h('section', { class: 'panel' }, hardBody));
 
   const bySets = h('div', { class: 'panel-body' }, h('div', { class: 'label' }, t('stats.bySets')));
   for (const set of data.sets) {

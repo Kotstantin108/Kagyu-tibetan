@@ -17,6 +17,9 @@ const sentences = [
   { id: 's4', set: 'l2', words: ['bla', 'yin', 'shad'] },
 ];
 
+// words marked known on T are not due on T
+const T = '2026-01-01';
+
 function known(progress, ...ids) {
   let p = progress;
   for (const id of ids) p = setWordStatus(p, id, STATUS.KNOWN, new Date('2026-01-01T00:00:00Z'));
@@ -41,7 +44,7 @@ test('cold start skips the sentence just solved', () => {
 test('exactly one unknown word is preferred, by set order', () => {
   const p = known(createProgress(), 'nga', 'yin', 'bla');
   // s1 has 1 unknown (slob), s2 has 0, s3 has 1 (chos), s4 has 0
-  const r = pickNext(sentences, dict, sets, p);
+  const r = pickNext(sentences, dict, sets, p, { today: T });
   assert.equal(r.reason, 'one-new');
   assert.equal(r.sentence.id, 's1');
   assert.deepEqual(r.newWordIds, ['slob']);
@@ -53,10 +56,10 @@ test('among one-new candidates the least recently solved comes first', () => {
   p = recordSolved(p, 's1', {}, new Date('2026-02-01T10:00:00Z'));
   p = recordSolved(p, 's3', {}, new Date('2026-01-01T10:00:00Z'));
   // both s1 (l1) and s3 (l2) have one unknown; set order still wins over recency
-  assert.equal(pickNext(sentences, dict, sets, p).sentence.id, 's1');
+  assert.equal(pickNext(sentences, dict, sets, p, { today: T }).sentence.id, 's1');
   // same set: recency decides
   const sameSet = sentences.map((s) => ({ ...s, set: 'l1' }));
-  assert.equal(pickNext(sameSet, dict, sets, p).sentence.id, 's3');
+  assert.equal(pickNext(sameSet, dict, sets, p, { today: T }).sentence.id, 's3');
 });
 
 test('fallback: fewest unknown words when no one-new sentence exists', () => {
@@ -64,7 +67,7 @@ test('fallback: fewest unknown words when no one-new sentence exists', () => {
   // s1: 0 unknown, s2: 1 (bla)... make s2 impossible: mark nothing else
   const only = [sentences[2], { id: 's5', set: 'l2', words: ['bla', 'chos', 'slob', 'shad'] }];
   // s3: bla, chos unknown (2); s5: bla, chos unknown (2) -> min is 2, first by order
-  const r = pickNext(only, dict, sets, p);
+  const r = pickNext(only, dict, sets, p, { today: T });
   assert.equal(r.reason, 'fewest-new');
   assert.equal(r.sentence.id, 's3');
   assert.deepEqual(r.newWordIds, ['bla', 'chos']);
@@ -72,9 +75,9 @@ test('fallback: fewest unknown words when no one-new sentence exists', () => {
 
 test('the sentence just solved is not repeated when alternatives exist', () => {
   const p = known(createProgress(), 'nga', 'yin', 'bla', 'slob', 'chos');
-  const r1 = pickNext(sentences, dict, sets, p, { lastId: 's1' });
+  const r1 = pickNext(sentences, dict, sets, p, { lastId: 's1', today: T });
   assert.notEqual(r1.sentence.id, 's1');
-  const r2 = pickNext([sentences[0]], dict, sets, p, { lastId: 's1' });
+  const r2 = pickNext([sentences[0]], dict, sets, p, { lastId: 's1', today: T });
   assert.equal(r2.sentence.id, 's1');
 });
 

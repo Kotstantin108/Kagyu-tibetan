@@ -8,9 +8,14 @@
     "build:content": "node scripts/build-content.mjs",
     "validate": "node scripts/validate.mjs",
     "test": "node --test \"site/src/**/*.test.js\"",
-    "serve": "npx serve site"
+    "serve": "npx serve site",
+    "smoke": "node scripts/smoke.mjs",
+    "icon": "python scripts/tools/make-icon.py"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
   }
 }
