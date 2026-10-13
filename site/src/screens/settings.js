@@ -28,6 +28,8 @@ export function renderSettings(root, ctx) {
   const modeSel = select('settings-tiles', p.settings.tileMode, [['words', t('play.modeWords')], ['syllables', t('play.modeSyllables')]], (v) => store.update((q) => setSetting(q, 'tileMode', v)));
   const wylieBox = h('input', { type: 'checkbox', id: 'settings-wylie', checked: p.settings.showWylie === true });
   wylieBox.addEventListener('change', () => store.update((q) => setSetting(q, 'showWylie', wylieBox.checked)));
+  const voiceBox = ctx.config.AUDIO_BASE ? h('input', { type: 'checkbox', id: 'settings-voice', checked: p.settings.voice === true }) : null;
+  if (voiceBox) voiceBox.addEventListener('change', () => store.update((q) => setSetting(q, 'voice', voiceBox.checked)));
 
   // data: export / import / reset
   const fileInput = h('input', { type: 'file', accept: 'application/json,.json', hidden: true });
@@ -109,6 +111,7 @@ export function renderSettings(root, ctx) {
       h('div', { class: 'field' }, h('label', { for: 'settings-theme' }, t('settings.theme')), themeSel),
       h('div', { class: 'field' }, h('label', { for: 'settings-tiles' }, t('settings.tileMode')), modeSel),
       h('div', { class: 'field check' }, h('label', { for: 'settings-wylie' }, wylieBox, ' ', t('settings.showWylie'))),
+      voiceBox ? h('div', { class: 'field check' }, h('label', { for: 'settings-voice' }, voiceBox, ' ', t('settings.voice')), h('p', { class: 'helper' }, t('settings.voiceNote'))) : null,
     )),
     h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
       h('div', { class: 'label' }, t('settings.data')),
@@ -122,7 +125,6 @@ export function renderSettings(root, ctx) {
     h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
       h('div', { class: 'label' }, t('settings.about')),
       h('p', { class: 'helper' }, t('settings.aboutText')),
-      ctx.config.AUDIO_BASE ? h('p', { class: 'helper' }, t('settings.voiceNote')) : null,
       ctx.config.REPO_URL ? h('p', { class: 'helper' }, h('a', { href: ctx.config.REPO_URL, target: '_blank', rel: 'noopener' }, t('settings.sourceCode'))) : null,
       h('p', { class: 'helper' }, h('a', { href: '#/support' }, t('support.line'))),
       h('p', { class: 'fine' }, t('settings.version', { v: ctx.config.VERSION || 'dev' })),

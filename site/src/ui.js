@@ -58,11 +58,12 @@ let playingBtn = null;
 
 /**
  * A round "listen" button for a word (`w-<id>`) or a sentence (`s123`).
- * Returns null when AUDIO_BASE is not configured. Clips are fetched on demand.
+ * Returns null when AUDIO_BASE is not configured or the voice setting is off (default:
+ * the voice is synthesised and still rough on longer words). Clips are fetched on demand.
  */
 export function audioButton(ctx, clipId, { small = false } = {}) {
   const base = ctx.config.AUDIO_BASE;
-  if (!base) return null;
+  if (!base || !ctx.store.get().settings.voice) return null;
   const size = small ? 16 : 20;
   const btn = h('button', { type: 'button', class: 'audio-btn' + (small ? ' small' : ''), 'aria-label': ctx.t('play.listen'), title: ctx.t('play.listen') });
   btn.innerHTML = `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;

@@ -7,7 +7,7 @@
 //     level: review level (index into REVIEW_INTERVALS), due: 'YYYY-MM-DD' of the next review
 //   sentences: { id: { solved, lastSolved } },
 //   streak: { current, best, lastDay, todayDate, todayCount },
-//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'wylie', lang, showWylie, theme, onboarded }
+//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'wylie', lang, showWylie, voice, theme, onboarded }
 // }
 
 import { SCHEMA_VERSION, REVIEW_INTERVALS, MANUAL_KNOWN_LEVEL } from './config.js';
@@ -24,7 +24,7 @@ export function createProgress(now = new Date()) {
     words: {},
     sentences: {},
     streak: { current: 0, best: 0, lastDay: null, todayDate: null, todayCount: 0 },
-    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, theme: 'auto', onboarded: false },
+    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false },
   };
 }
 
@@ -73,6 +73,7 @@ export function normalizeProgress(raw, now = new Date()) {
       exercise: ['tiles', 'meaning', 'wylie'].includes(s.exercise) ? s.exercise : 'tiles',
       lang: typeof s.lang === 'string' ? s.lang : null,
       showWylie: s.showWylie === true,
+      voice: s.voice === true,
       theme: ['light', 'dark'].includes(s.theme) ? s.theme : 'auto',
       onboarded: s.onboarded === true,
     };

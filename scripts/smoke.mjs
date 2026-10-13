@@ -53,7 +53,7 @@ check((await page.evaluate(() => document.fonts.check('20px "Noto Serif Tibetan"
 const progressBefore = await page.evaluate(() => localStorage.getItem('tib-progress'));
 await page.click('.chip');
 await page.waitForSelector('.popover .big-tib');
-check((await page.$('.popover .audio-btn')) !== null, 'word card has a listen button');
+check((await page.$('.popover .audio-btn')) === null, 'word card has no listen button while the voice setting is off');
 await page.keyboard.press('Escape');
 await page.waitForSelector('.popover', { state: 'detached' });
 await page.click('#btn-grammar');
@@ -94,6 +94,15 @@ check(await page.$eval('.feedback', (e) => e.classList.contains('good')), 'sente
 check(await page.$eval('.lesson', (e) => !e.hidden), 'lesson block shown');
 const progress = await page.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')));
 check(Object.values(progress.words).some((w) => w.status === 'known' && w.due), 'words promoted and scheduled');
+
+// pronunciation: off by default, the setting shows the listen buttons
+await page.goto(`${base}/index.html#/settings`);
+await page.waitForSelector('#settings-voice');
+await page.click('#settings-voice');
+await page.goto(`${base}/index.html#/dict`);
+await page.waitForSelector('.word-row', { state: 'attached' });
+check((await page.$('.word-row .audio-btn')) !== null, 'dictionary shows listen buttons after enabling the voice setting');
+await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); p.settings.voice = false; localStorage.setItem('tib-progress', JSON.stringify(p)); });
 
 for (const route of ['dict', 'grammar', 'stats', 'settings', 'support']) {
   await page.goto(`${base}/index.html#/${route}`);
