@@ -12,7 +12,7 @@
 // VERSION:          written by the deploy workflow (git sha); "dev" locally.
 self.TIB_CONFIG = {
   SITE_URL: 'https://tibetan.itjoy.space',
-  GOOGLE_CLIENT_ID: '',
+  GOOGLE_CLIENT_ID: '716069535668-m7vrfb9pekq2u6gtrn10hcl3jsq4ptld.apps.googleusercontent.com',
   REPO_URL: 'https://github.com/Kotstantin108/Kagyu-tibetan',
   REPORT_API: 'https://tibetan.itjoy.space/api/report',
   SUPPORT: {

@@ -80,7 +80,7 @@ server/
   nginx/tibetan.itjoy.space.conf  vhost (caching headers, gzip, /api/ proxy)
   setup.sh          one-time root setup of the server (deploy user, certificate, vhost, report-api)
 site/
-  index.html, styles.css, config.js, manifest.webmanifest, sw.js
+  index.html, styles.css, config.js, manifest.webmanifest, sw.js, privacy.html (privacy policy, linked from the Google consent screen)
   fonts/            Noto Serif Tibetan (OFL)
   icons/            app icons
   data/             words.json, sentences.json, sets.json, sentences.generated.json
@@ -121,7 +121,10 @@ still lists it, then Kailasa, Microsoft Himalaya and Jomolhari as fallbacks.)
 
 ## Optional Google Drive sync
 
-The app works fully without signing in. To enable sync between devices:
+The app works fully without signing in. Sync is enabled: the Google Cloud
+project is `tibetan-tiles` (OAuth client "Tibetan Tiles web", origins
+https://tibetan.itjoy.space and http://localhost:3000, scope `drive.appdata`,
+privacy policy at `site/privacy.html`). To set it up again from scratch:
 
 1. Open https://console.cloud.google.com/ and create a project (or pick one).
 2. **APIs & Services → Library**: enable **Google Drive API**.
