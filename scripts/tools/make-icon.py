@@ -67,9 +67,9 @@ ty = (size + hgt * scale) / 2 + ymin * scale  # y flips
 
 svg = [
     f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}">',
-    f'<rect width="{size}" height="{size}" rx="{size * 0.22:.0f}" fill="#182943"/>',
-    f'<rect x="{size*0.09:.0f}" y="{size*0.09:.0f}" width="{size*0.82:.0f}" height="{size*0.82:.0f}" rx="{size*0.16:.0f}" fill="none" stroke="#e5d2a7" stroke-width="{size*0.025:.0f}"/>',
-    f'<g fill="#f0c47d" transform="translate({tx:.2f} {ty:.2f}) scale({scale:.5f} {-scale:.5f})">',
+    f'<rect width="{size}" height="{size}" rx="{size * 0.22:.0f}" fill="#6e1a28"/>',
+    f'<rect x="{size*0.09:.0f}" y="{size*0.09:.0f}" width="{size*0.82:.0f}" height="{size*0.82:.0f}" rx="{size*0.16:.0f}" fill="none" stroke="#d9b65c" stroke-width="{size*0.025:.0f}"/>',
+    f'<g fill="#f3cf7a" transform="translate({tx:.2f} {ty:.2f}) scale({scale:.5f} {-scale:.5f})">',
 ]
 for d, gx, gy in paths:
     svg.append(f'<path transform="translate({gx} {gy})" d="{d}"/>')

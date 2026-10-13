@@ -10,7 +10,7 @@
     "test": "node --test \"site/src/**/*.test.js\" \"server/**/*.test.js\"",
     "serve": "npx serve site",
     "smoke": "node scripts/smoke.mjs",
-    "icon": "python scripts/tools/make-icon.py"
+    "icon": "python scripts/tools/make-icon.py && node scripts/tools/icon-png.mjs"
   },
   "engines": {
     "node": ">=20"

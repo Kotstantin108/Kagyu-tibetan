@@ -33,7 +33,9 @@ another device".)
 - **Streak**: three sentences a day keep it alive.
 - **Offline and installable** (PWA): everything, including the Tibetan font,
   is cached by a service worker.
-- **Dark theme**, keyboard shortcuts (1–9, Backspace, Enter, H), Wylie under
+- **Design** in the Karma Kagyu palette (burgundy, gold, deep blue on rice
+  paper, a faint cloud ornament, serif headings) with a matching **dark theme**,
+  keyboard shortcuts (1–9, Backspace, Enter, H), Wylie under
   the tiles as an option, 44px tap targets, no horizontal scroll at 360px.
 - **Progress stays on the device**; move it with a file, a text code (settings
   → "Move to another device"), or optional Google Drive sync.
@@ -72,6 +74,7 @@ scripts/
   lib/wylie.mjs     re-exports site/src/engine/wylie.js for the scripts
   tools/pdf-tibetan-text.py  recovers Tibetan text from the textbook PDFs
   tools/make-icon.py         builds icons/icon.svg from the font's glyph outlines
+  tools/icon-png.mjs         renders icons/icon.svg to the PNG icons (Playwright)
 redirect/           one-page redirect published to GitHub Pages after the move (index.html + self-removing sw.js)
 server/
   nginx/tibetan.itjoy.space.conf  vhost (caching headers, gzip, /api/ proxy)

@@ -19,6 +19,7 @@ const SHELL = [
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
+  './icons/clouds.svg',
   './fonts/NotoSerifTibetan-Regular.woff2',
   './data/words.json',
   './data/sentences.json',

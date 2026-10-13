@@ -58,7 +58,7 @@ function applyTheme() {
   else document.documentElement.dataset.theme = theme;
   const dark = effectiveDark();
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.content = dark ? '#111a2b' : '#182943';
+  if (meta) meta.content = dark ? '#131826' : '#6e1a28';
   const btn = document.getElementById('theme-toggle');
   if (btn) {
     btn.setAttribute('aria-pressed', dark ? 'true' : 'false');

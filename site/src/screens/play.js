@@ -73,11 +73,13 @@ export function renderPlay(root, ctx) {
   const btnSkip = h('button', { type: 'button', class: 'action', onClick: () => nextSentence() }, t('play.skip'));
   const btnNext = h('button', { type: 'button', class: 'action next', hidden: true, onClick: () => nextSentence() }, t('play.next'));
   const lesson = h('section', { class: 'lesson', hidden: true });
+  const meterFill = h('div', {});
+  const lessonMeter = h('div', { class: 'lesson-meter', role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-valuenow': '0' }, meterFill);
   const shortcuts = h('p', { class: 'fine shortcuts' }, t('play.shortcuts'));
 
   root.append(
     h('section', { class: 'panel' },
-      h('div', { class: 'topbar' }, h('div', { class: 'progressline' }, reasonBadge, newBadge, dueBadge), exerciseSwitch),
+      h('div', { class: 'topbar' }, h('div', { class: 'progressline' }, reasonBadge, newBadge, dueBadge), exerciseSwitch, lessonMeter),
       h('div', { class: 'panel-body' },
         focusBar,
         promptLabel,
@@ -303,6 +305,13 @@ export function renderPlay(root, ctx) {
     machineNote.hidden = ctx.lang === 'en' || ex === 'meaning';
     machineNote.textContent = ctx.lang === 'en' ? '' : t('settings.machineNotice', { lang: t('langIn') }).split('.')[0] + '.';
     reasonBadge.textContent = t(`play.whyThis.${pick.reason}`);
+    // lesson progress: known words of the current set
+    const setIds = Object.keys(dict).filter((id) => dict[id].set === s.set && !dict[id].service);
+    const knownInSet = setIds.filter((id) => wordStatus(p, id) === STATUS.KNOWN).length;
+    const pct = setIds.length ? Math.round((100 * knownInSet) / setIds.length) : 0;
+    meterFill.style.width = `${pct}%`;
+    lessonMeter.setAttribute('aria-valuenow', String(pct));
+    lessonMeter.title = `${knownInSet}/${setIds.length}`;
     newBadge.textContent = pick.newWordIds.length ? `${t('play.newWord')}: ${pick.newWordIds.length}` : '';
     newBadge.hidden = !pick.newWordIds.length;
     dueBadge.textContent = pick.dueWordIds.length ? `${t('play.dueWord')}: ${pick.dueWordIds.length}` : '';
