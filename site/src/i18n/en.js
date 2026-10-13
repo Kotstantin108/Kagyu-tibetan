@@ -155,7 +155,7 @@ export default {
       error: 'Sync failed, will retry',
     },
     about: 'About',
-    aboutText: 'Sentences and vocabulary come from the Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute). The app works offline and stores progress in this browser.',
+    aboutText: 'Sentences and vocabulary come from the Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute) and from the exercises of Joanna Bialek’s A Textbook in Classical Tibetan. The app works offline and stores progress in this browser.',
     sourceCode: 'Source code and issue tracker',
     version: 'Version {v}',
   },

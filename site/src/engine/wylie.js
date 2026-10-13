@@ -150,6 +150,9 @@ export function endingType(tib) {
   if (syl.endsWith('འ')) return 'achung';
   const units = parseSyllable(syl);
   if (!units.length) return 'closed';
+  // a-chung carrying a vowel after the root (སྤྲེའུ, དགེའོ) ends the syllable in a vowel
+  const last = units[units.length - 1];
+  if (units.length > 1 && last.cons.length === 1 && last.cons[0] === "'" && last.vowel) return 'open';
   const vi = units.findIndex((u) => u.vowel && !u.digit && !u.other);
   const root = vi >= 0 ? vi : rootIndex(units);
   return root === units.length - 1 ? 'open' : 'closed';

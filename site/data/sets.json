@@ -75,5 +75,71 @@
       "pl": "Lekcja 7. Czasowniki posiłkowe i łączniki zdań"
     },
     "order": 7
+  },
+  {
+    "id": "bialek-01",
+    "name": {
+      "ru": "Bialek 1. Именная группа",
+      "en": "Bialek 1. The noun phrase",
+      "de": "Bialek 1. Die Nominalphrase",
+      "fr": "Bialek 1. Le groupe nominal",
+      "pl": "Bialek 1. Grupa nominalna"
+    },
+    "order": 8
+  },
+  {
+    "id": "bialek-02",
+    "name": {
+      "ru": "Bialek 2. Порядок слов, связка yin и число",
+      "en": "Bialek 2. Word order, the copula yin and number",
+      "de": "Bialek 2. Wortstellung, die Kopula yin und der Numerus",
+      "fr": "Bialek 2. L’ordre des mots, la copule yin et le nombre",
+      "pl": "Bialek 2. Szyk zdania, łącznik yin i liczba"
+    },
+    "order": 9
+  },
+  {
+    "id": "bialek-03",
+    "name": {
+      "ru": "Bialek 3. Локатив, датив, генитив и связка yod",
+      "en": "Bialek 3. Locative, dative, genitive and the copula yod",
+      "de": "Bialek 3. Lokativ, Dativ, Genitiv und die Kopula yod",
+      "fr": "Bialek 3. Locatif, datif, génitif et la copule yod",
+      "pl": "Bialek 3. Miejscownik, celownik, dopełniacz i łącznik yod"
+    },
+    "order": 10
+  },
+  {
+    "id": "bialek-04",
+    "name": {
+      "ru": "Bialek 4. Непереходные глаголы и терминатив",
+      "en": "Bialek 4. Intransitive verbs and the terminative",
+      "de": "Bialek 4. Intransitive Verben und der Terminativ",
+      "fr": "Bialek 4. Les verbes intransitifs et le terminatif",
+      "pl": "Bialek 4. Czasowniki nieprzechodnie i terminatyw"
+    },
+    "order": 11
+  },
+  {
+    "id": "bialek-05",
+    "name": {
+      "ru": "Bialek 5. Переходные глаголы и эргатив",
+      "en": "Bialek 5. Transitive verbs and the ergative",
+      "de": "Bialek 5. Transitive Verben und der Ergativ",
+      "fr": "Bialek 5. Les verbes transitifs et l’ergatif",
+      "pl": "Bialek 5. Czasowniki przechodnie i ergatyw"
+    },
+    "order": 12
+  },
+  {
+    "id": "bialek-06",
+    "name": {
+      "ru": "Bialek 6. Элатив, делатив, отрицание и повеление",
+      "en": "Bialek 6. Elative, delative, negation and the imperative",
+      "de": "Bialek 6. Elativ, Delativ, Verneinung und Imperativ",
+      "fr": "Bialek 6. Élatif, délatif, négation et impératif",
+      "pl": "Bialek 6. Elatyw, delatyw, przeczenie i tryb rozkazujący"
+    },
+    "order": 13
   }
 ]

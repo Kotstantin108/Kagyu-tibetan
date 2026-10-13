@@ -1,5 +1,4 @@
 # pl: translations keyed by the English text. Lines: english | translation
-# Machine translation from the English (the handbook's language); to be reviewed.
 
 @sets
 Lesson 1. Nouns and the nominal group | Lekcja 1. Rzeczowniki i grupa nominalna
@@ -9,6 +8,12 @@ Lesson 4. The agentive particle and the imperative | Lekcja 4. Partykuła agenty
 Lesson 5. The la-dön particles | Lekcja 5. Partykuły la-dön
 Lesson 6. Source particles and relative clauses | Lekcja 6. Partykuły źródła i zdania względne
 Lesson 7. Auxiliaries and clause connectors | Lekcja 7. Czasowniki posiłkowe i łączniki zdań
+Bialek 1. The noun phrase | Bialek 1. Grupa nominalna
+Bialek 2. Word order, the copula yin and number | Bialek 2. Szyk zdania, łącznik yin i liczba
+Bialek 3. Locative, dative, genitive and the copula yod | Bialek 3. Miejscownik, celownik, dopełniacz i łącznik yod
+Bialek 4. Intransitive verbs and the terminative | Bialek 4. Czasowniki nieprzechodnie i terminatyw
+Bialek 5. Transitive verbs and the ergative | Bialek 5. Czasowniki przechodnie i ergatyw
+Bialek 6. Elative, delative, negation and the imperative | Bialek 6. Elatyw, delatyw, przeczenie i tryb rozkazujący
 
 @words
 monastery | klasztor
@@ -138,6 +143,8 @@ cold | zimny
 eighth | ósmy
 fifth | piąty
 yoga | joga
+festival, feast | święto, uczta
+son | syn
 size | rozmiar
 śrāvakas and pratyekabuddhas | śrawakowie i pratjekabuddowie
 Hīnayāna, the lesser vehicle | hinajana, mniejszy pojazd
@@ -148,7 +155,6 @@ tenth | dziesiąty
 seventh | siódmy
 quality (good and bad) | jakość (dobra i zła)
 hundredth | setny
-son | syn
 temperature | temperatura
 restaurant | restauracja
 saṃsāra and nirvāṇa | samsara i nirwana
@@ -157,7 +163,6 @@ Great Perfection (Dzogchen) | Wielka Doskonałość (dzogczen)
 astrology | astrologia
 White Tārā | Biała Tara
 former, past | dawny, przeszły
-festival, feast | święto, uczta
 hospital | szpital
 teaching(s) | nauka, nauki
 bodhisattva | bodhisattwa
@@ -180,7 +185,7 @@ I (classical); self, ego | ja (klasyczne); jaźń, ego
 you | ty
 he, she (h.) | on, ona (hon.)
 pride | duma, pycha
-plural particle (with pronouns) | partykuła liczby mnogiej (przy zaimkach)
+we | my
 space, sky | przestrzeń, niebo
 front | przód
 offering | ofiara, dar
@@ -227,23 +232,23 @@ to do | robić
 to do (h.); deed | robić (hon.); czyn
 mother (h.) | matka (hon.)
 foot (h.) | stopa (hon.)
+of (connective particle as a separate syllable) | partykuła łącząca (jako osobna sylaba)
+body | ciało
+foot | stopa
+father (h.) | ojciec (hon.)
 he | on
 I (literary) | ja (literackie)
 speech (h.); to speak (h.) | mowa (hon.); mówić (hon.)
-we | my
 speech | mowa
 I, we (literary) | ja, my (literackie)
+plural particle (with pronouns) | partykuła liczby mnogiej (przy zaimkach)
 head (h.) | głowa (hon.)
 father | ojciec
 hand (h.) | ręka (hon.)
 to know (h.) | wiedzieć (hon.)
 head | głowa
 unity, union | jedność, zjednoczenie
-father (h.) | ojciec (hon.)
-of (connective particle as a separate syllable) | partykuła łącząca (jako osobna sylaba)
-foot | stopa
 to be (humilific) | być (skromnie)
-body | ciało
 empty; to be empty of | pusty; być pustym od
 impermanent; impermanence | nietrwały; nietrwałość
 the Greater Vehicle, Mahāyāna | Wielki Pojazd, mahajana
@@ -347,9 +352,9 @@ terminating particle (after ང) | partykuła końcowa (po ང)
 birth; to arise, be born | narodziny; powstawać, rodzić się
 terminating particle (after བ) | partykuła końcowa (po བ)
 to enter, engage; entrance | wchodzić, przystępować; wejście
+terminating particle (after second suffix ད) | partykuła końcowa (po drugim sufiksie ད)
 to cut | ciąć
 to speak, say, teach (h.) | mówić, nauczać (hon.)
-terminating particle (after second suffix ད) | partykuła końcowa (po drugim sufiksie ད)
 to hold, grasp; apprehending subject | trzymać, chwytać; podmiot ujmujący
 view; to look at | pogląd; patrzeć na
 mountain | góra
@@ -557,6 +562,7 @@ to go, to come (humilific) | iść, przychodzić (skromnie)
 existing, having | istniejący, mający
 arose, was born (past of སྐྱེ་) | powstał, narodził się (czas przeszły od སྐྱེ་)
 later, next, future | późniejszy, następny, przyszły
+many | liczni, wiele
 or; question particle (after ར) | lub; partykuła pytajna (po ར)
 to dedicate (future of སྔོ་) | dedykować (czas przyszły od སྔོ་)
 defect, shortcoming | wada, niedostatek
@@ -724,9 +730,9 @@ profound path (abbr.) | głęboka ścieżka (skrót)
 to give, send (སྦྱིན་པ་གཏོང་ to be generous) | dawać, posyłać (སྦྱིན་པ་གཏོང་ być szczodrym)
 to guard, protect | strzec, chronić
 to think, reflect; thought | myśleć, rozważać; myśl
+thing, entity | rzecz, byt
 basis, ground | podstawa, grunt
 and (connecting verbs, after ག ད བ) | i (łączy czasowniki, po ག ད བ)
-thing, entity | rzecz, byt
 to exhort, urge; to recite | nakłaniać, ponaglać; recytować
 meditative concentration | medytacyjne skupienie
 limit, end, extreme | granica, kres, skrajność
@@ -737,6 +743,135 @@ fault, defect | wada, błąd
 the three doors (body, speech, mind) | troje wrót (ciało, mowa, umysł)
 essence, heart | esencja, serce
 life-force | siła życiowa
+rock | skała
+mild, gentle | łagodny
+the youngest | najmłodszy
+fresh | świeży
+flesh, meat | ciało, mięso
+blood | krew
+warm | ciepły
+prince | książę
+splinter | drzazga
+sharp | ostry
+well-sounding, pleasant | miły dla ucha, przyjemny
+evil, fault | zło, przewinienie
+dove | gołąb
+Semchen Chenpo (a prince's name) | Semczen Czenpo (imię księcia)
+hungry | głodny
+tigress | tygrysica
+ten thousand | dziesięć tysięcy
+living being, creature | żywa istota, stworzenie
+sign | znak
+many, much | wiele, dużo
+compassionate | współczujący
+five hundred | pięćset
+monkey-child | małpie dziecko
+neighbour | sąsiad
+noble | szlachetny
+food and clothing | jedzenie i odzież
+lay practitioner (upāsaka) | świecki praktykujący (upāsaka)
+monkey | małpa
+the Snowy Land, Tibet | Kraina Śniegu, Tybet
+kingdom, realm | królestwo
+child | dziecko
+ogre, rākṣasa | ludożerca, rākṣasa
+town, city | miasto
+garment | szata
+woman | kobieta
+vow | ślubowanie
+inner cavern | wewnętrzna jaskinia
+life | życie
+demon, spirit | demon, duch
+wife | żona
+Brahmin | bramin
+old woman | staruszka
+Chenrezig (Avalokiteśvara) | Czenrezig (Awalokiteśwara)
+paternal uncle | stryj
+treasury, treasure | skarbiec, skarb
+Phyinteloshusha (a Brahmin's name) | Phyinteloshusha (imię bramina)
+forest, grove | las, gaj
+small bone | kostka
+thereafter, then | potem, następnie
+rock-ogress | skalna demonica
+rose (past of ལང་) | wstała (czas przeszły od ལང་)
+fruit (of trees) | owoc (drzewa)
+to rise, to get up (h.) | wstać, podnieść się (hon.)
+up, upward | w górę
+demoness, ogress | demonica
+ancestors | przodkowie
+son-in-law | zięć
+later | później
+gathered (past of འདུ་) | zebrali się (czas przeszły od འདུ་)
+clothes | ubranie
+saffron, yellowish red | szafranowy, żółtoczerwony
+came (past of འོང་) | przyszedł (czas przeszły od འོང་)
+died (past of ཚེ་འཕོ་) | zmarł (czas przeszły od ཚེ་འཕོ་)
+went (past of འདོང་) | poszedł (czas przeszły od འདོང་)
+full | pełny
+to die, to pass away | umrzeć, odejść
+to be consumed, to run out | wyczerpać się, skończyć się
+to rise | wstawać
+harvest, crop | plon, zbiory
+beard | broda
+fell off (past of འབྱི་) | wypadły (czas przeszły od འབྱི་)
+hair | włosy
+thought (past of སེམས་) | pomyślał (czas przeszły od སེམས་)
+thought; སྙམ་དུ་ thinking thus | myśl; སྙམ་དུ་ myśląc tak
+took out (past of འབྱིན་) | wypuścił (czas przeszły od འབྱིན་)
+looked (past of ལྟ་) | spojrzał (czas przeszły od ལྟ་)
+offspring | potomstwo
+got into (past of འཚུད་) | wpadł (czas przeszły od འཚུད་)
+swamp | bagno
+only, alone | jedyny, sam
+united (past of འདྲིལ་) | połączyli się (czas przeszły od འདྲིལ་)
+aunt | ciotka
+consort and her children | żona z dziećmi
+father and brothers | ojciec i bracia
+stayed (past of སྡོད་) | został (czas przeszły od སྡོད་)
+Dzese (a name) | Dzese (imię)
+maternal uncle | wuj
+ox | wół
+door | drzwi
+broke (past of འཆག་) | złamała się (czas przeszły od འཆག་)
+husband | mąż
+the Victorious One (Bhagavān, the Buddha) | Zwycięski (Bhagawan, Budda)
+always | zawsze
+to scold | łajać
+weaver | tkacz
+Yikpachen (a man's name) | Jikpaczen (imię mężczyzny)
+seized (past of འཛིན་) | schwyciła (czas przeszły od འཛིན་)
+to break | łamać się
+to roll together; གཅིག་ཏུ་འདྲིལ་ to unite | zwijać razem; གཅིག་ཏུ་འདྲིལ་ połączyć się
+to fall off | wypadać
+to take out, to bring forth | wyjmować, wydobywać
+to get into, to enter | wpadać, wchodzić
+impurity, stain | nieczystość, skaza
+dust | kurz
+gave; give! (past and imperative of སྦྱིན་) | dał; daj! (czas przeszły i rozkaźnik od སྦྱིན་)
+back, again | z powrotem, znowu
+now | teraz
+eat! (imperative of ཟ་) | jedz! (rozkaźnik od ཟ་)
+limb | kończyna
+crack, fissure | pęknięcie, szczelina
+row | rząd
+middle, centre | środek
+read (past of ཀློག་) | przeczytał (czas przeszły od ཀློག་)
+testament | testament
+letter, written text | list, tekst pisany
+sent (past of སྐུར་) | posłali (czas przeszły od སྐུར་)
+firewood | drewno na opał
+blind | ślepy
+householder | gospodarz
+borrowed (past of བརྙ་) | pożyczył (czas przeszły od བརྙ་)
+river | rzeka
+fell (past of ལྟུང་) | upadł (czas przeszły od ལྟུང་)
+axe | siekiera
+Ānanda | Ananda
+such, of that kind | taki, tego rodzaju
+pretty, nice | ładny
+to read | czytać
+to borrow | pożyczać
+to fall | spadać
 
 @sentences
 red monastery | czerwony klasztor
@@ -1466,6 +1601,104 @@ The monk performs the ritual and the yogin visualizes the maṇḍala of the dei
 Without knowing all sentient beings to be one's parents, one harms others. | Nie rozpoznając wszystkich czujących istot jako swoich rodziców, szkodzi się innym.
 Without thinking about the results of evil deeds, one continuously accumulates non-virtue. | Nie myśląc o owocach złych uczynków, nieustannie gromadzi się niecnotę.
 I do not trust his advice, but I have faith in the teachings of the spiritual friend. | Nie ufam jego radom, ale mam wiarę w nauki duchowego przyjaciela.
+a black rock | czarna skała
+profound Buddhist teaching | głęboka nauka buddyjska
+mild words | łagodne słowa
+three years | trzy lata
+that king | ten król
+the youngest son | najmłodszy syn
+many days | wiele dni
+fresh flesh | świeże mięso
+warm blood | ciepła krew
+the youngest prince | najmłodszy książę
+a long time | długi czas
+a sharp splinter | ostra drzazga
+kind words | życzliwe słowa
+great moral faults | wielkie przewinienia
+three doves | trzy gołębie
+bad daughters | złe córki
+the prince Semchen Chenpo | książę Semczen Czenpo
+a hungry tigress | głodna tygrysica
+ten thousand sentient beings | dziesięć tysięcy czujących istot
+one thousand living beings | tysiąc żywych istot
+many signs | wiele znaków
+the compassionate protector | współczujący opiekun
+five hundred monkey-children | pięćset małpich dzieci
+all the noble neighbours | wszyscy szlachetni sąsiedzi
+bad food and clothing | złe jedzenie i odzież
+an excellent feast | wyborna uczta
+the great king | wielki król
+many attendants | liczni dworzanie
+the daughters | te córki
+I am the prince Semchen Chenpo. | Jestem księciem Semczen Czenpo.
+I am a lay practitioner. | Jestem świeckim praktykującym.
+the great king of monkeys | wielki król małp
+this realm of the Snowy Land (Tibet) | to królestwo Krainy Śniegu (Tybetu)
+innumerable children of the ogre | niezliczone dzieci ludożercy
+towns of ogres | miasta ludożerców
+protector of beings | opiekun istot
+a woman's garments | szaty kobiety
+my vow | moje ślubowanie
+the inner caverns of Mount Meru | wewnętrzne jaskinie góry Meru
+our lives | nasze życie
+the birds of demons | ptaki demonów
+the wife of that Brahmin | żona tego bramina
+In the town an old woman had two sons. | W mieście pewna staruszka miała dwóch synów.
+I am a lay practitioner of Chenrezig. | Jestem świeckim praktykującym Czenreziga.
+The paternal uncle had many sons. | Stryj miał wielu synów.
+A vast ocean is a treasury of water. | Rozległy ocean jest skarbcem wody.
+At that time in that country there was a Brahmin called Phyinteloshusha. | W tamtym czasie w tamtym kraju żył bramin imieniem Phyinteloshusha.
+Your voice is pleasant. | Twój głos jest przyjemny.
+Bones lie in the wood. | W lesie leżą kości.
+Thereafter the rock-ogress rose. | Potem skalna demonica wstała.
+Innumerable children of the ogre were born. | Urodziły się niezliczone dzieci ludożercy.
+Monkey-children were born. | Urodziły się małpie dzieci.
+Then the fruits were consumed. | Potem owoce się skończyły.
+The Noble One rose. | Szlachetny wstał.
+I was born into the race of ogresses. | Urodziłem się w rodzie demonic.
+Wealth came to the ancestors. | Przodkom przypadło bogactwo.
+This man has no sons. | Ten człowiek nie ma synów.
+Later the sons-in-law gathered. | Później zebrali się zięciowie.
+The clothes turned saffron. | Ubranie stało się szafranowe.
+Two princes came. | Przyszli dwaj książęta.
+The prince Semchen Chenpo passed away there. | Książę Semczen Czenpo tam zmarł.
+The deity went back to its place. | Bóstwo wróciło na swoje miejsce.
+The two went. | Ci dwaj poszli.
+They went there. | Oni tam poszli.
+The hair and beard fell off by themselves. | Włosy i broda wypadły same.
+Then the youngest prince thought this in his mind. | Wtedy najmłodszy książę pomyślał tak w swoim umyśle.
+Then, with a sharp wooden splinter, the prince let blood out of his body. | Wtedy książę ostrą drewnianą drzazgą wypuścił krew ze swego ciała.
+The parents looked at the sky. | Rodzice spojrzeli na niebo.
+Birth and decay exist in everything. | Narodziny i rozpad są we wszystkim.
+Because of my offspring I got into the swamp of samsara. | Przez potomstwo wpadłem w bagno samsary.
+I went as the only son. | Poszedłem jako jedyny syn.
+The aunt and the uncle united. | Ciotka i stryj połączyli się.
+The consort and her children went out. | Żona z dziećmi wyszli.
+The maternal uncle and Dzese's father and brothers stayed. | Wuj oraz ojciec i bracia Dzese zostali.
+The ox went out through another door. | Wół wyszedł innymi drzwiami.
+The leg broke. | Noga się złamała.
+You killed my husband. | Zabiłeś mojego męża.
+The Victorious One taught the Dharma. | Zwycięski nauczał Dharmy.
+At that point Phyinteloshusha thought this in his mind. | Wtedy Phyinteloshusha pomyślał tak w swoim umyśle.
+The wife is always scolding. | Żona ciągle łaja.
+The Victorious One discerned his thoughts with his mind. | Zwycięski rozpoznał jego myśli swoim umysłem.
+You killed my horse. | Zabiłeś mojego konia.
+The weaver's wife seized Yikpachen. | Żona tkacza schwyciła Jikpaczena.
+Dust and impurities disappeared. | Kurz i nieczystości zniknęły.
+For a long time I have been roaming in samsara. | Od dawna błąkam się w samsarze.
+Give the ox back! | Oddaj wołu!
+Now eat! | Teraz jedz!
+The limbs became cracked. | Kończyny popękały.
+The mother stood up in the middle of the row. | Matka wstała pośrodku rzędu.
+The maternal uncle read the text of the father's testament. | Wuj przeczytał tekst testamentu ojca.
+Dzese's parents sent firewood. | Rodzice Dzese posłali drewno na opał.
+The birds of demons become blind. | Ptaki demonów ślepną.
+The Victorious One cannot be grasped by thought. | Zwycięskiego nie da się pojąć myślą.
+He borrowed an ox from a householder. | Pożyczył wołu od pewnego gospodarza.
+In the middle of the road there was a river. | Pośrodku drogi była rzeka.
+The axe fell into the river. | Siekiera wpadła do rzeki.
+Then Ananda saw things of this kind. | Wtedy Ananda zobaczył takie rzeczy.
+The wife of that Brahmin was ugly. | Żona tego bramina była brzydka.
 
 @notes
 Adjectives follow the noun they modify. | Przymiotniki stoją po rzeczowniku, który określają.
@@ -1589,3 +1822,32 @@ Verb + ན་ = "if", "when"; གལ་ཏེ་ at the start makes it "if". | C
 The continuative particles སྟེ་/ཏེ་/དེ་ link clauses in sequence. | Partykuły kontynuacji སྟེ་/ཏེ་/དེ་ łączą zdania składowe po kolei.
 The continuative particle can introduce a list or a definition, like a colon. | Partykuła kontynuacji może wprowadzać wyliczenie lub definicję, jak dwukropek.
 Syllogism: statement + continuative particle, reason + ཕྱིར་. | Sylogizm: twierdzenie + partykuła kontynuacji, powód + ཕྱིར་.
+The adjective follows the noun; the indefinite particle ཞིག་ closes the phrase. | Przymiotnik stoi po rzeczowniku; partykuła nieokreślona ཞིག་ zamyka grupę.
+Numerals follow the noun. | Liczebniki stoją po rzeczowniku.
+The demonstrative དེ་ follows the noun. | Zaimek wskazujący དེ་ stoi po rzeczowniku.
+Order: noun + numeral + indefinite particle. | Szyk: rzeczownik + liczebnik + partykuła nieokreślona.
+A name stands in apposition after the title. | Imię stoi w przydawce po tytule.
+ཀུན་ "all" comes last in the noun phrase. | ཀུན་ „wszyscy” stoi na końcu grupy nominalnej.
+The plural particle རྣམས་ closes the phrase. | Partykuła liczby mnogiej རྣམས་ zamyka grupę.
+དག་ is a plural particle; དེ་དག་ "those". | དག་ to partykuła liczby mnogiej; དེ་དག་ „tamci”.
+The copula ཡིན་ stands at the end; the subject takes no case particle. | Łącznik ཡིན་ stoi na końcu; podmiot nie przyjmuje partykuły przypadka.
+The genitive particle འི་ fuses with the open syllable. | Partykuła dopełniacza འི་ zlewa się z sylabą otwartą.
+After a final ད the genitive is ཀྱི་. | Po końcowym ད dopełniacz to ཀྱི་.
+Possession: possessor + ལ་ + possessed + ཡོད་. ན་ marks the location. | Posiadanie: posiadacz + ལ་ + rzecz + ཡོད་. ན་ oznacza miejsce.
+ཡི་ is the metrical form of the genitive འི་. | ཡི་ to metryczna forma dopełniacza འི་.
+The final particle འོ་ assimilates to the last letter: ཡོད་ + འོ་ = ཡོད་དོ་. | Partykuła końcowa འོ་ upodabnia się do ostatniej litery: ཡོད་ + འོ་ = ཡོད་དོ་.
+The subject of an intransitive verb takes no case particle. | Podmiot czasownika nieprzechodniego nie przyjmuje partykuły przypadka.
+The terminative སུ་ marks the result or goal. | Terminatyw སུ་ oznacza rezultat lub cel.
+X + ཏུ་ + གྱུར་ "became X". | X + ཏུ་ + གྱུར་ „stał się X”.
+དེར་ = དེ་ + ར་ "there". | དེར་ = དེ་ + ར་ „tam”.
+The agent of a transitive verb takes the ergative: དེ་ + ས་ = དེས་. | Sprawca czasownika przechodniego stoi w ergatywie: དེ་ + ས་ = དེས་.
+The ergative also marks the instrument (རྣོན་པོས་). | Ergatyw oznacza też narzędzie (རྣོན་པོས་).
+The ergative can mark the cause. | Ergatyw może oznaczać przyczynę.
+དང་ joins two nouns: "and, with". | དང་ łączy dwa rzeczowniki: „i, z”.
+Ergative ཀྱིས་ after a final ད. | Ergatyw ཀྱིས་ po końcowym ད.
+The elative ནས་ "from, since". | Elatyw ནས་ „z, od (czasu)”.
+The imperative particle ཅིག་ follows the imperative stem. | Partykuła rozkazująca ཅིག་ stoi po temacie trybu rozkazującego.
+X + ར་ + འགྱུར་ "becomes X". | X + ར་ + འགྱུར་ „staje się X”.
+Negation: མི་ before the verb. | Przeczenie: མི་ przed czasownikiem.
+The delative ལས་ "from (someone)". | Delatyw ལས་ „od (kogoś)”.
+ཆུར་ = ཆུ་ + ར་ "into the water". | ཆུར་ = ཆུ་ + ར་ „do wody”.

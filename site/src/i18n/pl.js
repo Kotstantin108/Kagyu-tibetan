@@ -155,7 +155,7 @@ export default {
       error: 'Synchronizacja nie powiodła się, spróbujemy ponownie',
     },
     about: 'O aplikacji',
-    aboutText: 'Zdania i słownictwo pochodzą z Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute). Aplikacja działa offline i przechowuje postępy w tej przeglądarce.',
+    aboutText: 'Zdania i słownictwo pochodzą z Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute) oraz z ćwiczeń podręcznika Joanny Bialek A Textbook in Classical Tibetan. Aplikacja działa offline i przechowuje postępy w tej przeglądarce.',
     sourceCode: 'Kod źródłowy i lista problemów',
     version: 'Wersja {v}',
   },

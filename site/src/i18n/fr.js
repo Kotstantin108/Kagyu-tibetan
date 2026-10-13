@@ -155,7 +155,7 @@ export default {
       error: 'Échec de la synchronisation, nouvel essai à venir',
     },
     about: 'À propos',
-    aboutText: 'Les phrases et le vocabulaire viennent du Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute). L’application fonctionne hors ligne et stocke les progrès dans ce navigateur.',
+    aboutText: 'Les phrases et le vocabulaire viennent du Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute) et des exercices de A Textbook in Classical Tibetan de Joanna Bialek. L’application fonctionne hors ligne et stocke les progrès dans ce navigateur.',
     sourceCode: 'Code source et suivi des problèmes',
     version: 'Version {v}',
   },

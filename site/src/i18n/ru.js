@@ -155,7 +155,7 @@ export default {
       error: 'Ошибка синхронизации, попробуем позже',
     },
     about: 'О приложении',
-    aboutText: 'Предложения и слова взяты из Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute). Приложение работает без сети и хранит прогресс в этом браузере.',
+    aboutText: 'Предложения и слова взяты из Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute) и из упражнений учебника Иоанны Бялек A Textbook in Classical Tibetan. Приложение работает без сети и хранит прогресс в этом браузере.',
     sourceCode: 'Исходный код и список ошибок',
     version: 'Версия {v}',
   },

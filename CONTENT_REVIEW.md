@@ -38,11 +38,11 @@ Six handbook sentences contain apparent typos (p. 45 ex. 21 གསུང་པ�
 
 | language | sentences (machine / total) | words (machine / total) | notes |
 |---|---|---|---|
-| en | 204 / 768 | 0 / 744 | 121 |
-| ru | 768 / 768 | 744 / 744 | 121 |
-| de | 768 / 768 | 744 / 744 | 121 |
-| fr | 768 / 768 | 744 / 744 | 121 |
-| pl | 768 / 768 | 744 / 744 | 121 |
+| en | 204 / 866 | 0 / 881 | 150 |
+| ru | 866 / 866 | 881 / 881 | 150 |
+| de | 866 / 866 | 881 / 881 | 150 |
+| fr | 866 / 866 | 881 / 881 | 150 |
+| pl | 866 / 866 | 881 / 881 | 150 |
 
 English comes from the handbook except for exercise sentences (no answer key), which we translated. Russian, German, French and Polish are our translations made from the English.
 
@@ -255,7 +255,7 @@ English comes from the handbook except for exercise sentences (no answer key), w
 | s767 | lesson-07 | སྡིག་པའི་འབྲས་བུ་ལ་མི་བསམ་པར་མི་དགེ་བ་རྒྱུན་དུ་གསོག་ | Without thinking about the results of evil deeds, one continuously accumulates non-virtue. |
 | s768 | lesson-07 | བདག་ནི་ཁོང་གི་བསླབ་བྱ་ལ་མི་དད་ཀྱི་དགེ་བའི་བཤེས་གཉེན་གྱི་བསྟན་པ་ལ་དད་དོ། | I do not trust his advice, but I have faith in the teachings of the spiritual friend. |
 
-### ru: sentences to be checked (768)
+### ru: sentences to be checked (866)
 
 | id | set | Tibetan | en | ru |
 |---|---|---|---|---|
@@ -1027,8 +1027,106 @@ English comes from the handbook except for exercise sentences (no answer key), w
 | s766 | lesson-07 | སེམས་ཅན་ཐམས་ཅད་ཕ་མར་མ་ཤེས་པར་གཞན་ལ་གནོད། | Without knowing all sentient beings to be one's parents, one harms others. | Не зная, что все живые существа были [его] родителями, [он] вредит другим. |
 | s767 | lesson-07 | སྡིག་པའི་འབྲས་བུ་ལ་མི་བསམ་པར་མི་དགེ་བ་རྒྱུན་དུ་གསོག་ | Without thinking about the results of evil deeds, one continuously accumulates non-virtue. | Не думая о плодах злодеяний, [он] непрерывно накапливает недобродетель. |
 | s768 | lesson-07 | བདག་ནི་ཁོང་གི་བསླབ་བྱ་ལ་མི་དད་ཀྱི་དགེ་བའི་བཤེས་གཉེན་གྱི་བསྟན་པ་ལ་དད་དོ། | I do not trust his advice, but I have faith in the teachings of the spiritual friend. | Я не верю его советам, но верю учению духовного друга. |
+| s769 | bialek-01 | བྲག་རོག་པོ་ཞིག་ | a black rock | чёрная скала |
+| s770 | bialek-01 | ཆོས་ཟབ་མོ་ | profound Buddhist teaching | глубокое Учение |
+| s771 | bialek-01 | ཚིག་འཇམ་པ་ | mild words | мягкие слова |
+| s772 | bialek-01 | ལོ་གསུམ་ | three years | три года |
+| s773 | bialek-01 | རྒྱལ་པོ་དེ་ | that king | тот царь |
+| s774 | bialek-01 | སྲས་ཐ་ཆུངས་དེ་ | the youngest son | младший сын |
+| s775 | bialek-01 | ཞག་དུ་མ་ | many days | много дней |
+| s776 | bialek-01 | ཤ་རློན་པ་ | fresh flesh | свежая плоть |
+| s777 | bialek-01 | ཁྲག་དྲོན་མོ་ | warm blood | тёплая кровь |
+| s778 | bialek-01 | རྒྱལ་བུ་ཐ་ཆུངས་དེ་ | the youngest prince | младший принц |
+| s779 | bialek-01 | ཡུན་རིང་པོ་ | a long time | долгое время |
+| s780 | bialek-01 | ཚལ་བ་རྣོན་པོ་ | a sharp splinter | острая щепка |
+| s781 | bialek-01 | ཚིག་སྙན་པ་ | kind words | ласковые слова |
+| s782 | bialek-01 | ཉེས་པ་ཆེན་པོ་ | great moral faults | великие проступки |
+| s783 | bialek-01 | ཕུག་རོན་གསུམ་ཞིག་ | three doves | три голубя |
+| s784 | bialek-01 | བུ་མོ་ངན་པ་ | bad daughters | дурные дочери |
+| s785 | bialek-02 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་ | the prince Semchen Chenpo | принц Семчен Ченпо |
+| s786 | bialek-02 | སྟག་མོ་ལྟོགས་པ་ | a hungry tigress | голодная тигрица |
+| s787 | bialek-02 | སེམས་ཅན་ཁྲི་ | ten thousand sentient beings | десять тысяч живых существ |
+| s788 | bialek-02 | སྲོག་ཆགས་སྟོང་ | one thousand living beings | тысяча живых существ |
+| s789 | bialek-02 | བརྡ་མང་དུ་ | many signs | много знаков |
+| s790 | bialek-02 | མགོན་པོ་ཐུགས་རྗེ་ཅན་ | the compassionate protector | сострадательный защитник |
+| s791 | bialek-02 | སྤྲེའུ་ཕྲུག་ལྔ་བརྒྱ་ | five hundred monkey-children | пятьсот обезьяньих детёнышей |
+| s792 | bialek-02 | ཁྱིམ་མཚེས་དྲག་པ་ཀུན་ | all the noble neighbours | все знатные соседи |
+| s793 | bialek-02 | ལྟོ་གོས་ངན་པ་ | bad food and clothing | плохая еда и одежда |
+| s794 | bialek-02 | སྟོན་མོ་བཟང་པོ་ | an excellent feast | отличный пир |
+| s795 | bialek-02 | རྒྱལ་པོ་ཆེན་པོ་ | the great king | великий царь |
+| s796 | bialek-02 | འཁོར་མང་པོ་རྣམས་ | many attendants | многочисленная свита |
+| s797 | bialek-02 | བུ་མོ་དེ་དག་ | the daughters | те дочери |
+| s798 | bialek-02 | བདག་རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་ཡིན། | I am the prince Semchen Chenpo. | Я — принц Семчен Ченпо. |
+| s799 | bialek-02 | ང་དགེ་བསྙེན་ཡིན། | I am a lay practitioner. | Я — мирянин-упасака. |
+| s800 | bialek-03 | སྤྲེའུའི་རྒྱལ་པོ་ཆེན་པོ་ | the great king of monkeys | великий царь обезьян |
+| s801 | bialek-03 | ཁ་བ་ཅན་གྱི་རྒྱལ་ཁམས་འདི་ | this realm of the Snowy Land (Tibet) | это царство Страны снегов (Тибета) |
+| s802 | bialek-03 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་ | innumerable children of the ogre | бесчисленные дети ракшаса |
+| s803 | bialek-03 | སྲིན་པོའི་གྲོང་ཁྱེར་དག་ | towns of ogres | города ракшасов |
+| s804 | bialek-03 | འགྲོ་བའི་མགོན་པོ་ | protector of beings | защитник существ |
+| s805 | bialek-03 | བུད་མེད་ཀྱི་ཆས་ | a woman's garments | женская одежда |
+| s806 | bialek-03 | ངའི་སྡོམ་པ་ | my vow | мой обет |
+| s807 | bialek-03 | རི་རབ་ཀྱི་ཁོང་སེང་ | the inner caverns of Mount Meru | внутренние пещеры горы Меру |
+| s808 | bialek-03 | བདག་ཅག་གི་ཚེ་སྲོག་ | our lives | наши жизни |
+| s809 | bialek-03 | འབྱུང་པོའི་བྱ་རྣམས་ | the birds of demons | птицы демонов |
+| s810 | bialek-03 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་ | the wife of that Brahmin | жена того брахмана |
+| s811 | bialek-03 | གྲོང་ཁྱེར་དེ་ན་རྒན་མོ་ཞིག་ལ་བུ་གཉིས་ཤིག་ཡོད། | In the town an old woman had two sons. | В том городе у одной старухи было два сына. |
+| s812 | bialek-03 | ང་སྤྱན་རས་གཟིགས་ཀྱི་དགེ་བསྙེན་ཡིན། | I am a lay practitioner of Chenrezig. | Я — мирянин-упасака Ченрези. |
+| s813 | bialek-03 | ཨ་ཁུ་ལ་བུ་མང་པོ་ཡོད། | The paternal uncle had many sons. | У дяди по отцу было много сыновей. |
+| s814 | bialek-03 | རྒྱ་མཚོ་ཆེན་པོ་ཆུ་ཡི་གཏེར་ཡིན། | A vast ocean is a treasury of water. | Великий океан — сокровищница воды. |
+| s815 | bialek-03 | དེའི་ཚེ་ཡུལ་དེ་ན་བྲམ་ཟེ་ཕྱིན་ཏེ་ལོ་ཤུ་ཤ་ཡོད་དོ། | At that time in that country there was a Brahmin called Phyinteloshusha. | В то время в той стране жил брахман по имени Чинтелошуша. |
+| s816 | bialek-03 | ཁྱོད་ཀྱི་སྐད་སྙན་པ་ཡིན་ནོ། | Your voice is pleasant. | Твой голос приятен. |
+| s817 | bialek-04 | རུས་བུ་ཚལ་ན་འདུག་གོ། | Bones lie in the wood. | Кости лежат в лесу. |
+| s818 | bialek-04 | དེ་ནས་བྲག་སྲིན་མོ་ལངས་སོ། | Thereafter the rock-ogress rose. | Затем скальная демоница поднялась. |
+| s819 | bialek-04 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་སྐྱེས་སོ། | Innumerable children of the ogre were born. | Родились бесчисленные дети ракшаса. |
+| s820 | bialek-04 | སྤྲེའུ་ཕྲུག་རྣམས་སྐྱེས་སོ། | Monkey-children were born. | Родились обезьяньи детёныши. |
+| s821 | bialek-04 | དེ་ནས་ཤིང་ཐོག་རྣམས་ཟད་དོ། | Then the fruits were consumed. | Затем плоды закончились. |
+| s822 | bialek-04 | འཕགས་པ་ཡར་བཞེངས་སོ། | The Noble One rose. | Благородный поднялся. |
+| s823 | bialek-04 | བདག་སྲིན་མོའི་རིགས་སུ་སྐྱེས་སོ། | I was born into the race of ogresses. | Я родился в роду демониц. |
+| s824 | bialek-04 | ཡབ་མེས་རྣམས་ལ་ནོར་བྱུང་ངོ་། | Wealth came to the ancestors. | Предкам досталось богатство. |
+| s825 | bialek-04 | མི་དེ་ལ་བུ་ཕོ་མེད། | This man has no sons. | У того человека нет сыновей. |
+| s826 | bialek-04 | ཕྱིས་དམག་པ་དག་འདུས་སོ། | Later the sons-in-law gathered. | Позже собрались зятья. |
+| s827 | bialek-04 | གོས་ངུར་སྨྲིག་ཏུ་གྱུར་ཏོ། | The clothes turned saffron. | Одежда стала шафрановой. |
+| s828 | bialek-04 | རྒྱལ་བུ་གཉིས་འོངས་སོ། | Two princes came. | Пришли два принца. |
+| s829 | bialek-04 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་དེར་ཚེ་འཕོས་སོ། | The prince Semchen Chenpo passed away there. | Принц Семчен Ченпо там скончался. |
+| s830 | bialek-04 | ལྷ་ཕྱིར་གནས་སུ་སོང་ངོ་། | The deity went back to its place. | Божество вернулось на своё место. |
+| s831 | bialek-04 | དེ་གཉིས་དོང་ངོ་། | The two went. | Те двое ушли. |
+| s832 | bialek-04 | དེ་དག་དེར་སོང་ངོ་། | They went there. | Они пошли туда. |
+| s833 | bialek-05 | སྐྲ་དང་ཁ་སྤུ་རང་བྱིའོ། | The hair and beard fell off by themselves. | Волосы и борода выпали сами собой. |
+| s834 | bialek-05 | དེ་ནས་རྒྱལ་བུ་ཐ་ཆུངས་དེས་ཡིད་ལ་འདི་སྙམ་དུ་བསམས་སོ། | Then the youngest prince thought this in his mind. | Тогда младший принц подумал про себя так. |
+| s835 | bialek-05 | དེའི་ཚེ་རྒྱལ་བུས་ཤིང་གི་ཚལ་བ་རྣོན་པོས་ལུས་ལ་ཁྲག་ཕྱུང་ངོ་། | Then, with a sharp wooden splinter, the prince let blood out of his body. | Тогда острой деревянной щепкой принц выпустил кровь из своего тела. |
+| s836 | bialek-05 | ཕ་མ་གཉིས་ཀྱིས་ནམ་མཁའ་ལ་བལྟས་སོ། | The parents looked at the sky. | Родители посмотрели на небо. |
+| s837 | bialek-05 | སྐྱེ་བ་དང་འཇིག་པ་ཀུན་ལ་སྲིད་དོ། | Birth and decay exist in everything. | Рождение и разрушение присущи всему. |
+| s838 | bialek-05 | བུ་ཚས་འཁོར་བའི་འདམ་དུ་བདག་ཚུད་དོ། | Because of my offspring I got into the swamp of samsara. | Из-за потомства я попал в болото сансары. |
+| s839 | bialek-05 | ང་བུ་གཅིག་པོར་སོང་ངོ་། | I went as the only son. | Я пошёл как единственный сын. |
+| s840 | bialek-05 | ཨ་ནེ་དང་ཨ་ཁུ་གཉིས་གཅིག་ཏུ་དྲིལ་ལོ། | The aunt and the uncle united. | Тётя и дядя объединились. |
+| s841 | bialek-05 | དོ་སྨད་ཚོ་ཕྱིར་སོང་ངོ་། | The consort and her children went out. | Жена с детьми вышли. |
+| s842 | bialek-05 | ཞང་པོ་དང་མཛེས་སེའི་ཕ་མིང་བསྡད་དོ། | The maternal uncle and Dzese's father and brothers stayed. | Дядя по матери, а также отец и братья Дзесе остались. |
+| s843 | bialek-05 | གླང་སྒོ་གཞན་དུ་སོང་ངོ་། | The ox went out through another door. | Бык вышел через другую дверь. |
+| s844 | bialek-05 | རྐང་པ་ཆག་གོ། | The leg broke. | Нога сломалась. |
+| s845 | bialek-05 | ཁྱོད་ཀྱིས་ངའི་ཁྱོ་བསད་དོ། | You killed my husband. | Ты убил моего мужа. |
+| s846 | bialek-05 | བཅོམ་ལྡན་འདས་ཀྱིས་ཆོས་བསྟན་ཏོ། | The Victorious One taught the Dharma. | Победоносный преподал Дхарму. |
+| s847 | bialek-05 | དེའི་ཚེ་ན་ཕྱིན་ཏེ་ལོ་ཤུ་ཤས་འདི་སྙམ་དུ་བསམས་སོ། | At that point Phyinteloshusha thought this in his mind. | Тогда Чинтелошуша подумал про себя так. |
+| s848 | bialek-05 | ཆུང་མས་རྟག་ཏུ་སྤྱོའོ། | The wife is always scolding. | Жена вечно бранится. |
+| s849 | bialek-05 | བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་བསམ་པ་ཐུགས་ཀྱིས་མཁྱེན་ནོ། | The Victorious One discerned his thoughts with his mind. | Победоносный своим умом постиг его мысли. |
+| s850 | bialek-05 | ཁྱོད་ཀྱིས་ངའི་རྟ་བསད་དོ། | You killed my horse. | Ты убил моего коня. |
+| s851 | bialek-05 | ཐ་ག་པའི་ཆུང་མས་དབྱིག་པ་ཅན་དེ་བཟུང་ངོ་། | The weaver's wife seized Yikpachen. | Жена ткача схватила Йикпачена. |
+| s852 | bialek-06 | རྡུལ་དང་དྲི་མ་ཟད་དོ། | Dust and impurities disappeared. | Пыль и грязь исчезли. |
+| s853 | bialek-06 | བདག་ཡུན་རིང་པོ་ནས་འཁོར་བ་ན་འཁོར་རོ། | For a long time I have been roaming in samsara. | Долгое время я блуждаю в сансаре. |
+| s854 | bialek-06 | གླང་སླར་བྱིན་ཅིག་ | Give the ox back! | Верни быка! |
+| s855 | bialek-06 | ད་ཟོ། | Now eat! | Теперь ешь! |
+| s856 | bialek-06 | ཡན་ལག་རྣམས་སེར་གར་སོང་ངོ་། | The limbs became cracked. | Конечности растрескались. |
+| s857 | bialek-06 | ཨ་མས་གྲལ་གྱི་དབུས་སུ་ལངས་སོ། | The mother stood up in the middle of the row. | Мать встала посреди ряда. |
+| s858 | bialek-06 | ཞང་པོས་ཡབ་ཀྱི་ཞལ་ཆེམས་ཀྱི་ཡི་གེ་བཀླགས་སོ། | The maternal uncle read the text of the father's testament. | Дядя по матери прочитал текст отцовского завещания. |
+| s859 | bialek-06 | མཛེས་སེའི་ཕ་མས་མེ་ཤིང་བསྐུར་ཏོ། | Dzese's parents sent firewood. | Родители Дзесе послали дрова. |
+| s860 | bialek-06 | འབྱུང་པོའི་བྱ་རྣམས་ལོང་བར་འགྱུར་རོ། | The birds of demons become blind. | Птицы демонов слепнут. |
+| s861 | bialek-06 | བཅོམ་ལྡན་འདས་བསམ་གྱིས་མི་ཁྱབ་བོ། | The Victorious One cannot be grasped by thought. | Победоносный непостижим мыслью. |
+| s862 | bialek-06 | དེས་ཁྱིམ་བདག་ཅིག་ལས་གླང་ཞིག་བརྙས་སོ། | He borrowed an ox from a householder. | Он занял быка у одного домохозяина. |
+| s863 | bialek-06 | ལམ་གྱི་བར་དེ་ན་ཆུ་བོ་ཞིག་ཡོད། | In the middle of the road there was a river. | Посреди дороги была река. |
+| s864 | bialek-06 | སྟེའུ་ཆུར་ལྷུང་ངོ་། | The axe fell into the river. | Топор упал в реку. |
+| s865 | bialek-06 | དེའི་ཚེ་ཀུན་དགའ་བོས་དེ་ལྟ་བུའི་དངོས་པོ་དག་མཐོང་ངོ་། | Then Ananda saw things of this kind. | Тогда Ананда увидел такие вещи. |
+| s866 | bialek-06 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་མི་སྡུག་གོ། | The wife of that Brahmin was ugly. | Жена того брахмана была некрасива. |
 
-### de: sentences to be checked (768)
+### de: sentences to be checked (866)
 
 | id | set | Tibetan | en | de |
 |---|---|---|---|---|
@@ -1800,8 +1898,106 @@ English comes from the handbook except for exercise sentences (no answer key), w
 | s766 | lesson-07 | སེམས་ཅན་ཐམས་ཅད་ཕ་མར་མ་ཤེས་པར་གཞན་ལ་གནོད། | Without knowing all sentient beings to be one's parents, one harms others. | Ohne alle fühlenden Wesen als seine Eltern zu erkennen, schadet man anderen. |
 | s767 | lesson-07 | སྡིག་པའི་འབྲས་བུ་ལ་མི་བསམ་པར་མི་དགེ་བ་རྒྱུན་དུ་གསོག་ | Without thinking about the results of evil deeds, one continuously accumulates non-virtue. | Ohne über die Früchte übler Taten nachzudenken, häuft man unablässig Untugend an. |
 | s768 | lesson-07 | བདག་ནི་ཁོང་གི་བསླབ་བྱ་ལ་མི་དད་ཀྱི་དགེ་བའི་བཤེས་གཉེན་གྱི་བསྟན་པ་ལ་དད་དོ། | I do not trust his advice, but I have faith in the teachings of the spiritual friend. | Ich vertraue seinem Rat nicht, aber ich vertraue den Lehren des spirituellen Freundes. |
+| s769 | bialek-01 | བྲག་རོག་པོ་ཞིག་ | a black rock | ein schwarzer Fels |
+| s770 | bialek-01 | ཆོས་ཟབ་མོ་ | profound Buddhist teaching | tiefgründige buddhistische Lehre |
+| s771 | bialek-01 | ཚིག་འཇམ་པ་ | mild words | sanfte Worte |
+| s772 | bialek-01 | ལོ་གསུམ་ | three years | drei Jahre |
+| s773 | bialek-01 | རྒྱལ་པོ་དེ་ | that king | jener König |
+| s774 | bialek-01 | སྲས་ཐ་ཆུངས་དེ་ | the youngest son | der jüngste Sohn |
+| s775 | bialek-01 | ཞག་དུ་མ་ | many days | viele Tage |
+| s776 | bialek-01 | ཤ་རློན་པ་ | fresh flesh | frisches Fleisch |
+| s777 | bialek-01 | ཁྲག་དྲོན་མོ་ | warm blood | warmes Blut |
+| s778 | bialek-01 | རྒྱལ་བུ་ཐ་ཆུངས་དེ་ | the youngest prince | der jüngste Prinz |
+| s779 | bialek-01 | ཡུན་རིང་པོ་ | a long time | eine lange Zeit |
+| s780 | bialek-01 | ཚལ་བ་རྣོན་པོ་ | a sharp splinter | ein scharfer Splitter |
+| s781 | bialek-01 | ཚིག་སྙན་པ་ | kind words | freundliche Worte |
+| s782 | bialek-01 | ཉེས་པ་ཆེན་པོ་ | great moral faults | große Vergehen |
+| s783 | bialek-01 | ཕུག་རོན་གསུམ་ཞིག་ | three doves | drei Tauben |
+| s784 | bialek-01 | བུ་མོ་ངན་པ་ | bad daughters | schlechte Töchter |
+| s785 | bialek-02 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་ | the prince Semchen Chenpo | der Prinz Semchen Chenpo |
+| s786 | bialek-02 | སྟག་མོ་ལྟོགས་པ་ | a hungry tigress | eine hungrige Tigerin |
+| s787 | bialek-02 | སེམས་ཅན་ཁྲི་ | ten thousand sentient beings | zehntausend fühlende Wesen |
+| s788 | bialek-02 | སྲོག་ཆགས་སྟོང་ | one thousand living beings | tausend Lebewesen |
+| s789 | bialek-02 | བརྡ་མང་དུ་ | many signs | viele Zeichen |
+| s790 | bialek-02 | མགོན་པོ་ཐུགས་རྗེ་ཅན་ | the compassionate protector | der mitfühlende Beschützer |
+| s791 | bialek-02 | སྤྲེའུ་ཕྲུག་ལྔ་བརྒྱ་ | five hundred monkey-children | fünfhundert Affenkinder |
+| s792 | bialek-02 | ཁྱིམ་མཚེས་དྲག་པ་ཀུན་ | all the noble neighbours | alle edlen Nachbarn |
+| s793 | bialek-02 | ལྟོ་གོས་ངན་པ་ | bad food and clothing | schlechte Nahrung und Kleidung |
+| s794 | bialek-02 | སྟོན་མོ་བཟང་པོ་ | an excellent feast | ein vortreffliches Fest |
+| s795 | bialek-02 | རྒྱལ་པོ་ཆེན་པོ་ | the great king | der große König |
+| s796 | bialek-02 | འཁོར་མང་པོ་རྣམས་ | many attendants | viele Gefolgsleute |
+| s797 | bialek-02 | བུ་མོ་དེ་དག་ | the daughters | die Töchter |
+| s798 | bialek-02 | བདག་རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་ཡིན། | I am the prince Semchen Chenpo. | Ich bin der Prinz Semchen Chenpo. |
+| s799 | bialek-02 | ང་དགེ་བསྙེན་ཡིན། | I am a lay practitioner. | Ich bin ein Laienpraktizierender. |
+| s800 | bialek-03 | སྤྲེའུའི་རྒྱལ་པོ་ཆེན་པོ་ | the great king of monkeys | der große König der Affen |
+| s801 | bialek-03 | ཁ་བ་ཅན་གྱི་རྒྱལ་ཁམས་འདི་ | this realm of the Snowy Land (Tibet) | dieses Reich des Schneelandes (Tibet) |
+| s802 | bialek-03 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་ | innumerable children of the ogre | unzählige Kinder des Menschenfressers |
+| s803 | bialek-03 | སྲིན་པོའི་གྲོང་ཁྱེར་དག་ | towns of ogres | Städte der Menschenfresser |
+| s804 | bialek-03 | འགྲོ་བའི་མགོན་པོ་ | protector of beings | Beschützer der Wesen |
+| s805 | bialek-03 | བུད་མེད་ཀྱི་ཆས་ | a woman's garments | die Gewänder einer Frau |
+| s806 | bialek-03 | ངའི་སྡོམ་པ་ | my vow | mein Gelübde |
+| s807 | bialek-03 | རི་རབ་ཀྱི་ཁོང་སེང་ | the inner caverns of Mount Meru | die inneren Höhlen des Berges Meru |
+| s808 | bialek-03 | བདག་ཅག་གི་ཚེ་སྲོག་ | our lives | unsere Leben |
+| s809 | bialek-03 | འབྱུང་པོའི་བྱ་རྣམས་ | the birds of demons | die Vögel der Dämonen |
+| s810 | bialek-03 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་ | the wife of that Brahmin | die Frau jenes Brahmanen |
+| s811 | bialek-03 | གྲོང་ཁྱེར་དེ་ན་རྒན་མོ་ཞིག་ལ་བུ་གཉིས་ཤིག་ཡོད། | In the town an old woman had two sons. | In der Stadt hatte eine alte Frau zwei Söhne. |
+| s812 | bialek-03 | ང་སྤྱན་རས་གཟིགས་ཀྱི་དགེ་བསྙེན་ཡིན། | I am a lay practitioner of Chenrezig. | Ich bin ein Laienpraktizierender des Chenrezig. |
+| s813 | bialek-03 | ཨ་ཁུ་ལ་བུ་མང་པོ་ཡོད། | The paternal uncle had many sons. | Der Onkel väterlicherseits hatte viele Söhne. |
+| s814 | bialek-03 | རྒྱ་མཚོ་ཆེན་པོ་ཆུ་ཡི་གཏེར་ཡིན། | A vast ocean is a treasury of water. | Ein weiter Ozean ist eine Schatzkammer des Wassers. |
+| s815 | bialek-03 | དེའི་ཚེ་ཡུལ་དེ་ན་བྲམ་ཟེ་ཕྱིན་ཏེ་ལོ་ཤུ་ཤ་ཡོད་དོ། | At that time in that country there was a Brahmin called Phyinteloshusha. | Zu jener Zeit lebte in jenem Land ein Brahmane namens Phyinteloshusha. |
+| s816 | bialek-03 | ཁྱོད་ཀྱི་སྐད་སྙན་པ་ཡིན་ནོ། | Your voice is pleasant. | Deine Stimme ist angenehm. |
+| s817 | bialek-04 | རུས་བུ་ཚལ་ན་འདུག་གོ། | Bones lie in the wood. | Knochen liegen im Wald. |
+| s818 | bialek-04 | དེ་ནས་བྲག་སྲིན་མོ་ལངས་སོ། | Thereafter the rock-ogress rose. | Danach erhob sich die Felsendämonin. |
+| s819 | bialek-04 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་སྐྱེས་སོ། | Innumerable children of the ogre were born. | Unzählige Kinder des Menschenfressers wurden geboren. |
+| s820 | bialek-04 | སྤྲེའུ་ཕྲུག་རྣམས་སྐྱེས་སོ། | Monkey-children were born. | Affenkinder wurden geboren. |
+| s821 | bialek-04 | དེ་ནས་ཤིང་ཐོག་རྣམས་ཟད་དོ། | Then the fruits were consumed. | Dann waren die Früchte aufgebraucht. |
+| s822 | bialek-04 | འཕགས་པ་ཡར་བཞེངས་སོ། | The Noble One rose. | Der Edle erhob sich. |
+| s823 | bialek-04 | བདག་སྲིན་མོའི་རིགས་སུ་སྐྱེས་སོ། | I was born into the race of ogresses. | Ich wurde in das Geschlecht der Dämoninnen geboren. |
+| s824 | bialek-04 | ཡབ་མེས་རྣམས་ལ་ནོར་བྱུང་ངོ་། | Wealth came to the ancestors. | Den Vorfahren fiel Reichtum zu. |
+| s825 | bialek-04 | མི་དེ་ལ་བུ་ཕོ་མེད། | This man has no sons. | Dieser Mann hat keine Söhne. |
+| s826 | bialek-04 | ཕྱིས་དམག་པ་དག་འདུས་སོ། | Later the sons-in-law gathered. | Später versammelten sich die Schwiegersöhne. |
+| s827 | bialek-04 | གོས་ངུར་སྨྲིག་ཏུ་གྱུར་ཏོ། | The clothes turned saffron. | Die Kleider wurden safranfarben. |
+| s828 | bialek-04 | རྒྱལ་བུ་གཉིས་འོངས་སོ། | Two princes came. | Zwei Prinzen kamen. |
+| s829 | bialek-04 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་དེར་ཚེ་འཕོས་སོ། | The prince Semchen Chenpo passed away there. | Der Prinz Semchen Chenpo verschied dort. |
+| s830 | bialek-04 | ལྷ་ཕྱིར་གནས་སུ་སོང་ངོ་། | The deity went back to its place. | Die Gottheit kehrte an ihren Ort zurück. |
+| s831 | bialek-04 | དེ་གཉིས་དོང་ངོ་། | The two went. | Die beiden gingen. |
+| s832 | bialek-04 | དེ་དག་དེར་སོང་ངོ་། | They went there. | Sie gingen dorthin. |
+| s833 | bialek-05 | སྐྲ་དང་ཁ་སྤུ་རང་བྱིའོ། | The hair and beard fell off by themselves. | Haar und Bart fielen von selbst aus. |
+| s834 | bialek-05 | དེ་ནས་རྒྱལ་བུ་ཐ་ཆུངས་དེས་ཡིད་ལ་འདི་སྙམ་དུ་བསམས་སོ། | Then the youngest prince thought this in his mind. | Da dachte der jüngste Prinz dies in seinem Sinn. |
+| s835 | bialek-05 | དེའི་ཚེ་རྒྱལ་བུས་ཤིང་གི་ཚལ་བ་རྣོན་པོས་ལུས་ལ་ཁྲག་ཕྱུང་ངོ་། | Then, with a sharp wooden splinter, the prince let blood out of his body. | Da ließ der Prinz mit einem scharfen Holzsplitter Blut aus seinem Körper. |
+| s836 | bialek-05 | ཕ་མ་གཉིས་ཀྱིས་ནམ་མཁའ་ལ་བལྟས་སོ། | The parents looked at the sky. | Die Eltern blickten zum Himmel. |
+| s837 | bialek-05 | སྐྱེ་བ་དང་འཇིག་པ་ཀུན་ལ་སྲིད་དོ། | Birth and decay exist in everything. | Geburt und Verfall sind in allem. |
+| s838 | bialek-05 | བུ་ཚས་འཁོར་བའི་འདམ་དུ་བདག་ཚུད་དོ། | Because of my offspring I got into the swamp of samsara. | Wegen meiner Nachkommenschaft geriet ich in den Sumpf des Saṃsāra. |
+| s839 | bialek-05 | ང་བུ་གཅིག་པོར་སོང་ངོ་། | I went as the only son. | Ich ging als einziger Sohn. |
+| s840 | bialek-05 | ཨ་ནེ་དང་ཨ་ཁུ་གཉིས་གཅིག་ཏུ་དྲིལ་ལོ། | The aunt and the uncle united. | Die Tante und der Onkel vereinigten sich. |
+| s841 | bialek-05 | དོ་སྨད་ཚོ་ཕྱིར་སོང་ངོ་། | The consort and her children went out. | Die Gattin und ihre Kinder gingen hinaus. |
+| s842 | bialek-05 | ཞང་པོ་དང་མཛེས་སེའི་ཕ་མིང་བསྡད་དོ། | The maternal uncle and Dzese's father and brothers stayed. | Der Onkel mütterlicherseits sowie Dzeses Vater und Brüder blieben. |
+| s843 | bialek-05 | གླང་སྒོ་གཞན་དུ་སོང་ངོ་། | The ox went out through another door. | Der Ochse ging durch eine andere Tür hinaus. |
+| s844 | bialek-05 | རྐང་པ་ཆག་གོ། | The leg broke. | Das Bein brach. |
+| s845 | bialek-05 | ཁྱོད་ཀྱིས་ངའི་ཁྱོ་བསད་དོ། | You killed my husband. | Du hast meinen Mann getötet. |
+| s846 | bialek-05 | བཅོམ་ལྡན་འདས་ཀྱིས་ཆོས་བསྟན་ཏོ། | The Victorious One taught the Dharma. | Der Siegreiche lehrte den Dharma. |
+| s847 | bialek-05 | དེའི་ཚེ་ན་ཕྱིན་ཏེ་ལོ་ཤུ་ཤས་འདི་སྙམ་དུ་བསམས་སོ། | At that point Phyinteloshusha thought this in his mind. | Da dachte Phyinteloshusha dies in seinem Sinn. |
+| s848 | bialek-05 | ཆུང་མས་རྟག་ཏུ་སྤྱོའོ། | The wife is always scolding. | Die Frau schilt immerzu. |
+| s849 | bialek-05 | བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་བསམ་པ་ཐུགས་ཀྱིས་མཁྱེན་ནོ། | The Victorious One discerned his thoughts with his mind. | Der Siegreiche erkannte seine Gedanken mit seinem Geist. |
+| s850 | bialek-05 | ཁྱོད་ཀྱིས་ངའི་རྟ་བསད་དོ། | You killed my horse. | Du hast mein Pferd getötet. |
+| s851 | bialek-05 | ཐ་ག་པའི་ཆུང་མས་དབྱིག་པ་ཅན་དེ་བཟུང་ངོ་། | The weaver's wife seized Yikpachen. | Die Frau des Webers ergriff Yikpachen. |
+| s852 | bialek-06 | རྡུལ་དང་དྲི་མ་ཟད་དོ། | Dust and impurities disappeared. | Staub und Unreinheiten verschwanden. |
+| s853 | bialek-06 | བདག་ཡུན་རིང་པོ་ནས་འཁོར་བ་ན་འཁོར་རོ། | For a long time I have been roaming in samsara. | Seit langer Zeit irre ich im Saṃsāra umher. |
+| s854 | bialek-06 | གླང་སླར་བྱིན་ཅིག་ | Give the ox back! | Gib den Ochsen zurück! |
+| s855 | bialek-06 | ད་ཟོ། | Now eat! | Nun iss! |
+| s856 | bialek-06 | ཡན་ལག་རྣམས་སེར་གར་སོང་ངོ་། | The limbs became cracked. | Die Glieder bekamen Risse. |
+| s857 | bialek-06 | ཨ་མས་གྲལ་གྱི་དབུས་སུ་ལངས་སོ། | The mother stood up in the middle of the row. | Die Mutter stand mitten in der Reihe auf. |
+| s858 | bialek-06 | ཞང་པོས་ཡབ་ཀྱི་ཞལ་ཆེམས་ཀྱི་ཡི་གེ་བཀླགས་སོ། | The maternal uncle read the text of the father's testament. | Der Onkel mütterlicherseits las den Text des väterlichen Testaments. |
+| s859 | bialek-06 | མཛེས་སེའི་ཕ་མས་མེ་ཤིང་བསྐུར་ཏོ། | Dzese's parents sent firewood. | Dzeses Eltern schickten Brennholz. |
+| s860 | bialek-06 | འབྱུང་པོའི་བྱ་རྣམས་ལོང་བར་འགྱུར་རོ། | The birds of demons become blind. | Die Vögel der Dämonen werden blind. |
+| s861 | bialek-06 | བཅོམ་ལྡན་འདས་བསམ་གྱིས་མི་ཁྱབ་བོ། | The Victorious One cannot be grasped by thought. | Der Siegreiche ist mit Gedanken nicht zu fassen. |
+| s862 | bialek-06 | དེས་ཁྱིམ་བདག་ཅིག་ལས་གླང་ཞིག་བརྙས་སོ། | He borrowed an ox from a householder. | Er lieh sich von einem Hausherrn einen Ochsen. |
+| s863 | bialek-06 | ལམ་གྱི་བར་དེ་ན་ཆུ་བོ་ཞིག་ཡོད། | In the middle of the road there was a river. | Mitten auf dem Weg war ein Fluss. |
+| s864 | bialek-06 | སྟེའུ་ཆུར་ལྷུང་ངོ་། | The axe fell into the river. | Die Axt fiel in den Fluss. |
+| s865 | bialek-06 | དེའི་ཚེ་ཀུན་དགའ་བོས་དེ་ལྟ་བུའི་དངོས་པོ་དག་མཐོང་ངོ་། | Then Ananda saw things of this kind. | Da sah Ānanda Dinge dieser Art. |
+| s866 | bialek-06 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་མི་སྡུག་གོ། | The wife of that Brahmin was ugly. | Die Frau jenes Brahmanen war hässlich. |
 
-### fr: sentences to be checked (768)
+### fr: sentences to be checked (866)
 
 | id | set | Tibetan | en | fr |
 |---|---|---|---|---|
@@ -2573,8 +2769,106 @@ English comes from the handbook except for exercise sentences (no answer key), w
 | s766 | lesson-07 | སེམས་ཅན་ཐམས་ཅད་ཕ་མར་མ་ཤེས་པར་གཞན་ལ་གནོད། | Without knowing all sentient beings to be one's parents, one harms others. | Sans reconnaître tous les êtres sensibles comme ses parents, on nuit aux autres. |
 | s767 | lesson-07 | སྡིག་པའི་འབྲས་བུ་ལ་མི་བསམ་པར་མི་དགེ་བ་རྒྱུན་དུ་གསོག་ | Without thinking about the results of evil deeds, one continuously accumulates non-virtue. | Sans penser aux fruits des méfaits, on accumule continuellement la non-vertu. |
 | s768 | lesson-07 | བདག་ནི་ཁོང་གི་བསླབ་བྱ་ལ་མི་དད་ཀྱི་དགེ་བའི་བཤེས་གཉེན་གྱི་བསྟན་པ་ལ་དད་དོ། | I do not trust his advice, but I have faith in the teachings of the spiritual friend. | Je ne fais pas confiance à ses conseils, mais j'ai foi dans les enseignements de l'ami spirituel. |
+| s769 | bialek-01 | བྲག་རོག་པོ་ཞིག་ | a black rock | un rocher noir |
+| s770 | bialek-01 | ཆོས་ཟབ་མོ་ | profound Buddhist teaching | un enseignement bouddhique profond |
+| s771 | bialek-01 | ཚིག་འཇམ་པ་ | mild words | des paroles douces |
+| s772 | bialek-01 | ལོ་གསུམ་ | three years | trois ans |
+| s773 | bialek-01 | རྒྱལ་པོ་དེ་ | that king | ce roi |
+| s774 | bialek-01 | སྲས་ཐ་ཆུངས་དེ་ | the youngest son | le plus jeune fils |
+| s775 | bialek-01 | ཞག་དུ་མ་ | many days | de nombreux jours |
+| s776 | bialek-01 | ཤ་རློན་པ་ | fresh flesh | de la chair fraîche |
+| s777 | bialek-01 | ཁྲག་དྲོན་མོ་ | warm blood | du sang chaud |
+| s778 | bialek-01 | རྒྱལ་བུ་ཐ་ཆུངས་དེ་ | the youngest prince | le plus jeune prince |
+| s779 | bialek-01 | ཡུན་རིང་པོ་ | a long time | un long moment |
+| s780 | bialek-01 | ཚལ་བ་རྣོན་པོ་ | a sharp splinter | une écharde aiguisée |
+| s781 | bialek-01 | ཚིག་སྙན་པ་ | kind words | des paroles aimables |
+| s782 | bialek-01 | ཉེས་པ་ཆེན་པོ་ | great moral faults | de grandes fautes |
+| s783 | bialek-01 | ཕུག་རོན་གསུམ་ཞིག་ | three doves | trois colombes |
+| s784 | bialek-01 | བུ་མོ་ངན་པ་ | bad daughters | de mauvaises filles |
+| s785 | bialek-02 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་ | the prince Semchen Chenpo | le prince Semchen Chenpo |
+| s786 | bialek-02 | སྟག་མོ་ལྟོགས་པ་ | a hungry tigress | une tigresse affamée |
+| s787 | bialek-02 | སེམས་ཅན་ཁྲི་ | ten thousand sentient beings | dix mille êtres sensibles |
+| s788 | bialek-02 | སྲོག་ཆགས་སྟོང་ | one thousand living beings | mille êtres vivants |
+| s789 | bialek-02 | བརྡ་མང་དུ་ | many signs | de nombreux signes |
+| s790 | bialek-02 | མགོན་པོ་ཐུགས་རྗེ་ཅན་ | the compassionate protector | le protecteur compatissant |
+| s791 | bialek-02 | སྤྲེའུ་ཕྲུག་ལྔ་བརྒྱ་ | five hundred monkey-children | cinq cents petits singes |
+| s792 | bialek-02 | ཁྱིམ་མཚེས་དྲག་པ་ཀུན་ | all the noble neighbours | tous les nobles voisins |
+| s793 | bialek-02 | ལྟོ་གོས་ངན་པ་ | bad food and clothing | de mauvais vêtements et de mauvaise nourriture |
+| s794 | bialek-02 | སྟོན་མོ་བཟང་པོ་ | an excellent feast | un excellent festin |
+| s795 | bialek-02 | རྒྱལ་པོ་ཆེན་པོ་ | the great king | le grand roi |
+| s796 | bialek-02 | འཁོར་མང་པོ་རྣམས་ | many attendants | de nombreux serviteurs |
+| s797 | bialek-02 | བུ་མོ་དེ་དག་ | the daughters | les filles |
+| s798 | bialek-02 | བདག་རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་ཡིན། | I am the prince Semchen Chenpo. | Je suis le prince Semchen Chenpo. |
+| s799 | bialek-02 | ང་དགེ་བསྙེན་ཡིན། | I am a lay practitioner. | Je suis un pratiquant laïc. |
+| s800 | bialek-03 | སྤྲེའུའི་རྒྱལ་པོ་ཆེན་པོ་ | the great king of monkeys | le grand roi des singes |
+| s801 | bialek-03 | ཁ་བ་ཅན་གྱི་རྒྱལ་ཁམས་འདི་ | this realm of the Snowy Land (Tibet) | ce royaume du Pays des neiges (le Tibet) |
+| s802 | bialek-03 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་ | innumerable children of the ogre | d’innombrables enfants de l’ogre |
+| s803 | bialek-03 | སྲིན་པོའི་གྲོང་ཁྱེར་དག་ | towns of ogres | des villes d’ogres |
+| s804 | bialek-03 | འགྲོ་བའི་མགོན་པོ་ | protector of beings | le protecteur des êtres |
+| s805 | bialek-03 | བུད་མེད་ཀྱི་ཆས་ | a woman's garments | les vêtements d’une femme |
+| s806 | bialek-03 | ངའི་སྡོམ་པ་ | my vow | mon vœu |
+| s807 | bialek-03 | རི་རབ་ཀྱི་ཁོང་སེང་ | the inner caverns of Mount Meru | les cavernes intérieures du mont Meru |
+| s808 | bialek-03 | བདག་ཅག་གི་ཚེ་སྲོག་ | our lives | nos vies |
+| s809 | bialek-03 | འབྱུང་པོའི་བྱ་རྣམས་ | the birds of demons | les oiseaux des démons |
+| s810 | bialek-03 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་ | the wife of that Brahmin | l’épouse de ce brahmane |
+| s811 | bialek-03 | གྲོང་ཁྱེར་དེ་ན་རྒན་མོ་ཞིག་ལ་བུ་གཉིས་ཤིག་ཡོད། | In the town an old woman had two sons. | Dans la ville, une vieille femme avait deux fils. |
+| s812 | bialek-03 | ང་སྤྱན་རས་གཟིགས་ཀྱི་དགེ་བསྙེན་ཡིན། | I am a lay practitioner of Chenrezig. | Je suis un pratiquant laïc de Chenrezig. |
+| s813 | bialek-03 | ཨ་ཁུ་ལ་བུ་མང་པོ་ཡོད། | The paternal uncle had many sons. | L’oncle paternel avait de nombreux fils. |
+| s814 | bialek-03 | རྒྱ་མཚོ་ཆེན་པོ་ཆུ་ཡི་གཏེར་ཡིན། | A vast ocean is a treasury of water. | Un vaste océan est un trésor d’eau. |
+| s815 | bialek-03 | དེའི་ཚེ་ཡུལ་དེ་ན་བྲམ་ཟེ་ཕྱིན་ཏེ་ལོ་ཤུ་ཤ་ཡོད་དོ། | At that time in that country there was a Brahmin called Phyinteloshusha. | À cette époque, dans ce pays, vivait un brahmane nommé Phyinteloshusha. |
+| s816 | bialek-03 | ཁྱོད་ཀྱི་སྐད་སྙན་པ་ཡིན་ནོ། | Your voice is pleasant. | Ta voix est agréable. |
+| s817 | bialek-04 | རུས་བུ་ཚལ་ན་འདུག་གོ། | Bones lie in the wood. | Des os gisent dans le bois. |
+| s818 | bialek-04 | དེ་ནས་བྲག་སྲིན་མོ་ལངས་སོ། | Thereafter the rock-ogress rose. | Ensuite l’ogresse des rochers se leva. |
+| s819 | bialek-04 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་སྐྱེས་སོ། | Innumerable children of the ogre were born. | D’innombrables enfants de l’ogre naquirent. |
+| s820 | bialek-04 | སྤྲེའུ་ཕྲུག་རྣམས་སྐྱེས་སོ། | Monkey-children were born. | Des petits singes naquirent. |
+| s821 | bialek-04 | དེ་ནས་ཤིང་ཐོག་རྣམས་ཟད་དོ། | Then the fruits were consumed. | Puis les fruits s’épuisèrent. |
+| s822 | bialek-04 | འཕགས་པ་ཡར་བཞེངས་སོ། | The Noble One rose. | Le Noble se leva. |
+| s823 | bialek-04 | བདག་སྲིན་མོའི་རིགས་སུ་སྐྱེས་སོ། | I was born into the race of ogresses. | Je suis né dans la race des ogresses. |
+| s824 | bialek-04 | ཡབ་མེས་རྣམས་ལ་ནོར་བྱུང་ངོ་། | Wealth came to the ancestors. | La richesse échut aux ancêtres. |
+| s825 | bialek-04 | མི་དེ་ལ་བུ་ཕོ་མེད། | This man has no sons. | Cet homme n’a pas de fils. |
+| s826 | bialek-04 | ཕྱིས་དམག་པ་དག་འདུས་སོ། | Later the sons-in-law gathered. | Plus tard, les gendres se rassemblèrent. |
+| s827 | bialek-04 | གོས་ངུར་སྨྲིག་ཏུ་གྱུར་ཏོ། | The clothes turned saffron. | Les vêtements devinrent safran. |
+| s828 | bialek-04 | རྒྱལ་བུ་གཉིས་འོངས་སོ། | Two princes came. | Deux princes vinrent. |
+| s829 | bialek-04 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་དེར་ཚེ་འཕོས་སོ། | The prince Semchen Chenpo passed away there. | Le prince Semchen Chenpo y trépassa. |
+| s830 | bialek-04 | ལྷ་ཕྱིར་གནས་སུ་སོང་ངོ་། | The deity went back to its place. | La divinité retourna à sa place. |
+| s831 | bialek-04 | དེ་གཉིས་དོང་ངོ་། | The two went. | Les deux s’en allèrent. |
+| s832 | bialek-04 | དེ་དག་དེར་སོང་ངོ་། | They went there. | Ils y allèrent. |
+| s833 | bialek-05 | སྐྲ་དང་ཁ་སྤུ་རང་བྱིའོ། | The hair and beard fell off by themselves. | Les cheveux et la barbe tombèrent d’eux-mêmes. |
+| s834 | bialek-05 | དེ་ནས་རྒྱལ་བུ་ཐ་ཆུངས་དེས་ཡིད་ལ་འདི་སྙམ་དུ་བསམས་སོ། | Then the youngest prince thought this in his mind. | Alors le plus jeune prince pensa ceci en son esprit. |
+| s835 | bialek-05 | དེའི་ཚེ་རྒྱལ་བུས་ཤིང་གི་ཚལ་བ་རྣོན་པོས་ལུས་ལ་ཁྲག་ཕྱུང་ངོ་། | Then, with a sharp wooden splinter, the prince let blood out of his body. | Alors, avec une écharde de bois aiguisée, le prince fit couler le sang de son corps. |
+| s836 | bialek-05 | ཕ་མ་གཉིས་ཀྱིས་ནམ་མཁའ་ལ་བལྟས་སོ། | The parents looked at the sky. | Les parents regardèrent le ciel. |
+| s837 | bialek-05 | སྐྱེ་བ་དང་འཇིག་པ་ཀུན་ལ་སྲིད་དོ། | Birth and decay exist in everything. | La naissance et la décrépitude existent en toute chose. |
+| s838 | bialek-05 | བུ་ཚས་འཁོར་བའི་འདམ་དུ་བདག་ཚུད་དོ། | Because of my offspring I got into the swamp of samsara. | À cause de ma descendance, je suis tombé dans le marais du saṃsāra. |
+| s839 | bialek-05 | ང་བུ་གཅིག་པོར་སོང་ངོ་། | I went as the only son. | Je suis parti en fils unique. |
+| s840 | bialek-05 | ཨ་ནེ་དང་ཨ་ཁུ་གཉིས་གཅིག་ཏུ་དྲིལ་ལོ། | The aunt and the uncle united. | La tante et l’oncle s’unirent. |
+| s841 | bialek-05 | དོ་སྨད་ཚོ་ཕྱིར་སོང་ངོ་། | The consort and her children went out. | L’épouse et ses enfants sortirent. |
+| s842 | bialek-05 | ཞང་པོ་དང་མཛེས་སེའི་ཕ་མིང་བསྡད་དོ། | The maternal uncle and Dzese's father and brothers stayed. | L’oncle maternel ainsi que le père et les frères de Dzese restèrent. |
+| s843 | bialek-05 | གླང་སྒོ་གཞན་དུ་སོང་ངོ་། | The ox went out through another door. | Le bœuf sortit par une autre porte. |
+| s844 | bialek-05 | རྐང་པ་ཆག་གོ། | The leg broke. | La jambe se cassa. |
+| s845 | bialek-05 | ཁྱོད་ཀྱིས་ངའི་ཁྱོ་བསད་དོ། | You killed my husband. | Tu as tué mon mari. |
+| s846 | bialek-05 | བཅོམ་ལྡན་འདས་ཀྱིས་ཆོས་བསྟན་ཏོ། | The Victorious One taught the Dharma. | Le Victorieux enseigna le Dharma. |
+| s847 | bialek-05 | དེའི་ཚེ་ན་ཕྱིན་ཏེ་ལོ་ཤུ་ཤས་འདི་སྙམ་དུ་བསམས་སོ། | At that point Phyinteloshusha thought this in his mind. | À ce moment, Phyinteloshusha pensa ceci en son esprit. |
+| s848 | bialek-05 | ཆུང་མས་རྟག་ཏུ་སྤྱོའོ། | The wife is always scolding. | L’épouse gronde sans cesse. |
+| s849 | bialek-05 | བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་བསམ་པ་ཐུགས་ཀྱིས་མཁྱེན་ནོ། | The Victorious One discerned his thoughts with his mind. | Le Victorieux discerna ses pensées par son esprit. |
+| s850 | bialek-05 | ཁྱོད་ཀྱིས་ངའི་རྟ་བསད་དོ། | You killed my horse. | Tu as tué mon cheval. |
+| s851 | bialek-05 | ཐ་ག་པའི་ཆུང་མས་དབྱིག་པ་ཅན་དེ་བཟུང་ངོ་། | The weaver's wife seized Yikpachen. | L’épouse du tisserand saisit Yikpachen. |
+| s852 | bialek-06 | རྡུལ་དང་དྲི་མ་ཟད་དོ། | Dust and impurities disappeared. | La poussière et les impuretés disparurent. |
+| s853 | bialek-06 | བདག་ཡུན་རིང་པོ་ནས་འཁོར་བ་ན་འཁོར་རོ། | For a long time I have been roaming in samsara. | Depuis longtemps j’erre dans le saṃsāra. |
+| s854 | bialek-06 | གླང་སླར་བྱིན་ཅིག་ | Give the ox back! | Rends le bœuf ! |
+| s855 | bialek-06 | ད་ཟོ། | Now eat! | Maintenant, mange ! |
+| s856 | bialek-06 | ཡན་ལག་རྣམས་སེར་གར་སོང་ངོ་། | The limbs became cracked. | Les membres se fissurèrent. |
+| s857 | bialek-06 | ཨ་མས་གྲལ་གྱི་དབུས་སུ་ལངས་སོ། | The mother stood up in the middle of the row. | La mère se leva au milieu de la rangée. |
+| s858 | bialek-06 | ཞང་པོས་ཡབ་ཀྱི་ཞལ་ཆེམས་ཀྱི་ཡི་གེ་བཀླགས་སོ། | The maternal uncle read the text of the father's testament. | L’oncle maternel lut le texte du testament du père. |
+| s859 | bialek-06 | མཛེས་སེའི་ཕ་མས་མེ་ཤིང་བསྐུར་ཏོ། | Dzese's parents sent firewood. | Les parents de Dzese envoyèrent du bois de chauffage. |
+| s860 | bialek-06 | འབྱུང་པོའི་བྱ་རྣམས་ལོང་བར་འགྱུར་རོ། | The birds of demons become blind. | Les oiseaux des démons deviennent aveugles. |
+| s861 | bialek-06 | བཅོམ་ལྡན་འདས་བསམ་གྱིས་མི་ཁྱབ་བོ། | The Victorious One cannot be grasped by thought. | Le Victorieux ne peut être saisi par la pensée. |
+| s862 | bialek-06 | དེས་ཁྱིམ་བདག་ཅིག་ལས་གླང་ཞིག་བརྙས་སོ། | He borrowed an ox from a householder. | Il emprunta un bœuf à un maître de maison. |
+| s863 | bialek-06 | ལམ་གྱི་བར་དེ་ན་ཆུ་བོ་ཞིག་ཡོད། | In the middle of the road there was a river. | Au milieu de la route, il y avait une rivière. |
+| s864 | bialek-06 | སྟེའུ་ཆུར་ལྷུང་ངོ་། | The axe fell into the river. | La hache tomba dans la rivière. |
+| s865 | bialek-06 | དེའི་ཚེ་ཀུན་དགའ་བོས་དེ་ལྟ་བུའི་དངོས་པོ་དག་མཐོང་ངོ་། | Then Ananda saw things of this kind. | Alors Ānanda vit des choses de ce genre. |
+| s866 | bialek-06 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་མི་སྡུག་གོ། | The wife of that Brahmin was ugly. | L’épouse de ce brahmane était laide. |
 
-### pl: sentences to be checked (768)
+### pl: sentences to be checked (866)
 
 | id | set | Tibetan | en | pl |
 |---|---|---|---|---|
@@ -3346,3 +3640,101 @@ English comes from the handbook except for exercise sentences (no answer key), w
 | s766 | lesson-07 | སེམས་ཅན་ཐམས་ཅད་ཕ་མར་མ་ཤེས་པར་གཞན་ལ་གནོད། | Without knowing all sentient beings to be one's parents, one harms others. | Nie rozpoznając wszystkich czujących istot jako swoich rodziców, szkodzi się innym. |
 | s767 | lesson-07 | སྡིག་པའི་འབྲས་བུ་ལ་མི་བསམ་པར་མི་དགེ་བ་རྒྱུན་དུ་གསོག་ | Without thinking about the results of evil deeds, one continuously accumulates non-virtue. | Nie myśląc o owocach złych uczynków, nieustannie gromadzi się niecnotę. |
 | s768 | lesson-07 | བདག་ནི་ཁོང་གི་བསླབ་བྱ་ལ་མི་དད་ཀྱི་དགེ་བའི་བཤེས་གཉེན་གྱི་བསྟན་པ་ལ་དད་དོ། | I do not trust his advice, but I have faith in the teachings of the spiritual friend. | Nie ufam jego radom, ale mam wiarę w nauki duchowego przyjaciela. |
+| s769 | bialek-01 | བྲག་རོག་པོ་ཞིག་ | a black rock | czarna skała |
+| s770 | bialek-01 | ཆོས་ཟབ་མོ་ | profound Buddhist teaching | głęboka nauka buddyjska |
+| s771 | bialek-01 | ཚིག་འཇམ་པ་ | mild words | łagodne słowa |
+| s772 | bialek-01 | ལོ་གསུམ་ | three years | trzy lata |
+| s773 | bialek-01 | རྒྱལ་པོ་དེ་ | that king | ten król |
+| s774 | bialek-01 | སྲས་ཐ་ཆུངས་དེ་ | the youngest son | najmłodszy syn |
+| s775 | bialek-01 | ཞག་དུ་མ་ | many days | wiele dni |
+| s776 | bialek-01 | ཤ་རློན་པ་ | fresh flesh | świeże mięso |
+| s777 | bialek-01 | ཁྲག་དྲོན་མོ་ | warm blood | ciepła krew |
+| s778 | bialek-01 | རྒྱལ་བུ་ཐ་ཆུངས་དེ་ | the youngest prince | najmłodszy książę |
+| s779 | bialek-01 | ཡུན་རིང་པོ་ | a long time | długi czas |
+| s780 | bialek-01 | ཚལ་བ་རྣོན་པོ་ | a sharp splinter | ostra drzazga |
+| s781 | bialek-01 | ཚིག་སྙན་པ་ | kind words | życzliwe słowa |
+| s782 | bialek-01 | ཉེས་པ་ཆེན་པོ་ | great moral faults | wielkie przewinienia |
+| s783 | bialek-01 | ཕུག་རོན་གསུམ་ཞིག་ | three doves | trzy gołębie |
+| s784 | bialek-01 | བུ་མོ་ངན་པ་ | bad daughters | złe córki |
+| s785 | bialek-02 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་ | the prince Semchen Chenpo | książę Semczen Czenpo |
+| s786 | bialek-02 | སྟག་མོ་ལྟོགས་པ་ | a hungry tigress | głodna tygrysica |
+| s787 | bialek-02 | སེམས་ཅན་ཁྲི་ | ten thousand sentient beings | dziesięć tysięcy czujących istot |
+| s788 | bialek-02 | སྲོག་ཆགས་སྟོང་ | one thousand living beings | tysiąc żywych istot |
+| s789 | bialek-02 | བརྡ་མང་དུ་ | many signs | wiele znaków |
+| s790 | bialek-02 | མགོན་པོ་ཐུགས་རྗེ་ཅན་ | the compassionate protector | współczujący opiekun |
+| s791 | bialek-02 | སྤྲེའུ་ཕྲུག་ལྔ་བརྒྱ་ | five hundred monkey-children | pięćset małpich dzieci |
+| s792 | bialek-02 | ཁྱིམ་མཚེས་དྲག་པ་ཀུན་ | all the noble neighbours | wszyscy szlachetni sąsiedzi |
+| s793 | bialek-02 | ལྟོ་གོས་ངན་པ་ | bad food and clothing | złe jedzenie i odzież |
+| s794 | bialek-02 | སྟོན་མོ་བཟང་པོ་ | an excellent feast | wyborna uczta |
+| s795 | bialek-02 | རྒྱལ་པོ་ཆེན་པོ་ | the great king | wielki król |
+| s796 | bialek-02 | འཁོར་མང་པོ་རྣམས་ | many attendants | liczni dworzanie |
+| s797 | bialek-02 | བུ་མོ་དེ་དག་ | the daughters | te córki |
+| s798 | bialek-02 | བདག་རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་ཡིན། | I am the prince Semchen Chenpo. | Jestem księciem Semczen Czenpo. |
+| s799 | bialek-02 | ང་དགེ་བསྙེན་ཡིན། | I am a lay practitioner. | Jestem świeckim praktykującym. |
+| s800 | bialek-03 | སྤྲེའུའི་རྒྱལ་པོ་ཆེན་པོ་ | the great king of monkeys | wielki król małp |
+| s801 | bialek-03 | ཁ་བ་ཅན་གྱི་རྒྱལ་ཁམས་འདི་ | this realm of the Snowy Land (Tibet) | to królestwo Krainy Śniegu (Tybetu) |
+| s802 | bialek-03 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་ | innumerable children of the ogre | niezliczone dzieci ludożercy |
+| s803 | bialek-03 | སྲིན་པོའི་གྲོང་ཁྱེར་དག་ | towns of ogres | miasta ludożerców |
+| s804 | bialek-03 | འགྲོ་བའི་མགོན་པོ་ | protector of beings | opiekun istot |
+| s805 | bialek-03 | བུད་མེད་ཀྱི་ཆས་ | a woman's garments | szaty kobiety |
+| s806 | bialek-03 | ངའི་སྡོམ་པ་ | my vow | moje ślubowanie |
+| s807 | bialek-03 | རི་རབ་ཀྱི་ཁོང་སེང་ | the inner caverns of Mount Meru | wewnętrzne jaskinie góry Meru |
+| s808 | bialek-03 | བདག་ཅག་གི་ཚེ་སྲོག་ | our lives | nasze życie |
+| s809 | bialek-03 | འབྱུང་པོའི་བྱ་རྣམས་ | the birds of demons | ptaki demonów |
+| s810 | bialek-03 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་ | the wife of that Brahmin | żona tego bramina |
+| s811 | bialek-03 | གྲོང་ཁྱེར་དེ་ན་རྒན་མོ་ཞིག་ལ་བུ་གཉིས་ཤིག་ཡོད། | In the town an old woman had two sons. | W mieście pewna staruszka miała dwóch synów. |
+| s812 | bialek-03 | ང་སྤྱན་རས་གཟིགས་ཀྱི་དགེ་བསྙེན་ཡིན། | I am a lay practitioner of Chenrezig. | Jestem świeckim praktykującym Czenreziga. |
+| s813 | bialek-03 | ཨ་ཁུ་ལ་བུ་མང་པོ་ཡོད། | The paternal uncle had many sons. | Stryj miał wielu synów. |
+| s814 | bialek-03 | རྒྱ་མཚོ་ཆེན་པོ་ཆུ་ཡི་གཏེར་ཡིན། | A vast ocean is a treasury of water. | Rozległy ocean jest skarbcem wody. |
+| s815 | bialek-03 | དེའི་ཚེ་ཡུལ་དེ་ན་བྲམ་ཟེ་ཕྱིན་ཏེ་ལོ་ཤུ་ཤ་ཡོད་དོ། | At that time in that country there was a Brahmin called Phyinteloshusha. | W tamtym czasie w tamtym kraju żył bramin imieniem Phyinteloshusha. |
+| s816 | bialek-03 | ཁྱོད་ཀྱི་སྐད་སྙན་པ་ཡིན་ནོ། | Your voice is pleasant. | Twój głos jest przyjemny. |
+| s817 | bialek-04 | རུས་བུ་ཚལ་ན་འདུག་གོ། | Bones lie in the wood. | W lesie leżą kości. |
+| s818 | bialek-04 | དེ་ནས་བྲག་སྲིན་མོ་ལངས་སོ། | Thereafter the rock-ogress rose. | Potem skalna demonica wstała. |
+| s819 | bialek-04 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་སྐྱེས་སོ། | Innumerable children of the ogre were born. | Urodziły się niezliczone dzieci ludożercy. |
+| s820 | bialek-04 | སྤྲེའུ་ཕྲུག་རྣམས་སྐྱེས་སོ། | Monkey-children were born. | Urodziły się małpie dzieci. |
+| s821 | bialek-04 | དེ་ནས་ཤིང་ཐོག་རྣམས་ཟད་དོ། | Then the fruits were consumed. | Potem owoce się skończyły. |
+| s822 | bialek-04 | འཕགས་པ་ཡར་བཞེངས་སོ། | The Noble One rose. | Szlachetny wstał. |
+| s823 | bialek-04 | བདག་སྲིན་མོའི་རིགས་སུ་སྐྱེས་སོ། | I was born into the race of ogresses. | Urodziłem się w rodzie demonic. |
+| s824 | bialek-04 | ཡབ་མེས་རྣམས་ལ་ནོར་བྱུང་ངོ་། | Wealth came to the ancestors. | Przodkom przypadło bogactwo. |
+| s825 | bialek-04 | མི་དེ་ལ་བུ་ཕོ་མེད། | This man has no sons. | Ten człowiek nie ma synów. |
+| s826 | bialek-04 | ཕྱིས་དམག་པ་དག་འདུས་སོ། | Later the sons-in-law gathered. | Później zebrali się zięciowie. |
+| s827 | bialek-04 | གོས་ངུར་སྨྲིག་ཏུ་གྱུར་ཏོ། | The clothes turned saffron. | Ubranie stało się szafranowe. |
+| s828 | bialek-04 | རྒྱལ་བུ་གཉིས་འོངས་སོ། | Two princes came. | Przyszli dwaj książęta. |
+| s829 | bialek-04 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་དེར་ཚེ་འཕོས་སོ། | The prince Semchen Chenpo passed away there. | Książę Semczen Czenpo tam zmarł. |
+| s830 | bialek-04 | ལྷ་ཕྱིར་གནས་སུ་སོང་ངོ་། | The deity went back to its place. | Bóstwo wróciło na swoje miejsce. |
+| s831 | bialek-04 | དེ་གཉིས་དོང་ངོ་། | The two went. | Ci dwaj poszli. |
+| s832 | bialek-04 | དེ་དག་དེར་སོང་ངོ་། | They went there. | Oni tam poszli. |
+| s833 | bialek-05 | སྐྲ་དང་ཁ་སྤུ་རང་བྱིའོ། | The hair and beard fell off by themselves. | Włosy i broda wypadły same. |
+| s834 | bialek-05 | དེ་ནས་རྒྱལ་བུ་ཐ་ཆུངས་དེས་ཡིད་ལ་འདི་སྙམ་དུ་བསམས་སོ། | Then the youngest prince thought this in his mind. | Wtedy najmłodszy książę pomyślał tak w swoim umyśle. |
+| s835 | bialek-05 | དེའི་ཚེ་རྒྱལ་བུས་ཤིང་གི་ཚལ་བ་རྣོན་པོས་ལུས་ལ་ཁྲག་ཕྱུང་ངོ་། | Then, with a sharp wooden splinter, the prince let blood out of his body. | Wtedy książę ostrą drewnianą drzazgą wypuścił krew ze swego ciała. |
+| s836 | bialek-05 | ཕ་མ་གཉིས་ཀྱིས་ནམ་མཁའ་ལ་བལྟས་སོ། | The parents looked at the sky. | Rodzice spojrzeli na niebo. |
+| s837 | bialek-05 | སྐྱེ་བ་དང་འཇིག་པ་ཀུན་ལ་སྲིད་དོ། | Birth and decay exist in everything. | Narodziny i rozpad są we wszystkim. |
+| s838 | bialek-05 | བུ་ཚས་འཁོར་བའི་འདམ་དུ་བདག་ཚུད་དོ། | Because of my offspring I got into the swamp of samsara. | Przez potomstwo wpadłem w bagno samsary. |
+| s839 | bialek-05 | ང་བུ་གཅིག་པོར་སོང་ངོ་། | I went as the only son. | Poszedłem jako jedyny syn. |
+| s840 | bialek-05 | ཨ་ནེ་དང་ཨ་ཁུ་གཉིས་གཅིག་ཏུ་དྲིལ་ལོ། | The aunt and the uncle united. | Ciotka i stryj połączyli się. |
+| s841 | bialek-05 | དོ་སྨད་ཚོ་ཕྱིར་སོང་ངོ་། | The consort and her children went out. | Żona z dziećmi wyszli. |
+| s842 | bialek-05 | ཞང་པོ་དང་མཛེས་སེའི་ཕ་མིང་བསྡད་དོ། | The maternal uncle and Dzese's father and brothers stayed. | Wuj oraz ojciec i bracia Dzese zostali. |
+| s843 | bialek-05 | གླང་སྒོ་གཞན་དུ་སོང་ངོ་། | The ox went out through another door. | Wół wyszedł innymi drzwiami. |
+| s844 | bialek-05 | རྐང་པ་ཆག་གོ། | The leg broke. | Noga się złamała. |
+| s845 | bialek-05 | ཁྱོད་ཀྱིས་ངའི་ཁྱོ་བསད་དོ། | You killed my husband. | Zabiłeś mojego męża. |
+| s846 | bialek-05 | བཅོམ་ལྡན་འདས་ཀྱིས་ཆོས་བསྟན་ཏོ། | The Victorious One taught the Dharma. | Zwycięski nauczał Dharmy. |
+| s847 | bialek-05 | དེའི་ཚེ་ན་ཕྱིན་ཏེ་ལོ་ཤུ་ཤས་འདི་སྙམ་དུ་བསམས་སོ། | At that point Phyinteloshusha thought this in his mind. | Wtedy Phyinteloshusha pomyślał tak w swoim umyśle. |
+| s848 | bialek-05 | ཆུང་མས་རྟག་ཏུ་སྤྱོའོ། | The wife is always scolding. | Żona ciągle łaja. |
+| s849 | bialek-05 | བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་བསམ་པ་ཐུགས་ཀྱིས་མཁྱེན་ནོ། | The Victorious One discerned his thoughts with his mind. | Zwycięski rozpoznał jego myśli swoim umysłem. |
+| s850 | bialek-05 | ཁྱོད་ཀྱིས་ངའི་རྟ་བསད་དོ། | You killed my horse. | Zabiłeś mojego konia. |
+| s851 | bialek-05 | ཐ་ག་པའི་ཆུང་མས་དབྱིག་པ་ཅན་དེ་བཟུང་ངོ་། | The weaver's wife seized Yikpachen. | Żona tkacza schwyciła Jikpaczena. |
+| s852 | bialek-06 | རྡུལ་དང་དྲི་མ་ཟད་དོ། | Dust and impurities disappeared. | Kurz i nieczystości zniknęły. |
+| s853 | bialek-06 | བདག་ཡུན་རིང་པོ་ནས་འཁོར་བ་ན་འཁོར་རོ། | For a long time I have been roaming in samsara. | Od dawna błąkam się w samsarze. |
+| s854 | bialek-06 | གླང་སླར་བྱིན་ཅིག་ | Give the ox back! | Oddaj wołu! |
+| s855 | bialek-06 | ད་ཟོ། | Now eat! | Teraz jedz! |
+| s856 | bialek-06 | ཡན་ལག་རྣམས་སེར་གར་སོང་ངོ་། | The limbs became cracked. | Kończyny popękały. |
+| s857 | bialek-06 | ཨ་མས་གྲལ་གྱི་དབུས་སུ་ལངས་སོ། | The mother stood up in the middle of the row. | Matka wstała pośrodku rzędu. |
+| s858 | bialek-06 | ཞང་པོས་ཡབ་ཀྱི་ཞལ་ཆེམས་ཀྱི་ཡི་གེ་བཀླགས་སོ། | The maternal uncle read the text of the father's testament. | Wuj przeczytał tekst testamentu ojca. |
+| s859 | bialek-06 | མཛེས་སེའི་ཕ་མས་མེ་ཤིང་བསྐུར་ཏོ། | Dzese's parents sent firewood. | Rodzice Dzese posłali drewno na opał. |
+| s860 | bialek-06 | འབྱུང་པོའི་བྱ་རྣམས་ལོང་བར་འགྱུར་རོ། | The birds of demons become blind. | Ptaki demonów ślepną. |
+| s861 | bialek-06 | བཅོམ་ལྡན་འདས་བསམ་གྱིས་མི་ཁྱབ་བོ། | The Victorious One cannot be grasped by thought. | Zwycięskiego nie da się pojąć myślą. |
+| s862 | bialek-06 | དེས་ཁྱིམ་བདག་ཅིག་ལས་གླང་ཞིག་བརྙས་སོ། | He borrowed an ox from a householder. | Pożyczył wołu od pewnego gospodarza. |
+| s863 | bialek-06 | ལམ་གྱི་བར་དེ་ན་ཆུ་བོ་ཞིག་ཡོད། | In the middle of the road there was a river. | Pośrodku drogi była rzeka. |
+| s864 | bialek-06 | སྟེའུ་ཆུར་ལྷུང་ངོ་། | The axe fell into the river. | Siekiera wpadła do rzeki. |
+| s865 | bialek-06 | དེའི་ཚེ་ཀུན་དགའ་བོས་དེ་ལྟ་བུའི་དངོས་པོ་དག་མཐོང་ངོ་། | Then Ananda saw things of this kind. | Wtedy Ananda zobaczył takie rzeczy. |
+| s866 | bialek-06 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་མི་སྡུག་གོ། | The wife of that Brahmin was ugly. | Żona tego bramina była brzydka. |

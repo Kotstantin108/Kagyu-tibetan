@@ -155,7 +155,7 @@ export default {
       error: 'Synchronisierung fehlgeschlagen, wird wiederholt',
     },
     about: 'Über die App',
-    aboutText: 'Sätze und Wortschatz stammen aus dem Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute). Die App funktioniert offline und speichert den Fortschritt in diesem Browser.',
+    aboutText: 'Sätze und Wortschatz stammen aus dem Classical Tibetan Grammar Handbook (Rangjung Yeshe Institute) und aus den Übungen von Joanna Bialeks A Textbook in Classical Tibetan. Die App funktioniert offline und speichert den Fortschritt in diesem Browser.',
     sourceCode: 'Quellcode und Fehlerliste',
     version: 'Version {v}',
   },

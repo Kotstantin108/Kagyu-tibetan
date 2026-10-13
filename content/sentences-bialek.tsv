@@ -1,0 +1,114 @@
+# page | tib | enOrigin | en | ru | noteEn | noteRu
+# Source: Joanna Bialek, A Textbook in Classical Tibetan (Routledge 2022), exercises of lessons 1-6.
+# The phrases are excerpts from classical texts (GLR, MB, ML, SSP); the English follows the book's
+# answer key ("Translations of exercises", pp. 249-251) with the word-class tags removed. Russian is machine.
+
+@set bialek-01
+46 | བྲག་རོག་པོ་ཞིག་ | textbook | a black rock | чёрная скала | The adjective follows the noun; the indefinite particle ཞིག་ closes the phrase. | Прилагательное стоит после существительного; неопределённая частица ཞིག་ завершает группу.
+46 | ཆོས་ཟབ་མོ་ | textbook | profound Buddhist teaching | глубокое Учение
+46 | ཚིག་འཇམ་པ་ | textbook | mild words | мягкие слова
+46 | ལོ་གསུམ་ | textbook | three years | три года | Numerals follow the noun. | Числительное стоит после существительного.
+46 | རྒྱལ་པོ་དེ་ | textbook | that king | тот царь | The demonstrative དེ་ follows the noun. | Указательное местоимение དེ་ стоит после существительного.
+46 | སྲས་ཐ་ཆུངས་དེ་ | textbook | the youngest son | младший сын
+46 | ཞག་དུ་མ་ | textbook | many days | много дней
+46 | ཤ་རློན་པ་ | textbook | fresh flesh | свежая плоть
+46 | ཁྲག་དྲོན་མོ་ | textbook | warm blood | тёплая кровь
+46 | རྒྱལ་བུ་ཐ་ཆུངས་དེ་ | textbook | the youngest prince | младший принц
+46 | ཡུན་རིང་པོ་ | textbook | a long time | долгое время
+46 | ཚལ་བ་རྣོན་པོ་ | textbook | a sharp splinter | острая щепка
+47 | ཚིག་སྙན་པ་ | textbook | kind words | ласковые слова
+47 | ཉེས་པ་ཆེན་པོ་ | textbook | great moral faults | великие проступки
+47 | ཕུག་རོན་གསུམ་ཞིག་ | textbook | three doves | три голубя | Order: noun + numeral + indefinite particle. | Порядок: существительное + числительное + неопределённая частица.
+47 | བུ་མོ་ངན་པ་ | textbook | bad daughters | дурные дочери
+
+@set bialek-02
+55 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་ | textbook | the prince Semchen Chenpo | принц Семчен Ченпо | A name stands in apposition after the title. | Имя стоит после титула, в приложении.
+55 | སྟག་མོ་ལྟོགས་པ་ | textbook | a hungry tigress | голодная тигрица
+56 | སེམས་ཅན་ཁྲི་ | textbook | ten thousand sentient beings | десять тысяч живых существ
+56 | སྲོག་ཆགས་སྟོང་ | textbook | one thousand living beings | тысяча живых существ
+56 | བརྡ་མང་དུ་ | textbook | many signs | много знаков
+56 | མགོན་པོ་ཐུགས་རྗེ་ཅན་ | textbook | the compassionate protector | сострадательный защитник
+56 | སྤྲེའུ་ཕྲུག་ལྔ་བརྒྱ་ | textbook | five hundred monkey-children | пятьсот обезьяньих детёнышей
+56 | ཁྱིམ་མཚེས་དྲག་པ་ཀུན་ | textbook | all the noble neighbours | все знатные соседи | ཀུན་ "all" comes last in the noun phrase. | ཀུན་ «все» стоит в конце именной группы.
+56 | ལྟོ་གོས་ངན་པ་ | textbook | bad food and clothing | плохая еда и одежда
+56 | སྟོན་མོ་བཟང་པོ་ | textbook | an excellent feast | отличный пир
+56 | རྒྱལ་པོ་ཆེན་པོ་ | textbook | the great king | великий царь
+56 | འཁོར་མང་པོ་རྣམས་ | textbook | many attendants | многочисленная свита | The plural particle རྣམས་ closes the phrase. | Частица множественного числа རྣམས་ завершает группу.
+56 | བུ་མོ་དེ་དག་ | textbook | the daughters | те дочери | དག་ is a plural particle; དེ་དག་ "those". | དག་ — частица множественного числа; དེ་དག་ «те».
+56 | བདག་རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་ཡིན། | textbook | I am the prince Semchen Chenpo. | Я — принц Семчен Ченпо. | The copula ཡིན་ stands at the end; the subject takes no case particle. | Связка ཡིན་ стоит в конце; подлежащее без падежной частицы.
+56 | ང་དགེ་བསྙེན་ཡིན། | textbook | I am a lay practitioner. | Я — мирянин-упасака.
+
+@set bialek-03
+66 | སྤྲེའུའི་རྒྱལ་པོ་ཆེན་པོ་ | textbook | the great king of monkeys | великий царь обезьян | The genitive particle འི་ fuses with the open syllable. | Частица родительного падежа འི་ сливается с открытым слогом.
+66 | ཁ་བ་ཅན་གྱི་རྒྱལ་ཁམས་འདི་ | textbook | this realm of the Snowy Land (Tibet) | это царство Страны снегов (Тибета)
+66 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་ | textbook | innumerable children of the ogre | бесчисленные дети ракшаса
+66 | སྲིན་པོའི་གྲོང་ཁྱེར་དག་ | textbook | towns of ogres | города ракшасов
+66 | འགྲོ་བའི་མགོན་པོ་ | textbook | protector of beings | защитник существ
+66 | བུད་མེད་ཀྱི་ཆས་ | textbook | a woman's garments | женская одежда | After a final ད the genitive is ཀྱི་. | После конечной ད родительный падеж — ཀྱི་.
+66 | ངའི་སྡོམ་པ་ | textbook | my vow | мой обет
+66 | རི་རབ་ཀྱི་ཁོང་སེང་ | textbook | the inner caverns of Mount Meru | внутренние пещеры горы Меру
+66 | བདག་ཅག་གི་ཚེ་སྲོག་ | textbook | our lives | наши жизни
+66 | འབྱུང་པོའི་བྱ་རྣམས་ | textbook | the birds of demons | птицы демонов
+66 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་ | textbook | the wife of that Brahmin | жена того брахмана
+66 | གྲོང་ཁྱེར་དེ་ན་རྒན་མོ་ཞིག་ལ་བུ་གཉིས་ཤིག་ཡོད། | textbook | In the town an old woman had two sons. | В том городе у одной старухи было два сына. | Possession: possessor + ལ་ + possessed + ཡོད་. ན་ marks the location. | Обладание: обладатель + ལ་ + предмет + ཡོད་. ན་ обозначает место.
+66 | ང་སྤྱན་རས་གཟིགས་ཀྱི་དགེ་བསྙེན་ཡིན། | textbook | I am a lay practitioner of Chenrezig. | Я — мирянин-упасака Ченрези.
+66 | ཨ་ཁུ་ལ་བུ་མང་པོ་ཡོད། | textbook | The paternal uncle had many sons. | У дяди по отцу было много сыновей.
+66 | རྒྱ་མཚོ་ཆེན་པོ་ཆུ་ཡི་གཏེར་ཡིན། | textbook | A vast ocean is a treasury of water. | Великий океан — сокровищница воды. | ཡི་ is the metrical form of the genitive འི་. | ཡི་ — стихотворная форма родительного падежа འི་.
+66 | དེའི་ཚེ་ཡུལ་དེ་ན་བྲམ་ཟེ་ཕྱིན་ཏེ་ལོ་ཤུ་ཤ་ཡོད་དོ། | textbook | At that time in that country there was a Brahmin called Phyinteloshusha. | В то время в той стране жил брахман по имени Чинтелошуша. | The final particle འོ་ assimilates to the last letter: ཡོད་ + འོ་ = ཡོད་དོ་. | Завершающая частица འོ་ уподобляется последней букве: ཡོད་ + འོ་ = ཡོད་དོ་.
+66 | ཁྱོད་ཀྱི་སྐད་སྙན་པ་ཡིན་ནོ། | textbook | Your voice is pleasant. | Твой голос приятен.
+
+@set bialek-04
+76 | རུས་བུ་ཚལ་ན་འདུག་གོ། | textbook | Bones lie in the wood. | Кости лежат в лесу. | The subject of an intransitive verb takes no case particle. | Подлежащее при непереходном глаголе без падежной частицы.
+76 | དེ་ནས་བྲག་སྲིན་མོ་ལངས་སོ། | textbook | Thereafter the rock-ogress rose. | Затем скальная демоница поднялась.
+76 | སྲིན་པོའི་ཕྲུ་གུ་དཔག་མེད་སྐྱེས་སོ། | textbook | Innumerable children of the ogre were born. | Родились бесчисленные дети ракшаса.
+76 | སྤྲེའུ་ཕྲུག་རྣམས་སྐྱེས་སོ། | textbook | Monkey-children were born. | Родились обезьяньи детёныши.
+76 | དེ་ནས་ཤིང་ཐོག་རྣམས་ཟད་དོ། | textbook | Then the fruits were consumed. | Затем плоды закончились.
+76 | འཕགས་པ་ཡར་བཞེངས་སོ། | textbook | The Noble One rose. | Благородный поднялся.
+76 | བདག་སྲིན་མོའི་རིགས་སུ་སྐྱེས་སོ། | textbook | I was born into the race of ogresses. | Я родился в роду демониц. | The terminative སུ་ marks the result or goal. | Терминатив སུ་ обозначает результат или цель.
+76 | ཡབ་མེས་རྣམས་ལ་ནོར་བྱུང་ངོ་། | textbook | Wealth came to the ancestors. | Предкам досталось богатство.
+76 | མི་དེ་ལ་བུ་ཕོ་མེད། | textbook | This man has no sons. | У того человека нет сыновей.
+76 | ཕྱིས་དམག་པ་དག་འདུས་སོ། | textbook | Later the sons-in-law gathered. | Позже собрались зятья.
+76 | གོས་ངུར་སྨྲིག་ཏུ་གྱུར་ཏོ། | textbook | The clothes turned saffron. | Одежда стала шафрановой. | X + ཏུ་ + གྱུར་ "became X". | X + ཏུ་ + གྱུར་ «стал X».
+76 | རྒྱལ་བུ་གཉིས་འོངས་སོ། | textbook | Two princes came. | Пришли два принца.
+76 | རྒྱལ་བུ་སེམས་ཅན་ཆེན་པོ་དེ་དེར་ཚེ་འཕོས་སོ། | textbook | The prince Semchen Chenpo passed away there. | Принц Семчен Ченпо там скончался. | དེར་ = དེ་ + ར་ "there". | དེར་ = དེ་ + ར་ «там».
+76 | ལྷ་ཕྱིར་གནས་སུ་སོང་ངོ་། | textbook | The deity went back to its place. | Божество вернулось на своё место.
+76 | དེ་གཉིས་དོང་ངོ་། | textbook | The two went. | Те двое ушли.
+76 | དེ་དག་དེར་སོང་ངོ་། | textbook | They went there. | Они пошли туда.
+
+@set bialek-05
+86 | སྐྲ་དང་ཁ་སྤུ་རང་བྱིའོ། | textbook | The hair and beard fell off by themselves. | Волосы и борода выпали сами собой.
+86 | དེ་ནས་རྒྱལ་བུ་ཐ་ཆུངས་དེས་ཡིད་ལ་འདི་སྙམ་དུ་བསམས་སོ། | textbook | Then the youngest prince thought this in his mind. | Тогда младший принц подумал про себя так. | The agent of a transitive verb takes the ergative: དེ་ + ས་ = དེས་. | Деятель при переходном глаголе стоит в эргативе: དེ་ + ས་ = དེས་.
+86 | དེའི་ཚེ་རྒྱལ་བུས་ཤིང་གི་ཚལ་བ་རྣོན་པོས་ལུས་ལ་ཁྲག་ཕྱུང་ངོ་། | textbook | Then, with a sharp wooden splinter, the prince let blood out of his body. | Тогда острой деревянной щепкой принц выпустил кровь из своего тела. | The ergative also marks the instrument (རྣོན་པོས་). | Эргатив обозначает и орудие (རྣོན་པོས་).
+86 | ཕ་མ་གཉིས་ཀྱིས་ནམ་མཁའ་ལ་བལྟས་སོ། | textbook | The parents looked at the sky. | Родители посмотрели на небо.
+86 | སྐྱེ་བ་དང་འཇིག་པ་ཀུན་ལ་སྲིད་དོ། | textbook | Birth and decay exist in everything. | Рождение и разрушение присущи всему.
+86 | བུ་ཚས་འཁོར་བའི་འདམ་དུ་བདག་ཚུད་དོ། | textbook | Because of my offspring I got into the swamp of samsara. | Из-за потомства я попал в болото сансары. | The ergative can mark the cause. | Эргатив может обозначать причину.
+86 | ང་བུ་གཅིག་པོར་སོང་ངོ་། | textbook | I went as the only son. | Я пошёл как единственный сын.
+86 | ཨ་ནེ་དང་ཨ་ཁུ་གཉིས་གཅིག་ཏུ་དྲིལ་ལོ། | textbook | The aunt and the uncle united. | Тётя и дядя объединились. | དང་ joins two nouns: "and, with". | དང་ соединяет два существительных: «и, с».
+86 | དོ་སྨད་ཚོ་ཕྱིར་སོང་ངོ་། | textbook | The consort and her children went out. | Жена с детьми вышли.
+86 | ཞང་པོ་དང་མཛེས་སེའི་ཕ་མིང་བསྡད་དོ། | textbook | The maternal uncle and Dzese's father and brothers stayed. | Дядя по матери, а также отец и братья Дзесе остались.
+86 | གླང་སྒོ་གཞན་དུ་སོང་ངོ་། | textbook | The ox went out through another door. | Бык вышел через другую дверь.
+86 | རྐང་པ་ཆག་གོ། | textbook | The leg broke. | Нога сломалась.
+86 | ཁྱོད་ཀྱིས་ངའི་ཁྱོ་བསད་དོ། | textbook | You killed my husband. | Ты убил моего мужа. | Ergative ཀྱིས་ after a final ད. | Эргатив ཀྱིས་ после конечной ད.
+86 | བཅོམ་ལྡན་འདས་ཀྱིས་ཆོས་བསྟན་ཏོ། | textbook | The Victorious One taught the Dharma. | Победоносный преподал Дхарму.
+86 | དེའི་ཚེ་ན་ཕྱིན་ཏེ་ལོ་ཤུ་ཤས་འདི་སྙམ་དུ་བསམས་སོ། | textbook | At that point Phyinteloshusha thought this in his mind. | Тогда Чинтелошуша подумал про себя так.
+86 | ཆུང་མས་རྟག་ཏུ་སྤྱོའོ། | textbook | The wife is always scolding. | Жена вечно бранится.
+86 | བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་བསམ་པ་ཐུགས་ཀྱིས་མཁྱེན་ནོ། | textbook | The Victorious One discerned his thoughts with his mind. | Победоносный своим умом постиг его мысли.
+86 | ཁྱོད་ཀྱིས་ངའི་རྟ་བསད་དོ། | textbook | You killed my horse. | Ты убил моего коня.
+86 | ཐ་ག་པའི་ཆུང་མས་དབྱིག་པ་ཅན་དེ་བཟུང་ངོ་། | textbook | The weaver's wife seized Yikpachen. | Жена ткача схватила Йикпачена.
+
+@set bialek-06
+94 | རྡུལ་དང་དྲི་མ་ཟད་དོ། | textbook | Dust and impurities disappeared. | Пыль и грязь исчезли.
+94 | བདག་ཡུན་རིང་པོ་ནས་འཁོར་བ་ན་འཁོར་རོ། | textbook | For a long time I have been roaming in samsara. | Долгое время я блуждаю в сансаре. | The elative ནས་ "from, since". | Элатив ནས་ «из, с (какого-то времени)».
+94 | གླང་སླར་བྱིན་ཅིག | textbook | Give the ox back! | Верни быка! | The imperative particle ཅིག་ follows the imperative stem. | Повелительная частица ཅིག་ стоит после основы повелительного наклонения.
+94 | ད་ཟོ། | textbook | Now eat! | Теперь ешь!
+94 | ཡན་ལག་རྣམས་སེར་གར་སོང་ངོ་། | textbook | The limbs became cracked. | Конечности растрескались.
+94 | ཨ་མས་གྲལ་གྱི་དབུས་སུ་ལངས་སོ། | textbook | The mother stood up in the middle of the row. | Мать встала посреди ряда.
+94 | ཞང་པོས་ཡབ་ཀྱི་ཞལ་ཆེམས་ཀྱི་ཡི་གེ་བཀླགས་སོ། | textbook | The maternal uncle read the text of the father's testament. | Дядя по матери прочитал текст отцовского завещания.
+94 | མཛེས་སེའི་ཕ་མས་མེ་ཤིང་བསྐུར་ཏོ། | textbook | Dzese's parents sent firewood. | Родители Дзесе послали дрова.
+94 | འབྱུང་པོའི་བྱ་རྣམས་ལོང་བར་འགྱུར་རོ། | textbook | The birds of demons become blind. | Птицы демонов слепнут. | X + ར་ + འགྱུར་ "becomes X". | X + ར་ + འགྱུར་ «становится X».
+94 | བཅོམ་ལྡན་འདས་བསམ་གྱིས་མི་ཁྱབ་བོ། | textbook | The Victorious One cannot be grasped by thought. | Победоносный непостижим мыслью. | Negation: མི་ before the verb. | Отрицание: མི་ перед глаголом.
+94 | དེས་ཁྱིམ་བདག་ཅིག་ལས་གླང་ཞིག་བརྙས་སོ། | textbook | He borrowed an ox from a householder. | Он занял быка у одного домохозяина. | The delative ལས་ "from (someone)". | Делатив ལས་ «от (кого-то)».
+94 | ལམ་གྱི་བར་དེ་ན་ཆུ་བོ་ཞིག་ཡོད། | textbook | In the middle of the road there was a river. | Посреди дороги была река.
+94 | སྟེའུ་ཆུར་ལྷུང་ངོ་། | textbook | The axe fell into the river. | Топор упал в реку. | ཆུར་ = ཆུ་ + ར་ "into the water". | ཆུར་ = ཆུ་ + ར་ «в воду».
+94 | དེའི་ཚེ་ཀུན་དགའ་བོས་དེ་ལྟ་བུའི་དངོས་པོ་དག་མཐོང་ངོ་། | textbook | Then Ananda saw things of this kind. | Тогда Ананда увидел такие вещи.
+94 | བྲམ་ཟེ་དེའི་ཆུང་མ་དེ་མི་སྡུག་གོ། | textbook | The wife of that Brahmin was ugly. | Жена того брахмана была некрасива.

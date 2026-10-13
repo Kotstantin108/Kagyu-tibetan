@@ -1,0 +1,153 @@
+# tib | en | ru | pos | page | flags
+# Source: Joanna Bialek, A Textbook in Classical Tibetan (Routledge 2022), word lists of lessons 1-6.
+# Only words that are not already in the RYI dictionary are listed here; the sentences reuse the RYI entries.
+# English glosses follow the textbook's word lists; Russian is machine.
+
+@set bialek-01
+ཁྲག་ | blood | кровь | noun | 47
+རྒྱལ་བུ་ | prince | принц | noun | 47
+འཇམ་པ་ | mild, gentle | мягкий | adj | 47
+ཉེས་པ་ | evil, fault | проступок, зло | noun | 47
+སྙན་པ་ | well-sounding, pleasant | благозвучный, приятный | adj | 47
+ཐ་ཆུངས་ | the youngest | младший | adj | 47
+དུ་མ་ | many | многие, много | number | 47
+དྲོན་མོ་ | warm | тёплый | adj | 47
+རྣོན་པོ་ | sharp | острый | adj | 47
+ཕུག་རོན་ | dove | голубь | noun | 47
+བྲག་ | rock | скала | noun | 47
+ཚལ་བ་ | splinter | щепка | noun | 47
+རོག་པོ་ | black | чёрный | adj | 47
+རློན་པ་ | fresh | свежий | adj | 47
+ཤ་ | flesh, meat | плоть, мясо | noun | 47
+
+@set bialek-02
+ཁྱིམ་མཚེས་ | neighbour | сосед | noun | 56
+ཁྲི་ | ten thousand | десять тысяч | number | 56
+དགེ་བསྙེན་ | lay practitioner (upāsaka) | мирянин-упасака | noun | 56
+ལྔ་བརྒྱ་ | five hundred | пятьсот | number | 56
+ལྟོ་གོས་ | food and clothing | еда и одежда | noun | 56
+ལྟོགས་པ་ | hungry | голодный | adj | 56
+སྟག་མོ་ | tigress | тигрица | noun | 56
+ཐུགས་རྗེ་ཅན་ | compassionate | сострадательный | adj | 56
+དྲག་པ་ | noble | знатный | adj | 56
+བརྡ་ | sign | знак | noun | 56
+སྤྲེའུ་ཕྲུག་ | monkey-child | детёныш обезьяны | noun | 56
+མང་དུ་ | many, much | много | adverb | 56
+སེམས་ཅན་ཆེན་པོ་ | Semchen Chenpo (a prince's name) | Семчен Ченпо (имя принца) | name | 56
+སྲོག་ཆགས་ | living being, creature | живое существо | noun | 56
+
+@set bialek-03
+ཁ་བ་ཅན་ | the Snowy Land, Tibet | Страна снегов, Тибет | name | 66
+ཁོང་སེང་ | inner cavern | внутренняя пещера | noun | 66
+གྲོང་ཁྱེར་ | town, city | город | noun | 66
+རྒན་མོ་ | old woman | старуха | noun | 66
+རྒྱལ་ཁམས་ | kingdom, realm | царство | noun | 66
+ཆས་ | garment | одежда, наряд | noun | 66
+ཆུང་མ་ | wife | жена | noun | 66
+གཏེར་ | treasury, treasure | сокровищница | noun | 66
+བདག་ཅག་ | we | мы | pronoun | 66
+སྡོམ་པ་ | vow | обет | noun | 66
+དཔག་མེད་ | countless | бесчисленный | adj | 66
+སྤྱན་རས་གཟིགས་ | Chenrezig (Avalokiteśvara) | Ченрези (Авалокитешвара) | name | 66
+སྤྲེའུ་ | monkey | обезьяна | noun | 66
+ཕྲུ་གུ་ | child | ребёнок | noun | 66
+ཕྱིན་ཏེ་ལོ་ཤུ་ཤ་ | Phyinteloshusha (a Brahmin's name) | Чинтелошуша (имя брахмана) | name | 66
+བུད་མེད་ | woman | женщина | noun | 66
+བྲམ་ཟེ་ | Brahmin | брахман | noun | 66
+འབྱུང་པོ་ | demon, spirit | демон, дух | noun | 66
+ཚེ་སྲོག་ | life | жизнь | noun | 66
+སྲིན་པོ་ | ogre, rākṣasa | ракшас, людоед | noun | 66
+ཨ་ཁུ་ | paternal uncle | дядя по отцу | noun | 66
+
+@set bialek-04
+གང་བ་ | full | полный | adj | 76
+གོས་ | clothes | одежда | noun | 76
+ངུར་སྨྲིག་ | saffron, yellowish red | шафрановый, жёлто-красный | adj | 76
+དེ་ནས་ | thereafter, then | затем, после этого | adverb | 76
+འདོང་ | to go | идти | verb | 76
+དོང་ | went (past of འདོང་) | пошёл (прош. от འདོང་) | verb | 76
+དམག་པ་ | son-in-law | зять | noun | 76
+འདུས་ | gathered (past of འདུ་) | собрались (прош. от འདུ་) | verb | 76
+ཕྱིས་ | later | позже | adverb | 76
+བུ་ཕོ་ | son | сын | noun | 76
+བྲག་སྲིན་མོ་ | rock-ogress | скальная демоница | noun | 76
+ཡབ་མེས་ | ancestors | предки | noun | 76
+ཡར་ | up, upward | вверх | adverb | 76
+རུས་བུ་ | small bone | косточка | noun | 76
+ལང་ | to rise | вставать, подниматься | verb | 76
+ལངས་ | rose (past of ལང་) | поднялся (прош. от ལང་) | verb | 76
+ལོ་ཐོག་ | harvest, crop | урожай | noun | 76
+ཚལ་ | forest, grove | лес, роща | noun | 76
+ཚེ་འཕོ་ | to die, to pass away | умереть | verb | 76
+ཚེ་འཕོས་ | died (past of ཚེ་འཕོ་) | скончался (прош. от ཚེ་འཕོ་) | verb | 76
+འཛད་ | to be consumed, to run out | иссякать | verb | 76
+བཞེངས་ | to rise, to get up (h.) | подняться (вежл.) | verb | 76
+ཤིང་ཐོག་ | fruit (of trees) | плод (древесный) | noun | 76
+སྲིན་མོ་ | demoness, ogress | демоница | noun | 76
+འོང་ | to come | приходить | verb | 76
+འོངས་ | came (past of འོང་) | пришёл (прош. от འོང་) | verb | 76
+
+@set bialek-05
+སྐྲ་ | hair | волосы | noun | 87
+ཁ་སྤུ་ | beard | борода | noun | 87
+ཁྱོ་ | husband | муж | noun | 87
+གླང་ | ox | бык | noun | 87
+སྒོ་ | door | дверь | noun | 87
+གཅིག་པོ་ | only, alone | единственный | adj | 87
+བཅོམ་ལྡན་འདས་ | the Victorious One (Bhagavān, the Buddha) | Победоносный (Бхагаван, Будда) | name | 87
+འཆག་ | to break | ломаться | verb | 87
+ཆག་ | broke (past of འཆག་) | сломался (прош. от འཆག་) | verb | 87
+སྙམ་ | thought; སྙམ་དུ་ thinking thus | мысль; སྙམ་དུ་ думая так | noun | 87
+རྟག་ཏུ་ | always | всегда | adverb | 87
+བལྟས་ | looked (past of ལྟ་) | посмотрел (прош. от ལྟ་) | verb | 87
+ཐ་ག་པ་ | weaver | ткач | noun | 87
+དོ་སྨད་ | consort and her children | жена с детьми | noun | 87
+འདྲིལ་ | to roll together; གཅིག་ཏུ་འདྲིལ་ to unite | скатывать; གཅིག་ཏུ་འདྲིལ་ объединяться | verb | 87
+དྲིལ་ | united (past of འདྲིལ་) | объединились (прош. от འདྲིལ་) | verb | 87
+འདམ་ | swamp | болото | noun | 87
+བསྡད་ | stayed (past of སྡོད་) | остался (прош. от སྡོད་) | verb | 87
+སྤྱོ་ | to scold | бранить | verb | 87
+ཕ་མིང་ | father and brothers | отец и братья | noun | 87
+འབྱིན་ | to take out, to bring forth | извлекать, выпускать | verb | 87
+ཕྱུང་ | took out (past of འབྱིན་) | выпустил (прош. от འབྱིན་) | verb | 87
+བུ་ཚ་ | offspring | потомство | noun | 87
+འབྱི་ | to fall off | выпадать | verb | 87
+བྱི་ | fell off (past of འབྱི་) | выпали (прош. от འབྱི་) | verb | 87
+དབྱིག་པ་ཅན་ | Yikpachen (a man's name) | Йикпачен (имя) | name | 87
+འཚུད་ | to get into, to enter | попадать | verb | 87
+ཚུད་ | got into (past of འཚུད་) | попал (прош. от འཚུད་) | verb | 87
+མཛེས་སེ་ | Dzese (a name) | Дзесе (имя) | name | 87
+བཟུང་ | seized (past of འཛིན་) | схватил (прош. от འཛིན་) | verb | 87
+ཞང་པོ་ | maternal uncle | дядя по матери | noun | 87
+བསམས་ | thought (past of སེམས་) | подумал (прош. от སེམས་) | verb | 87
+ཨ་ནེ་ | aunt | тётя | noun | 87
+
+@set bialek-06
+ཀུན་དགའ་བོ་ | Ānanda | Ананда | name | 94
+ཀློག་ | to read | читать | verb | 94
+བཀླགས་ | read (past of ཀློག་) | прочитал (прош. от ཀློག་) | verb | 94
+བསྐུར་ | sent (past of སྐུར་) | послал (прош. от སྐུར་) | verb | 94
+ཁྱིམ་བདག་ | householder | домохозяин | noun | 94
+གྲལ་ | row | ряд | noun | 94
+ཆུ་བོ་ | river | река | noun | 94
+བརྙ་ | to borrow | занимать, брать взаймы | verb | 94
+བརྙས་ | borrowed (past of བརྙ་) | занял (прош. от བརྙ་) | verb | 94
+ལྟུང་ | to fall | падать | verb | 94
+ལྷུང་ | fell (past of ལྟུང་) | упал (прош. от ལྟུང་) | verb | 94
+སྟེའུ་ | axe | топор | noun | 94
+ད་ | now | теперь | adverb | 94
+དེ་ལྟ་བུ་ | such, of that kind | такой | adj | 94
+དྲི་མ་ | impurity, stain | нечистота, грязь | noun | 94
+རྡུལ་ | dust | пыль | noun | 94
+སྡུག་ | pretty, nice | красивый | adj | 94
+དབུས་ | middle, centre | середина | noun | 94
+སྦྱིན་ | to give | давать | verb | 94
+བྱིན་ | gave; give! (past and imperative of སྦྱིན་) | дал; дай! (прош. и повел. от སྦྱིན་) | verb | 94
+མེ་ཤིང་ | firewood | дрова | noun | 94
+ཞལ་ཆེམས་ | testament | завещание | noun | 94
+ཟོ་ | eat! (imperative of ཟ་) | ешь! (повел. от ཟ་) | verb | 94
+ཡན་ལག་ | limb | конечность | noun | 94
+ཡི་གེ་ | letter, written text | письмо, текст | noun | 94
+ལོང་བ་ | blind | слепой | adj | 94
+སེར་ག་ | crack, fissure | трещина | noun | 94
+སླར་ | back, again | обратно, снова | adverb | 94

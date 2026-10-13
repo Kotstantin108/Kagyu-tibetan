@@ -40,7 +40,7 @@ const warnings = [];
 function readRows(base) {
   const files = readdirSync(CONTENT)
     .filter((f) => f === `${base}.tsv` || (f.startsWith(`${base}-`) && f.endsWith('.tsv')))
-    .sort();
+    .sort((a, b) => (a === `${base}.tsv` ? -1 : b === `${base}.tsv` ? 1 : a.localeCompare(b)));
   const rows = [];
   for (const file of files) {
     const text = readFileSync(join(CONTENT, file), 'utf8');
@@ -69,10 +69,12 @@ function lessonLabel(setId) {
 
 // ---- sets ----
 const sets = readRows('sets').map((r, i) => {
-  const [id, en, ru] = r.cols;
-  return { id, name: { ru, en }, order: i + 1 };
+  const [id, en, ru, book] = r.cols;
+  return { id, name: { ru, en }, order: i + 1, book: book || BOOK };
 });
 const setOrder = new Map(sets.map((s) => [s.id, s.order]));
+const setBook = new Map(sets.map((s) => [s.id, s.book]));
+for (const s of sets) delete s.book;
 
 // ---- words ----
 const words = {};
@@ -104,7 +106,7 @@ for (const r of readRows('words')) {
     wylie,
     pos: pos || 'noun',
     set: r.set,
-    source: `${BOOK}, ${lessonLabel(r.set)}, p. ${page || '?'}`,
+    source: `${setBook.get(r.set) || BOOK}, ${lessonLabel(r.set)}, p. ${page || '?'}`,
     trOrigin: { ru: 'machine', en: 'textbook' },
   };
   if (flags.fused) w.fused = true;
@@ -202,7 +204,7 @@ for (const r of readRows('sentences')) {
     words: ids,
     tr: { ru, en },
     set: r.set,
-    source: `${BOOK}, ${lessonLabel(r.set)}, p. ${page || '?'}`,
+    source: `${setBook.get(r.set) || BOOK}, ${lessonLabel(r.set)}, p. ${page || '?'}`,
     trOrigin: { ru: 'machine', en: enOrigin === 'textbook' ? 'textbook' : 'machine' },
   };
   if (noteEn || noteRu) s.note = { ru: noteRu || '', en: noteEn || '' };

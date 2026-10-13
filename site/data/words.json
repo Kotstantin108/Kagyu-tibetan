@@ -2708,6 +2708,48 @@
       "pl": "machine"
     }
   },
+  "ston-mo": {
+    "tib": "སྟོན་མོ་",
+    "tr": {
+      "ru": "праздник, пир",
+      "en": "festival, feast",
+      "de": "Fest, Festmahl",
+      "fr": "fête, festin",
+      "pl": "święto, uczta"
+    },
+    "wylie": "ston mo",
+    "pos": "noun",
+    "set": "lesson-01",
+    "source": "RYI Grammar Handbook, lesson 1, p. 2",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bu": {
+    "tib": "བུ་",
+    "tr": {
+      "ru": "сын",
+      "en": "son",
+      "de": "Sohn",
+      "fr": "fils",
+      "pl": "syn"
+    },
+    "wylie": "bu",
+    "pos": "noun",
+    "set": "lesson-01",
+    "source": "RYI Grammar Handbook, lesson 1, p. 2",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
   "che-chung": {
     "tib": "ཆེ་ཆུང་",
     "tr": {
@@ -2918,27 +2960,6 @@
       "pl": "machine"
     }
   },
-  "bu": {
-    "tib": "བུ་",
-    "tr": {
-      "ru": "сын",
-      "en": "son",
-      "de": "Sohn",
-      "fr": "fils",
-      "pl": "syn"
-    },
-    "wylie": "bu",
-    "pos": "noun",
-    "set": "lesson-01",
-    "source": "RYI Grammar Handbook, lesson 1, p. 2",
-    "trOrigin": {
-      "ru": "machine",
-      "en": "textbook",
-      "de": "machine",
-      "fr": "machine",
-      "pl": "machine"
-    }
-  },
   "tsha-grang": {
     "tib": "ཚ་གྲང་",
     "tr": {
@@ -3099,27 +3120,6 @@
     "pos": "adj",
     "set": "lesson-01",
     "source": "RYI Grammar Handbook, lesson 1, p. 3",
-    "trOrigin": {
-      "ru": "machine",
-      "en": "textbook",
-      "de": "machine",
-      "fr": "machine",
-      "pl": "machine"
-    }
-  },
-  "ston-mo": {
-    "tib": "སྟོན་མོ་",
-    "tr": {
-      "ru": "праздник, пир",
-      "en": "festival, feast",
-      "de": "Fest, Festmahl",
-      "fr": "fête, festin",
-      "pl": "święto, uczta"
-    },
-    "wylie": "ston mo",
-    "pos": "noun",
-    "set": "lesson-01",
-    "source": "RYI Grammar Handbook, lesson 1, p. 2",
     "trOrigin": {
       "ru": "machine",
       "en": "textbook",
@@ -3591,19 +3591,19 @@
       "pl": "machine"
     }
   },
-  "cag": {
-    "tib": "ཅག་",
+  "bdag-cag": {
+    "tib": "བདག་ཅག་",
     "tr": {
-      "ru": "частица мн. ч. (с местоимениями)",
-      "en": "plural particle (with pronouns)",
-      "de": "Pluralpartikel (bei Pronomen)",
-      "fr": "particule du pluriel (avec les pronoms)",
-      "pl": "partykuła liczby mnogiej (przy zaimkach)"
+      "ru": "мы",
+      "en": "we",
+      "de": "wir",
+      "fr": "nous",
+      "pl": "my"
     },
-    "wylie": "cag",
-    "pos": "particle",
+    "wylie": "bdag cag",
+    "pos": "pronoun",
     "set": "lesson-02",
-    "source": "RYI Grammar Handbook, lesson 2, p. 16",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
     "trOrigin": {
       "ru": "machine",
       "en": "textbook",
@@ -4599,6 +4599,90 @@
       "pl": "machine"
     }
   },
+  "yi": {
+    "tib": "ཡི་",
+    "tr": {
+      "ru": "соединительная частица (отдельным слогом)",
+      "en": "of (connective particle as a separate syllable)",
+      "de": "Genitivpartikel (als eigene Silbe)",
+      "fr": "de (particule de liaison en syllabe séparée)",
+      "pl": "partykuła łącząca (jako osobna sylaba)"
+    },
+    "wylie": "yi",
+    "pos": "particle",
+    "set": "lesson-02",
+    "source": "RYI Grammar Handbook, lesson 2, p. 17",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "lus": {
+    "tib": "ལུས་",
+    "tr": {
+      "ru": "тело",
+      "en": "body",
+      "de": "Körper",
+      "fr": "corps",
+      "pl": "ciało"
+    },
+    "wylie": "lus",
+    "pos": "noun",
+    "set": "lesson-02",
+    "source": "RYI Grammar Handbook, lesson 2, p. 23",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rkang-pa": {
+    "tib": "རྐང་པ་",
+    "tr": {
+      "ru": "нога",
+      "en": "foot",
+      "de": "Fuß",
+      "fr": "pied",
+      "pl": "stopa"
+    },
+    "wylie": "rkang pa",
+    "pos": "noun",
+    "set": "lesson-02",
+    "source": "RYI Grammar Handbook, lesson 2, p. 23",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "yab": {
+    "tib": "ཡབ་",
+    "tr": {
+      "ru": "отец (вежл.)",
+      "en": "father (h.)",
+      "de": "Vater (ehrenvoll)",
+      "fr": "père (hon.)",
+      "pl": "ojciec (hon.)"
+    },
+    "wylie": "yab",
+    "pos": "noun",
+    "set": "lesson-02",
+    "source": "RYI Grammar Handbook, lesson 2, p. 23",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
   "kho": {
     "tib": "ཁོ་",
     "tr": {
@@ -4715,6 +4799,27 @@
     },
     "wylie": "nged",
     "pos": "pronoun",
+    "set": "lesson-02",
+    "source": "RYI Grammar Handbook, lesson 2, p. 16",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "cag": {
+    "tib": "ཅག་",
+    "tr": {
+      "ru": "частица мн. ч. (с местоимениями)",
+      "en": "plural particle (with pronouns)",
+      "de": "Pluralpartikel (bei Pronomen)",
+      "fr": "particule du pluriel (avec les pronoms)",
+      "pl": "partykuła liczby mnogiej (przy zaimkach)"
+    },
+    "wylie": "cag",
+    "pos": "particle",
     "set": "lesson-02",
     "source": "RYI Grammar Handbook, lesson 2, p. 16",
     "trOrigin": {
@@ -4851,69 +4956,6 @@
       "pl": "machine"
     }
   },
-  "yab": {
-    "tib": "ཡབ་",
-    "tr": {
-      "ru": "отец (вежл.)",
-      "en": "father (h.)",
-      "de": "Vater (ehrenvoll)",
-      "fr": "père (hon.)",
-      "pl": "ojciec (hon.)"
-    },
-    "wylie": "yab",
-    "pos": "noun",
-    "set": "lesson-02",
-    "source": "RYI Grammar Handbook, lesson 2, p. 23",
-    "trOrigin": {
-      "ru": "machine",
-      "en": "textbook",
-      "de": "machine",
-      "fr": "machine",
-      "pl": "machine"
-    }
-  },
-  "yi": {
-    "tib": "ཡི་",
-    "tr": {
-      "ru": "соединительная частица (отдельным слогом)",
-      "en": "of (connective particle as a separate syllable)",
-      "de": "Genitivpartikel (als eigene Silbe)",
-      "fr": "de (particule de liaison en syllabe séparée)",
-      "pl": "partykuła łącząca (jako osobna sylaba)"
-    },
-    "wylie": "yi",
-    "pos": "particle",
-    "set": "lesson-02",
-    "source": "RYI Grammar Handbook, lesson 2, p. 17",
-    "trOrigin": {
-      "ru": "machine",
-      "en": "textbook",
-      "de": "machine",
-      "fr": "machine",
-      "pl": "machine"
-    }
-  },
-  "rkang-pa": {
-    "tib": "རྐང་པ་",
-    "tr": {
-      "ru": "нога",
-      "en": "foot",
-      "de": "Fuß",
-      "fr": "pied",
-      "pl": "stopa"
-    },
-    "wylie": "rkang pa",
-    "pos": "noun",
-    "set": "lesson-02",
-    "source": "RYI Grammar Handbook, lesson 2, p. 23",
-    "trOrigin": {
-      "ru": "machine",
-      "en": "textbook",
-      "de": "machine",
-      "fr": "machine",
-      "pl": "machine"
-    }
-  },
   "lags-pa": {
     "tib": "ལགས་པ་",
     "tr": {
@@ -4925,27 +4967,6 @@
     },
     "wylie": "lags pa",
     "pos": "verb",
-    "set": "lesson-02",
-    "source": "RYI Grammar Handbook, lesson 2, p. 23",
-    "trOrigin": {
-      "ru": "machine",
-      "en": "textbook",
-      "de": "machine",
-      "fr": "machine",
-      "pl": "machine"
-    }
-  },
-  "lus": {
-    "tib": "ལུས་",
-    "tr": {
-      "ru": "тело",
-      "en": "body",
-      "de": "Körper",
-      "fr": "corps",
-      "pl": "ciało"
-    },
-    "wylie": "lus",
-    "pos": "noun",
     "set": "lesson-02",
     "source": "RYI Grammar Handbook, lesson 2, p. 23",
     "trOrigin": {
@@ -7164,6 +7185,27 @@
       "pl": "machine"
     }
   },
+  "to": {
+    "tib": "ཏོ་",
+    "tr": {
+      "ru": "завершающая частица (после второго суффикса ད)",
+      "en": "terminating particle (after second suffix ད)",
+      "de": "Schlusspartikel (nach zweitem Suffix ད)",
+      "fr": "particule terminale (après le second suffixe ད)",
+      "pl": "partykuła końcowa (po drugim sufiksie ད)"
+    },
+    "wylie": "to",
+    "pos": "particle",
+    "set": "lesson-03",
+    "source": "RYI Grammar Handbook, lesson 3, p. 42",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
   "gcod-pa": {
     "tib": "གཅོད་པ་",
     "tr": {
@@ -7198,27 +7240,6 @@
     "pos": "verb",
     "set": "lesson-03",
     "source": "RYI Grammar Handbook, lesson 3, p. 44",
-    "trOrigin": {
-      "ru": "machine",
-      "en": "textbook",
-      "de": "machine",
-      "fr": "machine",
-      "pl": "machine"
-    }
-  },
-  "to": {
-    "tib": "ཏོ་",
-    "tr": {
-      "ru": "завершающая частица (после второго суффикса ད)",
-      "en": "terminating particle (after second suffix ད)",
-      "de": "Schlusspartikel (nach zweitem Suffix ད)",
-      "fr": "particule terminale (après le second suffixe ད)",
-      "pl": "partykuła końcowa (po drugim sufiksie ད)"
-    },
-    "wylie": "to",
-    "pos": "particle",
-    "set": "lesson-03",
-    "source": "RYI Grammar Handbook, lesson 3, p. 42",
     "trOrigin": {
       "ru": "machine",
       "en": "textbook",
@@ -11660,6 +11681,27 @@
       "pl": "machine"
     }
   },
+  "du-ma": {
+    "tib": "དུ་མ་",
+    "tr": {
+      "ru": "многие, много",
+      "en": "many",
+      "de": "viele",
+      "fr": "nombreux",
+      "pl": "liczni, wiele"
+    },
+    "wylie": "du ma",
+    "pos": "number",
+    "set": "lesson-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
   "ram": {
     "tib": "རམ་",
     "tr": {
@@ -15314,6 +15356,27 @@
       "pl": "machine"
     }
   },
+  "dngos-po": {
+    "tib": "དངོས་པོ་",
+    "tr": {
+      "ru": "вещь, сущее",
+      "en": "thing, entity",
+      "de": "Ding, Wesenheit",
+      "fr": "chose, entité",
+      "pl": "rzecz, byt"
+    },
+    "wylie": "dngos po",
+    "pos": "noun",
+    "set": "lesson-07",
+    "source": "RYI Grammar Handbook, lesson 7, p. 111",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
   "gzhi": {
     "tib": "གཞི་",
     "tr": {
@@ -15348,27 +15411,6 @@
     "pos": "particle",
     "set": "lesson-07",
     "source": "RYI Grammar Handbook, lesson 7, p. 104",
-    "trOrigin": {
-      "ru": "machine",
-      "en": "textbook",
-      "de": "machine",
-      "fr": "machine",
-      "pl": "machine"
-    }
-  },
-  "dngos-po": {
-    "tib": "དངོས་པོ་",
-    "tr": {
-      "ru": "вещь, сущее",
-      "en": "thing, entity",
-      "de": "Ding, Wesenheit",
-      "fr": "chose, entité",
-      "pl": "rzecz, byt"
-    },
-    "wylie": "dngos po",
-    "pos": "noun",
-    "set": "lesson-07",
-    "source": "RYI Grammar Handbook, lesson 7, p. 111",
     "trOrigin": {
       "ru": "machine",
       "en": "textbook",
@@ -15621,6 +15663,2841 @@
     "pos": "verb",
     "set": "lesson-07",
     "source": "RYI Grammar Handbook, lesson 7, p. 99",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "brag": {
+    "tib": "བྲག་",
+    "tr": {
+      "ru": "скала",
+      "en": "rock",
+      "de": "Fels",
+      "fr": "rocher",
+      "pl": "skała"
+    },
+    "wylie": "brag",
+    "pos": "noun",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rog-po": {
+    "tib": "རོག་པོ་",
+    "tr": {
+      "ru": "чёрный",
+      "en": "black",
+      "de": "schwarz",
+      "fr": "noir",
+      "pl": "czarny"
+    },
+    "wylie": "rog po",
+    "pos": "adj",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'jam-pa": {
+    "tib": "འཇམ་པ་",
+    "tr": {
+      "ru": "мягкий",
+      "en": "mild, gentle",
+      "de": "mild, sanft",
+      "fr": "doux",
+      "pl": "łagodny"
+    },
+    "wylie": "'jam pa",
+    "pos": "adj",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "tha-chungs": {
+    "tib": "ཐ་ཆུངས་",
+    "tr": {
+      "ru": "младший",
+      "en": "the youngest",
+      "de": "der jüngste",
+      "fr": "le plus jeune",
+      "pl": "najmłodszy"
+    },
+    "wylie": "tha chungs",
+    "pos": "adj",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rlon-pa": {
+    "tib": "རློན་པ་",
+    "tr": {
+      "ru": "свежий",
+      "en": "fresh",
+      "de": "frisch",
+      "fr": "frais",
+      "pl": "świeży"
+    },
+    "wylie": "rlon pa",
+    "pos": "adj",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "sha": {
+    "tib": "ཤ་",
+    "tr": {
+      "ru": "плоть, мясо",
+      "en": "flesh, meat",
+      "de": "Fleisch",
+      "fr": "chair, viande",
+      "pl": "ciało, mięso"
+    },
+    "wylie": "sha",
+    "pos": "noun",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "khrag": {
+    "tib": "ཁྲག་",
+    "tr": {
+      "ru": "кровь",
+      "en": "blood",
+      "de": "Blut",
+      "fr": "sang",
+      "pl": "krew"
+    },
+    "wylie": "khrag",
+    "pos": "noun",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dron-mo": {
+    "tib": "དྲོན་མོ་",
+    "tr": {
+      "ru": "тёплый",
+      "en": "warm",
+      "de": "warm",
+      "fr": "chaud",
+      "pl": "ciepły"
+    },
+    "wylie": "dron mo",
+    "pos": "adj",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rgyal-bu": {
+    "tib": "རྒྱལ་བུ་",
+    "tr": {
+      "ru": "принц",
+      "en": "prince",
+      "de": "Prinz",
+      "fr": "prince",
+      "pl": "książę"
+    },
+    "wylie": "rgyal bu",
+    "pos": "noun",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "tshal-ba": {
+    "tib": "ཚལ་བ་",
+    "tr": {
+      "ru": "щепка",
+      "en": "splinter",
+      "de": "Splitter",
+      "fr": "écharde",
+      "pl": "drzazga"
+    },
+    "wylie": "tshal ba",
+    "pos": "noun",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rnon-po": {
+    "tib": "རྣོན་པོ་",
+    "tr": {
+      "ru": "острый",
+      "en": "sharp",
+      "de": "scharf",
+      "fr": "aiguisé",
+      "pl": "ostry"
+    },
+    "wylie": "rnon po",
+    "pos": "adj",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "snyan-pa": {
+    "tib": "སྙན་པ་",
+    "tr": {
+      "ru": "благозвучный, приятный",
+      "en": "well-sounding, pleasant",
+      "de": "wohlklingend, angenehm",
+      "fr": "mélodieux, agréable",
+      "pl": "miły dla ucha, przyjemny"
+    },
+    "wylie": "snyan pa",
+    "pos": "adj",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "nyes-pa": {
+    "tib": "ཉེས་པ་",
+    "tr": {
+      "ru": "проступок, зло",
+      "en": "evil, fault",
+      "de": "Übel, Vergehen",
+      "fr": "mal, faute",
+      "pl": "zło, przewinienie"
+    },
+    "wylie": "nyes pa",
+    "pos": "noun",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "phug-ron": {
+    "tib": "ཕུག་རོན་",
+    "tr": {
+      "ru": "голубь",
+      "en": "dove",
+      "de": "Taube",
+      "fr": "colombe",
+      "pl": "gołąb"
+    },
+    "wylie": "phug ron",
+    "pos": "noun",
+    "set": "bialek-01",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 1, p. 47",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "sems-can-chen-po": {
+    "tib": "སེམས་ཅན་ཆེན་པོ་",
+    "tr": {
+      "ru": "Семчен Ченпо (имя принца)",
+      "en": "Semchen Chenpo (a prince's name)",
+      "de": "Semchen Chenpo (Name eines Prinzen)",
+      "fr": "Semchen Chenpo (nom d’un prince)",
+      "pl": "Semczen Czenpo (imię księcia)"
+    },
+    "wylie": "sems can chen po",
+    "pos": "name",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "ltogs-pa": {
+    "tib": "ལྟོགས་པ་",
+    "tr": {
+      "ru": "голодный",
+      "en": "hungry",
+      "de": "hungrig",
+      "fr": "affamé",
+      "pl": "głodny"
+    },
+    "wylie": "ltogs pa",
+    "pos": "adj",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "stag-mo": {
+    "tib": "སྟག་མོ་",
+    "tr": {
+      "ru": "тигрица",
+      "en": "tigress",
+      "de": "Tigerin",
+      "fr": "tigresse",
+      "pl": "tygrysica"
+    },
+    "wylie": "stag mo",
+    "pos": "noun",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "khri": {
+    "tib": "ཁྲི་",
+    "tr": {
+      "ru": "десять тысяч",
+      "en": "ten thousand",
+      "de": "zehntausend",
+      "fr": "dix mille",
+      "pl": "dziesięć tysięcy"
+    },
+    "wylie": "khri",
+    "pos": "number",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "srog-chags": {
+    "tib": "སྲོག་ཆགས་",
+    "tr": {
+      "ru": "живое существо",
+      "en": "living being, creature",
+      "de": "Lebewesen, Geschöpf",
+      "fr": "être vivant, créature",
+      "pl": "żywa istota, stworzenie"
+    },
+    "wylie": "srog chags",
+    "pos": "noun",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "brda": {
+    "tib": "བརྡ་",
+    "tr": {
+      "ru": "знак",
+      "en": "sign",
+      "de": "Zeichen",
+      "fr": "signe",
+      "pl": "znak"
+    },
+    "wylie": "brda",
+    "pos": "noun",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "mang-du": {
+    "tib": "མང་དུ་",
+    "tr": {
+      "ru": "много",
+      "en": "many, much",
+      "de": "viel, viele",
+      "fr": "beaucoup",
+      "pl": "wiele, dużo"
+    },
+    "wylie": "mang du",
+    "pos": "adverb",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "thugs-rje-can": {
+    "tib": "ཐུགས་རྗེ་ཅན་",
+    "tr": {
+      "ru": "сострадательный",
+      "en": "compassionate",
+      "de": "mitfühlend",
+      "fr": "compatissant",
+      "pl": "współczujący"
+    },
+    "wylie": "thugs rje can",
+    "pos": "adj",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "lnga-brgya": {
+    "tib": "ལྔ་བརྒྱ་",
+    "tr": {
+      "ru": "пятьсот",
+      "en": "five hundred",
+      "de": "fünfhundert",
+      "fr": "cinq cents",
+      "pl": "pięćset"
+    },
+    "wylie": "lnga brgya",
+    "pos": "number",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "spre'u-phrug": {
+    "tib": "སྤྲེའུ་ཕྲུག་",
+    "tr": {
+      "ru": "детёныш обезьяны",
+      "en": "monkey-child",
+      "de": "Affenkind",
+      "fr": "petit singe",
+      "pl": "małpie dziecko"
+    },
+    "wylie": "spre'u phrug",
+    "pos": "noun",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "khyim-mtshes": {
+    "tib": "ཁྱིམ་མཚེས་",
+    "tr": {
+      "ru": "сосед",
+      "en": "neighbour",
+      "de": "Nachbar",
+      "fr": "voisin",
+      "pl": "sąsiad"
+    },
+    "wylie": "khyim mtshes",
+    "pos": "noun",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "drag-pa": {
+    "tib": "དྲག་པ་",
+    "tr": {
+      "ru": "знатный",
+      "en": "noble",
+      "de": "edel, vornehm",
+      "fr": "noble",
+      "pl": "szlachetny"
+    },
+    "wylie": "drag pa",
+    "pos": "adj",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "lto-gos": {
+    "tib": "ལྟོ་གོས་",
+    "tr": {
+      "ru": "еда и одежда",
+      "en": "food and clothing",
+      "de": "Nahrung und Kleidung",
+      "fr": "nourriture et vêtements",
+      "pl": "jedzenie i odzież"
+    },
+    "wylie": "lto gos",
+    "pos": "noun",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dge-bsnyen": {
+    "tib": "དགེ་བསྙེན་",
+    "tr": {
+      "ru": "мирянин-упасака",
+      "en": "lay practitioner (upāsaka)",
+      "de": "Laienpraktizierender (Upāsaka)",
+      "fr": "pratiquant laïc (upāsaka)",
+      "pl": "świecki praktykujący (upāsaka)"
+    },
+    "wylie": "dge bsnyen",
+    "pos": "noun",
+    "set": "bialek-02",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 2, p. 56",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "spre'u": {
+    "tib": "སྤྲེའུ་",
+    "tr": {
+      "ru": "обезьяна",
+      "en": "monkey",
+      "de": "Affe",
+      "fr": "singe",
+      "pl": "małpa"
+    },
+    "wylie": "spre'u",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "kha-ba-can": {
+    "tib": "ཁ་བ་ཅན་",
+    "tr": {
+      "ru": "Страна снегов, Тибет",
+      "en": "the Snowy Land, Tibet",
+      "de": "das Schneeland, Tibet",
+      "fr": "le Pays des neiges, le Tibet",
+      "pl": "Kraina Śniegu, Tybet"
+    },
+    "wylie": "kha ba can",
+    "pos": "name",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rgyal-khams": {
+    "tib": "རྒྱལ་ཁམས་",
+    "tr": {
+      "ru": "царство",
+      "en": "kingdom, realm",
+      "de": "Königreich, Reich",
+      "fr": "royaume",
+      "pl": "królestwo"
+    },
+    "wylie": "rgyal khams",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dpag-med": {
+    "tib": "དཔག་མེད་",
+    "tr": {
+      "ru": "бесчисленный",
+      "en": "countless",
+      "de": "unzählig",
+      "fr": "innombrable",
+      "pl": "niezliczony"
+    },
+    "wylie": "dpag med",
+    "pos": "adj",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "phru-gu": {
+    "tib": "ཕྲུ་གུ་",
+    "tr": {
+      "ru": "ребёнок",
+      "en": "child",
+      "de": "Kind",
+      "fr": "enfant",
+      "pl": "dziecko"
+    },
+    "wylie": "phru gu",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "srin-po": {
+    "tib": "སྲིན་པོ་",
+    "tr": {
+      "ru": "ракшас, людоед",
+      "en": "ogre, rākṣasa",
+      "de": "Menschenfresser, Rākṣasa",
+      "fr": "ogre, rākṣasa",
+      "pl": "ludożerca, rākṣasa"
+    },
+    "wylie": "srin po",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "grong-khyer": {
+    "tib": "གྲོང་ཁྱེར་",
+    "tr": {
+      "ru": "город",
+      "en": "town, city",
+      "de": "Stadt",
+      "fr": "ville",
+      "pl": "miasto"
+    },
+    "wylie": "grong khyer",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "chas": {
+    "tib": "ཆས་",
+    "tr": {
+      "ru": "одежда, наряд",
+      "en": "garment",
+      "de": "Gewand",
+      "fr": "vêtement",
+      "pl": "szata"
+    },
+    "wylie": "chas",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bud-med": {
+    "tib": "བུད་མེད་",
+    "tr": {
+      "ru": "женщина",
+      "en": "woman",
+      "de": "Frau",
+      "fr": "femme",
+      "pl": "kobieta"
+    },
+    "wylie": "bud med",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "sdom-pa": {
+    "tib": "སྡོམ་པ་",
+    "tr": {
+      "ru": "обет",
+      "en": "vow",
+      "de": "Gelübde",
+      "fr": "vœu",
+      "pl": "ślubowanie"
+    },
+    "wylie": "sdom pa",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "khong-seng": {
+    "tib": "ཁོང་སེང་",
+    "tr": {
+      "ru": "внутренняя пещера",
+      "en": "inner cavern",
+      "de": "innere Höhle",
+      "fr": "caverne intérieure",
+      "pl": "wewnętrzna jaskinia"
+    },
+    "wylie": "khong seng",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "tshe-srog": {
+    "tib": "ཚེ་སྲོག་",
+    "tr": {
+      "ru": "жизнь",
+      "en": "life",
+      "de": "Leben",
+      "fr": "vie",
+      "pl": "życie"
+    },
+    "wylie": "tshe srog",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'byung-po": {
+    "tib": "འབྱུང་པོ་",
+    "tr": {
+      "ru": "демон, дух",
+      "en": "demon, spirit",
+      "de": "Dämon, Geist",
+      "fr": "démon, esprit",
+      "pl": "demon, duch"
+    },
+    "wylie": "'byung po",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "chung-ma": {
+    "tib": "ཆུང་མ་",
+    "tr": {
+      "ru": "жена",
+      "en": "wife",
+      "de": "Ehefrau",
+      "fr": "épouse",
+      "pl": "żona"
+    },
+    "wylie": "chung ma",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bram-ze": {
+    "tib": "བྲམ་ཟེ་",
+    "tr": {
+      "ru": "брахман",
+      "en": "Brahmin",
+      "de": "Brahmane",
+      "fr": "brahmane",
+      "pl": "bramin"
+    },
+    "wylie": "bram ze",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rgan-mo": {
+    "tib": "རྒན་མོ་",
+    "tr": {
+      "ru": "старуха",
+      "en": "old woman",
+      "de": "alte Frau",
+      "fr": "vieille femme",
+      "pl": "staruszka"
+    },
+    "wylie": "rgan mo",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "spyan-ras-gzigs": {
+    "tib": "སྤྱན་རས་གཟིགས་",
+    "tr": {
+      "ru": "Ченрези (Авалокитешвара)",
+      "en": "Chenrezig (Avalokiteśvara)",
+      "de": "Chenrezig (Avalokiteśvara)",
+      "fr": "Chenrezig (Avalokiteśvara)",
+      "pl": "Czenrezig (Awalokiteśwara)"
+    },
+    "wylie": "spyan ras gzigs",
+    "pos": "name",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "a-khu": {
+    "tib": "ཨ་ཁུ་",
+    "tr": {
+      "ru": "дядя по отцу",
+      "en": "paternal uncle",
+      "de": "Onkel väterlicherseits",
+      "fr": "oncle paternel",
+      "pl": "stryj"
+    },
+    "wylie": "a khu",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "gter": {
+    "tib": "གཏེར་",
+    "tr": {
+      "ru": "сокровищница",
+      "en": "treasury, treasure",
+      "de": "Schatzkammer, Schatz",
+      "fr": "trésor",
+      "pl": "skarbiec, skarb"
+    },
+    "wylie": "gter",
+    "pos": "noun",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "phyin-te-lo-shu-sha": {
+    "tib": "ཕྱིན་ཏེ་ལོ་ཤུ་ཤ་",
+    "tr": {
+      "ru": "Чинтелошуша (имя брахмана)",
+      "en": "Phyinteloshusha (a Brahmin's name)",
+      "de": "Phyinteloshusha (Name eines Brahmanen)",
+      "fr": "Phyinteloshusha (nom d’un brahmane)",
+      "pl": "Phyinteloshusha (imię bramina)"
+    },
+    "wylie": "phyin te lo shu sha",
+    "pos": "name",
+    "set": "bialek-03",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 3, p. 66",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "tshal": {
+    "tib": "ཚལ་",
+    "tr": {
+      "ru": "лес, роща",
+      "en": "forest, grove",
+      "de": "Wald, Hain",
+      "fr": "forêt, bois",
+      "pl": "las, gaj"
+    },
+    "wylie": "tshal",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rus-bu": {
+    "tib": "རུས་བུ་",
+    "tr": {
+      "ru": "косточка",
+      "en": "small bone",
+      "de": "Knöchelchen",
+      "fr": "osselet",
+      "pl": "kostka"
+    },
+    "wylie": "rus bu",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "de-nas": {
+    "tib": "དེ་ནས་",
+    "tr": {
+      "ru": "затем, после этого",
+      "en": "thereafter, then",
+      "de": "danach, dann",
+      "fr": "ensuite, puis",
+      "pl": "potem, następnie"
+    },
+    "wylie": "de nas",
+    "pos": "adverb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "brag-srin-mo": {
+    "tib": "བྲག་སྲིན་མོ་",
+    "tr": {
+      "ru": "скальная демоница",
+      "en": "rock-ogress",
+      "de": "Felsendämonin",
+      "fr": "ogresse des rochers",
+      "pl": "skalna demonica"
+    },
+    "wylie": "brag srin mo",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "langs": {
+    "tib": "ལངས་",
+    "tr": {
+      "ru": "поднялся (прош. от ལང་)",
+      "en": "rose (past of ལང་)",
+      "de": "erhob sich (Vergangenheit von ལང་)",
+      "fr": "se leva (passé de ལང་)",
+      "pl": "wstała (czas przeszły od ལང་)"
+    },
+    "wylie": "langs",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "shing-thog": {
+    "tib": "ཤིང་ཐོག་",
+    "tr": {
+      "ru": "плод (древесный)",
+      "en": "fruit (of trees)",
+      "de": "Frucht (von Bäumen)",
+      "fr": "fruit (des arbres)",
+      "pl": "owoc (drzewa)"
+    },
+    "wylie": "shing thog",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bzhengs": {
+    "tib": "བཞེངས་",
+    "tr": {
+      "ru": "подняться (вежл.)",
+      "en": "to rise, to get up (h.)",
+      "de": "sich erheben, aufstehen (ehrenv.)",
+      "fr": "se lever (hon.)",
+      "pl": "wstać, podnieść się (hon.)"
+    },
+    "wylie": "bzhengs",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "yar": {
+    "tib": "ཡར་",
+    "tr": {
+      "ru": "вверх",
+      "en": "up, upward",
+      "de": "hinauf, aufwärts",
+      "fr": "en haut, vers le haut",
+      "pl": "w górę"
+    },
+    "wylie": "yar",
+    "pos": "adverb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "srin-mo": {
+    "tib": "སྲིན་མོ་",
+    "tr": {
+      "ru": "демоница",
+      "en": "demoness, ogress",
+      "de": "Dämonin",
+      "fr": "démone, ogresse",
+      "pl": "demonica"
+    },
+    "wylie": "srin mo",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "yab-mes": {
+    "tib": "ཡབ་མེས་",
+    "tr": {
+      "ru": "предки",
+      "en": "ancestors",
+      "de": "Vorfahren",
+      "fr": "ancêtres",
+      "pl": "przodkowie"
+    },
+    "wylie": "yab mes",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bu-pho": {
+    "tib": "བུ་ཕོ་",
+    "tr": {
+      "ru": "сын",
+      "en": "son",
+      "de": "Sohn",
+      "fr": "fils",
+      "pl": "syn"
+    },
+    "wylie": "bu pho",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dmag-pa": {
+    "tib": "དམག་པ་",
+    "tr": {
+      "ru": "зять",
+      "en": "son-in-law",
+      "de": "Schwiegersohn",
+      "fr": "gendre",
+      "pl": "zięć"
+    },
+    "wylie": "dmag pa",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "phyis": {
+    "tib": "ཕྱིས་",
+    "tr": {
+      "ru": "позже",
+      "en": "later",
+      "de": "später",
+      "fr": "plus tard",
+      "pl": "później"
+    },
+    "wylie": "phyis",
+    "pos": "adverb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'dus": {
+    "tib": "འདུས་",
+    "tr": {
+      "ru": "собрались (прош. от འདུ་)",
+      "en": "gathered (past of འདུ་)",
+      "de": "versammelten sich (Vergangenheit von འདུ་)",
+      "fr": "se rassemblèrent (passé de འདུ་)",
+      "pl": "zebrali się (czas przeszły od འདུ་)"
+    },
+    "wylie": "'dus",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "gos": {
+    "tib": "གོས་",
+    "tr": {
+      "ru": "одежда",
+      "en": "clothes",
+      "de": "Kleider",
+      "fr": "vêtements",
+      "pl": "ubranie"
+    },
+    "wylie": "gos",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "ngur-smrig": {
+    "tib": "ངུར་སྨྲིག་",
+    "tr": {
+      "ru": "шафрановый, жёлто-красный",
+      "en": "saffron, yellowish red",
+      "de": "safranfarben, gelblich rot",
+      "fr": "safran, rouge jaunâtre",
+      "pl": "szafranowy, żółtoczerwony"
+    },
+    "wylie": "ngur smrig",
+    "pos": "adj",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'ongs": {
+    "tib": "འོངས་",
+    "tr": {
+      "ru": "пришёл (прош. от འོང་)",
+      "en": "came (past of འོང་)",
+      "de": "kam (Vergangenheit von འོང་)",
+      "fr": "vint (passé de འོང་)",
+      "pl": "przyszedł (czas przeszły od འོང་)"
+    },
+    "wylie": "'ongs",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "tshe-'phos": {
+    "tib": "ཚེ་འཕོས་",
+    "tr": {
+      "ru": "скончался (прош. от ཚེ་འཕོ་)",
+      "en": "died (past of ཚེ་འཕོ་)",
+      "de": "starb (Vergangenheit von ཚེ་འཕོ་)",
+      "fr": "mourut (passé de ཚེ་འཕོ་)",
+      "pl": "zmarł (czas przeszły od ཚེ་འཕོ་)"
+    },
+    "wylie": "tshe 'phos",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dong": {
+    "tib": "དོང་",
+    "tr": {
+      "ru": "пошёл (прош. от འདོང་)",
+      "en": "went (past of འདོང་)",
+      "de": "ging (Vergangenheit von འདོང་)",
+      "fr": "alla (passé de འདོང་)",
+      "pl": "poszedł (czas przeszły od འདོང་)"
+    },
+    "wylie": "dong",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "gang-ba": {
+    "tib": "གང་བ་",
+    "tr": {
+      "ru": "полный",
+      "en": "full",
+      "de": "voll",
+      "fr": "plein",
+      "pl": "pełny"
+    },
+    "wylie": "gang ba",
+    "pos": "adj",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "tshe-'pho": {
+    "tib": "ཚེ་འཕོ་",
+    "tr": {
+      "ru": "умереть",
+      "en": "to die, to pass away",
+      "de": "sterben, verscheiden",
+      "fr": "mourir, trépasser",
+      "pl": "umrzeć, odejść"
+    },
+    "wylie": "tshe 'pho",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'dong": {
+    "tib": "འདོང་",
+    "tr": {
+      "ru": "идти",
+      "en": "to go",
+      "de": "gehen",
+      "fr": "aller",
+      "pl": "iść"
+    },
+    "wylie": "'dong",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'dzad": {
+    "tib": "འཛད་",
+    "tr": {
+      "ru": "иссякать",
+      "en": "to be consumed, to run out",
+      "de": "aufgebraucht werden, zur Neige gehen",
+      "fr": "s’épuiser",
+      "pl": "wyczerpać się, skończyć się"
+    },
+    "wylie": "'dzad",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'ong": {
+    "tib": "འོང་",
+    "tr": {
+      "ru": "приходить",
+      "en": "to come",
+      "de": "kommen",
+      "fr": "venir",
+      "pl": "przychodzić"
+    },
+    "wylie": "'ong",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "lang": {
+    "tib": "ལང་",
+    "tr": {
+      "ru": "вставать, подниматься",
+      "en": "to rise",
+      "de": "sich erheben",
+      "fr": "se lever",
+      "pl": "wstawać"
+    },
+    "wylie": "lang",
+    "pos": "verb",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "lo-thog": {
+    "tib": "ལོ་ཐོག་",
+    "tr": {
+      "ru": "урожай",
+      "en": "harvest, crop",
+      "de": "Ernte",
+      "fr": "récolte",
+      "pl": "plon, zbiory"
+    },
+    "wylie": "lo thog",
+    "pos": "noun",
+    "set": "bialek-04",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 4, p. 76",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "kha-spu": {
+    "tib": "ཁ་སྤུ་",
+    "tr": {
+      "ru": "борода",
+      "en": "beard",
+      "de": "Bart",
+      "fr": "barbe",
+      "pl": "broda"
+    },
+    "wylie": "kha spu",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "byi": {
+    "tib": "བྱི་",
+    "tr": {
+      "ru": "выпали (прош. от འབྱི་)",
+      "en": "fell off (past of འབྱི་)",
+      "de": "fielen aus (Vergangenheit von འབྱི་)",
+      "fr": "tombèrent (passé de འབྱི་)",
+      "pl": "wypadły (czas przeszły od འབྱི་)"
+    },
+    "wylie": "byi",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "skra": {
+    "tib": "སྐྲ་",
+    "tr": {
+      "ru": "волосы",
+      "en": "hair",
+      "de": "Haar",
+      "fr": "cheveux",
+      "pl": "włosy"
+    },
+    "wylie": "skra",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bsams": {
+    "tib": "བསམས་",
+    "tr": {
+      "ru": "подумал (прош. от སེམས་)",
+      "en": "thought (past of སེམས་)",
+      "de": "dachte (Vergangenheit von སེམས་)",
+      "fr": "pensa (passé de སེམས་)",
+      "pl": "pomyślał (czas przeszły od སེམས་)"
+    },
+    "wylie": "bsams",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "snyam": {
+    "tib": "སྙམ་",
+    "tr": {
+      "ru": "мысль; སྙམ་དུ་ думая так",
+      "en": "thought; སྙམ་དུ་ thinking thus",
+      "de": "Gedanke; སྙམ་དུ་ so denkend",
+      "fr": "pensée ; སྙམ་དུ་ en pensant ainsi",
+      "pl": "myśl; སྙམ་དུ་ myśląc tak"
+    },
+    "wylie": "snyam",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "phyung": {
+    "tib": "ཕྱུང་",
+    "tr": {
+      "ru": "выпустил (прош. от འབྱིན་)",
+      "en": "took out (past of འབྱིན་)",
+      "de": "ließ heraus (Vergangenheit von འབྱིན་)",
+      "fr": "fit sortir (passé de འབྱིན་)",
+      "pl": "wypuścił (czas przeszły od འབྱིན་)"
+    },
+    "wylie": "phyung",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bltas": {
+    "tib": "བལྟས་",
+    "tr": {
+      "ru": "посмотрел (прош. от ལྟ་)",
+      "en": "looked (past of ལྟ་)",
+      "de": "blickte (Vergangenheit von ལྟ་)",
+      "fr": "regarda (passé de ལྟ་)",
+      "pl": "spojrzał (czas przeszły od ལྟ་)"
+    },
+    "wylie": "bltas",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bu-tsha": {
+    "tib": "བུ་ཚ་",
+    "tr": {
+      "ru": "потомство",
+      "en": "offspring",
+      "de": "Nachkommenschaft",
+      "fr": "descendance",
+      "pl": "potomstwo"
+    },
+    "wylie": "bu tsha",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "tshud": {
+    "tib": "ཚུད་",
+    "tr": {
+      "ru": "попал (прош. от འཚུད་)",
+      "en": "got into (past of འཚུད་)",
+      "de": "geriet hinein (Vergangenheit von འཚུད་)",
+      "fr": "tomba dans (passé de འཚུད་)",
+      "pl": "wpadł (czas przeszły od འཚུད་)"
+    },
+    "wylie": "tshud",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'dam": {
+    "tib": "འདམ་",
+    "tr": {
+      "ru": "болото",
+      "en": "swamp",
+      "de": "Sumpf",
+      "fr": "marais",
+      "pl": "bagno"
+    },
+    "wylie": "'dam",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "gcig-po": {
+    "tib": "གཅིག་པོ་",
+    "tr": {
+      "ru": "единственный",
+      "en": "only, alone",
+      "de": "einzig, allein",
+      "fr": "seul, unique",
+      "pl": "jedyny, sam"
+    },
+    "wylie": "gcig po",
+    "pos": "adj",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dril": {
+    "tib": "དྲིལ་",
+    "tr": {
+      "ru": "объединились (прош. от འདྲིལ་)",
+      "en": "united (past of འདྲིལ་)",
+      "de": "vereinigten sich (Vergangenheit von འདྲིལ་)",
+      "fr": "s’unirent (passé de འདྲིལ་)",
+      "pl": "połączyli się (czas przeszły od འདྲིལ་)"
+    },
+    "wylie": "dril",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "a-ne": {
+    "tib": "ཨ་ནེ་",
+    "tr": {
+      "ru": "тётя",
+      "en": "aunt",
+      "de": "Tante",
+      "fr": "tante",
+      "pl": "ciotka"
+    },
+    "wylie": "a ne",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "do-smad": {
+    "tib": "དོ་སྨད་",
+    "tr": {
+      "ru": "жена с детьми",
+      "en": "consort and her children",
+      "de": "Gattin und ihre Kinder",
+      "fr": "l’épouse et ses enfants",
+      "pl": "żona z dziećmi"
+    },
+    "wylie": "do smad",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "pha-ming": {
+    "tib": "ཕ་མིང་",
+    "tr": {
+      "ru": "отец и братья",
+      "en": "father and brothers",
+      "de": "Vater und Brüder",
+      "fr": "le père et les frères",
+      "pl": "ojciec i bracia"
+    },
+    "wylie": "pha ming",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bsdad": {
+    "tib": "བསྡད་",
+    "tr": {
+      "ru": "остался (прош. от སྡོད་)",
+      "en": "stayed (past of སྡོད་)",
+      "de": "blieb (Vergangenheit von སྡོད་)",
+      "fr": "resta (passé de སྡོད་)",
+      "pl": "został (czas przeszły od སྡོད་)"
+    },
+    "wylie": "bsdad",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "mdzes-se": {
+    "tib": "མཛེས་སེ་",
+    "tr": {
+      "ru": "Дзесе (имя)",
+      "en": "Dzese (a name)",
+      "de": "Dzese (ein Name)",
+      "fr": "Dzese (un nom)",
+      "pl": "Dzese (imię)"
+    },
+    "wylie": "mdzes se",
+    "pos": "name",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "zhang-po": {
+    "tib": "ཞང་པོ་",
+    "tr": {
+      "ru": "дядя по матери",
+      "en": "maternal uncle",
+      "de": "Onkel mütterlicherseits",
+      "fr": "oncle maternel",
+      "pl": "wuj"
+    },
+    "wylie": "zhang po",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "glang": {
+    "tib": "གླང་",
+    "tr": {
+      "ru": "бык",
+      "en": "ox",
+      "de": "Ochse",
+      "fr": "bœuf",
+      "pl": "wół"
+    },
+    "wylie": "glang",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "sgo": {
+    "tib": "སྒོ་",
+    "tr": {
+      "ru": "дверь",
+      "en": "door",
+      "de": "Tür",
+      "fr": "porte",
+      "pl": "drzwi"
+    },
+    "wylie": "sgo",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "chag": {
+    "tib": "ཆག་",
+    "tr": {
+      "ru": "сломался (прош. от འཆག་)",
+      "en": "broke (past of འཆག་)",
+      "de": "brach (Vergangenheit von འཆག་)",
+      "fr": "se cassa (passé de འཆག་)",
+      "pl": "złamała się (czas przeszły od འཆག་)"
+    },
+    "wylie": "chag",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "khyo": {
+    "tib": "ཁྱོ་",
+    "tr": {
+      "ru": "муж",
+      "en": "husband",
+      "de": "Ehemann",
+      "fr": "mari",
+      "pl": "mąż"
+    },
+    "wylie": "khyo",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bcom-ldan-'das": {
+    "tib": "བཅོམ་ལྡན་འདས་",
+    "tr": {
+      "ru": "Победоносный (Бхагаван, Будда)",
+      "en": "the Victorious One (Bhagavān, the Buddha)",
+      "de": "der Siegreiche (Bhagavān, der Buddha)",
+      "fr": "le Victorieux (Bhagavān, le Bouddha)",
+      "pl": "Zwycięski (Bhagawan, Budda)"
+    },
+    "wylie": "bcom ldan 'das",
+    "pos": "name",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rtag-tu": {
+    "tib": "རྟག་ཏུ་",
+    "tr": {
+      "ru": "всегда",
+      "en": "always",
+      "de": "immer",
+      "fr": "toujours",
+      "pl": "zawsze"
+    },
+    "wylie": "rtag tu",
+    "pos": "adverb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "spyo": {
+    "tib": "སྤྱོ་",
+    "tr": {
+      "ru": "бранить",
+      "en": "to scold",
+      "de": "schelten",
+      "fr": "gronder",
+      "pl": "łajać"
+    },
+    "wylie": "spyo",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "tha-ga-pa": {
+    "tib": "ཐ་ག་པ་",
+    "tr": {
+      "ru": "ткач",
+      "en": "weaver",
+      "de": "Weber",
+      "fr": "tisserand",
+      "pl": "tkacz"
+    },
+    "wylie": "tha ga pa",
+    "pos": "noun",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dbyig-pa-can": {
+    "tib": "དབྱིག་པ་ཅན་",
+    "tr": {
+      "ru": "Йикпачен (имя)",
+      "en": "Yikpachen (a man's name)",
+      "de": "Yikpachen (Name eines Mannes)",
+      "fr": "Yikpachen (nom d’un homme)",
+      "pl": "Jikpaczen (imię mężczyzny)"
+    },
+    "wylie": "dbyig pa can",
+    "pos": "name",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bzung": {
+    "tib": "བཟུང་",
+    "tr": {
+      "ru": "схватил (прош. от འཛིན་)",
+      "en": "seized (past of འཛིན་)",
+      "de": "ergriff (Vergangenheit von འཛིན་)",
+      "fr": "saisit (passé de འཛིན་)",
+      "pl": "schwyciła (czas przeszły od འཛིན་)"
+    },
+    "wylie": "bzung",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'chag": {
+    "tib": "འཆག་",
+    "tr": {
+      "ru": "ломаться",
+      "en": "to break",
+      "de": "zerbrechen",
+      "fr": "se casser",
+      "pl": "łamać się"
+    },
+    "wylie": "'chag",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'dril": {
+    "tib": "འདྲིལ་",
+    "tr": {
+      "ru": "скатывать; གཅིག་ཏུ་འདྲིལ་ объединяться",
+      "en": "to roll together; གཅིག་ཏུ་འདྲིལ་ to unite",
+      "de": "zusammenrollen; གཅིག་ཏུ་འདྲིལ་ sich vereinigen",
+      "fr": "rouler ensemble ; གཅིག་ཏུ་འདྲིལ་ s’unir",
+      "pl": "zwijać razem; གཅིག་ཏུ་འདྲིལ་ połączyć się"
+    },
+    "wylie": "'dril",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'byi": {
+    "tib": "འབྱི་",
+    "tr": {
+      "ru": "выпадать",
+      "en": "to fall off",
+      "de": "ausfallen",
+      "fr": "tomber (cheveux, poils)",
+      "pl": "wypadać"
+    },
+    "wylie": "'byi",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'byin": {
+    "tib": "འབྱིན་",
+    "tr": {
+      "ru": "извлекать, выпускать",
+      "en": "to take out, to bring forth",
+      "de": "herausholen, hervorbringen",
+      "fr": "faire sortir, extraire",
+      "pl": "wyjmować, wydobywać"
+    },
+    "wylie": "'byin",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "'tshud": {
+    "tib": "འཚུད་",
+    "tr": {
+      "ru": "попадать",
+      "en": "to get into, to enter",
+      "de": "hineingeraten, eintreten",
+      "fr": "tomber dans, entrer",
+      "pl": "wpadać, wchodzić"
+    },
+    "wylie": "'tshud",
+    "pos": "verb",
+    "set": "bialek-05",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 5, p. 87",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dri-ma": {
+    "tib": "དྲི་མ་",
+    "tr": {
+      "ru": "нечистота, грязь",
+      "en": "impurity, stain",
+      "de": "Unreinheit, Makel",
+      "fr": "impureté, souillure",
+      "pl": "nieczystość, skaza"
+    },
+    "wylie": "dri ma",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "rdul": {
+    "tib": "རྡུལ་",
+    "tr": {
+      "ru": "пыль",
+      "en": "dust",
+      "de": "Staub",
+      "fr": "poussière",
+      "pl": "kurz"
+    },
+    "wylie": "rdul",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "byin": {
+    "tib": "བྱིན་",
+    "tr": {
+      "ru": "дал; дай! (прош. и повел. от སྦྱིན་)",
+      "en": "gave; give! (past and imperative of སྦྱིན་)",
+      "de": "gab; gib! (Vergangenheit und Imperativ von སྦྱིན་)",
+      "fr": "donna ; donne ! (passé et impératif de སྦྱིན་)",
+      "pl": "dał; daj! (czas przeszły i rozkaźnik od སྦྱིན་)"
+    },
+    "wylie": "byin",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "slar": {
+    "tib": "སླར་",
+    "tr": {
+      "ru": "обратно, снова",
+      "en": "back, again",
+      "de": "zurück, wieder",
+      "fr": "en arrière, de nouveau",
+      "pl": "z powrotem, znowu"
+    },
+    "wylie": "slar",
+    "pos": "adverb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "da": {
+    "tib": "ད་",
+    "tr": {
+      "ru": "теперь",
+      "en": "now",
+      "de": "jetzt",
+      "fr": "maintenant",
+      "pl": "teraz"
+    },
+    "wylie": "da",
+    "pos": "adverb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "zo": {
+    "tib": "ཟོ་",
+    "tr": {
+      "ru": "ешь! (повел. от ཟ་)",
+      "en": "eat! (imperative of ཟ་)",
+      "de": "iss! (Imperativ von ཟ་)",
+      "fr": "mange ! (impératif de ཟ་)",
+      "pl": "jedz! (rozkaźnik od ཟ་)"
+    },
+    "wylie": "zo",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "yan-lag": {
+    "tib": "ཡན་ལག་",
+    "tr": {
+      "ru": "конечность",
+      "en": "limb",
+      "de": "Glied",
+      "fr": "membre",
+      "pl": "kończyna"
+    },
+    "wylie": "yan lag",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "ser-ga": {
+    "tib": "སེར་ག་",
+    "tr": {
+      "ru": "трещина",
+      "en": "crack, fissure",
+      "de": "Riss, Spalt",
+      "fr": "fissure, crevasse",
+      "pl": "pęknięcie, szczelina"
+    },
+    "wylie": "ser ga",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "gral": {
+    "tib": "གྲལ་",
+    "tr": {
+      "ru": "ряд",
+      "en": "row",
+      "de": "Reihe",
+      "fr": "rangée",
+      "pl": "rząd"
+    },
+    "wylie": "gral",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "dbus": {
+    "tib": "དབུས་",
+    "tr": {
+      "ru": "середина",
+      "en": "middle, centre",
+      "de": "Mitte",
+      "fr": "milieu, centre",
+      "pl": "środek"
+    },
+    "wylie": "dbus",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bklags": {
+    "tib": "བཀླགས་",
+    "tr": {
+      "ru": "прочитал (прош. от ཀློག་)",
+      "en": "read (past of ཀློག་)",
+      "de": "las (Vergangenheit von ཀློག་)",
+      "fr": "lut (passé de ཀློག་)",
+      "pl": "przeczytał (czas przeszły od ཀློག་)"
+    },
+    "wylie": "bklags",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "zhal-chems": {
+    "tib": "ཞལ་ཆེམས་",
+    "tr": {
+      "ru": "завещание",
+      "en": "testament",
+      "de": "Testament",
+      "fr": "testament",
+      "pl": "testament"
+    },
+    "wylie": "zhal chems",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "yi-ge": {
+    "tib": "ཡི་གེ་",
+    "tr": {
+      "ru": "письмо, текст",
+      "en": "letter, written text",
+      "de": "Brief, Schriftstück",
+      "fr": "lettre, texte écrit",
+      "pl": "list, tekst pisany"
+    },
+    "wylie": "yi ge",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "bskur": {
+    "tib": "བསྐུར་",
+    "tr": {
+      "ru": "послал (прош. от སྐུར་)",
+      "en": "sent (past of སྐུར་)",
+      "de": "schickte (Vergangenheit von སྐུར་)",
+      "fr": "envoya (passé de སྐུར་)",
+      "pl": "posłali (czas przeszły od སྐུར་)"
+    },
+    "wylie": "bskur",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "me-shing": {
+    "tib": "མེ་ཤིང་",
+    "tr": {
+      "ru": "дрова",
+      "en": "firewood",
+      "de": "Brennholz",
+      "fr": "bois de chauffage",
+      "pl": "drewno na opał"
+    },
+    "wylie": "me shing",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "long-ba": {
+    "tib": "ལོང་བ་",
+    "tr": {
+      "ru": "слепой",
+      "en": "blind",
+      "de": "blind",
+      "fr": "aveugle",
+      "pl": "ślepy"
+    },
+    "wylie": "long ba",
+    "pos": "adj",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "khyim-bdag": {
+    "tib": "ཁྱིམ་བདག་",
+    "tr": {
+      "ru": "домохозяин",
+      "en": "householder",
+      "de": "Hausherr",
+      "fr": "maître de maison",
+      "pl": "gospodarz"
+    },
+    "wylie": "khyim bdag",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "brnyas": {
+    "tib": "བརྙས་",
+    "tr": {
+      "ru": "занял (прош. от བརྙ་)",
+      "en": "borrowed (past of བརྙ་)",
+      "de": "lieh sich (Vergangenheit von བརྙ་)",
+      "fr": "emprunta (passé de བརྙ་)",
+      "pl": "pożyczył (czas przeszły od བརྙ་)"
+    },
+    "wylie": "brnyas",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "chu-bo": {
+    "tib": "ཆུ་བོ་",
+    "tr": {
+      "ru": "река",
+      "en": "river",
+      "de": "Fluss",
+      "fr": "rivière",
+      "pl": "rzeka"
+    },
+    "wylie": "chu bo",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "lhung": {
+    "tib": "ལྷུང་",
+    "tr": {
+      "ru": "упал (прош. от ལྟུང་)",
+      "en": "fell (past of ལྟུང་)",
+      "de": "fiel (Vergangenheit von ལྟུང་)",
+      "fr": "tomba (passé de ལྟུང་)",
+      "pl": "upadł (czas przeszły od ལྟུང་)"
+    },
+    "wylie": "lhung",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "ste'u": {
+    "tib": "སྟེའུ་",
+    "tr": {
+      "ru": "топор",
+      "en": "axe",
+      "de": "Axt",
+      "fr": "hache",
+      "pl": "siekiera"
+    },
+    "wylie": "ste'u",
+    "pos": "noun",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "kun-dga'-bo": {
+    "tib": "ཀུན་དགའ་བོ་",
+    "tr": {
+      "ru": "Ананда",
+      "en": "Ānanda",
+      "de": "Ānanda",
+      "fr": "Ānanda",
+      "pl": "Ananda"
+    },
+    "wylie": "kun dga' bo",
+    "pos": "name",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "de-lta-bu": {
+    "tib": "དེ་ལྟ་བུ་",
+    "tr": {
+      "ru": "такой",
+      "en": "such, of that kind",
+      "de": "solch, derartig",
+      "fr": "tel, de ce genre",
+      "pl": "taki, tego rodzaju"
+    },
+    "wylie": "de lta bu",
+    "pos": "adj",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "sdug": {
+    "tib": "སྡུག་",
+    "tr": {
+      "ru": "красивый",
+      "en": "pretty, nice",
+      "de": "hübsch, schön",
+      "fr": "joli, beau",
+      "pl": "ładny"
+    },
+    "wylie": "sdug",
+    "pos": "adj",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "klog": {
+    "tib": "ཀློག་",
+    "tr": {
+      "ru": "читать",
+      "en": "to read",
+      "de": "lesen",
+      "fr": "lire",
+      "pl": "czytać"
+    },
+    "wylie": "klog",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "brnya": {
+    "tib": "བརྙ་",
+    "tr": {
+      "ru": "занимать, брать взаймы",
+      "en": "to borrow",
+      "de": "sich leihen",
+      "fr": "emprunter",
+      "pl": "pożyczać"
+    },
+    "wylie": "brnya",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "ltung": {
+    "tib": "ལྟུང་",
+    "tr": {
+      "ru": "падать",
+      "en": "to fall",
+      "de": "fallen",
+      "fr": "tomber",
+      "pl": "spadać"
+    },
+    "wylie": "ltung",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  "sbyin": {
+    "tib": "སྦྱིན་",
+    "tr": {
+      "ru": "давать",
+      "en": "to give",
+      "de": "geben",
+      "fr": "donner",
+      "pl": "dawać"
+    },
+    "wylie": "sbyin",
+    "pos": "verb",
+    "set": "bialek-06",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
     "trOrigin": {
       "ru": "machine",
       "en": "textbook",

@@ -2,8 +2,10 @@
 
 A static web app (plain HTML/CSS/JS, ES modules, no build step) for learning
 Classical Tibetan by assembling sentences from tiles. Content comes from the
-Rangjung Yeshe Institute *Classical Tibetan Grammar Handbook* (TLAN 101),
-lessons 1–7: 744 words and 768 sentences. Interface and translations in
+Rangjung Yeshe Institute *Classical Tibetan Grammar Handbook* (TLAN 101,
+lessons 1–7) and from the exercises of lessons 1–6 of Joanna Bialek's
+*A Textbook in Classical Tibetan* (Routledge 2022): 882 words and 866
+sentences in 13 sets. Interface and translations in
 English, Russian, German, French and Polish (English is the textbook's
 language; the other four are machine translations from it).
 
@@ -49,8 +51,8 @@ under the key `tib-progress`.
 
 ```
 content/            authoring files (pipe-separated text, UTF-8)
-  sets.tsv          lesson list
-  words*.tsv        dictionary: tib | en | ru | pos | page | flags
+  sets.tsv          set list: id | en | ru | book label (optional)
+  words*.tsv        dictionary: tib | en | ru | pos | page | flags (words-bialek.tsv: the Bialek sets)
   sentences*.tsv    sentences: page | tib | enOrigin | en | ru | noteEn | noteRu
   lang-<xx>.tsv     de/fr/pl translations keyed by the English text
   review-notes.md   hand-written notes that go into CONTENT_REVIEW.md
