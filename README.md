@@ -73,8 +73,7 @@ scripts/
   smoke.mjs         Playwright smoke test used in CI
   lib/wylie.mjs     re-exports site/src/engine/wylie.js for the scripts
   tools/pdf-tibetan-text.py  recovers Tibetan text from the textbook PDFs
-  tools/make-icon.py         builds icons/icon.svg from the font's glyph outlines
-  tools/icon-png.mjs         renders icons/icon.svg to the PNG icons (Playwright)
+  tools/brand-assets.py      builds the PNG icons and img/bg-clouds.webp from the logo and background artwork (Pillow)
 redirect/           one-page redirect published to GitHub Pages after the move (index.html + self-removing sw.js)
 server/
   nginx/tibetan.itjoy.space.conf  vhost (caching headers, gzip, /api/ proxy)
@@ -82,7 +81,8 @@ server/
 site/
   index.html, styles.css, config.js, manifest.webmanifest, sw.js, privacy.html (privacy policy, linked from the Google consent screen)
   fonts/            Noto Serif Tibetan (OFL)
-  icons/            app icons
+  icons/            app icons (PNG, from the logo artwork)
+  img/              background artwork (bg-clouds.webp)
   data/             words.json, sentences.json, sets.json, sentences.generated.json
   src/app.js        bootstrap, theme, section menu, hash router (#/play #/play/hard #/dict #/grammar #/stats #/settings #/support)
   src/engine/       pure logic: next.js, progress.js, streak.js, check.js, merge.js, tib.js, wylie.js, hard.js
