@@ -18,7 +18,9 @@ if (!base) {
     const path = decodeURIComponent(new URL(req.url, 'http://x').pathname);
     const file = join(ROOT, path === '/' ? 'index.html' : path);
     try {
-      const body = await readFile(file);
+      let body = await readFile(file);
+      // never reach the report API from the test: serve config.js with an empty REPORT_API
+      if (path === '/config.js') body = body.toString('utf8').replace(/REPORT_API: '[^']*'/, "REPORT_API: ''");
       res.writeHead(200, { 'Content-Type': TYPES[extname(file)] || 'application/octet-stream' });
       res.end(body);
     } catch {

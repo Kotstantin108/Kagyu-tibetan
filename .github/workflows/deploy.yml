@@ -31,7 +31,7 @@ jobs:
       - name: Validate course data
         run: node scripts/validate.mjs
       - name: Run unit tests
-        run: node --test "site/src/**/*.test.js"
+        run: npm test
       - name: Install Playwright
         run: npm install --no-save playwright && npx playwright install --with-deps chromium
       - name: Browser smoke test

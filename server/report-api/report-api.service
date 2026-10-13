@@ -1,0 +1,32 @@
+[Unit]
+Description=report-api: files GitHub issues for Tibetan Tiles problem reports
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=report-api
+Group=report-api
+EnvironmentFile=/etc/report-api.env
+Environment=HOST=127.0.0.1 PORT=8091 NODE_ENV=production
+ExecStart=/usr/bin/node /opt/report-api/report-api.mjs
+Restart=always
+RestartSec=5
+# hardening: the service needs the network and nothing else
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6
+LockPersonality=true
+MemoryDenyWriteExecute=false
+SystemCallArchitectures=native
+CapabilityBoundingSet=
+AmbientCapabilities=
+
+[Install]
+WantedBy=multi-user.target

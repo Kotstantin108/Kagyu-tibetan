@@ -87,6 +87,18 @@ export default {
     search: 'Szukaj w uwagach',
     count: 'uwag: {n}',
   },
+  report: {
+    title: 'Zgłoś problem',
+    what: 'Co jest nie tak?',
+    hint: 'Wystarczy kilka słów: literówka, błędne tłumaczenie, brakujące słowo…',
+    send: 'Wyślij',
+    sending: 'Wysyłanie…',
+    thanks: 'Dziękujemy, zgłoszenie zostało wysłane.',
+    view: 'Otwórz issue',
+    failed: 'Nie udało się wysłać. Otwórz issue ręcznie:',
+    openIssue: 'otwórz issue na GitHubie',
+    tooShort: 'Napisz co najmniej 10 znaków.',
+  },
   stats: {
     streak: 'Seria',
     days: '{n} dni',

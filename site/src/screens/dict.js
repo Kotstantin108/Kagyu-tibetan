@@ -5,7 +5,7 @@ import { pickTr } from '../i18n/index.js';
 import { setWordStatus, wordStatus, isDue, STATUS } from '../engine/progress.js';
 import { renderTib } from '../engine/tib.js';
 import { localDay } from '../engine/streak.js';
-import { wordIssueUrl } from '../report.js';
+import { wordIssueUrl, reportControl } from '../report.js';
 
 export function renderDict(root, ctx) {
   const { store, data, t } = ctx;
@@ -68,8 +68,8 @@ export function renderDict(root, ctx) {
           for (const s of examples) {
             exBox.append(h('div', { class: 'example' }, h('span', { class: 'tib' }, renderTib(s.words, dict)), h('span', { class: 'tr' }, pickTr(s.tr, ctx.lang).text)));
           }
-          const issue = wordIssueUrl(ctx.config, id, w, tr.text, ctx.lang);
-          if (issue) exBox.append(h('p', { class: 'fine' }, h('a', { href: issue, target: '_blank', rel: 'noopener' }, t('play.report'))));
+          const report = reportControl(ctx, { kind: 'word', id, tib: w.tib, translation: tr.text, fallbackUrl: wordIssueUrl(ctx.config, id, w, tr.text, ctx.lang) });
+          if (report) exBox.append(h('p', { class: 'fine' }, report));
         }
       },
     }, t('dict.examples', { n: examples.length })) : null;

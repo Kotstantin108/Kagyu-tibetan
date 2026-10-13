@@ -87,6 +87,18 @@ export default {
     search: 'Hinweise durchsuchen',
     count: '{n} Hinweise',
   },
+  report: {
+    title: 'Problem melden',
+    what: 'Was stimmt nicht?',
+    hint: 'Ein paar Worte genügen: ein Tippfehler, eine falsche Übersetzung, ein fehlendes Wort…',
+    send: 'Senden',
+    sending: 'Wird gesendet…',
+    thanks: 'Danke, die Meldung wurde gesendet.',
+    view: 'Issue öffnen',
+    failed: 'Senden fehlgeschlagen. Bitte das Issue von Hand anlegen:',
+    openIssue: 'Issue auf GitHub öffnen',
+    tooShort: 'Bitte mindestens 10 Zeichen schreiben.',
+  },
   stats: {
     streak: 'Serie',
     days: '{n} Tage',

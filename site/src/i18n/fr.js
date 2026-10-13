@@ -87,6 +87,18 @@ export default {
     search: 'Rechercher dans les notes',
     count: '{n} notes',
   },
+  report: {
+    title: 'Signaler un problème',
+    what: 'Qu’est-ce qui ne va pas ?',
+    hint: 'Quelques mots suffisent : une faute de frappe, une mauvaise traduction, un mot manquant…',
+    send: 'Envoyer',
+    sending: 'Envoi…',
+    thanks: 'Merci, le signalement a été envoyé.',
+    view: 'Ouvrir l’issue',
+    failed: 'Envoi impossible. Ouvrez l’issue manuellement :',
+    openIssue: 'ouvrir l’issue sur GitHub',
+    tooShort: 'Écrivez au moins 10 caractères.',
+  },
   stats: {
     streak: 'Série',
     days: '{n} jours',

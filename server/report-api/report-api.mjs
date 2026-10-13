@@ -1,0 +1,194 @@
+// report-api: files a GitHub issue for a "report a problem" sent from the app,
+// so that users without a GitHub account can report a wrong sentence or word.
+//
+// One file, no dependencies, Node >= 20. Listens on 127.0.0.1:8091 behind nginx
+// (`location /api/`). Configuration comes from the environment (systemd unit
+// reads /etc/report-api.env):
+//   GITHUB_TOKEN     fine-grained PAT, Issues: write on the repository (required)
+//   GITHUB_REPO      owner/name, default Kotstantin108/Kagyu-tibetan
+//   ALLOWED_ORIGINS  comma-separated, default https://tibetan.itjoy.space
+//   HOST, PORT       default 127.0.0.1, 8091
+//
+// POST /api/report  { kind: 'sentence'|'word', id, tib, translation, lang, message, page, website }
+//   -> 200 { ok: true, url }   (url of the issue, or of the comment when the id already has an open issue)
+//   -> 400 { ok: false, error }  invalid input
+//   -> 429 { ok: false, error: 'rate_limit' }  more than 5 reports an hour from one address
+//   -> 502 { ok: false, error: 'github' }  GitHub did not accept it
+// GET  /api/health  -> 200 { ok: true }
+//
+// Spam protection: 5 requests per hour per IP (in memory), the hidden `website`
+// field must stay empty, and one issue per id per day: an open issue with the
+// same title gets a comment instead of a duplicate.
+
+import http from 'node:http';
+import { pathToFileURL } from 'node:url';
+
+export const LIMITS = { messageMin: 10, messageMax: 2000, tibMax: 400, translationMax: 1000, bodyMax: 16 * 1024, perHour: 5 };
+const ID_RE = /^[a-z0-9'\-.]+$/;
+const LANG_RE = /^[a-z]{2}$/;
+
+/** Validate and normalise a report; returns { ok: true, report } or { ok: false, error }. */
+export function validateReport(body) {
+  if (!body || typeof body !== 'object') return { ok: false, error: 'bad_json' };
+  if (typeof body.website === 'string' && body.website.trim()) return { ok: false, error: 'spam' };
+  const kind = body.kind === 'word' ? 'word' : body.kind === 'sentence' ? 'sentence' : null;
+  if (!kind) return { ok: false, error: 'kind' };
+  const id = String(body.id || '');
+  if (!ID_RE.test(id) || id.length > 80) return { ok: false, error: 'id' };
+  const message = String(body.message || '').replace(/\r\n?/g, '\n').trim();
+  if (message.length < LIMITS.messageMin || message.length > LIMITS.messageMax) return { ok: false, error: 'message' };
+  const clip = (v, max) => String(v || '').replace(/\s+/g, ' ').trim().slice(0, max);
+  const tib = clip(body.tib, LIMITS.tibMax);
+  const translation = clip(body.translation, LIMITS.translationMax);
+  const lang = LANG_RE.test(String(body.lang || '')) ? String(body.lang) : 'en';
+  const page = clip(body.page, 200);
+  return { ok: true, report: { kind, id, tib, translation, lang, message, page } };
+}
+
+export function issueTitle(r) {
+  return r.kind === 'word' ? `Word ${r.id}: ${r.tib}` : `Sentence ${r.id}: ${r.tib}`;
+}
+
+export function issueBody(r, { comment = false } = {}) {
+  const lines = [];
+  if (comment) lines.push('Another report for the same item:', '');
+  lines.push(
+    `**${r.kind === 'word' ? 'Word' : 'Sentence'} id:** ${r.id}`,
+    `**Tibetan:** ${r.tib}`,
+    `**Translation (${r.lang}):** ${r.translation}`,
+    r.page ? `**Page:** ${r.page}` : null,
+    '',
+    '**What is wrong:**',
+    '',
+    r.message.split('\n').map((l) => `> ${l}`).join('\n'),
+    '',
+    '_Sent from the app via report-api._',
+  );
+  return lines.filter((l) => l !== null).join('\n');
+}
+
+/** Sliding one-hour window per key, kept in memory. */
+export class RateLimiter {
+  constructor(limit = LIMITS.perHour, windowMs = 3600_000) { this.limit = limit; this.windowMs = windowMs; this.hits = new Map(); }
+  /** True when the request is allowed; records it. */
+  allow(key, now = Date.now()) {
+    const since = now - this.windowMs;
+    const list = (this.hits.get(key) || []).filter((t) => t > since);
+    if (list.length >= this.limit) { this.hits.set(key, list); return false; }
+    list.push(now);
+    this.hits.set(key, list);
+    if (this.hits.size > 10_000) for (const [k, v] of this.hits) if (!v.some((t) => t > since)) this.hits.delete(k);
+    return true;
+  }
+}
+
+/** One issue per id per day: remembers the issue created for an id (in memory). */
+export class DailyIndex {
+  constructor() { this.map = new Map(); }
+  get(id, now = Date.now()) { const e = this.map.get(id); return e && now - e.at < 86_400_000 ? e : null; }
+  set(id, number, url, now = Date.now()) { this.map.set(id, { number, url, at: now }); }
+}
+
+export function makeGitHub({ token, repo, fetchFn = fetch }) {
+  const base = 'https://api.github.com';
+  const headers = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'tibetan-report-api', 'Content-Type': 'application/json' };
+  async function call(method, path, body) {
+    const res = await fetchFn(`${base}${path}`, { method, headers, body: body ? JSON.stringify(body) : undefined });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(`GitHub ${method} ${path}: ${res.status} ${data.message || ''}`);
+    return data;
+  }
+  return {
+    /** Open issue with this exact title, or null. */
+    async findOpen(title) {
+      const q = `repo:${repo} is:issue is:open in:title "${title.replace(/"/g, ' ')}"`;
+      const data = await call('GET', `/search/issues?per_page=5&q=${encodeURIComponent(q)}`);
+      const hit = (data.items || []).find((it) => it.title === title);
+      return hit ? { number: hit.number, url: hit.html_url } : null;
+    },
+    async createIssue(title, body) {
+      const it = await call('POST', `/repos/${repo}/issues`, { title, body, labels: ['content'] });
+      return { number: it.number, url: it.html_url };
+    },
+    async comment(number, body) {
+      const c = await call('POST', `/repos/${repo}/issues/${number}/comments`, { body });
+      return { url: c.html_url };
+    },
+  };
+}
+
+/** File the report: a comment when the id already has an open issue (or one from today), otherwise a new issue. */
+export async function fileReport(report, { github, index, log = () => {} }) {
+  const title = issueTitle(report);
+  let existing = index.get(report.id);
+  if (!existing) {
+    try { existing = await github.findOpen(title); } catch (err) { log(`search failed: ${err.message}`); }
+  }
+  if (existing) {
+    const c = await github.comment(existing.number, issueBody(report, { comment: true }));
+    index.set(report.id, existing.number, existing.url);
+    return { url: c.url, duplicate: true };
+  }
+  const it = await github.createIssue(title, issueBody(report));
+  index.set(report.id, it.number, it.url);
+  return { url: it.url, duplicate: false };
+}
+
+function readJson(req, max) {
+  return new Promise((resolve, reject) => {
+    let size = 0;
+    const chunks = [];
+    req.on('data', (c) => { size += c.length; if (size > max) { reject(new Error('too_large')); req.destroy(); } else chunks.push(c); });
+    req.on('end', () => { try { resolve(JSON.parse(Buffer.concat(chunks).toString('utf8') || 'null')); } catch { reject(new Error('bad_json')); } });
+    req.on('error', reject);
+  });
+}
+
+export function createServer({ github, allowedOrigins, limiter = new RateLimiter(), index = new DailyIndex(), log = console.log }) {
+  const send = (res, status, data, origin) => {
+    const headers = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' };
+    if (origin) { headers['Access-Control-Allow-Origin'] = origin; headers.Vary = 'Origin'; }
+    res.writeHead(status, headers);
+    res.end(JSON.stringify(data));
+  };
+  return http.createServer(async (req, res) => {
+    const url = new URL(req.url, 'http://localhost');
+    const origin = req.headers.origin;
+    const allowed = origin && allowedOrigins.includes(origin) ? origin : null;
+    if (origin && !allowed) return send(res, 403, { ok: false, error: 'origin' });
+    if (req.method === 'OPTIONS') {
+      res.writeHead(204, { 'Access-Control-Allow-Origin': allowed || '', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Max-Age': '600', Vary: 'Origin' });
+      return res.end();
+    }
+    if (req.method === 'GET' && url.pathname === '/api/health') return send(res, 200, { ok: true }, allowed);
+    if (req.method !== 'POST' || url.pathname !== '/api/report') return send(res, 404, { ok: false, error: 'not_found' }, allowed);
+    const ip = String(req.headers['x-real-ip'] || (req.headers['x-forwarded-for'] || '').split(',')[0] || req.socket.remoteAddress || '').trim();
+    if (!limiter.allow(ip)) return send(res, 429, { ok: false, error: 'rate_limit' }, allowed);
+    let body;
+    try { body = await readJson(req, LIMITS.bodyMax); } catch (err) { return send(res, err.message === 'too_large' ? 413 : 400, { ok: false, error: err.message }, allowed); }
+    const v = validateReport(body);
+    if (!v.ok) return send(res, v.error === 'spam' ? 200 : 400, v.error === 'spam' ? { ok: true, url: '' } : { ok: false, error: v.error }, allowed);
+    try {
+      const out = await fileReport(v.report, { github, index, log });
+      log(`${v.report.kind} ${v.report.id} -> ${out.url}${out.duplicate ? ' (comment)' : ''}`);
+      return send(res, 200, { ok: true, url: out.url }, allowed);
+    } catch (err) {
+      log(`github error: ${err.message}`);
+      return send(res, 502, { ok: false, error: 'github' }, allowed);
+    }
+  });
+}
+
+function main() {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) { console.error('GITHUB_TOKEN is not set'); process.exit(1); }
+  const repo = process.env.GITHUB_REPO || 'Kotstantin108/Kagyu-tibetan';
+  const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'https://tibetan.itjoy.space').split(',').map((s) => s.trim()).filter(Boolean);
+  const host = process.env.HOST || '127.0.0.1';
+  const port = Number(process.env.PORT || 8091);
+  const server = createServer({ github: makeGitHub({ token, repo }), allowedOrigins, log: (m) => console.log(new Date().toISOString(), m) });
+  server.listen(port, host, () => console.log(`report-api listening on http://${host}:${port} for ${repo}, origins: ${allowedOrigins.join(' ')}`));
+  for (const sig of ['SIGINT', 'SIGTERM']) process.on(sig, () => server.close(() => process.exit(0)));
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main();

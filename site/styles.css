@@ -170,6 +170,11 @@ select, input[type="text"], input[type="search"], textarea { color: var(--text);
 .action.small { flex: 0 0 auto; padding: 8px 12px; font-size: .82rem; }
 .linkish { background: none; border: 0; padding: 6px 0; color: var(--brand); font-size: .85rem; text-decoration: underline; min-height: 32px; }
 .feedback .why { color: inherit; font-weight: 700; padding: 4px 6px; min-height: 0; }
+.report-btn { font-size: inherit; padding: 0; min-height: 0; vertical-align: baseline; }
+.report-form .field span { font-weight: 700; color: var(--brand); }
+.report-text { width: 100%; border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; font: inherit; background: var(--input-bg); color: var(--text); resize: vertical; min-height: 96px; }
+.report-status { min-height: 1.2em; margin: 0 0 4px; }
+.toast a { text-decoration: underline; }
 .grammar-help .note-row { padding: 10px 0 12px; }
 .grammar-help .note-row:first-of-type { border-top: 0; padding-top: 4px; }
 .shortcuts { margin-top: 10px; }

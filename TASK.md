@@ -67,6 +67,14 @@ CSS-токены в `site/styles.css` под `:root[data-theme="dark"]` и
 
 ### Задача 2. «Сообщить об ошибке» с автоматическим заведением issue в GitHub
 
+Состояние 2026-10-13: код готов и проверен (`server/report-api/` — сервис, unit, install.sh,
+README, 7 тестов; клиент — popover в `site/src/report.js`, кнопки в игре и словаре, i18n;
+смоук подменяет `REPORT_API` на пустой). Осталось: получить от пользователя fine-grained PAT
+(Issues: write на этот репозиторий), положить в `/etc/report-api.env` на сервере, запустить
+`install.sh` (его вызывает `setup.sh` из задачи 4), прописать `REPORT_API:
+'https://tibetan.itjoy.space/api/report'` в `site/config.js`, проверить
+`curl https://tibetan.itjoy.space/api/health` и отправку из приложения.
+
 Цель: пользователь без аккаунта GitHub жмёт кнопку в игре или словаре, пишет пару слов,
 и в репозитории появляется issue. Статический сайт не может хранить токен GitHub,
 поэтому нужен крошечный эндпоинт на нашем сервере (см. задачу 4; задачу 2 делать после

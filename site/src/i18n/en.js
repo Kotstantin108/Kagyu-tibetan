@@ -87,6 +87,18 @@ export default {
     search: 'Search the notes',
     count: '{n} notes',
   },
+  report: {
+    title: 'Report a problem',
+    what: 'What is wrong?',
+    hint: 'A couple of words is enough: a typo, a wrong translation, a missing word…',
+    send: 'Send',
+    sending: 'Sending…',
+    thanks: 'Thank you, the report has been sent.',
+    view: 'Open the issue',
+    failed: 'Could not send it. Open the issue manually:',
+    openIssue: 'open the issue on GitHub',
+    tooShort: 'Please write at least 10 characters.',
+  },
   stats: {
     streak: 'Streak',
     days: '{n} days',

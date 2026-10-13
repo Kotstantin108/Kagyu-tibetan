@@ -13,7 +13,7 @@ import { revealWord, wordError, recordSolved, setWordStatus, setSetting, wordSta
 import { registerSolve, localDay } from '../engine/streak.js';
 import { hardWords } from '../engine/hard.js';
 import { relatedNotes, noteForWord } from '../engine/grammar.js';
-import { sentenceIssueUrl, wordIssueUrl } from '../report.js';
+import { sentenceIssueUrl, wordIssueUrl, reportControl } from '../report.js';
 import { needsOnboarding, showOnboarding } from './onboarding.js';
 
 const EXERCISES = ['tiles', 'meaning', 'wylie'];
@@ -188,7 +188,7 @@ export function renderPlay(root, ctx) {
     const tr = pickTr(w.tr, ctx.lang);
     let close = null;
     const mark = (status) => { store.update((p) => setWordStatus(p, wordId, status)); close(); render(); };
-    const issue = wordIssueUrl(ctx.config, wordId, w, tr.text, ctx.lang);
+    const report = reportControl(ctx, { kind: 'word', id: wordId, tib: w.tib, translation: tr.text, fallbackUrl: wordIssueUrl(ctx.config, wordId, w, tr.text, ctx.lang) });
     close = popover(h('div', {},
       h('p', { class: 'big-tib' }, w.tib),
       h('div', { class: 'wylie' }, w.wylie, ' · ', t(`status.${wordStatus(store.get(), wordId)}`)),
@@ -197,7 +197,7 @@ export function renderPlay(root, ctx) {
         h('button', { type: 'button', class: 'action primary', onClick: () => mark(STATUS.KNOWN) }, t('play.know')),
         h('button', { type: 'button', class: 'action', onClick: () => mark(STATUS.LEARNING) }, t('play.learning')),
       ),
-      issue ? h('p', { class: 'fine' }, h('a', { href: issue, target: '_blank', rel: 'noopener' }, t('play.report'))) : null,
+      report ? h('p', { class: 'fine' }, report) : null,
     ));
   }
 
@@ -388,8 +388,8 @@ export function renderPlay(root, ctx) {
       const note = pickTr(s.note, ctx.lang);
       if (note.text) lesson.append(h('div', {}, h('strong', {}, t('play.note'), ': '), tibText(note.text)));
     }
-    const issue = sentenceIssueUrl(ctx.config, s, tib, tr.text, ctx.lang);
-    lesson.append(h('div', { class: 'source' }, `${t('play.source')}: ${s.source}`, issue ? [' · ', h('a', { href: issue, target: '_blank', rel: 'noopener' }, t('play.report'))] : null));
+    const report = reportControl(ctx, { kind: 'sentence', id: s.id, tib, translation: tr.text, fallbackUrl: sentenceIssueUrl(ctx.config, s, tib, tr.text, ctx.lang) });
+    lesson.append(h('div', { class: 'source' }, `${t('play.source')}: ${s.source}`, report ? [' · ', report] : null));
     lesson.hidden = false;
     render();
     btnNext.focus();
