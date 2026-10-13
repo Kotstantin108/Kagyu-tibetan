@@ -6,9 +6,12 @@ import { h, toast, tibText } from '../ui.js';
 const METHODS = [
   // key in config.SUPPORT -> i18n label; `value` is shown in a copyable box, `link` as a button
   { key: 'paypal', label: 'support.paypal', link: true },
-  { key: 'cardGe', label: 'support.cardGe' },
-  { key: 'ibanGe', label: 'support.ibanGe' },
+  { key: 'sbp', label: 'support.sbp' },
   { key: 'cardRu', label: 'support.cardRu' },
+  { key: 'ibanGe', label: 'support.ibanGe' },
+  { key: 'bankGe', label: 'support.bankGe', plain: true },
+  { key: 'swiftGe', label: 'support.swiftGe' },
+  { key: 'cardGe', label: 'support.cardGe' },
   { key: 'other', label: 'support.other' },
 ];
 
@@ -26,6 +29,7 @@ export function renderSupport(root, ctx) {
       ));
       continue;
     }
+    if (m.plain) { rows.push(h('p', { class: 'helper support-plain' }, `${t(m.label)}: ${value}`)); continue; }
     const copy = async () => {
       try { await navigator.clipboard.writeText(value); toast(t('support.copied')); } catch { toast(value, 5000); }
     };

@@ -6,8 +6,9 @@
 // REPORT_API:       endpoint of the report-api service (server/report-api) that files issues
 //                   for users without a GitHub account; empty = use the prefilled-issue link only.
 // SUPPORT:          donation details for the "Support the project" page (#/support);
-//                   empty entries are hidden. paypal = a https://paypal.me/... link,
-//                   cardGe / cardRu = card numbers, ibanGe = IBAN, recipient = name on the account.
+//                   empty entries are hidden. paypal = a https://paypal.me/... link, sbp = phone number
+//                   for the Russian fast-payment system, cardGe / cardRu = card numbers, ibanGe + bankGe +
+//                   swiftGe = Georgian bank transfer, recipient = name on the account.
 // VERSION:          written by the deploy workflow (git sha); "dev" locally.
 self.TIB_CONFIG = {
   SITE_URL: 'https://tibetan.itjoy.space',
@@ -16,11 +17,14 @@ self.TIB_CONFIG = {
   REPORT_API: '',
   SUPPORT: {
     paypal: '',
-    cardGe: '',
-    ibanGe: '',
+    sbp: '+7 962 222-18-13',
     cardRu: '',
+    ibanGe: 'GE40CD0360000030890752',
+    bankGe: 'JSC Credo Bank, Georgia',
+    swiftGe: '',
+    cardGe: '',
     other: '',
-    recipient: '',
+    recipient: 'Konstantin Vazhenin',
   },
   VERSION: 'dev',
 };

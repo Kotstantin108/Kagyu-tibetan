@@ -105,6 +105,18 @@ const headerRow = await page.evaluate(() => {
   return { sameLine: tops.every((r) => Math.abs(r.top + r.height / 2 - tops[0].top - tops[0].height / 2) < 12), size: Math.min(btn.width, btn.height) };
 });
 check(headerRow.sameLine, 'header: brand, theme button and language select on one line');
+check((await page.$eval('#menu-toggle', (b) => b.getBoundingClientRect().right <= window.innerWidth && b.getBoundingClientRect().width >= 44)), 'header: menu button inside the viewport');
+await page.click('#menu-toggle');
+await page.waitForSelector('#tabs:not([hidden])');
+const menuLinks = await page.$$eval('#tabs a', (as) => as.map((a) => a.getAttribute('href')));
+check(menuLinks.length === 6 && menuLinks.includes('#/support'), 'menu lists six sections');
+check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'open menu: no horizontal scroll');
+await page.click('#tabs a[data-route="dict"]');
+await page.waitForSelector('.panel');
+check((await page.$eval('#tabs', (n) => n.hidden)), 'menu closes after choosing a section');
+check((await page.$eval('#section-title', (e) => e.textContent.trim().length > 0)), 'section title shown in the header');
+await page.goto(`${base}/index.html#/play`);
+await page.waitForSelector('.rack .tile');
 check(headerRow.size >= 44, 'header: theme button is at least 44px');
 const before = await page.evaluate(() => ({ dark: document.documentElement.dataset.theme === 'dark', color: document.querySelector('meta[name="theme-color"]').content }));
 await page.click('#theme-toggle');

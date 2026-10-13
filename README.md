@@ -84,9 +84,9 @@ site/
   fonts/            Noto Serif Tibetan (OFL)
   icons/            app icons
   data/             words.json, sentences.json, sets.json, sentences.generated.json
-  src/app.js        bootstrap, theme, hash router (#/play #/play/hard #/dict #/grammar #/stats #/settings)
+  src/app.js        bootstrap, theme, section menu, hash router (#/play #/play/hard #/dict #/grammar #/stats #/settings #/support)
   src/engine/       pure logic: next.js, progress.js, streak.js, check.js, merge.js, tib.js, wylie.js, hard.js
-  src/screens/      play, onboarding, dict, grammar, stats, settings
+  src/screens/      play, onboarding, dict, grammar, stats, settings, support
   src/i18n/         ru.js en.js de.js fr.js pl.js (+ a test that keys match)
   src/sync.js       optional Google Drive sync
   src/transfer.js   progress <-> text code
@@ -150,7 +150,8 @@ paused, sign in again" and local work continues.
 ## Deploy
 
 Pushing to `main` runs the validator, the unit tests and the browser smoke
-test (job `check`), then two deploy jobs:
+test (job `check`), then two deploy jobs (server set up and first deployed on
+2026-10-13):
 
 - `deploy-server` stamps the commit hash into `site/config.js` (shown in
   settings and used as the service-worker cache name) and `rsync`s `site/` to

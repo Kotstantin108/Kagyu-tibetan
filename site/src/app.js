@@ -45,6 +45,8 @@ function applyLang() {
   sel.value = ctx.lang;
   const btn = document.getElementById('theme-toggle');
   if (btn) { const label = ctx.t('settings.themeToggle'); btn.setAttribute('aria-label', label); btn.title = label; }
+  const mb = document.getElementById('menu-toggle');
+  if (mb) { mb.setAttribute('aria-label', ctx.t('nav.menu')); mb.title = ctx.t('nav.menu'); }
 }
 
 function effectiveDark() {
@@ -69,6 +71,20 @@ function applyTheme() {
 document.getElementById('lang-select').addEventListener('change', (e) => {
   store.update((p) => setSetting(p, 'lang', e.target.value));
 });
+
+// ---- section menu (hamburger) ----
+const menu = document.getElementById('tabs');
+const menuBtn = document.getElementById('menu-toggle');
+function setMenu(open) {
+  menu.hidden = !open;
+  menuBtn.setAttribute('aria-expanded', String(open));
+  document.documentElement.classList.toggle('menu-open', open);
+  if (open) { const a = menu.querySelector('a.active') || menu.querySelector('a'); if (a) a.focus(); }
+}
+menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); } });
+document.addEventListener('click', (e) => { if (!menu.hidden && !menu.contains(e.target) && !menuBtn.contains(e.target)) setMenu(false); });
 
 document.getElementById('theme-toggle').addEventListener('click', () => {
   const next = effectiveDark() ? 'light' : 'dark';
@@ -95,7 +111,9 @@ function render() {
   if (!ctx.data) return;
   const r = route();
   ctx.param = r.param;
-  document.querySelectorAll('#tabs a').forEach((a) => a.classList.toggle('active', a.dataset.route === r.name));
+  document.querySelectorAll('#tabs a').forEach((a) => { const on = a.dataset.route === r.name; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  document.getElementById('section-title').textContent = ctx.t(`nav.${r.name}`);
+  setMenu(false);
   if (unmount) { try { unmount(); } catch { /* ignore */ } unmount = null; }
   clear(view);
   const res = screens[r.name](view, ctx);

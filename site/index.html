@@ -19,21 +19,26 @@
 <body>
 <header class="header">
   <div class="header-inner">
-    <a class="brand" href="#/play"><span class="seal" aria-hidden="true">ཨོཾ</span><span class="brand-text"><span class="brand-title" data-i18n="appTitle">Tibetan Tiles</span><span class="brand-sub" data-i18n="appTagline"></span></span></a>
+    <a class="brand" href="#/play"><span class="seal" aria-hidden="true">ཨོཾ</span><span class="brand-text"><span class="brand-title" data-i18n="appTitle">Tibetan Tiles</span><span class="section-title" id="section-title"></span><span class="brand-sub" data-i18n="appTagline"></span></span></a>
     <div class="header-tools">
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Dark theme" aria-pressed="false">
         <svg class="icon-sun" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
       </button>
       <label class="lang-switch"><span class="visually-hidden" data-i18n="settings.language">Language</span><select id="lang-select" aria-label="Language"></select></label>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="tabs" aria-haspopup="true">
+        <svg class="icon-menu" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
     </div>
   </div>
-  <nav class="tabs" id="tabs" aria-label="Sections">
-    <a href="#/play" data-route="play" data-i18n="nav.play">Play</a>
-    <a href="#/dict" data-route="dict" data-i18n="nav.dict">Dictionary</a>
-    <a href="#/grammar" data-route="grammar" data-i18n="nav.grammar">Grammar</a>
-    <a href="#/stats" data-route="stats" data-i18n="nav.stats">Progress</a>
-    <a href="#/settings" data-route="settings" data-i18n="nav.settings">Settings</a>
+  <nav class="menu" id="tabs" aria-label="Sections" hidden>
+    <a href="#/play" data-route="play"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="8" height="10" rx="2"/><rect x="13" y="7" width="8" height="10" rx="2"/><path d="M7 11v2M17 11v2"/></svg><span data-i18n="nav.play">Play</span></a>
+    <a href="#/dict" data-route="dict"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20M9 7h7M9 10h5"/></svg><span data-i18n="nav.dict">Dictionary</span></a>
+    <a href="#/grammar" data-route="grammar"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="1.5"/><path d="M6 10h12M6 13h8M2.5 9h-1M22.5 9h-1M2.5 15h-1M22.5 15h-1"/></svg><span data-i18n="nav.grammar">Grammar</span></a>
+    <a href="#/stats" data-route="stats"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v6.5M12 14.5V21M3 12h6.5M14.5 12H21M5.6 5.6l4.6 4.6M13.8 13.8l4.6 4.6M18.4 5.6l-4.6 4.6M10.2 13.8l-4.6 4.6"/></svg><span data-i18n="nav.stats">Progress</span></a>
+    <a href="#/settings" data-route="settings"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 15.5 7 12 10.5 8.5 7z"/><path d="M12 13.5 15.5 17 12 20.5 8.5 17z"/><path d="M5 8.5 8.5 12 5 15.5 1.5 12z"/><path d="M19 8.5 22.5 12 19 15.5 15.5 12z"/><path d="M8.5 7 5 8.5M15.5 7 19 8.5M8.5 17 5 15.5M15.5 17 19 15.5"/></svg><span data-i18n="nav.settings">Settings</span></a>
+    <a href="#/support" data-route="support"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4 4 0 0 1 12 8a4 4 0 0 1 7.5 2.5c0 5.4-7.5 10-7.5 10z"/></svg><span data-i18n="nav.support">Support</span></a>
   </nav>
 </header>
 <main id="view" class="page" aria-live="polite">
