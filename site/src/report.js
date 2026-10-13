@@ -43,6 +43,14 @@ export function wordIssueUrl(config, id, word, translation, lang) {
   return `${base}?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=content`;
 }
 
+/** Generic issue link (bug or idea about the app itself). */
+export function appIssueUrl(config) {
+  const base = issuesBase(config);
+  return base ? `${base}?labels=bug` : '';
+}
+
+const CATEGORIES = ['translation', 'bug', 'idea'];
+
 /** POST the report to REPORT_API; resolves to { url } or throws. */
 export async function sendReport(config, report, fetchFn = fetch) {
   const api = (config && config.REPORT_API) || '';
@@ -57,7 +65,7 @@ export async function sendReport(config, report, fetchFn = fetch) {
  * The "Report a problem" control for a sentence or a word:
  * a button opening the report form when REPORT_API is set, otherwise the
  * prefilled-issue link (or null when neither is configured).
- * info: { kind: 'sentence'|'word', id, tib, translation, fallbackUrl }
+ * info: { kind: 'sentence'|'word'|'app', id, tib, translation, fallbackUrl }
  */
 export function reportControl(ctx, info) {
   const { t, config } = ctx;
@@ -69,7 +77,14 @@ export function reportControl(ctx, info) {
 
 export function openReportForm(ctx, info) {
   const { t, config } = ctx;
-  const text = h('textarea', { class: 'report-text', rows: 4, maxlength: 2000, placeholder: t('report.hint'), 'aria-label': t('report.what') });
+  const isApp = info.kind === 'app';
+  const text = h('textarea', { class: 'report-text', rows: 4, maxlength: 2000, placeholder: t(isApp ? 'report.hintApp' : 'report.hint'), 'aria-label': t('report.what') });
+  // category: translation errors go to the content label, bugs and ideas to their own
+  const catName = `report-cat-${Date.now()}`;
+  const catInputs = CATEGORIES.map((c) => h('input', { type: 'radio', name: catName, value: c, checked: c === (isApp ? 'bug' : 'translation') }));
+  const cats = h('div', { class: 'cats', role: 'radiogroup', 'aria-label': t('report.category') },
+    ...CATEGORIES.map((c, i) => h('label', { class: 'cat' }, catInputs[i], h('span', {}, t(`report.cat${c[0].toUpperCase()}${c.slice(1)}`)))));
+  const category = () => (catInputs.find((r) => r.checked) || catInputs[0]).value;
   // honeypot: hidden from people, filled by bots; the server drops such reports
   const honey = h('input', { class: 'visually-hidden', type: 'text', name: 'website', tabindex: -1, autocomplete: 'off', 'aria-hidden': 'true' });
   const status = h('p', { class: 'fine report-status', role: 'status' });
@@ -84,7 +99,7 @@ export function openReportForm(ctx, info) {
     btnSend.disabled = true;
     status.textContent = t('report.sending');
     try {
-      const { url } = await sendReport(config, { kind: info.kind, id: info.id, tib: info.tib, translation: info.translation, lang: ctx.lang, message, page: location.hash, website: honey.value });
+      const { url } = await sendReport(config, { kind: info.kind, category: category(), id: info.id, tib: info.tib, translation: info.translation, lang: ctx.lang, message, page: location.hash, website: honey.value });
       close();
       toast(h('span', {}, t('report.thanks'), url ? [' ', h('a', { href: url, target: '_blank', rel: 'noopener', style: 'color:inherit' }, t('report.view'))] : null), 6000);
     } catch {
@@ -98,8 +113,10 @@ export function openReportForm(ctx, info) {
 
   close = popover(h('div', { class: 'report-form' },
     h('h3', {}, t('report.title')),
-    h('p', { class: 'big-tib', style: 'font-size:1.6rem' }, info.tib),
-    h('p', { class: 'tr' }, info.translation),
+    isApp ? null : h('p', { class: 'big-tib', style: 'font-size:1.6rem' }, info.tib),
+    isApp ? null : h('p', { class: 'tr' }, info.translation),
+    h('div', { class: 'label' }, t('report.category')),
+    cats,
     h('label', { class: 'field' }, h('span', {}, t('report.what')), text),
     honey,
     status,

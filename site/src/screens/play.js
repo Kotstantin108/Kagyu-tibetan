@@ -94,7 +94,6 @@ export function renderPlay(root, ctx) {
         shortcuts,
       ),
     ),
-    h('p', { class: 'support-line' }, h('a', { href: '#/support' }, t('support.line'))),
   );
 
   // ---- helpers ----

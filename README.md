@@ -6,8 +6,8 @@ Rangjung Yeshe Institute *Classical Tibetan Grammar Handbook* (TLAN 101,
 lessons 1–7) and from the exercises of lessons 1–11 of Joanna Bialek's
 *A Textbook in Classical Tibetan* (Routledge 2022): 1005 words and 939
 sentences in 18 sets. Interface and translations in
-English, Russian, German, French and Polish (English is the textbook's
-language; the other four are machine translations from it).
+English, Russian, German, French and Polish (English is the default and the
+textbook's language; the other four are machine translations from it).
 
 Live: https://tibetan.itjoy.space/
 
@@ -39,8 +39,10 @@ another device".)
   the tiles as an option, 44px tap targets, no horizontal scroll at 360px.
 - **Progress stays on the device**; move it with a file, a text code (settings
   → "Move to another device"), or optional Google Drive sync.
-- **Report a problem** sends a short message to the report service (an issue
-  appears in this repository) or opens a prefilled GitHub issue.
+- **Report a problem** on every screen (footer and menu) and on each sentence
+  or word: a short form with a category (translation error → label `content`,
+  bug → `bug`, idea → `enhancement`) sent to the report service, which files
+  the issue in this repository; without the service it opens a prefilled issue.
 - **Support the project** (`#/support`): the app is made in support of the
   Buddhist centre in Batumi; payment details come from `SUPPORT` in
   `site/config.js` (PayPal link, cards, IBAN; empty entries are hidden).

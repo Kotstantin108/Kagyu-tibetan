@@ -156,6 +156,11 @@ h1, h2, h3, .prompt, .brand-title, .stat .num { font-family: var(--serif); }
 .menu a:hover { background: var(--goldsoft); }
 .menu a.active { background: var(--primary); color: var(--on-primary); }
 .menu a.active svg { color: var(--on-primary); }
+.menu .menu-report { border-top: 1px solid var(--sep); margin-top: 4px; padding-top: 10px; border-radius: 0 0 10px 10px; }
+.report-form .cats { display: grid; gap: 6px; margin: 4px 0 12px; }
+.report-form .cat { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--input-bg); cursor: pointer; }
+.report-form .cat:has(input:checked) { border-color: var(--primary); background: var(--goldsoft); }
+.report-form .cat input { accent-color: var(--primary); width: 18px; height: 18px; margin: 0; }
 
 /* ------------------------------------------------------------------ */
 /* Page & panels                                                       */

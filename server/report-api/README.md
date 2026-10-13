@@ -6,11 +6,12 @@ account can report a wrong sentence or word.
 
 - Listens on `127.0.0.1:8091`; nginx proxies `https://tibetan.itjoy.space/api/`
   to it (see `server/nginx/tibetan.itjoy.space.conf`).
-- `POST /api/report` with JSON `{ kind: 'sentence'|'word', id, tib, translation,
-  lang, message, page }` → `{ ok: true, url }` (the issue or comment), or
+- `POST /api/report` with JSON `{ kind: 'sentence'|'word'|'app', category:
+  'translation'|'bug'|'idea', id, tib, translation, lang, message, page }` → `{ ok: true, url }` (the issue or comment), or
   `400` / `429` / `502` with `{ ok: false, error }`. `GET /api/health` → `{ ok: true }`.
-- Creates the issue `Sentence s123: <tib>` / `Word <id>: <tib>` with the label
-  `content`. If an open issue with the same title exists (GitHub search) or one
+- Creates the issue `Sentence s123: <tib>` / `Word <id>: <tib>`, or for general
+  reports `Bug: <first line>` / `Idea: <first line>`, labelled by category
+  (`content`, `bug`, `enhancement`). If an open issue with the same title exists (GitHub search) or one
   was created for this id today, the report is added as a comment instead.
 - Spam: 5 requests per hour per IP, the hidden `website` field must be empty,
   only the origin `https://tibetan.itjoy.space` is allowed (CORS).

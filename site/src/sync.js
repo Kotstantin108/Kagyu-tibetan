@@ -3,14 +3,18 @@
 // - Google Identity Services token client, scope drive.appdata only
 // - progress.json in the appDataFolder
 // - sync on sign-in, on tab focus, and debounced after changes
-// - an expired token is re-requested silently; if that fails the status is
-//   "paused" and local work continues
+// - the access token (valid for an hour) is kept in localStorage, so a reload
+//   does not ask Google again; automatic syncs (page load, tab focus, after
+//   changes) never open the Google window: without a valid token they set the
+//   status to "paused" and the learner signs in again from Settings
+// - a 401 from Drive drops the token and pauses in the same way
 
 import { mergeProgress } from './engine/merge.js';
 
 const SCOPE = 'https://www.googleapis.com/auth/drive.appdata';
 const FILE_NAME = 'progress.json';
 const ENABLED_KEY = 'tib-sync-enabled';
+const TOKEN_KEY = 'tib-sync-token';
 const GSI_SRC = 'https://accounts.google.com/gsi/client';
 const DEBOUNCE_MS = 4000;
 
@@ -27,6 +31,10 @@ export function createSync(ctx) {
 
   const enabled = () => { try { return localStorage.getItem(ENABLED_KEY) === '1'; } catch { return false; } };
   const setEnabled = (v) => { try { v ? localStorage.setItem(ENABLED_KEY, '1') : localStorage.removeItem(ENABLED_KEY); } catch { /* ignore */ } };
+  const loadToken = () => { try { const t = JSON.parse(localStorage.getItem(TOKEN_KEY) || 'null'); return t && t.value && t.expiresAt > Date.now() ? t : null; } catch { return null; } };
+  const saveToken = (t) => { try { t ? localStorage.setItem(TOKEN_KEY, JSON.stringify(t)) : localStorage.removeItem(TOKEN_KEY); } catch { /* ignore */ } };
+  const validToken = () => (token && token.expiresAt > Date.now() ? token.value : null);
+  token = loadToken();
   const emit = () => { for (const fn of listeners) fn(st); };
   const setStatus = (status) => { st.status = status; emit(); };
 
@@ -54,6 +62,7 @@ export function createSync(ctx) {
           const resolve = pendingResolve; pendingResolve = null;
           if (resp && resp.access_token) {
             token = { value: resp.access_token, expiresAt: Date.now() + (Number(resp.expires_in || 3600) - 60) * 1000 };
+            saveToken(token);
             resolve && resolve(token.value);
           } else {
             resolve && resolve(null);
@@ -65,26 +74,28 @@ export function createSync(ctx) {
     return tokenClient;
   }
 
-  /** Get an access token; silent=true never shows a prompt. */
-  async function getToken(silent) {
-    if (token && token.expiresAt > Date.now()) return token.value;
+  /**
+   * Get an access token. `auto` (page load, focus, debounce) never opens the
+   * Google window: it only returns a still-valid token or null. A user action
+   * (sign in, sync now) may open it; `prompt: ''` lets Google close it by
+   * itself when the account has already consented.
+   */
+  async function getToken({ auto = true, consent = false } = {}) {
+    const cached = validToken();
+    if (cached) return cached;
+    if (auto) return null;
     const client = await ensureClient();
     return new Promise((resolve) => {
       pendingResolve = resolve;
-      try { client.requestAccessToken({ prompt: silent ? '' : 'consent' }); } catch { resolve(null); }
+      try { client.requestAccessToken({ prompt: consent ? 'consent' : '' }); } catch { resolve(null); }
     });
   }
 
-  async function api(path, opts = {}, silent = true) {
-    let tok = await getToken(silent);
+  async function api(path, opts = {}) {
+    const tok = validToken();
     if (!tok) throw new Error('no-token');
-    let res = await fetch(path, { ...opts, headers: { ...(opts.headers || {}), Authorization: `Bearer ${tok}` } });
-    if (res.status === 401) {
-      token = null;
-      tok = await getToken(true);
-      if (!tok) throw new Error('no-token');
-      res = await fetch(path, { ...opts, headers: { ...(opts.headers || {}), Authorization: `Bearer ${tok}` } });
-    }
+    const res = await fetch(path, { ...opts, headers: { ...(opts.headers || {}), Authorization: `Bearer ${tok}` } });
+    if (res.status === 401) { token = null; saveToken(null); throw new Error('no-token'); }
     if (!res.ok) throw new Error(`drive ${res.status}`);
     return res;
   }
@@ -120,8 +131,9 @@ export function createSync(ctx) {
     fileId = json.id || null;
   }
 
-  async function sync(silent = true) {
+  async function sync(auto = true) {
     if (!enabled() || busy) return;
+    if (auto && !validToken()) { setStatus('paused'); return; }
     busy = true;
     setStatus('syncing');
     try {
@@ -139,7 +151,6 @@ export function createSync(ctx) {
     } finally {
       busy = false;
     }
-    void silent;
   }
 
   function schedule() {
@@ -152,8 +163,8 @@ export function createSync(ctx) {
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && enabled()) sync(true); });
 
   if (enabled()) {
-    st.status = 'syncing';
-    // try to continue silently
+    // continue with the stored token; without one the status is "paused" until the learner signs in again
+    st.status = validToken() ? 'syncing' : 'paused';
     sync(true);
   }
 
@@ -163,17 +174,21 @@ export function createSync(ctx) {
     subscribe(fn) { listeners.add(fn); return () => listeners.delete(fn); },
     async signIn() {
       setStatus('syncing');
-      const tok = await getToken(false);
-      if (!tok) { setStatus('off'); return; }
+      // first sign-in shows Google's consent screen; a repeat (token expired) only re-confirms the account
+      const tok = await getToken({ auto: false, consent: !enabled() });
+      if (!tok) { setStatus(enabled() ? 'paused' : 'off'); return; }
       setEnabled(true);
       await sync(false);
     },
     signOut() {
       setEnabled(false);
       try { if (token && window.google) window.google.accounts.oauth2.revoke(token.value, () => {}); } catch { /* ignore */ }
-      token = null; fileId = null;
+      token = null; saveToken(null); fileId = null;
       setStatus('off');
     },
-    syncNow() { return sync(false); },
+    async syncNow() {
+      if (!validToken()) { const tok = await getToken({ auto: false }); if (!tok) { setStatus('paused'); return; } }
+      return sync(false);
+    },
   };
 }

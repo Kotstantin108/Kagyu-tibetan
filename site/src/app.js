@@ -1,8 +1,8 @@
 // Entry point: loads data, sets up the store, language, theme and hash router.
 
 import { createStore } from './store.js';
-import { makeT, detectLang, STRINGS } from './i18n/index.js';
-import { LANGS } from './engine/config.js';
+import { makeT, STRINGS } from './i18n/index.js';
+import { LANGS, DEFAULT_LANG } from './engine/config.js';
 import { setSetting } from './engine/progress.js';
 import { h, clear, toast } from './ui.js';
 import { renderPlay } from './screens/play.js';
@@ -12,6 +12,7 @@ import { renderStats } from './screens/stats.js';
 import { renderSettings } from './screens/settings.js';
 import { renderSupport } from './screens/support.js';
 import { createSync } from './sync.js';
+import { openReportForm, appIssueUrl } from './report.js';
 
 const view = document.getElementById('view');
 const store = createStore();
@@ -27,9 +28,10 @@ const ctx = {
   navigate(route) { location.hash = `#/${route}`; },
 };
 
+// English by default; the learner picks another interface language in the header.
 function currentLang() {
   const saved = store.get().settings.lang;
-  return LANGS.includes(saved) ? saved : detectLang(navigator.language);
+  return LANGS.includes(saved) ? saved : DEFAULT_LANG;
 }
 
 function applyLang() {
@@ -118,6 +120,7 @@ function render() {
   clear(view);
   const res = screens[r.name](view, ctx);
   if (typeof res === 'function') unmount = res;
+  view.append(pageFooter());
   window.scrollTo(0, 0);
 }
 
@@ -141,6 +144,16 @@ function registerServiceWorker() {
     });
   }).catch(() => { /* offline support is optional */ });
 }
+
+// Under every screen: support the project, report a problem.
+function reportApp() { openReportForm(ctx, { kind: 'app', id: 'app', tib: '', translation: '', fallbackUrl: appIssueUrl(ctx.config) }); }
+function pageFooter() {
+  const report = ctx.config.REPORT_API
+    ? h('button', { type: 'button', class: 'linkish report-btn', id: 'report-app', onClick: reportApp }, ctx.t('play.report'))
+    : h('a', { href: appIssueUrl(ctx.config), target: '_blank', rel: 'noopener', id: 'report-app' }, ctx.t('play.report'));
+  return h('p', { class: 'support-line' }, h('a', { href: '#/support' }, ctx.t('support.line')), ' · ', report);
+}
+document.getElementById('report-menu').addEventListener('click', (e) => { e.preventDefault(); setMenu(false); reportApp(); });
 
 // Shown only on the old GitHub Pages address while it still serves the app
 // (until the redirect replaces it; see README, "Server").

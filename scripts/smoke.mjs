@@ -94,7 +94,9 @@ for (const route of ['dict', 'grammar', 'stats', 'settings', 'support']) {
   await page.goto(`${base}/index.html#/${route}`);
   await page.waitForSelector('.panel');
   check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), `#/${route}: no horizontal scroll`);
+  check((await page.$('#report-app')) !== null, `#/${route}: "report a problem" control in the footer`);
 }
+check((await page.evaluate(() => document.documentElement.lang)) === 'en', 'interface language defaults to English');
 
 // theme toggle in the header: brand, button and language select on one line; click switches the theme
 await page.goto(`${base}/index.html#/play`);
@@ -109,7 +111,7 @@ check((await page.$eval('#menu-toggle', (b) => b.getBoundingClientRect().right <
 await page.click('#menu-toggle');
 await page.waitForSelector('#tabs:not([hidden])');
 const menuLinks = await page.$$eval('#tabs a', (as) => as.map((a) => a.getAttribute('href')));
-check(menuLinks.length === 6 && menuLinks.includes('#/support'), 'menu lists six sections');
+check(menuLinks.length === 7 && menuLinks.includes('#/support') && menuLinks.includes('#report'), 'menu lists six sections and "report a problem"');
 check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'open menu: no horizontal scroll');
 await page.click('#tabs a[data-route="dict"]');
 await page.waitForSelector('.panel');

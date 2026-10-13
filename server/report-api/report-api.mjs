@@ -9,7 +9,8 @@
 //   ALLOWED_ORIGINS  comma-separated, default https://tibetan.itjoy.space
 //   HOST, PORT       default 127.0.0.1, 8091
 //
-// POST /api/report  { kind: 'sentence'|'word', id, tib, translation, lang, message, page, website }
+// POST /api/report  { kind: 'sentence'|'word'|'app', category: 'translation'|'bug'|'idea',
+//                     id, tib, translation, lang, message, page, website }
 //   -> 200 { ok: true, url }   (url of the issue, or of the comment when the id already has an open issue)
 //   -> 400 { ok: false, error }  invalid input
 //   -> 429 { ok: false, error: 'rate_limit' }  more than 5 reports an hour from one address
@@ -17,24 +18,27 @@
 // GET  /api/health  -> 200 { ok: true }
 //
 // Spam protection: 5 requests per hour per IP (in memory), the hidden `website`
-// field must stay empty, and one issue per id per day: an open issue with the
-// same title gets a comment instead of a duplicate.
+// field must stay empty, and one issue per sentence/word per day: an open issue
+// with the same title gets a comment instead of a duplicate. Labels: translation
+// -> content, bug -> bug, idea -> enhancement.
 
 import http from 'node:http';
 import { pathToFileURL } from 'node:url';
 
 export const LIMITS = { messageMin: 10, messageMax: 2000, tibMax: 400, translationMax: 1000, bodyMax: 16 * 1024, perHour: 5 };
 const ID_RE = /^[a-z0-9'\-.]+$/;
+export const CATEGORIES = { translation: { label: 'content', title: 'Translation' }, bug: { label: 'bug', title: 'Bug' }, idea: { label: 'enhancement', title: 'Idea' } };
 const LANG_RE = /^[a-z]{2}$/;
 
 /** Validate and normalise a report; returns { ok: true, report } or { ok: false, error }. */
 export function validateReport(body) {
   if (!body || typeof body !== 'object') return { ok: false, error: 'bad_json' };
   if (typeof body.website === 'string' && body.website.trim()) return { ok: false, error: 'spam' };
-  const kind = body.kind === 'word' ? 'word' : body.kind === 'sentence' ? 'sentence' : null;
+  const kind = ['word', 'sentence', 'app'].includes(body.kind) ? body.kind : null;
   if (!kind) return { ok: false, error: 'kind' };
-  const id = String(body.id || '');
+  const id = kind === 'app' ? 'app' : String(body.id || '');
   if (!ID_RE.test(id) || id.length > 80) return { ok: false, error: 'id' };
+  const category = CATEGORIES[body.category] ? body.category : kind === 'app' ? 'bug' : 'translation';
   const message = String(body.message || '').replace(/\r\n?/g, '\n').trim();
   if (message.length < LIMITS.messageMin || message.length > LIMITS.messageMax) return { ok: false, error: 'message' };
   const clip = (v, max) => String(v || '').replace(/\s+/g, ' ').trim().slice(0, max);
@@ -42,20 +46,29 @@ export function validateReport(body) {
   const translation = clip(body.translation, LIMITS.translationMax);
   const lang = LANG_RE.test(String(body.lang || '')) ? String(body.lang) : 'en';
   const page = clip(body.page, 200);
-  return { ok: true, report: { kind, id, tib, translation, lang, message, page } };
+  return { ok: true, report: { kind, category, id, tib, translation, lang, message, page } };
 }
 
 export function issueTitle(r) {
+  if (r.kind === 'app') {
+    const first = r.message.split('\n')[0].trim().replace(/\s+/g, ' ');
+    return `${CATEGORIES[r.category].title}: ${first.length > 70 ? first.slice(0, 69).trimEnd() + '…' : first}`;
+  }
   return r.kind === 'word' ? `Word ${r.id}: ${r.tib}` : `Sentence ${r.id}: ${r.tib}`;
+}
+
+export function issueLabels(r) {
+  return [CATEGORIES[r.category].label];
 }
 
 export function issueBody(r, { comment = false } = {}) {
   const lines = [];
   if (comment) lines.push('Another report for the same item:', '');
   lines.push(
-    `**${r.kind === 'word' ? 'Word' : 'Sentence'} id:** ${r.id}`,
-    `**Tibetan:** ${r.tib}`,
-    `**Translation (${r.lang}):** ${r.translation}`,
+    `**Type:** ${CATEGORIES[r.category].title}`,
+    r.kind !== 'app' ? `**${r.kind === 'word' ? 'Word' : 'Sentence'} id:** ${r.id}` : null,
+    r.kind !== 'app' ? `**Tibetan:** ${r.tib}` : null,
+    r.kind !== 'app' ? `**Translation (${r.lang}):** ${r.translation}` : `**Language:** ${r.lang}`,
     r.page ? `**Page:** ${r.page}` : null,
     '',
     '**What is wrong:**',
@@ -106,8 +119,8 @@ export function makeGitHub({ token, repo, fetchFn = fetch }) {
       const hit = (data.items || []).find((it) => it.title === title);
       return hit ? { number: hit.number, url: hit.html_url } : null;
     },
-    async createIssue(title, body) {
-      const it = await call('POST', `/repos/${repo}/issues`, { title, body, labels: ['content'] });
+    async createIssue(title, body, labels = ['content']) {
+      const it = await call('POST', `/repos/${repo}/issues`, { title, body, labels });
       return { number: it.number, url: it.html_url };
     },
     async comment(number, body) {
@@ -120,8 +133,9 @@ export function makeGitHub({ token, repo, fetchFn = fetch }) {
 /** File the report: a comment when the id already has an open issue (or one from today), otherwise a new issue. */
 export async function fileReport(report, { github, index, log = () => {} }) {
   const title = issueTitle(report);
-  let existing = index.get(report.id);
-  if (!existing) {
+  // one issue per item per day: sentences and words are deduplicated, general reports never are
+  let existing = report.kind === 'app' ? null : index.get(report.id);
+  if (!existing && report.kind !== 'app') {
     try { existing = await github.findOpen(title); } catch (err) { log(`search failed: ${err.message}`); }
   }
   if (existing) {
@@ -129,8 +143,8 @@ export async function fileReport(report, { github, index, log = () => {} }) {
     index.set(report.id, existing.number, existing.url);
     return { url: c.url, duplicate: true };
   }
-  const it = await github.createIssue(title, issueBody(report));
-  index.set(report.id, it.number, it.url);
+  const it = await github.createIssue(title, issueBody(report), issueLabels(report));
+  if (report.kind !== 'app') index.set(report.id, it.number, it.url);
   return { url: it.url, duplicate: false };
 }
 

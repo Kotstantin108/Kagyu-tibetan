@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validateReport, issueTitle, issueBody, RateLimiter, DailyIndex, fileReport, createServer, LIMITS } from './report-api.mjs';
+import { validateReport, issueTitle, issueBody, issueLabels, RateLimiter, DailyIndex, fileReport, createServer, LIMITS } from './report-api.mjs';
 
 const good = { kind: 'sentence', id: 's123', tib: 'ང་སློབ་མ་ཡིན།', translation: 'I am a student.', lang: 'ru', message: 'The translation misses the subject.', page: '#/play' };
 
@@ -10,6 +10,25 @@ test('validateReport accepts a good report and normalises it', () => {
   assert.equal(v.report.tib, 'ང་སློབ་མ་ཡིན།');
   assert.equal(v.report.lang, 'en');
   assert.equal(validateReport({ ...good, kind: 'word', id: "bla-ma'i.2" }).ok, true);
+  assert.equal(v.report.category, 'translation');
+  const app = validateReport({ kind: 'app', category: 'idea', message: 'Please add a night mode schedule.', lang: 'de' });
+  assert.equal(app.ok, true);
+  assert.deepEqual([app.report.id, app.report.category, app.report.tib], ['app', 'idea', '']);
+  assert.equal(validateReport({ kind: 'app', category: 'nonsense', message: 'Something is broken here.' }).report.category, 'bug');
+});
+
+test('general reports: title from the first line, labels by category, never deduplicated', async () => {
+  const r = validateReport({ kind: 'app', category: 'bug', message: 'Tiles overlap on a narrow phone\nSteps: open the dictionary…' }).report;
+  assert.equal(issueTitle(r), 'Bug: Tiles overlap on a narrow phone');
+  assert.deepEqual(issueLabels(r), ['bug']);
+  assert.deepEqual(issueLabels({ ...r, category: 'idea' }), ['enhancement']);
+  assert.match(issueBody(r), /\*\*Type:\*\* Bug/);
+  const created = [];
+  const github = { async findOpen() { throw new Error('must not search'); }, async createIssue(t, b, labels) { created.push(labels); return { number: created.length, url: `u${created.length}` }; }, async comment() { throw new Error('no'); } };
+  const index = new DailyIndex();
+  await fileReport(r, { github, index });
+  await fileReport(r, { github, index });
+  assert.deepEqual(created, [['bug'], ['bug']]);
 });
 
 test('validateReport rejects bad input', () => {
