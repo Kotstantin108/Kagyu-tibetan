@@ -50,8 +50,9 @@ another device".)
   or word: a short form with a category (translation error → label `content`,
   bug → `bug`, idea → `enhancement`) sent to the report service, which files
   the issue in this repository; without the service it opens a prefilled issue.
-- **Support the project** (`#/support`): the app is made in support of the
-  Buddhist centre in Batumi; payment details come from `SUPPORT` in
+- **Support the centre** (`#/support`): the app is a free gift to the
+  Buddhist centre in Batumi and is not funded by donations; the page invites a
+  thank-you donation to the centre. Payment details come from `SUPPORT` in
   `site/config.js` (PayPal link, cards, IBAN; empty entries are hidden).
 
 ## Run locally
