@@ -14,7 +14,7 @@ self.TIB_CONFIG = {
   SITE_URL: 'https://tibetan.itjoy.space',
   GOOGLE_CLIENT_ID: '',
   REPO_URL: 'https://github.com/Kotstantin108/Kagyu-tibetan',
-  REPORT_API: '',
+  REPORT_API: 'https://tibetan.itjoy.space/api/report',
   SUPPORT: {
     paypal: '',
     sbp: '+7 962 222-18-13',
