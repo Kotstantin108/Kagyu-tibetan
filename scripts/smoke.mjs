@@ -47,8 +47,35 @@ await page.waitForSelector('.rack .tile');
 check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'no horizontal scroll at 360px');
 check((await page.evaluate(() => document.fonts.check('20px "Noto Serif Tibetan"'))), 'Tibetan font loaded');
 
+// grammar help: opens a popover and changes nothing in the progress record
+const progressBefore = await page.evaluate(() => localStorage.getItem('tib-progress'));
+await page.click('#btn-grammar');
+await page.waitForSelector('.popover .grammar-help');
+check((await page.$$('.popover .grammar-help .note-row')).length > 0 || (await page.$('.popover .grammar-help .helper')) !== null, 'grammar popover shows notes or the empty message');
+await page.keyboard.press('Escape');
+await page.waitForSelector('.popover', { state: 'detached' });
+check((await page.evaluate(() => localStorage.getItem('tib-progress'))) === progressBefore, 'opening the grammar help does not change the progress');
+
 // the chips list the words in sentence order; tiles are the same texts
 const order = await page.$$eval('.chip .tib', (els) => els.map((e) => e.textContent));
+
+// a wrong answer (reversed order) shows the "Why?" button that opens the same popover
+if (order.length >= 2 && new Set(order).size === order.length) {
+  for (const text of [...order].reverse()) {
+    for (const t of await page.$$('.rack .tile')) {
+      if ((await t.$eval('.tile-text', (e) => e.textContent)) === text) { await t.click(); break; }
+    }
+  }
+  await page.click('.buttons .action.primary');
+  check(await page.$eval('.feedback', (e) => e.classList.contains('bad')), 'reversed order is wrong');
+  check((await page.$('.feedback.bad .why')) !== null, '"Why?" button shown after a mistake');
+  await page.click('.feedback.bad .why');
+  await page.waitForSelector('.popover .grammar-help');
+  await page.keyboard.press('Escape');
+  await page.waitForSelector('.popover', { state: 'detached' });
+  await page.click('#btn-reset');
+  await page.waitForFunction(() => document.querySelectorAll('.answer .tile').length === 0);
+}
 for (const text of order) {
   const tiles = await page.$$('.rack .tile');
   for (const t of tiles) {

@@ -12,6 +12,7 @@ import { toWylie, syllableToWylie, CONSONANT_TABLE, VOWEL_TABLE } from '../engin
 import { revealWord, wordError, recordSolved, setWordStatus, setSetting, wordStatus, STATUS } from '../engine/progress.js';
 import { registerSolve, localDay } from '../engine/streak.js';
 import { hardWords } from '../engine/hard.js';
+import { relatedNotes, noteForWord } from '../engine/grammar.js';
 import { sentenceIssueUrl, wordIssueUrl } from '../report.js';
 import { needsOnboarding, showOnboarding } from './onboarding.js';
 
@@ -38,6 +39,7 @@ export function renderPlay(root, ctx) {
   let wrongOptions = new Set();
   let wylieTokens = [];   // wylie mode: [{ text, wordId }]
   let feedback = { text: '', kind: '' };
+  let wrongWordId = null;  // the misplaced word of the last wrong answer ("Why?" button)
 
   // ---- DOM skeleton ----
   const reasonBadge = h('span', { class: 'badge reason' });
@@ -66,7 +68,8 @@ export function renderPlay(root, ctx) {
   const feedbackEl = h('p', { class: 'feedback', role: 'status' });
   const btnCheck = h('button', { type: 'button', class: 'action primary', onClick: check }, t('play.check'));
   const btnHint = h('button', { type: 'button', class: 'action', onClick: hint }, t('play.hint'));
-  const btnReset = h('button', { type: 'button', class: 'action', onClick: () => deal(false) }, t('play.reset'));
+  const btnGrammar = h('button', { type: 'button', class: 'action', id: 'btn-grammar', onClick: () => showGrammar(null) }, t('play.grammar'));
+  const btnReset = h('button', { type: 'button', class: 'action', id: 'btn-reset', onClick: () => deal(false) }, t('play.reset'));
   const btnSkip = h('button', { type: 'button', class: 'action', onClick: () => nextSentence() }, t('play.skip'));
   const btnNext = h('button', { type: 'button', class: 'action next', hidden: true, onClick: () => nextSentence() }, t('play.next'));
   const lesson = h('section', { class: 'lesson', hidden: true });
@@ -84,7 +87,7 @@ export function renderPlay(root, ctx) {
         optionsEl,
         wylieBox,
         feedbackEl,
-        h('div', { class: 'buttons' }, btnCheck, btnHint, btnReset, btnSkip, btnNext),
+        h('div', { class: 'buttons' }, btnCheck, btnHint, btnGrammar, btnReset, btnSkip, btnNext),
         lesson,
         shortcuts,
       ),
@@ -142,7 +145,7 @@ export function renderPlay(root, ctx) {
 
   function expectedTexts() { return tiles.map((x) => x.text); }
   function tile(key) { return tiles.find((x) => x.key === key); }
-  function setFeedback(text, kind = '') { feedback = { text, kind }; }
+  function setFeedback(text, kind = '', wrongId = null) { feedback = { text, kind }; wrongWordId = kind === 'bad' ? wrongId : null; }
   function sentenceTib() { return renderTib(pick.sentence.words, dict); }
 
   function nextSentence() {
@@ -195,6 +198,39 @@ export function renderPlay(root, ctx) {
         h('button', { type: 'button', class: 'action', onClick: () => mark(STATUS.LEARNING) }, t('play.learning')),
       ),
       issue ? h('p', { class: 'fine' }, h('a', { href: issue, target: '_blank', rel: 'noopener' }, t('play.report'))) : null,
+    ));
+  }
+
+  /**
+   * Grammar help for the current sentence: its own note, then notes of the
+   * same set whose examples share its words. With `wordId` (a misplaced word)
+   * the note about that word comes first. Looking is not a peek: no word
+   * status changes here.
+   */
+  function showGrammar(wordId) {
+    const s = pick.sentence;
+    let entries = relatedNotes(s, data.sentences, data.sets, dict, 3);
+    if (wordId) {
+      const first = noteForWord(s, wordId, data.sentences, data.sets, dict);
+      if (first) entries = [first, ...entries.filter((e) => e.note.en !== first.note.en)];
+    }
+    const hideOwnTr = exercise() === 'meaning' && !complete; // the translation is the answer there
+    let close = null;
+    const items = entries.map((e) => {
+      const ex = e.example;
+      const tr = pickTr(ex.tr, ctx.lang);
+      return h('div', { class: 'note-row' },
+        h('p', { class: 'note-text' }, tibText(pickTr(e.note, ctx.lang).text)),
+        h('div', { class: 'example' },
+          h('span', { class: 'tib' }, renderTib(ex.words, dict)),
+          ex.id === s.id && hideOwnTr ? null : h('span', { class: 'tr' }, tr.text),
+        ),
+      );
+    });
+    close = popover(h('div', { class: 'grammar-help' },
+      h('h3', {}, t('play.grammar')),
+      items.length ? items : h('p', { class: 'helper' }, t('play.noGrammar')),
+      h('p', { class: 'fine' }, h('a', { href: '#/grammar', onClick: () => close() }, t('play.openGrammar'))),
     ));
   }
 
@@ -317,6 +353,10 @@ export function renderPlay(root, ctx) {
     }
 
     clear(feedbackEl).append(tibText(feedback.text));
+    if (feedback.kind === 'bad' && wrongWordId && dict[wrongWordId]) {
+      const id = wrongWordId;
+      feedbackEl.append(' ', h('button', { type: 'button', class: 'linkish why', onClick: () => showGrammar(id) }, t('play.why')));
+    }
     feedbackEl.className = 'feedback' + (feedback.kind ? ' ' + feedback.kind : '');
     btnCheck.disabled = complete;
     btnHint.disabled = complete;
@@ -380,7 +420,7 @@ export function renderPlay(root, ctx) {
       const firstWrong = result.wrong[0];
       const wrongWord = tile(chosen[firstWrong]).wordId;
       store.update((p) => wordError(p, wrongWord));
-      setFeedback(t('play.wrong', { pos: firstWrong + 1 }) + explain(wrongWord), 'bad');
+      setFeedback(t('play.wrong', { pos: firstWrong + 1 }) + explain(wrongWord), 'bad', wrongWord);
       render();
       [...answer.querySelectorAll('.tile')].forEach((el, i) => { if (result.wrong.includes(i)) el.classList.add('wrong'); });
       return;
@@ -400,7 +440,7 @@ export function renderPlay(root, ctx) {
       let msg = t('play.wylieWrong', { pos: i + 1 });
       if (attempts >= 2 && tok) msg += ' ' + t('play.wylieExpected', { syllable: tok.text });
       msg += explain(tok ? tok.wordId : null);
-      setFeedback(msg, 'bad');
+      setFeedback(msg, 'bad', tok ? tok.wordId : null);
       render();
       wylieInput.focus();
       return;

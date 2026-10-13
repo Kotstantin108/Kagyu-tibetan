@@ -38,6 +38,7 @@ const SHELL = [
   './src/engine/tib.js',
   './src/engine/wylie.js',
   './src/engine/hard.js',
+  './src/engine/grammar.js',
   './src/i18n/index.js',
   './src/i18n/en.js',
   './src/i18n/ru.js',
