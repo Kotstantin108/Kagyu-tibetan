@@ -51,6 +51,11 @@ check((await page.evaluate(() => document.fonts.check('20px "Noto Serif Tibetan"
 
 // grammar help: opens a popover and changes nothing in the progress record
 const progressBefore = await page.evaluate(() => localStorage.getItem('tib-progress'));
+await page.click('.chip');
+await page.waitForSelector('.popover .big-tib');
+check((await page.$('.popover .audio-btn')) !== null, 'word card has a listen button');
+await page.keyboard.press('Escape');
+await page.waitForSelector('.popover', { state: 'detached' });
 await page.click('#btn-grammar');
 await page.waitForSelector('.popover .grammar-help');
 check((await page.$$('.popover .grammar-help .note-row')).length > 0 || (await page.$('.popover .grammar-help .helper')) !== null, 'grammar popover shows notes or the empty message');

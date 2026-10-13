@@ -52,6 +52,36 @@ export function popover(content, { onDismiss = null } = {}) {
   return close;
 }
 
+// ---- pronunciation clips (synthesised, see README "Audio") ----
+let player = null;
+let playingBtn = null;
+
+/**
+ * A round "listen" button for a word (`w-<id>`) or a sentence (`s123`).
+ * Returns null when AUDIO_BASE is not configured. Clips are fetched on demand.
+ */
+export function audioButton(ctx, clipId, { small = false } = {}) {
+  const base = ctx.config.AUDIO_BASE;
+  if (!base) return null;
+  const size = small ? 16 : 20;
+  const btn = h('button', { type: 'button', class: 'audio-btn' + (small ? ' small' : ''), 'aria-label': ctx.t('play.listen'), title: ctx.t('play.listen') });
+  btn.innerHTML = `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!player) { player = new Audio(); player.preload = 'none'; }
+    if (playingBtn === btn && !player.paused) { player.pause(); return; }
+    player.pause();
+    if (playingBtn) playingBtn.classList.remove('playing');
+    playingBtn = btn;
+    player.src = `${base.replace(/\/+$/, '')}/${clipId}.mp3`;
+    player.onplay = () => btn.classList.add('playing');
+    player.onended = player.onpause = () => btn.classList.remove('playing');
+    player.onerror = () => { btn.classList.remove('playing'); toast(ctx.t('play.audioMissing')); };
+    player.play().catch(() => { btn.classList.remove('playing'); toast(ctx.t('play.audioMissing')); });
+  });
+  return btn;
+}
+
 /** True while a popover is open (keyboard shortcuts should stay quiet). */
 export function popoverOpen() {
   return Boolean(document.querySelector('.popover-backdrop'));

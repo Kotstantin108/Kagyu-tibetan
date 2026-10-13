@@ -4,3 +4,4 @@ Thumbs.db
 *.log
 textbooks/
 .playwright-mcp/
+site/audio/

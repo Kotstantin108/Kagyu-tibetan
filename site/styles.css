@@ -237,6 +237,12 @@ h1, h2, h3, .prompt, .brand-title, .stat .num { font-family: var(--serif); }
 .grammar-help .note-row { padding: 10px 0 12px; }
 .grammar-help .note-row:first-of-type { border-top: 0; padding-top: 4px; }
 .shortcuts { margin-top: 10px; }
+.audio-btn { display: inline-grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 50%; border: 1.5px solid var(--gold-line); background: var(--input-bg); color: var(--gold-text); vertical-align: middle; transition: background .15s ease, transform .12s ease; }
+.audio-btn.small { width: 30px; height: 30px; }
+.audio-btn:hover { background: var(--goldsoft); }
+.audio-btn:active { transform: scale(.94); }
+.audio-btn.playing { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+.prompt-audio { display: block; margin: -2px 0 6px; }
 
 /* multiple choice */
 .options { display: grid; gap: 8px; margin-top: 10px; }

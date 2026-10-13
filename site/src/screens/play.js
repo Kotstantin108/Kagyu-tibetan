@@ -3,7 +3,7 @@
 //   meaning - read the Tibetan sentence and choose its translation
 //   wylie   - type the sentence in Wylie transliteration
 
-import { h, clear, popover, popoverOpen, tibText } from '../ui.js';
+import { h, clear, popover, popoverOpen, tibText, audioButton } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { pickNext, contentWords } from '../engine/next.js';
 import { checkAnswer, shuffle, checkWylie, pickOptions } from '../engine/check.js';
@@ -51,6 +51,7 @@ export function renderPlay(root, ctx) {
   const focusBar = focusMode ? h('div', { class: 'cold-note' }, t('play.focusNote'), ' ', h('a', { href: '#/play' }, t('play.focusExit'))) : null;
   const promptLabel = h('div', { class: 'label' });
   const prompt = h('h2', { class: 'prompt' });
+  const promptAudio = h('span', { class: 'prompt-audio' });
   const fallbackNote = h('p', { class: 'fine' });
   const machineNote = h('p', { class: 'fine' });
   const chips = h('div', { class: 'chips' });
@@ -83,7 +84,7 @@ export function renderPlay(root, ctx) {
       h('div', { class: 'panel-body' },
         focusBar,
         promptLabel,
-        prompt, fallbackNote, machineNote, chips, coldNote,
+        prompt, promptAudio, fallbackNote, machineNote, chips, coldNote,
         answerHead, answer,
         rackHead, rackEl,
         optionsEl,
@@ -192,7 +193,7 @@ export function renderPlay(root, ctx) {
     const mark = (status) => { store.update((p) => setWordStatus(p, wordId, status)); close(); render(); };
     const report = reportControl(ctx, { kind: 'word', id: wordId, tib: w.tib, translation: tr.text, fallbackUrl: wordIssueUrl(ctx.config, wordId, w, tr.text, ctx.lang) });
     close = popover(h('div', {},
-      h('p', { class: 'big-tib' }, w.tib),
+      h('p', { class: 'big-tib' }, w.tib, ' ', audioButton(ctx, `w-${wordId}`)),
       h('div', { class: 'wylie' }, w.wylie, ' · ', t(`status.${wordStatus(store.get(), wordId)}`)),
       h('p', { class: 'tr' }, tr.text, tr.fallback ? ` (${tr.lang})` : ''),
       h('div', { class: 'buttons' },
@@ -294,8 +295,11 @@ export function renderPlay(root, ctx) {
       prompt.textContent = sentenceTib();
       prompt.classList.add('tib');
       fallbackNote.hidden = true;
+      clear(promptAudio).append(audioButton(ctx, s.id) || '');
+      promptAudio.hidden = false;
     } else {
       promptLabel.textContent = ex === 'wylie' ? t('play.wyliePrompt') : t('play.prompt');
+      promptAudio.hidden = true;
       prompt.textContent = tr.text;
       prompt.classList.remove('tib');
       fallbackNote.textContent = tr.fallback ? `(${tr.lang})` : '';
@@ -389,7 +393,7 @@ export function renderPlay(root, ctx) {
     clear(lesson);
     lesson.append(
       h('strong', {}, t('play.correctSentence'), ':'),
-      h('span', { class: 'sentence-display' }, tib),
+      h('span', { class: 'sentence-display' }, tib, ' ', audioButton(ctx, s.id)),
       h('div', { class: 'wylie-line' }, toWylie(tib)),
       h('div', {}, h('strong', {}, t('play.translationLabel'), ': '), tr.text),
     );

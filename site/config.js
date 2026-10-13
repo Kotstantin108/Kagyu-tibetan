@@ -9,6 +9,8 @@
 //                   empty entries are hidden. paypal = a https://paypal.me/... link, sbp = phone number
 //                   for the Russian fast-payment system (sbpBank = the recipient's bank), cardGe / cardRu = card numbers, ibanGe + bankGe +
 //                   swiftGe = Georgian bank transfer, recipient = name on the account.
+// AUDIO_BASE:       folder with pronunciation clips <id>.mp3 (words w-<id>, sentences s123), made by
+//                   scripts/tools/tts-build.py on the server; empty = no listen buttons.
 // VERSION:          written by the deploy workflow (git sha); "dev" locally.
 self.TIB_CONFIG = {
   SITE_URL: 'https://tibetan.itjoy.space',
@@ -27,5 +29,6 @@ self.TIB_CONFIG = {
     other: '',
     recipient: 'Konstantin Vazhenin',
   },
+  AUDIO_BASE: './audio/',
   VERSION: 'dev',
 };

@@ -28,6 +28,10 @@ another device".)
 - **Hard words** (misplaced more than once) are listed on the progress screen
   and can be practised on their own (`#/play/hard`).
 - **Grammar reference**: the textbook's notes by lesson, each with examples.
+- **Pronunciation**: a listen button on every word (dictionary, word card) and
+  sentence (meaning exercise, solved sentence). The clips are synthesised with
+  the OpenPecha Tibetan voice (`openpecha/op-mms-ft-v3`, Meta MMS fine-tuned,
+  non-commercial licence of the base model); see "Audio" below.
 - **Dictionary** with search, example sentences, review dates and manual
   "known / learning" marks, including "mark the whole lesson".
 - **Streak**: three sentences a day keep it alive.
@@ -76,6 +80,9 @@ scripts/
   lib/wylie.mjs     re-exports site/src/engine/wylie.js for the scripts
   tools/pdf-tibetan-text.py  recovers Tibetan text from the textbook PDFs
   tools/brand-assets.py      builds the PNG icons and img/bg-clouds.webp from the logo and background artwork (Pillow)
+  tools/tts-texts.mjs        lists the texts to voice (words and rendered sentences) as JSON
+  tools/tts-build.py         synthesises audio/<id>.mp3 on the server (OpenPecha MMS-VITS voice)
+  tools/tts-trial.py         compares voices/speakers of the OpenPecha models on a few samples
 redirect/           one-page redirect published to GitHub Pages after the move (index.html + self-removing sw.js)
 server/
   nginx/tibetan.itjoy.space.conf  vhost (caching headers, gzip, /api/ proxy)
@@ -172,6 +179,25 @@ test (job `check`), then two deploy jobs (server set up and first deployed on
   **2026-10-27**, two weeks after the banner went live on 2026-10-13.
 
 All paths in the app are relative, so it also works from a sub-path.
+
+## Audio
+
+Pronunciation clips live only on the server in
+`/var/www/tibetan.itjoy.space/audio/` (`w-<word id>.mp3`, `<sentence id>.mp3`,
+16 kHz mono, about 15 MB in all); the deploy job syncs `site/` with
+`--exclude=audio/`, so they survive deploys. The app reads `AUDIO_BASE` from
+`site/config.js` and fetches clips on demand (the service worker caches the
+ones played). To (re)generate after a content change, on the server:
+
+```
+node scripts/tools/tts-texts.mjs > tts-texts.json        # locally, then copy to the server
+/opt/tts-trial/venv/bin/python tts-build.py tts-texts.json /var/www/tibetan.itjoy.space/audio
+```
+
+(`/opt/tts-trial/venv` has CPU torch, transformers and soundfile; the script
+skips ids that already exist and runs at about real time.) Voice:
+`openpecha/op-mms-ft-v3` (single speaker). The v5 and v8 checkpoints produce
+silence for most speakers; `tts-trial.py` compares them.
 
 ## Server
 

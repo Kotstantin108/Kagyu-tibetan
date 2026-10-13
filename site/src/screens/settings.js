@@ -122,6 +122,7 @@ export function renderSettings(root, ctx) {
     h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
       h('div', { class: 'label' }, t('settings.about')),
       h('p', { class: 'helper' }, t('settings.aboutText')),
+      ctx.config.AUDIO_BASE ? h('p', { class: 'helper' }, t('settings.voiceNote')) : null,
       ctx.config.REPO_URL ? h('p', { class: 'helper' }, h('a', { href: ctx.config.REPO_URL, target: '_blank', rel: 'noopener' }, t('settings.sourceCode'))) : null,
       h('p', { class: 'helper' }, h('a', { href: '#/support' }, t('support.line'))),
       h('p', { class: 'fine' }, t('settings.version', { v: ctx.config.VERSION || 'dev' })),

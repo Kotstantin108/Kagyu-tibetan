@@ -59,7 +59,8 @@ jobs:
           chmod 600 ~/.ssh/deploy_key ~/.ssh/known_hosts
       - name: rsync site/ to the server
         run: |
-          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
+          # audio/ is generated on the server (scripts/tools/tts-build.py) and is not in the repository
+          rsync -az --delete --exclude=audio/ -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
             site/ deploy@itjoy.space:/var/www/tibetan.itjoy.space/
       - name: Check the live site
         run: |

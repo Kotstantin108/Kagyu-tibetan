@@ -1,6 +1,6 @@
 // Dictionary: sets with words, search, examples, manual status marking.
 
-import { h, clear } from '../ui.js';
+import { h, clear, audioButton } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { setWordStatus, wordStatus, isDue, STATUS } from '../engine/progress.js';
 import { renderTib } from '../engine/tib.js';
@@ -75,7 +75,7 @@ export function renderDict(root, ctx) {
     }, t('dict.examples', { n: examples.length })) : null;
     return h('div', { class: 'word-row' },
       h('div', {},
-        h('div', { class: 'tib' }, w.tib),
+        h('div', { class: 'tib' }, w.tib, ' ', audioButton(ctx, `w-${id}`, { small: true })),
         h('div', { class: 'tr' }, tr.text, tr.fallback ? ` (${tr.lang})` : ''),
         h('div', { class: 'meta' }, meta),
         exBtn,
