@@ -89,8 +89,7 @@ CSS-токены в `site/styles.css` под `:root[data-theme="dark"]` и
 - Защита от спама: лимит 5 запросов в час с одного IP (в памяти), honeypot-поле,
   максимум 1 issue на один `id` в сутки (перед созданием искать открытые issue с тем же
   заголовком через `GET /search/issues` и дописывать комментарий вместо нового issue).
-- CORS: разрешить origin `https://tibetan.itjoy.space` и
-  `https://kotstantin108.github.io`.
+- CORS: разрешить только origin `https://tibetan.itjoy.space`.
 - nginx: `location /api/ { proxy_pass http://127.0.0.1:8091; }` в vhost
   tibetan.itjoy.space.
 
@@ -155,19 +154,34 @@ node v22, php, certbot, docker. Vhost-ы в `/etc/nginx/sites-enabled/*.conf`, �
    секрета `DEPLOY_SSH_KEY` (приватный ключ пары, сгенерированной для `deploy`),
    `known_hosts` из секрета `DEPLOY_KNOWN_HOSTS` (`ssh-keyscan itjoy.space`). Секреты
    ставить через `gh secret set`. Штамп версии в `site/config.js` делать до rsync
-   (как в job `deploy`). GitHub Pages оставить работать параллельно (второй адрес).
+   (как в job `deploy`).
+   GitHub Pages после переезда не оставлять как второй адрес: два адреса — это два
+   разных localStorage, а старый сервис-воркер продолжит отдавать кэш. Вместо
+   публикации `site/` job `deploy` публикует одну страницу-редирект (папка
+   `redirect/index.html` в репозитории): она ставит `<meta http-equiv="refresh">`
+   и JS-переход на `https://tibetan.itjoy.space/` с сохранением `location.hash`,
+   регистрирует `sw.js`, который делает `self.registration.unregister()` и чистит
+   кэши `caches.keys()` → `caches.delete` (имя файла `sw.js` должно совпасть со
+   старым, чтобы заменить его), и показывает текст на пяти языках: «Приложение
+   переехало на tibetan.itjoy.space. Прогресс перенесите кодом: Настройки → Перенос
+   на другое устройство» (строки прямо в HTML, без i18n-модулей). Поскольку старые
+   пользователи ещё не видели перенос, сначала задеплоить на Pages промежуточную
+   версию обычного сайта с баннером о переезде на две недели, и только потом
+   редирект; дату смены записать в README.
 3. Проверка: `curl -I https://tibetan.itjoy.space/` (200, HSTS не обязателен),
    `curl -I .../sw.js` (no-cache), `curl -I .../fonts/NotoSerifTibetan-Regular.woff2`
    (immutable, `font/woff2`); `node scripts/smoke.mjs` принимает переменную
    `SMOKE_URL` (добавить) и прогоняется против живого домена; в браузере на 360px —
    установка PWA, офлайн после перезагрузки, тёмная тема.
 4. В README: раздел про сервер (где лежит сайт, как деплоится, как обновить
-   сертификат, где лежит `report-api` и его токен), в `site/config.js` обновить
-   `REPO_URL`/`REPORT_API`, в инструкции по Google OAuth добавить origin
-   `https://tibetan.itjoy.space`.
+   сертификат, где лежит `report-api` и его токен), новый адрес вместо Pages везде,
+   в `site/config.js` обновить `REPO_URL`/`REPORT_API`, в инструкции по Google OAuth
+   origin `https://tibetan.itjoy.space` (старый `https://kotstantin108.github.io`
+   убрать после смены на редирект).
 
-Чего не делать: не трогать чужие vhost-ы и контейнеры на сервере, не выключать
-GitHub Pages, не класть ключи и токены в репозиторий, не запускать сервис от root.
+Чего не делать: не трогать чужие vhost-ы и контейнеры на сервере, не класть ключи и
+токены в репозиторий, не запускать сервис от root, не удалять репозиторий Pages-ветку
+силой (редирект публикуется тем же workflow).
 
 ## Чего не делать (по-прежнему)
 
