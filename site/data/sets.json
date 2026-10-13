@@ -141,5 +141,60 @@
       "pl": "Bialek 6. Elatyw, delatyw, przeczenie i tryb rozkazujący"
     },
     "order": 13
+  },
+  {
+    "id": "bialek-07",
+    "name": {
+      "ru": "Bialek 7. Именные частицы",
+      "en": "Bialek 7. Nominal particles",
+      "de": "Bialek 7. Nominalpartikeln",
+      "fr": "Bialek 7. Les particules nominales",
+      "pl": "Bialek 7. Partykuły nominalne"
+    },
+    "order": 14
+  },
+  {
+    "id": "bialek-08",
+    "name": {
+      "ru": "Bialek 8. Конвербы, сочинительная частица и регистр речи",
+      "en": "Bialek 8. Converbs, the coordinative particle and speech register",
+      "de": "Bialek 8. Konverben, die koordinierende Partikel und das Sprachregister",
+      "fr": "Bialek 8. Converbes, particule de coordination et registre de langue",
+      "pl": "Bialek 8. Konwerby, partykuła łącząca i rejestr mowy"
+    },
+    "order": 15
+  },
+  {
+    "id": "bialek-09",
+    "name": {
+      "ru": "Bialek 9. Герундиальная, фокусная и уменьшительная частицы",
+      "en": "Bialek 9. The gerundial, focus and diminutive particles",
+      "de": "Bialek 9. Gerundial-, Fokus- und Diminutivpartikel",
+      "fr": "Bialek 9. Particules gérondive, de focalisation et diminutive",
+      "pl": "Bialek 9. Partykuły gerundialna, fokusowa i zdrabniająca"
+    },
+    "order": 16
+  },
+  {
+    "id": "bialek-10",
+    "name": {
+      "ru": "Bialek 10. Уступительная частица и послелоги",
+      "en": "Bialek 10. The concessive particle and postpositions",
+      "de": "Bialek 10. Die Konzessivpartikel und Postpositionen",
+      "fr": "Bialek 10. La particule concessive et les postpositions",
+      "pl": "Bialek 10. Partykuła przyzwalająca i poimki"
+    },
+    "order": 17
+  },
+  {
+    "id": "bialek-11",
+    "name": {
+      "ru": "Bialek 11. Вопросы, номинализация и относительные обороты",
+      "en": "Bialek 11. Questions, nominalisation and relative clauses",
+      "de": "Bialek 11. Fragen, Nominalisierung und Relativsätze",
+      "fr": "Bialek 11. Questions, nominalisation et propositions relatives",
+      "pl": "Bialek 11. Pytania, nominalizacja i zdania względne"
+    },
+    "order": 18
   }
 ]

@@ -3,9 +3,9 @@
 A static web app (plain HTML/CSS/JS, ES modules, no build step) for learning
 Classical Tibetan by assembling sentences from tiles. Content comes from the
 Rangjung Yeshe Institute *Classical Tibetan Grammar Handbook* (TLAN 101,
-lessons 1–7) and from the exercises of lessons 1–6 of Joanna Bialek's
-*A Textbook in Classical Tibetan* (Routledge 2022): 882 words and 866
-sentences in 13 sets. Interface and translations in
+lessons 1–7) and from the exercises of lessons 1–11 of Joanna Bialek's
+*A Textbook in Classical Tibetan* (Routledge 2022): 1005 words and 939
+sentences in 18 sets. Interface and translations in
 English, Russian, German, French and Polish (English is the textbook's
 language; the other four are machine translations from it).
 

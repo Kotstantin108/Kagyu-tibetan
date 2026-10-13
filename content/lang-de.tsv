@@ -14,6 +14,11 @@ Bialek 3. Locative, dative, genitive and the copula yod | Bialek 3. Lokativ, Dat
 Bialek 4. Intransitive verbs and the terminative | Bialek 4. Intransitive Verben und der Terminativ
 Bialek 5. Transitive verbs and the ergative | Bialek 5. Transitive Verben und der Ergativ
 Bialek 6. Elative, delative, negation and the imperative | Bialek 6. Elativ, Delativ, Verneinung und Imperativ
+Bialek 7. Nominal particles | Bialek 7. Nominalpartikeln
+Bialek 8. Converbs, the coordinative particle and speech register | Bialek 8. Konverben, die koordinierende Partikel und das Sprachregister
+Bialek 9. The gerundial, focus and diminutive particles | Bialek 9. Gerundial-, Fokus- und Diminutivpartikel
+Bialek 10. The concessive particle and postpositions | Bialek 10. Die Konzessivpartikel und Postpositionen
+Bialek 11. Questions, nominalisation and relative clauses | Bialek 11. Fragen, Nominalisierung und Relativsätze
 
 @words
 monastery | Kloster
@@ -236,14 +241,14 @@ of (connective particle as a separate syllable) | Genitivpartikel (als eigene Si
 body | Körper
 foot | Fuß
 father (h.) | Vater (ehrenvoll)
-he | er
 I (literary) | ich (literarisch)
+father | Vater
+he | er
 speech (h.); to speak (h.) | Rede (ehrenvoll); sprechen (ehrenvoll)
 speech | Rede
 I, we (literary) | ich, wir (literarisch)
 plural particle (with pronouns) | Pluralpartikel (bei Pronomen)
 head (h.) | Kopf (ehrenvoll)
-father | Vater
 hand (h.) | Hand (ehrenvoll)
 to know (h.) | wissen (ehrenvoll)
 head | Kopf
@@ -520,6 +525,7 @@ continuum, flow, continuity | Kontinuum, Fluss, Kontinuität
 abundant, superior | reichlich, überlegen
 very, extremely | sehr, äußerst
 manifestly, supremely | offenkundig, in höchstem Maße
+all around, everywhere | ringsum, überall
 closely, fully | nahe, vollständig
 conduct; to perform, to experience | Verhalten; ausüben, erfahren
 certainly, definitely | gewiss, bestimmt
@@ -636,8 +642,8 @@ Lhasa | Lhasa
 Entering the Way of the Bodhisattva (Bodhicaryāvatāra) | Eintritt in den Weg des Bodhisattva (Bodhicaryāvatāra)
 beginningless (abbr.) | anfangslos (Abk.)
 distraction | Ablenkung
-how much, how many | wie viel, wie viele
 closing quotation particle (after ག ད བ) | Zitat-Schlusspartikel (nach ག ད བ)
+how much, how many | wie viel, wie viele
 ultimate | letztendlich
 west | Westen
 north | Norden
@@ -807,11 +813,11 @@ saffron, yellowish red | safranfarben, gelblich rot
 came (past of འོང་) | kam (Vergangenheit von འོང་)
 died (past of ཚེ་འཕོ་) | starb (Vergangenheit von ཚེ་འཕོ་)
 went (past of འདོང་) | ging (Vergangenheit von འདོང་)
+harvest, crop | Ernte
 full | voll
 to die, to pass away | sterben, verscheiden
 to be consumed, to run out | aufgebraucht werden, zur Neige gehen
 to rise | sich erheben
-harvest, crop | Ernte
 beard | Bart
 fell off (past of འབྱི་) | fielen aus (Vergangenheit von འབྱི་)
 hair | Haar
@@ -869,9 +875,124 @@ axe | Axt
 Ānanda | Ānanda
 such, of that kind | solch, derartig
 pretty, nice | hübsch, schön
+to fall | fallen
 to read | lesen
 to borrow | sich leihen
-to fall | fallen
+to steal | stehlen
+mother and her children | Mutter und ihre Kinder
+lost (past of འབོར་) | verlor (Vergangenheit von འབོར་)
+to lead | führen
+knock out! (imperative of གཅོག་) | schlag aus! (Imperativ von གཅོག་)
+front tooth, incisor | Vorderzahn, Schneidezahn
+carpenter | Zimmermann
+to be clear | klar sein
+elder, old man | Ältester, alter Mann
+satisfied | gesättigt, zufrieden
+those words, thus | jene Worte, so
+spoke (past of སྨྲ་) | sprach (Vergangenheit von སྨྲ་)
+to knock out, to break off | ausschlagen, abbrechen
+lord, master | Herr, Gebieter
+respectable, noble | ehrwürdig, edel
+to lose | verlieren
+to speak | sprechen
+to spread | sich verbreiten
+sole, only | einzig
+conquered (past of འཇོམས་) | besiegte (Vergangenheit von འཇོམས་)
+the Yellow-clad, an epithet of Viṣṇu | der Gelbgekleidete, ein Beiname Viṣṇus
+riding-beast, mount | Reittier
+garuḍa (bird) | Garuḍa (Vogel)
+rejoiced (past of རང་); ཡི་རངས་ rejoiced | freute sich (Vergangenheit von རང་); ཡི་རངས་ freute sich
+placed (past of འཆའ་) | stützte, legte (Vergangenheit von འཆའ་)
+staff | Stab
+chin | Kinn
+to cut; to decide; ཞལ་ཆེ་གཅོད་ to pass judgement | schneiden; entscheiden; ཞལ་ཆེ་གཅོད་ ein Urteil fällen
+judgement | Urteil
+message | Botschaft
+do!; say! (imperative of བྱེད་) | tu!; sag! (Imperativ von བྱེད་)
+killed (past of འགུམས་) | tötete (Vergangenheit von འགུམས་)
+mare | Stute
+Shravasti (a town in India) | Shravasti (eine Stadt in Indien)
+to fly | fliegen
+to play | spielen
+palace | Palast
+relatives | Verwandte
+children and their mother | Kinder und ihre Mutter
+happiness and misery | Glück und Leid
+grave | Grab
+mere, merely; about | bloß, nur; etwa
+to place (on) | legen, stützen (auf)
+to conquer | besiegen
+cattle, livestock | Vieh
+cows, goats and donkeys | Kühe, Ziegen und Esel
+Shuddhodana (the Buddha's father) | Shuddhodana (der Vater des Buddha)
+Maya (the Buddha's mother) | Maya (die Mutter des Buddha)
+the (group of) six | die sechs
+forest | Wald
+Flock of Birds (name of a forest) | Vogelschwarm (Name eines Waldes)
+brought (past of སྐྱེལ་) | brachte (Vergangenheit von སྐྱེལ་)
+to be abundant | reichlich vorhanden sein
+fed (past of སྙོད་) | fütterte (Vergangenheit von སྙོད་)
+took (past of ལེན་) | nahm (Vergangenheit von ལེན་)
+threw (past of འཕེན་) | warf (Vergangenheit von འཕེན་)
+stone | Stein
+crow | Krähe
+shakhotaka (a tree species) | Shakhotaka (eine Baumart)
+loving, kind | liebevoll, gütig
+falcon | Falke
+the youngest; childhood | der Jüngste; Kindheit
+sign, symbol; soul | Zeichen, Symbol; Seele
+Gautama (the Buddha) | Gautama (der Buddha)
+to be happy; happiness | glücklich sein; Glück
+fled (past of འབྲོས་) | floh (Vergangenheit von འབྲོས་)
+to carry away | forttragen
+to throw | werfen
+to flee | fliehen
+to bring, to take (somewhere) | bringen, hinbringen
+to feed | füttern
+only, single | einzig
+to be possessed of, to have | besitzen, haben
+let go, sent (past of གཏོང་) | ließ frei, schickte (Vergangenheit von གཏོང་)
+manner; བཞིན་དུ་ according to | Art und Weise; བཞིན་དུ་ gemäß
+eldest; best | ältester; bester
+Drachenpo (the eldest prince) | Drachenpo (der älteste Prinz)
+to be short | kurz sein
+tail | Schwanz
+hair, fur | Haar, Fell
+joy | Freude
+to inveigh, to scold | schimpfen, schelten
+presence, vicinity; དྲུང་ན་ under, near | Nähe, Gegenwart; དྲུང་ན་ unter, bei
+Tathāgata | Tathāgata
+account, story | Bericht, Geschichte
+pointed (past of གཏོད་) | zeigte (Vergangenheit von གཏོད་)
+descended, born (from) | abstammend (von)
+the arms of the Kongchu river | die Arme des Flusses Kongchu
+Nyatri Tsenpo (the first king of Tibet) | Nyatri Tsenpo (der erste König Tibets)
+lord | Herr
+colour | Farbe
+taste | Geschmack
+Nepalese | Nepalese
+ate (past of ཟ་) | aß (Vergangenheit von ཟ་)
+pomegranate | Granatapfel
+to point (towards) | zeigen (auf)
+weariness; ངལ་བསོ་ to rest | Müdigkeit; ངལ་བསོ་ sich ausruhen
+rested (ངལ་བསོ་, from གསོ་) | ruhte sich aus (ངལ་བསོ་, von གསོ་)
+food | Nahrung
+why, on account of what | warum, weswegen
+to perceive, to notice | wahrnehmen, bemerken
+alone, mere | allein, bloß
+Shingta Chenpo (a king's name) | Shingta Chenpo (Name eines Königs)
+praised (past of སྟོད་) | pries (Vergangenheit von སྟོད་)
+these words, thus | diese Worte, so
+miracles, magic | Wunder, Zauber
+to be poor | arm sein
+jumped (past of མཆོང་) | sprang (Vergangenheit von མཆོང་)
+wall | Mauer
+Mila Sherab Gyaltsen (Milarepa's father) | Mila Sherab Gyaltsen (Milarepas Vater)
+to be seized (by) | ergriffen werden (von)
+illness | Krankheit
+to cure, to nourish | heilen, nähren
+to jump | springen
+to praise | preisen
 
 @sentences
 red monastery | rotes Kloster
@@ -1699,6 +1820,79 @@ In the middle of the road there was a river. | Mitten auf dem Weg war ein Fluss.
 The axe fell into the river. | Die Axt fiel in den Fluss.
 Then Ananda saw things of this kind. | Da sah Ānanda Dinge dieser Art.
 The wife of that Brahmin was ugly. | Die Frau jenes Brahmanen war hässlich.
+By the power of my past actions I was born into the race of ogresses. | Durch die Macht meiner früheren Taten wurde ich in das Geschlecht der Dämoninnen geboren.
+At that time in the town an old woman had two thieving sons. | Zu jener Zeit hatte in der Stadt eine alte Frau zwei diebische Söhne.
+The three, the old woman, the mother and her sons, saw the Victorious One coming. | Die drei, die alte Frau, die Mutter und ihre Söhne, sahen den Siegreichen kommen.
+Rays of the sun have risen. | Die Strahlen der Sonne sind aufgegangen.
+You lost my ox. | Du hast meinen Ochsen verloren.
+You let my axe fall into the river. | Du hast meine Axt in den Fluss fallen lassen.
+They are leading me. | Sie führen mich.
+Knock out the carpenter's two front teeth! | Schlag dem Zimmermann die zwei Vorderzähne aus!
+The meaning of this text is clear to the minds of all the elders. | Der Sinn dieses Textes ist dem Geist aller Ältesten klar.
+Thereafter the monkey led the monkey-children there. | Danach führte der Affe die Affenkinder dorthin.
+Her mind is satisfied with fresh flesh and warm blood. | Ihr Sinn sättigt sich an frischem Fleisch und warmem Blut.
+The queen heard these words uttered. | Die Königin hörte diese Worte sprechen.
+The blind one had no son. | Der Blinde hatte keinen Sohn.
+Don't think otherwise! | Denk nicht anders!
+The teaching of the Buddha spread and increased. | Die Lehre des Buddha verbreitete sich und wuchs.
+The sole son of a Brahmin conquered all the troops of enemies. | Der einzige Sohn eines Brahmanen besiegte alle Heere der Feinde.
+The garuḍa became the mount of Vishnu, the Yellow-clad. | Der Garuḍa wurde zum Reittier Vishnus, des Gelbgekleideten.
+Then Ananda and the numerous attendants rejoiced. | Da freuten sich Ānanda und das zahlreiche Gefolge.
+The Brahmin rested his chin on a staff. | Der Brahmane stützte sein Kinn auf einen Stab.
+He will pass judgement on us. | Er wird über uns urteilen.
+Deliver my message to the king! | Überbringe dem König meine Botschaft!
+Yikpachen killed my mare. | Yikpachen hat meine Stute getötet.
+One day the Victorious One was abiding in Shravasti. | Eines Tages weilte der Siegreiche in Shravasti.
+A rock-ogress came there. | Eine Felsendämonin kam dorthin.
+Three doves were flying around and playing. | Drei Tauben flogen umher und spielten.
+The king and his many attendants returned to the palace. | Der König und sein zahlreiches Gefolge kehrten in den Palast zurück.
+All the relatives know the happiness and misery of my children and their mother, the three. | Alle Verwandten kennen Glück und Leid der drei, meiner Kinder und ihrer Mutter.
+Now I take my house merely as a grave. | Jetzt halte ich mein Haus bloß für ein Grab.
+domesticated cattle: cows, goats and donkeys, the three | Hausvieh: Kühe, Ziegen und Esel, die drei
+As for the two princes, they came. | Was die zwei Prinzen betrifft, sie kamen.
+As for myself, I am the prince Semchen Chenpo. | Was mich betrifft, ich bin der Prinz Semchen Chenpo.
+As for him, now he is my father, the king Shuddhodana. | Was ihn betrifft, jetzt ist er mein Vater, der König Shuddhodana.
+As for the queen of that king in those days of yore, today she is my mother Maya. | Was die Königin jenes Königs in jenen fernen Tagen betrifft, heute ist sie meine Mutter Maya.
+Then, as for these six monkey-children, their father, the bodhisattva-monkey, brought them to the forest called Flock of Birds, abounding in fruits. | Dann brachte der Vater dieser sechs Affenkinder, der Bodhisattva-Affe, sie in den Wald namens Vogelschwarm, der reich an Früchten war.
+I fed a hungry tigress with my body. | Ich habe eine hungrige Tigerin mit meinem Körper gefüttert.
+Now I take my house merely as a grave and think of my wife and daughters as mere enemies. | Jetzt halte ich mein Haus bloß für ein Grab und sehe in Frau und Töchtern bloß Feinde.
+He took a stone and threw it. | Er nahm einen Stein und warf ihn.
+In another place a crow was sitting on a shakhotaka tree. | An einem anderen Ort saß eine Krähe auf einem Shakhotaka-Baum.
+As for you, out of great compassion you fed the tigress and were kind to everybody. | Was dich betrifft, aus großem Mitgefühl hast du die Tigerin gefüttert und warst zu allen gütig.
+A dove is a sign for a son; the youngest among the doves was carried away by a falcon. | Eine Taube ist ein Zeichen für einen Sohn; die jüngste der Tauben wurde von einem Falken fortgetragen.
+The monk Gautama is utterly happy. | Der Mönch Gautama ist vollkommen glücklich.
+A mare of another man fled. | Die Stute eines anderen Mannes floh.
+The youngest son, filled with love and compassion from childhood, seemed to all like their only child. | Der jüngste Sohn, von Kindheit an voll Liebe und Mitgefühl, erschien allen wie ihr einziges Kind.
+Indeed, the king set them free according to the words of the Victorious One. | Und der König ließ sie gemäß den Worten des Siegreichen frei.
+That eldest son of those days, Drachenpo, is Maitreya. | Jener älteste Sohn von damals, Drachenpo, ist Maitreya.
+Their hair grew shorter; their tails grew shorter too. | Ihr Fell wurde kürzer; auch ihre Schwänze wurden kürzer.
+A little joy rose in his parents too. | Auch in seinen Eltern stieg ein wenig Freude auf.
+The daughters, too, inveighed against their mother in return. | Die Töchter wiederum schalten ihre Mutter.
+Earlier I did bad deeds. | Früher habe ich böse Taten begangen.
+The Tathagata was sitting under a tree. | Der Tathāgata saß unter einem Baum.
+Yikpachen let the ox into the house. | Yikpachen ließ den Ochsen ins Haus.
+Until then you, all the relatives, will know the happiness and misery of my children and their mother, the three. | Bis dahin werdet ihr, alle Verwandten, Glück und Leid der drei, meiner Kinder und ihrer Mutter, kennen.
+My maternal uncle and Dzese's father and brothers recounted the story. | Mein Onkel mütterlicherseits sowie Dzeses Vater und Brüder erzählten die Geschichte.
+Thereafter the bodhisattva-monkey, having led the monkey-children there, pointed towards the crops. | Danach führte der Bodhisattva-Affe die Affenkinder dorthin und zeigte auf die Feldfrüchte.
+These people of snowy Tibet are descended from a father-monkey and a mother rock-ogress. | Diese Menschen des schneereichen Tibet stammen von einem Affenvater und einer Felsendämonin als Mutter ab.
+All the water flowed there and disappeared into the arms of the Kongchu. | Alles Wasser floss dorthin und verschwand in den Armen des Kongchu.
+The lord Nyatri Tsenpo came to be the king of Tibet. | Der Herr Nyatri Tsenpo wurde König von Tibet.
+Even if a Nepalese did not eat the pomegranate, he knows its taste from its very colour. | Auch wenn ein Nepalese den Granatapfel nicht gegessen hat, kennt er seinen Geschmack allein von der Farbe.
+During a short rest the three sons went into a forest. | Während einer kurzen Rast gingen die drei Söhne in einen Wald.
+What does this tigress eat as food? | Was frisst diese Tigerin?
+My parents surrounded my bones, the bones of the dead me, lying in the wood. | Meine Eltern umringten meine Knochen, die Knochen des toten Ich, die im Wald lagen.
+Why then, just because of me, do you not notice your fall into the ocean of misery? | Warum bemerkt ihr denn, nur meinetwegen, euren Sturz in den Ozean des Leids nicht?
+What do you think in your mind? | Was denkst du in deinem Sinn?
+Who is that king Shingta Chenpo of those days of yore? | Wer ist jener König Shingta Chenpo aus fernen Tagen?
+Then Ananda and all the numerous attendants rejoiced at what the Victorious One had said and praised him. | Da freuten sich Ānanda und das ganze zahlreiche Gefolge über die Worte des Siegreichen und priesen ihn.
+Monkey-children reborn from the six states of existence were born. | Affenkinder, wiedergeboren aus den sechs Daseinsbereichen, wurden geboren.
+This is the second chapter, on how Semchen Chenpo gave his body to a tigress. | Dies ist das zweite Kapitel, darüber, wie Semchen Chenpo seinen Körper einer Tigerin gab.
+The Brahmin spoke these words to the Victorious One. | Der Brahmane sprach diese Worte zum Siegreichen.
+Then the Noble Chenrezig conferred the vow of a lay practitioner upon a monkey that was displaying miracles. | Da verlieh der edle Chenrezig einem Affen, der Wunder zeigte, das Gelübde eines Laienpraktizierenden.
+He was extremely poor, one with neither food nor clothes. | Er war äußerst arm, einer ohne Nahrung und ohne Kleider.
+He jumped onto a wall. | Er sprang auf eine Mauer.
+He has not even a scolding wife. | Er hat nicht einmal eine keifende Frau.
+My father Mila Sherab Gyaltsen was seized by an illness. | Mein Vater Mila Sherab Gyaltsen wurde von einer Krankheit ergriffen.
 
 @notes
 Adjectives follow the noun they modify. | Adjektive stehen nach dem Substantiv, das sie bestimmen.
@@ -1851,3 +2045,30 @@ X + ར་ + འགྱུར་ "becomes X". | X + ར་ + འགྱུར་ �
 Negation: མི་ before the verb. | Verneinung: མི་ vor dem Verb.
 The delative ལས་ "from (someone)". | Der Delativ ལས་ „von (jemandem)“.
 ཆུར་ = ཆུ་ + ར་ "into the water". | ཆུར་ = ཆུ་ + ར་ „ins Wasser“.
+ལས་ཀྱི་དབང་གིས་ "by the power of karma": the ergative marks the cause. | ལས་ཀྱི་དབང་གིས་ „durch die Macht des Karma“: der Ergativ bezeichnet die Ursache.
+རྐུ་བ་ "stealing": the particle བ་ makes a participle of the verb. | རྐུ་བ་ „stehlend“: die Partikel བ་ macht aus dem Verb ein Partizip.
+ཚིམ་པར་འགྱུར་ "becomes satisfied": adjective + ར་ + འགྱུར་. | ཚིམ་པར་འགྱུར་ „wird satt“: Adjektiv + ར་ + འགྱུར་.
+ལྷ་མོ་ "goddess" is used here for the queen. | ལྷ་མོ་ „Göttin“ steht hier für die Königin.
+མི་མཐོང་བ་ "the one who does not see": a nominalised verb phrase. | མི་མཐོང་བ་ „der nicht Sehende“: eine nominalisierte Verbalphrase.
+Prohibitive: མ་ + verb + imperative particle. | Verbot: མ་ + Verb + Imperativpartikel.
+ཞིང་ joins two verbs: "spreading, it increased". | ཞིང་ verbindet zwei Verben: „sich verbreitend, wuchs sie“.
+ཡི་རངས་ "rejoiced", literally "the mind delighted". | ཡི་རངས་ „freute sich“, wörtlich „der Sinn erfreute sich“.
+བཞུགས་ is the honorific of འདུག་ "to stay". | བཞུགས་ ist die ehrenvolle Form von འདུག་ „bleiben“.
+X ལ་ Y དུ་ འཛིན་ "to take X as Y". | X ལ་ Y དུ་ འཛིན་ „X für Y halten“.
+ནི་ marks the topic of the sentence. | ནི་ markiert das Thema des Satzes.
+བྱ་བ་ after a name means "called, so-called". | བྱ་བ་ nach einem Namen bedeutet „genannt, sogenannt“.
+ཏེ་ after a verb: "having done X, then Y". | ཏེ་ nach einem Verb: „nachdem X getan war, dann Y“.
+ཆུང་ངུ་ is a diminutive form: "the little one, the youngest". | ཆུང་ངུ་ ist eine Diminutivform: „der Kleine, der Jüngste“.
+བཞིན་དུ་ "according to" follows the noun. | བཞིན་དུ་ „gemäß“ folgt dem Substantiv.
+ཐུང་དུ་སོང་ "became short": adjective + དུ་ + སོང་. | ཐུང་དུ་སོང་ „wurde kurz“: Adjektiv + དུ་ + སོང་.
+ཤིང་དྲུང་ན་ "under the tree": noun + postposition + ན་. | ཤིང་དྲུང་ན་ „unter dem Baum“: Substantiv + Postposition + ན་.
+ཁྱིམ་གྱི་ནང་དུ་ "into the house": genitive + postposition. | ཁྱིམ་གྱི་ནང་དུ་ „ins Haus“: Genitiv + Postposition.
+ལས་ཆད་པ་ "descended from": the delative ལས་. | ལས་ཆད་པ་ „abstammend von“: der Delativ ལས་.
+ཀྱང་ after a verb: "even if, although". | ཀྱང་ nach einem Verb: „auch wenn, obwohl“.
+Verb + བའི་བར་དུ་ "while, during". | Verb + བའི་བར་དུ་ „während“.
+A question with ཅི་ "what" needs no final particle. | Eine Frage mit ཅི་ „was“ braucht keine Schlusspartikel.
+འདུག་པ་ "lying": a relative clause made with པ་. | འདུག་པ་ „liegend“: ein Relativsatz mit པ་.
+རམ་ is the question particle after a final ར. | རམ་ ist die Fragepartikel nach auslautendem ར.
+གསུངས་པ་ "what was said": a nominalised verb. | གསུངས་པ་ „das Gesagte“: ein nominalisiertes Verb.
+འདི་སྐད་ཅེས་ introduces direct speech. | འདི་སྐད་ཅེས་ leitet die direkte Rede ein.
+སྟོན་པའི་སྤྲེའུ་ "a monkey that shows": a relative clause before the noun. | སྟོན་པའི་སྤྲེའུ་ „ein Affe, der zeigt“: ein Relativsatz vor dem Substantiv.

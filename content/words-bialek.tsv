@@ -151,3 +151,136 @@
 ལོང་བ་ | blind | слепой | adj | 94
 སེར་ག་ | crack, fissure | трещина | noun | 94
 སླར་ | back, again | обратно, снова | adverb | 94
+
+@set bialek-07
+རྐུ་ | to steal | красть | verb | 104
+ཁྲིད་ | to lead | вести | verb | 104
+བགྲེས་པ་ | elder, old man | старейшина, старец | noun | 104
+གཅོག་ | to knock out, to break off | выбивать, отламывать | verb | 104
+ཆོག་ | knock out! (imperative of གཅོག་) | выбей! (повел. от གཅོག་) | verb | 104
+ཇོ་བོ་ | lord, master | владыка, господин | noun | 104
+དེ་སྐད་ | those words, thus | те слова, так | noun | 105
+མདུན་སོ་ | front tooth, incisor | передний зуб, резец | noun | 105
+འབོར་ | to lose | терять | verb | 105
+བོར་ | lost (past of འབོར་) | потерял (прош. от འབོར་) | verb | 105
+མ་སྨད་ | mother and her children | мать с детьми | noun | 105
+སྨྲ་ | to speak | говорить | verb | 105
+སྨྲས་ | spoke (past of སྨྲ་) | сказал (прош. от སྨྲ་) | verb | 105
+བཙུན་པ་ | respectable, noble | почтенный, знатный | adj | 105
+ཚིམ་པ་ | satisfied | насыщенный, довольный | adj | 105
+ཤིང་མཁན་ | carpenter | плотник | noun | 105
+གསལ་ | to be clear | быть ясным | verb | 105
+
+@set bialek-08
+ཀུན་ཏུ་ | all around, everywhere | повсюду, вокруг | adverb | 114
+འགུམས་ | to kill | убивать | verb | 115
+བཀུམ་ | killed (past of འགུམས་) | убил (прош. от འགུམས་) | verb | 114
+སྐོམ་ཚུགས་ | chin | подбородок | noun | 114
+སྐྱིད་སྡུག་ | happiness and misery | счастье и горе | noun | 114
+ཁྱིམ་ | house | дом | noun | 114
+མཁའ་ལྡིང་ | garuḍa (bird) | гаруда (птица) | noun | 114
+འཁར་བ་ | staff | посох | noun | 114
+གོས་སེར་ཅན་ | the Yellow-clad, an epithet of Viṣṇu | Одетый в жёлтое, эпитет Вишну | name | 114
+རྒོད་མ་ | mare | кобыла | noun | 115
+གཅིག་པུ་ | sole, only | единственный | adj | 115
+གཅོད་ | to cut; to decide; ཞལ་ཆེ་གཅོད་ to pass judgement | резать; решать; ཞལ་ཆེ་གཅོད་ вершить суд | verb | 115
+འཆའ་ | to place (on) | класть, опирать | verb | 115
+བཅས་ | placed (past of འཆའ་) | опёр, положил (прош. от འཆའ་) | verb | 115
+འཇོམས་ | to conquer | побеждать | verb | 115
+བཅོམ་ | conquered (past of འཇོམས་) | победил (прош. от འཇོམས་) | verb | 115
+གཉེན་ཚན་ | relatives | родичи | noun | 115
+མཉན་དུ་ཡོད་པ་ | Shravasti (a town in India) | Шравасти (город в Индии) | name | 115
+ད་ལྟར་ | now | теперь | adverb | 115
+དར་ | to spread | распространяться | verb | 115
+དུར་ | grave | могила | noun | 115
+ཕོ་བྲང་ | palace | дворец | noun | 115
+ཕྲིན་ | message | послание | noun | 115
+འཕུར་ | to fly | летать | verb | 115
+བུ་སྨད་ | children and their mother | дети с матерью | noun | 115
+བྱོས་ | do!; say! (imperative of བྱེད་) | сделай!; скажи! (повел. от བྱེད་) | verb | 115
+ཙམ་ | mere, merely; about | лишь, только; около | particle | 115
+རྩེ་ | to play | играть | verb | 115
+ཞལ་ཆེ་ | judgement | суд, приговор | noun | 115
+བཞོན་པ་ | riding-beast, mount | ездовое животное | noun | 115
+འུ་བུ་ཅག་ | we | мы | pronoun | 115
+རངས་ | rejoiced (past of རང་); ཡི་རངས་ rejoiced | возрадовался (прош. от རང་); ཡི་རངས་ возрадовался | verb | 116
+
+@set bialek-09
+ཕྱུགས་ | cattle, livestock | скот | noun | 124
+བ་ར་བོང་ | cows, goats and donkeys | коровы, козы и ослы | noun | 124
+ཟས་གཙང་མ་ | Shuddhodana (the Buddha's father) | Шуддходана (отец Будды) | name | 125
+སྒྱུ་མ་ལྷ་མཛེས་ | Maya (the Buddha's mother) | Майя (мать Будды) | name | 124
+དྲུག་པོ་ | the (group of) six | шестеро | number | 124
+བཙུན་མོ་ | queen | царица | noun | 125
+ནགས་མ་ | forest | лес | noun | 124
+བྱ་ཚོགས་ | Flock of Birds (name of a forest) | Птичья Стая (название леса) | name | 124
+མོད་ | to be abundant | изобиловать | verb | 125
+སྐྱེལ་ | to bring, to take (somewhere) | доставлять, отводить | verb | 124
+བསྐྱལ་ | brought (past of སྐྱེལ་) | отвёл (прош. от སྐྱེལ་) | verb | 124
+སྙོད་ | to feed | кормить | verb | 124
+བསྙོད་ | fed (past of སྙོད་) | накормил (прош. от སྙོད་) | verb | 124
+རྡོ་ | stone | камень | noun | 124
+བླངས་ | took (past of ལེན་) | взял (прош. от ལེན་) | verb | 125
+འཕེན་ | to throw | бросать | verb | 124
+འཕངས་ | threw (past of འཕེན་) | бросил (прош. от འཕེན་) | verb | 124
+ཤ་ཀོ་ཏ་ཀ་ | shakhotaka (a tree species) | шакхотака (вид дерева) | noun | 125
+བྱ་རོག་ | crow | ворона | noun | 124
+སྙིང་བརྩེ་བ་ | loving, kind | любящий, добрый | adj | 124
+བླ་ | sign, symbol; soul | знак, символ; душа | noun | 125
+ཆུང་ངུ་ | the youngest; childhood | младший; детство | noun | 124
+ཁྲ་ | falcon | сокол | noun | 124
+འཁྱེར་ | to carry away | уносить | verb | 124
+གཽ་ཏ་མ་ | Gautama (the Buddha) | Гаутама (Будда) | name | 124
+བདེ་སྐྱིད་ | to be happy; happiness | быть счастливым; счастье | verb | 124
+འབྲོས་ | to flee | убегать | verb | 125
+བྲོས་ | fled (past of འབྲོས་) | убежал (прош. от འབྲོས་) | verb | 124
+
+@set bialek-10
+ལྡན་ | to be possessed of, to have | обладать | verb | 133
+གཅིག་པ་ | only, single | единственный | adj | 133
+བཞིན་ | manner; བཞིན་དུ་ according to | образ, манера; བཞིན་དུ་ согласно | noun | 134
+བཏང་ | let go, sent (past of གཏོང་) | отпустил, послал (прош. от གཏོང་) | verb | 133
+རབ་ | eldest; best | старший; лучший | adj | 134
+སྒྲ་ཆེན་པོ་ | Drachenpo (the eldest prince) | Драченпо (старший принц) | name | 133
+སྤུ་ | hair, fur | шерсть, волосы | noun | 134
+ཐུང་ | to be short | быть коротким | verb | 133
+མཇུག་མ་ | tail | хвост | noun | 133
+སྤྲོ་བ་ | joy | радость | noun | 134
+གཤེ་ | to inveigh, to scold | бранить | verb | 134
+དེ་བཞིན་གཤེགས་པ་ | Tathāgata | Татхагата | noun | 133
+དྲུང་ | presence, vicinity; དྲུང་ན་ under, near | присутствие; དྲུང་ན་ под, у | noun | 133
+ལོ་རྒྱུས་ | account, story | рассказ, история | noun | 134
+གཏོད་ | to point (towards) | указывать | verb | 133
+གཏད་ | pointed (past of གཏོད་) | указал (прош. от གཏོད་) | verb | 133
+ཆད་པ་ | descended, born (from) | происходящий (от) | adj | 133
+རྗེ་ | lord | владыка | noun | 133
+གཉའ་ཁྲི་བཙན་པོ་ | Nyatri Tsenpo (the first king of Tibet) | Ньятри Ценпо (первый царь Тибета) | name | 133
+སྐོང་ཆུ་ལག་ | the arms of the Kongchu river | рукава реки Конгчу | name | 133
+བལ་པོ་ | Nepalese | непалец | noun | 134
+སེ་འུ་ | pomegranate | гранат | noun | 134
+ཟོས་ | ate (past of ཟ་) | съел (прош. от ཟ་) | verb | 134
+ཁ་དོག་ | colour | цвет | noun | 133
+བྲོ་བ་ | taste | вкус | noun | 134
+
+@set bialek-11
+ངལ་ | weariness; ངལ་བསོ་ to rest | усталость; ངལ་བསོ་ отдыхать | noun | 140
+གསོ་ | to cure, to nourish | лечить, питать | verb | 142
+བསོ་ | rested (ངལ་བསོ་, from གསོ་) | отдохнул (ངལ་བསོ་, от གསོ་) | verb | 142
+ཟས་ | food | еда | noun | 141
+ཅིའི་སླད་དུ་ | why, on account of what | почему, ради чего | adverb | 141
+འབའ་ཞིག་ | alone, mere | один лишь | adj | 141
+ཚོར་ | to perceive, to notice | ощущать, замечать | verb | 141
+ཤིང་རྟ་ཆེན་པོ་ | Shingta Chenpo (a king's name) | Шингта Ченпо (имя царя) | name | 141
+སྟོད་ | to praise | восхвалять | verb | 140
+བསྟོད་ | praised (past of སྟོད་) | восхвалил (прош. от སྟོད་) | verb | 140
+འདི་སྐད་ | these words, thus | эти слова, так | noun | 141
+རྫུ་འཕྲུལ་ | miracles, magic | чудеса, волшебство | noun | 141
+དབུལ་ཕོངས་ | to be poor | быть бедным | verb | 141
+བཟའ་བ་ | food | еда | noun | 141
+བགོ་བ་ | clothes | одежда | noun | 140
+རྩིག་པ་ | wall | стена | noun | 141
+མཆོང་ | to jump | прыгать | verb | 141
+མཆོངས་ | jumped (past of མཆོང་) | прыгнул (прош. от མཆོང་) | verb | 141
+མི་ལ་ཤེས་རབ་རྒྱལ་མཚན་ | Mila Sherab Gyaltsen (Milarepa's father) | Мила Шераб Гьялцен (отец Миларепы) | name | 141
+སྙུན་ | illness | болезнь | noun | 141
+ཟིན་ | to be seized (by) | быть охваченным | verb | 141

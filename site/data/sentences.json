@@ -12135,8 +12135,7 @@
   {
     "id": "s435",
     "words": [
-      "kun",
-      "tu",
+      "kun-tu",
       "dga'-ba"
     ],
     "tr": {
@@ -19744,8 +19743,7 @@
     "words": [
       "yum",
       "gyis",
-      "kun",
-      "tu",
+      "kun-tu",
       "gzigs",
       "pas",
       "shing",
@@ -25329,6 +25327,2546 @@
     },
     "set": "bialek-06",
     "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 6, p. 94",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s867",
+    "words": [
+      "bdag",
+      "las",
+      "kyi",
+      "dbang",
+      "gis",
+      "srin-mo",
+      "'i",
+      "rigs",
+      "su",
+      "skyes",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Силой прежних деяний я родился в роду демониц.",
+      "en": "By the power of my past actions I was born into the race of ogresses.",
+      "de": "Durch die Macht meiner früheren Taten wurde ich in das Geschlecht der Dämoninnen geboren.",
+      "fr": "Par la force de mes actes passés, je suis né dans la race des ogresses.",
+      "pl": "Mocą dawnych czynów urodziłem się w rodzie demonic."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ལས་ཀྱི་དབང་གིས་ «силой кармы»: эргатив обозначает причину.",
+      "en": "ལས་ཀྱི་དབང་གིས་ \"by the power of karma\": the ergative marks the cause.",
+      "de": "ལས་ཀྱི་དབང་གིས་ „durch die Macht des Karma“: der Ergativ bezeichnet die Ursache.",
+      "fr": "ལས་ཀྱི་དབང་གིས་ « par la force du karma » : l’ergatif marque la cause.",
+      "pl": "ལས་ཀྱི་དབང་གིས་ „mocą karmy”: ergatyw oznacza przyczynę."
+    }
+  },
+  {
+    "id": "s868",
+    "words": [
+      "de",
+      "'i",
+      "tshe",
+      "na",
+      "grong-khyer",
+      "de",
+      "na",
+      "rgan-mo",
+      "zhig",
+      "la",
+      "bu",
+      "rku",
+      "ba",
+      "gnyis",
+      "shig",
+      "yod",
+      "shad"
+    ],
+    "tr": {
+      "ru": "В то время в том городе у одной старухи было два сына-вора.",
+      "en": "At that time in the town an old woman had two thieving sons.",
+      "de": "Zu jener Zeit hatte in der Stadt eine alte Frau zwei diebische Söhne.",
+      "fr": "À cette époque, dans la ville, une vieille femme avait deux fils voleurs.",
+      "pl": "W tamtym czasie w mieście pewna staruszka miała dwóch synów złodziei."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "རྐུ་བ་ «ворующий»: частица བ་ образует причастие от глагола.",
+      "en": "རྐུ་བ་ \"stealing\": the particle བ་ makes a participle of the verb.",
+      "de": "རྐུ་བ་ „stehlend“: die Partikel བ་ macht aus dem Verb ein Partizip.",
+      "fr": "རྐུ་བ་ « volant » : la particule བ་ fait du verbe un participe.",
+      "pl": "རྐུ་བ་ „kradnący”: partykuła བ་ tworzy imiesłów od czasownika."
+    }
+  },
+  {
+    "id": "s869",
+    "words": [
+      "bcom-ldan-'das",
+      "gshegs-pa",
+      "rgan-mo",
+      "ma-smad",
+      "gsum",
+      "gyis",
+      "mthong",
+      "ngo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Трое, старуха-мать и её сыновья, увидели приближающегося Победоносного.",
+      "en": "The three, the old woman, the mother and her sons, saw the Victorious One coming.",
+      "de": "Die drei, die alte Frau, die Mutter und ihre Söhne, sahen den Siegreichen kommen.",
+      "fr": "Les trois, la vieille femme, la mère et ses fils, virent venir le Victorieux.",
+      "pl": "Troje, staruszka matka i jej synowie, ujrzeli nadchodzącego Zwycięskiego."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s870",
+    "words": [
+      "nyi-ma",
+      "'i",
+      "'od-zer",
+      "shar",
+      "ro",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Взошли лучи солнца.",
+      "en": "Rays of the sun have risen.",
+      "de": "Die Strahlen der Sonne sind aufgegangen.",
+      "fr": "Les rayons du soleil se sont levés.",
+      "pl": "Wzeszły promienie słońca."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s871",
+    "words": [
+      "khyod",
+      "kyis",
+      "nga",
+      "'i",
+      "glang",
+      "bor",
+      "ro",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Ты потерял моего быка.",
+      "en": "You lost my ox.",
+      "de": "Du hast meinen Ochsen verloren.",
+      "fr": "Tu as perdu mon bœuf.",
+      "pl": "Zgubiłeś mojego wołu."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s872",
+    "words": [
+      "khyod",
+      "kyis",
+      "nga",
+      "'i",
+      "ste'u",
+      "chu",
+      "ra",
+      "bskur",
+      "ro",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Ты уронил мой топор в реку.",
+      "en": "You let my axe fall into the river.",
+      "de": "Du hast meine Axt in den Fluss fallen lassen.",
+      "fr": "Tu as laissé tomber ma hache dans la rivière.",
+      "pl": "Upuściłeś moją siekierę do rzeki."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s873",
+    "words": [
+      "'di",
+      "dag",
+      "gis",
+      "nga",
+      "khrid",
+      "do",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Они ведут меня.",
+      "en": "They are leading me.",
+      "de": "Sie führen mich.",
+      "fr": "Ils me conduisent.",
+      "pl": "Oni mnie prowadzą."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s874",
+    "words": [
+      "shing-mkhan",
+      "gyi",
+      "mdun-so",
+      "gnyis",
+      "chog",
+      "cig"
+    ],
+    "tr": {
+      "ru": "Выбей плотнику два передних зуба!",
+      "en": "Knock out the carpenter's two front teeth!",
+      "de": "Schlag dem Zimmermann die zwei Vorderzähne aus!",
+      "fr": "Arrache les deux dents de devant du charpentier !",
+      "pl": "Wybij cieśli dwa przednie zęby!"
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s875",
+    "words": [
+      "yi-ge",
+      "'di",
+      "'i",
+      "don",
+      "bgres-pa",
+      "kun",
+      "gyi",
+      "thugs",
+      "la",
+      "gsal",
+      "lo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Смысл этого текста ясен уму всех старейшин.",
+      "en": "The meaning of this text is clear to the minds of all the elders.",
+      "de": "Der Sinn dieses Textes ist dem Geist aller Ältesten klar.",
+      "fr": "Le sens de ce texte est clair à l’esprit de tous les anciens.",
+      "pl": "Sens tego tekstu jest jasny dla umysłów wszystkich starszych."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s876",
+    "words": [
+      "de-nas",
+      "spre'u",
+      "de",
+      "sa-2",
+      "spre'u-phrug",
+      "rnams",
+      "de",
+      "ra",
+      "khrid",
+      "do",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Затем обезьяна повела туда обезьяньих детёнышей.",
+      "en": "Thereafter the monkey led the monkey-children there.",
+      "de": "Danach führte der Affe die Affenkinder dorthin.",
+      "fr": "Ensuite le singe y conduisit les petits singes.",
+      "pl": "Potem małpa zaprowadziła tam małpie dzieci."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s877",
+    "words": [
+      "sha",
+      "rlon-pa",
+      "dang",
+      "shad",
+      "khrag",
+      "dron-mo",
+      "sa-2",
+      "de",
+      "'i",
+      "yid",
+      "tshim-pa",
+      "ra",
+      "'gyur",
+      "ro",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Её ум насыщается свежей плотью и тёплой кровью.",
+      "en": "Her mind is satisfied with fresh flesh and warm blood.",
+      "de": "Ihr Sinn sättigt sich an frischem Fleisch und warmem Blut.",
+      "fr": "Son esprit se rassasie de chair fraîche et de sang chaud.",
+      "pl": "Jej umysł syci się świeżym mięsem i ciepłą krwią."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཚིམ་པར་འགྱུར་ «становится сытым»: прилагательное + ར་ + འགྱུར་.",
+      "en": "ཚིམ་པར་འགྱུར་ \"becomes satisfied\": adjective + ར་ + འགྱུར་.",
+      "de": "ཚིམ་པར་འགྱུར་ „wird satt“: Adjektiv + ར་ + འགྱུར་.",
+      "fr": "ཚིམ་པར་འགྱུར་ « devient rassasié » : adjectif + ར་ + འགྱུར་.",
+      "pl": "ཚིམ་པར་འགྱུར་ „staje się syty”: przymiotnik + ར་ + འགྱུར་."
+    }
+  },
+  {
+    "id": "s878",
+    "words": [
+      "lha-mo",
+      "de",
+      "sa-2",
+      "de-skad",
+      "smras",
+      "pa",
+      "thos",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Царица услышала эти сказанные слова.",
+      "en": "The queen heard these words uttered.",
+      "de": "Die Königin hörte diese Worte sprechen.",
+      "fr": "La reine entendit prononcer ces paroles.",
+      "pl": "Królowa usłyszała wypowiedziane słowa."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ལྷ་མོ་ «богиня» здесь обозначает царицу.",
+      "en": "ལྷ་མོ་ \"goddess\" is used here for the queen.",
+      "de": "ལྷ་མོ་ „Göttin“ steht hier für die Königin.",
+      "fr": "ལྷ་མོ་ « déesse » désigne ici la reine.",
+      "pl": "ལྷ་མོ་ „bogini” oznacza tu królową."
+    }
+  },
+  {
+    "id": "s879",
+    "words": [
+      "mi",
+      "mthong-ba",
+      "de",
+      "la",
+      "bu-pho",
+      "med",
+      "shad"
+    ],
+    "tr": {
+      "ru": "У того слепца не было сына.",
+      "en": "The blind one had no son.",
+      "de": "Der Blinde hatte keinen Sohn.",
+      "fr": "L’aveugle n’avait pas de fils.",
+      "pl": "Niewidomy nie miał syna."
+    },
+    "set": "bialek-07",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 7, p. 104",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "མི་མཐོང་བ་ «не видящий»: номинализованная глагольная группа.",
+      "en": "མི་མཐོང་བ་ \"the one who does not see\": a nominalised verb phrase.",
+      "de": "མི་མཐོང་བ་ „der nicht Sehende“: eine nominalisierte Verbalphrase.",
+      "fr": "མི་མཐོང་བ་ « celui qui ne voit pas » : un groupe verbal nominalisé.",
+      "pl": "མི་མཐོང་བ་ „ten, który nie widzi”: znominalizowana grupa czasownikowa."
+    }
+  },
+  {
+    "id": "s880",
+    "words": [
+      "gzhan",
+      "du-ma",
+      "sems",
+      "shig"
+    ],
+    "tr": {
+      "ru": "Не думай иначе!",
+      "en": "Don't think otherwise!",
+      "de": "Denk nicht anders!",
+      "fr": "Ne pense pas autrement !",
+      "pl": "Nie myśl inaczej!"
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "Запрет: མ་ + глагол + повелительная частица.",
+      "en": "Prohibitive: མ་ + verb + imperative particle.",
+      "de": "Verbot: མ་ + Verb + Imperativpartikel.",
+      "fr": "Prohibitif : མ་ + verbe + particule impérative.",
+      "pl": "Zakaz: མ་ + czasownik + partykuła rozkazująca."
+    }
+  },
+  {
+    "id": "s881",
+    "words": [
+      "sangs-rgyas",
+      "kyi",
+      "bstan-pa",
+      "dar",
+      "zhing",
+      "rgyas",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Учение Будды распространилось и возросло.",
+      "en": "The teaching of the Buddha spread and increased.",
+      "de": "Die Lehre des Buddha verbreitete sich und wuchs.",
+      "fr": "L’enseignement du Bouddha se répandit et grandit.",
+      "pl": "Nauka Buddy rozprzestrzeniła się i wzrosła."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཞིང་ соединяет два глагола: «распространяясь, возросло».",
+      "en": "ཞིང་ joins two verbs: \"spreading, it increased\".",
+      "de": "ཞིང་ verbindet zwei Verben: „sich verbreitend, wuchs sie“.",
+      "fr": "ཞིང་ relie deux verbes : « se répandant, il grandit ».",
+      "pl": "ཞིང་ łączy dwa czasowniki: „rozprzestrzeniając się, wzrosła”."
+    }
+  },
+  {
+    "id": "s882",
+    "words": [
+      "bram-ze",
+      "'i",
+      "bu",
+      "gcig-pu",
+      "sa-2",
+      "dgra-bo",
+      "'i",
+      "tshogs",
+      "kun",
+      "bcom",
+      "mo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Единственный сын брахмана победил все вражеские войска.",
+      "en": "The sole son of a Brahmin conquered all the troops of enemies.",
+      "de": "Der einzige Sohn eines Brahmanen besiegte alle Heere der Feinde.",
+      "fr": "Le fils unique d’un brahmane vainquit toutes les troupes ennemies.",
+      "pl": "Jedyny syn bramina pokonał wszystkie wojska wrogów."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s883",
+    "words": [
+      "mkha'-lding",
+      "gos-ser-can",
+      "gyi",
+      "bzhon-pa",
+      "ra",
+      "gyur",
+      "to",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Гаруда стал ездовым животным Вишну, Одетого в жёлтое.",
+      "en": "The garuḍa became the mount of Vishnu, the Yellow-clad.",
+      "de": "Der Garuḍa wurde zum Reittier Vishnus, des Gelbgekleideten.",
+      "fr": "Le garuḍa devint la monture de Vishnou, le Vêtu-de-jaune.",
+      "pl": "Garuda stał się wierzchowcem Wisznu, Odzianego w Żółć."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s884",
+    "words": [
+      "de",
+      "'i",
+      "tshe",
+      "na",
+      "kun-dga'-bo",
+      "dang",
+      "shad",
+      "'khor",
+      "mang-po",
+      "yi",
+      "rangs",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Тогда Ананда и многочисленная свита возрадовались.",
+      "en": "Then Ananda and the numerous attendants rejoiced.",
+      "de": "Da freuten sich Ānanda und das zahlreiche Gefolge.",
+      "fr": "Alors Ānanda et la nombreuse suite se réjouirent.",
+      "pl": "Wtedy Ananda i liczni dworzanie uradowali się."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཡི་རངས་ «возрадовались», букв. «ум порадовался».",
+      "en": "ཡི་རངས་ \"rejoiced\", literally \"the mind delighted\".",
+      "de": "ཡི་རངས་ „freute sich“, wörtlich „der Sinn erfreute sich“.",
+      "fr": "ཡི་རངས་ « se réjouit », littéralement « l’esprit se délecta ».",
+      "pl": "ཡི་རངས་ „uradowali się”, dosłownie „umysł się ucieszył”."
+    }
+  },
+  {
+    "id": "s885",
+    "words": [
+      "bram-ze",
+      "de",
+      "sa-2",
+      "'khar-ba",
+      "la",
+      "skom-tshugs",
+      "bcas",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Брахман опёрся подбородком на посох.",
+      "en": "The Brahmin rested his chin on a staff.",
+      "de": "Der Brahmane stützte sein Kinn auf einen Stab.",
+      "fr": "Le brahmane appuya son menton sur un bâton.",
+      "pl": "Bramin oparł podbródek na lasce."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s886",
+    "words": [
+      "de",
+      "sa-2",
+      "'u-bu-cag",
+      "gi",
+      "zhal-che",
+      "gcod",
+      "do",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Он рассудит нас.",
+      "en": "He will pass judgement on us.",
+      "de": "Er wird über uns urteilen.",
+      "fr": "Il nous jugera.",
+      "pl": "On nas osądzi."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s887",
+    "words": [
+      "kho-bo",
+      "'i",
+      "phrin",
+      "zhig",
+      "rgyal-po",
+      "la",
+      "byos",
+      "shig"
+    ],
+    "tr": {
+      "ru": "Передай царю моё послание!",
+      "en": "Deliver my message to the king!",
+      "de": "Überbringe dem König meine Botschaft!",
+      "fr": "Porte mon message au roi !",
+      "pl": "Przekaż królowi moje poselstwo!"
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s888",
+    "words": [
+      "dbyig-pa-can",
+      "gyis",
+      "bdag",
+      "gi",
+      "rta",
+      "rgod-ma",
+      "bkum",
+      "mo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Йикпачен убил мою кобылу.",
+      "en": "Yikpachen killed my mare.",
+      "de": "Yikpachen hat meine Stute getötet.",
+      "fr": "Yikpachen a tué ma jument.",
+      "pl": "Jikpaczen zabił moją klacz."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s889",
+    "words": [
+      "dus",
+      "gcig",
+      "na",
+      "shad",
+      "bcom-ldan-'das",
+      "mnyan-du-yod-pa",
+      "na",
+      "bzhugs",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Однажды Победоносный пребывал в Шравасти.",
+      "en": "One day the Victorious One was abiding in Shravasti.",
+      "de": "Eines Tages weilte der Siegreiche in Shravasti.",
+      "fr": "Un jour, le Victorieux séjournait à Shravasti.",
+      "pl": "Pewnego dnia Zwycięski przebywał w Śrawasti."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "བཞུགས་ — вежливая форма འདུག་ «пребывать».",
+      "en": "བཞུགས་ is the honorific of འདུག་ \"to stay\".",
+      "de": "བཞུགས་ ist die ehrenvolle Form von འདུག་ „bleiben“.",
+      "fr": "བཞུགས་ est la forme honorifique de འདུག་ « rester ».",
+      "pl": "བཞུགས་ to forma honoryfikatywna འདུག་ „przebywać”."
+    }
+  },
+  {
+    "id": "s890",
+    "words": [
+      "brag-srin-mo",
+      "zhig",
+      "de",
+      "ra",
+      "'ongs",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Туда пришла скальная демоница.",
+      "en": "A rock-ogress came there.",
+      "de": "Eine Felsendämonin kam dorthin.",
+      "fr": "Une ogresse des rochers y vint.",
+      "pl": "Przyszła tam skalna demonica."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s891",
+    "words": [
+      "phug-ron",
+      "gsum",
+      "zhig",
+      "kun-tu",
+      "'phur",
+      "zhing",
+      "rtse",
+      "'o",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Три голубя летали вокруг и играли.",
+      "en": "Three doves were flying around and playing.",
+      "de": "Drei Tauben flogen umher und spielten.",
+      "fr": "Trois colombes volaient alentour et jouaient.",
+      "pl": "Trzy gołębie latały dookoła i bawiły się."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s892",
+    "words": [
+      "rgyal-po",
+      "dang",
+      "'khor",
+      "mang-po",
+      "rnams",
+      "phyir",
+      "pho-brang",
+      "du",
+      "song",
+      "ngo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Царь с многочисленной свитой вернулся во дворец.",
+      "en": "The king and his many attendants returned to the palace.",
+      "de": "Der König und sein zahlreiches Gefolge kehrten in den Palast zurück.",
+      "fr": "Le roi et sa nombreuse suite retournèrent au palais.",
+      "pl": "Król z licznymi dworzanami wrócił do pałacu."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s893",
+    "words": [
+      "nga",
+      "'i",
+      "bu-smad",
+      "gsum",
+      "gyi",
+      "skyid-sdug",
+      "gnyen-tshan",
+      "kun",
+      "shes",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Все родичи знают о счастье и горе троих, моих детей и их матери.",
+      "en": "All the relatives know the happiness and misery of my children and their mother, the three.",
+      "de": "Alle Verwandten kennen Glück und Leid der drei, meiner Kinder und ihrer Mutter.",
+      "fr": "Tous les proches connaissent le bonheur et le malheur des trois, mes enfants et leur mère.",
+      "pl": "Wszyscy krewni znają szczęście i niedolę trojga, moich dzieci i ich matki."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s894",
+    "words": [
+      "bdag",
+      "da-ltar",
+      "khyim",
+      "la",
+      "dur",
+      "tsam",
+      "du",
+      "'dzin",
+      "no",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Теперь я считаю свой дом лишь могилой.",
+      "en": "Now I take my house merely as a grave.",
+      "de": "Jetzt halte ich mein Haus bloß für ein Grab.",
+      "fr": "Maintenant je ne tiens ma maison que pour une tombe.",
+      "pl": "Teraz mam swój dom jedynie za grób."
+    },
+    "set": "bialek-08",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 8, p. 114",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "X ལ་ Y དུ་ འཛིན་ «считать X за Y».",
+      "en": "X ལ་ Y དུ་ འཛིན་ \"to take X as Y\".",
+      "de": "X ལ་ Y དུ་ འཛིན་ „X für Y halten“.",
+      "fr": "X ལ་ Y དུ་ འཛིན་ « tenir X pour Y ».",
+      "pl": "X ལ་ Y དུ་ འཛིན་ „mieć X za Y”."
+    }
+  },
+  {
+    "id": "s895",
+    "words": [
+      "phyugs",
+      "ba-ra-bong",
+      "gsum"
+    ],
+    "tr": {
+      "ru": "домашний скот: коровы, козы и ослы, три вида",
+      "en": "domesticated cattle: cows, goats and donkeys, the three",
+      "de": "Hausvieh: Kühe, Ziegen und Esel, die drei",
+      "fr": "le bétail domestique : vaches, chèvres et ânes, les trois",
+      "pl": "bydło domowe: krowy, kozy i osły, te trzy"
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s896",
+    "words": [
+      "rgyal-bu",
+      "gnyis",
+      "ni",
+      "'ongs",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Что до двух принцев, они пришли.",
+      "en": "As for the two princes, they came.",
+      "de": "Was die zwei Prinzen betrifft, sie kamen.",
+      "fr": "Quant aux deux princes, ils vinrent.",
+      "pl": "Co do dwóch książąt, przyszli."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ནི་ выделяет тему предложения.",
+      "en": "ནི་ marks the topic of the sentence.",
+      "de": "ནི་ markiert das Thema des Satzes.",
+      "fr": "ནི་ marque le thème de la phrase.",
+      "pl": "ནི་ wyznacza temat zdania."
+    }
+  },
+  {
+    "id": "s897",
+    "words": [
+      "bdag",
+      "ni",
+      "rgyal-bu",
+      "sems-can-chen-po",
+      "yin",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Что до меня, я принц Семчен Ченпо.",
+      "en": "As for myself, I am the prince Semchen Chenpo.",
+      "de": "Was mich betrifft, ich bin der Prinz Semchen Chenpo.",
+      "fr": "Quant à moi, je suis le prince Semchen Chenpo.",
+      "pl": "Co do mnie, jestem księciem Semczen Czenpo."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s898",
+    "words": [
+      "de",
+      "ni",
+      "da-ltar",
+      "nga",
+      "'i",
+      "yab",
+      "rgyal-po",
+      "zas-gtsang-ma",
+      "yin",
+      "no",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Что до него, теперь это мой отец, царь Шуддходана.",
+      "en": "As for him, now he is my father, the king Shuddhodana.",
+      "de": "Was ihn betrifft, jetzt ist er mein Vater, der König Shuddhodana.",
+      "fr": "Quant à lui, c’est maintenant mon père, le roi Shuddhodana.",
+      "pl": "Co do niego, teraz jest to mój ojciec, król Śuddhodana."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s899",
+    "words": [
+      "de",
+      "'i",
+      "tshe",
+      "de",
+      "'i",
+      "dus",
+      "na",
+      "rgyal-po",
+      "de",
+      "'i",
+      "btsun-mo",
+      "de",
+      "ni",
+      "da-ltar",
+      "nga",
+      "'i",
+      "yum",
+      "sgyu-ma-lha-mdzes",
+      "yin",
+      "no",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Что до царицы того царя в те давние времена, ныне это моя мать Майя.",
+      "en": "As for the queen of that king in those days of yore, today she is my mother Maya.",
+      "de": "Was die Königin jenes Königs in jenen fernen Tagen betrifft, heute ist sie meine Mutter Maya.",
+      "fr": "Quant à la reine de ce roi en ces temps lointains, c’est aujourd’hui ma mère Maya.",
+      "pl": "Co do królowej tamtego króla w dawnych czasach, dziś jest to moja matka Maja."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s900",
+    "words": [
+      "de",
+      "ra",
+      "spre'u-phrug",
+      "drug-po",
+      "de",
+      "ni",
+      "pha",
+      "byang-chub-sems-dpa'",
+      "spre'u",
+      "sa-2",
+      "shad",
+      "nags-ma",
+      "bya-tshogs",
+      "bya-ba",
+      "shad",
+      "shing-thog",
+      "mod",
+      "pa",
+      "zhig",
+      "tu",
+      "bskyal",
+      "to",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Тогда шестерых обезьяньих детёнышей их отец, обезьяна-бодхисаттва, отвёл в лес под названием Птичья Стая, изобилующий плодами.",
+      "en": "Then, as for these six monkey-children, their father, the bodhisattva-monkey, brought them to the forest called Flock of Birds, abounding in fruits.",
+      "de": "Dann brachte der Vater dieser sechs Affenkinder, der Bodhisattva-Affe, sie in den Wald namens Vogelschwarm, der reich an Früchten war.",
+      "fr": "Alors, quant à ces six petits singes, leur père, le singe-bodhisattva, les emmena dans la forêt dite Volée d’oiseaux, abondante en fruits.",
+      "pl": "Wtedy sześcioro małpich dzieci ich ojciec, małpa-bodhisattwa, zaprowadził do lasu zwanego Ptasie Stado, obfitującego w owoce."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "བྱ་བ་ после имени значит «называемый».",
+      "en": "བྱ་བ་ after a name means \"called, so-called\".",
+      "de": "བྱ་བ་ nach einem Namen bedeutet „genannt, sogenannt“.",
+      "fr": "བྱ་བ་ après un nom signifie « appelé, dit ».",
+      "pl": "བྱ་བ་ po nazwie znaczy „zwany, tak zwany”."
+    }
+  },
+  {
+    "id": "s901",
+    "words": [
+      "bdag",
+      "gis",
+      "lus",
+      "kyis",
+      "stag-mo",
+      "ltogs-pa",
+      "bsnyod",
+      "do",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Я накормил голодную тигрицу своим телом.",
+      "en": "I fed a hungry tigress with my body.",
+      "de": "Ich habe eine hungrige Tigerin mit meinem Körper gefüttert.",
+      "fr": "J’ai nourri une tigresse affamée de mon corps.",
+      "pl": "Nakarmiłem głodną tygrysicę swoim ciałem."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s902",
+    "words": [
+      "bdag",
+      "da-ltar",
+      "khyim",
+      "la",
+      "dur",
+      "tsam",
+      "du",
+      "'dzin",
+      "te",
+      "shad",
+      "chung-ma",
+      "dang",
+      "shad",
+      "bu-mo",
+      "la",
+      "dgra",
+      "tsam",
+      "du",
+      "sems",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Теперь я считаю свой дом лишь могилой, а жену и дочерей лишь врагами.",
+      "en": "Now I take my house merely as a grave and think of my wife and daughters as mere enemies.",
+      "de": "Jetzt halte ich mein Haus bloß für ein Grab und sehe in Frau und Töchtern bloß Feinde.",
+      "fr": "Maintenant je ne tiens ma maison que pour une tombe et ne vois en ma femme et mes filles que des ennemies.",
+      "pl": "Teraz mam swój dom jedynie za grób, a żonę i córki jedynie za wrogów."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s903",
+    "words": [
+      "de",
+      "sa-2",
+      "rdo",
+      "zhig",
+      "blangs",
+      "te",
+      "'phangs",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Он взял камень и бросил.",
+      "en": "He took a stone and threw it.",
+      "de": "Er nahm einen Stein und warf ihn.",
+      "fr": "Il prit une pierre et la lança.",
+      "pl": "Wziął kamień i rzucił."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཏེ་ после глагола: «сделав X, затем Y».",
+      "en": "ཏེ་ after a verb: \"having done X, then Y\".",
+      "de": "ཏེ་ nach einem Verb: „nachdem X getan war, dann Y“.",
+      "fr": "ཏེ་ après un verbe : « ayant fait X, puis Y ».",
+      "pl": "ཏེ་ po czasowniku: „zrobiwszy X, potem Y”."
+    }
+  },
+  {
+    "id": "s904",
+    "words": [
+      "gnas",
+      "gzhan",
+      "zhig",
+      "na",
+      "shing",
+      "sha-ko-ta-ka",
+      "la",
+      "bya-rog",
+      "gcig",
+      "'dug",
+      "go",
+      "shad"
+    ],
+    "tr": {
+      "ru": "В другом месте на дереве шакхотака сидела ворона.",
+      "en": "In another place a crow was sitting on a shakhotaka tree.",
+      "de": "An einem anderen Ort saß eine Krähe auf einem Shakhotaka-Baum.",
+      "fr": "Ailleurs, un corbeau était perché sur un arbre shakhotaka.",
+      "pl": "W innym miejscu na drzewie śakhotaka siedziała wrona."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s905",
+    "words": [
+      "khyod",
+      "ni",
+      "snying-rje",
+      "chen-po",
+      "sa-2",
+      "stag-mo",
+      "bsnyod",
+      "de",
+      "thams-cad",
+      "la",
+      "snying-brtse-ba",
+      "yin",
+      "no",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Что до тебя, из великого сострадания ты накормил тигрицу и был добр ко всем.",
+      "en": "As for you, out of great compassion you fed the tigress and were kind to everybody.",
+      "de": "Was dich betrifft, aus großem Mitgefühl hast du die Tigerin gefüttert und warst zu allen gütig.",
+      "fr": "Quant à toi, par grande compassion tu as nourri la tigresse et tu as été bienveillant envers tous.",
+      "pl": "Co do ciebie, z wielkiego współczucia nakarmiłeś tygrysicę i byłeś życzliwy dla wszystkich."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s906",
+    "words": [
+      "phug-ron",
+      "bu-pho",
+      "'i",
+      "bla",
+      "ste",
+      "shad",
+      "phug-ron",
+      "nang",
+      "gi",
+      "chung-ngu",
+      "khra",
+      "sa-2",
+      "khyer",
+      "ro",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Голубь, знак сына; самого младшего из голубей унёс сокол.",
+      "en": "A dove is a sign for a son; the youngest among the doves was carried away by a falcon.",
+      "de": "Eine Taube ist ein Zeichen für einen Sohn; die jüngste der Tauben wurde von einem Falken fortgetragen.",
+      "fr": "Une colombe est le signe d’un fils ; la plus jeune des colombes fut emportée par un faucon.",
+      "pl": "Gołąb jest znakiem syna; najmłodszego z gołębi porwał sokół."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཆུང་ངུ་ — уменьшительная форма: «маленький, младший».",
+      "en": "ཆུང་ངུ་ is a diminutive form: \"the little one, the youngest\".",
+      "de": "ཆུང་ངུ་ ist eine Diminutivform: „der Kleine, der Jüngste“.",
+      "fr": "ཆུང་ངུ་ est une forme diminutive : « le petit, le plus jeune ».",
+      "pl": "ཆུང་ངུ་ to forma zdrobniała: „maleńki, najmłodszy”."
+    }
+  },
+  {
+    "id": "s907",
+    "words": [
+      "dge-slong",
+      "gau-ta-ma",
+      "ni",
+      "rab-tu",
+      "bde-skyid",
+      "do",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Монах Гаутама совершенно счастлив.",
+      "en": "The monk Gautama is utterly happy.",
+      "de": "Der Mönch Gautama ist vollkommen glücklich.",
+      "fr": "Le moine Gautama est parfaitement heureux.",
+      "pl": "Mnich Gautama jest całkowicie szczęśliwy."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s908",
+    "words": [
+      "mi",
+      "gzhan",
+      "zhig",
+      "gi",
+      "rta",
+      "rgod-ma",
+      "zhig",
+      "bros",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Кобыла другого человека убежала.",
+      "en": "A mare of another man fled.",
+      "de": "Die Stute eines anderen Mannes floh.",
+      "fr": "La jument d’un autre homme s’enfuit.",
+      "pl": "Klacz innego człowieka uciekła."
+    },
+    "set": "bialek-09",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 9, p. 123",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s909",
+    "words": [
+      "sras",
+      "tha-chungs",
+      "de",
+      "chung-ngu",
+      "nas",
+      "byams-pa",
+      "dang",
+      "snying-rje",
+      "ra",
+      "ldan",
+      "te",
+      "shad",
+      "thams-cad",
+      "la",
+      "bu",
+      "gcig-pa",
+      "dang",
+      "'dra",
+      "'o",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Младший сын, с детства исполненный любви и сострадания, казался всем единственным ребёнком.",
+      "en": "The youngest son, filled with love and compassion from childhood, seemed to all like their only child.",
+      "de": "Der jüngste Sohn, von Kindheit an voll Liebe und Mitgefühl, erschien allen wie ihr einziges Kind.",
+      "fr": "Le plus jeune fils, empli d’amour et de compassion depuis l’enfance, semblait à tous leur enfant unique.",
+      "pl": "Najmłodszy syn, od dzieciństwa pełen miłości i współczucia, wydawał się wszystkim ich jedynym dzieckiem."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s910",
+    "words": [
+      "rgyal-po",
+      "sa-2",
+      "kyang",
+      "bcom-ldan-'das",
+      "kyi",
+      "bka'",
+      "bzhin",
+      "du",
+      "de",
+      "dag",
+      "btang",
+      "ngo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "И царь отпустил их по слову Победоносного.",
+      "en": "Indeed, the king set them free according to the words of the Victorious One.",
+      "de": "Und der König ließ sie gemäß den Worten des Siegreichen frei.",
+      "fr": "Et le roi les libéra selon les paroles du Victorieux.",
+      "pl": "I król uwolnił ich zgodnie ze słowami Zwycięskiego."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "བཞིན་དུ་ «согласно» стоит после существительного.",
+      "en": "བཞིན་དུ་ \"according to\" follows the noun.",
+      "de": "བཞིན་དུ་ „gemäß“ folgt dem Substantiv.",
+      "fr": "བཞིན་དུ་ « selon » suit le nom.",
+      "pl": "བཞིན་དུ་ „zgodnie z” stoi po rzeczowniku."
+    }
+  },
+  {
+    "id": "s911",
+    "words": [
+      "de",
+      "'i",
+      "dus",
+      "na",
+      "sras",
+      "rab",
+      "sgra-chen-po",
+      "de",
+      "ni",
+      "byams-pa",
+      "yin",
+      "no",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Тот старший сын тех времён, Драченпо, это Майтрея.",
+      "en": "That eldest son of those days, Drachenpo, is Maitreya.",
+      "de": "Jener älteste Sohn von damals, Drachenpo, ist Maitreya.",
+      "fr": "Ce fils aîné d’alors, Drachenpo, c’est Maitreya.",
+      "pl": "Tamten najstarszy syn z dawnych czasów, Draczenpo, to Majtreja."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s912",
+    "words": [
+      "spu",
+      "yang",
+      "thung",
+      "du",
+      "song",
+      "shad",
+      "mjug-ma",
+      "yang",
+      "thung",
+      "du",
+      "song",
+      "ngo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Шерсть у них стала короче, и хвосты тоже стали короче.",
+      "en": "Their hair grew shorter; their tails grew shorter too.",
+      "de": "Ihr Fell wurde kürzer; auch ihre Schwänze wurden kürzer.",
+      "fr": "Leur poil raccourcit ; leurs queues raccourcirent aussi.",
+      "pl": "Ich sierść stała się krótsza; ogony też stały się krótsze."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཐུང་དུ་སོང་ «стало коротким»: прилагательное + དུ་ + སོང་.",
+      "en": "ཐུང་དུ་སོང་ \"became short\": adjective + དུ་ + སོང་.",
+      "de": "ཐུང་དུ་སོང་ „wurde kurz“: Adjektiv + དུ་ + སོང་.",
+      "fr": "ཐུང་དུ་སོང་ « devint court » : adjectif + དུ་ + སོང་.",
+      "pl": "ཐུང་དུ་སོང་ „stał się krótki”: przymiotnik + དུ་ + སོང་."
+    }
+  },
+  {
+    "id": "s913",
+    "words": [
+      "de",
+      "'i",
+      "pha-ma",
+      "yang",
+      "spro-ba",
+      "cung-zad",
+      "skyes",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "И у его родителей родилась небольшая радость.",
+      "en": "A little joy rose in his parents too.",
+      "de": "Auch in seinen Eltern stieg ein wenig Freude auf.",
+      "fr": "Un peu de joie naquit aussi chez ses parents.",
+      "pl": "W jego rodzicach także zrodziła się odrobina radości."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s914",
+    "words": [
+      "bu-mo",
+      "dag",
+      "kyang",
+      "phyir",
+      "ma",
+      "la",
+      "gshe",
+      "'o",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Дочери же в ответ бранили мать.",
+      "en": "The daughters, too, inveighed against their mother in return.",
+      "de": "Die Töchter wiederum schalten ihre Mutter.",
+      "fr": "Les filles, à leur tour, invectivèrent leur mère.",
+      "pl": "Córki zaś w odpowiedzi łajały matkę."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s915",
+    "words": [
+      "bdag",
+      "gis",
+      "sngon",
+      "nyes-pa",
+      "byas",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Прежде я совершил дурные дела.",
+      "en": "Earlier I did bad deeds.",
+      "de": "Früher habe ich böse Taten begangen.",
+      "fr": "Autrefois j’ai commis de mauvaises actions.",
+      "pl": "Dawniej popełniłem złe czyny."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s916",
+    "words": [
+      "de-bzhin-gshegs-pa",
+      "shing",
+      "drung",
+      "na",
+      "bzhugs",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Татхагата сидел под деревом.",
+      "en": "The Tathagata was sitting under a tree.",
+      "de": "Der Tathāgata saß unter einem Baum.",
+      "fr": "Le Tathāgata était assis sous un arbre.",
+      "pl": "Tathagata siedział pod drzewem."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཤིང་དྲུང་ན་ «под деревом»: существительное + послелог + ན་.",
+      "en": "ཤིང་དྲུང་ན་ \"under the tree\": noun + postposition + ན་.",
+      "de": "ཤིང་དྲུང་ན་ „unter dem Baum“: Substantiv + Postposition + ན་.",
+      "fr": "ཤིང་དྲུང་ན་ « sous l’arbre » : nom + postposition + ན་.",
+      "pl": "ཤིང་དྲུང་ན་ „pod drzewem”: rzeczownik + poimek + ན་."
+    }
+  },
+  {
+    "id": "s917",
+    "words": [
+      "dbyig-pa-can",
+      "gyis",
+      "glang",
+      "de",
+      "khyim",
+      "gyi",
+      "nang",
+      "du",
+      "btang",
+      "ngo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Йикпачен впустил быка в дом.",
+      "en": "Yikpachen let the ox into the house.",
+      "de": "Yikpachen ließ den Ochsen ins Haus.",
+      "fr": "Yikpachen fit entrer le bœuf dans la maison.",
+      "pl": "Jikpaczen wpuścił wołu do domu."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཁྱིམ་གྱི་ནང་དུ་ «в дом»: родительный падеж + послелог.",
+      "en": "ཁྱིམ་གྱི་ནང་དུ་ \"into the house\": genitive + postposition.",
+      "de": "ཁྱིམ་གྱི་ནང་དུ་ „ins Haus“: Genitiv + Postposition.",
+      "fr": "ཁྱིམ་གྱི་ནང་དུ་ « dans la maison » : génitif + postposition.",
+      "pl": "ཁྱིམ་གྱི་ནང་དུ་ „do domu”: dopełniacz + poimek."
+    }
+  },
+  {
+    "id": "s918",
+    "words": [
+      "de",
+      "bar",
+      "la",
+      "nga",
+      "'i",
+      "bu-smad",
+      "gsum",
+      "gyi",
+      "skyid-sdug",
+      "khyed",
+      "gnyen-tshan",
+      "kun",
+      "shes",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "До тех пор вы, все родичи, будете знать о счастье и горе троих, моих детей и их матери.",
+      "en": "Until then you, all the relatives, will know the happiness and misery of my children and their mother, the three.",
+      "de": "Bis dahin werdet ihr, alle Verwandten, Glück und Leid der drei, meiner Kinder und ihrer Mutter, kennen.",
+      "fr": "D’ici là, vous, tous les proches, connaîtrez le bonheur et le malheur des trois, mes enfants et leur mère.",
+      "pl": "Do tego czasu wy, wszyscy krewni, będziecie znać szczęście i niedolę trojga, moich dzieci i ich matki."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s919",
+    "words": [
+      "nga",
+      "'i",
+      "zhang-po",
+      "dang",
+      "mdzes-se",
+      "'i",
+      "pha-ming",
+      "gis",
+      "lo-rgyus",
+      "byas",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Мой дядя по матери, а также отец и братья Дзесе рассказали эту историю.",
+      "en": "My maternal uncle and Dzese's father and brothers recounted the story.",
+      "de": "Mein Onkel mütterlicherseits sowie Dzeses Vater und Brüder erzählten die Geschichte.",
+      "fr": "Mon oncle maternel ainsi que le père et les frères de Dzese racontèrent l’histoire.",
+      "pl": "Mój wuj oraz ojciec i bracia Dzese opowiedzieli tę historię."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s920",
+    "words": [
+      "de-nas",
+      "spre'u",
+      "byang-chub-sems-dpa'",
+      "de",
+      "sa-2",
+      "spre'u-phrug",
+      "rnams",
+      "de",
+      "ra",
+      "khrid",
+      "de",
+      "shad",
+      "lo-thog",
+      "la",
+      "gtad",
+      "do",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Затем обезьяна-бодхисаттва, приведя туда обезьяньих детёнышей, указала им на посевы.",
+      "en": "Thereafter the bodhisattva-monkey, having led the monkey-children there, pointed towards the crops.",
+      "de": "Danach führte der Bodhisattva-Affe die Affenkinder dorthin und zeigte auf die Feldfrüchte.",
+      "fr": "Ensuite le singe-bodhisattva, ayant conduit là les petits singes, leur montra les récoltes.",
+      "pl": "Potem małpa-bodhisattwa, zaprowadziwszy tam małpie dzieci, wskazała na zasiewy."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s921",
+    "words": [
+      "bod",
+      "kha-ba-can",
+      "pa",
+      "mi",
+      "'di",
+      "rnams",
+      "pha",
+      "spre'u",
+      "dang",
+      "shad",
+      "ma",
+      "brag-srin-mo",
+      "gnyis",
+      "las",
+      "chad-pa",
+      "yin",
+      "no",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Эти люди снежного Тибета происходят от отца-обезьяны и матери, скальной демоницы.",
+      "en": "These people of snowy Tibet are descended from a father-monkey and a mother rock-ogress.",
+      "de": "Diese Menschen des schneereichen Tibet stammen von einem Affenvater und einer Felsendämonin als Mutter ab.",
+      "fr": "Ces gens du Tibet enneigé descendent d’un père singe et d’une mère ogresse des rochers.",
+      "pl": "Ci ludzie śnieżnego Tybetu pochodzą od ojca małpy i matki skalnej demonicy."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ལས་ཆད་པ་ «происходящий от»: делатив ལས་.",
+      "en": "ལས་ཆད་པ་ \"descended from\": the delative ལས་.",
+      "de": "ལས་ཆད་པ་ „abstammend von“: der Delativ ལས་.",
+      "fr": "ལས་ཆད་པ་ « issu de » : le délatif ལས་.",
+      "pl": "ལས་ཆད་པ་ „pochodzący od”: delatyw ལས་."
+    }
+  },
+  {
+    "id": "s922",
+    "words": [
+      "chu",
+      "thams-cad",
+      "de",
+      "ra",
+      "song",
+      "ste",
+      "shad",
+      "skong-chu-lag",
+      "tu",
+      "thim",
+      "mo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Вся вода стекла туда и исчезла в рукавах реки Конгчу.",
+      "en": "All the water flowed there and disappeared into the arms of the Kongchu.",
+      "de": "Alles Wasser floss dorthin und verschwand in den Armen des Kongchu.",
+      "fr": "Toute l’eau s’y écoula et disparut dans les bras du Kongchu.",
+      "pl": "Cała woda spłynęła tam i zniknęła w odnogach Kongczu."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s923",
+    "words": [
+      "rje",
+      "gnya'-khri-btsan-po",
+      "bod",
+      "kyi",
+      "rgyal-po",
+      "la",
+      "byon",
+      "to",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Владыка Ньятри Ценпо стал царём Тибета.",
+      "en": "The lord Nyatri Tsenpo came to be the king of Tibet.",
+      "de": "Der Herr Nyatri Tsenpo wurde König von Tibet.",
+      "fr": "Le seigneur Nyatri Tsenpo devint roi du Tibet.",
+      "pl": "Pan Njatri Cenpo został królem Tybetu."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s924",
+    "words": [
+      "bal-po",
+      "sa-2",
+      "se-'u",
+      "ma",
+      "zos",
+      "kyang",
+      "shad",
+      "kha-dog",
+      "nyid",
+      "las",
+      "bro-ba",
+      "shes",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Даже если непалец не ел граната, он знает его вкус по одному лишь цвету.",
+      "en": "Even if a Nepalese did not eat the pomegranate, he knows its taste from its very colour.",
+      "de": "Auch wenn ein Nepalese den Granatapfel nicht gegessen hat, kennt er seinen Geschmack allein von der Farbe.",
+      "fr": "Même si un Népalais n’a pas mangé la grenade, il en connaît le goût à sa seule couleur.",
+      "pl": "Nawet jeśli Nepalczyk nie jadł granatu, zna jego smak po samej barwie."
+    },
+    "set": "bialek-10",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 10, p. 132",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "ཀྱང་ после глагола: «даже если, хотя».",
+      "en": "ཀྱང་ after a verb: \"even if, although\".",
+      "de": "ཀྱང་ nach einem Verb: „auch wenn, obwohl“.",
+      "fr": "ཀྱང་ après un verbe : « même si, bien que ».",
+      "pl": "ཀྱང་ po czasowniku: „nawet jeśli, chociaż”."
+    }
+  },
+  {
+    "id": "s925",
+    "words": [
+      "cung-zad",
+      "cig",
+      "ngal",
+      "bso",
+      "ba'i",
+      "bar",
+      "du",
+      "sras",
+      "gsum-po",
+      "tshal",
+      "gyi",
+      "nang",
+      "du",
+      "dong",
+      "ngo",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Пока все немного отдыхали, трое сыновей ушли в лес.",
+      "en": "During a short rest the three sons went into a forest.",
+      "de": "Während einer kurzen Rast gingen die drei Söhne in einen Wald.",
+      "fr": "Pendant une courte halte, les trois fils entrèrent dans une forêt.",
+      "pl": "Podczas krótkiego odpoczynku trzej synowie poszli do lasu."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "Глагол + བའི་བར་དུ་ «пока, во время».",
+      "en": "Verb + བའི་བར་དུ་ \"while, during\".",
+      "de": "Verb + བའི་བར་དུ་ „während“.",
+      "fr": "Verbe + བའི་བར་དུ་ « pendant que, durant ».",
+      "pl": "Czasownik + བའི་བར་དུ་ „podczas gdy, w czasie”."
+    }
+  },
+  {
+    "id": "s926",
+    "words": [
+      "stag-mo",
+      "'di",
+      "sa-2",
+      "zas",
+      "su",
+      "ci",
+      "za",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Что ест эта тигрица?",
+      "en": "What does this tigress eat as food?",
+      "de": "Was frisst diese Tigerin?",
+      "fr": "Que mange cette tigresse ?",
+      "pl": "Co je ta tygrysica?"
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "Вопрос с ཅི་ «что» не требует конечной частицы.",
+      "en": "A question with ཅི་ \"what\" needs no final particle.",
+      "de": "Eine Frage mit ཅི་ „was“ braucht keine Schlusspartikel.",
+      "fr": "Une question avec ཅི་ « quoi » n’a pas besoin de particule finale.",
+      "pl": "Pytanie z ཅི་ „co” nie wymaga partykuły końcowej."
+    }
+  },
+  {
+    "id": "s927",
+    "words": [
+      "bdag",
+      "tshe-'phos",
+      "pa'i",
+      "rus-bu",
+      "tshal",
+      "na",
+      "'dug",
+      "pa",
+      "la",
+      "pha-ma",
+      "sa-2",
+      "bskor",
+      "to",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Родители окружили кости меня, умершего, лежащие в лесу.",
+      "en": "My parents surrounded my bones, the bones of the dead me, lying in the wood.",
+      "de": "Meine Eltern umringten meine Knochen, die Knochen des toten Ich, die im Wald lagen.",
+      "fr": "Mes parents entourèrent mes os, les os de moi mort, qui gisaient dans le bois.",
+      "pl": "Rodzice otoczyli moje kości, kości mnie zmarłego, leżące w lesie."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "འདུག་པ་ «лежащие»: относительный оборот с པ་.",
+      "en": "འདུག་པ་ \"lying\": a relative clause made with པ་.",
+      "de": "འདུག་པ་ „liegend“: ein Relativsatz mit པ་.",
+      "fr": "འདུག་པ་ « gisant » : une relative formée avec པ་.",
+      "pl": "འདུག་པ་ „leżące”: zdanie względne z པ་."
+    }
+  },
+  {
+    "id": "s928",
+    "words": [
+      "ci'i-slad-du",
+      "bdag",
+      "'ba'-zhig",
+      "gi",
+      "phyir",
+      "mya-ngan",
+      "gyi",
+      "rgya-mtsho",
+      "ra",
+      "ltung",
+      "ba",
+      "mi",
+      "tshor",
+      "ram",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Отчего же из-за меня одного вы не замечаете, что падаете в океан горя?",
+      "en": "Why then, just because of me, do you not notice your fall into the ocean of misery?",
+      "de": "Warum bemerkt ihr denn, nur meinetwegen, euren Sturz in den Ozean des Leids nicht?",
+      "fr": "Pourquoi donc, à cause de moi seul, ne remarquez-vous pas votre chute dans l’océan du malheur ?",
+      "pl": "Czemuż więc, tylko z mojego powodu, nie dostrzegacie swego upadku w ocean niedoli?"
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "རམ་ — вопросительная частица после конечной ར.",
+      "en": "རམ་ is the question particle after a final ར.",
+      "de": "རམ་ ist die Fragepartikel nach auslautendem ར.",
+      "fr": "རམ་ est la particule interrogative après un ར final.",
+      "pl": "རམ་ to partykuła pytajna po końcowym ར."
+    }
+  },
+  {
+    "id": "s929",
+    "words": [
+      "khyod",
+      "kyi",
+      "yid",
+      "la",
+      "ci",
+      "snyam",
+      "du",
+      "sems",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Что ты думаешь в своём уме?",
+      "en": "What do you think in your mind?",
+      "de": "Was denkst du in deinem Sinn?",
+      "fr": "Que penses-tu en ton esprit ?",
+      "pl": "Co myślisz w swoim umyśle?"
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s930",
+    "words": [
+      "de",
+      "'i",
+      "tshe",
+      "de",
+      "'i",
+      "dus",
+      "na",
+      "rgyal-po",
+      "shing-rta-chen-po",
+      "de",
+      "su",
+      "yin",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Кто же тот царь давних времён Шингта Ченпо?",
+      "en": "Who is that king Shingta Chenpo of those days of yore?",
+      "de": "Wer ist jener König Shingta Chenpo aus fernen Tagen?",
+      "fr": "Qui est ce roi Shingta Chenpo des temps lointains ?",
+      "pl": "Kim jest tamten król Szingta Czenpo z dawnych czasów?"
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s931",
+    "words": [
+      "de",
+      "'i",
+      "tshe",
+      "na",
+      "kun-dga'-bo",
+      "dang",
+      "shad",
+      "'khor",
+      "mang-po",
+      "thams-cad",
+      "bcom-ldan-'das",
+      "kyis",
+      "gsungs",
+      "pa",
+      "la",
+      "yi",
+      "rangs",
+      "te",
+      "mngon-par",
+      "bstod",
+      "do",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Тогда Ананда и вся многочисленная свита возрадовались сказанному Победоносным и восхвалили его.",
+      "en": "Then Ananda and all the numerous attendants rejoiced at what the Victorious One had said and praised him.",
+      "de": "Da freuten sich Ānanda und das ganze zahlreiche Gefolge über die Worte des Siegreichen und priesen ihn.",
+      "fr": "Alors Ānanda et toute la nombreuse suite se réjouirent des paroles du Victorieux et le louèrent.",
+      "pl": "Wtedy Ananda i wszyscy liczni dworzanie uradowali się słowami Zwycięskiego i wychwalali go."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "གསུངས་པ་ «сказанное»: номинализованный глагол.",
+      "en": "གསུངས་པ་ \"what was said\": a nominalised verb.",
+      "de": "གསུངས་པ་ „das Gesagte“: ein nominalisiertes Verb.",
+      "fr": "གསུངས་པ་ « ce qui fut dit » : un verbe nominalisé.",
+      "pl": "གསུངས་པ་ „to, co powiedziano”: znominalizowany czasownik."
+    }
+  },
+  {
+    "id": "s932",
+    "words": [
+      "'gro-ba",
+      "rigs",
+      "drug",
+      "nas",
+      "tshe-'phos",
+      "pa'i",
+      "spre'u-phrug",
+      "rnams",
+      "skyes",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Родились обезьяньи детёныши, переродившиеся из шести миров существования.",
+      "en": "Monkey-children reborn from the six states of existence were born.",
+      "de": "Affenkinder, wiedergeboren aus den sechs Daseinsbereichen, wurden geboren.",
+      "fr": "Des petits singes renés des six états d’existence naquirent.",
+      "pl": "Urodziły się małpie dzieci, odrodzone z sześciu stanów istnienia."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s933",
+    "words": [
+      "sems-can-chen-po",
+      "sa-2",
+      "stag-mo",
+      "la",
+      "lus",
+      "byin",
+      "pa'i",
+      "le'u",
+      "ste",
+      "gnyis-pa",
+      "'o",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Это вторая глава, о том, как Семчен Ченпо отдал тело тигрице.",
+      "en": "This is the second chapter, on how Semchen Chenpo gave his body to a tigress.",
+      "de": "Dies ist das zweite Kapitel, darüber, wie Semchen Chenpo seinen Körper einer Tigerin gab.",
+      "fr": "Ceci est le deuxième chapitre, sur la façon dont Semchen Chenpo donna son corps à une tigresse.",
+      "pl": "To drugi rozdział, o tym, jak Semczen Czenpo oddał ciało tygrysicy."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s934",
+    "words": [
+      "bram-ze",
+      "sa-2",
+      "bcom-ldan-'das",
+      "la",
+      "'di-skad",
+      "ces",
+      "gsol",
+      "to",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Брахман обратился к Победоносному с такими словами.",
+      "en": "The Brahmin spoke these words to the Victorious One.",
+      "de": "Der Brahmane sprach diese Worte zum Siegreichen.",
+      "fr": "Le brahmane adressa ces paroles au Victorieux.",
+      "pl": "Bramin zwrócił się do Zwycięskiego tymi słowami."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "འདི་སྐད་ཅེས་ вводит прямую речь.",
+      "en": "འདི་སྐད་ཅེས་ introduces direct speech.",
+      "de": "འདི་སྐད་ཅེས་ leitet die direkte Rede ein.",
+      "fr": "འདི་སྐད་ཅེས་ introduit le discours direct.",
+      "pl": "འདི་སྐད་ཅེས་ wprowadza mowę niezależną."
+    }
+  },
+  {
+    "id": "s935",
+    "words": [
+      "de-nas",
+      "'phags-pa",
+      "spyan-ras-gzigs",
+      "de",
+      "sa-2",
+      "shad",
+      "rdzu-'phrul",
+      "ston-pa",
+      "'i",
+      "spre'u",
+      "zhig",
+      "la",
+      "shad",
+      "dge-bsnyen",
+      "gyi",
+      "sdom-pa",
+      "byin",
+      "no",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Тогда Благородный Ченрези дал обет мирянина обезьяне, являвшей чудеса.",
+      "en": "Then the Noble Chenrezig conferred the vow of a lay practitioner upon a monkey that was displaying miracles.",
+      "de": "Da verlieh der edle Chenrezig einem Affen, der Wunder zeigte, das Gelübde eines Laienpraktizierenden.",
+      "fr": "Alors le noble Chenrezig conféra le vœu de pratiquant laïc à un singe qui faisait des miracles.",
+      "pl": "Wtedy szlachetny Czenrezig nadał ślubowanie świeckiego praktykującego małpie, która czyniła cuda."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    },
+    "note": {
+      "ru": "སྟོན་པའི་སྤྲེའུ་ «обезьяна, которая являет»: относительный оборот перед существительным.",
+      "en": "སྟོན་པའི་སྤྲེའུ་ \"a monkey that shows\": a relative clause before the noun.",
+      "de": "སྟོན་པའི་སྤྲེའུ་ „ein Affe, der zeigt“: ein Relativsatz vor dem Substantiv.",
+      "fr": "སྟོན་པའི་སྤྲེའུ་ « un singe qui montre » : une relative placée avant le nom.",
+      "pl": "སྟོན་པའི་སྤྲེའུ་ „małpa, która pokazuje”: zdanie względne przed rzeczownikiem."
+    }
+  },
+  {
+    "id": "s936",
+    "words": [
+      "rab-tu",
+      "dbul-phongs",
+      "pa",
+      "shad",
+      "bza'-ba",
+      "dang",
+      "bgo-ba",
+      "med-pa",
+      "zhig",
+      "go",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Он был крайне беден, у него не было ни еды, ни одежды.",
+      "en": "He was extremely poor, one with neither food nor clothes.",
+      "de": "Er war äußerst arm, einer ohne Nahrung und ohne Kleider.",
+      "fr": "Il était extrêmement pauvre, sans nourriture ni vêtements.",
+      "pl": "Był skrajnie biedny, bez jedzenia i odzieży."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s937",
+    "words": [
+      "de",
+      "sa-2",
+      "rtsig-pa",
+      "zhig",
+      "gi",
+      "steng",
+      "du",
+      "mchongs",
+      "so",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Он вскочил на стену.",
+      "en": "He jumped onto a wall.",
+      "de": "Er sprang auf eine Mauer.",
+      "fr": "Il sauta sur un mur.",
+      "pl": "Wskoczył na mur."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s938",
+    "words": [
+      "de",
+      "la",
+      "chung-ma",
+      "sa-2",
+      "spyo",
+      "ba",
+      "yang",
+      "med",
+      "shad"
+    ],
+    "tr": {
+      "ru": "У него нет даже бранящейся жены.",
+      "en": "He has not even a scolding wife.",
+      "de": "Er hat nicht einmal eine keifende Frau.",
+      "fr": "Il n’a même pas une épouse qui gronde.",
+      "pl": "Nie ma nawet łającej żony."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
+    "trOrigin": {
+      "ru": "machine",
+      "en": "textbook",
+      "de": "machine",
+      "fr": "machine",
+      "pl": "machine"
+    }
+  },
+  {
+    "id": "s939",
+    "words": [
+      "yab",
+      "mi-la-shes-rab-rgyal-mtshan",
+      "de",
+      "snyun",
+      "zhig",
+      "gis",
+      "zin",
+      "no",
+      "shad"
+    ],
+    "tr": {
+      "ru": "Моего отца Милу Шераба Гьялцена одолела болезнь.",
+      "en": "My father Mila Sherab Gyaltsen was seized by an illness.",
+      "de": "Mein Vater Mila Sherab Gyaltsen wurde von einer Krankheit ergriffen.",
+      "fr": "Mon père Mila Sherab Gyaltsen fut saisi par une maladie.",
+      "pl": "Mojego ojca Milę Szeraba Gjalcena ogarnęła choroba."
+    },
+    "set": "bialek-11",
+    "source": "Bialek, A Textbook in Classical Tibetan (2022), lesson 11, p. 140",
     "trOrigin": {
       "ru": "machine",
       "en": "textbook",
