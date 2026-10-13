@@ -129,8 +129,8 @@ export default {
     dismiss: 'Nie teraz',
   },
   support: {
-    line: '♡ Wesprzyj ośrodek',
-    title: 'Wesprzyj ośrodek buddyjski',
+    line: '♡ Wesprzyj projekt',
+    title: 'Wesprzyj projekt',
     text: 'Tibetan Tiles jest darmowe: bez reklam, kont i płatnych funkcji, a aplikacja nie utrzymuje się z darowizn. Powstała jako dar dla ośrodka buddyjskiego w Batumi w Gruzji.',
     text2: 'Jeśli aplikacja pomaga Ci czytać teksty, możesz podziękować darowizną dla ośrodka: trafia ona na salę praktyki, nauki i tłumaczenia. Poniższe dane to konto autora; wszystko, co wpłynie, jest w całości przekazywane ośrodkowi. Każda kwota ma znaczenie.',
     how: 'Jak wysłać',

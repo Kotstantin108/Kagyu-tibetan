@@ -129,8 +129,8 @@ export default {
     dismiss: 'Nicht jetzt',
   },
   support: {
-    line: '♡ Zentrum unterstützen',
-    title: 'Das buddhistische Zentrum unterstützen',
+    line: '♡ Projekt unterstützen',
+    title: 'Projekt unterstützen',
     text: 'Tibetan Tiles ist kostenlos, ohne Werbung, Konten und Bezahlfunktionen, und die App finanziert sich nicht aus Spenden. Sie ist ein Geschenk an das buddhistische Zentrum in Batumi, Georgien.',
     text2: 'Wenn dir die App beim Lesen der Texte hilft, kannst du dich mit einer Spende an das Zentrum bedanken: sie geht in den Praxisraum, Belehrungen und Übersetzungen. Die Angaben unten sind das Konto des Autors; alles Eingegangene wird vollständig an das Zentrum weitergegeben. Jeder Betrag zählt.',
     how: 'So kannst du senden',

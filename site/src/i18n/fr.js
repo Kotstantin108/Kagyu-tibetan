@@ -129,8 +129,8 @@ export default {
     dismiss: 'Pas maintenant',
   },
   support: {
-    line: '♡ Soutenir le centre',
-    title: 'Soutenir le centre bouddhiste',
+    line: '♡ Soutenir le projet',
+    title: 'Soutenir le projet',
     text: 'Tibetan Tiles est gratuit, sans publicité, sans compte ni fonctions payantes, et l’application ne vit pas de dons. Elle a été faite comme un cadeau au centre bouddhiste de Batoumi, en Géorgie.',
     text2: 'Si l’application vous aide à lire les textes, vous pouvez dire merci par un don au centre : il sert à sa salle de pratique, à ses enseignements et à ses traductions. Les coordonnées ci-dessous sont le compte de l’auteur ; tout ce qui est reçu est intégralement reversé au centre. Tout montant compte.',
     how: 'Comment envoyer',
