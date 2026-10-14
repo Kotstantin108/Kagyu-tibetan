@@ -68,7 +68,7 @@ export function renderPlay(root, ctx) {
   const wylieBox = h('div', { class: 'wylie-box' }, wylieInput, wylieHelpBtn);
   const feedbackEl = h('p', { class: 'feedback', role: 'status' });
   const btnCheck = h('button', { type: 'button', class: 'action primary', onClick: check }, t('play.check'));
-  const btnHint = h('button', { type: 'button', class: 'action', onClick: hint }, t('play.hint'));
+  const btnHint = h('button', { type: 'button', class: 'action', id: 'btn-hint', onClick: hint }, t('play.hint'));
   const btnGrammar = h('button', { type: 'button', class: 'action', id: 'btn-grammar', onClick: () => showGrammar(null) }, t('play.grammar'));
   const btnReset = h('button', { type: 'button', class: 'action', id: 'btn-reset', onClick: () => deal(false) }, t('play.reset'));
   const btnSkip = h('button', { type: 'button', class: 'action', onClick: () => nextSentence() }, t('play.skip'));
@@ -485,7 +485,13 @@ export function renderPlay(root, ctx) {
     let pos = chosen.findIndex((k, i) => tile(k).text !== expected[i]);
     if (pos === -1) pos = chosen.length;
     if (pos >= expected.length) { setFeedback(t('play.hintAllPlaced')); render(); return; }
-    if (pos < chosen.length) { setFeedback(t('play.hintReturn', { pos: pos + 1 })); render(); return; }
+    if (pos < chosen.length) {
+      // a placed tile is wrong: name the tile that belongs there and keep the misplaced ones red
+      setFeedback(t('play.hintReturn', { pos: pos + 1, tib: expected[pos] }), 'bad');
+      render();
+      [...answer.querySelectorAll('.tile')].forEach((el, i) => { if (i >= pos) el.classList.add('wrong'); });
+      return;
+    }
     const key = rack.find((k) => tile(k).text === expected[pos]);
     hintedKey = key ?? null;
     setFeedback(t('play.hintNext'));

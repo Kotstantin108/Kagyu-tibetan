@@ -51,7 +51,7 @@ export default {
     correct: 'ལེགས་སོ། Dobrze!',
     hintNext: 'Podświetlony kafelek jest następny.',
     hintAllPlaced: 'Wszystkie kafelki są ułożone. Spróbuj „Sprawdź”.',
-    hintReturn: 'Jeden z zielonych kafelków jest nie na miejscu. Cofnij kafelki od pozycji {pos}.',
+    hintReturn: 'Na pozycji {pos} powinien być kafelek {tib}. Cofnij czerwone kafelki i ustaw go tam.',
     wordHelp: 'Pokaż tłumaczenie słowa',
     know: 'Znam',
     learning: 'Uczę się',

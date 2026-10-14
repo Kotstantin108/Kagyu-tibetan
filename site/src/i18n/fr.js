@@ -51,7 +51,7 @@ export default {
     correct: 'ལེགས་སོ། Correct !',
     hintNext: 'La tuile en surbrillance vient ensuite.',
     hintAllPlaced: 'Toutes les tuiles sont placées. Essayez « Vérifier ».',
-    hintReturn: 'Une tuile verte est mal placée. Renvoyez les tuiles à partir de la position {pos}.',
+    hintReturn: 'La position {pos} doit être {tib}. Renvoyez les tuiles rouges et placez-la là.',
     wordHelp: 'Afficher la traduction d’un mot',
     know: 'Je le connais',
     learning: 'J’apprends',

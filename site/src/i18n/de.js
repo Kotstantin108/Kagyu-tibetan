@@ -51,7 +51,7 @@ export default {
     correct: 'ལེགས་སོ། Richtig!',
     hintNext: 'Die hervorgehobene Kachel kommt als Nächstes.',
     hintAllPlaced: 'Alle Kacheln liegen. Versuch „Prüfen“.',
-    hintReturn: 'Eine grüne Kachel ist falsch. Lege die Kacheln ab Position {pos} zurück.',
+    hintReturn: 'An Position {pos} gehört {tib}. Lege die roten Kacheln zurück und setze sie dorthin.',
     wordHelp: 'Übersetzung eines Wortes anzeigen',
     know: 'Kenne ich',
     learning: 'Lerne ich noch',

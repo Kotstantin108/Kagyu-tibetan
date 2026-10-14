@@ -80,6 +80,10 @@ if (order.length >= 2 && new Set(order).size === order.length) {
   await page.waitForSelector('.popover .grammar-help');
   await page.keyboard.press('Escape');
   await page.waitForSelector('.popover', { state: 'detached' });
+  // the hint after a wrong answer names the tile for the first wrong position and keeps the misplaced tiles red
+  await page.click('#btn-hint');
+  check((await page.$eval('.feedback', (e) => e.classList.contains('bad') && /[ༀ-࿿]/.test(e.textContent))), 'hint names the expected tile');
+  check((await page.$$('.answer .tile.wrong')).length > 0, 'hint keeps the misplaced tiles red');
   await page.click('#btn-reset');
   await page.waitForFunction(() => document.querySelectorAll('.answer .tile').length === 0);
 }

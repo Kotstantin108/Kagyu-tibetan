@@ -51,7 +51,7 @@ export default {
     correct: 'ལེགས་སོ། Correct!',
     hintNext: 'The highlighted tile comes next.',
     hintAllPlaced: 'All tiles are placed. Try Check.',
-    hintReturn: 'A green tile is out of order. Return the tiles from position {pos} on.',
+    hintReturn: 'Position {pos} should be {tib}. Return the red tiles and place it there.',
     wordHelp: 'Show the translation of a word',
     know: 'I know it',
     learning: 'Still learning',
