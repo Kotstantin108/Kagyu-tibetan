@@ -120,6 +120,7 @@ function render() {
   document.getElementById('section-title').textContent = ctx.t(`nav.${r.name}`);
   setMenu(false);
   if (unmount) { try { unmount(); } catch { /* ignore */ } unmount = null; }
+  document.querySelectorAll('.popover-backdrop').forEach((el) => el.remove()); // a popover must not outlive its screen (browser back)
   clear(view);
   const res = screens[r.name](view, ctx);
   if (typeof res === 'function') unmount = res;
