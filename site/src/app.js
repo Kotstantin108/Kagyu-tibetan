@@ -96,7 +96,10 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 store.subscribe((p, source) => {
   applyTheme();
   if (ctx.lang !== currentLang()) { applyLang(); render(); }
-  else if (source === 'sync' || source === 'replace' || source === 'reset') render();
+  else if (source === 'replace' || source === 'reset') render();
+  // a background sync re-renders the other screens; the play screen keeps its current sentence
+  // and reads the merged progress when it picks the next one
+  else if (source === 'sync' && route().name !== 'play') render();
 });
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
 

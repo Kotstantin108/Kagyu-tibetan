@@ -7,7 +7,7 @@ import { h, clear, popover, popoverOpen, tibText, audioButton } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { pickNext, contentWords } from '../engine/next.js';
 import { checkAnswer, shuffle, checkWylie, pickOptions } from '../engine/check.js';
-import { renderTib, splitSyllables, fuseParticle } from '../engine/tib.js';
+import { renderTib, splitSyllables, fuseParticle, stripTsheg } from '../engine/tib.js';
 import { toWylie, syllableToWylie, CONSONANT_TABLE, VOWEL_TABLE } from '../engine/wylie.js';
 import { revealWord, wordError, recordSolved, setWordStatus, setSetting, wordStatus, STATUS } from '../engine/progress.js';
 import { registerSolve, localDay } from '../engine/streak.js';
@@ -108,8 +108,6 @@ export function renderPlay(root, ctx) {
     store.update((p) => setSetting(p, 'exercise', ex));
     deal(true);
   }
-
-  function stripTsheg(s) { return s.replace(/[་།]+$/u, ''); }
 
   function buildTiles() {
     const out = [];
@@ -449,7 +447,7 @@ export function renderPlay(root, ctx) {
       attempts++;
       const i = result.wrong[0];
       const tok = wylieTokens[Math.min(i, wylieTokens.length - 1)];
-      if (attempts === 1 && tok) store.update((p) => wordError(p, tok.wordId));
+      if (tok) store.update((p) => wordError(p, tok.wordId));
       let msg = t('play.wylieWrong', { pos: i + 1 });
       if (attempts >= 2 && tok) msg += ' ' + t('play.wylieExpected', { syllable: tok.text });
       msg += explain(tok ? tok.wordId : null);

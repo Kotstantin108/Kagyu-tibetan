@@ -38,7 +38,7 @@ export function validateReport(body) {
   if (!kind) return { ok: false, error: 'kind' };
   const id = kind === 'app' ? 'app' : String(body.id || '');
   if (!ID_RE.test(id) || id.length > 80) return { ok: false, error: 'id' };
-  const category = CATEGORIES[body.category] ? body.category : kind === 'app' ? 'bug' : 'translation';
+  const category = Object.hasOwn(CATEGORIES, body.category) ? body.category : kind === 'app' ? 'bug' : 'translation';
   const message = String(body.message || '').replace(/\r\n?/g, '\n').trim();
   if (message.length < LIMITS.messageMin || message.length > LIMITS.messageMax) return { ok: false, error: 'message' };
   const clip = (v, max) => String(v || '').replace(/\s+/g, ' ').trim().slice(0, max);
@@ -82,7 +82,7 @@ export function issueBody(r, { comment = false } = {}) {
 
 /** Sliding one-hour window per key, kept in memory. */
 export class RateLimiter {
-  constructor(limit = LIMITS.perHour, windowMs = 3600_000) { this.limit = limit; this.windowMs = windowMs; this.hits = new Map(); }
+  constructor(limit = LIMITS.perHour, windowMs = 3600_000) { this.limit = limit; this.windowMs = windowMs; this.hits = new Map(); this.sweptAt = 0; }
   /** True when the request is allowed; records it. */
   allow(key, now = Date.now()) {
     const since = now - this.windowMs;
@@ -90,7 +90,11 @@ export class RateLimiter {
     if (list.length >= this.limit) { this.hits.set(key, list); return false; }
     list.push(now);
     this.hits.set(key, list);
-    if (this.hits.size > 10_000) for (const [k, v] of this.hits) if (!v.some((t) => t > since)) this.hits.delete(k);
+    // drop idle keys when the map is big, at most once a minute so a flood of new keys cannot make every request scan it
+    if (this.hits.size > 10_000 && now - this.sweptAt > 60_000) {
+      this.sweptAt = now;
+      for (const [k, v] of this.hits) if (!v.some((t) => t > since)) this.hits.delete(k);
+    }
     return true;
   }
 }
@@ -99,7 +103,10 @@ export class RateLimiter {
 export class DailyIndex {
   constructor() { this.map = new Map(); }
   get(id, now = Date.now()) { const e = this.map.get(id); return e && now - e.at < 86_400_000 ? e : null; }
-  set(id, number, url, now = Date.now()) { this.map.set(id, { number, url, at: now }); }
+  set(id, number, url, now = Date.now()) {
+    this.map.set(id, { number, url, at: now });
+    if (this.map.size > 10_000) for (const [k, e] of this.map) if (now - e.at >= 86_400_000) this.map.delete(k);
+  }
 }
 
 export function makeGitHub({ token, repo, fetchFn = fetch }) {

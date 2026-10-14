@@ -15,6 +15,7 @@ test('validateReport accepts a good report and normalises it', () => {
   assert.equal(app.ok, true);
   assert.deepEqual([app.report.id, app.report.category, app.report.tib], ['app', 'idea', '']);
   assert.equal(validateReport({ kind: 'app', category: 'nonsense', message: 'Something is broken here.' }).report.category, 'bug');
+  for (const c of ['constructor', 'toString', '__proto__', 'hasOwnProperty']) assert.equal(validateReport({ kind: 'app', category: c, message: 'Something is broken here.' }).report.category, 'bug', c);
 });
 
 test('general reports: title from the first line, labels by category, never deduplicated', async () => {
@@ -117,4 +118,21 @@ test('http: CORS, validation, rate limit and the honeypot', async () => {
   } finally {
     server.close();
   }
+});
+
+test('the rate limiter sweeps idle keys at most once a minute and the daily index evicts old entries', () => {
+  const rl = new RateLimiter(5, 3600_000);
+  const t0 = 10_000_000;
+  for (let i = 0; i < 10_001; i++) rl.allow(`ip${i}`, t0 + i);
+  assert.ok(rl.hits.size > 10_000, 'nothing idle yet, nothing swept');
+  const t1 = t0 + 3600_000 + 20_000;
+  rl.allow('late', t1);
+  assert.equal(rl.hits.size, 1, 'idle keys swept after the window');
+  rl.allow('x', t1 + 1);
+  assert.equal(rl.sweptAt, t1, 'no second sweep within a minute');
+  const index = new DailyIndex();
+  for (let i = 0; i < 10_001; i++) index.set(`s${i}`, i, 'u', t0);
+  index.set('fresh', 1, 'u', t0 + 86_400_000);
+  assert.equal(index.map.size, 1, 'entries older than a day are evicted');
+  assert.equal(index.get('fresh', t0 + 86_400_000).number, 1);
 });
