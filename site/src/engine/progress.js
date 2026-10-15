@@ -7,7 +7,8 @@
 //     level: review level (index into REVIEW_INTERVALS), due: 'YYYY-MM-DD' of the next review
 //   sentences: { id: { solved, lastSolved } },
 //   streak: { current, best, lastDay, todayDate, todayCount },
-//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'wylie', lang, showWylie, voice, theme, onboarded }
+//   reading: { stageId: { rounds, best, updatedAt } },  the reading course (letters.js)
+//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, voice, theme, onboarded }
 // }
 
 import { SCHEMA_VERSION, REVIEW_INTERVALS, MANUAL_KNOWN_LEVEL } from './config.js';
@@ -24,6 +25,7 @@ export function createProgress(now = new Date()) {
     words: {},
     sentences: {},
     streak: { current: 0, best: 0, lastDay: null, todayDate: null, todayCount: 0 },
+    reading: {},
     settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false },
   };
 }
@@ -66,11 +68,21 @@ export function normalizeProgress(raw, now = new Date()) {
       todayCount: Number.isFinite(s.todayCount) ? s.todayCount : 0,
     };
   }
+  if (raw.reading && typeof raw.reading === 'object') {
+    for (const [id, r] of Object.entries(raw.reading)) {
+      if (!r || typeof r !== 'object') continue;
+      p.reading[id] = {
+        rounds: Number.isInteger(r.rounds) && r.rounds >= 0 ? r.rounds : 0,
+        best: Number.isInteger(r.best) && r.best >= 0 ? r.best : 0,
+        updatedAt: typeof r.updatedAt === 'string' ? r.updatedAt : base.updatedAt,
+      };
+    }
+  }
   if (raw.settings && typeof raw.settings === 'object') {
     const s = raw.settings;
     p.settings = {
       tileMode: s.tileMode === 'syllables' ? 'syllables' : 'words',
-      exercise: ['tiles', 'meaning', 'wylie'].includes(s.exercise) ? s.exercise : 'tiles',
+      exercise: ['tiles', 'meaning', 'recall', 'wylie'].includes(s.exercise) ? s.exercise : 'tiles',
       lang: typeof s.lang === 'string' ? s.lang : null,
       showWylie: s.showWylie === true,
       voice: s.voice === true,
@@ -189,6 +201,13 @@ export function recordSolved(progress, sentenceId, { newWordIds = [], revealedId
     }
   }
   return touch({ ...p, words }, now);
+}
+
+/** A round of the reading course was finished with `score` correct cards. */
+export function recordReadingRound(progress, stageId, score, now = new Date()) {
+  const cur = progress.reading[stageId] || { rounds: 0, best: 0 };
+  const next = { rounds: cur.rounds + 1, best: Math.max(cur.best, score), updatedAt: now.toISOString() };
+  return touch({ ...progress, reading: { ...progress.reading, [stageId]: next } }, now);
 }
 
 export function setSetting(progress, key, value, now = new Date()) {

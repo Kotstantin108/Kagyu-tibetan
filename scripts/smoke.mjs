@@ -7,6 +7,7 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { join, extname } from 'node:path';
 import { chromium } from 'playwright';
+import { syllableToWylie } from '../site/src/engine/wylie.js';
 
 const ROOT = new URL('../site/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.woff2': 'font/woff2', '.svg': 'image/svg+xml', '.png': 'image/png', '.webmanifest': 'application/manifest+json' };
@@ -99,6 +100,40 @@ check(await page.$eval('.lesson', (e) => !e.hidden), 'lesson block shown');
 const progress = await page.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')));
 check(Object.values(progress.words).some((w) => w.status === 'known' && w.due), 'words promoted and scheduled');
 
+// recall exercise: the translation as the prompt, Tibetan sentences as options, word chips hidden until solved
+await page.click('.switch button[data-exercise="recall"]');
+await page.waitForSelector('.option .option-tib');
+check((await page.$$('.option')).length === 4, 'recall: four Tibetan options');
+check((await page.$eval('.chips', (e) => e.hidden)), 'recall: word chips hidden before the answer');
+for (let i = 0; i < 4 && !(await page.$('.feedback.good')); i++) {
+  const btn = await page.$('.option:not(:disabled)');
+  if (!btn) break;
+  await btn.click();
+}
+check((await page.$('.feedback.good')) !== null, 'recall: solved by elimination');
+check((await page.$eval('.chips', (e) => !e.hidden)), 'recall: word chips shown after solving');
+await page.click('.switch button[data-exercise="tiles"]');
+await page.waitForSelector('.rack .tile');
+
+// reading course: a full round of the first stage, answered with the transliterator
+await page.goto(`${base}/index.html#/read`);
+await page.waitForSelector('.stage');
+check((await page.$$('.stage')).length === 7, 'reading: seven stages listed');
+await page.click('.stage[data-stage="rows1"] a.action');
+await page.waitForSelector('.read-card');
+for (let i = 0; i < 12; i++) {
+  const tib = await page.$eval('.read-card', (e) => e.textContent);
+  const want = syllableToWylie(tib);
+  let hit = false;
+  for (const b of await page.$$('.read-options .option')) {
+    if ((await b.$eval('.option-wylie', (e) => e.textContent)) === want) { await b.click(); hit = true; break; }
+  }
+  if (!hit) { check(false, `reading: no option “${want}” for ${tib}`); break; }
+  await page.waitForFunction(() => !document.querySelector('.read-result').hidden || document.querySelector('.feedback').textContent === '');
+}
+check((await page.$eval('.read-result', (e) => !e.hidden && /12 of 12/.test(e.textContent))), 'reading: a full round of the letters is scored 12 of 12');
+check((await page.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).reading.rows1.best)) === 12, 'reading: the best score is recorded in the progress');
+
 // pronunciation: off by default, the setting shows the listen buttons
 await page.goto(`${base}/index.html#/settings`);
 await page.waitForSelector('#settings-voice');
@@ -129,7 +164,7 @@ check((await page.$eval('#menu-toggle', (b) => b.getBoundingClientRect().right <
 await page.click('#menu-toggle');
 await page.waitForSelector('#tabs:not([hidden])');
 const menuLinks = await page.$$eval('#tabs a', (as) => as.map((a) => a.getAttribute('href')));
-check(menuLinks.length === 7 && menuLinks.includes('#/support') && menuLinks.includes('#report'), 'menu lists six sections and "report a problem"');
+check(menuLinks.length === 8 && menuLinks.includes('#/read') && menuLinks.includes('#/support') && menuLinks.includes('#report'), 'menu lists seven sections and "report a problem"');
 check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'open menu: no horizontal scroll');
 await page.click('#tabs a[data-route="dict"]');
 await page.waitForSelector('.panel');

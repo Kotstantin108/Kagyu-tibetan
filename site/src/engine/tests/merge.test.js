@@ -51,3 +51,13 @@ test('merging with an empty remote keeps local', () => {
   const m = mergeProgress(local, null);
   assert.equal(m.words.a.status, 'known');
 });
+
+test('reading stages merge by maximum', () => {
+  const local = createProgress(new Date(early));
+  local.reading = { rows1: { rounds: 3, best: 10, updatedAt: early }, vowels: { rounds: 1, best: 5, updatedAt: early } };
+  const remote = createProgress(new Date(early));
+  remote.reading = { rows1: { rounds: 1, best: 12, updatedAt: late } };
+  const m = mergeProgress(local, remote);
+  assert.deepEqual(m.reading.rows1, { rounds: 3, best: 12, updatedAt: late });
+  assert.deepEqual(m.reading.vowels, { rounds: 1, best: 5, updatedAt: early });
+});

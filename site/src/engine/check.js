@@ -1,5 +1,7 @@
 // Answer checking: compares tile TEXTS, not ids, so identical tiles are interchangeable.
 
+import { renderTib } from './tib.js';
+
 /**
  * @param {string[]} expected  tile texts in the correct order
  * @param {string[]} answer    tile texts in the order the learner placed them
@@ -59,12 +61,12 @@ export function checkWylie(expected, answer) {
 }
 
 /**
- * Multiple-choice options for a sentence: its own translation plus `n - 1`
+ * Multiple-choice options for a sentence: its own text plus `n - 1`
  * distractors taken from other sentences, preferably the same set and a
- * similar length. Returns [{ id, text }] in random order.
+ * similar length. `text(s)` gives the text to show. Returns [{ id, text }]
+ * in random order.
  */
-export function pickOptions(sentence, sentences, lang, n = 4, random = Math.random) {
-  const text = (s) => (s.tr && (s.tr[lang] || s.tr.en)) || '';
+function pickFrom(sentence, sentences, text, n, random) {
   const own = text(sentence);
   const seen = new Set([own]);
   const pool = sentences.filter((s) => s.id !== sentence.id && text(s) && !seen.has(text(s)));
@@ -79,4 +81,14 @@ export function pickOptions(sentence, sentences, lang, n = 4, random = Math.rand
     if (out.length >= n) break;
   }
   return shuffle(out, random);
+}
+
+/** Meaning exercise: the translations. */
+export function pickOptions(sentence, sentences, lang, n = 4, random = Math.random) {
+  return pickFrom(sentence, sentences, (s) => (s.tr && (s.tr[lang] || s.tr.en)) || '', n, random);
+}
+
+/** Recall exercise: the Tibetan sentences. */
+export function pickTibOptions(sentence, sentences, dict, n = 4, random = Math.random) {
+  return pickFrom(sentence, sentences, (s) => renderTib(s.words, dict), n, random);
 }

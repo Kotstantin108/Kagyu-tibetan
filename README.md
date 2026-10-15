@@ -18,8 +18,14 @@ another device".)
 
 ## What it does
 
-- **Three exercises** on the same sentence: assemble it from word or syllable
-  tiles, pick its meaning among four translations, or type it in Wylie.
+- **Four exercises** on the same sentence: assemble it from word or syllable
+  tiles, pick its meaning among four translations, pick the Tibetan sentence
+  for a translation (recall), or type it in Wylie.
+- **Reading course** (`#/read`) for learners who do not read the script yet:
+  the thirty letters, the vowel signs, subjoined and superscribed letters,
+  prefixes and suffixes, then real syllables from the course. Each card shows
+  a syllable and four Wylie spellings; twelve cards make a round, ten correct
+  pass the stage. Tables of every stage are on the same page.
 - **One new word at a time.** The picker prefers sentences with exactly one
   unknown word; the first lesson starts with every translation open.
 - **Spaced repetition.** A word learnt today comes back after 1, 3, 7, 14, 30,

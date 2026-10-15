@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createProgress, setWordStatus, revealWord, wordError, recordSolved, wordStatus, normalizeProgress, STATUS } from '../progress.js';
+import { createProgress, setWordStatus, revealWord, wordError, recordSolved, wordStatus, normalizeProgress, recordReadingRound, STATUS } from '../progress.js';
 
 const t0 = new Date('2026-03-01T12:00:00Z');
 
@@ -67,4 +67,16 @@ test('normalizeProgress tolerates garbage', () => {
   assert.equal(p.streak.current, 0);
   assert.equal(p.settings.tileMode, 'words');
   assert.equal(normalizeProgress('junk', t0).schemaVersion, 1);
+});
+
+test('reading rounds keep the count and the best score, and survive normalisation', () => {
+  let p = createProgress(t0);
+  p = recordReadingRound(p, 'rows1', 9, t0);
+  p = recordReadingRound(p, 'rows1', 12, t0);
+  p = recordReadingRound(p, 'rows1', 7, t0);
+  assert.deepEqual(p.reading.rows1, { rounds: 3, best: 12, updatedAt: t0.toISOString() });
+  const n = normalizeProgress({ reading: { rows1: { rounds: 2, best: 'x' }, bad: null } }, t0);
+  assert.deepEqual(n.reading, { rows1: { rounds: 2, best: 0, updatedAt: t0.toISOString() } });
+  assert.deepEqual(normalizeProgress({}, t0).reading, {});
+  assert.equal(normalizeProgress({ settings: { exercise: 'recall' } }).settings.exercise, 'recall');
 });

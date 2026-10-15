@@ -44,7 +44,9 @@ export function showOnboarding(ctx, onDone) {
   const close = popover(h('div', { class: 'onboarding' },
     h('h2', {}, t('onboarding.title')),
     h('p', {}, t('onboarding.text')),
-    h('ul', { class: 'tips' }, h('li', {}, t('onboarding.tip1')), h('li', {}, t('onboarding.tip2')), h('li', {}, t('onboarding.tip3'))),
+    h('ul', { class: 'tips' },
+      h('li', {}, t('onboarding.tipRead'), ' ', h('a', { href: '#/read', onClick: finish }, t('onboarding.tipReadLink'))),
+      h('li', {}, t('onboarding.tip1')), h('li', {}, t('onboarding.tip2')), h('li', {}, t('onboarding.tip3'))),
     h('div', { class: 'field' }, h('label', { for: 'onboarding-level' }, t('onboarding.knowUpTo')), sel),
     h('div', { class: 'buttons' }, h('button', { type: 'button', class: 'action primary', onClick: finish }, t('onboarding.start'))),
   ), { onDismiss: finish });

@@ -176,7 +176,7 @@ h1, h2, h3, .prompt, .brand-title, .stat .num { font-family: var(--serif); }
 .badge.gold { background: var(--goldsoft); color: var(--gold-text); }
 .badge.reason { background: var(--badge-grey-bg); color: var(--badge-grey-text); }
 .badge.blue { background: var(--badge-blue-bg); color: var(--badge-blue-text); }
-.switch { display: flex; gap: 2px; border: 1px solid var(--switch-border); background: var(--switch-bg); border-radius: 12px; padding: 3px; }
+.switch { display: flex; flex-wrap: wrap; gap: 2px; border: 1px solid var(--switch-border); background: var(--switch-bg); border-radius: 12px; padding: 3px; }
 .switch button { font-size: .8rem; color: var(--switch-text); background: transparent; border: 0; padding: 8px 12px; min-height: 40px; border-radius: 9px; font-weight: 750; transition: background .15s ease, color .15s ease; }
 .switch button.selected { background: var(--switch-on-bg); color: var(--switch-on-text); box-shadow: 0 2px 8px #00000030; }
 .label { font-size: .72rem; letter-spacing: .12em; color: var(--label); text-transform: uppercase; font-weight: 850; }
@@ -248,10 +248,26 @@ h1, h2, h3, .prompt, .brand-title, .stat .num { font-family: var(--serif); }
 .options { display: grid; gap: 8px; margin-top: 10px; }
 .option { display: flex; align-items: center; gap: 12px; text-align: left; min-height: 48px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--option-border); background: var(--option-bg); font-size: 1rem; transition: background .15s ease; }
 .option:hover:not(:disabled) { background: var(--goldsoft); }
-.option-num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--primary); color: var(--on-primary); font-size: .8rem; font-weight: 750; }
+.option-num { font-family: var(--sans); flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--primary); color: var(--on-primary); font-size: .8rem; font-weight: 750; }
 .option.right { border-color: var(--green); background: var(--good-bg); color: var(--good-text); }
 .option.wrong { border-color: var(--bad-border); background: var(--bad-bg); color: var(--bad-text); opacity: .7; }
 .option:disabled { cursor: default; }
+.option-tib { font-size: 1.4rem; line-height: 1.8; color: var(--brand); overflow-wrap: anywhere; }
+/* reading course */
+.read-title { margin: 0; font-family: var(--sans); font-size: 1.05rem; color: var(--heading); }
+.read-card { margin: 14px 0 8px; padding: 16px; border-radius: 16px; background: var(--rack-bg); border: 2px solid var(--rack-border); text-align: center; font-size: clamp(3rem, 14vw, 4.2rem); line-height: 1.6; color: var(--brand); }
+.read-options .option-wylie { font-family: var(--mono); font-size: 1.1rem; }
+.read-text .tib { font-size: 1.3em; line-height: 1; }
+.read-result { margin-top: 14px; }
+.read-result .feedback { margin: 0; }
+.stage { padding: 14px 0; border-top: 1px solid var(--sep); }
+.stage h3 { margin: 0 0 4px; font-family: var(--sans); font-size: 1rem; color: var(--heading); }
+.stage > .helper { margin-bottom: 10px; }
+.stage-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.stage-state { font-size: .82rem; color: var(--muted); }
+.stage-state.passed { color: var(--green); font-weight: 700; }
+.stage details { margin-top: 8px; }
+.stage summary { cursor: pointer; color: var(--brand); font-weight: 700; font-size: .88rem; min-height: 32px; display: flex; align-items: center; }
 
 /* Wylie typing */
 .wylie-box { display: flex; gap: 8px; margin-top: 10px; align-items: center; flex-wrap: wrap; }

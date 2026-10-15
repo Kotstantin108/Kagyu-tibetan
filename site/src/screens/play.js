@@ -1,12 +1,13 @@
-// The game screen: three exercises on the same sentence picker.
+// The game screen: four exercises on the same sentence picker.
 //   tiles   - assemble the Tibetan sentence from word/syllable tiles
 //   meaning - read the Tibetan sentence and choose its translation
+//   recall  - read the translation and choose the Tibetan sentence
 //   wylie   - type the sentence in Wylie transliteration
 
 import { h, clear, popover, popoverOpen, tibText, audioButton } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { pickNext, contentWords } from '../engine/next.js';
-import { checkAnswer, shuffle, checkWylie, pickOptions } from '../engine/check.js';
+import { checkAnswer, shuffle, checkWylie, pickOptions, pickTibOptions } from '../engine/check.js';
 import { renderTib, splitSyllables, fuseParticle, stripTsheg } from '../engine/tib.js';
 import { toWylie, syllableToWylie, CONSONANT_TABLE, VOWEL_TABLE } from '../engine/wylie.js';
 import { revealWord, wordError, recordSolved, setWordStatus, setSetting, wordStatus, STATUS } from '../engine/progress.js';
@@ -16,7 +17,7 @@ import { relatedNotes, noteForWord } from '../engine/grammar.js';
 import { sentenceIssueUrl, wordIssueUrl, reportControl } from '../report.js';
 import { needsOnboarding, showOnboarding } from './onboarding.js';
 
-const EXERCISES = ['tiles', 'meaning', 'wylie'];
+const EXERCISES = ['tiles', 'meaning', 'recall', 'wylie'];
 
 let lastSentenceId = null;
 let lastReason = null;
@@ -167,7 +168,8 @@ export function renderPlay(root, ctx) {
     hintedKey = null;
     attempts = 0;
     wrongOptions = new Set();
-    options = exercise() === 'meaning' ? pickOptions(pick.sentence, data.sentences, ctx.lang, 4) : [];
+    options = exercise() === 'meaning' ? pickOptions(pick.sentence, data.sentences, ctx.lang, 4)
+      : exercise() === 'recall' ? pickTibOptions(pick.sentence, data.sentences, dict, 4) : [];
     wylieTokens = exercise() === 'wylie' ? buildWylieTokens() : [];
     wylieInput.value = '';
     lesson.hidden = true;
@@ -216,6 +218,7 @@ export function renderPlay(root, ctx) {
       if (first) entries = [first, ...entries.filter((e) => e.note.en !== first.note.en)];
     }
     const hideOwnTr = exercise() === 'meaning' && !complete; // the translation is the answer there
+    const hideOwnTib = exercise() === 'recall' && !complete; // and the Tibetan sentence is the answer here
     let close = null;
     const items = entries.map((e) => {
       const ex = e.example;
@@ -223,7 +226,7 @@ export function renderPlay(root, ctx) {
       return h('div', { class: 'note-row' },
         h('p', { class: 'note-text' }, tibText(pickTr(e.note, ctx.lang).text)),
         h('div', { class: 'example' },
-          h('span', { class: 'tib' }, renderTib(ex.words, dict)),
+          ex.id === s.id && hideOwnTib ? null : h('span', { class: 'tib' }, renderTib(ex.words, dict)),
           ex.id === s.id && hideOwnTr ? null : h('span', { class: 'tr' }, tr.text),
         ),
       );
@@ -272,7 +275,7 @@ export function renderPlay(root, ctx) {
       class: 'option' + (isRight ? ' right' : '') + (wrongOptions.has(opt.id) ? ' wrong' : ''),
       disabled: complete || wrongOptions.has(opt.id),
       onClick: () => chooseOption(opt),
-    }, h('span', { class: 'option-num' }, String(i + 1)), h('span', {}, opt.text));
+    }, h('span', { class: 'option-num' }, String(i + 1)), h('span', { class: exercise() === 'recall' ? 'tib option-tib' : '' }, opt.text));
   }
 
   function render() {
@@ -296,7 +299,7 @@ export function renderPlay(root, ctx) {
       clear(promptAudio).append(audioButton(ctx, s.id) || '');
       promptAudio.hidden = false;
     } else {
-      promptLabel.textContent = ex === 'wylie' ? t('play.wyliePrompt') : t('play.prompt');
+      promptLabel.textContent = ex === 'wylie' ? t('play.wyliePrompt') : ex === 'recall' ? t('play.recallPrompt') : t('play.prompt');
       promptAudio.hidden = true;
       prompt.textContent = tr.text;
       prompt.classList.remove('tib');
@@ -317,9 +320,11 @@ export function renderPlay(root, ctx) {
     newBadge.hidden = !pick.newWordIds.length;
     dueBadge.textContent = pick.dueWordIds.length ? `${t('play.dueWord')}: ${pick.dueWordIds.length}` : '';
     dueBadge.hidden = !pick.dueWordIds.length;
-    coldNote.hidden = !pick.reveal;
+    coldNote.hidden = !pick.reveal || (ex === 'recall' && !complete); // the chips are hidden there
 
-    // chips: the words of the sentence (translations hidden in meaning mode until solved)
+    // chips: the words of the sentence (translations hidden in meaning mode until solved;
+    // in recall mode the words would give the sentence away, so the chips wait for the answer)
+    chips.hidden = ex === 'recall' && !complete;
     clear(chips);
     for (const id of contentWords(s, dict)) {
       const w = dict[id];
@@ -340,11 +345,12 @@ export function renderPlay(root, ctx) {
     // exercise-specific areas
     const tilesOn = ex === 'tiles';
     answerHead.hidden = !tilesOn; answer.hidden = !tilesOn; rackHead.hidden = !tilesOn; rackEl.hidden = !tilesOn;
-    optionsEl.hidden = ex !== 'meaning';
+    const choice = ex === 'meaning' || ex === 'recall';
+    optionsEl.hidden = !choice;
     wylieBox.hidden = ex !== 'wylie';
-    btnHint.hidden = ex === 'meaning';
-    btnReset.hidden = ex === 'meaning';
-    btnCheck.hidden = ex === 'meaning';
+    btnHint.hidden = choice;
+    btnReset.hidden = choice;
+    btnCheck.hidden = choice;
     shortcuts.hidden = !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
     if (tilesOn) {
@@ -356,7 +362,7 @@ export function renderPlay(root, ctx) {
       chosen.forEach((k) => answer.append(tileButton(k, 'answer')));
       rack.forEach((k) => rackEl.append(tileButton(k, 'rack')));
       answer.classList.toggle('correct', complete);
-    } else if (ex === 'meaning') {
+    } else if (choice) {
       clear(optionsEl);
       options.forEach((o, i) => optionsEl.append(optionButton(o, i)));
     } else {
@@ -517,7 +523,7 @@ export function renderPlay(root, ctx) {
       } else if (e.key === 'Backspace' && chosen.length && !complete) {
         rack.push(chosen.pop()); render(); e.preventDefault();
       } else if (e.key === '?' || e.key === 'h') { hint(); }
-    } else if (ex === 'meaning' && /^[1-4]$/.test(e.key)) {
+    } else if ((ex === 'meaning' || ex === 'recall') && /^[1-4]$/.test(e.key)) {
       const opt = options[Number(e.key) - 1];
       if (opt) chooseOption(opt);
       e.preventDefault();

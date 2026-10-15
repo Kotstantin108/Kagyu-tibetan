@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { checkAnswer, shuffle, checkWylie, normalizeWylie, pickOptions } from '../check.js';
+import { checkAnswer, shuffle, checkWylie, normalizeWylie, pickOptions, pickTibOptions } from '../check.js';
 
 test('identical tiles are interchangeable: comparison is by text', () => {
   const r = checkAnswer(['ང་', 'ཡིན་', 'ང་'], ['ང་', 'ཡིན་', 'ང་']);
@@ -51,4 +51,18 @@ test('multiple-choice options include the right answer and distinct distractors'
   assert.ok(opts.some((o) => o.id === 'a'));
   assert.equal(new Set(opts.map((o) => o.text)).size, 4, 'no duplicate texts');
   assert.equal(pickOptions(sentences[0], sentences.slice(0, 2), 'en').length, 2, 'fewer when the pool is small');
+});
+
+test('recall options are Tibetan sentences, the right one among distinct distractors', () => {
+  const dict = { nga: { tib: 'ང་' }, yin: { tib: 'ཡིན་' }, khyod: { tib: 'ཁྱོད་' }, shad: { tib: '།', service: true }, 'bla-ma': { tib: 'བླ་མ་' } };
+  const sentences = [
+    { id: 'a', set: 'l1', words: ['nga', 'yin', 'shad'] },
+    { id: 'b', set: 'l1', words: ['khyod', 'yin', 'shad'] },
+    { id: 'c', set: 'l1', words: ['khyod', 'yin', 'shad'] },
+    { id: 'd', set: 'l2', words: ['bla-ma', 'yin', 'shad'] },
+  ];
+  const opts = pickTibOptions(sentences[0], sentences, dict, 4, () => 0.5);
+  assert.equal(opts.length, 3, 'b and c render the same, so only three distinct texts exist');
+  assert.ok(opts.some((o) => o.id === 'a' && o.text === 'ང་ཡིན།'));
+  assert.equal(new Set(opts.map((o) => o.text)).size, 3);
 });

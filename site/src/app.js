@@ -6,6 +6,7 @@ import { LANGS, DEFAULT_LANG } from './engine/config.js';
 import { setSetting } from './engine/progress.js';
 import { h, clear, toast } from './ui.js';
 import { renderPlay } from './screens/play.js';
+import { renderRead } from './screens/read.js';
 import { renderDict } from './screens/dict.js';
 import { renderGrammar } from './screens/grammar.js';
 import { renderStats } from './screens/stats.js';
@@ -103,7 +104,7 @@ store.subscribe((p, source) => {
 });
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
 
-const screens = { play: renderPlay, dict: renderDict, grammar: renderGrammar, stats: renderStats, settings: renderSettings, support: renderSupport };
+const screens = { play: renderPlay, read: renderRead, dict: renderDict, grammar: renderGrammar, stats: renderStats, settings: renderSettings, support: renderSupport };
 
 function route() {
   const m = location.hash.match(/^#\/(\w+)(?:\/(\w+))?/);

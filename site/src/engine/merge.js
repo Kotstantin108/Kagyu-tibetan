@@ -1,5 +1,6 @@
 // Merging two progress records (local and remote). Pure function.
 // - words and sentences: the entry with the later updatedAt/lastSolved wins;
+// - reading: rounds and best are maxima, updatedAt the later one;
 // - streak: best is the maximum; current/lastDay/today* come from the record
 //   with the later lastDay (ties: the one with the larger current);
 // - settings: from the record with the later updatedAt.
@@ -37,6 +38,14 @@ export function mergeProgress(localRaw, remoteRaw, now = new Date()) {
     if (!b) { out.sentences[id] = { ...a }; continue; }
     const win = later(b.lastSolved, a.lastSolved) ? b : a;
     out.sentences[id] = { ...win, solved: Math.max(a.solved, b.solved) };
+  }
+
+  const stageIds = new Set([...Object.keys(local.reading), ...Object.keys(remote.reading)]);
+  for (const id of stageIds) {
+    const a = local.reading[id];
+    const b = remote.reading[id];
+    if (!a || !b) { out.reading[id] = { ...(a || b) }; continue; }
+    out.reading[id] = { rounds: Math.max(a.rounds, b.rounds), best: Math.max(a.best, b.best), updatedAt: later(b.updatedAt, a.updatedAt) ? b.updatedAt : a.updatedAt };
   }
 
   const ls = local.streak;
