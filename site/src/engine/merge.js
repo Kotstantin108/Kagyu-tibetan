@@ -15,9 +15,15 @@ function later(a, b) {
   return ta > tb;
 }
 
+/** A missing record (no file on Drive yet, nothing stored) must never win by its fresh updatedAt. */
+function sideOf(raw, now) {
+  const p = normalizeProgress(raw, now);
+  return raw && typeof raw === 'object' ? p : { ...p, updatedAt: null };
+}
+
 export function mergeProgress(localRaw, remoteRaw, now = new Date()) {
-  const local = normalizeProgress(localRaw, now);
-  const remote = normalizeProgress(remoteRaw, now);
+  const local = sideOf(localRaw, now);
+  const remote = sideOf(remoteRaw, now);
   const out = normalizeProgress(null, now);
 
   const wordIds = new Set([...Object.keys(local.words), ...Object.keys(remote.words)]);
@@ -58,7 +64,8 @@ export function mergeProgress(localRaw, remoteRaw, now = new Date()) {
     out.streak.todayCount = Math.max(ls.todayCount, rs.todayCount);
   }
 
-  out.settings = later(remote.updatedAt, local.updatedAt) ? { ...remote.settings } : { ...local.settings };
-  out.updatedAt = later(remote.updatedAt, local.updatedAt) ? remote.updatedAt : local.updatedAt;
+  const remoteWins = later(remote.updatedAt, local.updatedAt);
+  out.settings = remoteWins ? { ...remote.settings } : { ...local.settings };
+  out.updatedAt = (remoteWins ? remote.updatedAt : local.updatedAt) || remote.updatedAt || now.toISOString();
   return out;
 }

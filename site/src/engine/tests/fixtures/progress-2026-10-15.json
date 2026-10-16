@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-15T19:22:48.000Z",
+  "words": {
+    "dgon-pa": { "status": "known", "updatedAt": "2026-10-15T18:10:05.000Z", "seen": 9, "errors": 0, "level": 2, "due": "2026-10-22" },
+    "dmar-po": { "status": "known", "updatedAt": "2026-10-15T18:11:40.000Z", "seen": 6, "errors": 1, "level": 1, "due": "2026-10-18" },
+    "chos-pa": { "status": "known", "updatedAt": "2026-10-13T20:50:00.000Z", "seen": 1, "errors": 0, "level": 2, "due": "2026-10-20" },
+    "bzang-po": { "status": "learning", "updatedAt": "2026-10-15T18:35:10.000Z", "seen": 4, "errors": 3, "level": 0, "due": null },
+    "chen-po": { "status": "known", "updatedAt": "2026-10-15T18:36:00.000Z", "seen": 2, "errors": 0, "level": 0, "due": "2026-10-16" },
+    "bde-ba": { "status": "new", "updatedAt": "2026-10-15T18:36:00.000Z", "seen": 1, "errors": 0, "level": 0, "due": null }
+  },
+  "sentences": {
+    "s001": { "solved": 4, "lastSolved": "2026-10-15T18:11:40.000Z" },
+    "s002": { "solved": 2, "lastSolved": "2026-10-15T18:35:10.000Z" },
+    "s003": { "solved": 2, "lastSolved": "2026-10-15T18:36:00.000Z" }
+  },
+  "streak": { "current": 3, "best": 3, "lastDay": "2026-10-15", "todayDate": "2026-10-15", "todayCount": 4 },
+  "reading": {
+    "rows1": { "rounds": 2, "best": 12, "updatedAt": "2026-10-15T19:02:11.000Z" },
+    "rows2": { "rounds": 1, "best": 8, "updatedAt": "2026-10-15T19:22:48.000Z" }
+  },
+  "settings": { "tileMode": "words", "exercise": "recall", "lang": "pl", "showWylie": false, "voice": false, "theme": "light", "onboarded": true }
+}

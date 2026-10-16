@@ -103,9 +103,10 @@ site/
   icons/            app icons (PNG, from the logo artwork)
   img/              background artwork (bg-clouds.webp)
   data/             words.json, sentences.json, sets.json, sentences.generated.json
-  src/app.js        bootstrap, theme, section menu, hash router (#/play #/play/hard #/dict #/grammar #/stats #/settings #/support)
-  src/engine/       pure logic: next.js, progress.js, streak.js, check.js, merge.js, tib.js, wylie.js, hard.js
-  src/screens/      play, onboarding, dict, grammar, stats, settings, support
+  src/app.js        bootstrap, theme, section menu, hash router (#/play #/play/hard #/read #/dict #/grammar #/stats #/settings #/support)
+  src/engine/       pure logic: next.js, progress.js, streak.js, check.js, merge.js, tib.js, wylie.js, hard.js, letters.js
+  src/engine/tests/fixtures/  progress records of every released version; compat.test.js and the smoke test load them
+  src/screens/      play, read, onboarding, dict, grammar, stats, settings, support
   src/i18n/         ru.js en.js de.js fr.js pl.js (+ a test that keys match)
   src/sync.js       optional Google Drive sync
   src/transfer.js   progress <-> text code

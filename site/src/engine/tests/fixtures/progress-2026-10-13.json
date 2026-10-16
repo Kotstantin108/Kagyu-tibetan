@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-13T21:05:33.000Z",
+  "words": {
+    "dgon-pa": { "status": "known", "updatedAt": "2026-10-13T20:10:05.000Z", "seen": 7, "errors": 0, "level": 1, "due": "2026-10-16" },
+    "dmar-po": { "status": "known", "updatedAt": "2026-10-13T20:11:40.000Z", "seen": 5, "errors": 1, "level": 0, "due": "2026-10-14" },
+    "chos-pa": { "status": "known", "updatedAt": "2026-10-13T20:50:00.000Z", "seen": 1, "errors": 0, "level": 2, "due": "2026-10-20" },
+    "bzang-po": { "status": "learning", "updatedAt": "2026-10-13T20:35:10.000Z", "seen": 3, "errors": 2, "level": 0, "due": null },
+    "chen-po": { "status": "new", "updatedAt": "2026-10-13T20:36:00.000Z", "seen": 1, "errors": 0, "level": 0, "due": null }
+  },
+  "sentences": {
+    "s001": { "solved": 3, "lastSolved": "2026-10-13T20:11:40.000Z" },
+    "s002": { "solved": 1, "lastSolved": "2026-10-13T20:35:10.000Z" },
+    "s003": { "solved": 1, "lastSolved": "2026-10-13T21:05:33.000Z" }
+  },
+  "streak": { "current": 2, "best": 2, "lastDay": "2026-10-13", "todayDate": "2026-10-13", "todayCount": 5 },
+  "settings": { "tileMode": "words", "exercise": "meaning", "lang": "de", "showWylie": true, "voice": true, "theme": "dark", "onboarded": true }
+}

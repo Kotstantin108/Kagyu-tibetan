@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-12T18:40:12.000Z",
+  "words": {
+    "dgon-pa": { "status": "known", "updatedAt": "2026-10-12T18:30:05.000Z", "seen": 4, "errors": 0 },
+    "dmar-po": { "status": "known", "updatedAt": "2026-10-12T18:31:40.000Z", "seen": 3, "errors": 1 },
+    "chos-pa": { "status": "learning", "updatedAt": "2026-10-12T18:35:10.000Z", "seen": 2, "errors": 2 },
+    "bzang-po": { "status": "new", "updatedAt": "2026-10-12T18:35:10.000Z", "seen": 1, "errors": 0 }
+  },
+  "sentences": {
+    "s001": { "solved": 2, "lastSolved": "2026-10-12T18:31:40.000Z" },
+    "s002": { "solved": 1, "lastSolved": "2026-10-12T18:40:12.000Z" }
+  },
+  "streak": { "current": 1, "best": 1, "lastDay": "2026-10-12", "todayDate": "2026-10-12", "todayCount": 3 },
+  "settings": { "tileMode": "syllables", "lang": "ru" }
+}

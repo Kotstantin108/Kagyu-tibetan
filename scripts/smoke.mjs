@@ -180,6 +180,38 @@ check(before.dark !== after.dark && before.color !== after.color, 'theme toggle 
 check(after.pressed === String(after.dark) && after.setting === (after.dark ? 'dark' : 'light'), 'theme toggle updates aria-pressed and the setting');
 check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'no horizontal scroll after the theme switch');
 
+// records written by earlier versions of the site load with nothing lost (site/src/engine/tests/fixtures)
+const contains = (whole, part) => Object.entries(part).every(([k, v]) => (v && typeof v === 'object' ? whole[k] && typeof whole[k] === 'object' && contains(whole[k], v) : whole[k] === v));
+for (const name of ['progress-2026-10-12.json', 'progress-2026-10-15.json']) {
+  const fixture = JSON.parse(await readFile(new URL(`../site/src/engine/tests/fixtures/${name}`, import.meta.url), 'utf8'));
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
+  const old = await ctx.newPage();
+  old.on('pageerror', (e) => errors.push(`${name}: ${e}`));
+  await old.goto(`${base}/index.html#/stats`);
+  await old.evaluate((json) => localStorage.setItem('tib-progress', json), JSON.stringify(fixture));
+  await old.reload();
+  await old.waitForSelector('.stat-grid .stat');
+  const onboarding = await old.$('.popover .onboarding button');
+  if (onboarding) { await onboarding.click(); await old.waitForSelector('.popover', { state: 'detached' }); }
+  const nums = await old.$$eval('.stat-grid .stat .num', (els) => els.map((e) => e.textContent));
+  const known = Object.values(fixture.words).filter((w) => w.status === 'known').length;
+  const solved = Object.values(fixture.sentences).reduce((n, s) => n + s.solved, 0);
+  const passed = Object.values(fixture.reading || {}).filter((r) => r.best >= 10).length;
+  check(nums[1] === String(fixture.streak.best) && nums[2] === String(known) && nums[5] === String(solved) && nums[6] === `${passed}/7`,
+    `${name}: progress screen shows the stored best streak, known words, solved sentences and reading stages (${nums.join(' ')})`);
+  check((await old.evaluate(() => document.documentElement.lang)) === fixture.settings.lang, `${name}: the stored interface language is used`);
+  await old.goto(`${base}/index.html#/dict`);
+  await old.waitForSelector('.word-row', { state: 'attached' });
+  check((await old.$$('.word-row .status-btn.known.on')).length === known, `${name}: dictionary marks the stored known words`);
+  if (fixture.reading) {
+    await old.goto(`${base}/index.html#/read`);
+    await old.waitForSelector('.stage');
+    check((await old.$$eval('.stage.passed', (els) => els.map((e) => e.dataset.stage))).join() === Object.keys(fixture.reading).filter((id) => fixture.reading[id].best >= 10).join(), `${name}: reading list marks the passed stages`);
+  }
+  check(contains(await old.evaluate(() => JSON.parse(localStorage.getItem('tib-progress'))), fixture), `${name}: nothing of the stored record is lost after using the site`);
+  await ctx.close();
+}
+
 check(errors.length === 0, `no console errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 await browser.close();

@@ -48,8 +48,12 @@ test('settings follow the record with the later updatedAt', () => {
 test('merging with an empty remote keeps local', () => {
   const local = createProgress();
   local.words.a = { status: 'known', updatedAt: late, seen: 1, errors: 0 };
+  local.settings = { ...local.settings, lang: 'ru', theme: 'dark', onboarded: true };
   const m = mergeProgress(local, null);
   assert.equal(m.words.a.status, 'known');
+  assert.deepEqual(m.settings, local.settings, 'an empty remote must not reset the settings');
+  assert.equal(m.updatedAt, local.updatedAt);
+  assert.deepEqual(mergeProgress(null, local).settings, local.settings);
 });
 
 test('reading stages merge by maximum', () => {
