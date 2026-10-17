@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createProgress, setWordStatus, revealWord, wordError, recordSolved, wordStatus, normalizeProgress, recordReadingRound, STATUS } from '../progress.js';
+import { createProgress, setWordStatus, revealWord, wordError, recordSolved, wordStatus, normalizeProgress, recordReadingRound, upcomingWords, dueWords, STATUS } from '../progress.js';
 
 const t0 = new Date('2026-03-01T12:00:00Z');
 
@@ -79,4 +79,19 @@ test('reading rounds keep the count and the best score, and survive normalisatio
   assert.deepEqual(n.reading, { rows1: { rounds: 2, best: 0, updatedAt: t0.toISOString() } });
   assert.deepEqual(normalizeProgress({}, t0).reading, {});
   assert.equal(normalizeProgress({ settings: { exercise: 'recall' } }).settings.exercise, 'recall');
+});
+
+test('upcomingWords lists the reviews after today up to the horizon; dueWords the ones already due', () => {
+  const p = createProgress(t0);
+  p.words = {
+    today: { status: 'known', updatedAt: '', seen: 1, errors: 0, level: 0, due: '2026-03-10' },
+    yesterday: { status: 'known', updatedAt: '', seen: 1, errors: 0, level: 0, due: '2026-03-09' },
+    tomorrow: { status: 'known', updatedAt: '', seen: 1, errors: 0, level: 0, due: '2026-03-11' },
+    week: { status: 'known', updatedAt: '', seen: 1, errors: 0, level: 2, due: '2026-03-17' },
+    later: { status: 'known', updatedAt: '', seen: 1, errors: 0, level: 3, due: '2026-03-18' },
+    learning: { status: 'learning', updatedAt: '', seen: 1, errors: 0, level: 0, due: null },
+  };
+  assert.deepEqual(dueWords(p, '2026-03-10').sort(), ['today', 'yesterday']);
+  assert.deepEqual(upcomingWords(p, 1, '2026-03-10'), ['tomorrow']);
+  assert.deepEqual(upcomingWords(p, 7, '2026-03-10'), ['tomorrow', 'week']);
 });

@@ -8,6 +8,7 @@ import { readFile } from 'node:fs/promises';
 import { join, extname } from 'node:path';
 import { chromium } from 'playwright';
 import { syllableToWylie } from '../site/src/engine/wylie.js';
+import { STAGE_IDS } from '../site/src/engine/letters.js';
 
 const ROOT = new URL('../site/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.woff2': 'font/woff2', '.svg': 'image/svg+xml', '.png': 'image/png', '.webmanifest': 'application/manifest+json' };
@@ -118,7 +119,7 @@ await page.waitForSelector('.rack .tile');
 // reading course: a full round of the first stage, answered with the transliterator
 await page.goto(`${base}/index.html#/read`);
 await page.waitForSelector('.stage');
-check((await page.$$('.stage')).length === 7, 'reading: seven stages listed');
+check((await page.$$('.stage')).length === STAGE_IDS.length, `reading: ${STAGE_IDS.length} stages listed`);
 await page.click('.stage[data-stage="rows1"] a.action');
 await page.waitForSelector('.read-card');
 for (let i = 0; i < 12; i++) {
@@ -197,7 +198,7 @@ for (const name of ['progress-2026-10-12.json', 'progress-2026-10-15.json']) {
   const known = Object.values(fixture.words).filter((w) => w.status === 'known').length;
   const solved = Object.values(fixture.sentences).reduce((n, s) => n + s.solved, 0);
   const passed = Object.values(fixture.reading || {}).filter((r) => r.best >= 10).length;
-  check(nums[1] === String(fixture.streak.best) && nums[2] === String(known) && nums[5] === String(solved) && nums[6] === `${passed}/7`,
+  check(nums[1] === String(fixture.streak.best) && nums[2] === String(known) && nums[5] === String(solved) && nums[6] === `${passed}/${STAGE_IDS.length}`,
     `${name}: progress screen shows the stored best streak, known words, solved sentences and reading stages (${nums.join(' ')})`);
   check((await old.evaluate(() => document.documentElement.lang)) === fixture.settings.lang, `${name}: the stored interface language is used`);
   await old.goto(`${base}/index.html#/dict`);

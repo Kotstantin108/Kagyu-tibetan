@@ -113,6 +113,15 @@ export function dueWords(progress, today = localDay()) {
   return Object.keys(progress.words).filter((id) => isDue(progress, id, today));
 }
 
+/** Ids of known words whose review falls within the next `days` days (after today, up to and including today + days). */
+export function upcomingWords(progress, days, today = localDay()) {
+  const last = addDays(today, days);
+  return Object.keys(progress.words).filter((id) => {
+    const w = progress.words[id];
+    return w.status === STATUS.KNOWN && w.due && w.due > today && w.due <= last;
+  });
+}
+
 /** Days until the next review at a given level. */
 export function intervalFor(level) {
   return REVIEW_INTERVALS[Math.min(Math.max(level, 0), REVIEW_INTERVALS.length - 1)];

@@ -1,9 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { stageItems, STAGE_IDS, optionsFor, makeRound, editDistance, courseSyllables, stagePassed, ROUND_SIZE, PASS_SCORE } from '../letters.js';
+import { stageItems, STAGE_IDS, optionsFor, makeRound, editDistance, courseSyllables, courseWords, stagePassed, ROUND_SIZE, PASS_SCORE } from '../letters.js';
 
 test('every stage has at least a round of cards with distinct Wylie and the textbook spellings', () => {
-  const dict = { a: { tib: 'དགོན་པ་', set: 'l1' }, b: { tib: 'བླ་མ་', set: 'l1' }, c: { tib: 'གཡག་', set: 'l2' }, d: { tib: '།', service: true }, e: { tib: '༡་', set: 'l1' } };
+  const dict = { a: { tib: 'དགོན་པ་', set: 'l1' }, b: { tib: 'བླ་མ་', set: 'l1' }, c: { tib: 'གཡག་', set: 'l2' }, d: { tib: '།', service: true }, e: { tib: '༡་', set: 'l1' }, f: { tib: 'ཆོས་པ་', set: 'l2' }, g: { tib: 'བཟང་པོ་', set: 'l1' }, i: { tib: '༡༠་པ་', set: 'l1' } };
   for (const id of STAGE_IDS) {
     const items = stageItems(id, dict, [{ id: 'l1', order: 1 }, { id: 'l2', order: 2 }]);
     assert.ok(items.length >= 4, `${id} has ${items.length} items`);
@@ -19,7 +19,8 @@ test('every stage has at least a round of cards with distinct Wylie and the text
   assert.equal(by('superscribed')['ལྷ'], 'lha');
   assert.equal(by('affixes')['བསྒྲུབས'], 'bsgrubs');
   assert.equal(by('affixes')['གཡག'], 'g.yag');
-  assert.deepEqual(courseSyllables(dict, [{ id: 'l1', order: 1 }, { id: 'l2', order: 2 }]).map((x) => x.wylie), ['dgon', 'pa', 'bla', 'ma', 'g.yag'], 'course syllables: unique, in set order, no digits or shad');
+  assert.deepEqual(courseSyllables(dict, [{ id: 'l1', order: 1 }, { id: 'l2', order: 2 }]).map((x) => x.wylie), ['dgon', 'pa', 'bla', 'ma', 'bzang', 'po', 'g.yag', 'chos'], 'course syllables: unique, in set order, no digits or shad');
+  assert.deepEqual(courseWords(dict, [{ id: 'l1', order: 1 }, { id: 'l2', order: 2 }]).map((x) => x.wylie), ['dgon pa', 'bla ma', 'bzang po', 'chos pa'], 'course words: two or more plain syllables, in set order');
 });
 
 test('options hold the right answer and close distractors; a round has distinct cards', () => {

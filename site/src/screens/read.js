@@ -101,6 +101,7 @@ export function renderRead(root, ctx) {
       return;
     }
     card.textContent = cur.tib;
+    card.classList.toggle('long', cur.tib.length > 7);
     clear(optionsEl);
     cur.options.forEach((opt, i) => {
       const cls = 'option' + (answered && opt.right ? ' right' : '') + (answered === opt && !opt.right ? ' wrong' : '');
@@ -136,7 +137,7 @@ function renderList(root, ctx) {
     const rec = p.reading[id];
     const passed = stagePassed(p, id);
     const state = rec ? t('read.best', { score: rec.best, total: Math.min(ROUND_SIZE, items.length) }) + (passed ? ' · ' + t('read.passed') : '') : t('read.notYet');
-    const table = id === 'words' ? null : h('details', {},
+    const table = items.length > 60 ? null : h('details', {},
       h('summary', {}, t('read.table')),
       h('div', { class: 'wylie-table' }, ...items.map((x) => h('span', { class: 'cell' }, h('span', { class: 'tib' }, x.tib), h('span', {}, x.wylie)))),
     );

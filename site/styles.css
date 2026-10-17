@@ -256,6 +256,7 @@ h1, h2, h3, .prompt, .brand-title, .stat .num { font-family: var(--serif); }
 /* reading course */
 .read-title { margin: 0; font-family: var(--sans); font-size: 1.05rem; color: var(--heading); }
 .read-card { margin: 14px 0 8px; padding: 16px; border-radius: 16px; background: var(--rack-bg); border: 2px solid var(--rack-border); text-align: center; font-size: clamp(3rem, 14vw, 4.2rem); line-height: 1.6; color: var(--brand); }
+.read-card.long { font-size: clamp(2rem, 9vw, 2.8rem); }
 .read-options .option-wylie { font-family: var(--mono); font-size: 1.1rem; }
 .read-text .tib { font-size: 1.3em; line-height: 1; }
 .read-result { margin-top: 14px; }

@@ -2,7 +2,7 @@
 // Pure functions, no DOM. Every item is { tib, wylie }; the Wylie comes from
 // the same transliterator as the Wylie exercise, so the two never disagree.
 
-import { syllableToWylie } from './wylie.js';
+import { syllableToWylie, toWylie } from './wylie.js';
 import { stripTsheg, splitSyllables } from './tib.js';
 import { shuffle } from './check.js';
 
@@ -19,7 +19,7 @@ const SUPERSCRIBED = 'རྐ རྒ རྔ རྗ རྙ རྟ རྡ རྣ �
 // real syllables of the course with a prefix, a suffix or both
 const AFFIXES = 'ཆོས ཡིན ལམ ཡོད དང ནང བར ཡུལ ཁང ཤེས རང ཕྱག ལུས སེམས རིག ཐུབ ཆེན གསུམ དགོན བཀའ མཐོ འགྲོ བཞི དཀར མགོ འདུག གཉིས བདག མཆོད འབྲས དབང བསྒྲུབས སངས རྒྱས ཐམས ཅད གཡག དགེ བསམ འཇིག རྟེན མཁས';
 
-export const STAGE_IDS = ['rows1', 'rows2', 'vowels', 'subjoined', 'superscribed', 'affixes', 'words'];
+export const STAGE_IDS = ['rows1', 'rows2', 'vowels', 'subjoined', 'superscribed', 'affixes', 'words', 'fullwords'];
 
 const item = (tib) => ({ tib, wylie: syllableToWylie(tib) });
 const list = (s) => s.split(' ').map(item);
@@ -45,6 +45,22 @@ export function courseSyllables(dict, sets = []) {
   return out;
 }
 
+/** Whole words of two or more plain syllables from the course dictionary, in set order. */
+export function courseWords(dict, sets = []) {
+  const order = new Map(sets.map((s) => [s.id, s.order]));
+  const words = Object.values(dict).filter((w) => !w.service && w.tib);
+  words.sort((a, b) => (order.get(a.set) ?? Infinity) - (order.get(b.set) ?? Infinity));
+  const seen = new Set();
+  const out = [];
+  for (const w of words) {
+    const syls = splitSyllables(w.tib).map(stripTsheg);
+    if (syls.length < 2 || !syls.every((s) => PLAIN_SYLLABLE.test(s)) || seen.has(w.tib)) continue;
+    seen.add(w.tib);
+    out.push({ tib: w.tib, wylie: toWylie(w.tib) });
+  }
+  return out;
+}
+
 /** The cards of a stage: [{ tib, wylie }]. */
 export function stageItems(stageId, dict = {}, sets = []) {
   switch (stageId) {
@@ -59,6 +75,7 @@ export function stageItems(stageId, dict = {}, sets = []) {
     case 'superscribed': return list(SUPERSCRIBED);
     case 'affixes': return list(AFFIXES);
     case 'words': return courseSyllables(dict, sets);
+    case 'fullwords': return courseWords(dict, sets);
     default: return [];
   }
 }
