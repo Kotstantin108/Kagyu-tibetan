@@ -462,10 +462,10 @@ details.set[open] summary { background: var(--topbar); }
 .tashi-bubble.show { animation: rise .2s ease-out; }
 html.tashi-on .page { padding-bottom: 150px; }
 @media (max-width: 1180px) { .tashi { width: 88px; right: 10px; bottom: 10px; } } /* narrower than the content column plus two yaks: a smaller yak */
-@media (max-width: 640px) {
-  .tashi { right: auto; left: 8px; bottom: 8px; width: 64px; }
-  .tashi-bubble { right: auto; left: 0; bottom: calc(100% + 10px); max-width: min(260px, calc(100vw - 24px)); font-size: .85rem; }
-  .tashi-bubble::after { right: auto; left: 20px; bottom: -8px; border-top: 0; border-bottom: 1.5px solid var(--gold-line); }
+@media (max-width: 640px) { /* the phone: the same corner, a smaller yak, the bubble above him */
+  .tashi { right: 8px; bottom: 8px; width: 64px; }
+  .tashi-bubble { right: 0; bottom: calc(100% + 10px); max-width: min(260px, calc(100vw - 24px)); font-size: .85rem; }
+  .tashi-bubble::after { right: 20px; bottom: -8px; border-top: 0; border-bottom: 1.5px solid var(--gold-line); }
   html.tashi-on .page { padding-bottom: 96px; }
 }
 @media (prefers-reduced-motion: reduce) {
