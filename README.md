@@ -70,6 +70,17 @@ another device".)
   licence of the base model); a Tibetan reader found it fast but acceptable on
   one- and two-syllable words and wrong on longer ones, hence the opt-in. See
   "Audio" below.
+- **Yak Tashi**, the mascot (`site/src/tashi.js`, frames in `site/img/tashi/`):
+  a small yak in monk's robes in a corner of the exercise screens and the
+  course map. He smiles and blinks, speaks in a bubble (praise after about
+  one correct answer in three, a word of comfort after every mistake, a
+  bigger phrase for a passed step or check, a greeting once per visit of the
+  map, an introduction the first time), and sits down to meditate after
+  thirty seconds without input. Fifty phrases per language in the `tashi`
+  block of `site/src/i18n/*.js`, drawn from shuffled queues without repeats
+  (`site/src/engine/tashi.js`). A tap on him gives a phrase; Settings →
+  "Yak Tashi" hides him; `prefers-reduced-motion` stops the blinking and the
+  fades.
 - **Dictionary** with search, example sentences, review dates and manual
   "known / learning" marks, including "mark the whole lesson".
 - **Streak**: three sentences a day keep it alive.

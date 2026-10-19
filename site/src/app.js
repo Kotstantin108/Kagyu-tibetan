@@ -14,6 +14,7 @@ import { renderStats } from './screens/stats.js';
 import { renderSettings } from './screens/settings.js';
 import { renderSupport } from './screens/support.js';
 import { createSync } from './sync.js';
+import { createTashi } from './tashi.js';
 import { openReportForm, appIssueUrl } from './report.js';
 
 const view = document.getElementById('view');
@@ -102,6 +103,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 
 store.subscribe((p, source) => {
   applyTheme();
+  if (ctx.tashi && ctx.data) ctx.tashi.setScreen(route().name); // the mascot setting
   if (ctx.lang !== currentLang()) { applyLang(); render(); }
   else if (source === 'replace' || source === 'reset') render();
   // a background sync re-renders the other screens; the play screen keeps its current sentence
@@ -126,6 +128,7 @@ function render() {
   document.querySelectorAll('#tabs a').forEach((a) => { const on = a.dataset.route === r.name; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
   document.getElementById('section-title').textContent = ctx.t(`nav.${r.name}`);
   setMenu(false);
+  if (ctx.tashi) ctx.tashi.setScreen(r.name);
   if (unmount) { try { unmount(); } catch { /* ignore */ } unmount = null; }
   document.querySelectorAll('.popover-backdrop').forEach((el) => el.remove()); // a popover must not outlive its screen (browser back)
   clear(view);
@@ -191,6 +194,7 @@ async function main() {
     return;
   }
   ctx.sync = createSync(ctx);
+  ctx.tashi = createTashi(ctx);
   if (!location.hash) location.hash = `#/${homeRoute()}`;
   render();
   registerServiceWorker();

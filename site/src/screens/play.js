@@ -230,6 +230,7 @@ export function renderPlay(root, ctx, mode = null) {
       const n = stepNo();
       store.update((p) => (stepIndexOf(p) === n ? setUnitStep(p, mode.unit.id, n + 1) : p));
     }
+    ctx.tashi?.say('stepDone');
     toast(t('course.stepDone'));
     ctx.navigate(`course/${mode.unit.id}`);
   }
@@ -276,11 +277,13 @@ export function renderPlay(root, ctx, mode = null) {
       showCheckResult(score >= pass, pass);
       return;
     }
+    ctx.tashi?.say('stepDone');
     toast(t('course.reviewDone', { n: tasks.length, demoted }), 4000);
     ctx.navigate('course');
   }
 
   function showCheckResult(passed, pass) {
+    ctx.tashi?.say(passed ? 'checkPassed' : 'checkFailed');
     const unit = mode.unit;
     const next = nextUnit(data.course, unit);
     clear(result).append(
@@ -594,6 +597,7 @@ export function renderPlay(root, ctx, mode = null) {
       if (mode.repeat) repeatDone.add(s.id);
     }
     if (inCheck) score++;
+    ctx.tashi?.say('correct');
     setFeedback(t('play.correct'), 'good');
     showLesson();
     render();
@@ -607,6 +611,7 @@ export function renderPlay(root, ctx, mode = null) {
     wrongTasks.push(pick.sentence);
     const unitWords = new Set(mode.unit.words || []);
     for (const id of wrongIds) if (unitWords.has(id)) wrongWords.add(id);
+    ctx.tashi?.say('wrong');
     setFeedback(t('course.taskWrong'), 'bad');
     showLesson();
     render();
@@ -640,6 +645,7 @@ export function renderPlay(root, ctx, mode = null) {
       if (inCheck) { taskFailed(result.wrong.map((i) => tile(chosen[i]).wordId)); return; }
       store.update((p) => wordError(p, wrongWord));
       if (kind === 'review' && wordStatus(store.get(), wrongWord) === STATUS.LEARNING) demoted++;
+      ctx.tashi?.say('wrong');
       setFeedback(t('play.wrong', { pos: firstWrong + 1 }) + explain(wrongWord), 'bad', wrongWord);
       render();
       [...answer.querySelectorAll('.tile')].forEach((el, i) => { if (result.wrong.includes(i)) el.classList.add('wrong'); });
@@ -660,6 +666,7 @@ export function renderPlay(root, ctx, mode = null) {
       let msg = t('play.wylieWrong', { pos: i + 1 });
       if (attempts >= 2 && tok) msg += ' ' + t('play.wylieExpected', { syllable: tok.text });
       msg += explain(tok ? tok.wordId : null);
+      ctx.tashi?.say('wrong');
       setFeedback(msg, 'bad', tok ? tok.wordId : null);
       render();
       wylieInput.focus();
@@ -679,6 +686,7 @@ export function renderPlay(root, ctx, mode = null) {
       const due = pick.dueWordIds;
       if (due.length) { store.update((p) => due.reduce((q, id) => wordError(q, id), p)); demoted += due.length; pick = { ...pick, dueWordIds: [] }; }
     }
+    ctx.tashi?.say('wrong');
     setFeedback(t('play.meaningWrong'), 'bad');
     render();
   }

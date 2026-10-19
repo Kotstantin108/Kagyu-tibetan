@@ -53,6 +53,8 @@ await page.waitForSelector('.rack .tile');
 
 check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'no horizontal scroll at 360px');
 check((await page.evaluate(() => document.fonts.check('20px "Noto Serif Tibetan"'))), 'Tibetan font loaded');
+check((await page.$eval('.tashi', (e) => !e.hidden && e.dataset.frame === 'smile')), 'Yak Tashi is shown on the exercise screen, smiling');
+check((await page.$eval('#tashi-bubble', (e) => e.hidden)), 'Yak Tashi is quiet before any answer');
 
 // grammar help: opens a popover and changes nothing in the progress record
 const progressBefore = await page.evaluate(() => localStorage.getItem('tib-progress'));
@@ -80,6 +82,9 @@ if (order.length >= 2 && new Set(order).size === order.length) {
   }
   await page.click('.buttons .action.primary');
   check(await page.$eval('.feedback', (e) => e.classList.contains('bad')), 'reversed order is wrong');
+  check((await page.$eval('#tashi-bubble', (e) => !e.hidden && e.textContent.trim().length > 0)), 'Yak Tashi consoles after a mistake');
+  check((await page.$eval('.tashi', (e) => e.dataset.frame === 'talk')), 'Yak Tashi shows the talking frame while the bubble is up');
+  check((await page.evaluate(() => { const b = document.getElementById('tashi-bubble').getBoundingClientRect(); return b.left >= 0 && b.right <= window.innerWidth; })), 'the bubble stays inside the 360px screen');
   check((await page.$('.feedback.bad .why')) !== null, '"Why?" button shown after a mistake');
   await page.click('.feedback.bad .why');
   await page.waitForSelector('.popover .grammar-help');
@@ -353,7 +358,7 @@ check((await page.$('#course-exam')) !== null, 'course: an old learner sees the 
 
 // records written by earlier versions of the site load with nothing lost (site/src/engine/tests/fixtures)
 const contains = (whole, part) => Object.entries(part).every(([k, v]) => (v && typeof v === 'object' ? whole[k] && typeof whole[k] === 'object' && contains(whole[k], v) : whole[k] === v));
-for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json', 'progress-2026-10-19b.json']) {
+for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json', 'progress-2026-10-19c.json']) {
   const fixture = JSON.parse(await readFile(new URL(`../site/src/engine/tests/fixtures/${name}`, import.meta.url), 'utf8'));
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
   const old = await ctx.newPage();
@@ -377,6 +382,7 @@ for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json', 'pro
   check((await old.evaluate(() => document.documentElement.lang)) === fixture.settings.lang, `${name}: the stored interface language is used`);
   await old.goto(`${base}/index.html#/dict`);
   await old.waitForSelector('.word-row', { state: 'attached' });
+  check((await old.$eval('.tashi', (e) => e.hidden)), `${name}: Yak Tashi stays off the dictionary`);
   check((await old.$$('.word-row .status-btn.known.on')).length === known, `${name}: dictionary marks the stored known words`);
   if (fixture.reading) {
     await old.goto(`${base}/index.html#/read`);

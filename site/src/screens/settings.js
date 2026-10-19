@@ -33,6 +33,8 @@ export function renderSettings(root, ctx) {
   wylieBox.addEventListener('change', () => store.update((q) => setSetting(q, 'showWylie', wylieBox.checked)));
   const voiceBox = ctx.config.AUDIO_BASE ? h('input', { type: 'checkbox', id: 'settings-voice', checked: p.settings.voice === true }) : null;
   if (voiceBox) voiceBox.addEventListener('change', () => store.update((q) => setSetting(q, 'voice', voiceBox.checked)));
+  const tashiBox = h('input', { type: 'checkbox', id: 'settings-tashi', checked: p.settings.tashi !== false });
+  tashiBox.addEventListener('change', () => store.update((q) => setSetting(q, 'tashi', tashiBox.checked)));
 
   // data: export / import / reset
   const fileInput = h('input', { type: 'file', accept: 'application/json,.json', hidden: true });
@@ -116,6 +118,7 @@ export function renderSettings(root, ctx) {
       h('div', { class: 'field' }, h('label', { for: 'settings-tiles' }, t('settings.tileMode')), modeSel),
       h('div', { class: 'field check' }, h('label', { for: 'settings-wylie' }, wylieBox, ' ', t('settings.showWylie'))),
       voiceBox ? h('div', { class: 'field check' }, h('label', { for: 'settings-voice' }, voiceBox, ' ', t('settings.voice')), h('p', { class: 'helper' }, t('settings.voiceNote'))) : null,
+      h('div', { class: 'field check' }, h('label', { for: 'settings-tashi' }, tashiBox, ' ', t('settings.tashi')), h('p', { class: 'helper' }, t('settings.tashiNote'))),
     )),
     h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
       h('div', { class: 'label' }, t('settings.data')),

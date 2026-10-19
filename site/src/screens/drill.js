@@ -59,6 +59,7 @@ export function renderDrill(root, ctx, opts) {
     answered = opt;
     if (opt.right) {
       score++;
+      ctx.tashi?.say('correct');
       feedbackEl.textContent = t('read.right');
       feedbackEl.className = 'feedback good';
       timer = setTimeout(next, 650);
@@ -66,6 +67,7 @@ export function renderDrill(root, ctx, opts) {
       const cur = cards[index];
       feedbackEl.textContent = cur.reverse ? t('alphabet.wrongSign', { tib: cur.tib }) : t('read.wrongIs', { wylie: cur.wylie });
       feedbackEl.className = 'feedback bad';
+      ctx.tashi?.say('wrong');
     }
     render();
   }
@@ -85,6 +87,7 @@ export function renderDrill(root, ctx, opts) {
     finished = true;
     const pass = drillPass(kind);
     const passed = score >= pass || score === cards.length;
+    if (passed) ctx.tashi?.say('stepDone'); else if (kind === 'check' || kind === 'exam') ctx.tashi?.say('checkFailed');
     store.update((p) => {
       let q = p;
       if (kind === 'free' || kind === 'train') q = recordReadingRound(q, unitId, score);

@@ -13,7 +13,7 @@
 //             alphabetExam: { best, attempts, passedAt } | null }
 //   reading: keys are alphabet parts 'alphabet/1' … (older records had stage ids rows1 … fullwords; they are migrated on load)
 //   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, voice, theme, onboarded,
-//              home: 'course'|'play'|null }
+//              home: 'course'|'play'|null, tashi (the mascot is shown), tashiMet (he introduced himself) }
 // }
 
 import { SCHEMA_VERSION, REVIEW_INTERVALS, MANUAL_KNOWN_LEVEL } from './config.js';
@@ -32,7 +32,7 @@ export function createProgress(now = new Date()) {
     streak: { current: 0, best: 0, lastDay: null, todayDate: null, todayCount: 0 },
     reading: {},
     course: { started: false, canRead: null, current: null, units: {}, alphabetExam: null },
-    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false, home: null },
+    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false, home: null, tashi: true, tashiMet: false },
   };
 }
 
@@ -127,6 +127,8 @@ export function normalizeProgress(raw, now = new Date()) {
       theme: ['light', 'dark'].includes(s.theme) ? s.theme : 'auto',
       onboarded: s.onboarded === true,
       home: ['course', 'play'].includes(s.home) ? s.home : null,
+      tashi: s.tashi !== false,
+      tashiMet: s.tashiMet === true,
     };
   }
   return p;

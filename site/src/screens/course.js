@@ -81,6 +81,7 @@ function renderMap(root, ctx) {
   }
 
   function draw() {
+    ctx.tashi?.greet();
     const p = store.get();
     const cur = currentUnit(course, p);
     const { passed, total } = courseProgress(course, p);
