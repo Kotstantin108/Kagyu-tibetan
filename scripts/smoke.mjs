@@ -53,7 +53,7 @@ await page.waitForSelector('.rack .tile');
 
 check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'no horizontal scroll at 360px');
 check((await page.evaluate(() => document.fonts.check('20px "Noto Serif Tibetan"'))), 'Tibetan font loaded');
-check((await page.$eval('.tashi', (e) => !e.hidden && e.dataset.frame === 'smile')), 'Yak Tashi is shown on the exercise screen, smiling');
+check((await page.$eval('.tashi', (e) => !e.hidden && (e.dataset.frame === 'smile' || e.dataset.frame === 'blink'))), 'Yak Tashi is shown on the exercise screen, smiling (or mid-blink)');
 check((await page.$eval('#tashi-bubble', (e) => e.hidden)), 'Yak Tashi is quiet before any answer');
 
 // grammar help: opens a popover and changes nothing in the progress record

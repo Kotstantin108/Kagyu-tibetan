@@ -7,7 +7,7 @@
 // and the course map `ctx.tashi.greet()`; app.js calls `setScreen(route)` on every render.
 
 import { h } from './ui.js';
-import { createPicker, shouldSpeak, blinkDelay, pools, tapCategory, BUBBLE_MS, IDLE_MS, BLINK_MS, SCREENS } from './engine/tashi.js';
+import { createPicker, shouldSpeak, blinkDelay, doubleBlink, pools, tapCategory, BUBBLE_MS, IDLE_MS, BLINK_MS, DOUBLE_BLINK_GAP_MS, SCREENS } from './engine/tashi.js';
 
 const FRAMES = ['smile', 'blink', 'talk', 'meditate'];
 
@@ -50,16 +50,22 @@ export function createTashi(ctx) {
     else setFrame('smile', !wasMeditating);
   }
 
-  // ---- blinking ----
+  // ---- blinking: uneven pauses, now and then a double blink ----
+  function blink(again) {
+    if (!shown || state !== 'idle' || document.hidden) return;
+    setFrame('blink', true);
+    clearTimeout(blinkBack);
+    blinkBack = setTimeout(() => {
+      if (state !== 'idle') return;
+      setFrame('smile', true);
+      if (again) blinkBack = setTimeout(() => blink(false), DOUBLE_BLINK_GAP_MS);
+    }, BLINK_MS);
+  }
   function scheduleBlink() {
     clearTimeout(blinkTimer);
     if (reduced.matches) return;
     blinkTimer = setTimeout(() => {
-      if (shown && state === 'idle' && !document.hidden) {
-        setFrame('blink', true);
-        clearTimeout(blinkBack);
-        blinkBack = setTimeout(() => { if (state === 'idle') setFrame('smile', true); }, BLINK_MS);
-      }
+      blink(doubleBlink());
       scheduleBlink();
     }, blinkDelay());
   }

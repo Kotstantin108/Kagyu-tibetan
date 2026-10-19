@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { CATEGORIES, PRAISE_CHANCE, BLINK_MIN_MS, BLINK_MAX_MS, shuffle, pools, createPicker, shouldSpeak, blinkDelay, tapCategory } from '../tashi.js';
+import { CATEGORIES, PRAISE_CHANCE, BLINK_MIN_MS, BLINK_MAX_MS, shuffle, pools, createPicker, shouldSpeak, blinkDelay, doubleBlink, tapCategory } from '../tashi.js';
 import { makeT } from '../../i18n/index.js';
 import { LANGS } from '../config.js';
 
@@ -57,9 +57,12 @@ test('praise is rationed, everything else is always said', () => {
   for (const c of CATEGORIES.filter((x) => x !== 'correct')) assert.equal(shouldSpeak(c, () => 0.99), true, c);
 });
 
-test('blink delay stays in its window; a tap gives a greeting or praise', () => {
+test('blink delay stays in its window and leans short; a tap gives a greeting or praise', () => {
   assert.equal(blinkDelay(() => 0), BLINK_MIN_MS);
   assert.ok(blinkDelay(() => 0.999) < BLINK_MAX_MS);
+  assert.ok(blinkDelay(() => 0.5) < (BLINK_MIN_MS + BLINK_MAX_MS) / 2, 'the median pause is shorter than the middle of the window');
+  assert.equal(doubleBlink(() => 0.1), true);
+  assert.equal(doubleBlink(() => 0.9), false);
   assert.equal(tapCategory(() => 0.2), 'hello');
   assert.equal(tapCategory(() => 0.8), 'correct');
 });

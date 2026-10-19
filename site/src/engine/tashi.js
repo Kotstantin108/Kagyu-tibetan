@@ -12,8 +12,10 @@ export const PRAISE_CHANCE = 1 / 3;
 export const BUBBLE_MS = 3000;    // a phrase stays this long
 export const IDLE_MS = 30000;     // no input for this long: he sits down to meditate
 export const BLINK_MS = 120;
-export const BLINK_MIN_MS = 3000; // a blink every 3–6 seconds
-export const BLINK_MAX_MS = 6000;
+export const BLINK_MIN_MS = 1500; // the pause between blinks: 1.5–9 s, short ones more often than long ones
+export const BLINK_MAX_MS = 9000;
+export const DOUBLE_BLINK_CHANCE = 0.25; // one blink in four is a double one
+export const DOUBLE_BLINK_GAP_MS = 180;
 export const SCREENS = ['course', 'play', 'read']; // the screens he is shown on
 
 /** Fisher–Yates on a copy. */
@@ -60,9 +62,15 @@ export function shouldSpeak(category, rng = Math.random) {
   return category !== 'correct' || rng() < PRAISE_CHANCE;
 }
 
-/** Milliseconds until the next blink. */
+/** Milliseconds until the next blink: skewed towards the short end so the rhythm never reads as a metronome. */
 export function blinkDelay(rng = Math.random) {
-  return BLINK_MIN_MS + Math.floor(rng() * (BLINK_MAX_MS - BLINK_MIN_MS));
+  const r = rng();
+  return BLINK_MIN_MS + Math.floor(r * r * (BLINK_MAX_MS - BLINK_MIN_MS));
+}
+
+/** Whether this blink is followed by a second one right away. */
+export function doubleBlink(rng = Math.random) {
+  return rng() < DOUBLE_BLINK_CHANCE;
 }
 
 /** What he says when tapped while quiet: a greeting or a bit of praise. */
