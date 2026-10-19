@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-19T23:30:00.000Z",
+  "words": {
+    "dgon-pa": {
+      "status": "known",
+      "updatedAt": "2026-10-19T22:30:05.000Z",
+      "seen": 3,
+      "errors": 0,
+      "level": 0,
+      "due": "2026-10-20"
+    },
+    "dmar-po": {
+      "status": "learning",
+      "updatedAt": "2026-10-19T22:30:05.000Z",
+      "seen": 2,
+      "errors": 1,
+      "level": 0,
+      "due": null
+    }
+  },
+  "sentences": {
+    "s001": {
+      "solved": 2,
+      "lastSolved": "2026-10-19T22:30:05.000Z"
+    }
+  },
+  "streak": {
+    "current": 1,
+    "best": 1,
+    "lastDay": "2026-10-19",
+    "todayDate": "2026-10-19",
+    "todayCount": 2
+  },
+  "reading": {
+    "alphabet/1": {
+      "rounds": 2,
+      "best": 12,
+      "updatedAt": "2026-10-19T22:05:11.000Z"
+    }
+  },
+  "course": {
+    "started": true,
+    "canRead": false,
+    "current": "lesson-01/1",
+    "units": {
+      "alphabet/1": {
+        "step": 6,
+        "done": [],
+        "best": 9,
+        "attempts": 1,
+        "passedAt": "2026-10-19T22:08:00.000Z",
+        "updatedAt": "2026-10-19T22:08:00.000Z"
+      },
+      "alphabet/2": {
+        "step": 2,
+        "done": [],
+        "best": 0,
+        "attempts": 0,
+        "passedAt": null,
+        "updatedAt": "2026-10-19T22:12:48.000Z"
+      },
+      "lesson-01/1": {
+        "step": 2,
+        "done": [],
+        "best": 0,
+        "attempts": 0,
+        "passedAt": null,
+        "updatedAt": "2026-10-19T23:30:00.000Z"
+      }
+    },
+    "alphabetExam": null,
+    "theory": [
+      "lesson-01"
+    ]
+  },
+  "settings": {
+    "tileMode": "words",
+    "exercise": "tiles",
+    "lang": "ru",
+    "showWylie": false,
+    "voice": false,
+    "theme": "auto",
+    "onboarded": true,
+    "home": "course",
+    "tashi": true,
+    "tashiMet": true
+  }
+}

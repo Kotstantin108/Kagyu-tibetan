@@ -3,6 +3,7 @@
 import { h, clear, tibText } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { renderTib } from '../engine/tib.js';
+import { theoryOf } from '../engine/theory.js';
 
 /** Notes per set, deduplicated by their English text, with example sentences. */
 export function collectNotes(sentences, sets) {
@@ -49,6 +50,7 @@ export function renderGrammar(root, ctx) {
       total += entries.length;
       const details = h('details', { class: 'set', open: q ? true : openSets.has(set.id) },
         h('summary', {}, h('span', {}, pickTr(set.name, ctx.lang).text), h('span', { class: 'counter' }, t('grammar.count', { n: entries.length }))),
+        theoryOf(data.intro, set.id, ctx.lang).length ? h('div', { class: 'note-row theory-link' }, h('a', { class: 'action small', href: `#/course/${set.id}/theory` }, t('grammar.theoryLink'))) : null,
         ...entries.map((e) => h('div', { class: 'note-row' },
           h('p', { class: 'note-text' }, tibText(pickTr(e.note, ctx.lang).text)),
           ...e.examples.map((s) => h('div', { class: 'example' },

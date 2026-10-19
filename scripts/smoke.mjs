@@ -218,7 +218,7 @@ check((await page.$('#course-exam')) !== null, 'course: an old learner sees the 
   await c.waitForSelector('#course-continue');
   check((await c.$$('.module')).length === 1 + course.modules.length, `course: ${1 + course.modules.length} modules on the map`);
   check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/alphabet/1', 'course: "Continue" points at the first part of the alphabet');
-  check((await c.$$('.unit-row:not(.exam-row)')).length === allUnits(course).length, 'course: every unit listed');
+  check((await c.$$('.unit-row:not(.exam-row):not(.theory-row)')).length === allUnits(course).length, 'course: every unit listed');
   check((await c.$('#course-exam')) !== null, 'course: the alphabet module offers the exam');
 
   // the alphabet: meet the signs, a training round, the check; then the exam
@@ -268,10 +268,25 @@ check((await page.$('#course-exam')) !== null, 'course: an old learner sees the 
   await c.goto(`${base}/index.html#/course`);
   await c.waitForSelector('#course-continue');
   check((await c.$eval('.module[data-module="alphabet"]', (e) => e.classList.contains('passed'))), 'alphabet: the module is passed after the exam');
-  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/lesson-01/1', 'course: "Continue" moves on to the first lesson unit');
+  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/lesson-01/theory', 'course: "Continue" moves on to the theory of the first lesson');
+  check((await c.$$('.theory-row')).length === course.modules.length, 'course: every lesson has a theory row on the map');
   await c.click('#course-continue');
+  await c.waitForSelector('#theory-next');
+  check((await c.$$('.theory-text')).length >= 4, 'theory: the page shows the paragraphs of lesson 1');
+  check((await c.$$('.theory-text .tib-word')).length >= 10, 'theory: the Tibetan words are tappable');
+  await c.click('.theory-text .tib-word');
+  await c.waitForSelector('.popover .theory-word .big-tib');
+  check((await c.$eval('.popover .theory-word .tr', (e) => e.textContent.trim().length > 0)), 'theory: a tapped word shows its meaning');
+  await c.keyboard.press('Escape');
+  await c.waitForSelector('.popover', { state: 'detached' });
+  await c.click('#theory-next');
+  await c.waitForSelector('#words-next');
+  check(/#\/course\/lesson-01\/1\/words$/.test(c.url()), 'theory: "next" opens the words of the first part');
+  check((await c.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).course.theory.includes('lesson-01'))), 'theory: the page is recorded as read');
+  await c.goto(`${base}/index.html#/course/lesson-01/1`);
   await c.waitForSelector('.ladder');
-  check((await c.$$('.ladder-row')).length === 5, 'course: the unit shows five steps');
+  check((await c.$$('.ladder-row')).length === 6, 'course: the first unit shows the theory and five steps');
+  check((await c.$eval('.ladder-row[data-step="theory"]', (e) => e.classList.contains('done'))), 'course: the theory row is done');
   await c.click('.ladder-row[data-step="words"] a.action');
   await c.waitForSelector('#words-next');
   check((await c.$$('.word-card')).length === unit.words.length, `course: the words step shows the ${unit.words.length} new words`);
@@ -358,7 +373,7 @@ check((await page.$('#course-exam')) !== null, 'course: an old learner sees the 
 
 // records written by earlier versions of the site load with nothing lost (site/src/engine/tests/fixtures)
 const contains = (whole, part) => Object.entries(part).every(([k, v]) => (v && typeof v === 'object' ? whole[k] && typeof whole[k] === 'object' && contains(whole[k], v) : whole[k] === v));
-for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json', 'progress-2026-10-19c.json']) {
+for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json', 'progress-2026-10-19d.json']) {
   const fixture = JSON.parse(await readFile(new URL(`../site/src/engine/tests/fixtures/${name}`, import.meta.url), 'utf8'));
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
   const old = await ctx.newPage();

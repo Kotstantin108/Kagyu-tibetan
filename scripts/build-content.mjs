@@ -14,6 +14,7 @@
 //                          enOrigin: textbook | machine
 //   content/letters.tsv    tib | wylie | kind | name | tone | similar | en | ru | de | fr | pl   (the alphabet)
 //   content/alphabet-intro.tsv  part | en | ru | de | fr | pl   (introductions of the alphabet parts)
+//   content/intro/<lang>.md     the theory text of every lesson (## <set id> sections; see content/intro/PROMPT.md)
 //   content/lang-<xx>.tsv  extra languages, keyed by the English text:
 //                          @sets / @words / @sentences / @notes sections,
 //                          lines "english | translation"
@@ -30,6 +31,7 @@ import { fileURLToPath } from 'node:url';
 import { toWylie, wylieToId, endingType } from './lib/wylie.mjs';
 import { renderTib, fuseParticle, TSHEG, SHAD } from '../site/src/engine/tib.js';
 import { splitUnits } from '../site/src/engine/course.js';
+import { parseIntroMarkdown, tokenizeParagraph } from '../site/src/engine/theory.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
@@ -154,7 +156,7 @@ for (const [id, w] of Object.entries(words)) {
 }
 const maxLen = Math.max(...[...surfaces.keys()].map((t) => t.length));
 
-function segment(tibRaw, where) {
+function segment(tibRaw, where, soft = false) {
   const text = tibRaw.replace(/\s+/g, '');
   // "+" forces a word boundary; "།" ends a clause and becomes the shad token
   const chunks = [];
@@ -177,7 +179,7 @@ function segment(tibRaw, where) {
         if (surfaces.has(cand)) { found = cand; break; }
       }
       if (!found) {
-        errors.push(`${where}: cannot segment at "${chunk.slice(pos, pos + 14)}" in ${tibRaw}`);
+        if (!soft) errors.push(`${where}: cannot segment at "${chunk.slice(pos, pos + 14)}" in ${tibRaw}`);
         return null;
       }
       ids.push(...surfaces.get(found));
@@ -347,6 +349,36 @@ for (const r of readRows('alphabet-intro')) {
 }
 writeFileSync(join(OUT, 'alphabet.json'), JSON.stringify({ letters: letterRows, intros }, null, 2) + '\n');
 
+// ---- the theory texts: content/intro/<lang>.md → intro.json, Tibetan runs segmented into tappable words ----
+const INTRO_LANGS = ['en', 'ru', 'de', 'fr', 'pl'];
+const intro = {};
+const introStats = [];
+for (const lang of INTRO_LANGS) {
+  let text;
+  try { text = readFileSync(join(CONTENT, 'intro', `${lang}.md`), 'utf8'); } catch { warnings.push(`intro: no content/intro/${lang}.md`); continue; }
+  const sections = parseIntroMarkdown(text);
+  let unread = 0;
+  for (const [setId, paragraphs] of Object.entries(sections)) {
+    if (!setOrder.has(setId)) { errors.push(`intro/${lang}.md: unknown set ${setId}`); continue; }
+    if (!paragraphs.length) { warnings.push(`intro/${lang}.md: ${setId} is empty`); continue; }
+    intro[setId] = intro[setId] || {};
+    intro[setId][lang] = paragraphs.map((p) => tokenizeParagraph(p, (run) => segment(run, `intro/${lang}.md ${setId}`, true), wordsOut));
+    for (const para of intro[setId][lang]) {
+      for (const tok of para) {
+        if (typeof tok === 'string' || tok.pieces) continue; // a readable run
+        // a lone letter or syllable in a spelling rule is expected; a longer run should have been one of the course's sentences
+        if ((tok.tib.match(/་/g) || []).length >= 2) { unread++; warnings.push(`intro/${lang}.md ${setId}: not the course's words: ${tok.tib}`); }
+      }
+    }
+  }
+  introStats.push(`${lang}: ${Object.keys(sections).length} lessons${unread ? `, ${unread} unread runs` : ''}`);
+}
+for (const set of sets) {
+  if (!intro[set.id]) { warnings.push(`intro: ${set.id} has no theory text`); continue; }
+  for (const lang of INTRO_LANGS) if (!intro[set.id][lang]) warnings.push(`intro: ${set.id} has no theory text in ${lang}`);
+}
+writeFileSync(join(OUT, 'intro.json'), JSON.stringify(intro) + '\n'); // compact: five languages of prose
+
 // ---- CONTENT_REVIEW.md ----
 let notes = '';
 try { notes = readFileSync(join(CONTENT, 'review-notes.md'), 'utf8'); } catch { notes = ''; }
@@ -393,3 +425,4 @@ const langSummary = extraLangs.map((l) => `${l}: ${langStats[l].sentences}/${sen
 if (errors.length) { console.error('BUILD ERRORS:'); for (const e of errors) console.error('  ' + e); process.exit(1); }
 for (const w of warnings.filter((x) => x.startsWith('alphabet'))) console.warn('warning: ' + w);
 console.log(`sets: ${sets.length}, units: ${course.modules.reduce((n, m) => n + m.units.length, 0)}, words: ${Object.keys(wordsOut).length}, sentences: ${sentences.length}, fused surfaces: ${surfaces.size - byTib.size}${langSummary ? '; ' + langSummary : ''}`);
+console.log(`theory: ${introStats.join('; ') || 'none'}`);

@@ -24,3 +24,4 @@ Rules:
 | progress-2026-10-19.json | the course | `course` (units, current, canRead); setting `home` |
 | progress-2026-10-19b.json | the alphabet | `course.alphabetExam`; `reading` keyed by alphabet parts (older stage ids are migrated on load) |
 | progress-2026-10-19c.json | Yak Tashi | settings `tashi` (the mascot is shown), `tashiMet` (he introduced himself) |
+| progress-2026-10-19d.json | the theory pages | `course.theory` (modules whose theory page was read) |

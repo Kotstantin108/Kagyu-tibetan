@@ -420,6 +420,14 @@ details.set[open] summary { background: var(--topbar); }
 .ladder-title { font-weight: 750; }
 .ladder-row .action.small { flex: 0 0 auto; }
 .unit-notes { margin-top: 12px; }
+/* the theory page: prose with tappable Tibetan words */
+.theory .theory-text { margin: 0 0 14px; line-height: 1.6; font-size: 1.02rem; }
+.theory .theory-text .tib { font-size: 1.15em; }
+.tib-word { font: inherit; color: inherit; background: none; border: 0; padding: 0 1px; margin: 0; cursor: pointer; border-radius: 4px; border-bottom: 1px dotted var(--gold-line); }
+.tib-word:hover, .tib-word:focus-visible { background: var(--goldsoft); outline: none; }
+.theory-popover .theory-word + .theory-word { border-top: 1px solid var(--sep); margin-top: 10px; padding-top: 10px; }
+.theory-row .unit-title, .theory-link { font-style: italic; }
+.theory-link { padding: 8px 16px; }
 .unit-notes .note-row { padding: 8px 0; }
 .unit-notes .note-text { margin: 0 0 4px; }
 .word-cards { display: grid; gap: 10px; margin-top: 14px; }

@@ -10,7 +10,8 @@
 //   reading: { stageId: { rounds, best, updatedAt } },  the reading course (letters.js)
 //   course: { started, canRead: true|false|null (the answer to the script question), current: unitId|null,
 //             units: { unitId: { step: 1..6, done: [sentenceIds of the current step], best, attempts, passedAt, updatedAt } },
-//             alphabetExam: { best, attempts, passedAt } | null }
+//             alphabetExam: { best, attempts, passedAt } | null,
+//             theory: [module ids whose theory page was read] }
 //   reading: keys are alphabet parts 'alphabet/1' … (older records had stage ids rows1 … fullwords; they are migrated on load)
 //   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, voice, theme, onboarded,
 //              home: 'course'|'play'|null, tashi (the mascot is shown), tashiMet (he introduced himself) }
@@ -31,7 +32,7 @@ export function createProgress(now = new Date()) {
     sentences: {},
     streak: { current: 0, best: 0, lastDay: null, todayDate: null, todayCount: 0 },
     reading: {},
-    course: { started: false, canRead: null, current: null, units: {}, alphabetExam: null },
+    course: { started: false, canRead: null, current: null, units: {}, alphabetExam: null, theory: [] },
     settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false, home: null, tashi: true, tashiMet: false },
   };
 }
@@ -92,6 +93,7 @@ export function normalizeProgress(raw, now = new Date()) {
       current: typeof c.current === 'string' ? c.current : null,
       units: {},
       alphabetExam: null,
+      theory: Array.isArray(c.theory) ? c.theory.filter((x) => typeof x === 'string') : [],
     };
     const e = c.alphabetExam;
     if (e && typeof e === 'object') {
@@ -289,6 +291,12 @@ function unitOf(progress, unitId) {
 function withUnit(progress, unitId, unit, now) {
   const next = { ...unit, updatedAt: now.toISOString() };
   return touch({ ...progress, course: { ...progress.course, units: { ...progress.course.units, [unitId]: next } } }, now);
+}
+
+/** The theory page of a module was read (the "next" button at its end). */
+export function markTheory(progress, moduleId, now = new Date()) {
+  if (progress.course.theory.includes(moduleId)) return progress;
+  return touch({ ...progress, course: { ...progress.course, theory: [...progress.course.theory, moduleId] } }, now);
 }
 
 /** The learner entered the course (the one-time dialogs are over). */

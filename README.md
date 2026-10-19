@@ -20,6 +20,17 @@ another device".)
 
 - **Course** (`#/course`, the start screen): the textbook lessons cut into
   units of 12–15 new words; the unit borders live in `site/data/course.json`.
+  Every lesson opens with a **theory page** (`#/course/<lesson>/theory`): the
+  lesson's grammar in the learner's language, written for a speaker of that
+  language (comparisons with its own cases, articles, participles), with
+  examples taken from the lesson's sentences; every Tibetan word in it can be
+  tapped for its meaning. The texts are `content/intro/<lang>.md`, written
+  with the prompt in `content/intro/PROMPT.md` from the brief that
+  `node scripts/intro-brief.mjs <lesson>` prints (remarks, sentences, words,
+  the textbook chapter as a reference); the build segments them into
+  `site/data/intro.json`. "Continue" leads to the page before the first part
+  of a lesson; the map, the first part and the grammar reference link to it;
+  `course.theory` in the progress record lists the pages read.
   Every unit is a ladder of five steps: the new words with examples and the
   lesson's remarks, tiles, meaning, recall, then a check of ten tasks without
   hints (eight pass the unit; its new words become known at level 0, the ones

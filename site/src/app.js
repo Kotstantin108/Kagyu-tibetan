@@ -185,9 +185,9 @@ async function main() {
   applyTheme();
   movingBanner();
   try {
-    const [words, sentences, sets, course, alphabet] = await Promise.all([loadJson('words.json'), loadJson('sentences.json'), loadJson('sets.json'), loadJson('course.json'), loadJson('alphabet.json')]);
+    const [words, sentences, sets, course, alphabet, intro] = await Promise.all([loadJson('words.json'), loadJson('sentences.json'), loadJson('sets.json'), loadJson('course.json'), loadJson('alphabet.json'), loadJson('intro.json')]);
     sets.sort((a, b) => a.order - b.order);
-    ctx.data = { words, sentences, sets, course, alphabet };
+    ctx.data = { words, sentences, sets, course, alphabet, intro };
   } catch (err) {
     console.error(err);
     clear(view).append(h('p', { class: 'feedback bad' }, ctx.t('loadError')));

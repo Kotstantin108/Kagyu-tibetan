@@ -28,7 +28,7 @@ export function fuseParticle(base, particle) {
 }
 
 /** Last consonant letter of a string (used for the tsheg-before-shad rule). */
-function lastLetter(s) {
+export function lastLetter(s) {
   const m = s.match(/([ཀ-ཬ])[ཱ-྄ྐ-ྼ]*་?$/u);
   return m ? m[1] : '';
 }

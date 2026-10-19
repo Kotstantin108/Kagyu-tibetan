@@ -4,6 +4,7 @@
 // - course: per unit the record with the larger step wins; at the same step
 //   the solved lists unite and best/attempts are maxima; started is an OR,
 //   canRead and current come from the record with the later updatedAt;
+//   theory (read pages) is the union;
 // - streak: best is the maximum; current/lastDay/today* come from the record
 //   with the later lastDay (ties: the one with the larger current);
 // - settings: from the record with the later updatedAt.
@@ -77,6 +78,7 @@ export function mergeProgress(localRaw, remoteRaw, now = new Date()) {
   out.course.started = local.course.started || remote.course.started;
   out.course.canRead = newer.course.canRead !== null ? newer.course.canRead : older.course.canRead;
   out.course.current = newer.course.current || older.course.current;
+  out.course.theory = [...new Set([...local.course.theory, ...remote.course.theory])];
   const ea = local.course.alphabetExam;
   const eb = remote.course.alphabetExam;
   out.course.alphabetExam = ea && eb

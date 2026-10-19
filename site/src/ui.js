@@ -41,7 +41,8 @@ export function popover(content, { onDismiss = null } = {}) {
   const backdrop = h('div', { class: 'popover-backdrop' });
   const box = h('div', { class: 'popover', role: 'dialog', 'aria-modal': 'true' }, content);
   backdrop.append(box);
-  const onKey = (e) => { if (e.key === 'Escape') { e.stopPropagation(); dismiss(); } };
+  // the screen may have removed the backdrop already (a navigation while the popover was open): then the listener just goes
+  const onKey = (e) => { if (e.key !== 'Escape') return; if (!backdrop.isConnected) { document.removeEventListener('keydown', onKey, true); return; } e.stopPropagation(); dismiss(); };
   const close = () => { backdrop.remove(); document.removeEventListener('keydown', onKey, true); };
   const dismiss = () => { close(); if (onDismiss) onDismiss(); };
   backdrop.addEventListener('click', (e) => { if (e.target === backdrop) dismiss(); });

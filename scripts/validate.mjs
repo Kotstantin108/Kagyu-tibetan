@@ -1,4 +1,4 @@
-// Validates site/data/{words,sentences,sets,course,alphabet}.json.
+// Validates site/data/{words,sentences,sets,course,alphabet,intro}.json.
 //   node scripts/validate.mjs
 // Exit code 1 on errors; warnings do not fail the run.
 
@@ -27,6 +27,7 @@ const { raw: wordsRaw, data: words } = readJson('words.json');
 const { data: sentences } = readJson('sentences.json');
 const { data: course } = readJson('course.json');
 const { data: alphabet } = readJson('alphabet.json');
+const { data: intro } = readJson('intro.json');
 
 // ---- the alphabet: counts, every language, look-alikes and examples that exist ----
 {
@@ -47,6 +48,29 @@ const { data: alphabet } = readJson('alphabet.json');
     if (!intro) { err(`alphabet: no introduction for part ${n}`); continue; }
     for (const lang of ['en', 'ru', 'de', 'fr', 'pl']) if (!intro[lang]) err(`alphabet: part ${n} has no introduction in ${lang}`);
   }
+}
+
+// ---- the theory texts: every lesson in every language, made of the course's words ----
+{
+  const langs = ['en', 'ru', 'de', 'fr', 'pl'];
+  for (const set of sets) {
+    const m = intro[set.id];
+    if (!m) { err(`intro: ${set.id} has no theory text`); continue; }
+    for (const lang of langs) {
+      const paras = m[lang];
+      if (!paras || !paras.length) { err(`intro: ${set.id} has no theory text in ${lang}`); continue; }
+      let unread = 0;
+      for (const para of paras) {
+        for (const tok of para) {
+          if (typeof tok === 'string') continue;
+          if (!tok.pieces) { if ((tok.tib.match(/་/g) || []).length >= 2) unread++; continue; }
+          for (const piece of tok.pieces) for (const id of piece.ids) if (!words[id]) err(`intro: ${set.id} ${lang}: unknown word ${id}`);
+        }
+      }
+      if (unread) warn(`intro: ${set.id} ${lang}: ${unread} Tibetan runs are not made of the course's words (no word help)`);
+    }
+  }
+  for (const id of Object.keys(intro)) if (!sets.some((s) => s.id === id)) err(`intro: ${id} is not a set`);
 }
 
 // ---- course units: the shipped file must be what the splitter gives for this content ----

@@ -1,20 +1,22 @@
 // The course: #/course is the map (continue, review, modules and units),
 // #/course/<module>/<n> a unit with its ladder of steps, #/course/<module>/<n>/words
 // the first step; the other steps and the review run on the play screen in
-// course mode. #/course/done is the end of the course.
+// course mode. #/course/<module>/theory is the theory page of a module (read
+// before its first part). #/course/done is the end of the course.
 
 import { h, popover, tibText, audioButton, toast } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { renderPlay } from './play.js';
 import { needsOnboarding, showOnboarding } from './onboarding.js';
 import { courseModules, allUnits, findUnit, unitStep, unitPassed, unitAllKnown, courseProgress, moduleProgress, currentUnit, nextUnit, dueCount, STEPS, PASSED, CHECK_SIZE } from '../engine/course.js';
-import { startCourse, setCanRead, setCurrentUnit, seeUnitWords, setUnitStep, setSetting, wordStatus, STATUS } from '../engine/progress.js';
+import { startCourse, setCanRead, setCurrentUnit, seeUnitWords, setUnitStep, setSetting, wordStatus, markTheory, STATUS } from '../engine/progress.js';
 import { PARTS, partOf, partId, partSigns, partNewItems, examPassed, ALPHABET_MODULE, ALPHA_STEPS, ALPHA_CHECK_SIZE, FIRST_SENTENCES, FIRST_SENTENCES_PASS } from '../engine/alphabet.js';
 import { toWylie } from '../engine/wylie.js';
 import { renderDrill } from './drill.js';
 import { contentWords } from '../engine/next.js';
 import { effectiveStreak, localDay } from '../engine/streak.js';
 import { renderTib } from '../engine/tib.js';
+import { theoryOf, needsTheory } from '../engine/theory.js';
 
 export function renderCourse(root, ctx) {
   const parts = (ctx.param || '').split('/').filter(Boolean);
@@ -22,6 +24,7 @@ export function renderCourse(root, ctx) {
   if (parts[0] === 'review') return renderPlay(root, ctx, { kind: 'review' });
   if (parts[0] === 'done') return renderDone(root, ctx);
   if (parts[0] === ALPHABET_MODULE) return renderAlphabet(root, ctx, parts.slice(1));
+  if (parts[1] === 'theory') return renderTheory(root, ctx, parts[0]);
   const unit = findUnit(ctx.data.course, `${parts[0]}/${parts[1] || ''}`);
   if (!unit) { ctx.navigate('course'); return () => {}; }
   const step = parts[2];
@@ -52,6 +55,62 @@ export function unitName(ctx, unit) {
 /** The set name up to the first period: "Lesson 2" of "Lesson 2. Verbs". */
 function shortModuleName(ctx, moduleId) {
   return moduleName(ctx, moduleId).split(/\.\s/)[0];
+}
+
+function theoryHref(moduleId) {
+  return `#/course/${moduleId}/theory`;
+}
+
+/** A popover with the words of a tapped piece of Tibetan (a word, or a word with its fused particle). */
+function showPieceWords(ctx, ids) {
+  const { data, t } = ctx;
+  const rows = ids.filter((id) => data.words[id]).map((id) => data.words[id]).map((w, i) => h('div', { class: 'theory-word' },
+    h('p', { class: 'big-tib' }, w.tib, ' ', audioButton(ctx, `w-${ids.filter((id) => data.words[id])[i]}`, { small: true })),
+    h('div', { class: 'wylie' }, w.wylie, w.pos ? ` · ${w.pos}` : ''),
+    h('p', { class: 'tr' }, pickTr(w.tr, ctx.lang).text),
+  ));
+  if (!rows.length) return;
+  popover(h('div', { class: 'theory-popover' }, ...rows, h('p', { class: 'fine' }, t('course.theoryWordHint'))));
+}
+
+/** The theory page of a module: the lesson's grammar, read before its first part; every Tibetan word opens its meaning. */
+function renderTheory(root, ctx, moduleId) {
+  const { store, data, t } = ctx;
+  const paragraphs = theoryOf(data.intro, moduleId, ctx.lang);
+  const first = findUnit(data.course, `${moduleId}/1`);
+  if (!paragraphs.length || !first) { ctx.navigate('course'); return () => {}; }
+  const p = store.get();
+  const read = p.course.theory.includes(moduleId);
+  const toWords = needsTheory(p, first, data.intro);
+  const body = h('div', { class: 'panel-body theory' },
+    h('div', { class: 'label' }, t('course.theory')),
+    h('h2', { class: 'prompt' }, moduleName(ctx, moduleId)),
+  );
+  for (const para of paragraphs) {
+    const el = h('p', { class: 'theory-text' });
+    for (const tok of para) {
+      if (typeof tok === 'string') { el.append(document.createTextNode(tok)); continue; }
+      if (!tok.pieces) { el.append(h('span', { class: 'tib' }, tok.tib)); continue; }
+      const run = h('span', { class: 'tib theory-run' });
+      for (const piece of tok.pieces) {
+        if (piece.ids.length) run.append(h('button', { type: 'button', class: 'tib-word', onClick: () => showPieceWords(ctx, piece.ids) }, piece.t));
+        else run.append(document.createTextNode(piece.t));
+      }
+      el.append(run);
+    }
+    body.append(el);
+  }
+  body.append(h('p', { class: 'helper' }, t('course.theoryHint')));
+  const done = () => {
+    store.update((q) => markTheory(q, moduleId));
+    ctx.navigate(toWords ? `course/${first.id}/words` : `course/${first.id}`);
+  };
+  body.append(h('div', { class: 'buttons' },
+    h('button', { type: 'button', class: 'action primary', id: 'theory-next', onClick: done }, read && !toWords ? t('course.toUnit') : t('course.theoryNext')),
+    h('a', { class: 'action', href: '#/course' }, t('course.toMap')),
+  ));
+  root.append(h('section', { class: 'panel' }, body));
+  return () => {};
 }
 
 function unitHref(unit) {
@@ -90,12 +149,13 @@ function renderMap(root, ctx) {
     const top = h('div', { class: 'panel-body' });
     if (cur) {
       const step = unitStep(p, cur);
-      const where = cur.part ? t(`alphabet.steps.${ALPHA_STEPS[Math.min(step, ALPHA_STEPS.length) - 1]}`) : t(`course.steps.${STEPS[step - 1]}`);
+      const theoryFirst = needsTheory(p, cur, data.intro);
+      const where = theoryFirst ? t('course.theory') : cur.part ? t(`alphabet.steps.${ALPHA_STEPS[Math.min(step, ALPHA_STEPS.length) - 1]}`) : t(`course.steps.${STEPS[step - 1]}`);
       top.append(
         h('div', { class: 'label' }, t('course.continueLabel')),
-        h('h2', { class: 'prompt course-next' }, unitName(ctx, cur)),
+        h('h2', { class: 'prompt course-next' }, theoryFirst ? moduleName(ctx, cur.module) : unitName(ctx, cur)),
         h('p', { class: 'helper' }, where),
-        h('div', { class: 'buttons' }, h('a', { class: 'action primary', id: 'course-continue', href: unitHref(cur) }, t('course.continue'))),
+        h('div', { class: 'buttons' }, h('a', { class: 'action primary', id: 'course-continue', href: theoryFirst ? theoryHref(cur.module) : unitHref(cur) }, t('course.continue'))),
       );
     } else {
       top.append(
@@ -136,6 +196,11 @@ function renderMap(root, ctx) {
           h('a', { class: 'action small' + (isCur ? ' primary' : ''), href: unitHref(u) }, done ? t('course.open') : isCur ? t('course.continue') : t('course.open')),
         );
       });
+      const theoryRow = theoryOf(data.intro, m.id, ctx.lang).length
+        ? h('div', { class: 'unit-row theory-row' + (p.course.theory.includes(m.id) ? ' passed' : '') },
+          h('div', { class: 'unit-main' }, h('div', { class: 'unit-title' }, t('course.theory')), h('div', { class: 'stage-state' + (p.course.theory.includes(m.id) ? ' passed' : '') }, p.course.theory.includes(m.id) ? t('course.theoryRead') : t('course.theoryUnread'))),
+          h('a', { class: 'action small' + (cur && cur.module === m.id && needsTheory(p, cur, data.intro) ? ' primary' : ''), href: theoryHref(m.id) }, p.course.theory.includes(m.id) ? t('course.open') : t('course.theoryOpen')))
+        : null;
       const examRow = m.id === ALPHABET_MODULE && mp.passed < mp.total && !examPassed(p)
         ? h('div', { class: 'unit-row exam-row' },
           h('div', { class: 'unit-main' }, h('div', { class: 'unit-title' }, t('alphabet.examTitle')), h('div', { class: 'stage-state' }, t('alphabet.examText'))),
@@ -147,6 +212,7 @@ function renderMap(root, ctx) {
           h('span', { class: 'counter' }, `${mp.passed}/${mp.total}`),
           h('span', { class: 'meter' }, h('span', { style: `width:${mp.total ? Math.round((100 * mp.passed) / mp.total) : 0}%` })),
         ),
+        theoryRow,
         examRow,
         ...rows,
       ));
@@ -394,6 +460,15 @@ function renderUnit(root, ctx, unit) {
   const wordLine = h('div', { class: 'unit-wordline' }, ...words.map((w) => h('span', { class: 'tib' }, w.tib)));
 
   const ladder = h('div', { class: 'ladder' });
+  if (unit.id.endsWith('/1') && theoryOf(data.intro, unit.module, ctx.lang).length) {
+    const read = p.course.theory.includes(unit.module);
+    const first = !read && needsTheory(p, unit, data.intro);
+    ladder.append(h('div', { class: 'ladder-row' + (read ? ' done' : '') + (first ? ' current' : ''), dataset: { step: 'theory' } },
+      h('span', { class: 'ladder-num' }, read ? '✓' : '0'),
+      h('div', { class: 'ladder-main' }, h('div', { class: 'ladder-title' }, t('course.theory')), h('div', { class: 'stage-state' + (read ? ' passed' : '') }, read ? t('course.theoryRead') : t('course.theoryUnread'))),
+      h('a', { class: 'action small' + (first ? ' primary' : ''), href: theoryHref(unit.module) }, read ? t('course.repeatStep') : t('course.theoryOpen')),
+    ));
+  }
   STEPS.forEach((name, i) => {
     const n = i + 1;
     const isDone = passed || n < step;
@@ -450,7 +525,6 @@ function renderWords(root, ctx, unit) {
     if (!s.note || !s.note.en || seenNote.has(s.note.en)) continue;
     seenNote.add(s.note.en);
     notes.push({ note: s.note, example: s });
-    if (notes.length >= 4) break;
   }
 
   const intro = notes.length ? h('div', { class: 'unit-notes' },
