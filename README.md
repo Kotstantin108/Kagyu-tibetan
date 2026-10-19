@@ -267,6 +267,18 @@ skips ids that already exist and runs at about real time.) Voice:
 `openpecha/op-mms-ft-v3` (single speaker). The v5 and v8 checkpoints produce
 silence for most speakers; `tts-trial.py` compares them.
 
+The signs of the alphabet (letters, consonant+vowel syllables, stacks,
+reversed and heavy letters: `sign-<codepoints>.mp3`, 236 clips) are native
+recordings, not synthesis: the alphabet chapters of the open textbook *Basic
+Tibetan* (Jampa Khedup, Sonam Tsering et al., Michigan State University
+Libraries, [CC BY-NC 4.0](https://openbooks.lib.msu.edu/basictibetan/)) cut
+into single signs by `scripts/tools/msu-audio.py` (ffmpeg silence detection;
+the source m4a files live outside git in `textbooks/msu-audio/`). The cut is
+recorded in `content/sign-audio.tsv`, which the build turns into
+`alphabet.json` → `audio` (sign → clip id); the sign cards, the sign popover
+of the theory pages and the drills (after a wrong answer) show a listen button
+for the signs that have a clip. The attribution is in the app's "About" text.
+
 ## Server
 
 - **Host:** `itjoy.space` (Ubuntu 24.04, nginx). Site files:

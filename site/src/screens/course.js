@@ -75,6 +75,12 @@ function theoryLadderRow(ctx, p, unit) {
   );
 }
 
+/** The listen button of a sign, when a native recording of it exists (alphabet.json `audio`, from content/sign-audio.tsv). */
+function signAudio(ctx, tib) {
+  const id = ctx.data.alphabet.audio && ctx.data.alphabet.audio[tib];
+  return id ? audioButton(ctx, id, { small: true }) : null;
+}
+
 /** A popover with the card of a tapped sign of the alphabet (a letter, a vowel sign, a stack); a sign used as a prefix or suffix shows every role. */
 function showSign(ctx, tib) {
   const { data, t } = ctx;
@@ -86,6 +92,7 @@ function showSign(ctx, tib) {
     return h('div', { class: 'theory-word theory-sign' },
       h('div', { class: 'word-card-head' },
         h('span', { class: 'tib big' }, e.tib),
+        signAudio(ctx, e.tib),
         h('span', { class: 'sign-name' }, e.name),
         e.tone ? h('span', { class: 'tone-badge ' + e.tone.toLowerCase() }, t(`alphabet.tone${e.tone}`)) : null,
       ),
@@ -423,6 +430,7 @@ function renderAlphabetIntro(root, ctx, unit, part) {
       cards.append(h('div', { class: 'word-card sign-card', dataset: { sign: e.tib } },
         h('div', { class: 'word-card-head' },
           h('span', { class: 'tib big' }, e.tib),
+          signAudio(ctx, e.tib),
           h('span', { class: 'sign-name' }, e.name),
           e.tone ? h('span', { class: 'tone-badge ' + e.tone.toLowerCase() }, t(`alphabet.tone${e.tone}`)) : null,
         ),
@@ -438,7 +446,7 @@ function renderAlphabetIntro(root, ctx, unit, part) {
     for (const x of items) {
       const w = byTib.get(x.tib) || byTib.get(x.tib + '་');
       cards.append(h('div', { class: 'word-card sign-card' },
-        h('div', { class: 'word-card-head' }, h('span', { class: 'tib big' }, x.tib)),
+        h('div', { class: 'word-card-head' }, h('span', { class: 'tib big' }, x.tib), signAudio(ctx, x.tib)),
         h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', x.wylie),
         w ? h('div', { class: 'tr' }, pickTr(w.tr, ctx.lang).text) : null,
       ));

@@ -150,6 +150,9 @@ await page.click('#settings-voice');
 await page.goto(`${base}/index.html#/dict`);
 await page.waitForSelector('.word-row', { state: 'attached' });
 check((await page.$('.word-row .audio-btn')) !== null, 'dictionary shows listen buttons after enabling the voice setting');
+await page.goto(`${base}/index.html#/course/alphabet/1/intro`);
+await page.waitForSelector('#words-next');
+check((await page.$$('.sign-card .audio-btn')).length === 4, 'alphabet: the letter cards show listen buttons (native recordings of the signs)');
 await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); p.settings.voice = false; localStorage.setItem('tib-progress', JSON.stringify(p)); });
 
 for (const route of ['dict', 'grammar', 'stats', 'settings', 'support']) {

@@ -4,7 +4,7 @@
 //   renderDrill(root, ctx, { kind: 'train'|'check'|'exam'|'free', part, unit, back, next })
 //     back: href of the "back" link; next: { href, label } shown after a passed round
 
-import { h, clear, popoverOpen, toast } from '../ui.js';
+import { h, clear, popoverOpen, toast, audioButton } from '../ui.js';
 import { makeDrill, drillPass, partId, TRAIN_PASS, ALPHA_STEPS } from '../engine/alphabet.js';
 import { recordReadingRound, setUnitStep, recordCheck, recordAlphabetExam } from '../engine/progress.js';
 import { PASSED } from '../engine/course.js';
@@ -67,6 +67,10 @@ export function renderDrill(root, ctx, opts) {
       const cur = cards[index];
       feedbackEl.textContent = cur.reverse ? t('alphabet.wrongSign', { tib: cur.tib }) : t('read.wrongIs', { wylie: cur.wylie });
       feedbackEl.className = 'feedback bad';
+      // a native recording of the sign, when there is one (alphabet.json `audio`)
+      const clip = data.alphabet.audio && data.alphabet.audio[cur.tib];
+      const listen = clip ? audioButton(ctx, clip, { small: true }) : null;
+      if (listen) feedbackEl.append(' ', listen);
       ctx.tashi?.say('wrong');
     }
     render();

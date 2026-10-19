@@ -14,6 +14,7 @@
 //                          enOrigin: textbook | machine
 //   content/letters.tsv    tib | wylie | kind | name | tone | similar | en | ru | de | fr | pl   (the alphabet)
 //   content/alphabet-intro.tsv  part | en | ru | de | fr | pl   (introductions of the alphabet parts)
+//   content/sign-audio.tsv  tib | clip id | source | start | end   (native recordings of the signs, see scripts/tools/msu-audio.py)
 //   content/intro/<lang>.md     the theory text of every lesson (## <set id> sections; see content/intro/PROMPT.md)
 //   content/lang-<xx>.tsv  extra languages, keyed by the English text:
 //                          @sets / @words / @sentences / @notes sections,
@@ -347,7 +348,16 @@ for (const r of readRows('alphabet-intro')) {
   if (texts.length !== ALPHA_LANGS.length) errors.push(`${r.line}: expected ${1 + ALPHA_LANGS.length} columns`);
   intros[part] = Object.fromEntries(ALPHA_LANGS.map((l, i) => [l, texts[i] || '']));
 }
-writeFileSync(join(OUT, 'alphabet.json'), JSON.stringify({ letters: letterRows, intros }, null, 2) + '\n');
+// native recordings of the signs (content/sign-audio.tsv: tib | clip id | source | start | end), cut from the
+// MSU "Basic Tibetan" chapters by scripts/tools/msu-audio.py; the clips live beside the word audio on the server
+const signAudio = {};
+for (const r of readRows('sign-audio')) {
+  const [tib, clip] = r.cols;
+  if (!tib || !clip) { errors.push(`${r.line}: expected tib | clip id`); continue; }
+  signAudio[tib] = clip;
+}
+for (const e of letterRows) if (!signAudio[e.tib] && e.kind !== 'prefix' && e.kind !== 'suffix') warnings.push(`alphabet: no recording of ${e.kind} ${e.tib} ${e.wylie}`);
+writeFileSync(join(OUT, 'alphabet.json'), JSON.stringify({ letters: letterRows, intros, audio: signAudio }, null, 2) + '\n');
 
 // ---- the theory texts: content/intro/<lang>.md → intro.json, Tibetan runs segmented into tappable words ----
 const INTRO_LANGS = ['en', 'ru', 'de', 'fr', 'pl'];
