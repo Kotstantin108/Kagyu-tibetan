@@ -235,3 +235,169 @@ Zdania względne, polskie „który”, buduje się jak w szóstej lekcji kursu:
 Mowę niezależną wprowadza zwrot „tymi słowami” przed czasownikiem mówienia, zamknięty partykułą ཅེས་ „że”, odpowiednikiem cudzysłowu z szóstej lekcji kursu: བྲམ་ཟེས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། „Bramin zwrócił się do Zwycięskiego tymi słowami”.
 
 Na koniec zdanie bez czasownika, zamknięte samą partykułą końcową, jak w trzeciej lekcji kursu: རབ་ཏུ་དབུལ་ཕོངས་པ།བཟའ་བ་དང་བགོ་བ་མེད་པ་ཞིག་གོ། „Był skrajnie biedny, bez jedzenia i odzieży”.
+
+## alphabet/1
+
+Pismo tybetańskie powstało w siódmym wieku na wzór ówczesnego pisma indyjskiego i po indyjsku jest zbudowane. Każda z trzydziestu liter czyta się jako spółgłoska razem z samogłoską a: ཀ to od razu ka. Inne samogłoski oznacza mały znak u góry lub u dołu litery; tym znakom poświęcona jest osobna część. W książkach i w tym kursie używa się stylu drukowanego uczen, „z głową”: większość liter ma u góry poziomą kreskę, na której litera jakby wisi pod linią. Pisze się od lewej do prawej, wszystkie litery mają jedną wysokość, wielkich liter nie ma.
+
+Między słowami nie ma spacji. Zamiast nich po każdej sylabie stawia się kropkę, tsheg ་, a koniec zdania lub jego części zaznacza pionowa kreska, shad །. Wiersz tekstu tybetańskiego wygląda więc jak łańcuch sylab przedzielonych kropkami: ཁང་པ་ „dom” to dwie sylaby. Gdzie kończy się jedno słowo, a zaczyna drugie, czytający poznaje po znajomych słowach i po sensie; właśnie tę umiejętność kurs ćwiczy.
+
+Obok tybetańskiego kurs pokazuje zapis łaciński w systemie Wylie. Oddaje on pisownię litera po literze, a nie brzmienie. Samogłoski a w Wylie się nie pisze: ཀ to ka, ཁང to khang; tsheg zamienia się w spację. Po Wylie wygodnie sprawdzać, czy litery zostały dobrze rozpoznane, ale wymowę trzeba znać osobno.
+
+Trzydzieści liter ułożono w rzędy według miejsca wymowy, od głębi jamy ustnej ku wargom, a wewnątrz rzędu powtarza się ten sam wzór. Pierwszy rząd: ཀ ka, ཁ kha, ག ga, ང nga. Pierwsza litera to k bezdźwięczne i bez przydechu, takie jak polskie k w „kot”. Druga to to samo k z mocnym wydechem; polskie k, p, t są zawsze bez przydechu, dlatego ཁ najlepiej wymawiać jak k z wyraźnym „h” po nim: „k-h”. Trzecia litera ག w dawnym języku była dźwięcznym g; w dzisiejszej wymowie lhaskiej to dźwięk między g a k, z lekkim przydechem. Czwarta, ང, to nosowe ng, jak w „bank”; po polsku ten dźwięk nigdy nie zaczyna sylaby, po tybetańsku owszem: ངན་པ་ „zły”.
+
+Sylaba tybetańska ma ton. Czternaście liter jest wysokich, szesnaście niskich, a ton litery kurs pokazuje na kartach. W pierwszym rzędzie ཀ i ཁ są wysokie, ག i ང niskie. Ta reguła powtórzy się we wszystkich pełnych rzędach: dwie pierwsze litery rzędu są wysokie, dwie ostatnie niskie.
+
+Litery ཀ ཁ ག są do siebie podobne i w pierwszych rundach kurs celowo pokazuje je obok siebie. Lepiej patrzeć na nie jak na trzy różne figury; po kilku rundach oko zacznie je rozróżniać samo. Słowa do przykładu: ཀུན་ „wszyscy, wszystko”, ཁོང་ „on, ona”, གོ་འཕང་ „poziom, stan”, ངོ་བོ་ „esencja”. Są w nich już znaki samogłosek i przyrostki, czytać je w całości nauczą dalsze części; na razie wystarczy znaleźć w nich pierwszą literę.
+
+## alphabet/2
+
+Drugi rząd powtarza wzór pierwszego o krok bliżej zębów: ཅ ca, ཆ cha, ཇ ja, ཉ nya. To ta sama czwórka, bezdźwięczna bez przydechu, bezdźwięczna z wydechem, miękka, nosowa, tylko dźwięki są tu szumiące i miękkie. Ton też jest rozłożony tak samo: ཅ i ཆ wysokie, ཇ i ཉ niskie.
+
+Litera ཅ brzmi jak polskie ć, może odrobinę twardsze, w stronę cz, ale wymawiane bez przydechu i z wysokim tonem: ཅིག་ „jakiś”. Litera ཆ to to samo ć z mocnym wydechem: ཆོས་ „Dharma”, ཆུ་ „woda”. Różnica między nimi jest dla polskiego ucha nowa i z początku łatwiej ją zobaczyć niż usłyszeć: przy ཆ po ć wyraźnie słychać „h”.
+
+Litera ཇ to dźwięk między dź a ć, jak w „dżem” powiedzianym miękko, z niskim tonem: ཇི་ „co, jak”, ཇོ་བོ་ „pan, władca”. Litera ཉ to miękkie ń, jak w „niania”, także niska: ཉི་མ་ „słońce”, ཉན་ཐོས་ „śrawaka”. Po polsku ń przed samogłoską zapisuje się jako „ni”, jak w „niebo”; po tybetańsku to zwykły początek sylaby i brzmi dokładnie tak.
+
+Z wyglądu ཅ i ཆ różnią się jednym szczegółem, a ཇ przypomina ཛ i ཟ z dalszych rzędów; kurs kładzie podobne znaki obok siebie jako warianty odpowiedzi, więc warto przyjrzeć się każdej literze z osobna na kartach. Słowo ཆོས་ „Dharma” będzie pojawiać się w kursie częściej niż większość innych, warto zapamiętać je w całości już teraz.
+
+## alphabet/3
+
+Trzeci rząd to rodzina t: ཏ ta, ཐ tha, ད da, ན na. Dźwięki są tu zębowe, jak polskie t, d i n, dlatego ten rząd jest dla polskiego ucha najwygodniejszy. Wzór bez zmian: ཏ bez przydechu, ཐ z wydechem, ད miękka, ན nosowa; ཏ i ཐ wysokie, ད i ན niskie.
+
+Litera ཏ to t jak w „tam”, bez wydechu i z wysokim tonem; polskie t jest właśnie takie. W słowniku kursu stoi ona najczęściej w partykułach: ཏུ་ „partykuła la-dön” i ཏོ་ „partykuła końcowa”. Litera ཐ to t z mocnym wydechem, „t-h”, jakiego polskie t nigdy nie ma: ཐབས་ „metoda”, ཐེག་པ་ „pojazd”. Litera ད to dźwięk między d a t, z lekkim przydechem i niskim tonem: དང་ „i”, དེ་ „tamten”. Litera ན to zwykłe n: ནག་པོ་ „czarny”, ནི་ „co się tyczy”, partykuła emfatyczna.
+
+Trudność tego rzędu nie leży w dźwiękach, lecz w kształcie. Litery ཏ, ད, ན razem z ང z pierwszego rzędu i ར z siódmego tworzą najbardziej podobną grupę w całym alfabecie. Wszystkie są zbudowane na krótkiej „głowie” z zagięciem w dół, a różnią się tym, dokąd biegnie dolna część i czy jest w niej pętla. Warto porównywać je parami na kartach: ཏ i ད, ད i ང, ན i ང; gdy różnica w każdej parze stanie się widoczna, grupa przestanie się mylić.
+
+Dwa słowa tego rzędu, དང་ „i” oraz དེ་ „tamten”, wchodzą do pierwszych zdań kursu i będą widoczne na każdym kroku.
+
+## alphabet/4
+
+Czwarty rząd to rodzina p: པ pa, ཕ pha, བ ba, མ ma. To dźwięki wargowe, te same co polskie p, b, m. Wzór jest ten sam i po raz ostatni pełny: པ bez przydechu, ཕ z wydechem, བ miękka, མ nosowa; པ i ཕ wysokie, བ i མ niskie. Z tym rzędem zamykają się wszystkie cztery pełne rzędy alfabetu.
+
+Litera པ to p bez wydechu, jak w „pole”; w kursie spotyka się ją najczęściej jako partykułę པ་ „partykuła nominalizująca” po innej sylabie, w słowach takich jak ཁང་པ་ „dom”. Litera ཕ to p z mocnym wydechem, „p-h”: ཕ་ „ojciec”, ཕན་ „przynosić pożytek”. Litera བ to dźwięk między b a p, z lekkim przydechem i niskim tonem: བོད་ „Tybet”, བུ་ „syn”. Litera མ to zwykłe m: མེ་ „ogień”, མི་ „człowiek”.
+
+Trzy litery པ, ཕ i བ zbudowane są na jednej podstawie i to je myli się najczęściej. Najłatwiej zapamiętać བ: jej dół jest zamknięty kreską. Litera ཕ różni się od པ małym haczykiem przy głowie; wystarczy raz znaleźć go na karcie, a potem będzie rzucał się w oczy. Z kolei མ bywa mylona z ས i ཤ z siódmego rzędu; te pary też warto obejrzeć obok siebie.
+
+Partykuły པ་ i བ་ oraz końcówki པོ་, བོ་, མོ་ będą pojawiać się w kursie na każdym kroku: zamieniają rdzeń w rzeczownik lub przymiotnik, jak w དམར་པོ་ „czerwony” i ཆེན་པོ་ „duży”. Pierwsza lekcja wyjaśni je dokładnie; na razie wystarczy rozpoznawać litery.
+
+## alphabet/5
+
+Piąty rząd: ཙ tsa, ཚ tsha, ཛ dza i ཝ wa. Pierwsze trzy idą znanym wzorem: ཙ bez przydechu, ཚ z wydechem, ཛ miękka; nosowej w tym rzędzie nie ma, a czwarte miejsce zajmuje ཝ, litera sama dla siebie. Ton: ཙ i ཚ wysokie, ཛ i ཝ niskie.
+
+Litera ཙ to polskie c, dokładnie jak w „cel”, z wysokim tonem: ཙམ་ „jedynie, tylko”. Litera ཚ to c z mocnym wydechem, „c-h”: ཚ་པོ་ „gorący”, ཚོ་ „partykuła liczby mnogiej”, używana potocznie. Litera ཛ to dźwięk między dz a c, jak w „dzwon”, niska; w słowniku kursu stoi w słowie རྫོགས་པ་ „doskonałość”, pod nadpisanym ར, o którym będzie mowa dalej.
+
+Kształt tych trzech liter zapamiętuje się łatwo: ཙ, ཚ i ཛ to ཅ, ཆ i ཇ z drugiego rzędu z dodaną u góry po prawej małą kreską. Nie trzeba więc uczyć się trzech nowych figur, lecz przyzwyczaić oko do kreski: jest kreska, czyta się c; nie ma kreski, czyta się ć.
+
+Litera ཝ to wargowe w, jak angielskie w albo polskie ł w „łan”, z niskim tonem; polskie w ze słowa „woda” jest wargowo-zębowe i brzmi twardziej. To najrzadsza litera alfabetu: jako samodzielna występuje głównie w zapożyczeniach, częściej pojawia się w pomniejszonej postaci pod inną literą; o tym opowiada część o literach podpisanych. Z wyglądu ཝ przypomina ཟ i ཞ z następnego rzędu, dlatego warto obejrzeć je obok siebie na kartach.
+
+## alphabet/6
+
+Szósty rząd: ཞ zha, ཟ za, འ ’a i ཡ ya. Tu wzór rzędu już nie działa: wszystkie cztery litery są niskie i każda ma własny charakter.
+
+Litera ཞ to miękkie ż, jak w „żona”, z niskim tonem; w wymowie lhaskiej często brzmi niemal jak sz: ཞིག་ „jakiś”, ཞེ་སྡང་ „gniew”. Litera ཟ to z, jak w „zima”, też niska, i tak samo często zbliża się do s: ཟབ་མོ་ „głęboki”, ཟ་ཁང་ „restauracja”. Polskie ż i z są zawsze dźwięczne i twarde; tybetańskie ཞ i ཟ są miększe i cichsze, a ich główną cechą jest niski ton. Z wyglądu ཞ i ཟ przypominają siebie nawzajem oraz ཝ; warto oglądać je uważnie.
+
+Litera འ, zwana a-chung, „małe a”, jest szczególna. Nie ma własnej spółgłoski: niesie samogłoskę z niskim tonem. W Wylie zapisuje się ją apostrofem, dlatego འོད་དཔག་མེད་ „Amitabha” zaczyna się od ’od. Ta litera ma i inne role: bywa niemym przedrostkiem przed rdzeniem, a w postaci འི་ „partykuła łącząca” zrasta się z otwartą sylabą. Wszystko to pojawi się w części o przedrostkach i w pierwszych lekcjach.
+
+Litera ཡ to j, jak w „jak”, z niskim tonem: ཡིན་ „jest”, ཡོན་ཏན་ „zaleta”. Tak jak ཝ, umie podpisywać się pod inną literę w pomniejszonej postaci i tam zmienia dźwięk o wiele wyraźniej; o tym w części o literach podpisanych.
+
+## alphabet/7
+
+Siódmy rząd: ར ra, ལ la, ཤ sha, ས sa. To cztery najbardziej zajęte litery alfabetu: oprócz własnego dźwięku każda ma drugie i trzecie życie. ར i ལ podpisują się pod inne litery, ར, ལ i ས nadpisują się nad nimi, a ར, ལ i ས służą jeszcze jako przyrostki sylaby. Dlatego spotka się je niemal w każdym zdaniu. Ton: ར i ལ niskie, ཤ i ས wysokie.
+
+Litera ར to r lekko drżące, zwykle jednym uderzeniem języka, słabsze niż polskie r: རང་ „sam”, རང་རྒྱལ་ „pratjekabudda”. Litera ལ to l jak w „lampa”: ལམ་ „ścieżka”, ལག་པ་ „ręka”. Litera ཤ to miękkie sz, bliższe polskiemu ś, z wysokim tonem: ཤིག་ „jakiś”, ཤེས་རབ་ „mądrość”. Litera ས to zwykłe s, wysokie: ས་ „ziemia”, སོགས་ „i tak dalej”.
+
+Z kształtu ར trafia do tej samej trudnej grupy co ད i ང, a ལ przypomina ར; ཤ myli się z ཨ i ཧ z ostatniego rzędu, a ས z མ. Jak poprzednio pomaga porównanie parami na kartach: ར i ད, ར i ལ, ས i མ.
+
+Trzy partykuły z literami tego rzędu pojawiły się już w przykładach: ཅིག་ „jakiś”, ཞིག་ „jakiś” i ཤིག་ „jakiś” to jedna i ta sama partykuła w trzech pisowniach, a o tym, którą wybrać, decyduje ostatnia litera poprzedniej sylaby. To reguła z pierwszej lekcji i dobry przykład tego, po co czytającemu widzieć każdą literę.
+
+## alphabet/8
+
+Ostatni rząd jest krótki, z dwóch liter: ཧ ha i ཨ a, zwana a-chen, „wielkie a”. Obie są wysokie. Z nimi alfabet jest kompletny: trzydzieści liter w siedmiu i pół rzędach. Sami Tybetańczycy nazywają abecadło ཀ་ཁ ka-kha, od dwóch pierwszych liter, tak jak polskie „abecadło” wzięło nazwę od a, b, c.
+
+Litera ཧ to lekkie h, jak angielskie h, znacznie słabsze niż polskie ch w „chleb”; po polsku h i ch brzmią dziś tak samo i oba mocniej niż tybetańskie ཧ. W słowniku kursu stoi ona najczęściej pod nadpisanym ལ: ལྷ་ „bóg”, ལྷ་མོ་ „bogini”.
+
+Litera ཨ to nośnik samotnej samogłoski. Gdy sylaba zaczyna się nie od spółgłoski, lecz od samogłoski, trzeba tę samogłoskę na czymś napisać, i do tego służy ཨ: samo czyta się jako a z wysokim tonem, a ze znakiem samogłoski daje i, u, e, o: ཨ་མ་ „matka”, ཨ་རི་ „Ameryka”. Tak w tybetańskim „litera samogłoskowa” ma ton wysoki, a a-chung z szóstego rzędu niski; to właśnie różnica między ཨ a འ. Z wyglądu ཨ przypomina ཤ i ཧ, a ཧ przypomina ཤ i ཚ; warto porównać te pary na kartach.
+
+Teraz warto zobaczyć wszystkie trzydzieści liter razem. Wysokie: ཀ ཁ ཅ ཆ ཏ ཐ པ ཕ ཙ ཚ ཤ ས ཧ ཨ, czternaście liter. Niskie: ག ང ཇ ཉ ད ན བ མ ཛ ཝ ཞ ཟ འ ཡ ར ལ, szesnaście. Reguła pełnych rzędów jest znana: dwie pierwsze wysokie, dwie ostatnie niskie; dla pozostałych ośmiu liter ton trzeba pamiętać, a karty będą go pokazywać.
+
+Dalej kurs przechodzi od liter do sylaby: do znaków samogłosek, do liter pisanych pod innymi i nad innymi, do przedrostków i przyrostków. Z tych części składa się czytanie.
+
+## alphabet/9
+
+Po polsku samogłoski to takie same litery w wierszu jak spółgłoski: w słowie „dom” o stoi między d a m. Po tybetańsku jest inaczej: samogłoska a tkwi już w każdej literze, a pozostałe cztery samogłoski oznacza się małymi znakami stawianymi nad literą lub pod nią. Brak znaku oznacza a.
+
+Znaki są cztery. ི gi-gu nad literą daje i: ཀི ki. ུ zhabs-kyu pod literą daje u: ཀུ ku. ེ ’greng-bu nad literą daje e, nieco zamknięte, jak w „ten”: ཀེ ke. ོ na-ro nad literą daje o: ཀོ ko. W Wylie znak zapisuje się literą po spółgłosce, więc ཀི to ki, a ཆོས to chos. Innych samogłosek w piśmie nie ma: ani długich, ani dwugłosek, ani nosowych jak polskie ą i ę; to, co w wymowie brzmi jak ö albo ü, pojawia się później, pod wpływem przyrostków, i o tym opowie część o przedrostkach i przyrostkach.
+
+Trzy znaki z czterech stoją u góry i trzeba je rozróżniać: gi-gu to zaokrąglony haczyk, ’greng-bu krótka prosta kreska, na-ro falista kreska z zagięciem. Jedynego znaku u dołu, zhabs-kyu, nie da się z niczym pomylić. Na kartach kurs pokazuje znaki na literze ཨ, bo sama nie dodaje dźwięku, ale znak może stać na każdej literze.
+
+Słowa kursu z każdym znakiem: འདི་ „ten”, ཀྱི་ „partykuła łącząca” ze znakiem i; སྐུ་ „ciało”, གསུམ་ „trzy” ze znakiem u; དེ་ „tamten”, མེ་ „ogień” ze znakiem e; ཆོས་ „Dharma”, མཆོག་ „najwyższy” ze znakiem o.
+
+Znak samogłoski jest ważny nie tylko dla dźwięku. Stoi zawsze na literze rdzennej sylaby, a gdy sylaba ma kilka liter, właśnie znak podpowiada, która z nich jest główna. To stanie się podstawowym chwytem czytania w części o sylabach.
+
+## alphabet/10
+
+Litera tybetańska może stać nie tylko w wierszu, lecz także pod inną literą, w pomniejszonej postaci. Takich liter podpisanych są cztery: ya, ra, la i wa. Powstaje stos: litera główna u góry, mała pod nią, a znak samogłoski, jeśli jest, należy do całego stosu. W Wylie stos zapisuje się po prostu literami po kolei: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa. W polskim piśmie nic podobnego nie ma; najbliżej tego są dwuznaki, jak sz czy rz, gdzie dwa znaki czyta się jako jeden dźwięk.
+
+Podpisana ya, ya-tak, wygląda jak zawijas odchodzący w prawo i w dół i dodaje do spółgłoski j: ཀྱ kja, jak w ཀྱི་ „partykuła łącząca” albo w བརྒྱད་ „osiem”. Z literami wargowymi zmienia dźwięk mocniej: པྱ brzmi jak cza, ཕྱ jak czha, བྱ jak dża, མྱ jak nia. Dlatego ཕྱག་རྒྱ་ „mudra” zaczyna się od dźwięku cz.
+
+Podpisana ra, ra-tak, krótka kreska w dół, zamienia spółgłoskę w dźwięk z językiem cofniętym, coś w rodzaju twardego tr albo dr: ཀྲ kra czyta się tra, དྲུག་ „sześć” druk, སྒྲོལ་མ་ „Tara” drölma. Grupy ཀྲ ཁྲ གྲ, ཏྲ ཐྲ དྲ oraz པྲ ཕྲ བྲ zbiegają się w wymowie lhaskiej w te same trzy dźwięki: tr bez przydechu, tr z przydechem, dr.
+
+Podpisana la, la-tak, zachowuje się inaczej: górna litera milknie i słychać tylko la z wysokim tonem: བླ་མ་ „lama”, སློབ་མ་ „uczeń”. Wyjątek jest jeden: ཟླ czyta się da. Podpisana wa, wa-zur, podobna do małego trójkąta, nie wpływa na dźwięk wcale: གྲྭ་པ་ „mnich” czyta się tak, jakby jej nie było.
+
+Na kartach kurs pokazuje litery podpisane pod ཀ, ale mogą one stać pod wieloma literami. Stos rozpoznaje się po dolnej części: zawijas to ya, kreska to ra, mała la to la, trójkąt to wa.
+
+## alphabet/11
+
+Trzy litery umieją stać nie pod inną literą, lecz nad nią: ra, la i sa. To litery nadpisane, po tybetańsku „głowy”: ra-go, la-go, sa-go. W Wylie górną literę pisze się jako pierwszą, bo stos czyta się z góry na dół: རྐ rka, ལྐ lka, སྐ ska. Litera pod nimi pozostaje rdzeniem sylaby, a znak samogłoski, jak zawsze, należy do całego stosu.
+
+W wymowie lhaskiej litera nadpisana milczy, ale zostawia ślad. Niska litera pod nią traci lekki przydech i brzmi twardo: རྒ to ga, nie kha. Nosowa pod nadpisaną dostaje wysoki ton: རྔ to nga wysoko. Litery wysokie się nie zmieniają: རྟ་ „koń” czyta się ta. Jeden stos brzmi w całości: ལྷ, lha, jak w ལྷ་ „bóg” i ལྷ་མོ་ „bogini”, bo tu nadpisane ལ zachowuje swój dźwięk.
+
+Słowa kursu z literami nadpisanymi: རྣམས་ „partykuła liczby mnogiej” czyta się nam z wysokim tonem; སྐུ་ „ciało”, སྟོང་ „tysiąc” czyta się ku i tong. W słowie རྒྱལ་མོ་ „królowa” stos jest trzypiętrowy: nadpisane ར, rdzeń ག, podpisane ཡ, a czyta się gjel: przyrostek ལ zmienia a na e.
+
+Literę nadpisaną łatwo wziąć za samodzielną literę w wierszu, zwłaszcza ས nad wąskimi literami. Oznaką stosu jest wysokość: stos jest wyższy od sąsiednich liter, a górna litera w nim jest pomniejszona. Na kartach kurs pokazuje litery nadpisane nad ཀ, ale mogą one stać nad wieloma literami.
+
+Z tą częścią znane są już wszystkie trzy sposoby stawiania liter jedna na drugiej: podpisane u dołu, nadpisane u góry, znak samogłoski na całym stosie. Zostały litery, które stoją obok rdzenia w wierszu: przedrostki i przyrostki.
+
+## alphabet/12
+
+Sylaba tybetańska jest zbudowana jak gniazdo wokół litery rdzennej. Pełny porządek jest taki: przedrostek, litera nadpisana, rdzeń, litera podpisana, znak samogłoski, przyrostek, drugi przyrostek. Żadna sylaba nie używa wszystkich miejsc naraz, ale każde z nich może być zajęte. Rdzeń to jedyna część obowiązkowa i znak samogłoski zawsze stoi na nim. Przykład pełnej sylaby to བསྒྲུབས bsgrubs: przedrostek བ, nadpisane ས, rdzeń ག, podpisane ར, samogłoska u, przyrostek བ, drugi przyrostek ས; czyta się drup.
+
+Przedrostkiem może być pięć liter: ག ད བ མ འ. Pisze się je przed rdzeniem w wierszu, a w wymowie lhaskiej milczą: གསུམ་ „trzy” to sum, བཞི་ „cztery” to szi, མདོ་ „sutra” to do, འདི་ „ten” to di. Tak jak litery nadpisane, przedrostek czyni niską literę po sobie twardą, a nosowej daje wysoki ton: དགུ་ „dziewięć” to gu, གཉིས་ „dwa” to ńi z wysokim tonem. Polska ortografia prawie nie zna liter, które się pisze, ale nie czyta; najbliżej tego jest ł w „jabłko”, które w szybkiej mowie znika. W tybetańskim niemych liter jest dużo i trzeba się do nich przyzwyczaić: są w piśmie, nie w dźwięku.
+
+Przyrostkiem może być dziesięć liter: ག ང ད ན བ མ འ ར ལ ས. Stoją po rdzeniu i jego samogłosce i dzielą się na trzy grupy według tego, co robią z dźwiękiem. ང, མ, ར słychać wprost: དང་ „i” to dang, ལམ་ „ścieżka” to lam, འཁོར་ „orszak” to khor. ག słychać jak miękkie k albo urwanie głosu, བ jak p lub w: མཆོག་ „najwyższy” to czok, ཟབ་མོ་ „głęboki” to zapmo. Trzecia grupa jest najważniejsza: ད, ན, ལ, ས. ད i ས nie są przy tym wymawiane, ན i ལ są, ale wszystkie cztery zmieniają samogłoskę przed sobą: a staje się e, ściślej dźwiękiem między a i e, o staje się ö, u staje się ü. Polski nie ma ö ani ü. Dźwięk ö to e wymawiane z ustami zaokrąglonymi jak do o; ü to i z ustami zaokrąglonymi jak do u, tak jak w niemieckich słowach „schön” i „über”. Dlatego བོད་ „Tybet” czyta się bö, ཆོས་ „Dharma” czö, རྒྱལ་མོ་ „królowa” gjelmo, ཀུན་ „wszyscy, wszystko” kün.
+
+Przyrostek འ jest niemy i tylko wydłuża samogłoskę: བཀའ་ „słowa Buddy” to ka. Drugi przyrostek to wyłącznie ས po innym przyrostku i on też jest niemy: རྣམས་ „partykuła liczby mnogiej” to nam, སངས་རྒྱས་ „Budda” to sang-gje.
+
+Ta część jest kluczem do czytania. Wszystko, co w tybetańskim się pisze, a czego nie słychać, przedrostki, litery nadpisane, przyrostki ད i ས, zostało z dawnej wymowy, a Wylie uczciwie pokazuje tę pisownię. Dlatego przy czytaniu po cichu niczego nie należy odrzucać, a przy czytaniu na głos stosować reguły tej części.
+
+## alphabet/13
+
+Teraz wszystko się składa: przed oczami jest sylaba i trzeba ustalić, która jej litera jest rdzeniem i jak brzmi. Porządek rozbioru jest zawsze jeden. Najpierw szuka się znaku samogłoski: litera pod nim to rdzeń. Jeśli znaku nie ma, szuka się stosu: litera, która ma coś u góry lub u dołu, to rdzeń, a litery nadpisana i podpisana są już na swoich miejscach. Jeśli nie ma ani znaku, ani stosu, w parze liter rdzeniem jest pierwsza, a druga to przyrostek: ཁང czyta się khang, ངན ngen. W gołym rzędzie z trzech liter pierwsza to przedrostek, druga rdzeń, trzecia przyrostek: དམར to mar, གསར to sar, བཟང to zang; jeśli jednak ostatnią literą jest ས, a przed nią stoi inny przyrostek, sylaba zaczyna się od rdzenia: སངས to sang.
+
+Reszta to stosowanie reguł z poprzednich części. Po znalezieniu rdzenia trzeba sprawdzić, czy jest niski, czy wysoki, i czy przed nim albo nad nim stoi coś, co czyni go twardym. Potem odczytać samogłoskę, pamiętając o przyrostkach ད ན ལ ས, które zamieniają a, o, u na e, ö, ü. Potem dodać przyrostek, jeśli go słychać.
+
+Kilka sylab kursu do rozbioru. ཆོས: rdzeń ཆ ze znakiem o, przyrostek ས, czyli czö. སློབ: nadpisane ས, rdzeń ལ, znak o, przyrostek བ, czyli lop. རྙིང: nadpisane ར, rdzeń ཉ ze znakiem i, przyrostek ང, czyli ńing z wysokim tonem. མཆོག: przedrostek མ, rdzeń ཆ, znak o, przyrostek ག, czyli czok. བདེ: przedrostek བ, rdzeń ད ze znakiem e, czyli de. འབྱོར: przedrostek འ, rdzeń བ z podpisanym ཡ i znakiem o, przyrostek ར, czyli dżor. རྫོགས: nadpisane ར, rdzeń ཛ, znak o, przyrostek ག, drugi przyrostek ས, czyli dzok. ཕྱག: rdzeń ཕ z podpisanym ཡ, przyrostek ག, czyli czhak. སྒྲོལ: nadpisane ས, rdzeń ག, podpisane ར, znak o, przyrostek ལ, czyli dröl.
+
+W treningu tej części wszystkie sylaby pochodzą ze słów kursu, więc każdą z nich spotka się potem w słowach i zdaniach: ཆོས་ „Dharma”, སློབ་མ་ „uczeń”, རྙིང་པ་ „stary”, མཆོག་ „najwyższy”, བདེ་བ་ „szczęście”, རྣལ་འབྱོར་པ་ „jogin”, རྫོགས་པ་ „doskonałość”, ཕྱག་རྒྱ་ „mudra”, སྒྲོལ་མ་ „Tara”. Nie ma co się spieszyć: rozbiór sylaby krok po kroku jest z początku powolny, ale po kilkudziesięciu sylabach zamienia się w jedno spojrzenie.
+
+## alphabet/14
+
+Słowo w tybetańskim to jedna lub kilka sylab rozdzielonych tshegiem. Większość słów kursu jest dwusylabowa i bardzo często druga sylaba to jedna z partykuł པ, བ, མ, པོ, བོ, མོ: ཁང་པ་ „dom”, དགོན་པ་ „klasztor”, སློབ་མ་ „uczeń”, དམར་པོ་ „czerwony”, ཆེན་པོ་ „duży”, ལྷ་མོ་ „bogini”. Kto więc po sylabie widzi pustą sylabę z jednej litery i znaku, prawie zawsze widzi koniec słowa.
+
+Tsheg stoi po każdej sylabie, nie między słowami, więc sam z siebie granicy słowa nie pokazuje. ཉི་མ་ „słońce” i སངས་རྒྱས་ „Budda” to po jednym słowie, choć kropek jest w nich tyle samo, co w dwóch jednosylabowych słowach obok siebie. Granice słów czytający poznaje po tym, że zna słowa; dlatego kurs najpierw uczy czytać słowa jako całość, a dopiero potem zdania. W Wylie sylaby oddziela spacja i słowo dgon-pa wygląda jak dgon pa; to sylaba po sylabie, a nie dwa słowa, inaczej niż polska spacja, która zawsze oznacza granicę słowa.
+
+Długie słowa bywają złożone z krótkich: རྣལ་འབྱོར་པ་ „jogin” to རྣལ་འབྱོར་ „joga” i partykuła པ; དཀྱིལ་འཁོར་ „mandala” to „środek” i „otoczenie”. Najdłuższe słowo tej części, མྱ་ངན་ལས་འདས་པ་ „nirwana”, znaczy dosłownie „to, co wyszło poza smutek”, i ma pięć sylab. Takie słowa czyta się sylaba po sylabie, stosując rozbiór z poprzedniej części, a potem składa w całość.
+
+Wymowa całego słowa ma jeszcze jedną cechę: reguły przyrostków działają wewnątrz każdej sylaby osobno. ཐམས་ཅད་ „wszyscy, wszystko” czyta się thamcze: w pierwszej sylabie przyrostek མ słychać, a drugi przyrostek ས jest niemy, w drugiej sylabie ད zamienia a na e. བུམ་པ་ „waza” to bumpa, ཚ་པོ་ „gorący” to tshapo, བླ་མ་ „lama” to lama.
+
+Trening tej części pokazuje całe słowa kursu. Jeśli słowo czyta się od pierwszego spojrzenia, dobrze; jeśli nie, warto znaleźć w każdej sylabie rdzeń i złożyć je krok po kroku, bez pośpiechu.
+
+## alphabet/15
+
+Ostatnia część alfabetu to pierwsze zdania kursu. Zdanie, tak jak słowo, biegnie ciągłym łańcuchem sylab przez tsheg; koniec zdania lub jego części zaznacza shad, pionowa kreska །. Przed shad tshegu zwykle się nie stawia, tylko po ང się go zachowuje: ང་།. Podwójny shad zamyka większy rozdział tekstu. Wielkich liter, kropek, przecinków ani pytajników w piśmie tybetańskim nie ma: wszystko, co robią one po polsku, robią partykuły i szyk wyrazów.
+
+Pięć zdań tej części pochodzi z pierwszej lekcji. To krótkie grupy nominalne: དགོན་པ་དམར་པོ་ „czerwony klasztor”, ཆོས་པ་བཟང་པོ་ „znakomity praktykujący Dharmę”, བདེ་བ་ཆེན་པོ་ „wielka błogość”, ཉི་མ་ཚ་པོ་ „gorące słońce”, སློབ་མ་བཟང་པོ་ „dobry uczeń”. W każdej są dwa słowa i łatwo zauważyć, że szyk jest odwrotny niż zwykle po polsku: najpierw rzeczownik, potem przymiotnik. To pierwsza reguła pierwszej lekcji i tam zostanie wyjaśniona dokładnie; tu wystarczy ją zobaczyć.
+
+Czytając na głos, stosuje się to, co zebrały poprzednie części: szukać rdzenia każdej sylaby, pilnować przyrostków ད ན ལ ས, które zmieniają samogłoskę, pamiętać o niemych przedrostkach. Na przykład དགོན་པ་དམར་པོ་ „czerwony klasztor” czyta się gönpa marpo: w pierwszej sylabie przedrostek ད milczy, a przyrostek ན zamienia o na ö; w trzeciej sylabie przedrostek ད znów milczy. Słowo བཟང་པོ་ „dobry” czyta się zangpo, a ཆོས་པ་ „praktykujący Dharmę” czöpa.
+
+Kurs pokazuje każde zdanie z zapisem Wylie i tłumaczeniem, a każde słowo można nacisnąć. Trening tej części polega na wybraniu sensu zdania, a sprawdzian na ułożeniu go z kafelków, słowo po słowie. Od tego miejsca zaczynają się lekcje: do czytania dochodzi w nich gramatyka, a zdania rosną.

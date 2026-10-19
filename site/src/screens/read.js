@@ -6,6 +6,7 @@ import { h } from '../ui.js';
 import { PARTS, partId, partPool } from '../engine/alphabet.js';
 import { TRAIN_SIZE, TRAIN_PASS } from '../engine/alphabet.js';
 import { renderDrill } from './drill.js';
+import { theoryOf } from '../engine/theory.js';
 
 export function renderRead(root, ctx) {
   const { store, data, t } = ctx;
@@ -34,6 +35,7 @@ export function renderRead(root, ctx) {
       h('h3', {}, `${part.n}. ${t(`alphabet.parts.${part.n}`)}`),
       h('div', { class: 'stage-row' },
         h('span', { class: 'stage-state' + (passed ? ' passed' : '') }, state),
+        theoryOf(data.intro, partId(part.n), ctx.lang).length ? h('a', { class: 'action small', href: `#/course/${partId(part.n)}/theory` }, t('course.theory')) : null,
         h('a', { class: 'action primary small', href: `#/read/${part.n}` }, t('read.practise')),
       ),
       table,

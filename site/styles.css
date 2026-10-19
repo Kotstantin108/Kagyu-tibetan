@@ -426,6 +426,10 @@ details.set[open] summary { background: var(--topbar); }
 .tib-word { font: inherit; color: inherit; background: none; border: 0; padding: 0 1px; margin: 0; cursor: pointer; border-radius: 4px; border-bottom: 1px dotted var(--gold-line); }
 .tib-word:hover, .tib-word:focus-visible { background: var(--goldsoft); outline: none; }
 .theory-popover .theory-word + .theory-word { border-top: 1px solid var(--sep); margin-top: 10px; padding-top: 10px; }
+.theory-popover .theory-sign .word-card-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.theory-popover .theory-sign .tr { margin: 6px 0; }
+.theory-popover .theory-sign .sign-examples { margin-top: 6px; }
+.theory .tib-sign { font-size: 1.15em; }
 .theory-row .unit-title, .theory-link { font-style: italic; }
 .theory-link { padding: 8px 16px; }
 .unit-notes .note-row { padding: 8px 0; }

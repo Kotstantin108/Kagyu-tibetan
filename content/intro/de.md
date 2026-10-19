@@ -227,3 +227,169 @@ Relativsätze werden wie in Lektion 6 gebaut. Vor dem Nomen stehen sie mit Nomin
 Die direkte Rede leitet འདི་སྐད་ „diese Worte“ mit ཅེས་ „Zitatpartikel“ ein, wie im Deutschen der Doppelpunkt: བྲམ་ཟེས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། „Der Brahmane sprach diese Worte zum Siegreichen.“ Was in Lektion 6 das Zitat schloss, eröffnet es hier.
 
 Zuletzt ein Ergativ, der im Deutschen zum Passiv wird: ཡབ་མི་ལ་ཤེས་རབ་རྒྱལ་མཚན་དེ་སྙུན་ཞིག་གིས་ཟིན་ནོ། „Mein Vater Mila Sherab Gyaltsen wurde von einer Krankheit ergriffen.“ Das Tibetische kennt kein Passiv; der Handelnde, hier die Krankheit, trägt einfach den Ergativ.
+
+## alphabet/1
+
+Die tibetische Schrift entstand im siebten Jahrhundert nach indischem Vorbild und ist indisch gebaut. Jeder der dreißig Buchstaben wird als Konsonant mit dem Vokal a gelesen: ཀ ist von sich aus schon ka. Für einen anderen Vokal bekommt der Buchstabe ein kleines Zeichen darüber oder darunter; diesen Zeichen gehört ein eigener Teil. Bücher und dieser Kurs benutzen den Druckstil Uchen, „mit Kopf“: die meisten Buchstaben tragen oben einen waagerechten Strich. Geschrieben wird von links nach rechts, alle Buchstaben gleich hoch, ohne Großbuchstaben.
+
+Zwischen den Wörtern stehen keine Leerzeichen. Stattdessen folgt auf jede Silbe ein Punkt, der Tsheg ་, und das Ende eines Satzes oder Satzteils markiert ein senkrechter Strich, der Shad །. Eine Zeile tibetischen Textes ist darum eine Kette von Silben durch Punkte: ཁང་པ་ „Haus“ sind zwei Silben. Wo ein Wort endet und das nächste beginnt, erkennt der Lesende an bekannten Wörtern und am Sinn; genau das trainiert der Kurs.
+
+Neben dem Tibetischen zeigt der Kurs eine Umschrift in lateinischen Buchstaben nach dem System Wylie. Sie gibt die Schreibung wieder, nicht den Klang, so wie eine buchstabengetreue Umschrift von „sehen“ das stumme h behielte. Der Vokal a wird in Wylie nicht geschrieben: ཀ ist ka, ཁང ist khang; der Tsheg wird zum Leerzeichen. Wylie zeigt also, was geschrieben steht; die Aussprache muss man gesondert kennen.
+
+Die dreißig Buchstaben sind nach dem Ort der Aussprache in Reihen geordnet, von hinten im Mund bis zu den Lippen, und in jeder Reihe wiederholt sich dasselbe Muster. Die erste Reihe: ཀ ka, ཁ kha, ག ga, ང nga. ཀ ist ein k ohne Hauch, wie das k in „Skat“. ཁ ist derselbe Laut mit kräftigem Hauch, wie das k am Anfang von „Kante“. Das Deutsche hat beide Laute, unterscheidet damit aber keine Wörter; im Tibetischen sind es zwei Buchstaben. ག war in der alten Sprache ein stimmhaftes g; in der Aussprache von Lhasa ist es ein Laut zwischen g und k mit leichtem Hauch. ང ist das ng aus „singen“; im Deutschen steht dieser Laut nie am Silbenanfang, im Tibetischen schon: ངན་པ་ „schlecht“.
+
+Jede tibetische Silbe hat einen Ton: vierzehn Buchstaben sind hoch, sechzehn tief; die Karten zeigen ihn. In der ersten Reihe sind ཀ und ཁ hoch, ག und ང tief, und so ist es in allen vollständigen Reihen: die ersten beiden hoch, die letzten beiden tief.
+
+Die Buchstaben ཀ ཁ ག sehen sich ähnlich; der Kurs zeigt sie absichtlich nebeneinander, und nach wenigen Runden unterscheidet das Auge sie von selbst. Beispielwörter: ཀུན་ „alle“, ཁོང་ „er, sie“, གོ་འཕང་ „Stufe“, ངོ་བོ་ „Essenz“. Sie enthalten schon Vokalzeichen und Suffixe; vorerst genügt es, den ersten Buchstaben darin zu finden.
+
+## alphabet/2
+
+Die zweite Reihe wiederholt das Muster der ersten einen Schritt weiter vorn im Mund: ཅ ca, ཆ cha, ཇ ja, ཉ nya. Es ist dieselbe Vierergruppe, stimmlos ohne Hauch, stimmlos mit Hauch, weich, nasal, nur sind die Laute hier zischend und weich. Auch der Ton ist gleich verteilt: ཅ und ཆ hoch, ཇ und ཉ tief.
+
+Der Buchstabe ཅ klingt wie das tsch in „Matsch“, aber ohne den Hauch, der im Deutschen meist mitschwingt, und mit hohem Ton: ཅིག་ „ein, eine“, ཅག་ „Pluralpartikel“. Der Buchstabe ཆ ist dasselbe tsch mit kräftigem Hauch: ཆོས་ „Dharma“, ཆུ་ „Wasser“. Für ein deutsches Ohr ist der Unterschied ungewohnt, und anfangs ist er leichter zu sehen als zu hören: bei ཆ folgt auf das tsch ein deutliches h.
+
+Der Buchstabe ཇ liegt zwischen dsch und tsch, wie in „Dschungel“, weich gesprochen und mit tiefem Ton: ཇི་ „was, wie“, ཇོ་བོ་ „Herr“. Im Deutschen kommt dsch nur in Lehnwörtern vor, ist aber leicht zu bilden. Der Buchstabe ཉ ist das nj aus „Kognak“, ebenfalls tief: ཉི་མ་ „Sonne“, ཉན་ཐོས་ „Śrāvaka“. Im Deutschen steht nj nie am Wortanfang vor einem Vokal, im Tibetischen ist es ein gewöhnlicher Silbenanfang.
+
+Im Schriftbild unterscheiden sich ཅ und ཆ in einem einzigen Detail, und ཇ ähnelt ཛ und ཟ aus späteren Reihen; der Kurs legt ähnliche Zeichen als Antworten nebeneinander, darum lohnt es sich, jeden Buchstaben für sich genau anzusehen. Das Wort ཆོས་ „Dharma“ kommt im Kurs häufiger vor als fast jedes andere; es lohnt sich, es jetzt schon als Ganzes zu behalten.
+
+## alphabet/3
+
+Die dritte Reihe ist die t-Familie: ཏ ta, ཐ tha, ད da, ན na. Die Laute werden an den Zähnen gebildet, wie die deutschen t, d und n; für ein deutsches Ohr ist diese Reihe darum die bequemste. Das Muster bleibt: ཏ ohne Hauch, ཐ mit Hauch, ད weich, ན nasal; ཏ und ཐ sind hoch, ད und ན tief.
+
+Der Buchstabe ཏ ist ein t ohne Hauch, wie in „Stern“ nach dem s, mit hohem Ton. Im Wortschatz des Kurses steht er meist in Partikeln: ཏུ་ „La-dön-Partikel“ und ཏོ་ „Schlusspartikel“. Der Buchstabe ཐ ist t mit kräftigem Hauch, wie das t am Anfang von „Tee“: ཐབས་ „Methode“, ཐེག་པ་ „Fahrzeug“. Der Buchstabe ད liegt zwischen d und t, leicht behaucht und mit tiefem Ton: དང་ „und“, དེ་ „jener“. Der Buchstabe ན ist ein gewöhnliches n: ནག་པོ་ „schwarz“, ནི་ „Hervorhebungspartikel“.
+
+Die Schwierigkeit dieser Reihe liegt nicht im Klang, sondern in der Form. Die Buchstaben ཏ, ད, ན bilden zusammen mit ང aus der ersten Reihe und ར aus der siebten die ähnlichste Gruppe des ganzen Alphabets. Sie alle sind auf einem kurzen Kopf mit einem Bogen nach unten gebaut, und man unterscheidet sie daran, wohin der untere Teil läuft und ob er eine Schleife hat. Am besten vergleicht man sie paarweise auf den Karten: ཏ und ད, ད und ང, ན und ང; sobald der Unterschied in jedem Paar sichtbar ist, verwechselt man die Gruppe nicht mehr.
+
+Zwei Wörter dieser Reihe, དང་ „und“ und དེ་ „jener“, gehören zu den allerersten Sätzen des Kurses und begegnen einem von da an ständig.
+
+## alphabet/4
+
+Die vierte Reihe ist die p-Familie: པ pa, ཕ pha, བ ba, མ ma. Das sind Lippenlaute, dieselben wie die deutschen p, b, m. Das Muster ist das alte und zum letzten Mal vollständig: པ ohne Hauch, ཕ mit Hauch, བ weich, མ nasal; པ und ཕ hoch, བ und མ tief. Mit dieser Reihe sind sechzehn Buchstaben beisammen, die Hälfte des Alphabets, und alle vier vollständigen Reihen.
+
+Der Buchstabe པ ist ein p ohne Hauch, wie in „Spiel“ nach dem s. Im Kurs steht er meist als Partikel hinter einer anderen Silbe, in Wörtern wie ཁང་པ་ „Haus“; das Wörterbuch führt sie als པ་ „Nominalisierungspartikel“, und auch པར་ „Nominalisierer + La-dön“ gehört dazu. Der Buchstabe ཕ ist p mit kräftigem Hauch, wie das p am Anfang von „Pass“: ཕ་ „Vater“, ཕན་ „nützen“. Der Buchstabe བ liegt zwischen b und p, leicht behaucht, mit tiefem Ton: བོད་ „Tibet“, བུ་ „Sohn“. Der Buchstabe མ ist ein gewöhnliches m: མེ་ „Feuer“, མི་ „Mensch“.
+
+Die drei Buchstaben པ, ཕ und བ sind auf derselben Grundform gebaut, und sie werden am häufigsten verwechselt. Am leichtesten merkt man sich བ: es ist unten durch einen Strich geschlossen. ཕ unterscheidet sich von པ durch einen kleinen Haken am Kopf; einmal auf der Karte gefunden, fällt er danach sofort ins Auge.
+
+Die Partikeln པ und བ und die Endungen པོ, བོ, མོ begegnen einem im Kurs auf Schritt und Tritt: sie machen aus einer Wurzel ein Substantiv oder ein Adjektiv, wie in དམར་པོ་ „rot“ und ཆེན་པོ་ „groß“. Die erste Lektion erklärt sie genau; vorerst genügt es, die Buchstaben zu erkennen.
+
+## alphabet/5
+
+Die fünfte Reihe: ཙ tsa, ཚ tsha, ཛ dza und ཝ wa. Die ersten drei folgen dem bekannten Muster: ཙ ohne Hauch, ཚ mit Hauch, ཛ weich; einen Nasal hat diese Reihe nicht, und den vierten Platz nimmt ཝ ein, ein Buchstabe für sich. Ton: ཙ und ཚ hoch, ཛ und ཝ tief.
+
+Der Buchstabe ཙ ist das deutsche z wie in „Zahl“, also ts, aber ohne Hauch und mit hohem Ton: ཙམ་ „bloß, nur“. Der Buchstabe ཚ ist dasselbe ts mit kräftigem Hauch: ཚ་པོ་ „heiß“, ཚོ་ „Pluralpartikel“. Der Buchstabe ཛ liegt zwischen ds und ts, wie in „Dsungarei“, und ist tief; im Wortschatz des Kurses steht er in རྫོགས་པ་ „Vollkommenheit“ unter einem übergeschriebenen ར, von dem noch die Rede sein wird. Ein stimmhaftes ds kennt das Deutsche nur aus Fremdwörtern; man bildet es wie ein d, das in ein s übergeht.
+
+Die Form dieser drei Buchstaben merkt man sich leicht: ཙ, ཚ und ཛ sind ཅ, ཆ und ཇ aus der zweiten Reihe mit einem kleinen Strich oben rechts. Hier sind also keine drei neuen Figuren zu lernen; das Auge muss nur lernen, den Strich zu bemerken: mit Strich ts, ohne Strich tsch.
+
+Der Buchstabe ཝ ist das w des englischen „water“, mit beiden Lippen gebildet, nicht wie das deutsche w in „Wasser“, das mit Unterlippe und Zähnen gesprochen wird; der Ton ist tief. Es ist der seltenste Buchstabe des Alphabets: als eigenständiger Buchstabe kommt er fast nur in Lehnwörtern vor, häufiger erscheint er in verkleinerter Form unter einem anderen Buchstaben; davon handelt der Teil über die untergeschriebenen Buchstaben.
+
+## alphabet/6
+
+Die sechste Reihe: ཞ zha, ཟ za, འ ’a und ཡ ya. Hier gilt das Muster der Reihen nicht mehr: alle vier Buchstaben sind tief, und jeder hat seinen eigenen Charakter.
+
+Der Buchstabe ཞ ist ein weiches sch, wie das g in „Garage“, mit tiefem Ton; in der Aussprache von Lhasa klingt er oft fast wie ein gewöhnliches sch: ཞིག་ „ein, eine“, ཞེ་སྡང་ „Zorn“. Der Buchstabe ཟ ist ein stimmhaftes s, wie das s in „Sonne“, ebenfalls tief, und nähert sich ebenso oft einem stimmlosen s: ཟབ་མོ་ „tiefgründig“, ཟ་ཁང་ „Restaurant“. Was ཞ und ཟ von ཤ und ས der nächsten Reihe am sichersten unterscheidet, ist nicht die Stimme, sondern der tiefe Ton. Im Schriftbild ähneln ཞ und ཟ einander und dem ཝ; sie verdienen einen genauen Blick auf den Karten.
+
+Der Buchstabe འ, mit Namen a-chung, „kleines a“, ist besonders. Er hat keinen eigenen Konsonanten: er trägt einen Vokal mit tiefem Ton. In Wylie wird er als Apostroph geschrieben, darum beginnt འོད་དཔག་མེད་ „Amitābha“ mit ’od. Der Buchstabe hat noch weitere Rollen: er steht als stummes Präfix vor der Wurzel, und als འི་ „Genitivpartikel“ verschmilzt er mit einer offenen Silbe. All das kommt im Teil über Präfixe und Suffixe und in den ersten Lektionen.
+
+Der Buchstabe ཡ ist das j aus „ja“, mit tiefem Ton: ཡིན་ „ist“, ཡོན་ཏན་ „Qualität“. Wie ཝ kann er sich in verkleinerter Form unter einen anderen Buchstaben setzen, und dort verändert er den Klang viel deutlicher; davon handelt der Teil über die untergeschriebenen Buchstaben.
+
+## alphabet/7
+
+Die siebte Reihe: ར ra, ལ la, ཤ sha, ས sa. Es sind die vier beschäftigtsten Buchstaben des Alphabets: neben dem eigenen Laut hat jeder ein zweites und ein drittes Leben. ར und ལ werden unter andere Buchstaben gesetzt, ར, ལ und ས über sie, und ར, ལ und ས dienen außerdem als Suffixe der Silbe. Darum stehen sie in fast jedem Satz. Ton: ར und ལ tief, ཤ und ས hoch.
+
+Der Buchstabe ར ist ein r mit der Zungenspitze, leicht gerollt, meist nur ein Schlag der Zunge, nicht das Zäpfchen-r des Deutschen: རང་ „selbst“, རང་རྒྱལ་ „Pratyekabuddha“. Der Buchstabe ལ ist das l aus „Licht“: ལམ་ „Pfad“, ལག་པ་ „Hand“. Der Buchstabe ཤ ist das sch aus „Schiff“, mit hohem Ton: ཤིག་ „ein, eine“, ཤེས་རབ་ „Weisheit“. Der Buchstabe ས ist ein scharfes, stimmloses s wie in „Fass“, hoch: ས་ „Erde“, སོགས་ „und so weiter“. Das Deutsche spricht ein s am Wortanfang gern stimmhaft; bei ས ist darauf zu achten, dass es stimmlos bleibt.
+
+In der Form gehört ར in dieselbe schwierige Gruppe wie ད und ང, und ལ ähnelt ར; ཤ wird mit ཨ und ཧ aus der letzten Reihe verwechselt, ས mit མ. Wie bisher hilft der Vergleich in Paaren: ར und ད, ར und ལ, ས und མ.
+
+Drei Partikeln mit Buchstaben dieser Reihe sind in den Beispielen schon aufgetaucht: ཅིག་ „ein, eine“, ཞིག་ „ein, eine“ und ཤིག་ „ein, eine“ sind ein und dieselbe Partikel in drei Schreibungen, und welche gewählt wird, entscheidet der letzte Buchstabe der Silbe davor. Das ist eine Regel der ersten Lektion und ein gutes Beispiel dafür, warum man beim Lesen jeden Buchstaben sehen muss.
+
+## alphabet/8
+
+Die letzte Reihe ist kurz, zwei Buchstaben: ཧ ha und ཨ a, mit Namen a-chen, „großes a“. Beide sind hoch. Mit ihnen ist das Alphabet vollständig: dreißig Buchstaben in siebeneinhalb Reihen. Die Tibeter selbst nennen ihr Alphabet nach den ersten beiden Buchstaben ka-kha, so wie das Wort „Alphabet“ aus Alpha und Beta gebildet ist.
+
+Der Buchstabe ཧ ist ein h wie in „Hut“, mit hohem Ton; dem deutschen h entspricht er genau. Im Wortschatz des Kurses steht er meist unter einem übergeschriebenen ལ: ལྷ་ „Gott“, ལྷ་མོ་ „Göttin“.
+
+Der Buchstabe ཨ ist der Träger eines alleinstehenden Vokals. Beginnt eine Silbe nicht mit einem Konsonanten, sondern mit einem Vokal, braucht dieser Vokal einen Buchstaben, auf dem er geschrieben wird, und dafür gibt es ཨ: allein gelesen ist es ein a mit hohem Ton, mit Vokalzeichen gibt es i, u, e, o: ཨ་མ་ „Mutter“, ཨ་རི་ „Amerika“. Das Deutsche schreibt einen Vokal am Wortanfang einfach als eigenen Buchstaben; das Tibetische braucht erst den Träger. So hat der „Vokalbuchstabe“ ཨ einen hohen Ton und das a-chung འ aus der sechsten Reihe einen tiefen; das ist der Unterschied zwischen ཨ und འ. Im Schriftbild bilden ཨ, ཧ und ཤ eine Gruppe, die man auf den Karten nebeneinander ansehen sollte.
+
+Jetzt ist es nützlich, alle dreißig Buchstaben als Ganzes zu sehen. Hoch: ཀ ཁ ཅ ཆ ཏ ཐ པ ཕ ཙ ཚ ཤ ས ཧ ཨ, vierzehn Buchstaben. Tief: ག ང ཇ ཉ ད ན བ མ ཛ ཝ ཞ ཟ འ ཡ ར ལ, sechzehn. Die Regel für die vollständigen Reihen ist bekannt: die ersten beiden hoch, die letzten beiden tief; bei den übrigen acht Buchstaben muss man den Ton behalten, und die Karten zeigen ihn.
+
+Danach geht der Kurs von den Buchstaben zur Silbe über: zu den Vokalzeichen, zu den Buchstaben, die unter und über andere geschrieben werden, und zu den Präfixen und Suffixen. Aus diesen Teilen setzt sich das Lesen zusammen.
+
+## alphabet/9
+
+Im Deutschen sind die Vokale Buchstaben in der Zeile wie die Konsonanten: a, e, i, o, u stehen neben ihnen, gleich groß. Im Tibetischen ist es anders: der Vokal a steckt schon in jedem Buchstaben, und die übrigen vier Vokale werden durch kleine Zeichen angezeigt, die über oder unter den Buchstaben gesetzt werden. Kein Zeichen bedeutet a.
+
+Es gibt vier Zeichen. ི gi-gu über dem Buchstaben gibt i, wie in „Miete“: ཀི ki. ུ zhabs-kyu unter dem Buchstaben gibt u, wie in „Mut“: ཀུ ku. ེ ’greng-bu über dem Buchstaben gibt e, geschlossen wie in „Weg“, nicht offen wie in „Bett“: ཀེ ke. ོ na-ro über dem Buchstaben gibt o, wie in „Mond“: ཀོ ko. In Wylie wird das Zeichen als Vokalbuchstabe nach dem Konsonanten geschrieben, also ཀི ki, ཆོས chos. Andere Vokale kennt die Schrift nicht: keine Längen, keine Diphthonge, keine Umlaute; das ö und ü, das man in der Aussprache hört, entsteht erst durch die Suffixe, und davon handelt der Teil über Präfixe und Suffixe.
+
+Drei der vier Zeichen stehen oben, und sie müssen unterschieden werden: gi-gu ist ein gebogener Haken, ’greng-bu ein kurzer gerader Strich, na-ro ein welliger Strich mit Bogen. Das einzige Zeichen unten, zhabs-kyu, ist mit nichts zu verwechseln. Auf den Karten zeigt der Kurs die Zeichen am Buchstaben ཨ, weil er selbst keinen Laut hinzufügt; stehen kann ein Zeichen aber auf jedem Buchstaben.
+
+Wörter des Kurses mit jedem Zeichen: འདི་ „dieser“ und ཀྱི་ „Genitivpartikel“ mit i; སྐུ་ „Körper“ und གསུམ་ „drei“ mit u; དེ་ „jener“ und མེ་ „Feuer“ mit e; ཆོས་ „Dharma“ und མཆོག་ „höchst“ mit o.
+
+Das Vokalzeichen ist nicht nur für den Klang wichtig. Es steht immer auf dem Wurzelbuchstaben der Silbe, und wenn eine Silbe mehrere Buchstaben hat, verrät das Zeichen, welcher der Hauptbuchstabe ist. Das wird im Teil über die Silben zum wichtigsten Griff beim Lesen.
+
+## alphabet/10
+
+Ein tibetischer Buchstabe kann nicht nur in der Zeile stehen, sondern auch unter einem anderen Buchstaben, in verkleinerter Form. Solche untergeschriebenen Buchstaben gibt es vier: ya, ra, la und wa. Es entsteht ein Stapel: der Hauptbuchstabe oben, der kleine darunter, und das Vokalzeichen, wenn eines da ist, gehört zum ganzen Stapel. In Wylie schreibt man den Stapel einfach hintereinander: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa. Die deutsche Schrift kennt nichts Vergleichbares; am nächsten kommt die Ligatur, bei der zwei Zeichen zu einer Figur verschmelzen.
+
+Das untergeschriebene ya, ya-tak, fügt dem Konsonanten ein j hinzu: ཀྱ kja, wie in ཀྱི་ „Genitivpartikel“ oder in བརྒྱད་ „acht“. Bei den Lippenlauten verändert es den Klang stärker: པྱ klingt wie tscha, ཕྱ wie tscha mit Hauch, བྱ wie dscha, མྱ wie nja. Darum beginnt ཕྱག་རྒྱ་ „Symbol, Mudrā“ mit einem tsch.
+
+Das untergeschriebene ra, ra-tak, macht den Konsonanten zu einem Laut mit zurückgebogener Zunge, etwa wie ein hartes tr oder dr: ཀྲ kra liest man tra, དྲུག་ „sechs“ druk, སྒྲོལ་མ་ „Tārā“ drölma. Die Gruppen ཀྲ ཁྲ གྲ, ཏྲ ཐྲ དྲ und པྲ ཕྲ བྲ fallen in der Aussprache von Lhasa in dieselben drei Laute zusammen: tr ohne Hauch, tr mit Hauch, dr.
+
+Das untergeschriebene la, la-tak, verhält sich anders: der obere Buchstabe verstummt, und man hört nur la mit hohem Ton: བླ་མ་ „Guru, Lama“, སློབ་མ་ „Schüler“. Die einzige Ausnahme ist ཟླ, das man da liest. Das untergeschriebene wa, wa-zur, ein kleines Dreieck, ändert am Laut gar nichts: གྲྭ་པ་ „Mönch“ wird gelesen, als wäre es nicht da.
+
+Auf den Karten zeigt der Kurs die untergeschriebenen Buchstaben am ཀ, hängen können sie aber unter vielen Buchstaben. Man erkennt den Stapel an seinem unteren Teil: ein Schwung nach rechts unten ist ya, ein kurzer Strich nach unten ra, ein kleines la ist la, ein Dreieck wa.
+
+## alphabet/11
+
+Drei Buchstaben können nicht unter, sondern über einem anderen stehen: ra, la und sa. Das sind die übergeschriebenen Buchstaben, auf Tibetisch „Köpfe“: ra-go, la-go, sa-go. In Wylie schreibt man den oberen Buchstaben zuerst, weil der Stapel von oben nach unten gelesen wird: རྐ rka, ལྐ lka, སྐ ska. Der Buchstabe darunter bleibt die Wurzel der Silbe, und das Vokalzeichen gehört wie immer zum ganzen Stapel.
+
+In der Aussprache von Lhasa ist der übergeschriebene Buchstabe stumm, hinterlässt aber eine Spur. Ein tiefer Buchstabe unter ihm verliert seinen leichten Hauch und klingt fest: རྒ ist ga, nicht kha. Ein Nasal unter ihm bekommt einen hohen Ton: རྔ ist nga, hoch gesprochen. Hohe Buchstaben ändern sich nicht: རྟ་ „Pferd“ liest man ta. Ein einziger Stapel klingt als Ganzes: ལྷ, lha, wie in ལྷ་ „Gott“ und ལྷ་མོ་ „Göttin“, weil das übergeschriebene ལ hier seinen Laut behält.
+
+Wörter des Kurses mit übergeschriebenen Buchstaben: རྣམས་ „Pluralpartikel“ liest man nam mit hohem Ton; སྐུ་ „Körper“ und སྟོང་ „tausend“ liest man ku und tong. Im Wort རྒྱལ་མོ་ „Königin“ hat der Stapel drei Stockwerke: oben ར, die Wurzel ག, darunter ཡ, und gelesen wird er gjel, weil das Suffix ལ das a zu e macht.
+
+Einen übergeschriebenen Buchstaben hält man leicht für einen eigenen Buchstaben in der Zeile, besonders ས über schmalen Buchstaben. Das Kennzeichen des Stapels ist seine Höhe: er ragt über die Nachbarn hinaus, und der obere Buchstabe ist darin verkleinert. Auf den Karten zeigt der Kurs die übergeschriebenen Buchstaben über ཀ, sie können aber über vielen Buchstaben stehen.
+
+Mit diesem Teil sind alle drei Arten bekannt, Buchstaben übereinander zu setzen: untergeschriebene unten, übergeschriebene oben, das Vokalzeichen auf dem ganzen Stapel. Es bleiben die Buchstaben, die neben der Wurzel in der Zeile stehen: Präfixe und Suffixe.
+
+## alphabet/12
+
+Die tibetische Silbe ist wie ein Nest um den Wurzelbuchstaben gebaut. Die vollständige Reihenfolge lautet: Präfix, übergeschriebener Buchstabe, Wurzel, untergeschriebener Buchstabe, Vokalzeichen, Suffix, zweites Suffix. Keine Silbe besetzt alle Plätze zugleich, aber jeder kann besetzt sein. Die Wurzel ist der einzige Pflichtteil, und das Vokalzeichen steht immer auf ihr. Ein Beispiel für eine volle Silbe ist བསྒྲུབས bsgrubs: Präfix བ, übergeschrieben ས, Wurzel ག, untergeschrieben ར, Vokal u, Suffix བ, zweites Suffix ས; gelesen wird sie drup.
+
+Präfix können fünf Buchstaben sein: ག ད བ མ འ. Sie stehen vor der Wurzel in der Zeile und sind in der Aussprache von Lhasa stumm: གསུམ་ „drei“ ist sum, བཞི་ „vier“ schi, མདོ་ „Sūtra“ do, འདི་ „dieser“ di. Wie ein übergeschriebener Buchstabe macht das Präfix den tiefen Buchstaben nach sich fest und gibt dem Nasal einen hohen Ton: དགུ་ „neun“ ist gu, གཉིས་ „zwei“ nji mit hohem Ton. Stumme Buchstaben kennt das Deutsche auch, das h in „sehen“ oder das e in „liegen“, nur gehören sie dort zum Vokal; an tibetische Buchstaben, die ganz ohne Laut vor der Wurzel stehen, muss man sich erst gewöhnen.
+
+Suffix können zehn Buchstaben sein: ག ང ད ན བ མ འ ར ལ ས. Sie stehen nach der Wurzel und ihrem Vokal und zerfallen nach ihrer Wirkung auf den Klang in drei Gruppen. ང, མ, ར sind zu hören, wie sie sind: དང་ „und“ ist dang, ལམ་ „Pfad“ lam, འཁོར་ „Gefolge“ khor. ག klingt wie ein weiches k oder ein Abbruch der Stimme, བ wie p oder w: མཆོག་ „höchst“ ist tschok, ཟབ་མོ་ „tiefgründig“ sapmo. Die dritte Gruppe ist die wichtigste: ད, ན, ལ, ས. ད und ས werden dabei nicht gesprochen, ན und ལ schon, aber alle vier verändern den Vokal vor sich: a wird zu e, o zu ö, u zu ü. Für ein deutsches Ohr ist das die leichteste Regel des Alphabets: ö und ü sind genau die Umlaute aus „schön“ und „für“, und auch im Deutschen hängt der Umlaut oft davon ab, was hinter dem Vokal folgt. So liest man བོད་ „Tibet“ pö, ཆོས་ „Dharma“ tschö, རྒྱལ་མོ་ „Königin“ gjelmo, ཀུན་ „alle“ kün, དཔལ་ „Ruhm“ pel.
+
+Das Suffix འ ist stumm und dehnt nur den Vokal: བཀའ་ „Worte des Buddha“ ist ka. Ein zweites Suffix ist nur ས nach einem anderen Suffix, und auch es ist stumm: རྣམས་ „Pluralpartikel“ ist nam, སངས་རྒྱས་ „Buddha“ sang-gje.
+
+Dieser Teil ist der Schlüssel zum Lesen. Alles, was im Tibetischen geschrieben wird, aber nicht zu hören ist, Präfixe, übergeschriebene Buchstaben, die Suffixe ད und ས, ist ein Rest der alten Aussprache, und Wylie zeigt diese Schreibung ehrlich. Beim stillen Lesen darf man darum nichts weglassen; beim lauten Lesen wendet man die Regeln dieses Teils an.
+
+## alphabet/13
+
+Jetzt fügt sich alles zusammen: eine Silbe steht da, und man muss erkennen, welcher Buchstabe ihre Wurzel ist und wie sie klingt. Die Reihenfolge der Analyse ist immer dieselbe. Zuerst sucht man das Vokalzeichen: der Buchstabe darunter ist die Wurzel. Gibt es kein Zeichen, sucht man den Stapel: der Buchstabe, der etwas über oder unter sich hat, ist die Wurzel, und übergeschriebener und untergeschriebener Buchstabe sind schon an ihrem Platz. Gibt es weder Zeichen noch Stapel, ist in einem Paar von Buchstaben der erste die Wurzel und der zweite das Suffix: ཁང liest man khang, ངན ngen. In einer nackten Reihe von drei Buchstaben ist der erste das Präfix, der zweite die Wurzel, der dritte das Suffix: དམར ist mar, གསར sar, བཟང sang; ist aber der letzte Buchstabe ས und steht vor ihm ein anderes Suffix, beginnt die Silbe mit der Wurzel: སངས ist sang.
+
+Der Rest ist die Anwendung der Regeln aus den vorigen Teilen. Ist die Wurzel gefunden, prüft man, ob sie hoch oder tief ist und ob vor oder über ihr etwas steht, das sie fest macht. Dann liest man den Vokal und denkt an die Suffixe ད ན ལ ས, die a, o, u zu e, ö, ü machen. Dann kommt das Suffix dazu, wenn es zu hören ist.
+
+Einige Silben des Kurses zum Zerlegen. ཆོས: Wurzel ཆ mit o, Suffix ས: tschö. སློབ: oben ས, Wurzel ལ, Zeichen o, Suffix བ: lop. རྙིང: oben ར, Wurzel ཉ mit i, Suffix ང: njing mit hohem Ton. མཆོག: Präfix མ, Wurzel ཆ, Zeichen o, Suffix ག: tschok. བདེ: Präfix བ, Wurzel ད mit e: de. འབྱོར: Präfix འ, Wurzel བ mit ཡ darunter und o, Suffix ར: dschor. རྫོགས: oben ར, Wurzel ཛ, Zeichen o, Suffix ག, zweites Suffix ས: dsok. ཕྱག: Wurzel ཕ mit ཡ darunter, Suffix ག: tschak. སྒྲོལ: oben ས, Wurzel ག, darunter ར, Zeichen o, Suffix ལ: dröl.
+
+Im Training dieses Teils stammen alle Silben aus Wörtern des Kurses, sodass jede später in Wörtern und Sätzen wiederkehrt: ཆོས་ „Dharma“, སློབ་མ་ „Schüler“, རྙིང་པ་ „alt“, མཆོག་ „höchst“, བདེ་བ་ „Glück“, རྣལ་འབྱོར་པ་ „Yogi“, རྫོགས་པ་ „Vollkommenheit“, ཕྱག་རྒྱ་ „Symbol, Mudrā“, སྒྲོལ་མ་ „Tārā“. Eile ist nicht nötig: das schrittweise Zerlegen ist anfangs langsam, aber nach ein paar Dutzend Silben wird daraus ein einziger Blick.
+
+## alphabet/14
+
+Ein Wort besteht im Tibetischen aus einer oder mehreren Silben, getrennt durch den Tsheg. Die meisten Wörter des Kurses sind zweisilbig, und sehr oft ist die zweite Silbe eine der Partikeln པ, བ, མ, པོ, བོ, མོ: ཁང་པ་ „Haus“, དགོན་པ་ „Kloster“, སློབ་མ་ „Schüler“, དམར་པོ་ „rot“, ཆེན་པོ་ „groß“, ལྷ་མོ་ „Göttin“. Wer nach einer Silbe eine leere Silbe aus einem Buchstaben und einem Zeichen sieht, sieht also fast immer das Ende eines Wortes.
+
+Der Tsheg steht nach jeder Silbe, nicht zwischen den Wörtern, und zeigt darum die Wortgrenze nicht an. ཉི་མ་ „Sonne“ und སངས་རྒྱས་ „Buddha“ sind je ein Wort, obwohl sie so viele Punkte haben wie zwei einsilbige Wörter hintereinander. Das Deutsche setzt zwischen die Wörter ein Leerzeichen, und selbst ein langes zusammengesetztes Wort steht als ein Block da; das Tibetische überlässt die Wortgrenze dem Lesenden, der die Wörter kennt. Darum lehrt der Kurs zuerst, Wörter als Ganzes zu lesen, und erst danach Sätze. In Wylie trennt ein Leerzeichen die Silben, und das Wort gön-pa erscheint als dgon pa; das ist Silbe für Silbe, nicht zwei Wörter.
+
+Lange Wörter sind aus kurzen zusammengesetzt, wie im Deutschen: རྣལ་འབྱོར་པ་ „Yogi“ ist རྣལ་འབྱོར་ „Yoga“ mit der Partikel པ; དཀྱིལ་འཁོར་ „Maṇḍala“ ist „Mitte“ und „Umgebung“. Das längste Wort dieses Teils, མྱ་ངན་ལས་འདས་པ་ „Nirvāṇa“, bedeutet wörtlich „über das Leid hinausgegangen“ und hat fünf Silben. Solche Wörter liest man Silbe für Silbe mit der Analyse aus dem vorigen Teil und setzt sie dann zusammen.
+
+Die Aussprache eines ganzen Wortes hat noch eine Eigenheit: die Suffixregeln wirken in jeder Silbe für sich. ཐམས་ཅད་ „alle“ liest man thamtsche: in der ersten Silbe ist das Suffix མ zu hören und das zweite Suffix ས stumm, in der zweiten macht ད das a zu e. བུམ་པ་ „Vase“ ist bumpa, ཚ་པོ་ „heiß“ tsapo, བླ་མ་ „Guru, Lama“ lama.
+
+Das Training dieses Teils zeigt ganze Wörter des Kurses. Lässt sich ein Wort auf den ersten Blick lesen, gut; wenn nicht, sucht man in jeder Silbe die Wurzel und setzt sie Schritt für Schritt zusammen, ohne Eile.
+
+## alphabet/15
+
+Der letzte Teil des Alphabets bringt die ersten Sätze des Kurses. Ein Satz läuft wie ein Wort als fortlaufende Kette von Silben mit Tsheg; das Ende eines Satzes oder Satzteils markiert der Shad, der senkrechte Strich །. Vor dem Shad steht gewöhnlich kein Tsheg, nur nach ང bleibt er erhalten. Ein doppelter Shad schließt einen größeren Abschnitt. Großbuchstaben, Punkte, Kommas und Fragezeichen kennt die tibetische Schrift nicht; was sie im Deutschen leisten, leisten hier Partikeln und Wortstellung.
+
+Die fünf Sätze dieses Teils stammen aus der ersten Lektion. Es sind kurze Nominalgruppen: དགོན་པ་དམར་པོ་ „rotes Kloster“, ཆོས་པ་བཟང་པོ་ „vortrefflicher Dharma-Praktizierender“, བདེ་བ་ཆེན་པོ་ „große Glückseligkeit“, ཉི་མ་ཚ་པོ་ „heiße Sonne“, སློབ་མ་བཟང་པོ་ „guter Schüler“. Jede besteht aus zwei Wörtern, und man sieht leicht, dass die Reihenfolge umgekehrt zum Deutschen ist: zuerst das Substantiv, dann das Adjektiv. Das ist die erste Regel der ersten Lektion, und dort wird sie ausführlich erklärt; hier genügt es, sie zu sehen.
+
+Beim lauten Lesen wendet man an, was die vorigen Teile zusammengetragen haben: in jeder Silbe die Wurzel suchen, auf die Suffixe ད ན ལ ས achten, die den Vokal verändern, an die stummen Präfixe denken. དགོན་པ་དམར་པོ་ „rotes Kloster“ liest man zum Beispiel gönpa marpo: in der ersten Silbe ist das Präfix ད stumm, und das Suffix ན macht o zu ö; in der dritten Silbe ist das Präfix ད wieder stumm. Das Wort བཟང་པོ་ „gut“ liest man sangpo, und ཆོས་པ་ „Dharma-Praktizierender“ tschöpa.
+
+Der Kurs zeigt jeden Satz mit Wylie und Übersetzung, und jedes Wort lässt sich antippen. Das Training dieses Teils besteht darin, die Bedeutung eines Satzes zu wählen, und die Prüfung darin, ihn Wort für Wort aus Kacheln zu bauen. Von hier an beginnen die Lektionen: zum Lesen kommt die Grammatik, und die Sätze wachsen.

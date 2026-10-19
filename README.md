@@ -30,7 +30,13 @@ another device".)
   the textbook chapter as a reference); the build segments them into
   `site/data/intro.json`. "Continue" leads to the page before the first part
   of a lesson; the map, the first part and the grammar reference link to it;
-  `course.theory` in the progress record lists the pages read.
+  `course.theory` in the progress record lists the pages read. The fifteen
+  parts of the alphabet module have theory pages too
+  (`#/course/alphabet/<n>/theory`, sections `## alphabet/<n>` of the same
+  files, brief from `node scripts/intro-brief.mjs alphabet/<n>`): the script,
+  the rows of letters, vowel signs, stacks, affixes and the reading rules,
+  with every letter tappable for its card; "Continue" leads there before the
+  cards of a part.
   Every unit is a ladder of five steps: the new words with examples and the
   lesson's remarks, tiles, meaning, recall, then a check of ten tasks without
   hints (eight pass the unit; its new words become known at level 0, the ones

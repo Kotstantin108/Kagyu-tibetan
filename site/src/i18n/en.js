@@ -132,6 +132,8 @@ export default {
     theoryNext: 'Next, to the words',
     theoryHint: 'Tap a Tibetan word to see its meaning.',
     theoryWordHint: 'The meaning of the word; the translation of the whole phrase follows it in the text.',
+    theoryNextSigns: 'Next, to the signs',
+    theorySignHint: 'Tap a letter to see its sound, or a word to see its meaning.',
     wordsIntro: 'The {n} new words of this part. Read them, listen if the voice is on, look at the examples; then build the sentences.',
     wordsNext: 'On to the tiles',
     stepDone: 'Step done',

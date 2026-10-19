@@ -128,7 +128,7 @@ await page.waitForSelector('.rack .tile');
 await page.goto(`${base}/index.html#/read`);
 await page.waitForSelector('.stage');
 check((await page.$$('.stage')).length === PARTS.length - 1, `reading: ${PARTS.length - 1} parts of the alphabet listed as a free trainer`);
-await page.click('.stage[data-stage="1"] a.action');
+await page.click('.stage[data-stage="1"] a.action.primary');
 await page.waitForSelector('.read-card');
 for (let i = 0; i < 12; i++) {
   const tib = await page.$eval('.read-card', (e) => e.textContent);
@@ -217,7 +217,7 @@ check((await page.$('#course-exam')) !== null, 'course: an old learner sees the 
   await c.click('#can-read-no');
   await c.waitForSelector('#course-continue');
   check((await c.$$('.module')).length === 1 + course.modules.length, `course: ${1 + course.modules.length} modules on the map`);
-  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/alphabet/1', 'course: "Continue" points at the first part of the alphabet');
+  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/alphabet/1/theory', 'course: "Continue" points at the theory of the first part of the alphabet');
   check((await c.$$('.unit-row:not(.exam-row):not(.theory-row)')).length === allUnits(course).length, 'course: every unit listed');
   check((await c.$('#course-exam')) !== null, 'course: the alphabet module offers the exam');
 
@@ -239,8 +239,24 @@ check((await page.$('#course-exam')) !== null, 'course: an old learner sees the 
     return true;
   };
   await c.click('#course-continue');
+  // the theory page of the first part: letters open their cards, "next" leads to the cards
+  await c.waitForSelector('#theory-next');
+  check(/#\/course\/alphabet\/1\/theory$/.test(c.url()), 'alphabet: "Continue" opens the theory of the first part');
+  check((await c.$$('.theory-text')).length >= 4, 'alphabet theory: the page shows the paragraphs of part 1');
+  check((await c.$$('.theory-text .tib-sign')).length >= 4, 'alphabet theory: the letters are tappable');
+  await c.click('.theory-text .tib-sign');
+  await c.waitForSelector('.popover .theory-sign .sign-name');
+  check((await c.$eval('.popover .theory-sign .tr', (e) => e.textContent.trim().length > 0)), 'alphabet theory: a tapped letter shows its sound');
+  await c.keyboard.press('Escape');
+  await c.waitForSelector('.popover', { state: 'detached' });
+  await c.click('#theory-next');
+  await c.waitForSelector('#words-next');
+  check(/#\/course\/alphabet\/1\/intro$/.test(c.url()), 'alphabet theory: "next" opens the cards of the part');
+  check((await c.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).course.theory.includes('alphabet/1'))), 'alphabet theory: the page is recorded as read');
+  await c.goto(`${base}/index.html#/course/alphabet/1`);
   await c.waitForSelector('.ladder');
-  check((await c.$$('.ladder-row')).length === 3, 'alphabet: a part shows three steps');
+  check((await c.$$('.ladder-row')).length === 4, 'alphabet: a part shows the theory and three steps');
+  check((await c.$eval('.ladder-row[data-step="theory"]', (e) => e.classList.contains('done'))), 'alphabet: the theory row is done');
   await c.click('.ladder-row[data-step="intro"] a.action');
   await c.waitForSelector('#words-next');
   check((await c.$$('.sign-card')).length === 4, 'alphabet: the first part introduces four letters');

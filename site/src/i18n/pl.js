@@ -132,6 +132,8 @@ export default {
     theoryNext: 'Dalej, do słów',
     theoryHint: 'Dotknij tybetańskiego słowa, aby zobaczyć jego znaczenie.',
     theoryWordHint: 'Znaczenie słowa; tłumaczenie całego wyrażenia stoi w tekście za nim.',
+    theoryNextSigns: 'Dalej, do znaków',
+    theorySignHint: 'Dotknij litery, by zobaczyć jej brzmienie, albo słowa, by zobaczyć znaczenie.',
     wordsIntro: 'Nowe słowa tej części: {n}. Przeczytaj je, posłuchaj, jeśli głos jest włączony, obejrzyj przykłady; potem ułóż zdania.',
     wordsNext: 'Dalej, do kafelków',
     stepDone: 'Krok zaliczony',

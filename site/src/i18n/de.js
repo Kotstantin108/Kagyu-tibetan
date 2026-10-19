@@ -132,6 +132,8 @@ export default {
     theoryNext: 'Weiter zu den Wörtern',
     theoryHint: 'Ein tibetisches Wort antippen, um seine Bedeutung zu sehen.',
     theoryWordHint: 'Die Bedeutung des Wortes; die Übersetzung der ganzen Wendung steht im Text dahinter.',
+    theoryNextSigns: 'Weiter, zu den Zeichen',
+    theorySignHint: 'Tippe auf einen Buchstaben, um seinen Laut zu sehen, oder auf ein Wort für seine Bedeutung.',
     wordsIntro: 'Die {n} neuen Wörter dieses Teils. Lies sie, hör sie an, wenn die Stimme an ist, sieh dir die Beispiele an; dann baue die Sätze.',
     wordsNext: 'Weiter zu den Kacheln',
     stepDone: 'Schritt geschafft',

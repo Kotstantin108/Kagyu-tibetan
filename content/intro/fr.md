@@ -225,3 +225,169 @@ La nominalisation est le procédé de la leçon 6 : la particule པ་ « nomin
 La proposition relative se construit, comme à la leçon 6, avec un verbe nominalisé. Placée devant le nom, elle prend le génitif : དེ་ནས་འཕགས་པ་སྤྱན་རས་གཟིགས་དེས།རྫུ་འཕྲུལ་སྟོན་པའི་སྤྲེའུ་ཞིག་ལ།དགེ་བསྙེན་གྱི་སྡོམ་པ་བྱིན་ནོ། « Alors le noble Chenrezig conféra le vœu de pratiquant laïc à un singe qui faisait des miracles. », འགྲོ་བ་རིགས་དྲུག་ནས་ཚེ་འཕོས་པའི་སྤྲེའུ་ཕྲུག་རྣམས་སྐྱེས་སོ། « Des petits singes renés des six états d'existence naquirent. » Placée après le nom, elle s'y accole sans particule, et la particule de cas vient après tout le bloc : བདག་ཚེ་འཕོས་པའི་རུས་བུ་ཚལ་ན་འདུག་པ་ལ་ཕ་མས་བསྐོར་ཏོ། « Mes parents entourèrent mes os, les os de moi mort, qui gisaient dans le bois. »
 
 Le discours direct est annoncé par འདི་སྐད་ « ces paroles, ainsi » et la particule de citation ཅེས་ « fin de citation », qui ferme ailleurs les citations, comme on l'a vu à la leçon 6 : བྲམ་ཟེས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། « Le brahmane adressa ces paroles au Victorieux. »
+
+## alphabet/1
+
+L’écriture tibétaine date du septième siècle et suit le modèle d’une écriture indienne de l’époque. Chacune des trente lettres se lit comme une consonne suivie de la voyelle a : ཀ est déjà ka. Les autres voyelles sont de petits signes au-dessus ou en dessous de la lettre ; une partie leur sera consacrée. Les livres et ce cours emploient le style imprimé u-chen, « à tête », où la plupart des lettres pendent à un trait horizontal. On écrit de gauche à droite, et il n’y a pas de majuscules.
+
+Il n’y a pas non plus d’espaces entre les mots : chaque syllabe est suivie d’un point, le tsheg ་, et la fin d’une phrase ou d’un membre de phrase est marquée d’un trait vertical, le shad །. Ainsi ཁང་པ་ « maison » est une chaîne de deux syllabes. Les frontières des mots, le lecteur les reconnaît au sens ; c’est ce que le cours entraîne.
+
+À côté du tibétain, le cours affiche la transcription Wylie, en lettres latines. Elle rend l’orthographe lettre pour lettre, non la prononciation, comme une épellation de « temps » qui ne dirait pas que le p et le s sont muets. La voyelle a ne s’écrit pas : ཀ est ka, ཁང est khang ; le tsheg devient une espace. Le Wylie sert à vérifier que l’on a bien vu les lettres.
+
+Les trente lettres sont rangées selon le lieu d’articulation, du fond de la bouche vers les lèvres, sur un schéma qui se répète. Première rangée : ཀ ka, ཁ kha, ག ga, ང nga. La première est un k sans souffle, le k français de « quand ». La deuxième est le même k suivi d’une forte expiration ; le français n’aspire jamais ses consonnes, et il faut donc dire un k puis un h. La troisième, ག, était un g dans la langue ancienne ; dans la prononciation de Lhassa, celle du cours, c’est un son entre g et k, légèrement soufflé. La quatrième, ང, est le ng nasal de « parking » ; le français ne le met jamais au début d’une syllabe, le tibétain si : ངན་པ་ « mauvais ».
+
+La syllabe tibétaine a un ton : quatorze lettres sont hautes, seize basses, et les cartes indiquent le ton de chacune. Dans la première rangée, ཀ et ཁ sont hautes, ག et ང basses. Cette règle vaudra pour toutes les rangées complètes : deux lettres hautes, puis deux basses.
+
+Les lettres ཀ ཁ ག se ressemblent, et les premières manches les montrent exprès côte à côte : trois figures différentes, non trois variantes d’une même lettre. Les mots d’exemple : ཀུན་ « tous », ཁོང་ « il, elle », གོ་འཕང་ « niveau », ངོ་བོ་ « essence ». Ils contiennent déjà des signes-voyelles et des suffixes ; pour l’instant il suffit d’y retrouver la première lettre.
+
+## alphabet/2
+
+La deuxième rangée reprend le schéma de la première, un cran plus près des dents : ཅ ca, ཆ cha, ཇ ja, ཉ nya. C’est la même série de quatre, sourde sans souffle, sourde soufflée, douce, nasale, mais avec des sons chuintants et mouillés. Le ton se répartit de la même façon : ཅ et ཆ sont hautes, ཇ et ཉ basses.
+
+La lettre ཅ se prononce tch, comme dans « tchèque », sans souffle et avec un ton haut : ཅིག་ « un, une ». La lettre ཆ est le même tch suivi d’une forte expiration : ཆོས་ « Dharma », ཆུ་ « eau ». Le français ne connaît pas cette opposition, et au début elle est plus facile à voir qu’à entendre : après le tch de ཆ, on perçoit nettement un h.
+
+La lettre ཇ est un son entre dj et tch, comme dans « djinn » dit doucement, avec un ton bas : ཇི་ « quoi, comment », ཇོ་བོ་ « seigneur ». Le dj n’existe en français que dans des mots empruntés, mais il ne pose aucune difficulté. La lettre ཉ est le gn de « agneau » ou de « montagne », basse elle aussi : ཉི་མ་ « soleil », ཉན་ཐོས་ « śrāvaka ». En français ce son ne se trouve guère qu’au milieu d’un mot ; en tibétain il ouvre couramment une syllabe.
+
+Par la forme, ཅ et ཆ ne diffèrent que par un détail, et ཇ ressemble à ཛ et à ཟ, lettres des rangées à venir ; le cours place les signes voisins parmi les réponses proposées, de sorte qu’il faut observer chaque lettre pour elle-même. Le mot ཆོས་ « Dharma » reviendra dans le cours plus souvent que presque tout autre : autant le retenir en entier dès maintenant.
+
+## alphabet/3
+
+La troisième rangée est la famille du t : ཏ ta, ཐ tha, ད da, ན na. Les sons sont dentaux, comme les t, d et n du français, et pour une oreille française c’est la rangée la plus confortable. Le schéma est le même : ཏ sans souffle, ཐ soufflée, ད douce, ན nasale ; ཏ et ཐ sont hautes, ད et ན basses.
+
+La lettre ཏ est le t de « table », sans souffle et avec un ton haut. Dans le vocabulaire du cours, elle apparaît surtout dans des particules : ཏུ་ « particule la-dön » et ཏོ་ « particule terminale ». La lettre ཐ est un t suivi d’une forte expiration, « t-h » : ཐབས་ « méthode », ཐེག་པ་ « véhicule ». La lettre ད est un son entre d et t, légèrement soufflé, avec un ton bas : དང་ « et », དེ་ « cela ». La lettre ན est un n ordinaire : ནག་པོ་ « noir », ནི་ « quant à ».
+
+La difficulté de cette rangée n’est pas dans les sons mais dans le tracé. Les lettres ཏ, ད, ན, avec ང de la première rangée et ར de la septième, forment le groupe le plus ressemblant de tout l’alphabet. Toutes reposent sur une « tête » courte qui s’infléchit vers le bas, et on les distingue à la direction que prend la partie inférieure et à la présence ou non d’une boucle. Il vaut la peine de les comparer deux à deux sur les cartes : ཏ et ད, ད et ང, ན et ང ; quand la différence de chaque paire saute aux yeux, le groupe cesse de se confondre.
+
+Deux mots de cette rangée, དང་ « et » et དེ་ « cela », figurent dans les toutes premières phrases du cours, et on les verra sans cesse.
+
+## alphabet/4
+
+La quatrième rangée est la famille du p : པ pa, ཕ pha, བ ba, མ ma. Ce sont des sons labiaux, ceux des p, b et m français. Le schéma est le même, et complet pour la dernière fois : པ sans souffle, ཕ soufflée, བ douce, མ nasale ; པ et ཕ sont hautes, བ et མ basses. Avec cette rangée on possède seize lettres, la moitié de l’alphabet, et les quatre rangées complètes.
+
+La lettre པ est le p de « pas », sans souffle, ce que le p français fait déjà de lui-même. Dans le cours on la rencontre surtout comme particule, པ་ « particule de nominalisation », après une autre syllabe, dans des mots comme ཁང་པ་ « maison ». La lettre ཕ est un p suivi d’une forte expiration : ཕ་ « père », ཕན་ « être utile ». La lettre བ est un son entre b et p, légèrement soufflé, avec un ton bas : བོད་ « Tibet », བུ་ « fils ». La lettre མ est un m ordinaire : མེ་ « feu », མི་ « homme ».
+
+Les trois lettres པ, ཕ et བ sont bâties sur la même base et se confondent plus que toutes les autres. Le plus simple est de fixer བ : son bas est fermé par un trait. La lettre ཕ se distingue de པ par un petit crochet près de la tête ; une fois repéré sur la carte, il saute aux yeux.
+
+Les particules པ et བ et les finales པོ, བོ, མོ reviendront à chaque pas du cours : elles font d’une racine un nom ou un adjectif, comme dans དམར་པོ་ « rouge » et ཆེན་པོ་ « grand ». La première leçon les expliquera en détail ; pour l’instant il suffit d’en reconnaître les lettres.
+
+## alphabet/5
+
+La cinquième rangée : ཙ tsa, ཚ tsha, ཛ dza et ཝ wa. Les trois premières suivent le schéma connu : ཙ sans souffle, ཚ soufflée, ཛ douce ; il n’y a pas de nasale dans cette rangée, et la quatrième place revient à ཝ, une lettre à part. Le ton : ཙ et ཚ sont hautes, ཛ et ཝ basses.
+
+La lettre ཙ est le ts de « tsé-tsé », un t et un s prononcés d’un seul coup, avec un ton haut : ཙམ་ « seulement ». La lettre ཚ est le même ts suivi d’une forte expiration : ཚ་པོ་ « chaud », ཚོ་ « particule du pluriel ». La lettre ཛ est un son entre dz et ts, comme le zz de « pizza » dit à l’italienne, et elle est basse ; dans le vocabulaire du cours, elle se trouve dans རྫོགས་པ་ « perfection », sous un ར suscrit dont il sera question plus loin.
+
+Le tracé de ces trois lettres se retient sans peine : ཙ, ཚ et ཛ sont ཅ, ཆ et ཇ de la deuxième rangée avec un petit trait ajouté en haut à droite. Il ne s’agit donc pas d’apprendre trois figures nouvelles, mais d’habituer l’œil à remarquer ce trait : s’il est là, c’est ts ; s’il manque, c’est tch.
+
+La lettre ཝ est le w de « ouate » ou de « oui », avec un ton bas. C’est la lettre la plus rare de l’alphabet : seule, on la trouve surtout dans des mots empruntés ; plus souvent elle apparaît en petit sous une autre lettre, et c’est la partie sur les lettres souscrites qui en parlera.
+
+## alphabet/6
+
+La sixième rangée : ཞ zha, ཟ za, འ ’a et ཡ ya. Le schéma des rangées ne s’applique plus : les quatre lettres sont basses, et chacune a son caractère propre.
+
+La lettre ཞ est le j de « jour », avec un ton bas ; dans la prononciation de Lhassa elle sonne souvent presque comme ch : ཞིག་ « un, une », ཞེ་སྡང་ « colère ». La lettre ཟ est le z de « zéro », basse elle aussi, et elle se rapproche de même souvent d’un s : ཟབ་མོ་ « profond », ཟ་ཁང་ « restaurant ». Le j et le z français sont pleinement sonores ; les ཞ et ཟ tibétains sont plus doux et plus sourds, et leur marque principale est le ton bas. Par la forme, ཞ et ཟ se ressemblent entre elles et ressemblent à ཝ ; il faut les regarder de près.
+
+La lettre འ, nommée a-chung, « petit a », est particulière. Elle n’a pas de consonne propre : elle porte une voyelle avec un ton bas. En Wylie on l’écrit par une apostrophe, et c’est pourquoi འོད་དཔག་མེད་ « Amitābha » commence par ’od. Cette lettre a d’autres rôles : elle peut être un préfixe muet devant la racine, et sous la forme འི་ « de » elle se soude à une syllabe ouverte pour devenir la particule de liaison. Tout cela reviendra dans la partie sur les préfixes et dans les premières leçons.
+
+La lettre ཡ est le y de « yoga », avec un ton bas : ཡིན་ « est », ཡོན་ཏན་ « qualité ». Comme ཝ, elle sait se glisser en petit sous une autre lettre, et là elle change le son bien davantage ; la partie sur les lettres souscrites y reviendra.
+
+## alphabet/7
+
+La septième rangée : ར ra, ལ la, ཤ sha, ས sa. Ce sont les quatre lettres les plus occupées de l’alphabet : outre leur son propre, chacune a une deuxième et une troisième vie. ར et ལ se souscrivent sous d’autres lettres, ར, ལ et ས se suscrivent au-dessus d’elles, et ར, ལ et ས servent aussi de suffixes de syllabe. On les rencontrera donc dans presque chaque phrase. Le ton : ར et ལ sont basses, ཤ et ས hautes.
+
+La lettre ར est un r roulé du bout de la langue, d’un seul battement le plus souvent, et non le r du fond de la gorge du français courant : རང་ « soi », རང་རྒྱལ་ « pratyekabuddha ». La lettre ལ est le l de « lune » : ལམ་ « chemin », ལག་པ་ « main ». La lettre ཤ est le ch de « chat », avec un ton haut : ཤིག་ « un, une », ཤེས་རབ་ « sagesse ». La lettre ས est le s de « soleil », haute elle aussi : ས་ « terre », སོགས་ « et ainsi de suite ».
+
+Par le tracé, ར tombe dans le même groupe difficile que ད et ང, et ལ ressemble à ར ; ཤ se confond avec ཨ et ཧ de la dernière rangée, et ས avec མ. Comme auparavant, la comparaison deux à deux aide : ར et ད, ར et ལ, ས et མ.
+
+Trois particules contenant des lettres de cette rangée ont déjà paru dans les exemples : ཅིག་ « un, une », ཞིག་ « un, une » et ཤིག་ « un, une » sont une seule et même particule sous trois orthographes, et c’est la dernière lettre de la syllabe précédente qui décide laquelle employer. C’est une règle de la première leçon, et un bon exemple de la raison pour laquelle le lecteur doit voir chaque lettre.
+
+## alphabet/8
+
+La dernière rangée est courte, deux lettres : ཧ ha et ཨ a, nommée a-chen, « grand a ». Toutes deux sont hautes. Avec elles l’alphabet est complet : trente lettres en sept rangées et demie. Les Tibétains eux-mêmes appellent leur alphabet ཀ་ཁ ka-kha, d’après ses deux premières lettres, comme on dit « l’a b c » en français.
+
+La lettre ཧ est un h soufflé, un souffle léger qui sort de la gorge, comme dans l’anglais hat. Le français n’a pas ce son : son h dit « aspiré », celui de « haricot », ne se prononce pas ; il faut donc vraiment laisser passer l’air. Dans le vocabulaire du cours, cette lettre se trouve surtout sous un ལ suscrit : ལྷ་ « dieu », ལྷ་མོ་ « déesse ».
+
+La lettre ཨ est le support d’une voyelle seule. Quand une syllabe commence non par une consonne mais par une voyelle, il faut bien écrire cette voyelle sur quelque chose, et c’est le rôle de ཨ : seule, elle se lit a avec un ton haut, et avec un signe-voyelle elle donne i, ou, é, o : ཨ་མ་ « mère », ཨ་རི་ « Amérique ». Ainsi la « lettre-voyelle » du tibétain a un ton haut, tandis que le a-chung de la sixième rangée a un ton bas ; c’est toute la différence entre ཨ et འ.
+
+Il est utile à présent de voir les trente lettres ensemble. Hautes : ཀ ཁ ཅ ཆ ཏ ཐ པ ཕ ཙ ཚ ཤ ས ཧ ཨ, quatorze lettres. Basses : ག ང ཇ ཉ ད ན བ མ ཛ ཝ ཞ ཟ འ ཡ ར ལ, seize. Pour les rangées complètes, la règle est connue : les deux premières hautes, les deux dernières basses ; pour les huit lettres restantes il faut retenir le ton, et les cartes le montreront.
+
+Le cours passe ensuite des lettres à la syllabe : aux signes-voyelles, aux lettres qui s’écrivent sous d’autres et au-dessus d’autres, puis aux préfixes et aux suffixes. C’est de ces parties que se compose la lecture.
+
+## alphabet/9
+
+En français, les voyelles sont des lettres comme les autres, écrites dans la ligne. Le tibétain fait autrement : la voyelle a est déjà contenue dans chaque lettre, et les quatre autres voyelles se notent par de petits signes placés au-dessus ou en dessous de la lettre. L’absence de signe signifie a.
+
+Il y a quatre signes. Le gi-gu ི au-dessus de la lettre donne i : ཀི ki. Le zhabs-kyu ུ en dessous donne ou : ཀུ kou. Le ’greng-bu ེ au-dessus donne é, un peu fermé, comme dans « thé » : ཀེ ké. Le na-ro ོ au-dessus donne o : ཀོ ko. En Wylie, le signe s’écrit par une lettre après la consonne : ཀི est ki, ཆོས est chos. Pour un lecteur français, le u du Wylie est toujours le ou de « roue », jamais le u de « lune », et son e est toujours un é, jamais un e muet. L’écriture ne connaît pas d’autres voyelles, ni longues, ni diphtongues, ni nasales ; les sons eu et u que l’on entendra plus tard naissent des suffixes, et la partie sur les préfixes et suffixes l’expliquera.
+
+Trois signes sur quatre se placent au-dessus, et il faut les distinguer : le gi-gu est un crochet recourbé, le ’greng-bu un trait court et droit, le na-ro un trait ondulé. Le seul signe du dessous, le zhabs-kyu, ne se confond avec rien. Les cartes montrent les signes sur la lettre ཨ, qui n’ajoute aucun son, mais un signe peut se poser sur n’importe quelle lettre.
+
+Des mots du cours pour chaque signe : འདི་ « ceci » et ཀྱི་ « de » avec le signe i ; སྐུ་ « corps » et གསུམ་ « trois » avec le signe ou ; དེ་ « cela » et མེ་ « feu » avec le signe é ; ཆོས་ « Dharma » et མཆོག་ « suprême » avec le signe o.
+
+Le signe-voyelle ne compte pas seulement pour le son. Il se place toujours sur la lettre radicale de la syllabe, et quand une syllabe comporte plusieurs lettres, c’est lui qui dit laquelle est la principale. Ce sera le premier outil de la partie sur les syllabes.
+
+## alphabet/10
+
+Une lettre tibétaine peut se placer non seulement dans la ligne, mais aussi sous une autre lettre, en petit. Quatre lettres se souscrivent ainsi : ya, ra, la et wa. On obtient une pile : la lettre principale en haut, la petite en dessous, et le signe-voyelle, s’il y en a un, vaut pour toute la pile. En Wylie, la pile s’écrit simplement à la suite : ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa. L’écriture française n’a rien de tel, mais le principe est celui d’une ligature : deux signes se lisent d’un seul coup, comme une syllabe.
+
+Le ya souscrit, ya-tak, est une boucle qui part vers la droite et le bas, et il ajoute un y à la consonne : ཀྱ kya, comme dans ཀྱི་ « de » ou dans བརྒྱད་ « huit ». Avec les labiales il change le son bien plus : པྱ se dit tcha, ཕྱ tcha soufflé, བྱ dja, མྱ gna. Ainsi ཕྱག་རྒྱ་ « mudrā » commence par un tch.
+
+Le ra souscrit, ra-tak, un court trait vers le bas, donne une consonne prononcée avec la langue repliée vers l’arrière, à peu près un tr ou un dr durs : ཀྲ kra se lit tra, དྲུག་ « six » drouk, སྒྲོལ་མ་ « Tārā » drölma, avec un ö qu’expliquera la partie sur les suffixes. Les groupes ཀྲ ཁྲ གྲ, ཏྲ ཐྲ དྲ et པྲ ཕྲ བྲ se réduisent, à Lhassa, aux trois mêmes sons : tr sans souffle, tr soufflé, dr.
+
+Le la souscrit, la-tak, se comporte autrement : la lettre du haut se tait, et l’on n’entend qu’un la avec un ton haut : བླ་མ་ « lama », སློབ་མ་ « étudiant ». Une seule exception : ཟླ se lit da. Le wa souscrit, wa-zur, un petit triangle, ne change rien au son : གྲྭ་པ་ « moine » se lit comme s’il n’était pas là.
+
+Sur les cartes, le cours montre les souscrites sous la lettre ཀ, mais elles peuvent se placer sous bien des lettres. On reconnaît la pile à sa partie basse : une boucle, c’est ya ; un trait, ra ; un petit la, la ; un triangle, wa.
+
+## alphabet/11
+
+Trois lettres peuvent se placer non pas sous une autre lettre, mais au-dessus : ra, la et sa. Ce sont les lettres suscrites, en tibétain des « têtes » : ra-go, la-go, sa-go. En Wylie, la lettre du haut s’écrit en premier, parce qu’une pile se lit de haut en bas : རྐ rka, ལྐ lka, སྐ ska. La lettre du dessous reste la racine de la syllabe, et le signe-voyelle, comme toujours, vaut pour toute la pile.
+
+Dans la prononciation de Lhassa, la lettre suscrite est muette, mais elle laisse une trace. La lettre basse placée sous elle perd son léger souffle et devient ferme : རྒ se dit ga, et non kha. Une nasale sous une suscrite prend un ton haut : རྔ est nga avec un ton haut. Les lettres hautes ne changent pas : རྟ་ « cheval » se lit ta. Une seule pile sonne tout entière : ལྷ, lha, comme dans ལྷ་ « dieu » et ལྷ་མོ་ « déesse », parce que le ལ suscrit y garde son son.
+
+Des mots du cours avec des suscrites : རྣམས་ « particule du pluriel » se lit nam avec un ton haut ; སྐུ་ « corps » et སྟོང་ « mille » se lisent kou et tong. Dans རྒྱལ་མོ་ « reine », la pile a trois étages : ར suscrit, racine ག, ཡ souscrit, et elle se lit gyèl : le suffixe ལ change le a en è.
+
+Une suscrite se prend facilement pour une lettre ordinaire posée dans la ligne, surtout ས au-dessus des lettres étroites. L’indice, c’est la hauteur : une pile dépasse ses voisines, et sa lettre du haut est réduite. Sur les cartes, le cours montre les suscrites sur ཀ, mais elles peuvent coiffer bien d’autres lettres.
+
+Avec cette partie, les trois manières d’empiler des lettres sont connues : les souscrites en dessous, les suscrites au-dessus, le signe-voyelle sur l’ensemble. Restent les lettres qui se tiennent à côté de la racine, dans la ligne : les préfixes et les suffixes.
+
+## alphabet/12
+
+La syllabe tibétaine est bâtie comme un nid autour de sa lettre radicale. L’ordre complet est le suivant : préfixe, suscrite, racine, souscrite, signe-voyelle, suffixe, second suffixe. Aucune syllabe n’occupe toutes les places à la fois, mais chacune peut l’être. La racine est la seule partie obligatoire, et le signe-voyelle se pose toujours sur elle. Exemple de syllabe pleine : བསྒྲུབས bsgrubs, avec le préfixe བ, la suscrite ས, la racine ག, la souscrite ར, la voyelle ou, le suffixe བ et le second suffixe ས ; elle se lit droup.
+
+Cinq lettres peuvent être préfixes : ག ད བ མ འ. Elles s’écrivent devant la racine, dans la ligne, et à Lhassa elles sont muettes : གསུམ་ « trois » se lit soum, བཞི་ « quatre » chi, མདོ་ « sūtra » do, འདི་ « ceci » di. Comme les suscrites, un préfixe rend ferme la lettre basse qui le suit et donne à une nasale un ton haut : དགུ་ « neuf » se lit gou, གཉིས་ « deux » gni avec un ton haut. Le français est plein de lettres qui s’écrivent sans se prononcer, le p de « compte », le h de « homme » ; les lettres muettes du tibétain demandent la même habitude, à cette différence près qu’elles se trouvent au début de la syllabe aussi bien qu’à la fin.
+
+Dix lettres peuvent être suffixes : ག ང ད ན བ མ འ ར ལ ས. Elles suivent la racine et sa voyelle, et se répartissent en trois groupes selon ce qu’elles font au son. ང, མ, ར s’entendent telles quelles : དང་ « et » se lit dang, ལམ་ « chemin » lam, འཁོར་ « entourage » khor. ག s’entend comme un k doux ou une coupure de la voix, བ comme un p ou un w : མཆོག་ « suprême » tchok, ཟབ་མོ་ « profond » sapmo. Le troisième groupe est le plus important : ད, ན, ལ, ས. ད et ས ne se prononcent pas, ན et ལ se prononcent, mais toutes les quatre changent la voyelle qui les précède : a devient è, o devient ö, u devient ü. Pour un francophone, ces deux derniers sons sont tout trouvés : ö est le eu de « peu », ü est le u de « lune ». Ainsi བོད་ « Tibet » se lit pö, ཆོས་ « Dharma » tchö, རྒྱལ་མོ་ « reine » gyèlmo, ཀུན་ « tous » kün.
+
+Le suffixe འ est muet et ne fait qu’allonger la voyelle : བཀའ་ « paroles du Bouddha » se lit ka. Le second suffixe est toujours ས, après un autre suffixe, et il est muet lui aussi : རྣམས་ « particule du pluriel » se lit nam, སངས་རྒྱས་ « Bouddha » sang-gyé.
+
+Cette partie est la clé de la lecture. Tout ce qui, en tibétain, s’écrit sans s’entendre, les préfixes, les suscrites, les suffixes ད et ས, est le reste d’une prononciation ancienne, et le Wylie montre fidèlement cette orthographe, comme l’orthographe française garde le s de « temps ». Il ne faut donc rien laisser tomber quand on lit en silence, et appliquer les règles de cette partie quand on lit à voix haute.
+
+## alphabet/13
+
+Tout se rassemble maintenant : devant une syllabe, il faut trouver sa lettre radicale et sa prononciation. L’ordre de l’analyse est toujours le même. On cherche d’abord le signe-voyelle : la lettre qui le porte est la racine. S’il n’y a pas de signe, on cherche une pile : la lettre qui a quelque chose au-dessus ou en dessous est la racine. S’il n’y a ni signe ni pile, dans une paire de lettres la racine est la première et la seconde est un suffixe : ཁང se lit khang, ངན ngèn. Dans une suite nue de trois lettres, la première est un préfixe, la deuxième la racine, la troisième un suffixe : དམར se lit mar, གསར sar, བཟང sang ; mais si la dernière lettre est ས précédée d’un autre suffixe, la syllabe commence par la racine : སངས se lit sang.
+
+Le reste n’est qu’application des parties précédentes. Une fois la racine trouvée, on regarde si elle est basse ou haute, et si quelque chose devant elle ou au-dessus d’elle la rend ferme. Puis on lit la voyelle, en pensant aux suffixes ད ན ལ ས qui changent a, o, u en è, ö, ü. Puis on ajoute le suffixe, s’il s’entend.
+
+Quelques syllabes du cours à analyser. ཆོས : racine ཆ avec le signe o, suffixe ས ; tchö. སློབ : suscrite ས, racine ལ, signe o, suffixe བ ; lop. རྙིང : suscrite ར, racine ཉ avec le signe i, suffixe ང ; gning avec un ton haut. མཆོག : préfixe མ, racine ཆ, signe o, suffixe ག ; tchok. བདེ : préfixe བ, racine ད avec le signe é ; dé. འབྱོར : préfixe འ, racine བ avec ཡ souscrit et le signe o, suffixe ར ; djor. རྫོགས : suscrite ར, racine ཛ, signe o, suffixe ག, second suffixe ས ; dzok. ཕྱག : racine ཕ avec ཡ souscrit, suffixe ག ; tchak. སྒྲོལ : suscrite ས, racine ག, souscrite ར, signe o, suffixe ལ ; dröl.
+
+Toutes les syllabes de l’entraînement viennent de mots du cours, où chacune reviendra : ཆོས་ « Dharma », སློབ་མ་ « étudiant », རྙིང་པ་ « vieux », མཆོག་ « suprême », བདེ་བ་ « bonheur », རྣལ་འབྱོར་པ་ « yogi », རྫོགས་པ་ « perfection », ཕྱག་རྒྱ་ « mudrā », སྒྲོལ་མ་ « Tārā ». Rien ne presse : l’analyse pas à pas est lente au début, mais après quelques dizaines de syllabes elle devient un simple coup d’œil.
+
+## alphabet/14
+
+Un mot tibétain est fait d’une ou de plusieurs syllabes séparées par le tsheg. La plupart des mots du cours ont deux syllabes, et très souvent la seconde est l’une des particules པ, བ, མ, པོ, བོ, མོ : ཁང་པ་ « maison », དགོན་པ་ « monastère », སློབ་མ་ « étudiant », དམར་པོ་ « rouge », ཆེན་པོ་ « grand », ལྷ་མོ་ « déesse ». Quand on voit, après une syllabe, une syllabe faite d’une seule lettre et d’un signe, on voit presque toujours la fin d’un mot.
+
+Le tsheg suit chaque syllabe, et non chaque mot ; à lui seul il ne montre donc pas la frontière des mots, là où le français met une espace. ཉི་མ་ « soleil » et སངས་རྒྱས་ « Bouddha » sont chacun un seul mot, bien qu’ils aient autant de points que deux mots d’une syllabe mis bout à bout. Le lecteur reconnaît les frontières parce qu’il connaît les mots ; c’est pourquoi le cours apprend d’abord à lire les mots comme des touts, puis seulement les phrases. En Wylie, une espace sépare les syllabes, et le mot dgon pa paraît en deux morceaux ; c’est syllabe par syllabe, non deux mots.
+
+Les mots longs sont souvent composés de mots courts : རྣལ་འབྱོར་པ་ « yogi », c’est « yoga » suivi de la particule པ ; དཀྱིལ་འཁོར་ « maṇḍala » réunit « centre » et « entourage ». Le mot le plus long de cette partie, མྱ་ངན་ལས་འདས་པ་ « nirvāṇa », signifie mot à mot « passé au-delà de la souffrance » et compte cinq syllabes. Ces mots se lisent syllabe par syllabe, avec l’analyse de la partie précédente, puis se recomposent.
+
+La prononciation d’un mot entier a encore une particularité : les règles des suffixes agissent dans chaque syllabe séparément. ཐམས་ཅད་ « tous » se lit thamtché : dans la première syllabe le suffixe མ s’entend et le second suffixe ས est muet, dans la seconde le ད change le a en è. བུམ་པ་ « vase » se lit boumpa, ཚ་པོ་ « chaud » tsapo, བླ་མ་ « lama » lama.
+
+L’entraînement de cette partie montre des mots entiers du cours. Si un mot se lit du premier coup d’œil, tant mieux ; sinon, on cherche dans chaque syllabe la racine et on recompose pas à pas, sans se presser.
+
+## alphabet/15
+
+La dernière partie de l’alphabet présente les premières phrases du cours. Une phrase, comme un mot, est une chaîne continue de syllabes séparées par le tsheg ; la fin d’une phrase ou d’un membre de phrase est marquée par le shad, le trait vertical །. Devant le shad, le tsheg s’omet d’ordinaire ; il ne se maintient qu’après ང : ང་།. Un double shad ferme une grande section de texte. L’écriture tibétaine n’a ni majuscules, ni points, ni virgules, ni points d’interrogation : tout ce qu’ils font en français, ce sont les particules et l’ordre des mots qui le font.
+
+Les cinq phrases de cette partie viennent de la première leçon. Ce sont de courts groupes nominaux : དགོན་པ་དམར་པོ་ « monastère rouge », ཆོས་པ་བཟང་པོ་ « excellent pratiquant du Dharma », བདེ་བ་ཆེན་པོ་ « grande félicité », ཉི་མ་ཚ་པོ་ « soleil chaud », སློབ་མ་བཟང་པོ་ « bon étudiant ». Chacune contient deux mots, et l’ordre est le plus souvent celui du français : le nom d’abord, l’adjectif ensuite, « monastère rouge » ; là où le français place parfois l’adjectif devant, « grande félicité », « bon étudiant », le tibétain le met toujours après. C’est la première règle de la première leçon, qui l’expliquera en détail ; ici il suffit de la voir.
+
+En lisant à voix haute, on applique ce que les parties précédentes ont rassemblé : chercher la racine de chaque syllabe, surveiller les suffixes ད ན ལ ས qui changent la voyelle, se souvenir des préfixes muets. Ainsi དགོན་པ་དམར་པོ་ « monastère rouge » se lit gönpa marpo : dans la première syllabe le préfixe ད est muet et le suffixe ན change le o en ö ; dans la troisième, le préfixe ད est muet de nouveau. Le mot བཟང་པོ་ « bon, excellent » se lit sangpo, et ཆོས་པ་ « pratiquant du Dharma » tchöpa.
+
+Le cours montre chaque phrase avec son Wylie et sa traduction, et l’on peut toucher chaque mot pour en voir le sens. L’entraînement de cette partie consiste à choisir le sens de la phrase, et le contrôle à la reconstruire avec les tuiles, mot après mot. C’est ici que commencent les leçons : la grammaire s’ajoute à la lecture, et les phrases s’allongent.

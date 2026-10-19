@@ -229,3 +229,169 @@ English attaches a clause to a noun with "who", "which", "that". Tibetan nominal
 A nominalised clause can also stand alone as a description, closed by the final particle: རབ་ཏུ་དབུལ་ཕོངས་པ།བཟའ་བ་དང་བགོ་བ་མེད་པ་ཞིག་གོ། "He was extremely poor, one with neither food nor clothes."
 
 Direct speech is announced by འདི་སྐད་ "these words, thus" and the quotation particle ཅེས་ "closing quotation particle", and the verb of speaking follows: བྲམ་ཟེས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། "The Brahmin spoke these words to the Victorious One."
+
+## alphabet/1
+
+The Tibetan script was created in the seventh century on the model of an Indian script. Each of the thirty letters is read as a consonant with the vowel a: ཀ is already ka; another vowel is shown by a small sign above or below the letter, and those signs come later. Books and this course use the headed print style, uchen: most letters have a bar at the top, from which the letter hangs. Writing runs left to right, all letters are one height, there are no capitals.
+
+There are no spaces between words. A dot, the tsheg ་, follows every syllable, and a vertical stroke, the shad །, marks the end of a sentence or of one of its parts. So a line of Tibetan is a chain of syllables on dots: ཁང་པ་ "house" is two syllables. Where a word ends, the reader knows from the words and the sense; that is the skill the course trains.
+
+Next to the Tibetan the course shows the Wylie transcription in Latin letters. It records the spelling, not the sound, as if "knight" were spelt out with its k and gh. The vowel a is not written: ཀ is ka, ཁང is khang; the tsheg becomes a space. It is a check on the letters, not a guide to the sound.
+
+The letters go in rows by the place where they are made, and within a row one pattern repeats. The first row: ཀ ka, ཁ kha, ག ga, ང nga. ཀ is a k without a puff of air, the k of "skin"; ཁ is the same with a strong puff, the k of "kick". English has both sounds but never uses them to tell words apart; in Tibetan the puff is the whole difference between two letters. ག lies between g and k, with a light puff. ང is the ng of "sing"; English has it only at the end of a syllable, Tibetan also at the start: ངན་པ་ "bad".
+
+A Tibetan syllable has a tone: fourteen letters are high, sixteen low, and the cards show it for every letter. English has no tone; here the pitch belongs to the syllable. In the first row ཀ and ཁ are high, ག and ང low, and so in every full row: the first two high, the last two low.
+
+The letters ཀ ཁ ག look alike, and the first rounds show them side by side on purpose. Treat them as three different shapes; soon the eye tells them apart. Example words: ཀུན་ "all", ཁོང་ "he, she", གོ་འཕང་ "level", ངོ་བོ་ "essence". For now it is enough to find the first letter in each of them.
+
+## alphabet/2
+
+The second row repeats the pattern of the first one step closer to the teeth: ཅ ca, ཆ cha, ཇ ja, ཉ nya. It is the same four, plain, with a puff, soft, nasal, but the sounds are now of the ch kind. The tones are shared out the same way: ཅ and ཆ are high, ཇ and ཉ are low.
+
+The letter ཅ is the ch of "catch" with the puff of air held back, and with a high tone: ཅིག་ "a, an", ཅག་ "plural particle". The letter ཆ is the same ch with a strong puff: ཆོས་ "Dharma", ཆུ་ "water". An English ch always carries some breath, so the difference is unfamiliar at first and easier to see than to hear: after ཆ an h is clearly audible.
+
+The letter ཇ lies between j and ch, the j of "jam" said softly, with a low tone: ཇི་ "what, how", ཇོ་བོ་ "lord, master". The letter ཉ is the ny of "canyon", also low: ཉི་མ་ "sun", ཉན་ཐོས་ "śrāvaka". In English ny only appears in the middle of a word; in Tibetan it is an ordinary start of a syllable.
+
+In shape ཅ and ཆ differ by one detail, and ཇ resembles ཛ and ཟ from later rows; the course puts look-alike signs next to each other as answer choices, so look at each letter on its own. The word ཆོས་ "Dharma" will appear in the course more often than most, and it is worth remembering whole already now.
+
+## alphabet/3
+
+The third row is the t family: ཏ ta, ཐ tha, ད da, ན na. These are the sounds of t, d and n, so for an English ear this row is the easiest to hear. The pattern is as before: ཏ without a puff, ཐ with a puff, ད soft, ན nasal; ཏ and ཐ are high, ད and ན low.
+
+The letter ཏ is the t of "stop", without a puff and with a high tone. In the vocabulary of the course it stands mostly in particles: ཏུ་ "la-dön particle" and ཏོ་ "terminating particle". The letter ཐ is the t of "top", with a strong puff: ཐབས་ "method", ཐེག་པ་ "vehicle". As with k, English makes both sounds but treats them as one; Tibetan treats them as two letters. The letter ད lies between d and t, with a light puff and a low tone: དང་ "and", དེ་ "that". The letter ན is an ordinary n: ནག་པོ་ "black", ནི་ "as for".
+
+The difficulty of this row is not in the sounds but in the shapes. The letters ཏ, ད, ན, together with ང from the first row and ར from the seventh, are the most similar group in the whole alphabet. Compare them in pairs on the cards: ཏ and ད, ད and ང, ན and ང; once the difference in each pair is visible, the group stops being confusing.
+
+Two words of this row, དང་ "and" and དེ་ "that", belong to the very first sentences of the course, and they will be in view constantly.
+
+## alphabet/4
+
+The fourth row is the p family: པ pa, ཕ pha, བ ba, མ ma. These are the lip sounds, the p, b and m of English. The pattern is as before, and complete for the last time: པ without a puff, ཕ with a puff, བ soft, མ nasal; པ and ཕ are high, བ and མ low. With this row there are sixteen letters, half the alphabet, and all four full rows.
+
+The letter པ is the p of "spin", without a puff: in the course it appears most often as the particle པ་ "nominalizing particle" after another syllable, in words like ཁང་པ་ "house". The letter ཕ is the p of "pin", with a strong puff: ཕ་ "father", ཕན་ "to benefit". The letter བ lies between b and p, with a light puff and a low tone: བོད་ "Tibet", བུ་ "son". The letter མ is an ordinary m: མེ་ "fire", མི་ "man".
+
+The three letters པ, ཕ and བ are built on one base, and they are the ones most often mixed up. The easiest to remember is བ: it is closed at the bottom by a stroke. The letter ཕ differs from པ by a small hook at the head; find it once on the card, and after that it catches the eye.
+
+The particles པ and བ and the endings པོ, བོ, མོ will turn up at every step of the course: they make a root into a noun or an adjective, as in དམར་པོ་ "red" and ཆེན་པོ་ "big". The first lesson explains them in detail; for now it is enough to recognise the letters.
+
+## alphabet/5
+
+The fifth row: ཙ tsa, ཚ tsha, ཛ dza and ཝ wa. The first three follow the familiar pattern: ཙ without a puff, ཚ with a puff, ཛ soft; this row has no nasal, and the fourth place is taken by ཝ, a letter on its own. Tones: ཙ and ཚ are high, ཛ and ཝ are low.
+
+The letter ཙ is the ts of "cats", with a high tone, but at the start of a syllable, where English never puts it: ཙམ་ "mere, merely". The letter ཚ is ts with a strong puff: ཚ་པོ་ "hot", ཚོ་ "plural particle". The letter ཛ lies between dz and ts, as in "adze", and is low; in the vocabulary of the course it stands in རྫོགས་པ་ "perfection", under a superscribed ར, which comes later.
+
+The shapes of these three are easy to remember: ཙ, ཚ and ཛ are ཅ, ཆ and ཇ of the second row with a small stroke added at the top right. So there are no three new shapes to learn here; the eye only has to notice the stroke: with it, ts; without it, ch.
+
+The letter ཝ is the w of "water", a sound English has and uses freely, with a low tone. It is the rarest letter of the alphabet: on its own it appears mostly in borrowed words, and more often it comes in a small form under another letter; the part on subjoined letters tells about that.
+
+## alphabet/6
+
+The sixth row: ཞ zha, ཟ za, འ ’a and ཡ ya. Here the pattern of the row no longer applies: all four letters are low, and each has a character of its own.
+
+The letter ཞ is the zh of "measure", with a low tone; in the Lhasa pronunciation it often sounds almost like sh: ཞིག་ "a, an", ཞེ་སྡང་ "anger". English has this sound only inside or at the end of a word, never at the start except in borrowings like "genre"; in Tibetan it begins syllables. The letter ཟ is the z of "zoo", also low, and it just as often drifts toward s: ཟབ་མོ་ "profound", ཟ་ཁང་ "restaurant". The English zh and z are always fully voiced; the Tibetan ཞ and ཟ are softer and less voiced, and their surest mark is the low tone. In shape ཞ and ཟ resemble each other and ཝ; look at them closely.
+
+The letter འ, named a-chung, "small a", is special. It has no consonant sound of its own: it holds a vowel with a low tone. In Wylie it is written as an apostrophe, so འོད་དཔག་མེད་ "Amitābha" begins with ’od. The letter has other roles too: it can be a silent prefix before a root, and as འི་ "of" it fuses with an open syllable and becomes the connective particle. All this comes in the part on prefixes and in the first lessons.
+
+The letter ཡ is the y of "yes", with a low tone: ཡིན་ "is", ཡོན་ཏན་ "quality". Like ཝ, it can be written in a small form under another letter, and there it changes the sound much more noticeably; the part on subjoined letters tells about that.
+
+## alphabet/7
+
+The seventh row: ར ra, ལ la, ཤ sha, ས sa. These are the four busiest letters of the alphabet: besides its own sound, each has a second and a third life. ར and ལ are written under other letters, ར, ལ and ས are written above them, and ར, ལ and ས also serve as suffixes of a syllable. That is why they will appear in almost every sentence. Tones: ར and ལ are low, ཤ and ས are high.
+
+The letter ར is an r, but not the English one, which is made without the tongue touching anything: here the tongue gives a single light tap, lightly rolled: རང་ "self", རང་རྒྱལ་ "pratyekabuddha". The letter ལ is the l of "light": ལམ་ "path", ལག་པ་ "hand". The letter ཤ is the sh of "ship", with a high tone: ཤིག་ "a, an", ཤེས་རབ་ "wisdom". The letter ས is an ordinary s, high: ས་ "earth", སོགས་ "and so forth".
+
+In shape ར falls into the same difficult group as ད and ང, and ལ resembles ར; ཤ is confused with ཨ and ཧ from the last row, and ས with མ. As before, comparing in pairs helps: ར and ད, ར and ལ, ས and མ.
+
+Three particles with letters of this row have already appeared among the examples: ཅིག་ "a, an", ཞིག་ "a, an" and ཤིག་ "a, an" are one and the same particle in three spellings, and the last letter of the syllable before it decides which one to use. That rule belongs to the first lesson, and it is a good example of why a reader needs to see every letter.
+
+## alphabet/8
+
+The last row is short, two letters: ཧ ha and ཨ a, named a-chen, "big a". Both are high. With them the alphabet is complete: thirty letters in seven and a half rows. Tibetans themselves call the alphabet ka-kha, after its first two letters, much as English speaks of the ABC.
+
+The letter ཧ is the h of "hat", the same light breath as in English. In the vocabulary of the course it stands most often under a superscribed ལ: ལྷ་ "god", ལྷ་མོ་ "goddess".
+
+The letter ཨ carries a lone vowel. When a syllable begins not with a consonant but with a vowel sound, that vowel needs something to be written on, and ཨ is there for that: by itself it reads as a with a high tone, and with a vowel sign it gives i, u, e, o: ཨ་མ་ "mother", ཨ་རི་ "America". English simply writes a vowel letter at the start of a word; Tibetan writes a carrier and puts the vowel on it. So this vowel letter has a high tone, while a-chung from the sixth row has a low one; that is the difference between ཨ and འ.
+
+Now it is useful to see all thirty letters together. High: ཀ ཁ ཅ ཆ ཏ ཐ པ ཕ ཙ ཚ ཤ ས ཧ ཨ, fourteen letters. Low: ག ང ཇ ཉ ད ན བ མ ཛ ཝ ཞ ཟ འ ཡ ར ལ, sixteen. The rule for the full rows is known: the first two are high, the last two low; for the remaining eight letters the tone has to be remembered, and the cards will keep showing it.
+
+From here the course moves from letters to the syllable: to the vowel signs, to the letters written under and above others, and to prefixes and suffixes. Reading is put together from those parts.
+
+## alphabet/9
+
+In English the vowels are letters in the line, just like the consonants. Tibetan does it differently: the vowel a is already contained in every letter, and the other four vowels are shown by small signs placed above or below the letter. No sign means a.
+
+There are four signs. Gi-gu above the letter gives i: ཨི, ཀི ki, the i of "machine". Zhabs-kyu below the letter gives u: ཨུ, ཀུ ku, the u of "rule". ’Greng-bu above the letter gives e: ཨེ, ཀེ ke, the e of "bed", a little closed. Na-ro above the letter gives o: ཨོ, ཀོ ko, the o of "more". In Wylie the sign is written as a letter after the consonant, so ཀི is ki and ཆོས is chos. The script has no other vowels, no long ones and no diphthongs; the ö and ü that are heard in speech appear later, under the influence of suffixes, and the part on prefixes and suffixes explains them. Unlike English, where one vowel letter can be read several ways, each sign here has one sound.
+
+Three of the four signs stand above, and they must be told apart: gi-gu is a curl, ’greng-bu a short straight stroke, na-ro a wavy stroke. The only sign below, zhabs-kyu, cannot be confused with anything. On the cards the course shows the signs on the letter ཨ, because it adds no sound of its own, but a sign can stand on any letter.
+
+Course words with each sign: འདི་ "this" and ཀྱི་ "of" with i; སྐུ་ "body" and གསུམ་ "three" with u; དེ་ "that" and མེ་ "fire" with e; ཆོས་ "Dharma" and མཆོག་ "supreme" with o.
+
+The vowel sign matters for more than the sound. It always stands on the root letter of the syllable, and when a syllable has several letters, the sign shows which of them is the main one. That becomes the chief method of reading in the part on syllables.
+
+## alphabet/10
+
+A Tibetan letter can stand not only in the line but under another letter, in a small form. There are four such subjoined letters: ya, ra, la and wa. The result is a stack: the main letter on top, the small one beneath it, and the vowel sign, if there is one, belongs to the whole stack. Wylie writes a stack simply in sequence: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa. English writing has nothing like it; the nearest idea is that two signs are read as one syllable.
+
+The subjoined ya, ya-tak, adds a y to the consonant: ཀྱ kya, as in ཀྱི་ "of" or in བརྒྱད་ "eight". With the lip letters it changes the sound more: པྱ sounds like cha, ཕྱ like cha with a puff, བྱ like ja, མྱ like nya. So ཕྱག་རྒྱ་ "mudrā" begins with a ch sound.
+
+The subjoined ra, ra-tak, turns the consonant into a sound made with the tongue curled back, something like the tr of "tree" or the dr of "dream": ཀྲ kra is read tra, དྲུག་ "six" is druk, སྒྲོལ་མ་ "Tārā" is drölma. The groups ཀྲ ཁྲ གྲ, ཏྲ ཐྲ དྲ and པྲ ཕྲ བྲ merge in the Lhasa pronunciation into the same three sounds: tr without a puff, tr with a puff, dr.
+
+The subjoined la, la-tak, behaves differently: the letter above falls silent, and only la is heard, with a high tone: བླ་མ་ "guru", སློབ་མ་ "student". There is one exception: ཟླ is read da. The subjoined wa, wa-zur, a small triangle, has no effect on the sound at all: གྲྭ་པ་ "monk" is read as if it were not there.
+
+On the cards the course shows the subjoined letters under ཀ, but they can hang under many letters. A stack is recognised by its lower part: a curl is ya, a short stroke is ra, a small la is la, a triangle is wa.
+
+## alphabet/11
+
+Three letters can stand not under another letter but on top of it: ra, la and sa. These are the superscribed letters, in Tibetan the "heads": ra-go, la-go, sa-go. Wylie writes the top letter first, because a stack is read from top to bottom: རྐ rka, ལྐ lka, སྐ ska. The letter beneath remains the root of the syllable, and the vowel sign, as always, belongs to the whole stack.
+
+In the Lhasa pronunciation the superscribed letter is silent, but it leaves a trace. A low letter under it loses its light puff and sounds firm: རྒ is ga, not kha. A nasal under a superscribed letter takes a high tone: རྔ is nga said high. High letters do not change: རྟ་ "horse" is read ta. One stack sounds as a whole: ལྷ, lha, as in ལྷ་ "god" and ལྷ་མོ་ "goddess", because here the superscribed ལ keeps its sound.
+
+Course words with superscribed letters: རྣམས་ "plural particle" is read nam with a high tone; སྐུ་ "body" and སྟོང་ "thousand" are read ku and tong. In རྒྱལ་མོ་ "queen" the stack has three storeys: superscribed ར, root ག, subjoined ཡ, and it is read gyäl: the suffix ལ turns a into ä.
+
+A superscribed letter is easily taken for an independent letter in the line, especially ས above narrow letters. The mark of a stack is its height: a stack rises above its neighbours, and the top letter in it is reduced. On the cards the course shows the superscribed letters above ཀ, but they can stand above many letters.
+
+With this part all three ways of putting letters on top of one another are known: subjoined below, superscribed above, the vowel sign on the whole stack. What remains are the letters that stand beside the root in the line: prefixes and suffixes.
+
+## alphabet/12
+
+A Tibetan syllable is built like a nest around its root letter. The full order is: prefix, superscribed letter, root, subjoined letter, vowel sign, suffix, second suffix. No syllable uses every place at once, but each of them can be filled. The root is the only part that must be there, and the vowel sign always stands on it. An example of a full syllable is བསྒྲུབས bsgrubs: prefix བ, superscribed ས, root ག, subjoined ར, vowel u, suffix བ, second suffix ས; it is read drup.
+
+Five letters can be prefixes: ག ད བ མ འ. They are written before the root in the line and are silent in the Lhasa pronunciation: གསུམ་ "three" is sum, བཞི་ "four" is zhi, མདོ་ "sūtra" is do, འདི་ "this" is di. Like a superscribed letter, a prefix makes the low letter after it firm and gives a nasal a high tone: དགུ་ "nine" is gu, གཉིས་ "two" is nyi with a high tone. English is used to letters that are written but not heard, the k of "knight", the b of "comb"; Tibetan silent letters are of the same kind, only more regular, since the five prefixes are always silent.
+
+Ten letters can be suffixes: ག ང ད ན བ མ འ ར ལ ས. They stand after the root and its vowel, and they fall into three groups by what they do to the sound. ང, མ, ར are heard as they are: དང་ "and" is dang, ལམ་ "path" is lam, འཁོར་ "retinue" is khor. ག is heard as a soft k or a catch in the voice, བ as a p or w: མཆོག་ "supreme" is chok, ཟབ་མོ་ "profound" is zapmo. The third group matters most: ད, ན, ལ, ས. ད and ས are not pronounced, ན and ལ are, but all four change the vowel before them: a becomes ä, o becomes ö, u becomes ü. The sound ä is close to the a of "cat"; ö is an e said with the lips rounded as for o, and ü an i said with the lips rounded as for u, the sounds of German or French, which English lacks. So བོད་ "Tibet" is read bö, ཆོས་ "Dharma" chö, རྒྱལ་མོ་ "queen" gyälmo, ཀུན་ "all" kün.
+
+The suffix འ is silent and only lengthens the vowel: བཀའ་ "words" is ka. The second suffix is only ས after another suffix, and it too is silent: རྣམས་ "plural particle" is nam, སངས་རྒྱས་ "Buddha" is sang-gye.
+
+This part is the key to reading. Everything that Tibetan writes but does not sound, the prefixes, the superscribed letters, the suffixes ད and ས, is left over from an older pronunciation, and Wylie faithfully shows that spelling, as English spelling keeps the gh of "night". So drop nothing when reading silently, and when reading aloud apply the rules of this part.
+
+## alphabet/13
+
+Now everything comes together: a syllable is in front of the reader, and the task is to find its root and how it sounds. The order is always the same. First look for a vowel sign: the letter under it is the root. If there is no sign, look for a stack: the letter with something above or below it is the root. If there is neither, then in a pair of letters the root is the first and the suffix the second: ཁང is read khang, ངན is ngän. In a bare run of three letters the first is a prefix, the second the root, the third a suffix: དམར is mar, གསར is sar, བཟང is zang; but if the last letter is ས and another suffix stands before it, the syllable begins with the root: སངས is sang.
+
+The rest applies the rules of the earlier parts. Once the root is found, see whether it is low or high and whether something before it or above it makes it firm. Then read the vowel, remembering the suffixes ད ན ལ ས, which turn a, o, u into ä, ö, ü. Then add the suffix, if it is heard.
+
+A few syllables of the course to take apart. ཆོས: root ཆ with the sign o, suffix ས: chö. སློབ: superscribed ས, root ལ, sign o, suffix བ: lop. རྙིང: superscribed ར, root ཉ with the sign i, suffix ང: nying with a high tone. མཆོག: prefix མ, root ཆ, sign o, suffix ག: chok. བདེ: prefix བ, root ད with the sign e: de. འབྱོར: prefix འ, root བ with subjoined ཡ and the sign o, suffix ར: jor. རྫོགས: superscribed ར, root ཛ, sign o, suffix ག, second suffix ས: dzok. ཕྱག: root ཕ with subjoined ཡ, suffix ག: chak. སྒྲོལ: superscribed ས, root ག, subjoined ར, sign o, suffix ལ: dröl.
+
+In the training of this part every syllable is taken from a word of the course, so each will be met again in words and sentences: ཆོས་ "Dharma", སློབ་མ་ "student", རྙིང་པ་ "old", མཆོག་ "supreme", བདེ་བ་ "happiness", རྣལ་འབྱོར་པ་ "yogin", རྫོགས་པ་ "perfection", ཕྱག་རྒྱ་ "mudrā", སྒྲོལ་མ་ "Tārā". Taking a syllable apart is slow at first; after a couple of dozen syllables it becomes a glance.
+
+## alphabet/14
+
+A Tibetan word is one or more syllables separated by the tsheg. Most words of the course have two syllables, and very often the second one is one of the particles པ, བ, མ, པོ, བོ, མོ: ཁང་པ་ "house", དགོན་པ་ "monastery", སློབ་མ་ "student", དམར་པོ་ "red", ཆེན་པོ་ "big", ལྷ་མོ་ "goddess". So when a syllable is followed by a bare syllable of one letter and a sign, that is almost always the end of a word.
+
+The tsheg stands after every syllable, not between words, so by itself it does not show a word boundary. ཉི་མ་ "sun" and སངས་རྒྱས་ "Buddha" are one word each, though they contain as many dots as two one-syllable words in a row. English marks every word with a space; a Tibetan reader finds the boundaries by knowing the words, and that is why the course teaches reading words as wholes before it turns to sentences. In Wylie the syllables are separated by a space, and the word gön-pa looks like dgon pa; that is syllable by syllable, not two words.
+
+Long words are often put together from short ones: རྣལ་འབྱོར་པ་ "yogin" is རྣལ་འབྱོར་ "yoga" with the particle པ; དཀྱིལ་འཁོར་ "maṇḍala" is "centre" and "surroundings". The longest word of this part, མྱ་ངན་ལས་འདས་པ་ "nirvāṇa", literally "passed beyond sorrow", has five syllables. Read such words syllable by syllable, using the analysis of the previous part, and then put them together.
+
+The pronunciation of a whole word has one more feature: the rules of the suffixes work inside each syllable separately. ཐམས་ཅད་ "all" is read thamchä: in the first syllable the suffix མ is heard and the second suffix ས is silent, in the second syllable ད turns a into ä. བུམ་པ་ "vase" is bumpa, ཚ་པོ་ "hot" is tsapo, བླ་མ་ "guru" is lama.
+
+The training of this part shows the words of the course whole. If a word reads at first sight, good; if not, find the root in each syllable and build it up step by step, there is no hurry.
+
+## alphabet/15
+
+The last part of the alphabet module brings the first sentences of the course. A sentence, like a word, runs as an unbroken chain of syllables with tshegs; the end of a sentence or of one of its parts is marked by the shad, the vertical stroke །. Before the shad the tsheg is usually dropped, and only after the letter ང is it kept. A double shad closes a large section of a text. Tibetan writing has no capitals, no full stops, commas or question marks: everything they do in English is done by particles and by word order.
+
+The five sentences of this part come from the first lesson. They are short noun phrases: དགོན་པ་དམར་པོ་ "red monastery", ཆོས་པ་བཟང་པོ་ "excellent Dharma practitioner", བདེ་བ་ཆེན་པོ་ "great bliss", ཉི་མ་ཚ་པོ་ "hot sun", སློབ་མ་བཟང་པོ་ "good student". Each has two words, and it is easy to see that the order is the reverse of English: first the noun, then the adjective. This is the first rule of the first lesson, where it is explained in detail; here it is enough to notice it.
+
+When reading aloud, apply what the earlier parts put together: find the root of every syllable, watch for the suffixes ད ན ལ ས that change the vowel, remember the silent prefixes. For example, དགོན་པ་དམར་པོ་ "red monastery" is read gönpa marpo: in the first syllable the prefix ད is silent and the suffix ན turns o into ö; in the third syllable the prefix ད is silent again. The word བཟང་པོ་ "good" is read zangpo, and ཆོས་པ་ "Dharma practitioner" is chöpa.
+
+The course shows every sentence with its Wylie and its translation, and every word can be tapped. The training of this part is to choose the meaning of a sentence, and the check is to build it from tiles, word by word. From this point the lessons begin: grammar is added to reading, and the sentences grow.

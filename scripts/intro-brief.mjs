@@ -27,6 +27,8 @@ const words = json('words.json');
 const sentences = json('sentences.json');
 const course = json('course.json');
 
+if (setId.startsWith('alphabet/')) { await alphabetBrief(setId); process.exit(0); }
+
 const set = sets.find((s) => s.id === setId);
 if (!set) { console.error(`unknown set ${setId}`); process.exit(2); }
 const pool = sentences.filter((s) => s.set === setId);
@@ -95,3 +97,60 @@ if (book) {
 }
 
 process.stdout.write(out.join('\n') + '\n');
+
+/**
+ * The brief of a part of the alphabet module (`alphabet/<n>`): its title, the
+ * signs it introduces with their names, tones, look-alikes, sounds in every
+ * language and example words, the short introduction the cards already show,
+ * and for the last parts the syllables, words or sentences they drill.
+ */
+async function alphabetBrief(id) {
+  const { PARTS, ROWS, partSigns, partNewItems, FIRST_SENTENCES } = await import('../site/src/engine/alphabet.js');
+  const alphabet = json('alphabet.json');
+  const n = Number(id.split('/')[1]);
+  const part = PARTS.find((p) => p.n === n);
+  if (!part) { console.error(`unknown part ${id}; parts: 1..${PARTS.length}`); process.exit(2); }
+  const strings = {};
+  for (const l of LANGS) strings[l] = (await import(`../site/src/i18n/${l}.js`)).default;
+  const tr = (w) => LANGS.filter((l) => w.tr && w.tr[l]).map((l) => `${l}: ${w.tr[l]}`).join('  |  ');
+  const o = [];
+  o.push(`# Brief: ${id} (part ${n} of ${PARTS.length} of the alphabet module, kind: ${part.kind})`);
+  o.push('');
+  o.push('## Title of the part in the app');
+  for (const l of LANGS) o.push(`- ${l}: ${strings[l].alphabet.parts[n]}`);
+  o.push('');
+  o.push('## All parts of the module, in order (what came before, what comes after)');
+  for (const p of PARTS) o.push(`- ${p.n}. ${strings.en.alphabet.parts[p.n]}${p.n === n ? '   <- this part' : ''}`);
+  o.push('');
+  if (part.kind === 'letters') {
+    o.push('## Letters taught before this part');
+    o.push(ROWS.slice(0, part.row).flat().join(' ') || '(none: this is the first row)');
+    o.push('');
+  }
+  const signs = partSigns(part, alphabet);
+  if (signs.length) {
+    o.push('## The signs of this part (the cards of its first step)');
+    for (const e of signs) {
+      o.push(`- ${e.tib}  Wylie: ${e.wylie}  name: ${e.name}  kind: ${e.kind}${e.tone ? `  tone: ${e.tone === 'H' ? 'high' : 'low'}` : ''}  looks like: ${e.similar.join(' ')}`);
+      for (const l of LANGS) o.push(`  sound ${l}: ${e.sound[l]}`);
+      for (const wid of e.examples || []) { const w = words[wid]; if (w) o.push(`  example: ${w.tib} (${w.wylie})  |  ${tr(w)}`); }
+    }
+    o.push('');
+  }
+  if (part.kind === 'syllables' || part.kind === 'words') {
+    const items = partNewItems(part, alphabet, words, sets);
+    const byTib = new Map(Object.values(words).filter((w) => !w.service).map((w) => [w.tib, w]));
+    o.push(`## What this part drills: ${items.length} ${part.kind} of the course, the first of them`);
+    for (const x of items.slice(0, 40)) { const w = byTib.get(x.tib) || byTib.get(x.tib + '་'); o.push(`- ${x.tib} (${x.wylie})${w ? `  |  ${tr(w)}` : ''}`); }
+    o.push('');
+  }
+  if (part.kind === 'sentences') {
+    o.push('## The sentences of this part (the first sentences of lesson 1; copy examples from here verbatim)');
+    for (const s of sentences.filter((s) => s.set === sets[0].id).slice(0, FIRST_SENTENCES)) o.push(`- ${renderTib(s.words, words)}  |  ${tr(s)}`);
+    o.push('');
+  }
+  o.push('## The short introduction the cards of this part already show (do not repeat it; go deeper)');
+  for (const l of LANGS) o.push(`- ${l}: ${(alphabet.intros[String(n)] || {})[l] || ''}`);
+  o.push('');
+  process.stdout.write(o.join('\n') + '\n');
+}

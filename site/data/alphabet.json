@@ -875,11 +875,11 @@
         "ཀ"
       ],
       "sound": {
-        "en": "a ra on top of the letter is silent; it makes a low-tone letter sound firm and high: རྒ is ga with a high tone",
-        "ru": "ra над буквой не произносится; оно делает низкую букву твёрдой и высокой: རྒ звучит как га с высоким тоном",
-        "de": "ein ra über dem Buchstaben ist stumm; es macht einen tiefen Buchstaben fest und hoch: རྒ klingt wie ga mit hohem Ton",
-        "fr": "un ra au-dessus de la lettre est muet ; il rend une lettre basse ferme et haute : རྒ se dit ga avec un ton haut",
-        "pl": "ra nad literą jest nieme; nadaje niskiej literze twardość i wysoki ton: རྒ brzmi jak ga z wysokim tonem"
+        "en": "a ra on top of the letter is silent; the letter below loses its puff of air, and a nasal below gets a high tone: རྒ is ga, རྔ is nga with a high tone",
+        "ru": "ra над буквой не произносится; буква под ним теряет выдох, а носовая получает высокий тон: རྒ звучит как га, རྔ — как нга с высоким тоном",
+        "de": "ein ra über dem Buchstaben ist stumm; der Buchstabe darunter verliert seinen Hauch, ein Nasal bekommt den hohen Ton: རྒ klingt wie ga, རྔ wie nga mit hohem Ton",
+        "fr": "un ra au-dessus de la lettre est muet ; la lettre du dessous perd son souffle, une nasale prend le ton haut : རྒ se dit ga, རྔ nga avec un ton haut",
+        "pl": "ra nad literą jest nieme; litera pod nim traci przydech, a nosowa dostaje wysoki ton: རྒ brzmi jak ga, རྔ jak nga z wysokim tonem"
       },
       "examples": [
         "rta",
@@ -921,11 +921,11 @@
         "ཀ"
       ],
       "sound": {
-        "en": "a sa on top of the letter is silent and works like ra-go: སྒ is ga with a high tone",
-        "ru": "sa над буквой не произносится и работает как ra-go: སྒ звучит как га с высоким тоном",
-        "de": "ein sa über dem Buchstaben ist stumm und wirkt wie ra-go: སྒ klingt wie ga mit hohem Ton",
-        "fr": "un sa au-dessus de la lettre est muet et agit comme ra-go : སྒ se dit ga avec un ton haut",
-        "pl": "sa nad literą jest nieme i działa jak ra-go: སྒ brzmi jak ga z wysokim tonem"
+        "en": "a sa on top of the letter is silent and works like ra-go: སྒ is ga, སྔ is nga with a high tone",
+        "ru": "sa над буквой не произносится и работает как ra-go: སྒ звучит как га, སྔ — как нга с высоким тоном",
+        "de": "ein sa über dem Buchstaben ist stumm und wirkt wie ra-go: སྒ klingt wie ga, སྔ wie nga mit hohem Ton",
+        "fr": "un sa au-dessus de la lettre est muet et agit comme ra-go : སྒ se dit ga, སྔ nga avec un ton haut",
+        "pl": "sa nad literą jest nieme i działa jak ra-go: སྒ brzmi jak ga, སྔ jak nga z wysokim tonem"
       },
       "examples": [
         "sku",
@@ -1364,11 +1364,11 @@
       "pl": "Sylaba buduje się wokół litery rdzennej: przedrostek · nadpisana · rdzeń · podpisana · samogłoska · przyrostek · drugi przyrostek. Znak samogłoski stoi na rdzeniu. Przedrostkiem może być pięć liter (ga da ba ma ’a), przyrostkiem dziesięć (ga nga da na ba ma ’a ra la sa). Przykład: བསྒྲུབས bsgrubs ma rdzeń ག z sa u góry, ra u dołu, u, przyrostek བ i drugi przyrostek ས; czyta się drup."
     },
     "13": {
-      "en": "To read a syllable, find its root: the letter with the vowel sign, or the letter with something on top or below, or the second letter of a bare pair. Then read prefix and suffix as silent or as they change the vowel. Real syllables of the course follow.",
-      "ru": "Чтобы прочитать слог, найдите корень: букву со знаком гласного, или букву с надписной либо подписной, или вторую букву в голой паре. Потом учтите приставку и суффикс: они молчат или меняют гласный. Дальше настоящие слоги курса.",
-      "de": "Um eine Silbe zu lesen, such die Wurzel: den Buchstaben mit dem Vokalzeichen, oder den mit etwas darüber oder darunter, oder den zweiten eines nackten Paares. Dann lies Präfix und Suffix als stumm oder nach ihrer Wirkung auf den Vokal. Es folgen echte Silben des Kurses.",
-      "fr": "Pour lire une syllabe, trouvez sa racine : la lettre qui porte le signe de voyelle, ou celle qui a quelque chose dessus ou dessous, ou la seconde d’une paire nue. Puis lisez préfixe et suffixe comme muets ou selon leur effet sur la voyelle. Suivent de vraies syllabes du cours.",
-      "pl": "Aby przeczytać sylabę, znajdź rdzeń: literę ze znakiem samogłoski, albo tę z czymś nad lub pod sobą, albo drugą w gołej parze. Potem uwzględnij przedrostek i przyrostek: milczą albo zmieniają samogłoskę. Dalej prawdziwe sylaby z kursu."
+      "en": "To read a syllable, find its root: the letter with the vowel sign, or the letter with something on top or below, or, in a bare pair of letters, the first one. Then read prefix and suffix as silent or as they change the vowel. Real syllables of the course follow.",
+      "ru": "Чтобы прочитать слог, найдите корень: букву со знаком гласного, или букву с надписной либо подписной, а в голой паре букв корень — первая. Потом учтите приставку и суффикс: они молчат или меняют гласный. Дальше настоящие слоги курса.",
+      "de": "Um eine Silbe zu lesen, such die Wurzel: den Buchstaben mit dem Vokalzeichen, oder den mit etwas darüber oder darunter, oder, in einem nackten Paar, den ersten. Dann lies Präfix und Suffix als stumm oder nach ihrer Wirkung auf den Vokal. Es folgen echte Silben des Kurses.",
+      "fr": "Pour lire une syllabe, trouvez sa racine : la lettre qui porte le signe de voyelle, ou celle qui a quelque chose dessus ou dessous, ou, dans une paire nue, la première. Puis lisez préfixe et suffixe comme muets ou selon leur effet sur la voyelle. Suivent de vraies syllabes du cours.",
+      "pl": "Aby przeczytać sylabę, znajdź rdzeń: literę ze znakiem samogłoski, albo tę z czymś nad lub pod sobą, albo w gołej parze pierwszą. Potem uwzględnij przedrostek i przyrostek: milczą albo zmieniają samogłoskę. Dalej prawdziwe sylaby z kursu."
     },
     "14": {
       "en": "Words are syllables separated by the tsheg dot. Read them one syllable at a time; in Wylie the syllables are separated by spaces: དགོན་པ་ dgon pa. These are whole words of the course.",

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseIntroMarkdown, piecesOf, tokenizeParagraph, theoryOf, needsTheory, plainText } from '../theory.js';
+import { parseIntroMarkdown, piecesOf, tokenizeParagraph, theoryOf, needsTheory, theoryKey, plainText } from '../theory.js';
 import { createProgress } from '../progress.js';
 
 const dict = {
@@ -48,4 +48,17 @@ test('theoryOf falls back to English; needsTheory only before the first part of 
   assert.equal(needsTheory(p, { id: 'alphabet/1', module: 'alphabet', part: 1 }, intro), false);
   assert.equal(needsTheory({ ...p, course: { ...p.course, theory: ['lesson-01'] } }, first, intro), false, 'read already');
   assert.equal(needsTheory({ ...p, course: { ...p.course, units: { 'lesson-01/1': { step: 2, done: [] } } } }, first, intro), false, 'the part is under way');
+});
+
+test('an alphabet part has its own theory page, keyed by the part id', () => {
+  const intro = { 'alphabet/3': { en: [['t']] } };
+  const third = { id: 'alphabet/3', module: 'alphabet', part: 3 };
+  assert.equal(theoryKey(third), 'alphabet/3');
+  assert.equal(theoryKey({ id: 'lesson-02/3', module: 'lesson-02' }), 'lesson-02');
+  assert.deepEqual(theoryOf(intro, 'alphabet/3', 'ru'), [['t']], 'English fallback');
+  const p = createProgress(new Date('2026-10-19T10:00:00Z'));
+  assert.equal(needsTheory(p, third, intro), true, 'any part, not only the first');
+  assert.equal(needsTheory(p, { id: 'alphabet/4', module: 'alphabet', part: 4 }, intro), false, 'no text, no page');
+  assert.equal(needsTheory({ ...p, course: { ...p.course, theory: ['alphabet/3'] } }, third, intro), false, 'read already');
+  assert.equal(needsTheory({ ...p, course: { ...p.course, units: { 'alphabet/3': { step: 2, done: [] } } } }, third, intro), false, 'the cards were seen');
 });

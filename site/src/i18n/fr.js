@@ -132,6 +132,8 @@ export default {
     theoryNext: 'Ensuite, les mots',
     theoryHint: 'Toucher un mot tibétain pour voir son sens.',
     theoryWordHint: 'Le sens du mot ; la traduction de la phrase entière la suit dans le texte.',
+    theoryNextSigns: 'Ensuite, les signes',
+    theorySignHint: 'Touchez une lettre pour voir son son, ou un mot pour voir son sens.',
     wordsIntro: 'Les {n} mots nouveaux de cette partie. Lisez-les, écoutez-les si la voix est activée, regardez les exemples ; puis construisez les phrases.',
     wordsNext: 'Passer aux tuiles',
     stepDone: 'Étape terminée',

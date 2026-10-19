@@ -53,24 +53,26 @@ const { data: intro } = readJson('intro.json');
 // ---- the theory texts: every lesson in every language, made of the course's words ----
 {
   const langs = ['en', 'ru', 'de', 'fr', 'pl'];
-  for (const set of sets) {
-    const m = intro[set.id];
-    if (!m) { err(`intro: ${set.id} has no theory text`); continue; }
+  // every lesson and every part of the alphabet module (`alphabet/<n>`) has a page in every language
+  const ids = [...sets.map((s) => s.id), ...Object.keys(alphabet.intros || {}).map((n) => `alphabet/${n}`)];
+  for (const id of ids) {
+    const m = intro[id];
+    if (!m) { err(`intro: ${id} has no theory text`); continue; }
     for (const lang of langs) {
       const paras = m[lang];
-      if (!paras || !paras.length) { err(`intro: ${set.id} has no theory text in ${lang}`); continue; }
+      if (!paras || !paras.length) { err(`intro: ${id} has no theory text in ${lang}`); continue; }
       let unread = 0;
       for (const para of paras) {
         for (const tok of para) {
           if (typeof tok === 'string') continue;
           if (!tok.pieces) { if ((tok.tib.match(/་/g) || []).length >= 2) unread++; continue; }
-          for (const piece of tok.pieces) for (const id of piece.ids) if (!words[id]) err(`intro: ${set.id} ${lang}: unknown word ${id}`);
+          for (const piece of tok.pieces) for (const wid of piece.ids) if (!words[wid]) err(`intro: ${id} ${lang}: unknown word ${wid}`);
         }
       }
-      if (unread) warn(`intro: ${set.id} ${lang}: ${unread} Tibetan runs are not made of the course's words (no word help)`);
+      if (unread) warn(`intro: ${id} ${lang}: ${unread} Tibetan runs are not made of the course's words (no word help)`);
     }
   }
-  for (const id of Object.keys(intro)) if (!sets.some((s) => s.id === id)) err(`intro: ${id} is not a set`);
+  for (const id of Object.keys(intro)) if (!ids.includes(id)) err(`intro: ${id} is not a set or an alphabet part`);
 }
 
 // ---- course units: the shipped file must be what the splitter gives for this content ----

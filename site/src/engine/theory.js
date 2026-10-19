@@ -1,8 +1,9 @@
-// The theory text of a lesson: the page a learner reads before the first
-// part of a module (content/intro/<lang>.md → site/data/intro.json). Pure
+// The theory text of a lesson or of a part of the alphabet: the page a
+// learner reads before the first part of a module, or before the cards of an
+// alphabet part (content/intro/<lang>.md → site/data/intro.json). Pure
 // functions shared by the content build and the site.
 //
-// intro.json: { [module id]: { [lang]: paragraphs } }, a paragraph being a
+// intro.json: { [module id | 'alphabet/<n>']: { [lang]: paragraphs } }, a paragraph being a
 // list of tokens: a plain string, or a Tibetan run made of the course's words
 //   { pieces: [{ t: 'བླ་མའི་', ids: ['bla-ma', 'i'] }, { t: 'ཆོས', ids: ['chos'] }, { t: '།', ids: [] }] }
 // or, when the run is not made of the course's words (a lone letter in a
@@ -74,18 +75,25 @@ export function tokenizeParagraph(text, segment, dict) {
   return tokens;
 }
 
-/** The paragraphs of a module's theory in `lang`, English as the fallback; [] when the module has none. */
-export function theoryOf(intro, moduleId, lang) {
-  const m = intro && intro[moduleId];
+/** The paragraphs of a theory page in `lang`, English as the fallback; [] when there is none. `key` is a module id or an alphabet part id. */
+export function theoryOf(intro, key, lang) {
+  const m = intro && intro[key];
   if (!m) return [];
   return m[lang] || m.en || [];
 }
 
-/** The theory page is still ahead of the learner: the unit opens its module, nothing of it is done, and the page was not read. */
+/** The theory page a unit belongs to: a lesson's page is its module's, an alphabet part has its own (`alphabet/3`). */
+export function theoryKey(unit) {
+  return unit.part ? unit.id : unit.module;
+}
+
+/** The theory page is still ahead of the learner: the unit opens its page (the first part of a lesson, or any alphabet part), nothing of it is done, and the page was not read. */
 export function needsTheory(progress, unit, intro) {
-  if (!unit || unit.part || !intro || !intro[unit.module]) return false;
-  if (unit.id.split('/')[1] !== '1') return false;
-  if (progress.course.theory.includes(unit.module)) return false;
+  if (!unit || !intro) return false;
+  const key = theoryKey(unit);
+  if (!intro[key]) return false;
+  if (!unit.part && unit.id.split('/')[1] !== '1') return false;
+  if (progress.course.theory.includes(key)) return false;
   const rec = progress.course.units[unit.id];
   return !rec || (rec.step <= 1 && !(rec.done && rec.done.length));
 }

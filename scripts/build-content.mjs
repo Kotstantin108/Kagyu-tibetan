@@ -351,6 +351,8 @@ writeFileSync(join(OUT, 'alphabet.json'), JSON.stringify({ letters: letterRows, 
 
 // ---- the theory texts: content/intro/<lang>.md → intro.json, Tibetan runs segmented into tappable words ----
 const INTRO_LANGS = ['en', 'ru', 'de', 'fr', 'pl'];
+// the parts of the alphabet module have theory pages too: sections `## alphabet/<n>`
+const ALPHA_PARTS = new Set(Object.keys(intros).map((n) => `alphabet/${n}`));
 const intro = {};
 const introStats = [];
 for (const lang of INTRO_LANGS) {
@@ -359,7 +361,7 @@ for (const lang of INTRO_LANGS) {
   const sections = parseIntroMarkdown(text);
   let unread = 0;
   for (const [setId, paragraphs] of Object.entries(sections)) {
-    if (!setOrder.has(setId)) { errors.push(`intro/${lang}.md: unknown set ${setId}`); continue; }
+    if (!setOrder.has(setId) && !ALPHA_PARTS.has(setId)) { errors.push(`intro/${lang}.md: unknown set or alphabet part ${setId}`); continue; }
     if (!paragraphs.length) { warnings.push(`intro/${lang}.md: ${setId} is empty`); continue; }
     intro[setId] = intro[setId] || {};
     intro[setId][lang] = paragraphs.map((p) => tokenizeParagraph(p, (run) => segment(run, `intro/${lang}.md ${setId}`, true), wordsOut));
@@ -371,11 +373,12 @@ for (const lang of INTRO_LANGS) {
       }
     }
   }
-  introStats.push(`${lang}: ${Object.keys(sections).length} lessons${unread ? `, ${unread} unread runs` : ''}`);
+  const n = Object.keys(sections);
+  introStats.push(`${lang}: ${n.filter((id) => setOrder.has(id)).length} lessons, ${n.filter((id) => ALPHA_PARTS.has(id)).length} alphabet parts${unread ? `, ${unread} unread runs` : ''}`);
 }
-for (const set of sets) {
-  if (!intro[set.id]) { warnings.push(`intro: ${set.id} has no theory text`); continue; }
-  for (const lang of INTRO_LANGS) if (!intro[set.id][lang]) warnings.push(`intro: ${set.id} has no theory text in ${lang}`);
+for (const id of [...sets.map((s) => s.id), ...ALPHA_PARTS]) {
+  if (!intro[id]) { warnings.push(`intro: ${id} has no theory text`); continue; }
+  for (const lang of INTRO_LANGS) if (!intro[id][lang]) warnings.push(`intro: ${id} has no theory text in ${lang}`);
 }
 writeFileSync(join(OUT, 'intro.json'), JSON.stringify(intro) + '\n'); // compact: five languages of prose
 

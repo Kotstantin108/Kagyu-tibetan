@@ -11,7 +11,7 @@
 //   course: { started, canRead: true|false|null (the answer to the script question), current: unitId|null,
 //             units: { unitId: { step: 1..6, done: [sentenceIds of the current step], best, attempts, passedAt, updatedAt } },
 //             alphabetExam: { best, attempts, passedAt } | null,
-//             theory: [module ids whose theory page was read] }
+//             theory: [module ids and alphabet part ids whose theory page was read] }
 //   reading: keys are alphabet parts 'alphabet/1' … (older records had stage ids rows1 … fullwords; they are migrated on load)
 //   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, voice, theme, onboarded,
 //              home: 'course'|'play'|null, tashi (the mascot is shown), tashiMet (he introduced himself) }
@@ -293,10 +293,10 @@ function withUnit(progress, unitId, unit, now) {
   return touch({ ...progress, course: { ...progress.course, units: { ...progress.course.units, [unitId]: next } } }, now);
 }
 
-/** The theory page of a module was read (the "next" button at its end). */
-export function markTheory(progress, moduleId, now = new Date()) {
-  if (progress.course.theory.includes(moduleId)) return progress;
-  return touch({ ...progress, course: { ...progress.course, theory: [...progress.course.theory, moduleId] } }, now);
+/** A theory page was read (the "next" button at its end): `key` is a module id or an alphabet part id (`alphabet/3`). */
+export function markTheory(progress, key, now = new Date()) {
+  if (progress.course.theory.includes(key)) return progress;
+  return touch({ ...progress, course: { ...progress.course, theory: [...progress.course.theory, key] } }, now);
 }
 
 /** The learner entered the course (the one-time dialogs are over). */

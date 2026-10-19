@@ -70,3 +70,82 @@ author or page numbers.
 
 ...
 ```
+
+---
+
+# Prompt: the theory text of a part of the alphabet
+
+The alphabet module has fifteen parts (eight rows of letters, the vowel
+signs, the subjoined and the superscribed letters, prefixes and suffixes,
+syllables, words, the first sentences), and each part opens with a theory
+page too. The sections are `## alphabet/<n>` in the same files; the brief of
+a part comes from `node scripts/intro-brief.mjs alphabet/<n>` and gives the
+signs of the part with their names, tones, look-alikes, the sound
+descriptions in every language and example words, plus the short
+introduction the cards of the part already show.
+
+---
+
+You are writing the theory page of one part of the alphabet module of a
+course of Classical Tibetan for a learner whose language is **{LANGUAGE}**.
+The page is read once before the part's cards and drills, on a phone, and
+can be reopened later. The brief attached below gives the signs of the part
+with everything the app knows about them, and a short introduction that the
+cards already show: do not repeat that introduction, go deeper.
+
+Write the text in {LANGUAGE}, following these rules.
+
+**What to cover.** The place of the part in the module (what the learner
+knows already, what this part adds), every sign of the part with its name,
+its Wylie, its tone where it has one, how it sounds, and the course words
+that show it; the look-alike signs the brief names and how to tell them
+apart; the writing conventions the part needs (the tsheg, the shad, the
+Wylie transliteration, stacks, where a vowel sign goes). The first part also
+introduces the script itself: its age and Indian origin, the headed print
+style, that every letter carries the vowel a, no spaces between words, no
+capitals, what Wylie is and that it shows spelling rather than sound. The
+pronunciation is that of Lhasa, as the brief's sound descriptions give it:
+a prefix or a superscribed letter is silent, makes a low letter lose its
+puff of air and gives a nasal a high tone; the suffixes ད ན ལ ས turn a, o,
+u into ä, ö, ü; ད and ས are then silent, ན and ལ are heard.
+
+**Explain for a speaker of {LANGUAGE}.** Compare every sound with the
+nearest sound of {LANGUAGE} and say where it differs (aspiration, tone,
+voicing, a sound {LANGUAGE} lacks). Compare the writing with the writing of
+{LANGUAGE}: vowels as letters in the line versus signs above and below,
+spaces versus the tsheg, silent letters {LANGUAGE} has or lacks. Do not
+compare with a language other than {LANGUAGE} unless it says something
+{LANGUAGE} cannot (an umlaut, a w). Use the names the app uses in {LANGUAGE}
+for the parts and for the signs (gi-gu, zhabs-kyu, ya-tak, ra-go, a-chung,
+a-chen; the brief's names).
+
+**Shapes.** Do not invent descriptions of strokes. Say which signs look
+alike and name only what the brief or the model text states (ba is closed at
+the bottom; tsa, tsha and dza are ca, cha and ja with a small added stroke at
+the top right; the subjoined wa is a small triangle; the three upper vowel
+signs are a curl, a straight short stroke and a wavy stroke); otherwise send
+the learner to compare the two signs side by side on the cards.
+
+**Examples.** Every Tibetan word mentioned is a word of the course from the
+brief (an example word of a sign, a syllable or word of the drill lists, a
+sentence of the last part), copied verbatim with its final tsheg, and
+followed at once by its gloss in the quotation marks of {LANGUAGE}: ཁང་པ་
+"house". Single letters, letters with a vowel sign and stacks stand alone
+without a gloss (ཀི, ཀྱ, རྐ). A syllable of a word may be written alone,
+without tsheg, when the part is about syllables (ཁང). Never alter or invent
+Tibetan; a word not in the brief is not available.
+
+**Tone and form.** The same as for the lessons: calm, plain, the voice of a
+patient teacher, no exclamations, no humour, no lists, no headings, no bold.
+Four to six paragraphs, 150 to 320 words of {LANGUAGE} (the first part and
+the part on prefixes and suffixes may reach 420), not counting the Tibetan.
+
+**Output.** Exactly this, nothing before or after:
+
+```
+## alphabet/{N}
+
+<paragraph>
+
+...
+```
