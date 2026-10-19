@@ -1,6 +1,9 @@
 // Merging two progress records (local and remote). Pure function.
 // - words and sentences: the entry with the later updatedAt/lastSolved wins;
 // - reading: rounds and best are maxima, updatedAt the later one;
+// - course: per unit the record with the larger step wins; at the same step
+//   the solved lists unite and best/attempts are maxima; started is an OR,
+//   canRead and current come from the record with the later updatedAt;
 // - streak: best is the maximum; current/lastDay/today* come from the record
 //   with the later lastDay (ties: the one with the larger current);
 // - settings: from the record with the later updatedAt.
@@ -53,6 +56,27 @@ export function mergeProgress(localRaw, remoteRaw, now = new Date()) {
     if (!a || !b) { out.reading[id] = { ...(a || b) }; continue; }
     out.reading[id] = { rounds: Math.max(a.rounds, b.rounds), best: Math.max(a.best, b.best), updatedAt: later(b.updatedAt, a.updatedAt) ? b.updatedAt : a.updatedAt };
   }
+
+  const unitIds = new Set([...Object.keys(local.course.units), ...Object.keys(remote.course.units)]);
+  for (const id of unitIds) {
+    const a = local.course.units[id];
+    const b = remote.course.units[id];
+    if (!a || !b) { out.course.units[id] = { ...(a || b), done: [...(a || b).done] }; continue; }
+    if (a.step !== b.step) { const win = a.step > b.step ? a : b; out.course.units[id] = { ...win, done: [...win.done], best: Math.max(a.best, b.best), attempts: Math.max(a.attempts, b.attempts) }; continue; }
+    out.course.units[id] = {
+      step: a.step,
+      done: [...new Set([...a.done, ...b.done])],
+      best: Math.max(a.best, b.best),
+      attempts: Math.max(a.attempts, b.attempts),
+      passedAt: a.passedAt && b.passedAt ? (later(b.passedAt, a.passedAt) ? a.passedAt : b.passedAt) : a.passedAt || b.passedAt,
+      updatedAt: later(b.updatedAt, a.updatedAt) ? b.updatedAt : a.updatedAt,
+    };
+  }
+  const newer = later(remote.updatedAt, local.updatedAt) ? remote : local;
+  const older = newer === remote ? local : remote;
+  out.course.started = local.course.started || remote.course.started;
+  out.course.canRead = newer.course.canRead !== null ? newer.course.canRead : older.course.canRead;
+  out.course.current = newer.course.current || older.course.current;
 
   const ls = local.streak;
   const rs = remote.streak;

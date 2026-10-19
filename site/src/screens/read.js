@@ -7,8 +7,10 @@ import { recordReadingRound } from '../engine/progress.js';
 
 export function renderRead(root, ctx) {
   const { store, data, t } = ctx;
-  const stageId = STAGE_IDS.includes(ctx.param) ? ctx.param : null;
+  const [stageParam, from] = (ctx.param || '').split('/');
+  const stageId = STAGE_IDS.includes(stageParam) ? stageParam : null;
   if (!stageId) return renderList(root, ctx);
+  const fromCourse = from === 'course';
 
   const items = stageItems(stageId, data.words, data.sets);
   const total = Math.min(ROUND_SIZE, items.length);
@@ -27,8 +29,8 @@ export function renderRead(root, ctx) {
   const btnNext = h('button', { type: 'button', class: 'action next', id: 'read-next', hidden: true, onClick: next }, t('read.next'));
   const btnAgain = h('button', { type: 'button', class: 'action primary', id: 'read-again', hidden: true, onClick: () => deal() }, t('read.again'));
   const nextStage = STAGE_IDS[STAGE_IDS.indexOf(stageId) + 1];
-  const btnNextStage = nextStage ? h('a', { class: 'action', href: `#/read/${nextStage}`, hidden: true }, t('read.nextStage')) : null;
-  const btnBack = h('a', { class: 'action', href: '#/read' }, t('read.back'));
+  const btnNextStage = nextStage ? h('a', { class: 'action', href: `#/read/${nextStage}${fromCourse ? '/course' : ''}`, hidden: true }, t('read.nextStage')) : null;
+  const btnBack = h('a', { class: 'action', href: fromCourse ? '#/course' : '#/read' }, fromCourse ? t('course.toMap') : t('read.back'));
   const result = h('div', { class: 'read-result', hidden: true });
 
   root.append(h('section', { class: 'panel' },

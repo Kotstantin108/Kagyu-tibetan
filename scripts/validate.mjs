@@ -1,10 +1,11 @@
-// Validates site/data/{words,sentences,sets}.json.
+// Validates site/data/{words,sentences,sets,course}.json.
 //   node scripts/validate.mjs
 // Exit code 1 on errors; warnings do not fail the run.
 
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { splitUnits } from '../site/src/engine/course.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'site', 'data');
@@ -24,6 +25,21 @@ function readJson(name) {
 const { data: sets } = readJson('sets.json');
 const { raw: wordsRaw, data: words } = readJson('words.json');
 const { data: sentences } = readJson('sentences.json');
+const { data: course } = readJson('course.json');
+
+// ---- course units: the shipped file must be what the splitter gives for this content ----
+{
+  const rebuilt = JSON.stringify({ modules: splitUnits(sentences, words, sets) });
+  if (rebuilt !== JSON.stringify(course)) err('course.json is stale: run npm run build:content (unit borders changed; learners keep unit ids in their progress)');
+  const seen = new Set();
+  for (const m of course.modules || []) {
+    for (const u of m.units || []) {
+      if (!u.sentences || !u.sentences.length) err(`course unit ${u.id} has no sentences`);
+      for (const id of u.sentences) { if (seen.has(id)) err(`sentence ${id} is in two course units`); seen.add(id); }
+    }
+  }
+  for (const s of sentences) if (!seen.has(s.id)) err(`sentence ${s.id} is in no course unit`);
+}
 
 // languages present anywhere in the data
 const langSet = new Set(REQUIRED_LANGS);

@@ -65,3 +65,27 @@ test('reading stages merge by maximum', () => {
   assert.deepEqual(m.reading.rows1, { rounds: 3, best: 12, updatedAt: late });
   assert.deepEqual(m.reading.vowels, { rounds: 1, best: 5, updatedAt: early });
 });
+
+test('course units merge: the larger step wins, equal steps unite the solved lists', () => {
+  const local = createProgress(new Date(early));
+  const remote = createProgress(new Date(late));
+  local.course = { started: true, canRead: null, current: 'lesson-01/2', units: {
+    'lesson-01/1': { step: 6, done: [], best: 8, attempts: 1, passedAt: early, updatedAt: early },
+    'lesson-01/2': { step: 3, done: ['s011'], best: 0, attempts: 0, passedAt: null, updatedAt: early },
+    'lesson-01/3': { step: 2, done: ['s020'], best: 0, attempts: 0, passedAt: null, updatedAt: early },
+  } };
+  remote.course = { started: false, canRead: true, current: 'lesson-01/3', units: {
+    'lesson-01/1': { step: 5, done: ['s001'], best: 9, attempts: 3, passedAt: null, updatedAt: late },
+    'lesson-01/2': { step: 3, done: ['s012'], best: 0, attempts: 0, passedAt: null, updatedAt: late },
+  } };
+  const m = mergeProgress(local, remote);
+  assert.equal(m.course.units['lesson-01/1'].step, 6, 'the passed unit stays passed');
+  assert.equal(m.course.units['lesson-01/1'].best, 9);
+  assert.equal(m.course.units['lesson-01/1'].attempts, 3);
+  assert.deepEqual(m.course.units['lesson-01/2'].done.sort(), ['s011', 's012']);
+  assert.equal(m.course.units['lesson-01/2'].updatedAt, late);
+  assert.deepEqual(m.course.units['lesson-01/3'].done, ['s020']);
+  assert.equal(m.course.started, true);
+  assert.equal(m.course.canRead, true);
+  assert.equal(m.course.current, 'lesson-01/3', 'current from the later record');
+});

@@ -24,6 +24,9 @@ export function renderSettings(root, ctx) {
   // theme
   const themeSel = select('settings-theme', p.settings.theme || 'auto', [['auto', t('settings.themeAuto')], ['light', t('settings.themeLight')], ['dark', t('settings.themeDark')]], (v) => store.update((q) => setSetting(q, 'theme', v)));
 
+  // start screen
+  const homeSel = select('settings-home', p.settings.home || 'course', [['course', t('settings.homeCourse')], ['play', t('settings.homePlay')]], (v) => store.update((q) => setSetting(q, 'home', v)));
+
   // tiles
   const modeSel = select('settings-tiles', p.settings.tileMode, [['words', t('play.modeWords')], ['syllables', t('play.modeSyllables')]], (v) => store.update((q) => setSetting(q, 'tileMode', v)));
   const wylieBox = h('input', { type: 'checkbox', id: 'settings-wylie', checked: p.settings.showWylie === true });
@@ -109,6 +112,7 @@ export function renderSettings(root, ctx) {
     h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
       h('div', { class: 'field' }, h('label', { for: 'settings-lang' }, t('settings.language')), langSel, machine),
       h('div', { class: 'field' }, h('label', { for: 'settings-theme' }, t('settings.theme')), themeSel),
+      h('div', { class: 'field' }, h('label', { for: 'settings-home' }, t('settings.home')), homeSel),
       h('div', { class: 'field' }, h('label', { for: 'settings-tiles' }, t('settings.tileMode')), modeSel),
       h('div', { class: 'field check' }, h('label', { for: 'settings-wylie' }, wylieBox, ' ', t('settings.showWylie'))),
       voiceBox ? h('div', { class: 'field check' }, h('label', { for: 'settings-voice' }, voiceBox, ' ', t('settings.voice')), h('p', { class: 'helper' }, t('settings.voiceNote'))) : null,

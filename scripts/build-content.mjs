@@ -1,4 +1,4 @@
-// Builds site/data/{words,sentences,sets}.json and CONTENT_REVIEW.md
+// Builds site/data/{words,sentences,sets,course}.json and CONTENT_REVIEW.md
 // from the authoring files in content/.
 //
 //   node scripts/build-content.mjs
@@ -27,6 +27,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { toWylie, wylieToId, endingType } from './lib/wylie.mjs';
 import { renderTib, fuseParticle, TSHEG, SHAD } from '../site/src/engine/tib.js';
+import { splitUnits } from '../site/src/engine/course.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
@@ -291,6 +292,9 @@ mkdirSync(OUT, { recursive: true });
 writeFileSync(join(OUT, 'sets.json'), JSON.stringify(sets, null, 2) + '\n');
 writeFileSync(join(OUT, 'words.json'), JSON.stringify(wordsOut, null, 2) + '\n');
 writeFileSync(join(OUT, 'sentences.json'), JSON.stringify(sentences, null, 2) + '\n');
+// the course units: fixed here so that content edits do not move unit borders unnoticed (see validate.mjs)
+const course = { modules: splitUnits(sentences, wordsOut, sets) };
+writeFileSync(join(OUT, 'course.json'), JSON.stringify(course, null, 2) + '\n');
 
 // ---- CONTENT_REVIEW.md ----
 let notes = '';
@@ -335,4 +339,4 @@ L.push('');
 writeFileSync(join(ROOT, 'CONTENT_REVIEW.md'), L.join('\n'));
 
 const langSummary = extraLangs.map((l) => `${l}: ${langStats[l].sentences}/${sentences.length} sentences, ${langStats[l].words} words, ${langStats[l].missing.length} missing`).join('; ');
-console.log(`sets: ${sets.length}, words: ${Object.keys(wordsOut).length}, sentences: ${sentences.length}, fused surfaces: ${surfaces.size - byTib.size}${langSummary ? '; ' + langSummary : ''}`);
+console.log(`sets: ${sets.length}, units: ${course.modules.reduce((n, m) => n + m.units.length, 0)}, words: ${Object.keys(wordsOut).length}, sentences: ${sentences.length}, fused surfaces: ${surfaces.size - byTib.size}${langSummary ? '; ' + langSummary : ''}`);

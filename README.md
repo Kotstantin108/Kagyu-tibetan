@@ -18,6 +18,23 @@ another device".)
 
 ## What it does
 
+- **Course** (`#/course`, the start screen): the textbook lessons cut into
+  units of 12–15 new words; the unit borders live in `site/data/course.json`.
+  Every unit is a ladder of five steps: the new words with examples and the
+  lesson's remarks, tiles, meaning, recall, then a check of ten tasks without
+  hints (eight pass the unit; its new words become known at level 0, the ones
+  missed in the check stay "learning"). A step is done when every sentence of
+  the unit was solved cleanly once; a sentence solved with a mistake or a hint
+  comes back later; the solved list is kept in the progress record, so an
+  interrupted step continues. The reading course is the first module (a
+  learner who reads the script skips it). Locks are soft: any unit can be
+  opened, a unit whose words are all known offers its check right away.
+  Reviews of due words run from the map in sessions of up to twenty
+  sentences from the passed units. Practice progress and course progress are
+  one record: words, reviews and the streak are shared, the course adds
+  `course` with the unit states. The start screen is a setting (course or
+  practice); a learner who already had practice progress chooses once.
+
 - **Four exercises** on the same sentence: assemble it from word or syllable
   tiles, pick its meaning among four translations, pick the Tibetan sentence
   for a translation (recall), or type it in Wylie.
@@ -103,11 +120,11 @@ site/
   fonts/            Noto Serif Tibetan (OFL)
   icons/            app icons (PNG, from the logo artwork)
   img/              background artwork (bg-clouds.webp)
-  data/             words.json, sentences.json, sets.json, sentences.generated.json
-  src/app.js        bootstrap, theme, section menu, hash router (#/play #/play/hard #/read #/dict #/grammar #/stats #/settings #/support)
-  src/engine/       pure logic: next.js, progress.js, streak.js, check.js, merge.js, tib.js, wylie.js, hard.js, letters.js
+  data/             words.json, sentences.json, sets.json, course.json, sentences.generated.json
+  src/app.js        bootstrap, theme, section menu, hash router (#/course #/play #/play/hard #/read #/dict #/grammar #/stats #/settings #/support)
+  src/engine/       pure logic: next.js, progress.js, streak.js, check.js, merge.js, tib.js, wylie.js, hard.js, letters.js, course.js
   src/engine/tests/fixtures/  progress records of every released version; compat.test.js and the smoke test load them
-  src/screens/      play, read, onboarding, dict, grammar, stats, settings, support
+  src/screens/      course, play, read, onboarding, dict, grammar, stats, settings, support
   src/i18n/         ru.js en.js de.js fr.js pl.js (+ a test that keys match)
   src/sync.js       optional Google Drive sync
   src/transfer.js   progress <-> text code

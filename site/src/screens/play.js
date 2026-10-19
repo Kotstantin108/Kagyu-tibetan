@@ -3,29 +3,40 @@
 //   meaning - read the Tibetan sentence and choose its translation
 //   recall  - read the translation and choose the Tibetan sentence
 //   wylie   - type the sentence in Wylie transliteration
+//
+// In course mode (`mode`) the same screen runs a step of a unit, a unit check
+// or a review session: the sentences come from the course engine instead of
+// the picker, the exercise is fixed, and the header shows the place in the course.
+//   { kind: 'step', unit, step: 'tiles'|'meaning'|'recall', repeat }
+//   { kind: 'check', unit }
+//   { kind: 'review' }
 
-import { h, clear, popover, popoverOpen, tibText, audioButton } from '../ui.js';
+import { h, clear, popover, popoverOpen, tibText, audioButton, toast } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
-import { pickNext, contentWords } from '../engine/next.js';
+import { pickNext, contentWords, unknownWords, dueWordsIn } from '../engine/next.js';
 import { checkAnswer, shuffle, checkWylie, pickOptions, pickTibOptions } from '../engine/check.js';
 import { renderTib, splitSyllables, fuseParticle, stripTsheg } from '../engine/tib.js';
 import { toWylie, syllableToWylie, CONSONANT_TABLE, VOWEL_TABLE } from '../engine/wylie.js';
-import { revealWord, wordError, recordSolved, setWordStatus, setSetting, wordStatus, STATUS } from '../engine/progress.js';
+import { revealWord, wordError, recordSolved, setWordStatus, setSetting, wordStatus, markStepDone, setUnitStep, recordCheck, STATUS } from '../engine/progress.js';
 import { registerSolve, localDay } from '../engine/streak.js';
 import { hardWords } from '../engine/hard.js';
 import { relatedNotes, noteForWord } from '../engine/grammar.js';
+import { stepQueue, makeCheck, passScore, reviewSession, nextUnit, STEPS, unitAllKnown } from '../engine/course.js';
 import { sentenceIssueUrl, wordIssueUrl, reportControl } from '../report.js';
 import { needsOnboarding, showOnboarding } from './onboarding.js';
+import { unitName } from './course.js';
 
 const EXERCISES = ['tiles', 'meaning', 'recall', 'wylie'];
 
 let lastSentenceId = null;
 let lastReason = null;
 
-export function renderPlay(root, ctx) {
+export function renderPlay(root, ctx, mode = null) {
   const { store, data, t } = ctx;
   const dict = data.words;
-  const focusMode = ctx.param === 'hard';
+  const focusMode = !mode && ctx.param === 'hard';
+  const kind = mode ? mode.kind : null;     // null | 'step' | 'check' | 'review'
+  const inCheck = kind === 'check';
 
   // ---- round state ----
   let pick = null;        // { sentence, newWordIds, dueWordIds, reveal, reason }
@@ -33,6 +44,7 @@ export function renderPlay(root, ctx) {
   let rack = [];          // keys
   let chosen = [];        // keys
   let complete = false;
+  let failed = false;     // check mode: the task is over with a wrong answer
   let revealed = new Set();
   let hintedKey = null;
   let attempts = 0;
@@ -41,6 +53,16 @@ export function renderPlay(root, ctx) {
   let wylieTokens = [];   // wylie mode: [{ text, wordId }]
   let feedback = { text: '', kind: '' };
   let wrongWordId = null;  // the misplaced word of the last wrong answer ("Why?" button)
+  let taskExercise = null; // course modes: the exercise of the current task
+  // course state
+  let deferred = new Set(); // step: sentences solved with a mistake, back to the end of the queue
+  let tasks = [];           // check / review: [{ sentence, exercise }]
+  let taskIndex = -1;
+  let score = 0;
+  let wrongTasks = [];      // check: the failed sentences
+  let wrongWords = new Set();
+  let demoted = 0;          // review: words sent back to learning
+  let finished = false;
 
   // ---- DOM skeleton ----
   const reasonBadge = h('span', { class: 'badge reason' });
@@ -49,6 +71,9 @@ export function renderPlay(root, ctx) {
   const exerciseSwitch = h('div', { class: 'switch', role: 'group', 'aria-label': t('play.exercise') },
     ...EXERCISES.map((ex) => h('button', { type: 'button', dataset: { exercise: ex }, onClick: () => setExercise(ex) }, t(`play.exercises.${ex}`))),
   );
+  const courseTitle = h('div', { class: 'course-crumb' });
+  const courseCounter = h('span', { class: 'counter', id: 'course-counter' });
+  const courseBack = h('a', { class: 'course-back', href: kind === 'review' ? '#/course' : mode ? `#/course/${mode.unit.id}` : '#/course' }, kind === 'review' ? t('course.toMap') : t('course.toUnit'));
   const focusBar = focusMode ? h('div', { class: 'cold-note' }, t('play.focusNote'), ' ', h('a', { href: '#/play' }, t('play.focusExit'))) : null;
   const promptLabel = h('div', { class: 'label' });
   const prompt = h('h2', { class: 'prompt' });
@@ -78,30 +103,39 @@ export function renderPlay(root, ctx) {
   const meterFill = h('div', {});
   const lessonMeter = h('div', { class: 'lesson-meter', role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-valuenow': '0' }, meterFill);
   const shortcuts = h('p', { class: 'fine shortcuts' }, t('play.shortcuts'));
+  const result = h('div', { class: 'course-result', hidden: true });
+  const body = h('div', { class: 'panel-body' },
+    focusBar,
+    promptLabel,
+    prompt, promptAudio, fallbackNote, machineNote, chips, coldNote,
+    answerHead, answer,
+    rackHead, rackEl,
+    optionsEl,
+    wylieBox,
+    feedbackEl,
+    h('div', { class: 'buttons' }, btnCheck, btnHint, btnGrammar, btnReset, btnSkip, btnNext),
+    lesson,
+    result,
+    shortcuts,
+  );
 
   root.append(
-    h('section', { class: 'panel' },
-      h('div', { class: 'topbar' }, h('div', { class: 'progressline' }, reasonBadge, newBadge, dueBadge), exerciseSwitch, lessonMeter),
-      h('div', { class: 'panel-body' },
-        focusBar,
-        promptLabel,
-        prompt, promptAudio, fallbackNote, machineNote, chips, coldNote,
-        answerHead, answer,
-        rackHead, rackEl,
-        optionsEl,
-        wylieBox,
-        feedbackEl,
-        h('div', { class: 'buttons' }, btnCheck, btnHint, btnGrammar, btnReset, btnSkip, btnNext),
-        lesson,
-        shortcuts,
-      ),
+    h('section', { class: 'panel' + (mode ? ' course-play' : '') },
+      mode
+        ? h('div', { class: 'topbar course-top' }, courseTitle, h('div', { class: 'progressline' }, courseCounter, courseBack))
+        : h('div', { class: 'topbar' }, h('div', { class: 'progressline' }, reasonBadge, newBadge, dueBadge), exerciseSwitch, lessonMeter),
+      body,
     ),
   );
 
   // ---- helpers ----
   const settings = () => store.get().settings;
   function tileMode() { return settings().tileMode || 'words'; }
-  function exercise() { return EXERCISES.includes(settings().exercise) ? settings().exercise : 'tiles'; }
+  function exercise() {
+    if (kind === 'step') return mode.step;
+    if (kind === 'check' || kind === 'review') return taskExercise || 'tiles';
+    return EXERCISES.includes(settings().exercise) ? settings().exercise : 'tiles';
+  }
   function showWylie() { return settings().showWylie === true; }
 
   function setExercise(ex) {
@@ -150,7 +184,15 @@ export function renderPlay(root, ctx) {
   function setFeedback(text, kind = '', wrongId = null) { feedback = { text, kind }; wrongWordId = kind === 'bad' ? wrongId : null; }
   function sentenceTib() { return renderTib(pick.sentence.words, dict); }
 
+  /** A course pick: the sentence with its unknown and due words. */
+  function coursePick(sentence, reason) {
+    const p = store.get();
+    return { sentence, newWordIds: inCheck ? [] : unknownWords(sentence, dict, p), dueWordIds: dueWordsIn(sentence, dict, p, localDay()), reveal: false, reason };
+  }
+
   function nextSentence() {
+    if (kind === 'step') return nextStepSentence();
+    if (kind === 'check' || kind === 'review') return nextTask();
     const p = store.get();
     const focusIds = focusMode ? hardWords(p, dict) : null;
     pick = pickNext(data.sentences, dict, data.sets, p, { lastId: lastSentenceId, lastReason, focusIds, today: localDay() });
@@ -160,11 +202,127 @@ export function renderPlay(root, ctx) {
     deal(true);
   }
 
+  // ---- course: a step of a unit ----
+  function nextStepSentence() {
+    const p = store.get();
+    const unit = mode.unit;
+    const queue = mode.repeat ? unitQueueAll() : stepQueue(unit, p, data.sentences, dict);
+    if (!queue.length) return stepFinished();
+    let next = queue.find((s) => !deferred.has(s.id) && s.id !== lastSentenceId) || queue.find((s) => !deferred.has(s.id));
+    if (!next) { deferred = new Set(); next = queue.find((s) => s.id !== lastSentenceId) || queue[0]; }
+    pick = coursePick(next, 'course');
+    lastSentenceId = next.id;
+    revealed = new Set();
+    deal(true);
+  }
+
+  const repeatDone = new Set();
+  function unitQueueAll() {
+    const byId = new Map(data.sentences.map((s) => [s.id, s]));
+    return mode.unit.sentences.map((id) => byId.get(id)).filter((s) => s && !repeatDone.has(s.id));
+  }
+
+  function stepFinished() {
+    finished = true;
+    if (!mode.repeat) {
+      const i = STEPS.indexOf(mode.step);
+      store.update((p) => (stepIndexOf(p) === i + 1 ? setUnitStep(p, mode.unit.id, i + 2) : p));
+    }
+    toast(t('course.stepDone'));
+    ctx.navigate(`course/${mode.unit.id}`);
+  }
+
+  function stepIndexOf(p) {
+    const r = p.course.units[mode.unit.id];
+    return r ? r.step : 1;
+  }
+
+  // ---- course: check and review tasks ----
+  function startTasks() {
+    if (inCheck) {
+      tasks = makeCheck(mode.unit, data.sentences);
+    } else {
+      tasks = reviewSession(data.course, store.get(), data.sentences, dict, localDay());
+      if (!tasks.length) { toast(t('course.nothingToReview')); ctx.navigate('course'); return; }
+    }
+    taskIndex = -1;
+    score = 0;
+    wrongTasks = [];
+    wrongWords = new Set();
+    nextTask();
+  }
+
+  function nextTask() {
+    taskIndex++;
+    if (taskIndex >= tasks.length) return tasksFinished();
+    const task = tasks[taskIndex];
+    taskExercise = task.exercise;
+    pick = coursePick(task.sentence, inCheck ? 'check' : 'due');
+    revealed = new Set();
+    deal(true);
+  }
+
+  function tasksFinished() {
+    finished = true;
+    if (inCheck) {
+      const pass = passScore(tasks.length);
+      const unitWords = mode.unit.words;
+      store.update((p) => recordCheck(p, mode.unit.id, { score, pass, wordIds: unitWords, wrongWordIds: [...wrongWords] }));
+      showCheckResult(score >= pass, pass);
+      return;
+    }
+    toast(t('course.reviewDone', { n: tasks.length, demoted }), 4000);
+    ctx.navigate('course');
+  }
+
+  function showCheckResult(passed, pass) {
+    const unit = mode.unit;
+    const next = nextUnit(data.course, unit);
+    clear(result).append(
+      h('h3', {}, t('course.checkResultTitle')),
+      h('p', { class: 'feedback ' + (passed ? 'good' : 'bad') }, t('course.checkResult', { score, total: tasks.length }), ' ', passed ? t('course.checkPassed') : t('course.checkFailed', { pass })),
+      wrongTasks.length ? h('div', { class: 'unit-notes' },
+        h('div', { class: 'label' }, t('course.checkMistakes')),
+        ...wrongTasks.map((s) => h('div', { class: 'example' }, h('span', { class: 'tib' }, renderTib(s.words, dict)), h('span', { class: 'tr' }, pickTr(s.tr, ctx.lang).text))),
+      ) : null,
+      h('div', { class: 'buttons' },
+        passed && next ? h('a', { class: 'action next', id: 'check-next-unit', href: next.stage ? `#/read/${next.stage}/course` : `#/course/${next.id}` }, t('course.nextUnit')) : null,
+        h('button', { type: 'button', class: 'action' + (passed ? '' : ' primary'), id: 'check-again', onClick: () => { finished = false; result.hidden = true; startTasks(); } }, t('course.checkAgain')),
+        h('a', { class: 'action', href: `#/course/${unit.id}` }, t('course.toUnit')),
+      ),
+    );
+    result.hidden = false;
+    for (const el of [promptLabel, prompt, promptAudio, fallbackNote, machineNote, chips, coldNote, answerHead, answer, rackHead, rackEl, optionsEl, wylieBox, feedbackEl, lesson, shortcuts]) el.hidden = true;
+    btnCheck.hidden = btnHint.hidden = btnGrammar.hidden = btnReset.hidden = btnSkip.hidden = btnNext.hidden = true;
+    courseCounter.textContent = '';
+    const again = result.querySelector('#check-again');
+    if (again) again.focus();
+  }
+
+  function courseHeader() {
+    if (!mode) return;
+    if (kind === 'review') {
+      courseTitle.textContent = t('course.reviewTitle');
+      courseCounter.textContent = t('course.taskOf', { n: Math.min(taskIndex + 1, tasks.length), total: tasks.length });
+      return;
+    }
+    const stepName = kind === 'check' ? t('course.steps.check') : t(`course.steps.${mode.step}`);
+    courseTitle.textContent = `${unitName(ctx, mode.unit)} · ${stepName}`;
+    if (kind === 'check') {
+      courseCounter.textContent = t('course.taskOf', { n: Math.min(taskIndex + 1, tasks.length), total: tasks.length });
+    } else {
+      const r = store.get().course.units[mode.unit.id];
+      const done = mode.repeat ? repeatDone.size : r && r.done ? r.done.length : 0;
+      courseCounter.textContent = t('course.solvedOf', { n: done, total: mode.unit.sentences.length });
+    }
+  }
+
   function deal(fresh) {
     tiles = buildTiles();
     rack = shuffle(tiles.map((x) => x.key));
     chosen = [];
     complete = false;
+    failed = false;
     hintedKey = null;
     attempts = 0;
     wrongOptions = new Set();
@@ -173,7 +331,7 @@ export function renderPlay(root, ctx) {
     wylieTokens = exercise() === 'wylie' ? buildWylieTokens() : [];
     wylieInput.value = '';
     lesson.hidden = true;
-    if (fresh) setFeedback(t(`play.start_${exercise()}`));
+    if (fresh) setFeedback(inCheck ? t('course.checkPrompt') : t(`play.start_${exercise()}`));
     render();
     if (exercise() === 'wylie' && fresh && !popoverOpen()) wylieInput.focus();
   }
@@ -254,7 +412,7 @@ export function renderPlay(root, ctx) {
     const n = from === 'rack' ? rack.indexOf(key) + 1 : 0;
     const btn = h('button', {
       type: 'button',
-      class: 'tile' + (isNew(x.wordId) && !complete ? ' new' : '') + (hintedKey === key && from === 'rack' ? ' hinted' : '') + (showWylie() ? ' with-wylie' : ''),
+      class: 'tile' + (isNew(x.wordId) && !complete ? ' new' : '') + (hintedKey === key && from === 'rack' ? ' hinted' : '') + (showWylie() && !inCheck ? ' with-wylie' : ''),
       'aria-label': x.text + (n && n <= 9 ? ` (${n})` : ''),
       onClick: () => {
         if (complete) return;
@@ -263,8 +421,8 @@ export function renderPlay(root, ctx) {
         hintedKey = null;
         render();
       },
-    }, h('span', { class: 'tile-text' }, x.text), showWylie() ? h('span', { class: 'tile-wylie' }, x.wylie) : null);
-    const help = h('button', { type: 'button', class: 'tile-help', 'aria-label': t('play.wordHelp'), onClick: (e) => { e.stopPropagation(); showWord(x.wordId); } }, '?');
+    }, h('span', { class: 'tile-text' }, x.text), showWylie() && !inCheck ? h('span', { class: 'tile-wylie' }, x.wylie) : null);
+    const help = inCheck ? null : h('button', { type: 'button', class: 'tile-help', 'aria-label': t('play.wordHelp'), onClick: (e) => { e.stopPropagation(); showWord(x.wordId); } }, '?');
     return h('span', { class: 'tile-wrap' }, btn, help);
   }
 
@@ -279,16 +437,20 @@ export function renderPlay(root, ctx) {
   }
 
   function render() {
+    if (finished) return;
     const p = store.get();
     const s = pick.sentence;
     const ex = exercise();
     const tr = pickTr(s.tr, ctx.lang);
 
-    exerciseSwitch.querySelectorAll('button').forEach((b) => {
-      const on = b.dataset.exercise === ex;
-      b.classList.toggle('selected', on);
-      b.setAttribute('aria-pressed', String(on));
-    });
+    if (!mode) {
+      exerciseSwitch.querySelectorAll('button').forEach((b) => {
+        const on = b.dataset.exercise === ex;
+        b.classList.toggle('selected', on);
+        b.setAttribute('aria-pressed', String(on));
+      });
+    }
+    courseHeader();
 
     // prompt: translation (tiles, wylie) or the Tibetan sentence (meaning)
     if (ex === 'meaning') {
@@ -308,23 +470,26 @@ export function renderPlay(root, ctx) {
     }
     machineNote.hidden = ctx.lang === 'en' || ex === 'meaning';
     machineNote.textContent = ctx.lang === 'en' ? '' : t('settings.machineNotice', { lang: t('langIn') }).split('.')[0] + '.';
-    reasonBadge.textContent = t(`play.whyThis.${pick.reason}`);
-    // lesson progress: known words of the current set
-    const setIds = Object.keys(dict).filter((id) => dict[id].set === s.set && !dict[id].service);
-    const knownInSet = setIds.filter((id) => wordStatus(p, id) === STATUS.KNOWN).length;
-    const pct = setIds.length ? Math.round((100 * knownInSet) / setIds.length) : 0;
-    meterFill.style.width = `${pct}%`;
-    lessonMeter.setAttribute('aria-valuenow', String(pct));
-    lessonMeter.title = `${knownInSet}/${setIds.length}`;
-    newBadge.textContent = pick.newWordIds.length ? `${t('play.newWord')}: ${pick.newWordIds.length}` : '';
-    newBadge.hidden = !pick.newWordIds.length;
-    dueBadge.textContent = pick.dueWordIds.length ? `${t('play.dueWord')}: ${pick.dueWordIds.length}` : '';
-    dueBadge.hidden = !pick.dueWordIds.length;
+    if (!mode) {
+      reasonBadge.textContent = t(`play.whyThis.${pick.reason}`);
+      // lesson progress: known words of the current set
+      const setIds = Object.keys(dict).filter((id) => dict[id].set === s.set && !dict[id].service);
+      const knownInSet = setIds.filter((id) => wordStatus(p, id) === STATUS.KNOWN).length;
+      const pct = setIds.length ? Math.round((100 * knownInSet) / setIds.length) : 0;
+      meterFill.style.width = `${pct}%`;
+      lessonMeter.setAttribute('aria-valuenow', String(pct));
+      lessonMeter.title = `${knownInSet}/${setIds.length}`;
+      newBadge.textContent = pick.newWordIds.length ? `${t('play.newWord')}: ${pick.newWordIds.length}` : '';
+      newBadge.hidden = !pick.newWordIds.length;
+      dueBadge.textContent = pick.dueWordIds.length ? `${t('play.dueWord')}: ${pick.dueWordIds.length}` : '';
+      dueBadge.hidden = !pick.dueWordIds.length;
+    }
     coldNote.hidden = !pick.reveal || (ex === 'recall' && !complete); // the chips are hidden there
 
     // chips: the words of the sentence (translations hidden in meaning mode until solved;
-    // in recall mode the words would give the sentence away, so the chips wait for the answer)
-    chips.hidden = ex === 'recall' && !complete;
+    // in recall mode the words would give the sentence away, so the chips wait for the answer;
+    // a check shows no chips at all)
+    chips.hidden = (ex === 'recall' && !complete) || inCheck;
     clear(chips);
     for (const id of contentWords(s, dict)) {
       const w = dict[id];
@@ -348,7 +513,8 @@ export function renderPlay(root, ctx) {
     const choice = ex === 'meaning' || ex === 'recall';
     optionsEl.hidden = !choice;
     wylieBox.hidden = ex !== 'wylie';
-    btnHint.hidden = choice;
+    btnHint.hidden = choice || inCheck;
+    btnGrammar.hidden = inCheck;
     btnReset.hidden = choice;
     btnCheck.hidden = choice;
     shortcuts.hidden = !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -361,7 +527,8 @@ export function renderPlay(root, ctx) {
       if (!chosen.length) answer.append(h('span', { class: 'placeholder' }, t('play.placeholder')));
       chosen.forEach((k) => answer.append(tileButton(k, 'answer')));
       rack.forEach((k) => rackEl.append(tileButton(k, 'rack')));
-      answer.classList.toggle('correct', complete);
+      answer.classList.toggle('correct', complete && !failed);
+      answer.classList.toggle('failed', failed);
     } else if (choice) {
       clear(optionsEl);
       options.forEach((o, i) => optionsEl.append(optionButton(o, i)));
@@ -370,7 +537,7 @@ export function renderPlay(root, ctx) {
     }
 
     clear(feedbackEl).append(tibText(feedback.text));
-    if (feedback.kind === 'bad' && wrongWordId && dict[wrongWordId]) {
+    if (feedback.kind === 'bad' && wrongWordId && dict[wrongWordId] && !inCheck) {
       const id = wrongWordId;
       feedbackEl.append(' ', h('button', { type: 'button', class: 'linkish why', onClick: () => showGrammar(id) }, t('play.why')));
     }
@@ -378,20 +545,14 @@ export function renderPlay(root, ctx) {
     btnCheck.disabled = complete;
     btnHint.disabled = complete;
     btnReset.disabled = complete;
-    btnSkip.hidden = complete;
+    btnSkip.hidden = complete || Boolean(mode);
     btnNext.hidden = !complete;
+    if (mode) btnNext.textContent = kind === 'step' || kind === 'review' || taskIndex < tasks.length - 1 ? t('play.next') : t('course.seeResult');
   }
 
-  /** Common bookkeeping after a correct answer. */
-  function solved() {
-    complete = true;
+  /** The sentence, its Wylie, translation, note and source, shown after the answer. */
+  function showLesson() {
     const s = pick.sentence;
-    store.update((p) => {
-      let np = recordSolved(p, s.id, { newWordIds: pick.newWordIds, revealedIds: pick.reveal ? [] : [...revealed], seenIds: contentWords(s, dict), promoteUpTo: pick.reveal ? 2 : 1 });
-      np = { ...np, streak: registerSolve(np.streak, localDay()) };
-      return np;
-    });
-    setFeedback(t('play.correct'), 'good');
     const tr = pickTr(s.tr, ctx.lang);
     const tib = sentenceTib();
     clear(lesson);
@@ -408,6 +569,41 @@ export function renderPlay(root, ctx) {
     const report = reportControl(ctx, { kind: 'sentence', id: s.id, tib, translation: tr.text, fallbackUrl: sentenceIssueUrl(ctx.config, s, tib, tr.text, ctx.lang) });
     lesson.append(h('div', { class: 'source' }, `${t('play.source')}: ${s.source}`, report ? [' · ', report] : null));
     lesson.hidden = false;
+  }
+
+  /** Common bookkeeping after a correct answer. */
+  function solved() {
+    complete = true;
+    const s = pick.sentence;
+    store.update((p) => {
+      // a course step or a check never promotes new words (the check does that when passed);
+      // the practice promotes the one new word of a sentence; due words move up everywhere
+      const newWordIds = kind === 'step' || inCheck ? [] : pick.newWordIds;
+      let np = recordSolved(p, s.id, { newWordIds, revealedIds: pick.reveal ? [] : [...revealed], seenIds: contentWords(s, dict), promoteUpTo: pick.reveal ? 2 : 1 });
+      np = { ...np, streak: registerSolve(np.streak, localDay()) };
+      if (kind === 'step' && !mode.repeat && attempts === 0 && !revealed.size) np = markStepDone(np, mode.unit.id, s.id);
+      return np;
+    });
+    if (kind === 'step') {
+      if (attempts > 0 || revealed.size) deferred.add(s.id); else deferred.delete(s.id);
+      if (mode.repeat) repeatDone.add(s.id);
+    }
+    if (inCheck) score++;
+    setFeedback(t('play.correct'), 'good');
+    showLesson();
+    render();
+    btnNext.focus();
+  }
+
+  /** Check mode: a wrong answer ends the task; the right answer is shown. */
+  function taskFailed(wrongIds) {
+    complete = true;
+    failed = true;
+    wrongTasks.push(pick.sentence);
+    const unitWords = new Set(mode.unit.words);
+    for (const id of wrongIds) if (unitWords.has(id)) wrongWords.add(id);
+    setFeedback(t('course.taskWrong'), 'bad');
+    showLesson();
     render();
     btnNext.focus();
   }
@@ -436,7 +632,9 @@ export function renderPlay(root, ctx) {
       attempts++;
       const firstWrong = result.wrong[0];
       const wrongWord = tile(chosen[firstWrong]).wordId;
+      if (inCheck) { taskFailed(result.wrong.map((i) => tile(chosen[i]).wordId)); return; }
       store.update((p) => wordError(p, wrongWord));
+      if (kind === 'review' && wordStatus(store.get(), wrongWord) === STATUS.LEARNING) demoted++;
       setFeedback(t('play.wrong', { pos: firstWrong + 1 }) + explain(wrongWord), 'bad', wrongWord);
       render();
       [...answer.querySelectorAll('.tile')].forEach((el, i) => { if (result.wrong.includes(i)) el.classList.add('wrong'); });
@@ -470,6 +668,12 @@ export function renderPlay(root, ctx) {
     if (opt.id === pick.sentence.id) { solved(); return; }
     attempts++;
     wrongOptions.add(opt.id);
+    if (inCheck) { taskFailed(contentWords(pick.sentence, dict)); return; }
+    if (kind === 'review') {
+      // a wrong recall sends the due words of the sentence back to learning
+      const due = pick.dueWordIds;
+      if (due.length) { store.update((p) => due.reduce((q, id) => wordError(q, id), p)); demoted += due.length; pick = { ...pick, dueWordIds: [] }; }
+    }
     setFeedback(t('play.meaningWrong'), 'bad');
     render();
   }
@@ -485,6 +689,7 @@ export function renderPlay(root, ctx) {
       wylieInput.focus();
       return;
     }
+    if (kind === 'step') attempts++; // a hint is not a clean solve
     const expected = expectedTexts();
     let pos = chosen.findIndex((k, i) => tile(k).text !== expected[i]);
     if (pos === -1) pos = chosen.length;
@@ -504,7 +709,7 @@ export function renderPlay(root, ctx) {
 
   // ---- keyboard ----
   function onKey(e) {
-    if (popoverOpen() || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (popoverOpen() || e.altKey || e.ctrlKey || e.metaKey || finished) return;
     const tag = (e.target && e.target.tagName) || '';
     const inField = tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA';
     if (e.key === 'Enter') {
@@ -522,7 +727,7 @@ export function renderPlay(root, ctx) {
         e.preventDefault();
       } else if (e.key === 'Backspace' && chosen.length && !complete) {
         rack.push(chosen.pop()); render(); e.preventDefault();
-      } else if (e.key === '?' || e.key === 'h') { hint(); }
+      } else if ((e.key === '?' || e.key === 'h') && !inCheck) { hint(); }
     } else if ((ex === 'meaning' || ex === 'recall') && /^[1-4]$/.test(e.key)) {
       const opt = options[Number(e.key) - 1];
       if (opt) chooseOption(opt);
@@ -532,7 +737,15 @@ export function renderPlay(root, ctx) {
   document.addEventListener('keydown', onKey);
 
   // ---- start ----
-  if (!focusMode && needsOnboarding(ctx)) showOnboarding(ctx, nextSentence);
+  if (kind === 'check' || kind === 'review') {
+    if (inCheck && !(unitAllKnown(store.get(), mode.unit) || stepIndexOf(store.get()) >= STEPS.length)) { ctx.navigate(`course/${mode.unit.id}`); }
+    else startTasks();
+  } else if (kind === 'step') {
+    if (!mode.repeat && stepIndexOf(store.get()) !== STEPS.indexOf(mode.step) + 1) {
+      // not the current step of the unit: the ladder decides where to go
+      ctx.navigate(`course/${mode.unit.id}`);
+    } else nextSentence();
+  } else if (!focusMode && needsOnboarding(ctx)) showOnboarding(ctx, nextSentence);
   else nextSentence();
 
   return () => document.removeEventListener('keydown', onKey);

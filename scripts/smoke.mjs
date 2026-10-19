@@ -9,6 +9,9 @@ import { join, extname } from 'node:path';
 import { chromium } from 'playwright';
 import { syllableToWylie } from '../site/src/engine/wylie.js';
 import { STAGE_IDS } from '../site/src/engine/letters.js';
+import { contentWords } from '../site/src/engine/next.js';
+import { renderTib } from '../site/src/engine/tib.js';
+import { findUnit, allUnits } from '../site/src/engine/course.js';
 
 const ROOT = new URL('../site/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.woff2': 'font/woff2', '.svg': 'image/svg+xml', '.png': 'image/png', '.webmanifest': 'application/manifest+json' };
@@ -165,7 +168,7 @@ check((await page.$eval('#menu-toggle', (b) => b.getBoundingClientRect().right <
 await page.click('#menu-toggle');
 await page.waitForSelector('#tabs:not([hidden])');
 const menuLinks = await page.$$eval('#tabs a', (as) => as.map((a) => a.getAttribute('href')));
-check(menuLinks.length === 8 && menuLinks.includes('#/read') && menuLinks.includes('#/support') && menuLinks.includes('#report'), 'menu lists seven sections and "report a problem"');
+check(menuLinks.length === 9 && menuLinks[0] === '#/course' && menuLinks.includes('#/read') && menuLinks.includes('#/support') && menuLinks.includes('#report'), 'menu lists the course first, eight sections and "report a problem"');
 check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'open menu: no horizontal scroll');
 await page.click('#tabs a[data-route="dict"]');
 await page.waitForSelector('.panel');
@@ -181,9 +184,125 @@ check(before.dark !== after.dark && before.color !== after.color, 'theme toggle 
 check(after.pressed === String(after.dark) && after.setting === (after.dark ? 'dark' : 'light'), 'theme toggle updates aria-pressed and the setting');
 check((await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)), 'no horizontal scroll after the theme switch');
 
+// a learner with practice progress gets the one-time choice when the course opens
+await page.goto(`${base}/index.html#/course`);
+await page.waitForSelector('#course-intro-start');
+await page.click('#course-intro-start');
+await page.waitForSelector('#course-continue');
+check((await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); return p.course.started && p.settings.home === 'course' && p.course.canRead === true; })), 'course: an old learner who chose the course has it started, the script question skipped (known words)');
+
+// the course from scratch, in its own profile: welcome, the script question, the map, a unit, its words, the tiles step, a check
+{
+  const dataDir = new URL('../site/data/', import.meta.url);
+  const words = JSON.parse(await readFile(new URL('words.json', dataDir), 'utf8'));
+  const sentences = JSON.parse(await readFile(new URL('sentences.json', dataDir), 'utf8'));
+  const course = JSON.parse(await readFile(new URL('course.json', dataDir), 'utf8'));
+  const byId = new Map(sentences.map((s) => [s.id, s]));
+  const unit = findUnit(course, 'lesson-01/1');
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
+  const c = await ctx.newPage();
+  c.on('pageerror', (e) => errors.push(`course: ${e}`));
+  c.on('console', (m) => { if (m.type() === 'error') errors.push(`course: ${m.text()}`); });
+  await c.goto(`${base}/index.html`);
+  await c.waitForSelector('.popover .onboarding button');
+  check(/#\/course$/.test(c.url()), 'course: a new learner lands on #/course');
+  await c.click('.popover .onboarding .action.primary');
+  await c.waitForSelector('#can-read-no');
+  await c.click('#can-read-yes');
+  await c.waitForSelector('#course-continue');
+  check((await c.$$('.module')).length === 1 + course.modules.length, `course: ${1 + course.modules.length} modules on the map`);
+  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/lesson-01/1', 'course: "Continue" points at the first lesson unit for a reader');
+  check((await c.$$('.unit-row')).length === allUnits(course).length, 'course: every unit listed');
+  await c.click('#course-continue');
+  await c.waitForSelector('.ladder');
+  check((await c.$$('.ladder-row')).length === 5, 'course: the unit shows five steps');
+  await c.click('.ladder-row[data-step="words"] a.action');
+  await c.waitForSelector('#words-next');
+  check((await c.$$('.word-card')).length === unit.words.length, `course: the words step shows the ${unit.words.length} new words`);
+  await c.click('#words-next');
+  await c.waitForSelector('.course-crumb');
+  check((await c.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); return p.course.units['lesson-01/1'].step === 2 && Object.values(p.words).every((w) => w.status === 'learning'); })), 'course: after the words the unit is at the tiles step and the words are "learning"');
+  check(/#\/course\/lesson-01\/1\/tiles$/.test(c.url()), 'course: the tiles step opened');
+  check((await c.$eval('#course-counter', (e) => /0/.test(e.textContent))), 'course: the step counter starts at zero');
+
+  // solve every sentence of the step from the chips (clean solves), until the unit screen comes back
+  let solvedHere = 0;
+  for (let i = 0; i < unit.sentences.length + 3 && !/#\/course\/lesson-01\/1$/.test(c.url()); i++) {
+    await c.waitForSelector('.rack .tile');
+    const order = await c.$$eval('.chip .tib', (els) => els.map((e) => e.textContent));
+    const expected = await c.evaluate(() => [...document.querySelectorAll('.rack .tile .tile-text')].map((e) => e.textContent));
+    // the chips list distinct words; a sentence may repeat one, so place by the rack's own texts in chip order
+    const want = []; const pool = [...expected];
+    for (const t of order) { let k; while ((k = pool.indexOf(t)) >= 0) { want.push(t); pool.splice(k, 1); } }
+    for (const text of want) {
+      for (const t of await c.$$('.rack .tile')) {
+        if ((await t.$eval('.tile-text', (e) => e.textContent)) === text) { await t.click(); break; }
+      }
+    }
+    await c.click('.buttons .action.primary');
+    await c.waitForSelector('.feedback.good');
+    solvedHere++;
+    await c.click('.action.next');
+    await c.waitForFunction(() => document.querySelector('.rack .tile') || document.querySelector('.ladder'));
+  }
+  check(/#\/course\/lesson-01\/1$/.test(c.url()) && solvedHere === unit.sentences.length, `course: the tiles step ends after its ${unit.sentences.length} sentences (solved ${solvedHere})`);
+  check((await c.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).course.units['lesson-01/1'].step)) === 3, 'course: the unit moved on to the meaning step');
+
+  // jump to the check and pass it: no hints, one try per task, the result closes the unit
+  await c.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); p.course.units['lesson-01/1'].step = 5; p.course.units['lesson-01/1'].done = []; localStorage.setItem('tib-progress', JSON.stringify(p)); });
+  await c.reload();
+  await c.waitForSelector('.ladder-row[data-step="check"] a.action');
+  await c.click('.ladder-row[data-step="check"] a.action');
+  await c.waitForSelector('.course-crumb');
+  check((await c.$eval('#btn-hint', (b) => b.hidden)) && (await c.$eval('.chips', (e) => e.hidden)), 'course: the check hides the hint button and the word chips');
+  const unitSentences = unit.sentences.map((id) => byId.get(id));
+  for (let task = 0; task < 10; task++) {
+    await c.waitForFunction(() => document.querySelector('.rack .tile') || document.querySelector('.option .option-tib'));
+    const prompt = await c.$eval('.prompt', (e) => e.textContent);
+    const cands = unitSentences.filter((s) => s.tr.en === prompt);
+    if (await c.$('.rack .tile')) {
+      const rackTexts = await c.$$eval('.rack .tile .tile-text', (els) => els.map((e) => e.textContent).sort().join('|'));
+      const s = cands.find((x) => x.words.filter((id) => !words[id].service).map((id) => words[id].tib).sort().join('|') === rackTexts) || cands[0];
+      for (const text of s.words.filter((id) => !words[id].service).map((id) => words[id].tib)) {
+        for (const t of await c.$$('.rack .tile')) {
+          if ((await t.$eval('.tile-text', (e) => e.textContent)) === text) { await t.click(); break; }
+        }
+      }
+      await c.click('.buttons .action.primary');
+    } else {
+      const texts = await c.$$eval('.option .option-tib', (els) => els.map((e) => e.textContent));
+      const s = cands.find((x) => texts.includes(renderTib(x.words, words))) || cands[0];
+      const i = texts.indexOf(renderTib(s.words, words));
+      await (await c.$$('.option'))[i >= 0 ? i : 0].click();
+    }
+    await c.waitForSelector('.feedback.good, .feedback.bad');
+    await c.click('.action.next');
+  }
+  await c.waitForSelector('.course-result:not([hidden])');
+  const after = await c.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')));
+  check(after.course.units['lesson-01/1'].step === 6 && after.course.units['lesson-01/1'].best >= 8, `course: the check passed the unit (best ${after.course.units['lesson-01/1'].best})`);
+  check(unit.words.every((id) => after.words[id] && after.words[id].status === 'known' && after.words[id].due), 'course: the words of the passed unit are known and scheduled');
+  check((await c.$('#check-next-unit')) !== null, 'course: the result offers the next part');
+
+  // a review session: the words of the unit made due today
+  await c.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); const today = new Date(); const d = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`; for (const w of Object.values(p.words)) if (w.status === 'known') w.due = d; localStorage.setItem('tib-progress', JSON.stringify(p)); });
+  await c.goto(`${base}/index.html#/course`);
+  await c.reload(); // the store reads localStorage once, at start
+  await c.waitForSelector('#course-review');
+  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/lesson-01/2', 'course: "Continue" moved to the second part');
+  check((await c.$eval('.unit-row[data-unit="lesson-01/1"]', (e) => e.classList.contains('passed'))), 'course: the map marks the passed part');
+  await c.click('#course-review');
+  await c.waitForSelector('.course-crumb');
+  check((await c.$eval('#course-counter', (e) => /1/.test(e.textContent))), 'course: the review session starts at task 1');
+  await c.goto(`${base}/index.html#/stats`);
+  await c.waitForSelector('.stat-grid .stat');
+  check((await c.$$('.stat-grid .stat')).length === 8, 'progress screen: eight tiles including the course');
+  await ctx.close();
+}
+
 // records written by earlier versions of the site load with nothing lost (site/src/engine/tests/fixtures)
 const contains = (whole, part) => Object.entries(part).every(([k, v]) => (v && typeof v === 'object' ? whole[k] && typeof whole[k] === 'object' && contains(whole[k], v) : whole[k] === v));
-for (const name of ['progress-2026-10-12.json', 'progress-2026-10-15.json']) {
+for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json']) {
   const fixture = JSON.parse(await readFile(new URL(`../site/src/engine/tests/fixtures/${name}`, import.meta.url), 'utf8'));
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
   const old = await ctx.newPage();
@@ -208,6 +327,12 @@ for (const name of ['progress-2026-10-12.json', 'progress-2026-10-15.json']) {
     await old.goto(`${base}/index.html#/read`);
     await old.waitForSelector('.stage');
     check((await old.$$eval('.stage.passed', (els) => els.map((e) => e.dataset.stage))).join() === Object.keys(fixture.reading).filter((id) => fixture.reading[id].best >= 10).join(), `${name}: reading list marks the passed stages`);
+  }
+  if (fixture.course) {
+    await old.goto(`${base}/index.html#/course`);
+    await old.waitForSelector('#course-continue');
+    check((await old.$eval('#course-continue', (a) => a.getAttribute('href'))) === `#/course/${fixture.course.current}`, `${name}: the course continues at the stored unit`);
+    check((await old.$eval('.unit-row[data-unit="lesson-01/1"]', (e) => e.classList.contains('passed'))), `${name}: the passed unit is marked`);
   }
   check(contains(await old.evaluate(() => JSON.parse(localStorage.getItem('tib-progress'))), fixture), `${name}: nothing of the stored record is lost after using the site`);
   await ctx.close();

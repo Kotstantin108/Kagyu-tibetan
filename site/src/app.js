@@ -6,6 +6,7 @@ import { LANGS, DEFAULT_LANG } from './engine/config.js';
 import { setSetting } from './engine/progress.js';
 import { h, clear, toast } from './ui.js';
 import { renderPlay } from './screens/play.js';
+import { renderCourse } from './screens/course.js';
 import { renderRead } from './screens/read.js';
 import { renderDict } from './screens/dict.js';
 import { renderGrammar } from './screens/grammar.js';
@@ -28,6 +29,11 @@ const ctx = {
   config: (window.TIB_CONFIG || {}),
   navigate(route) { location.hash = `#/${route}`; },
 };
+
+/** The screen the app opens on: the course, unless the learner chose the practice. */
+function homeRoute() {
+  return store.get().settings.home === 'play' ? 'play' : 'course';
+}
 
 // English by default; the learner picks another interface language in the header.
 function currentLang() {
@@ -104,11 +110,11 @@ store.subscribe((p, source) => {
 });
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
 
-const screens = { play: renderPlay, read: renderRead, dict: renderDict, grammar: renderGrammar, stats: renderStats, settings: renderSettings, support: renderSupport };
+const screens = { course: renderCourse, play: renderPlay, read: renderRead, dict: renderDict, grammar: renderGrammar, stats: renderStats, settings: renderSettings, support: renderSupport };
 
 function route() {
-  const m = location.hash.match(/^#\/(\w+)(?:\/(\w+))?/);
-  const name = m && screens[m[1]] ? m[1] : 'play';
+  const m = location.hash.match(/^#\/(\w+)(?:\/([\w\/-]+))?/);
+  const name = m && screens[m[1]] ? m[1] : homeRoute();
   return { name, param: m && screens[m[1]] ? m[2] || null : null };
 }
 
@@ -176,16 +182,16 @@ async function main() {
   applyTheme();
   movingBanner();
   try {
-    const [words, sentences, sets] = await Promise.all([loadJson('words.json'), loadJson('sentences.json'), loadJson('sets.json')]);
+    const [words, sentences, sets, course] = await Promise.all([loadJson('words.json'), loadJson('sentences.json'), loadJson('sets.json'), loadJson('course.json')]);
     sets.sort((a, b) => a.order - b.order);
-    ctx.data = { words, sentences, sets };
+    ctx.data = { words, sentences, sets, course };
   } catch (err) {
     console.error(err);
     clear(view).append(h('p', { class: 'feedback bad' }, ctx.t('loadError')));
     return;
   }
   ctx.sync = createSync(ctx);
-  if (!location.hash) location.hash = '#/play';
+  if (!location.hash) location.hash = `#/${homeRoute()}`;
   render();
   registerServiceWorker();
 }

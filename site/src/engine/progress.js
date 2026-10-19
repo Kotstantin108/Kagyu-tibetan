@@ -8,7 +8,10 @@
 //   sentences: { id: { solved, lastSolved } },
 //   streak: { current, best, lastDay, todayDate, todayCount },
 //   reading: { stageId: { rounds, best, updatedAt } },  the reading course (letters.js)
-//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, voice, theme, onboarded }
+//   course: { started, canRead: true|false|null, current: unitId|null,
+//             units: { unitId: { step: 1..6, done: [sentenceIds of the current step], best, attempts, passedAt, updatedAt } } }
+//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, voice, theme, onboarded,
+//              home: 'course'|'play'|null }
 // }
 
 import { SCHEMA_VERSION, REVIEW_INTERVALS, MANUAL_KNOWN_LEVEL } from './config.js';
@@ -26,7 +29,8 @@ export function createProgress(now = new Date()) {
     sentences: {},
     streak: { current: 0, best: 0, lastDay: null, todayDate: null, todayCount: 0 },
     reading: {},
-    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false },
+    course: { started: false, canRead: null, current: null, units: {} },
+    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false, home: null },
   };
 }
 
@@ -78,6 +82,28 @@ export function normalizeProgress(raw, now = new Date()) {
       };
     }
   }
+  if (raw.course && typeof raw.course === 'object') {
+    const c = raw.course;
+    p.course = {
+      started: c.started === true,
+      canRead: typeof c.canRead === 'boolean' ? c.canRead : null,
+      current: typeof c.current === 'string' ? c.current : null,
+      units: {},
+    };
+    if (c.units && typeof c.units === 'object') {
+      for (const [id, u] of Object.entries(c.units)) {
+        if (!u || typeof u !== 'object') continue;
+        p.course.units[id] = {
+          step: Number.isInteger(u.step) && u.step >= 1 ? Math.min(u.step, 6) : 1,
+          done: Array.isArray(u.done) ? u.done.filter((x) => typeof x === 'string') : [],
+          best: Number.isInteger(u.best) && u.best >= 0 ? u.best : 0,
+          attempts: Number.isInteger(u.attempts) && u.attempts >= 0 ? u.attempts : 0,
+          passedAt: typeof u.passedAt === 'string' ? u.passedAt : null,
+          updatedAt: typeof u.updatedAt === 'string' ? u.updatedAt : base.updatedAt,
+        };
+      }
+    }
+  }
   if (raw.settings && typeof raw.settings === 'object') {
     const s = raw.settings;
     p.settings = {
@@ -88,6 +114,7 @@ export function normalizeProgress(raw, now = new Date()) {
       voice: s.voice === true,
       theme: ['light', 'dark'].includes(s.theme) ? s.theme : 'auto',
       onboarded: s.onboarded === true,
+      home: ['course', 'play'].includes(s.home) ? s.home : null,
     };
   }
   return p;
@@ -217,6 +244,90 @@ export function recordReadingRound(progress, stageId, score, now = new Date()) {
   const cur = progress.reading[stageId] || { rounds: 0, best: 0 };
   const next = { rounds: cur.rounds + 1, best: Math.max(cur.best, score), updatedAt: now.toISOString() };
   return touch({ ...progress, reading: { ...progress.reading, [stageId]: next } }, now);
+}
+
+// ---- the course ----
+
+function unitOf(progress, unitId) {
+  return progress.course.units[unitId] || { step: 1, done: [], best: 0, attempts: 0, passedAt: null, updatedAt: progress.updatedAt };
+}
+
+function withUnit(progress, unitId, unit, now) {
+  const next = { ...unit, updatedAt: now.toISOString() };
+  return touch({ ...progress, course: { ...progress.course, units: { ...progress.course.units, [unitId]: next } } }, now);
+}
+
+/** The learner entered the course (the one-time dialogs are over). */
+export function startCourse(progress, now = new Date()) {
+  if (progress.course.started) return progress;
+  return touch({ ...progress, course: { ...progress.course, started: true } }, now);
+}
+
+/** The answer to "Do you read the Tibetan script?" (true skips the reading module). */
+export function setCanRead(progress, value, now = new Date()) {
+  return touch({ ...progress, course: { ...progress.course, canRead: value } }, now);
+}
+
+/** The unit the learner opened last ("Continue" returns there). */
+export function setCurrentUnit(progress, unitId, now = new Date()) {
+  if (progress.course.current === unitId) return progress;
+  return touch({ ...progress, course: { ...progress.course, current: unitId } }, now);
+}
+
+/** The "Words" step: the unit's new words become "learning" (known ones stay as they are). */
+export function seeUnitWords(progress, wordIds, now = new Date()) {
+  const iso = now.toISOString();
+  const words = { ...progress.words };
+  for (const id of wordIds) {
+    const cur = words[id] || blankEntry(iso);
+    if (cur.status === STATUS.KNOWN) continue;
+    words[id] = { ...cur, status: STATUS.LEARNING, seen: cur.seen + 1, updatedAt: iso };
+  }
+  return touch({ ...progress, words }, now);
+}
+
+/** A sentence of the current step was solved cleanly. */
+export function markStepDone(progress, unitId, sentenceId, now = new Date()) {
+  const u = unitOf(progress, unitId);
+  if (u.done.includes(sentenceId)) return progress;
+  return withUnit(progress, unitId, { ...u, done: [...u.done, sentenceId] }, now);
+}
+
+/** Move a unit to its next step (or to a given one); the solved list starts over. */
+export function setUnitStep(progress, unitId, step, now = new Date()) {
+  const u = unitOf(progress, unitId);
+  return withUnit(progress, unitId, { ...u, step, done: [] }, now);
+}
+
+/**
+ * A unit check was taken. Passing it (score >= pass) closes the unit and makes
+ * its new words known at level 0, except the words of the failed tasks, which
+ * stay "learning"; words already known are not touched.
+ */
+export function recordCheck(progress, unitId, { score, pass, wordIds = [], wrongWordIds = [] }, now = new Date()) {
+  const u = unitOf(progress, unitId);
+  const passed = score >= pass;
+  const iso = now.toISOString();
+  const today = localDay(now);
+  let p = withUnit(progress, unitId, {
+    ...u,
+    attempts: u.attempts + 1,
+    best: Math.max(u.best, score),
+    step: passed ? 6 : u.step,
+    done: passed ? [] : u.done,
+    passedAt: passed ? u.passedAt || iso : u.passedAt,
+  }, now);
+  if (!passed) return p;
+  const words = { ...p.words };
+  const wrong = new Set(wrongWordIds);
+  for (const id of wordIds) {
+    const cur = words[id] || blankEntry(iso);
+    if (cur.status === STATUS.KNOWN) continue;
+    words[id] = wrong.has(id)
+      ? { ...cur, status: STATUS.LEARNING, level: 0, due: null, updatedAt: iso }
+      : knownAt(cur, 0, today, iso);
+  }
+  return touch({ ...p, words }, now);
 }
 
 export function setSetting(progress, key, value, now = new Date()) {
