@@ -8,7 +8,9 @@ lesson; `node scripts/build-content.mjs` turns them into
 words so that the learner can tap a word and see its meaning.
 
 The material for one lesson comes from `node scripts/intro-brief.mjs <set id>`
-(add `--book <text file>` to append the textbook lesson as a reference).
+(add `--book <text file>` to append the textbook lesson as a reference;
+the recovered texts live outside git, in `textbooks/txt/ryi-fixed.txt` and
+`textbooks/txt/bialek-fixed.txt`, next to the PDFs).
 Copy the prompt below, fill in the language, attach the brief.
 
 ---
