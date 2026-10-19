@@ -1,0 +1,56 @@
+# Words spelled out letter by letter by a native speaker (recordings of "Basic Tibetan", MSU, CC BY-NC 4.0; the clips are
+# listed in sign-audio's sibling spelling-audio.tsv). Each word is shown on the card of the sign it illustrates.
+# tib | card (<kind>:<wylie> of letters.tsv) | en | ru | de | fr | pl
+ལག་པ | suffix:g | hand | рука | Hand | main | ręka
+མིག་ཆུ | suffix:g | tear | слеза | Träne | larme | łza
+ཁང་པ | suffix:ng | house | дом | Haus | maison | dom
+ཆུང་ཆུང | suffix:ng | small | маленький | klein | petit | mały
+པད་མ | suffix:d | lotus | лотос | Lotus | lotus | lotos
+བོད་པ | suffix:d | Tibetan | тибетец | Tibeter | Tibétain | Tybetańczyk
+བན་དེ | suffix:n | monk | монах | Mönch | moine | mnich
+ཆེན་པོ | suffix:n | big | большой | groß | grand | duży
+ཐབ་ཚང | suffix:b | kitchen | кухня | Küche | cuisine | kuchnia
+དེབ་ཁུག | suffix:b | school bag | портфель | Schultasche | cartable | tornister
+ཟམ་པ | suffix:m | bridge | мост | Brücke | pont | most
+ཞིམ་པོ | suffix:m | delicious | вкусный | lecker | délicieux | pyszny
+འཇའ | suffix:' | rainbow | радуга | Regenbogen | arc-en-ciel | tęcza
+ལེའུ་ཚན | suffix:' | section, chapter | раздел | Abschnitt | section | rozdział
+ཆར་པ | suffix:r | rain | дождь | Regen | pluie | deszcz
+འུར་ཤོབ | suffix:r | exaggeration | преувеличение | Übertreibung | exagération | przesada
+བལ | suffix:l | wool | шерсть | Wolle | laine | wełna
+རིལ་རིལ | suffix:l | round | круглый | rund | rond | okrągły
+ལས་ཀ | suffix:s | work | работа | Arbeit | travail | praca
+གོས་ཐུང | suffix:s | trousers | штаны | Hose | pantalon | spodnie
+གངས | suffix:s | snow (second suffix) | снег (второй суффикс) | Schnee (zweites Suffix) | neige (second suffixe) | śnieg (drugi przyrostek)
+སེམས་ཅན | suffix:s | living beings (second suffix) | живые существа (второй суффикс) | Lebewesen (zweites Suffix) | êtres vivants (second suffixe) | istoty żywe (drugi przyrostek)
+ཐམས་ཅད | suffix:s | all (second suffix) | все (второй суффикс) | alle (zweites Suffix) | tous (second suffixe) | wszyscy (drugi przyrostek)
+གཉན | prefix:g | argali, wild sheep | архар, горный баран | Argali, Wildschaf | argali, mouton sauvage | argali, dzika owca
+གནན | prefix:g | to press down | придавливать | niederdrücken | presser | przyciskać
+གཡག | prefix:g | yak | як | Yak | yak | jak
+དགར | prefix:d | to separate | отделять | trennen | séparer | oddzielać
+དམར | prefix:d | red | красный | rot | rouge | czerwony
+དབང | prefix:d | power, empowerment | власть; посвящение | Macht; Ermächtigung | pouvoir ; initiation | władza; inicjacja
+བདག | prefix:b | self, I | я, сам | ich, selbst | moi, soi | ja, sam
+མཛངས | prefix:m | wise, learned | мудрый, учёный | weise, gelehrt | sage, érudit | mądry, uczony
+མངར | prefix:m | sweet | сладкий | süß | sucré | słodki
+འཇའ | prefix:' | rainbow | радуга | Regenbogen | arc-en-ciel | tęcza
+འབར | prefix:' | to blaze | пылать | lodern | flamboyer | płonąć
+ཁྱི | subjoined:kya | dog | собака | Hund | chien | pies
+ཁྱེད་རང | subjoined:kya | you | вы, ты | du, Sie | vous | ty, pan
+ཕྱི་ལོགས | subjoined:kya | outside | снаружи | draußen | dehors | na zewnątrz
+བྱ་ཤ | subjoined:kya | chicken (meat) | курятина | Hühnerfleisch | poulet (viande) | kurczak (mięso)
+ཉལ་ཁྲི | subjoined:kra | bed | кровать | Bett | lit | łóżko
+གྲང་མོ | subjoined:kra | cold | холодный | kalt | froid | zimny
+དྲི་བ | subjoined:kra | question | вопрос | Frage | question | pytanie
+དྲུག | subjoined:kra | six | шесть | sechs | six | sześć
+ཕོ་བྲང | subjoined:kra | palace | дворец | Palast | palais | pałac
+ཀློག | subjoined:kla | to read | читать | lesen | lire | czytać
+ཀླད་པ | subjoined:kla | brain | мозг | Gehirn | cerveau | mózg
+བླ་མ | subjoined:kla | lama | лама | Lama | lama | lama
+རླུང | subjoined:kla | wind | ветер | Wind | vent | wiatr
+ཟླ་བ | subjoined:kla | moon | луна | Mond | lune | księżyc
+ཚྭ | subjoined:kwa | salt | соль | Salz | sel | sól
+ཞྭ་མོ | subjoined:kwa | hat | шапка | Hut | chapeau | czapka
+རྭ་ཅོ | subjoined:kwa | horn | рог | Horn | corne | róg
+ཤྭ་བ | subjoined:kwa | deer | олень | Hirsch | cerf | jeleń
+སློབ་གྲྭ | subjoined:kwa | school | школа | Schule | école | szkoła

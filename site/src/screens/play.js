@@ -11,7 +11,7 @@
 //   { kind: 'check', unit }
 //   { kind: 'review' }
 
-import { h, clear, popover, popoverOpen, tibText, audioButton, toast } from '../ui.js';
+import { h, clear, popover, popoverOpen, tibText, audioButton, spellButton, toast } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { pickNext, contentWords, unknownWords, dueWordsIn } from '../engine/next.js';
 import { checkAnswer, shuffle, checkWylie, pickOptions, pickTibOptions } from '../engine/check.js';
@@ -359,7 +359,7 @@ export function renderPlay(root, ctx, mode = null) {
     const mark = (status) => { store.update((p) => setWordStatus(p, wordId, status)); close(); render(); };
     const report = reportControl(ctx, { kind: 'word', id: wordId, tib: w.tib, translation: tr.text, fallbackUrl: wordIssueUrl(ctx.config, wordId, w, tr.text, ctx.lang) });
     close = popover(h('div', {},
-      h('p', { class: 'big-tib' }, w.tib, ' ', audioButton(ctx, `w-${wordId}`)),
+      h('p', { class: 'big-tib' }, w.tib, ' ', audioButton(ctx, `w-${wordId}`), ' ', spellButton(ctx, w.tib)),
       h('div', { class: 'wylie' }, w.wylie, ' · ', t(`status.${wordStatus(store.get(), wordId)}`)),
       h('p', { class: 'tr' }, tr.text, tr.fallback ? ` (${tr.lang})` : ''),
       h('div', { class: 'buttons' },

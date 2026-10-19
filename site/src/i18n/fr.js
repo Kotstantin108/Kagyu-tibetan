@@ -73,6 +73,8 @@ export default {
   },
   read: {
     wylieNote: 'Le Wylie est la transcription latine lettre par lettre utilisée par le manuel, pas la prononciation : à l’oral, bien des préfixes et suffixes sont muets.',
+    phrases: 'Phrases de tous les jours',
+    phrasesNote: 'Expressions courantes de la langue parlée moderne, tirées du manuel Basic Tibetan (MSU, CC BY-NC 4.0) et lues par un locuteur natif. Les textes classiques ne les emploient pas, mais c’est ainsi que sonne la langue vivante.',
     practise: 'S’entraîner',
     table: 'Afficher le tableau',
     best: 'Meilleure manche : {score} sur {total}',
@@ -160,6 +162,8 @@ export default {
     toneH: 'ton haut',
     toneL: 'ton bas',
     wylieLabel: 'Wylie',
+    spell: 'épelé',
+    spelledExamples: 'Mots épelés',
     whichSign: 'Quel signe s’écrit ainsi ?',
     wrongSign: 'Pas celui-là. Le signe est {tib}.',
     introNext: 'Passer à l’entraînement',

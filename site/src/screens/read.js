@@ -2,7 +2,8 @@
 // lists them, #/read/<n> runs a round of the part (results in `reading`).
 // The course walks the same parts in order (module "Alphabet").
 
-import { h } from '../ui.js';
+import { h, audioButton } from '../ui.js';
+import { pickTr } from '../i18n/index.js';
 import { PARTS, partId, partPool } from '../engine/alphabet.js';
 import { TRAIN_SIZE, TRAIN_PASS } from '../engine/alphabet.js';
 import { renderDrill } from './drill.js';
@@ -39,6 +40,19 @@ export function renderRead(root, ctx) {
         h('a', { class: 'action primary small', href: `#/read/${part.n}` }, t('read.practise')),
       ),
       table,
+    ));
+  }
+  // colloquial phrases read by a native speaker (alphabet.json `phrases`, from content/phrases.tsv), a listening extra
+  const phrases = (data.alphabet.phrases || []).filter((x) => x.clip);
+  if (phrases.length && p.settings.voice) {
+    body.append(h('details', { class: 'phrases' },
+      h('summary', {}, `${t('read.phrases')} (${phrases.length})`),
+      h('p', { class: 'fine' }, t('read.phrasesNote')),
+      ...phrases.map((x) => h('div', { class: 'phrase-row' },
+        h('div', { class: 'tib big' }, x.tib, ' ', audioButton(ctx, x.clip, { small: true })),
+        h('div', { class: 'wylie' }, x.phon),
+        h('div', { class: 'tr' }, pickTr(x.tr, ctx.lang).text),
+      )),
     ));
   }
   root.append(h('section', { class: 'panel' }, body));

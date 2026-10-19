@@ -793,6 +793,52 @@
       "examples": [
         "kyi",
         "brgyad"
+      ],
+      "spelled": [
+        {
+          "tib": "ཁྱི",
+          "clip": "spell-0f41-0fb1-0f72",
+          "tr": {
+            "en": "dog",
+            "ru": "собака",
+            "de": "Hund",
+            "fr": "chien",
+            "pl": "pies"
+          }
+        },
+        {
+          "tib": "ཁྱེད་རང",
+          "clip": "spell-0f41-0fb1-0f7a-0f51-0f0b-0f62-0f44",
+          "tr": {
+            "en": "you",
+            "ru": "вы, ты",
+            "de": "du, Sie",
+            "fr": "vous",
+            "pl": "ty, pan"
+          }
+        },
+        {
+          "tib": "ཕྱི་ལོགས",
+          "clip": "spell-0f55-0fb1-0f72-0f0b-0f63-0f7c-0f42-0f66",
+          "tr": {
+            "en": "outside",
+            "ru": "снаружи",
+            "de": "draußen",
+            "fr": "dehors",
+            "pl": "na zewnątrz"
+          }
+        },
+        {
+          "tib": "བྱ་ཤ",
+          "clip": "spell-0f56-0fb1-0f0b-0f64",
+          "tr": {
+            "en": "chicken (meat)",
+            "ru": "курятина",
+            "de": "Hühnerfleisch",
+            "fr": "poulet (viande)",
+            "pl": "kurczak (mięso)"
+          }
+        }
       ]
     },
     {
@@ -816,6 +862,63 @@
       "examples": [
         "drug",
         "sgrol-ma"
+      ],
+      "spelled": [
+        {
+          "tib": "ཉལ་ཁྲི",
+          "clip": "spell-0f49-0f63-0f0b-0f41-0fb2-0f72",
+          "tr": {
+            "en": "bed",
+            "ru": "кровать",
+            "de": "Bett",
+            "fr": "lit",
+            "pl": "łóżko"
+          }
+        },
+        {
+          "tib": "གྲང་མོ",
+          "clip": "spell-0f42-0fb2-0f44-0f0b-0f58-0f7c",
+          "tr": {
+            "en": "cold",
+            "ru": "холодный",
+            "de": "kalt",
+            "fr": "froid",
+            "pl": "zimny"
+          }
+        },
+        {
+          "tib": "དྲི་བ",
+          "clip": "spell-0f51-0fb2-0f72-0f0b-0f56",
+          "tr": {
+            "en": "question",
+            "ru": "вопрос",
+            "de": "Frage",
+            "fr": "question",
+            "pl": "pytanie"
+          }
+        },
+        {
+          "tib": "དྲུག",
+          "clip": "spell-0f51-0fb2-0f74-0f42",
+          "tr": {
+            "en": "six",
+            "ru": "шесть",
+            "de": "sechs",
+            "fr": "six",
+            "pl": "sześć"
+          }
+        },
+        {
+          "tib": "ཕོ་བྲང",
+          "clip": "spell-0f55-0f7c-0f0b-0f56-0fb2-0f44",
+          "tr": {
+            "en": "palace",
+            "ru": "дворец",
+            "de": "Palast",
+            "fr": "palais",
+            "pl": "pałac"
+          }
+        }
       ]
     },
     {
@@ -839,6 +942,63 @@
       "examples": [
         "slob-ma",
         "bla-ma"
+      ],
+      "spelled": [
+        {
+          "tib": "ཀློག",
+          "clip": "spell-0f40-0fb3-0f7c-0f42",
+          "tr": {
+            "en": "to read",
+            "ru": "читать",
+            "de": "lesen",
+            "fr": "lire",
+            "pl": "czytać"
+          }
+        },
+        {
+          "tib": "ཀླད་པ",
+          "clip": "spell-0f40-0fb3-0f51-0f0b-0f54",
+          "tr": {
+            "en": "brain",
+            "ru": "мозг",
+            "de": "Gehirn",
+            "fr": "cerveau",
+            "pl": "mózg"
+          }
+        },
+        {
+          "tib": "བླ་མ",
+          "clip": "spell-0f56-0fb3-0f0b-0f58",
+          "tr": {
+            "en": "lama",
+            "ru": "лама",
+            "de": "Lama",
+            "fr": "lama",
+            "pl": "lama"
+          }
+        },
+        {
+          "tib": "རླུང",
+          "clip": "spell-0f62-0fb3-0f74-0f44",
+          "tr": {
+            "en": "wind",
+            "ru": "ветер",
+            "de": "Wind",
+            "fr": "vent",
+            "pl": "wiatr"
+          }
+        },
+        {
+          "tib": "ཟླ་བ",
+          "clip": "spell-0f5f-0fb3-0f0b-0f56",
+          "tr": {
+            "en": "moon",
+            "ru": "луна",
+            "de": "Mond",
+            "fr": "lune",
+            "pl": "księżyc"
+          }
+        }
       ]
     },
     {
@@ -861,6 +1021,63 @@
       },
       "examples": [
         "grwa-pa"
+      ],
+      "spelled": [
+        {
+          "tib": "ཚྭ",
+          "clip": "spell-0f5a-0fad",
+          "tr": {
+            "en": "salt",
+            "ru": "соль",
+            "de": "Salz",
+            "fr": "sel",
+            "pl": "sól"
+          }
+        },
+        {
+          "tib": "ཞྭ་མོ",
+          "clip": "spell-0f5e-0fad-0f0b-0f58-0f7c",
+          "tr": {
+            "en": "hat",
+            "ru": "шапка",
+            "de": "Hut",
+            "fr": "chapeau",
+            "pl": "czapka"
+          }
+        },
+        {
+          "tib": "རྭ་ཅོ",
+          "clip": "spell-0f62-0fad-0f0b-0f45-0f7c",
+          "tr": {
+            "en": "horn",
+            "ru": "рог",
+            "de": "Horn",
+            "fr": "corne",
+            "pl": "róg"
+          }
+        },
+        {
+          "tib": "ཤྭ་བ",
+          "clip": "spell-0f64-0fad-0f0b-0f56",
+          "tr": {
+            "en": "deer",
+            "ru": "олень",
+            "de": "Hirsch",
+            "fr": "cerf",
+            "pl": "jeleń"
+          }
+        },
+        {
+          "tib": "སློབ་གྲྭ",
+          "clip": "spell-0f66-0fb3-0f7c-0f56-0f0b-0f42-0fb2-0fad",
+          "tr": {
+            "en": "school",
+            "ru": "школа",
+            "de": "Schule",
+            "fr": "école",
+            "pl": "szkoła"
+          }
+        }
       ]
     },
     {
@@ -953,6 +1170,41 @@
       "examples": [
         "gsum",
         "gnyis"
+      ],
+      "spelled": [
+        {
+          "tib": "གཉན",
+          "clip": "spell-0f42-0f49-0f53",
+          "tr": {
+            "en": "argali, wild sheep",
+            "ru": "архар, горный баран",
+            "de": "Argali, Wildschaf",
+            "fr": "argali, mouton sauvage",
+            "pl": "argali, dzika owca"
+          }
+        },
+        {
+          "tib": "གནན",
+          "clip": "spell-0f42-0f53-0f53",
+          "tr": {
+            "en": "to press down",
+            "ru": "придавливать",
+            "de": "niederdrücken",
+            "fr": "presser",
+            "pl": "przyciskać"
+          }
+        },
+        {
+          "tib": "གཡག",
+          "clip": "spell-0f42-0f61-0f42",
+          "tr": {
+            "en": "yak",
+            "ru": "як",
+            "de": "Yak",
+            "fr": "yak",
+            "pl": "jak"
+          }
+        }
       ]
     },
     {
@@ -976,6 +1228,41 @@
       "examples": [
         "dgu",
         "dpal"
+      ],
+      "spelled": [
+        {
+          "tib": "དགར",
+          "clip": "spell-0f51-0f42-0f62",
+          "tr": {
+            "en": "to separate",
+            "ru": "отделять",
+            "de": "trennen",
+            "fr": "séparer",
+            "pl": "oddzielać"
+          }
+        },
+        {
+          "tib": "དམར",
+          "clip": "spell-0f51-0f58-0f62",
+          "tr": {
+            "en": "red",
+            "ru": "красный",
+            "de": "rot",
+            "fr": "rouge",
+            "pl": "czerwony"
+          }
+        },
+        {
+          "tib": "དབང",
+          "clip": "spell-0f51-0f56-0f44",
+          "tr": {
+            "en": "power, empowerment",
+            "ru": "власть; посвящение",
+            "de": "Macht; Ermächtigung",
+            "fr": "pouvoir ; initiation",
+            "pl": "władza; inicjacja"
+          }
+        }
       ]
     },
     {
@@ -999,6 +1286,19 @@
       "examples": [
         "bzhi",
         "bdun"
+      ],
+      "spelled": [
+        {
+          "tib": "བདག",
+          "clip": "spell-0f56-0f51-0f42",
+          "tr": {
+            "en": "self, I",
+            "ru": "я, сам",
+            "de": "ich, selbst",
+            "fr": "moi, soi",
+            "pl": "ja, sam"
+          }
+        }
       ]
     },
     {
@@ -1022,6 +1322,30 @@
       "examples": [
         "mchog",
         "mdo"
+      ],
+      "spelled": [
+        {
+          "tib": "མཛངས",
+          "clip": "spell-0f58-0f5b-0f44-0f66",
+          "tr": {
+            "en": "wise, learned",
+            "ru": "мудрый, учёный",
+            "de": "weise, gelehrt",
+            "fr": "sage, érudit",
+            "pl": "mądry, uczony"
+          }
+        },
+        {
+          "tib": "མངར",
+          "clip": "spell-0f58-0f44-0f62",
+          "tr": {
+            "en": "sweet",
+            "ru": "сладкий",
+            "de": "süß",
+            "fr": "sucré",
+            "pl": "słodki"
+          }
+        }
       ]
     },
     {
@@ -1045,6 +1369,30 @@
       "examples": [
         "'di",
         "'khor"
+      ],
+      "spelled": [
+        {
+          "tib": "འཇའ",
+          "clip": "spell-0f60-0f47-0f60",
+          "tr": {
+            "en": "rainbow",
+            "ru": "радуга",
+            "de": "Regenbogen",
+            "fr": "arc-en-ciel",
+            "pl": "tęcza"
+          }
+        },
+        {
+          "tib": "འབར",
+          "clip": "spell-0f60-0f56-0f62",
+          "tr": {
+            "en": "to blaze",
+            "ru": "пылать",
+            "de": "lodern",
+            "fr": "flamboyer",
+            "pl": "płonąć"
+          }
+        }
       ]
     },
     {
@@ -1068,6 +1416,30 @@
       "examples": [
         "mchog",
         "zhig"
+      ],
+      "spelled": [
+        {
+          "tib": "ལག་པ",
+          "clip": "spell-0f63-0f42-0f0b-0f54",
+          "tr": {
+            "en": "hand",
+            "ru": "рука",
+            "de": "Hand",
+            "fr": "main",
+            "pl": "ręka"
+          }
+        },
+        {
+          "tib": "མིག་ཆུ",
+          "clip": "spell-0f58-0f72-0f42-0f0b-0f46-0f74",
+          "tr": {
+            "en": "tear",
+            "ru": "слеза",
+            "de": "Träne",
+            "fr": "larme",
+            "pl": "łza"
+          }
+        }
       ]
     },
     {
@@ -1091,6 +1463,30 @@
       "examples": [
         "dang",
         "dbang"
+      ],
+      "spelled": [
+        {
+          "tib": "ཁང་པ",
+          "clip": "spell-0f41-0f44-0f0b-0f54",
+          "tr": {
+            "en": "house",
+            "ru": "дом",
+            "de": "Haus",
+            "fr": "maison",
+            "pl": "dom"
+          }
+        },
+        {
+          "tib": "ཆུང་ཆུང",
+          "clip": "spell-0f46-0f74-0f44-0f0b-0f46-0f74-0f44",
+          "tr": {
+            "en": "small",
+            "ru": "маленький",
+            "de": "klein",
+            "fr": "petit",
+            "pl": "mały"
+          }
+        }
       ]
     },
     {
@@ -1114,6 +1510,30 @@
       "examples": [
         "brgyad",
         "bod"
+      ],
+      "spelled": [
+        {
+          "tib": "པད་མ",
+          "clip": "spell-0f54-0f51-0f0b-0f58",
+          "tr": {
+            "en": "lotus",
+            "ru": "лотос",
+            "de": "Lotus",
+            "fr": "lotus",
+            "pl": "lotos"
+          }
+        },
+        {
+          "tib": "བོད་པ",
+          "clip": "spell-0f56-0f7c-0f51-0f0b-0f54",
+          "tr": {
+            "en": "Tibetan",
+            "ru": "тибетец",
+            "de": "Tibeter",
+            "fr": "Tibétain",
+            "pl": "Tybetańczyk"
+          }
+        }
       ]
     },
     {
@@ -1137,6 +1557,30 @@
       "examples": [
         "yin",
         "kun"
+      ],
+      "spelled": [
+        {
+          "tib": "བན་དེ",
+          "clip": "spell-0f56-0f53-0f0b-0f51-0f7a",
+          "tr": {
+            "en": "monk",
+            "ru": "монах",
+            "de": "Mönch",
+            "fr": "moine",
+            "pl": "mnich"
+          }
+        },
+        {
+          "tib": "ཆེན་པོ",
+          "clip": "spell-0f46-0f7a-0f53-0f0b-0f54-0f7c",
+          "tr": {
+            "en": "big",
+            "ru": "большой",
+            "de": "groß",
+            "fr": "grand",
+            "pl": "duży"
+          }
+        }
       ]
     },
     {
@@ -1160,6 +1604,30 @@
       "examples": [
         "slob-ma",
         "zab-mo"
+      ],
+      "spelled": [
+        {
+          "tib": "ཐབ་ཚང",
+          "clip": "spell-0f50-0f56-0f0b-0f5a-0f44",
+          "tr": {
+            "en": "kitchen",
+            "ru": "кухня",
+            "de": "Küche",
+            "fr": "cuisine",
+            "pl": "kuchnia"
+          }
+        },
+        {
+          "tib": "དེབ་ཁུག",
+          "clip": "spell-0f51-0f7a-0f56-0f0b-0f41-0f74-0f42",
+          "tr": {
+            "en": "school bag",
+            "ru": "портфель",
+            "de": "Schultasche",
+            "fr": "cartable",
+            "pl": "tornister"
+          }
+        }
       ]
     },
     {
@@ -1183,6 +1651,30 @@
       "examples": [
         "lam",
         "gsum"
+      ],
+      "spelled": [
+        {
+          "tib": "ཟམ་པ",
+          "clip": "spell-0f5f-0f58-0f0b-0f54",
+          "tr": {
+            "en": "bridge",
+            "ru": "мост",
+            "de": "Brücke",
+            "fr": "pont",
+            "pl": "most"
+          }
+        },
+        {
+          "tib": "ཞིམ་པོ",
+          "clip": "spell-0f5e-0f72-0f58-0f0b-0f54-0f7c",
+          "tr": {
+            "en": "delicious",
+            "ru": "вкусный",
+            "de": "lecker",
+            "fr": "délicieux",
+            "pl": "pyszny"
+          }
+        }
       ]
     },
     {
@@ -1206,6 +1698,30 @@
       "examples": [
         "bka'",
         "mkha'-'gro"
+      ],
+      "spelled": [
+        {
+          "tib": "འཇའ",
+          "clip": "spell-0f60-0f47-0f60",
+          "tr": {
+            "en": "rainbow",
+            "ru": "радуга",
+            "de": "Regenbogen",
+            "fr": "arc-en-ciel",
+            "pl": "tęcza"
+          }
+        },
+        {
+          "tib": "ལེའུ་ཚན",
+          "clip": "spell-0f63-0f7a-0f60-0f74-0f0b-0f5a-0f53",
+          "tr": {
+            "en": "section, chapter",
+            "ru": "раздел",
+            "de": "Abschnitt",
+            "fr": "section",
+            "pl": "rozdział"
+          }
+        }
       ]
     },
     {
@@ -1229,6 +1745,30 @@
       "examples": [
         "'khor",
         "dmar-po"
+      ],
+      "spelled": [
+        {
+          "tib": "ཆར་པ",
+          "clip": "spell-0f46-0f62-0f0b-0f54",
+          "tr": {
+            "en": "rain",
+            "ru": "дождь",
+            "de": "Regen",
+            "fr": "pluie",
+            "pl": "deszcz"
+          }
+        },
+        {
+          "tib": "འུར་ཤོབ",
+          "clip": "spell-0f60-0f74-0f62-0f0b-0f64-0f7c-0f56",
+          "tr": {
+            "en": "exaggeration",
+            "ru": "преувеличение",
+            "de": "Übertreibung",
+            "fr": "exagération",
+            "pl": "przesada"
+          }
+        }
       ]
     },
     {
@@ -1252,6 +1792,30 @@
       "examples": [
         "dpal",
         "rgyal-mo"
+      ],
+      "spelled": [
+        {
+          "tib": "བལ",
+          "clip": "spell-0f56-0f63",
+          "tr": {
+            "en": "wool",
+            "ru": "шерсть",
+            "de": "Wolle",
+            "fr": "laine",
+            "pl": "wełna"
+          }
+        },
+        {
+          "tib": "རིལ་རིལ",
+          "clip": "spell-0f62-0f72-0f63-0f0b-0f62-0f72-0f63",
+          "tr": {
+            "en": "round",
+            "ru": "круглый",
+            "de": "rund",
+            "fr": "rond",
+            "pl": "okrągły"
+          }
+        }
       ]
     },
     {
@@ -1275,6 +1839,63 @@
       "examples": [
         "chos",
         "rnams"
+      ],
+      "spelled": [
+        {
+          "tib": "ལས་ཀ",
+          "clip": "spell-0f63-0f66-0f0b-0f40",
+          "tr": {
+            "en": "work",
+            "ru": "работа",
+            "de": "Arbeit",
+            "fr": "travail",
+            "pl": "praca"
+          }
+        },
+        {
+          "tib": "གོས་ཐུང",
+          "clip": "spell-0f42-0f7c-0f66-0f0b-0f50-0f74-0f44",
+          "tr": {
+            "en": "trousers",
+            "ru": "штаны",
+            "de": "Hose",
+            "fr": "pantalon",
+            "pl": "spodnie"
+          }
+        },
+        {
+          "tib": "གངས",
+          "clip": "spell-0f42-0f44-0f66",
+          "tr": {
+            "en": "snow (second suffix)",
+            "ru": "снег (второй суффикс)",
+            "de": "Schnee (zweites Suffix)",
+            "fr": "neige (second suffixe)",
+            "pl": "śnieg (drugi przyrostek)"
+          }
+        },
+        {
+          "tib": "སེམས་ཅན",
+          "clip": "spell-0f66-0f7a-0f58-0f66-0f0b-0f45-0f53",
+          "tr": {
+            "en": "living beings (second suffix)",
+            "ru": "живые существа (второй суффикс)",
+            "de": "Lebewesen (zweites Suffix)",
+            "fr": "êtres vivants (second suffixe)",
+            "pl": "istoty żywe (drugi przyrostek)"
+          }
+        },
+        {
+          "tib": "ཐམས་ཅད",
+          "clip": "spell-0f50-0f58-0f66-0f0b-0f45-0f51",
+          "tr": {
+            "en": "all (second suffix)",
+            "ru": "все (второй суффикс)",
+            "de": "alle (zweites Suffix)",
+            "fr": "tous (second suffixe)",
+            "pl": "wszyscy (drugi przyrostek)"
+          }
+        }
       ]
     }
   ],
@@ -1622,5 +2243,385 @@
     "ཌྷ": "sign-0f4c-0fb7",
     "བྷ": "sign-0f56-0fb7",
     "དྷ": "sign-0f51-0fb7"
-  }
+  },
+  "spelling": {
+    "མི": "spell-0f58-0f72",
+    "རི": "spell-0f62-0f72",
+    "ཤི": "spell-0f64-0f72",
+    "ངུ": "spell-0f44-0f74",
+    "ཆུ": "spell-0f46-0f74",
+    "ཕུ": "spell-0f55-0f74",
+    "ཤུ": "spell-0f64-0f74",
+    "མེ": "spell-0f58-0f7a",
+    "ངོ": "spell-0f44-0f7c",
+    "ཞོ": "spell-0f5e-0f7c",
+    "རོ": "spell-0f62-0f7c",
+    "ཤོ": "spell-0f64-0f7c",
+    "སོ": "spell-0f66-0f7c",
+    "ལག་པ": "spell-0f63-0f42-0f0b-0f54",
+    "ཁང་པ": "spell-0f41-0f44-0f0b-0f54",
+    "པད་མ": "spell-0f54-0f51-0f0b-0f58",
+    "བན་དེ": "spell-0f56-0f53-0f0b-0f51-0f7a",
+    "ཐབ་ཚང": "spell-0f50-0f56-0f0b-0f5a-0f44",
+    "ཟམ་པ": "spell-0f5f-0f58-0f0b-0f54",
+    "འཇའ": "spell-0f60-0f47-0f60",
+    "ཆར་པ": "spell-0f46-0f62-0f0b-0f54",
+    "བལ": "spell-0f56-0f63",
+    "ལས་ཀ": "spell-0f63-0f66-0f0b-0f40",
+    "མིག་ཆུ": "spell-0f58-0f72-0f42-0f0b-0f46-0f74",
+    "ཆུང་ཆུང": "spell-0f46-0f74-0f44-0f0b-0f46-0f74-0f44",
+    "བོད་པ": "spell-0f56-0f7c-0f51-0f0b-0f54",
+    "ཆེན་པོ": "spell-0f46-0f7a-0f53-0f0b-0f54-0f7c",
+    "དེབ་ཁུག": "spell-0f51-0f7a-0f56-0f0b-0f41-0f74-0f42",
+    "ཞིམ་པོ": "spell-0f5e-0f72-0f58-0f0b-0f54-0f7c",
+    "ལེའུ་ཚན": "spell-0f63-0f7a-0f60-0f74-0f0b-0f5a-0f53",
+    "འུར་ཤོབ": "spell-0f60-0f74-0f62-0f0b-0f64-0f7c-0f56",
+    "རིལ་རིལ": "spell-0f62-0f72-0f63-0f0b-0f62-0f72-0f63",
+    "གོས་ཐུང": "spell-0f42-0f7c-0f66-0f0b-0f50-0f74-0f44",
+    "ཇ་ཚགས": "spell-0f47-0f0b-0f5a-0f42-0f66",
+    "གངས": "spell-0f42-0f44-0f66",
+    "ཆར་ཁེབས": "spell-0f46-0f62-0f0b-0f41-0f7a-0f56-0f66",
+    "སེམས་ཅན": "spell-0f66-0f7a-0f58-0f66-0f0b-0f45-0f53",
+    "ཐམས་ཅད": "spell-0f50-0f58-0f66-0f0b-0f45-0f51",
+    "ཕྱིནད": "spell-0f55-0fb1-0f72-0f53-0f51",
+    "བསྟནད": "spell-0f56-0f66-0f9f-0f53-0f51",
+    "བསྐོརད": "spell-0f56-0f66-0f90-0f7c-0f62-0f51",
+    "གྱུརད": "spell-0f42-0fb1-0f74-0f62-0f51",
+    "སྩལད་བ": "spell-0f66-0fa9-0f63-0f51-0f0b-0f56",
+    "དགར": "spell-0f51-0f42-0f62",
+    "བདག": "spell-0f56-0f51-0f42",
+    "འབར": "spell-0f60-0f56-0f62",
+    "མཛངས": "spell-0f58-0f5b-0f44-0f66",
+    "མངར": "spell-0f58-0f44-0f62",
+    "གཉན": "spell-0f42-0f49-0f53",
+    "གནན": "spell-0f42-0f53-0f53",
+    "དམར": "spell-0f51-0f58-0f62",
+    "གཡག": "spell-0f42-0f61-0f42",
+    "ཁ་བ": "spell-0f41-0f0b-0f56",
+    "རེ་བ": "spell-0f62-0f7a-0f0b-0f56",
+    "བདེ་བ": "spell-0f56-0f51-0f7a-0f0b-0f56",
+    "རྒོ་བ": "spell-0f62-0f92-0f7c-0f0b-0f56",
+    "བྱ་བ": "spell-0f56-0fb1-0f0b-0f56",
+    "དབར": "spell-0f51-0f56-0f62",
+    "དབང": "spell-0f51-0f56-0f44",
+    "དབེན་པ": "spell-0f51-0f56-0f7a-0f53-0f0b-0f54",
+    "དབྱར་ཁ": "spell-0f51-0f56-0fb1-0f62-0f0b-0f41",
+    "དབྱིབས": "spell-0f51-0f56-0fb1-0f72-0f56-0f66",
+    "དབྲལ": "spell-0f51-0f56-0fb2-0f63",
+    "དབུལ་པོ": "spell-0f51-0f56-0f74-0f63-0f0b-0f54-0f7c",
+    "དབྱུག་པ": "spell-0f51-0f56-0fb1-0f74-0f42-0f0b-0f54",
+    "ཞབས་ཀྱུ": "spell-0f5e-0f56-0f66-0f0b-0f40-0fb1-0f74",
+    "ཁྱི": "spell-0f41-0fb1-0f72",
+    "ཁྱེད་རང": "spell-0f41-0fb1-0f7a-0f51-0f0b-0f62-0f44",
+    "ཕྱུ་པ": "spell-0f55-0fb1-0f74-0f0b-0f54",
+    "ཕྱི་ལོགས": "spell-0f55-0fb1-0f72-0f0b-0f63-0f7c-0f42-0f66",
+    "བྱ་ཤ": "spell-0f56-0fb1-0f0b-0f64",
+    "ལས་ཀ་བྱེད": "spell-0f63-0f66-0f0b-0f40-0f0b-0f56-0fb1-0f7a-0f51",
+    "རོགས་པ་བྱེད": "spell-0f62-0f7c-0f42-0f66-0f0b-0f54-0f0b-0f56-0fb1-0f7a-0f51",
+    "ཁྱི་ཉར་མ་མྱོང": "spell-0f41-0fb1-0f72-0f0b-0f49-0f62-0f0b-0f58-0f0b-0f58-0fb1-0f7c-0f44",
+    "ཀྲུང་གོ": "spell-0f40-0fb2-0f74-0f44-0f0b-0f42-0f7c",
+    "ཉལ་ཁྲི": "spell-0f49-0f63-0f0b-0f41-0fb2-0f72",
+    "གྲང་མོ": "spell-0f42-0fb2-0f44-0f0b-0f58-0f7c",
+    "དྲི་བ": "spell-0f51-0fb2-0f72-0f0b-0f56",
+    "དྲུག": "spell-0f51-0fb2-0f74-0f42",
+    "ཕྲེང་ང": "spell-0f55-0fb2-0f7a-0f44-0f0b-0f44",
+    "ཕོ་བྲང": "spell-0f55-0f7c-0f0b-0f56-0fb2-0f44",
+    "ཆབ་སྲིད": "spell-0f46-0f56-0f0b-0f66-0fb2-0f72-0f51",
+    "ཧྲང་ཧེ": "spell-0f67-0fb2-0f44-0f0b-0f67-0f7a",
+    "ཀློག": "spell-0f40-0fb3-0f7c-0f42",
+    "ཀླད་པ": "spell-0f40-0fb3-0f51-0f0b-0f54",
+    "གློག་ཀླད": "spell-0f42-0fb3-0f7c-0f42-0f0b-0f40-0fb3-0f51",
+    "བླ་མ": "spell-0f56-0fb3-0f0b-0f58",
+    "རླུང": "spell-0f62-0fb3-0f74-0f44",
+    "སློབ་ཕྲུག": "spell-0f66-0fb3-0f7c-0f56-0f0b-0f55-0fb2-0f74-0f42",
+    "ལས་སླ་པོ": "spell-0f63-0f66-0f0b-0f66-0fb3-0f0b-0f54-0f7c",
+    "ཟླ་བ": "spell-0f5f-0fb3-0f0b-0f56",
+    "ཉྭ་རིལ": "spell-0f49-0fad-0f0b-0f62-0f72-0f63",
+    "དྭ་ཕྲུག": "spell-0f51-0fad-0f0b-0f55-0fb2-0f74-0f42",
+    "ལ་དྭགས": "spell-0f63-0f0b-0f51-0fad-0f42-0f66",
+    "ཚྭ": "spell-0f5a-0fad",
+    "ཞྭ་མོ": "spell-0f5e-0fad-0f0b-0f58-0f7c",
+    "རྭ་ཅོ": "spell-0f62-0fad-0f0b-0f45-0f7c",
+    "ཤྭ་བ": "spell-0f64-0fad-0f0b-0f56",
+    "སློབ་གྲྭ": "spell-0f66-0fb3-0f7c-0f56-0f0b-0f42-0fb2-0fad",
+    "ཧྭ་ཤང": "spell-0f67-0fad-0f0b-0f64-0f44"
+  },
+  "phrases": [
+    {
+      "tib": "བཀྲ་ཤིས་བདེ་ལེགས།",
+      "phon": "tashi delek",
+      "clip": "phrase-01",
+      "tr": {
+        "en": "Hello!",
+        "ru": "Здравствуйте!",
+        "de": "Hallo!",
+        "fr": "Bonjour !",
+        "pl": "Dzień dobry!"
+      }
+    },
+    {
+      "tib": "སྔ་དྲོ་བདེ་ལེགས།",
+      "phon": "ngadro delek",
+      "clip": "phrase-02",
+      "tr": {
+        "en": "Good morning.",
+        "ru": "Доброе утро.",
+        "de": "Guten Morgen.",
+        "fr": "Bonjour (le matin).",
+        "pl": "Dzień dobry (rano)."
+      }
+    },
+    {
+      "tib": "ཉིན་མོ་བདེ་ལེགས།",
+      "phon": "nyinmo delek",
+      "clip": "phrase-03",
+      "tr": {
+        "en": "Good afternoon.",
+        "ru": "Добрый день.",
+        "de": "Guten Tag.",
+        "fr": "Bon après-midi.",
+        "pl": "Dzień dobry (po południu)."
+      }
+    },
+    {
+      "tib": "མཚན་མོ་བདེ་ལེགས།",
+      "phon": "tsenmo delek",
+      "clip": "phrase-04",
+      "tr": {
+        "en": "Good evening, good night.",
+        "ru": "Добрый вечер, доброй ночи.",
+        "de": "Guten Abend, gute Nacht.",
+        "fr": "Bonsoir, bonne nuit.",
+        "pl": "Dobry wieczór, dobranoc."
+      }
+    },
+    {
+      "tib": "ག་ལེར་ཕེབས།",
+      "phon": "galer phep",
+      "clip": "phrase-05",
+      "tr": {
+        "en": "Go well (to one who leaves).",
+        "ru": "Счастливого пути (уходящему).",
+        "de": "Geh wohl (zum Gehenden).",
+        "fr": "Bonne route (à qui part).",
+        "pl": "Szczęśliwej drogi (do odchodzącego)."
+      }
+    },
+    {
+      "tib": "ག་ལེར་བཞུགས།",
+      "phon": "galer zhuk",
+      "clip": "phrase-06",
+      "tr": {
+        "en": "Stay well (to one who stays).",
+        "ru": "Оставайтесь с миром (остающемуся).",
+        "de": "Bleib wohl (zum Bleibenden).",
+        "fr": "Restez bien (à qui reste).",
+        "pl": "Zostań w spokoju (do zostającego)."
+      }
+    },
+    {
+      "tib": "གཟིམ་འཇགས་གནང་གོ།",
+      "phon": "zimjak nang-go",
+      "clip": "phrase-07",
+      "tr": {
+        "en": "Have a good sleep.",
+        "ru": "Спокойной ночи.",
+        "de": "Schlaf gut.",
+        "fr": "Dormez bien.",
+        "pl": "Dobranoc, śpij dobrze."
+      }
+    },
+    {
+      "tib": "སང་ཉིན་མཇལ་ཡོང་།",
+      "phon": "sangnyin jel yong",
+      "clip": "phrase-08",
+      "tr": {
+        "en": "See you tomorrow.",
+        "ru": "До завтра.",
+        "de": "Bis morgen.",
+        "fr": "À demain.",
+        "pl": "Do jutra."
+      }
+    },
+    {
+      "tib": "བཞུགས་དང་།",
+      "phon": "zhuk dang",
+      "clip": "phrase-09",
+      "tr": {
+        "en": "Please, have a seat.",
+        "ru": "Садитесь, пожалуйста.",
+        "de": "Bitte, setz dich.",
+        "fr": "Asseyez-vous, je vous prie.",
+        "pl": "Proszę usiąść."
+      }
+    },
+    {
+      "tib": "ཐུགས་རྗེ་ཆེ།",
+      "phon": "thukje che",
+      "clip": "phrase-10",
+      "tr": {
+        "en": "Thank you.",
+        "ru": "Спасибо.",
+        "de": "Danke.",
+        "fr": "Merci.",
+        "pl": "Dziękuję."
+      }
+    },
+    {
+      "tib": "གའི་གནང་གི་མ་རེད།",
+      "phon": "gai nang gi marey",
+      "clip": "phrase-11",
+      "tr": {
+        "en": "You are welcome.",
+        "ru": "Не за что.",
+        "de": "Gern geschehen.",
+        "fr": "De rien.",
+        "pl": "Nie ma za co."
+      }
+    },
+    {
+      "tib": "ལ་སོ་ལ་སོ།",
+      "phon": "laso laso",
+      "clip": "phrase-12",
+      "tr": {
+        "en": "Okay, okay.",
+        "ru": "Хорошо, хорошо.",
+        "de": "Gut, gut.",
+        "fr": "D’accord, d’accord.",
+        "pl": "Dobrze, dobrze."
+      }
+    },
+    {
+      "tib": "ངས་ཤེས་མ་སོང་།",
+      "phon": "nge she masong",
+      "clip": "phrase-13",
+      "tr": {
+        "en": "I did not understand.",
+        "ru": "Я не понял.",
+        "de": "Ich habe es nicht verstanden.",
+        "fr": "Je n’ai pas compris.",
+        "pl": "Nie zrozumiałem."
+      }
+    },
+    {
+      "tib": "ཡང་བསྐྱར་གསུངས་དང་།",
+      "phon": "yangkyar sung dang",
+      "clip": "phrase-14",
+      "tr": {
+        "en": "Please, say it again.",
+        "ru": "Повторите, пожалуйста.",
+        "de": "Bitte sag es noch einmal.",
+        "fr": "Répétez, s’il vous plaît.",
+        "pl": "Proszę powtórzyć."
+      }
+    },
+    {
+      "tib": "ག་ལེར་གསུངས་དང་།",
+      "phon": "galer sung dang",
+      "clip": "phrase-15",
+      "tr": {
+        "en": "Please, say it slowly.",
+        "ru": "Скажите медленнее, пожалуйста.",
+        "de": "Bitte sag es langsam.",
+        "fr": "Dites-le lentement, s’il vous plaît.",
+        "pl": "Proszę mówić wolniej."
+      }
+    },
+    {
+      "tib": "ཤེས་སོང་ངམ།",
+      "phon": "she song ngam",
+      "clip": "phrase-16",
+      "tr": {
+        "en": "Did you understand?",
+        "ru": "Вы поняли?",
+        "de": "Hast du es verstanden?",
+        "fr": "Avez-vous compris ?",
+        "pl": "Czy zrozumiałeś?"
+      }
+    },
+    {
+      "tib": "ངས་ཤེས་སོང་།",
+      "phon": "nge she song",
+      "clip": "phrase-17",
+      "tr": {
+        "en": "I understood.",
+        "ru": "Я понял.",
+        "de": "Ich habe es verstanden.",
+        "fr": "J’ai compris.",
+        "pl": "Zrozumiałem."
+      }
+    },
+    {
+      "tib": "སྐུ་ཁམས་བཟང་།",
+      "phon": "kukham sang",
+      "clip": "phrase-18",
+      "tr": {
+        "en": "Hello (good health).",
+        "ru": "Здравствуйте (доброго здоровья).",
+        "de": "Hallo (gute Gesundheit).",
+        "fr": "Bonjour (bonne santé).",
+        "pl": "Witam (dobrego zdrowia)."
+      }
+    },
+    {
+      "tib": "དགོངས་དག",
+      "phon": "gong dak",
+      "clip": "phrase-19",
+      "tr": {
+        "en": "Sorry.",
+        "ru": "Извините.",
+        "de": "Entschuldigung.",
+        "fr": "Pardon.",
+        "pl": "Przepraszam."
+      }
+    },
+    {
+      "tib": "གཟབ་གཟབ་གནང་གོ།",
+      "phon": "zabzab nang-go",
+      "clip": "phrase-20",
+      "tr": {
+        "en": "Be careful.",
+        "ru": "Будьте осторожны.",
+        "de": "Sei vorsichtig.",
+        "fr": "Faites attention.",
+        "pl": "Uważaj."
+      }
+    },
+    {
+      "tib": "སྤྲོ་པོ་གནང་གོ།",
+      "phon": "tropo nang-go",
+      "clip": "phrase-21",
+      "tr": {
+        "en": "Have fun.",
+        "ru": "Приятно провести время.",
+        "de": "Viel Spaß.",
+        "fr": "Amusez-vous bien.",
+        "pl": "Baw się dobrze."
+      }
+    },
+    {
+      "tib": "བཀའ་དྲིན་ཆེ།",
+      "phon": "kadrin che",
+      "clip": "phrase-22",
+      "tr": {
+        "en": "Thank you (it is so kind of you).",
+        "ru": "Благодарю (вы очень добры).",
+        "de": "Danke (das ist sehr freundlich).",
+        "fr": "Merci (c’est très aimable).",
+        "pl": "Dziękuję (to bardzo miłe)."
+      }
+    },
+    {
+      "tib": "རྗེས་མར་མཇལ་ཡོང་།",
+      "phon": "jemar jel yong",
+      "clip": "phrase-23",
+      "tr": {
+        "en": "See you later.",
+        "ru": "До встречи.",
+        "de": "Bis später.",
+        "fr": "À plus tard.",
+        "pl": "Do zobaczenia."
+      }
+    }
+  ]
 }

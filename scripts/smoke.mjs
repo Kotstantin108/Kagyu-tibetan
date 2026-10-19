@@ -153,6 +153,12 @@ check((await page.$('.word-row .audio-btn')) !== null, 'dictionary shows listen 
 await page.goto(`${base}/index.html#/course/alphabet/1/intro`);
 await page.waitForSelector('#words-next');
 check((await page.$$('.sign-card .audio-btn')).length === 4, 'alphabet: the letter cards show listen buttons (native recordings of the signs)');
+await page.goto(`${base}/index.html#/course/alphabet/12/intro`);
+await page.waitForSelector('#words-next');
+check((await page.$$('.sign-card .spelled .audio-btn.spell')).length >= 20, 'alphabet: the affix cards show words spelled out by a native speaker');
+await page.goto(`${base}/index.html#/read`);
+await page.waitForSelector('.phrases');
+check((await page.$$('.phrase-row .audio-btn')).length === 23, 'reading: the colloquial phrases are listed with listen buttons');
 await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); p.settings.voice = false; localStorage.setItem('tib-progress', JSON.stringify(p)); });
 
 for (const route of ['dict', 'grammar', 'stats', 'settings', 'support']) {

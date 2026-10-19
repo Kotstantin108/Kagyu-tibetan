@@ -236,6 +236,15 @@ h1, h2, h3, .prompt, .brand-title, .stat .num { font-family: var(--serif); }
 .shortcuts { margin-top: 10px; }
 .audio-btn { display: inline-grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 50%; border: 1.5px solid var(--gold-line); background: var(--input-bg); color: var(--gold-text); vertical-align: middle; transition: background .15s ease, transform .12s ease; }
 .audio-btn.small { width: 30px; height: 30px; }
+.audio-btn.spell { display: inline-flex; align-items: center; gap: 4px; width: auto; height: 28px; padding: 0 10px 0 6px; border-radius: 999px; font-size: .78rem; line-height: 1; }
+.audio-btn.spell svg { width: 14px; height: 14px; }
+.sign-examples.spelled .fine { margin: 8px 0 4px; }
+.sign-examples.spelled .example { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.phrases { margin-top: 18px; }
+.phrases summary { cursor: pointer; font-weight: 600; }
+.phrase-row { padding: 8px 0; border-top: 1px solid var(--sep); }
+.phrase-row .tib.big { font-size: 1.5rem; }
+.phrase-row .wylie { font-size: .9rem; opacity: .8; }
 .audio-btn:hover { background: var(--goldsoft); }
 .audio-btn:active { transform: scale(.94); }
 .audio-btn.playing { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }

@@ -1,0 +1,27 @@
+# Frequent colloquial expressions read by a native speaker: tib | clip id | source recording | start | end (seconds).
+# Cut by scripts/tools/msu-audio.py from "Basic Tibetan" (Jampa Khedup, Sonam Tsering et al., Michigan State
+# University Libraries, CC BY-NC 4.0, https://openbooks.lib.msu.edu/basictibetan/). The clips <clip id>.mp3 live
+# beside the word clips on the server (AUDIO_BASE).
+བཀྲ་ཤིས་བདེ་ལེགས། | phrase-01 | Frequent-expression-1.m4a | 1.09 | 2.16
+སྔ་དྲོ་བདེ་ལེགས། | phrase-02 | Frequent-expression-1.m4a | 3.23 | 4.61
+ཉིན་མོ་བདེ་ལེགས། | phrase-03 | Frequent-expression-1.m4a | 5.58 | 6.71
+མཚན་མོ་བདེ་ལེགས། | phrase-04 | Frequent-expression-1.m4a | 7.94 | 9.13
+ག་ལེར་ཕེབས། | phrase-05 | Frequent-expression-1.m4a | 10.29 | 11.14
+ག་ལེར་བཞུགས། | phrase-06 | Frequent-expression-1.m4a | 12.32 | 13.29
+གཟིམ་འཇགས་གནང་གོ། | phrase-07 | Frequent-expression-1.m4a | 14.56 | 15.92
+སང་ཉིན་མཇལ་ཡོང་། | phrase-08 | Frequent-expression-1.m4a | 17.02 | 18.55
+བཞུགས་དང་། | phrase-09 | Frequent-Expression-2.m4a | 0.66 | 1.73
+ཐུགས་རྗེ་ཆེ། | phrase-10 | Frequent-Expression-2.m4a | 2.69 | 3.71
+གའི་གནང་གི་མ་རེད། | phrase-11 | Frequent-Expression-2.m4a | 4.8 | 6.11
+ལ་སོ་ལ་སོ། | phrase-12 | Frequent-Expression-2.m4a | 6.8 | 8.37
+ངས་ཤེས་མ་སོང་། | phrase-13 | Frequent-Expression-2.m4a | 9.67 | 11.22
+ཡང་བསྐྱར་གསུངས་དང་། | phrase-14 | Frequent-Expression-2.m4a | 12.35 | 13.69
+ག་ལེར་གསུངས་དང་། | phrase-15 | Frequent-Expression-2.m4a | 14.89 | 16.16
+ཤེས་སོང་ངམ། | phrase-16 | Frequent-Expression-2.m4a | 17.18 | 18.83
+ངས་ཤེས་སོང་། | phrase-17 | Frequent-Expression-2.m4a | 19.89 | 21.18
+སྐུ་ཁམས་བཟང་། | phrase-18 | Frequent-Expressions-3-1.m4a | 1.04 | 2.29
+དགོངས་དག | phrase-19 | Frequent-Expressions-3-1.m4a | 3.3 | 4.06
+གཟབ་གཟབ་གནང་གོ། | phrase-20 | Frequent-Expressions-3-1.m4a | 5.52 | 6.87
+སྤྲོ་པོ་གནང་གོ། | phrase-21 | Frequent-Expressions-3-1.m4a | 8.38 | 9.54
+བཀའ་དྲིན་ཆེ། | phrase-22 | Frequent-Expressions-3-1.m4a | 10.77 | 11.57
+རྗེས་མར་མཇལ་ཡོང་། | phrase-23 | Frequent-Expressions-3-1.m4a | 12.74 | 13.85

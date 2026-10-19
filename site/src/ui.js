@@ -84,6 +84,24 @@ export function audioButton(ctx, clipId, { small = false } = {}) {
   return btn;
 }
 
+/**
+ * "Spell it": the word read letter by letter and then whole by a native
+ * speaker, when alphabet.json has such a clip (content/spelling-audio.tsv).
+ * Null when there is none or the voice setting is off.
+ */
+export function spellButton(ctx, tib) {
+  const map = ctx.data && ctx.data.alphabet && ctx.data.alphabet.spelling;
+  const clip = map && (map[tib] || map[String(tib).replace(/་$/, '')]);
+  if (!clip) return null;
+  const btn = audioButton(ctx, clip, { small: true });
+  if (!btn) return null;
+  btn.classList.add('spell');
+  btn.title = ctx.t('alphabet.spell');
+  btn.setAttribute('aria-label', ctx.t('alphabet.spell'));
+  btn.append(h('span', { class: 'spell-label' }, ctx.t('alphabet.spell')));
+  return btn;
+}
+
 /** True while a popover is open (keyboard shortcuts should stay quiet). */
 export function popoverOpen() {
   return Boolean(document.querySelector('.popover-backdrop'));

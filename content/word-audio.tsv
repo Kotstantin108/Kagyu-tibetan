@@ -1,0 +1,19 @@
+# Words read plainly by a native speaker: tib | clip id | source recording | start | end (seconds).
+# Cut by scripts/tools/msu-audio.py from "Basic Tibetan" (Jampa Khedup, Sonam Tsering et al., Michigan State
+# University Libraries, CC BY-NC 4.0, https://openbooks.lib.msu.edu/basictibetan/). The clips <clip id>.mp3 live
+# beside the word clips on the server (AUDIO_BASE).
+ཁ | msu-0f41 | The-Single-Letter-words.m4a | 1.05 | 1.59
+ང | msu-0f44 | The-Single-Letter-words.m4a | 2.78 | 3.32
+ཆ | msu-0f46 | The-Single-Letter-words.m4a | 4.62 | 5.14
+ཇ | msu-0f47 | The-Single-Letter-words.m4a | 6.47 | 7.02
+ཉ | msu-0f49 | The-Single-Letter-words.m4a | 8.35 | 8.9
+ན | msu-0f53 | The-Single-Letter-words.m4a | 10.02 | 10.65
+ཕ | msu-0f55 | The-Single-Letter-words.m4a | 11.96 | 12.45
+བ | msu-0f56 | The-Single-Letter-words.m4a | 13.62 | 14.17
+མ | msu-0f58 | The-Single-Letter-words.m4a | 15.28 | 15.84
+ཝ | msu-0f5d | The-Single-Letter-words.m4a | 17.09 | 17.67
+ཟ | msu-0f5f | The-Single-Letter-words.m4a | 18.66 | 19.31
+ཡ | msu-0f61 | The-Single-Letter-words.m4a | 20.35 | 20.95
+ར | msu-0f62 | The-Single-Letter-words.m4a | 22.09 | 22.64
+ཤ | msu-0f64 | The-Single-Letter-words.m4a | 23.64 | 24.3
+ས | msu-0f66 | The-Single-Letter-words.m4a | 25.32 | 26.03

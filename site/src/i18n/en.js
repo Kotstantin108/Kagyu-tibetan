@@ -73,6 +73,8 @@ export default {
   },
   read: {
     wylieNote: 'Wylie is the letter-by-letter Latin spelling that the textbook uses, not the pronunciation: in speech many prefixes and suffixes are silent.',
+    phrases: 'Everyday phrases',
+    phrasesNote: 'Everyday expressions of the modern spoken language from the textbook Basic Tibetan (MSU, CC BY-NC 4.0), read by a native speaker. Classical texts do not use them, but this is how the living language sounds.',
     practise: 'Practise',
     table: 'Show the table',
     best: 'Best round: {score} of {total}',
@@ -160,6 +162,8 @@ export default {
     toneH: 'high tone',
     toneL: 'low tone',
     wylieLabel: 'Wylie',
+    spell: 'spell it',
+    spelledExamples: 'Words spelled out',
     whichSign: 'Which sign is spelt like this?',
     wrongSign: 'Not that one. The sign is {tib}.',
     introNext: 'On to the training',

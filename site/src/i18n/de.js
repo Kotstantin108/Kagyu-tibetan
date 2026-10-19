@@ -73,6 +73,8 @@ export default {
   },
   read: {
     wylieNote: 'Wylie ist die buchstabengetreue lateinische Schreibung, die das Lehrbuch benutzt, nicht die Aussprache: beim Sprechen bleiben viele Präfixe und Suffixe stumm.',
+    phrases: 'Alltagssätze',
+    phrasesNote: 'Alltägliche Wendungen der modernen gesprochenen Sprache aus dem Lehrbuch Basic Tibetan (MSU, CC BY-NC 4.0), von einem Muttersprachler gelesen. In klassischen Texten kommen sie nicht vor, aber so klingt die lebendige Sprache.',
     practise: 'Üben',
     table: 'Tabelle zeigen',
     best: 'Beste Runde: {score} von {total}',
@@ -160,6 +162,8 @@ export default {
     toneH: 'hoher Ton',
     toneL: 'tiefer Ton',
     wylieLabel: 'Wylie',
+    spell: 'buchstabiert',
+    spelledExamples: 'Wörter buchstabiert',
     whichSign: 'Welches Zeichen wird so geschrieben?',
     wrongSign: 'Nicht das. Das Zeichen ist {tib}.',
     introNext: 'Weiter zum Training',

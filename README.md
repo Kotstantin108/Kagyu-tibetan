@@ -278,6 +278,17 @@ recorded in `content/sign-audio.tsv`, which the build turns into
 `alphabet.json` → `audio` (sign → clip id); the sign cards, the sign popover
 of the theory pages and the drills (after a wrong answer) show a listen button
 for the signs that have a clip. The attribution is in the app's "About" text.
+The same recordings give 101 words spelled out letter by letter and then
+read (`spell-*.mp3`, `content/spelling-audio.tsv`): a "spell it" button next
+to the listen button of a word in the lessons, the dictionary, the play
+screen and the alphabet cards, plus the spelled example words shown on the
+prefix, suffix and subjoined cards with their meanings
+(`content/spelled-words.tsv`); 15 single-letter words read plainly
+(`msu-*.mp3`, `content/word-audio.tsv`), nine of which replaced the synthetic
+`w-<id>.mp3` of the same syllable on the server (the synthetic ones are kept
+in `audio/tts-replaced/`); and 23 colloquial phrases (`phrase-*.mp3`,
+`content/phrase-audio.tsv` + `content/phrases.tsv`) listed at the end of the
+Reading section as a listening extra.
 
 ## Server
 

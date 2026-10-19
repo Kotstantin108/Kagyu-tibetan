@@ -4,7 +4,7 @@
 // course mode. #/course/<module>/theory is the theory page of a module (read
 // before its first part). #/course/done is the end of the course.
 
-import { h, popover, tibText, audioButton, toast } from '../ui.js';
+import { h, popover, tibText, audioButton, spellButton, toast } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { renderPlay } from './play.js';
 import { needsOnboarding, showOnboarding } from './onboarding.js';
@@ -75,6 +75,15 @@ function theoryLadderRow(ctx, p, unit) {
   );
 }
 
+/** The words a sign card shows spelled out by a native speaker (alphabet.json letters[].spelled, from content/spelled-words.tsv). */
+function spelledExamples(ctx, e) {
+  if (!e.spelled || !e.spelled.length || !ctx.store.get().settings.voice) return null;
+  return h('div', { class: 'sign-examples spelled' },
+    h('div', { class: 'fine' }, ctx.t('alphabet.spelledExamples')),
+    ...e.spelled.map((x) => h('div', { class: 'example' }, h('span', { class: 'tib' }, x.tib), ' ', spellButton(ctx, x.tib), h('span', { class: 'tr' }, pickTr(x.tr, ctx.lang).text))),
+  );
+}
+
 /** The listen button of a sign, when a native recording of it exists (alphabet.json `audio`, from content/sign-audio.tsv). */
 function signAudio(ctx, tib) {
   const id = ctx.data.alphabet.audio && ctx.data.alphabet.audio[tib];
@@ -99,6 +108,7 @@ function showSign(ctx, tib) {
       h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', e.wylie),
       h('p', { class: 'tr' }, soundText(e, ctx.lang)),
       examples.length ? h('div', { class: 'sign-examples' }, ...examples.map((w) => h('div', { class: 'example' }, h('span', { class: 'tib' }, w.tib), h('span', { class: 'tr' }, `${w.wylie} · ${pickTr(w.tr, ctx.lang).text}`)))) : null,
+      spelledExamples(ctx, e),
     );
   });
   popover(h('div', { class: 'theory-popover' }, ...rows));
@@ -108,7 +118,7 @@ function showSign(ctx, tib) {
 function showPieceWords(ctx, ids) {
   const { data, t } = ctx;
   const rows = ids.filter((id) => data.words[id]).map((id) => data.words[id]).map((w, i) => h('div', { class: 'theory-word' },
-    h('p', { class: 'big-tib' }, w.tib, ' ', audioButton(ctx, `w-${ids.filter((id) => data.words[id])[i]}`, { small: true })),
+    h('p', { class: 'big-tib' }, w.tib, ' ', audioButton(ctx, `w-${ids.filter((id) => data.words[id])[i]}`, { small: true }), ' ', spellButton(ctx, w.tib)),
     h('div', { class: 'wylie' }, w.wylie, w.pos ? ` · ${w.pos}` : ''),
     h('p', { class: 'tr' }, pickTr(w.tr, ctx.lang).text),
   ));
@@ -437,6 +447,7 @@ function renderAlphabetIntro(root, ctx, unit, part) {
         h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', e.wylie),
         h('div', { class: 'tr' }, soundText(e, ctx.lang)),
         examples.length ? h('div', { class: 'sign-examples' }, ...examples.map((w) => h('div', { class: 'example' }, h('span', { class: 'tib' }, w.tib), h('span', { class: 'tr' }, `${w.wylie} · ${pickTr(w.tr, ctx.lang).text}`)))) : null,
+        spelledExamples(ctx, e),
       ));
     }
   } else {
@@ -446,7 +457,7 @@ function renderAlphabetIntro(root, ctx, unit, part) {
     for (const x of items) {
       const w = byTib.get(x.tib) || byTib.get(x.tib + '་');
       cards.append(h('div', { class: 'word-card sign-card' },
-        h('div', { class: 'word-card-head' }, h('span', { class: 'tib big' }, x.tib), signAudio(ctx, x.tib)),
+        h('div', { class: 'word-card-head' }, h('span', { class: 'tib big' }, x.tib), signAudio(ctx, x.tib), spellButton(ctx, x.tib)),
         h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', x.wylie),
         w ? h('div', { class: 'tr' }, pickTr(w.tr, ctx.lang).text) : null,
       ));
@@ -600,6 +611,7 @@ function renderWords(root, ctx, unit) {
       h('div', { class: 'word-card-head' },
         h('span', { class: 'tib big' }, w.tib),
         audioButton(ctx, `w-${id}`, { small: true }),
+        spellButton(ctx, w.tib),
         h('span', { class: `status-dot ${st}`, title: t(`status.${st}`) }),
       ),
       h('div', { class: 'wylie' }, w.wylie, ' · ', w.pos),

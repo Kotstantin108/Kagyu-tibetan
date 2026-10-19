@@ -73,6 +73,8 @@ export default {
   },
   read: {
     wylieNote: 'Wylie to literowy zapis łaciński, którego używa podręcznik, a nie wymowa: w mowie wiele przedrostków i przyrostków jest niemych.',
+    phrases: 'Zwroty codzienne',
+    phrasesNote: 'Codzienne zwroty współczesnego języka mówionego z podręcznika Basic Tibetan (MSU, CC BY-NC 4.0), czytane przez rodzimego użytkownika. W tekstach klasycznych ich nie ma, ale tak brzmi żywy język.',
     practise: 'Ćwicz',
     table: 'Pokaż tabelę',
     best: 'Najlepsza runda: {score} z {total}',
@@ -160,6 +162,8 @@ export default {
     toneH: 'ton wysoki',
     toneL: 'ton niski',
     wylieLabel: 'Wylie',
+    spell: 'literowanie',
+    spelledExamples: 'Słowa literowane',
     whichSign: 'Który znak tak się pisze?',
     wrongSign: 'Nie ten. Znak to {tib}.',
     introNext: 'Dalej, do treningu',
