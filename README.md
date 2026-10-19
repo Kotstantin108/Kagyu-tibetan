@@ -57,10 +57,10 @@ another device".)
   or word: a short form with a category (translation error → label `content`,
   bug → `bug`, idea → `enhancement`) sent to the report service, which files
   the issue in this repository; without the service it opens a prefilled issue.
-- **Ask a question and support** (`#/support`): a Telegram contact of the author (@kot_sta); the app is a free gift to the
-  Buddhist centre in Batumi and is not funded by donations; the page invites a
-  thank-you donation to the centre. Payment details come from `SUPPORT` in
-  `site/config.js` (PayPal link, cards, IBAN; empty entries are hidden).
+- **Ask a question and support** (`#/support`): the app is a free gift to the
+  Buddhist centre in Batumi and is not funded by donations; the page links to
+  the author on Telegram (@kot_sta) for questions and for anyone who wants to
+  thank the centre with a donation. No payment details are on the site.
 
 ## Run locally
 
