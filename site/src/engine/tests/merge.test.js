@@ -58,12 +58,12 @@ test('merging with an empty remote keeps local', () => {
 
 test('reading stages merge by maximum', () => {
   const local = createProgress(new Date(early));
-  local.reading = { rows1: { rounds: 3, best: 10, updatedAt: early }, vowels: { rounds: 1, best: 5, updatedAt: early } };
+  local.reading = { 'alphabet/1': { rounds: 3, best: 10, updatedAt: early }, 'alphabet/9': { rounds: 1, best: 5, updatedAt: early } };
   const remote = createProgress(new Date(early));
-  remote.reading = { rows1: { rounds: 1, best: 12, updatedAt: late } };
+  remote.reading = { 'alphabet/1': { rounds: 1, best: 12, updatedAt: late } };
   const m = mergeProgress(local, remote);
-  assert.deepEqual(m.reading.rows1, { rounds: 3, best: 12, updatedAt: late });
-  assert.deepEqual(m.reading.vowels, { rounds: 1, best: 5, updatedAt: early });
+  assert.deepEqual(m.reading['alphabet/1'], { rounds: 3, best: 12, updatedAt: late });
+  assert.deepEqual(m.reading['alphabet/9'], { rounds: 1, best: 5, updatedAt: early });
 });
 
 test('course units merge: the larger step wins, equal steps unite the solved lists', () => {

@@ -8,8 +8,10 @@
 //   sentences: { id: { solved, lastSolved } },
 //   streak: { current, best, lastDay, todayDate, todayCount },
 //   reading: { stageId: { rounds, best, updatedAt } },  the reading course (letters.js)
-//   course: { started, canRead: true|false|null, current: unitId|null,
-//             units: { unitId: { step: 1..6, done: [sentenceIds of the current step], best, attempts, passedAt, updatedAt } } }
+//   course: { started, canRead: true|false|null (the answer to the script question), current: unitId|null,
+//             units: { unitId: { step: 1..6, done: [sentenceIds of the current step], best, attempts, passedAt, updatedAt } },
+//             alphabetExam: { best, attempts, passedAt } | null }
+//   reading: keys are alphabet parts 'alphabet/1' … (older records had stage ids rows1 … fullwords; they are migrated on load)
 //   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, voice, theme, onboarded,
 //              home: 'course'|'play'|null }
 // }
@@ -29,7 +31,7 @@ export function createProgress(now = new Date()) {
     sentences: {},
     streak: { current: 0, best: 0, lastDay: null, todayDate: null, todayCount: 0 },
     reading: {},
-    course: { started: false, canRead: null, current: null, units: {} },
+    course: { started: false, canRead: null, current: null, units: {}, alphabetExam: null },
     settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false, home: null },
   };
 }
@@ -89,7 +91,16 @@ export function normalizeProgress(raw, now = new Date()) {
       canRead: typeof c.canRead === 'boolean' ? c.canRead : null,
       current: typeof c.current === 'string' ? c.current : null,
       units: {},
+      alphabetExam: null,
     };
+    const e = c.alphabetExam;
+    if (e && typeof e === 'object') {
+      p.course.alphabetExam = {
+        best: Number.isInteger(e.best) && e.best >= 0 ? e.best : 0,
+        attempts: Number.isInteger(e.attempts) && e.attempts >= 0 ? e.attempts : 0,
+        passedAt: typeof e.passedAt === 'string' ? e.passedAt : null,
+      };
+    }
     if (c.units && typeof c.units === 'object') {
       for (const [id, u] of Object.entries(c.units)) {
         if (!u || typeof u !== 'object') continue;
@@ -104,6 +115,7 @@ export function normalizeProgress(raw, now = new Date()) {
       }
     }
   }
+  migrateReadingStages(p);
   if (raw.settings && typeof raw.settings === 'object') {
     const s = raw.settings;
     p.settings = {
@@ -118,6 +130,26 @@ export function normalizeProgress(raw, now = new Date()) {
     };
   }
   return p;
+}
+
+/** The stage ids of the old reading course and the alphabet parts they covered. */
+export const OLD_STAGE_PARTS = { rows1: [1, 2, 3, 4], rows2: [5, 6, 7, 8], vowels: [9], subjoined: [10], superscribed: [11], affixes: [12], words: [13], fullwords: [14] };
+const OLD_STAGE_PASS = 10;
+
+/** A record of the old reading course: its results move to the alphabet parts, a passed stage passes the parts. */
+function migrateReadingStages(p) {
+  for (const [old, parts] of Object.entries(OLD_STAGE_PARTS)) {
+    const r = p.reading[old];
+    if (!r) continue;
+    delete p.reading[old];
+    for (const n of parts) {
+      const id = `alphabet/${n}`;
+      const cur = p.reading[id];
+      if (!cur || cur.best < r.best) p.reading[id] = { rounds: (cur ? cur.rounds : 0) + r.rounds, best: Math.max(cur ? cur.best : 0, r.best), updatedAt: r.updatedAt };
+      const u = p.course.units[id];
+      if (r.best >= OLD_STAGE_PASS && !(u && u.step >= 6)) p.course.units[id] = { step: 6, done: [], best: r.best, attempts: 1, passedAt: r.updatedAt, updatedAt: r.updatedAt };
+    }
+  }
 }
 
 export function wordStatus(progress, id) {
@@ -328,6 +360,13 @@ export function recordCheck(progress, unitId, { score, pass, wordIds = [], wrong
       : knownAt(cur, 0, today, iso);
   }
   return touch({ ...p, words }, now);
+}
+
+/** The alphabet exam was taken; passing it (score >= pass) closes the whole alphabet module. */
+export function recordAlphabetExam(progress, score, pass, now = new Date()) {
+  const cur = progress.course.alphabetExam || { best: 0, attempts: 0, passedAt: null };
+  const next = { best: Math.max(cur.best, score), attempts: cur.attempts + 1, passedAt: cur.passedAt || (score >= pass ? now.toISOString() : null) };
+  return touch({ ...progress, course: { ...progress.course, alphabetExam: next } }, now);
 }
 
 export function setSetting(progress, key, value, now = new Date()) {

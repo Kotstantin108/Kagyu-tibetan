@@ -7,9 +7,11 @@ import { h, popover, tibText, audioButton, toast } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { renderPlay } from './play.js';
 import { needsOnboarding, showOnboarding } from './onboarding.js';
-import { courseModules, allUnits, findUnit, unitStep, unitPassed, unitAllKnown, courseProgress, moduleProgress, currentUnit, nextUnit, dueCount, STEPS, PASSED, READING_MODULE, CHECK_SIZE } from '../engine/course.js';
+import { courseModules, allUnits, findUnit, unitStep, unitPassed, unitAllKnown, courseProgress, moduleProgress, currentUnit, nextUnit, dueCount, STEPS, PASSED, CHECK_SIZE } from '../engine/course.js';
 import { startCourse, setCanRead, setCurrentUnit, seeUnitWords, setUnitStep, setSetting, wordStatus, STATUS } from '../engine/progress.js';
-import { stagePassed } from '../engine/letters.js';
+import { PARTS, partOf, partId, partSigns, partNewItems, examPassed, ALPHABET_MODULE, ALPHA_STEPS, ALPHA_CHECK_SIZE, FIRST_SENTENCES, FIRST_SENTENCES_PASS } from '../engine/alphabet.js';
+import { toWylie } from '../engine/wylie.js';
+import { renderDrill } from './drill.js';
 import { contentWords } from '../engine/next.js';
 import { effectiveStreak, localDay } from '../engine/streak.js';
 import { renderTib } from '../engine/tib.js';
@@ -19,8 +21,9 @@ export function renderCourse(root, ctx) {
   if (!parts.length) return renderMap(root, ctx);
   if (parts[0] === 'review') return renderPlay(root, ctx, { kind: 'review' });
   if (parts[0] === 'done') return renderDone(root, ctx);
+  if (parts[0] === ALPHABET_MODULE) return renderAlphabet(root, ctx, parts.slice(1));
   const unit = findUnit(ctx.data.course, `${parts[0]}/${parts[1] || ''}`);
-  if (!unit || unit.stage) { ctx.navigate('course'); return () => {}; }
+  if (!unit) { ctx.navigate('course'); return () => {}; }
   const step = parts[2];
   if (!step) return renderUnit(root, ctx, unit);
   if (step === 'words') return renderWords(root, ctx, unit);
@@ -33,14 +36,14 @@ export function renderCourse(root, ctx) {
 // ---- names ----
 
 export function moduleName(ctx, moduleId) {
-  if (moduleId === READING_MODULE) return ctx.t('course.reading');
+  if (moduleId === ALPHABET_MODULE) return ctx.t('alphabet.title');
   const set = ctx.data.sets.find((s) => s.id === moduleId);
   return set ? pickTr(set.name, ctx.lang).text : moduleId;
 }
 
-/** "Lesson 2 · part 3" (or the stage title for a reading unit). */
+/** "Lesson 2 · part 3" (or "Alphabet · part 3"). */
 export function unitName(ctx, unit) {
-  if (unit.stage) return ctx.t(`read.stages.${unit.stage}.title`);
+  if (unit.part) return `${ctx.t('alphabet.title')} · ${ctx.t('course.part', { n: unit.part, total: PARTS.length })}`;
   const module = courseModules(ctx.data.course).find((m) => m.id === unit.module);
   const n = unit.id.split('/')[1];
   return `${shortModuleName(ctx, unit.module)} · ${ctx.t('course.part', { n, total: module ? module.units.length : n })}`;
@@ -52,7 +55,7 @@ function shortModuleName(ctx, moduleId) {
 }
 
 function unitHref(unit) {
-  return unit.stage ? `#/read/${unit.stage}/course` : `#/course/${unit.id}`;
+  return `#/course/${unit.id}`;
 }
 
 // ---- the map ----
@@ -70,12 +73,10 @@ function renderMap(root, ctx) {
 
   function begin() {
     if (!store.get().course.started) store.update((p) => startCourse(p));
-    if (store.get().course.canRead === null) {
-      const q = store.get();
-      const reads = Object.values(q.words).some((w) => w.status === STATUS.KNOWN) || Object.keys(q.reading).some((id) => stagePassed(q, id));
-      if (reads) store.update((p) => setCanRead(p, true));
-      else { askCanRead(ctx, draw); return; }
-    }
+    const q = store.get();
+    // the script question, once, for a learner without any words yet: a reader goes to the exam, the others start with the letters
+    // (a learner with practice progress sees the alphabet module with its exam button instead)
+    if (q.course.canRead === null && !Object.keys(q.words).length && !examPassed(q) && !unitPassed(q, allUnits(course)[0])) { askCanRead(ctx, draw); return; }
     draw();
   }
 
@@ -88,7 +89,7 @@ function renderMap(root, ctx) {
     const top = h('div', { class: 'panel-body' });
     if (cur) {
       const step = unitStep(p, cur);
-      const where = cur.stage ? t('course.readingStage') : t(`course.steps.${STEPS[step - 1]}`);
+      const where = cur.part ? t(`alphabet.steps.${ALPHA_STEPS[Math.min(step, ALPHA_STEPS.length) - 1]}`) : t(`course.steps.${STEPS[step - 1]}`);
       top.append(
         h('div', { class: 'label' }, t('course.continueLabel')),
         h('h2', { class: 'prompt course-next' }, unitName(ctx, cur)),
@@ -123,23 +124,29 @@ function renderMap(root, ctx) {
         let state = t('course.ahead');
         if (done) state = t('course.passedState');
         else if (isCur) state = t('course.currentState');
-        else if (!u.stage && step > 1) state = t('course.stepOf', { n: step, total: STEPS.length });
+        else if (step > 1) state = t('course.stepOf', { n: step, total: u.part ? ALPHA_STEPS.length : STEPS.length });
         const words = u.words ? u.words.slice(0, 3).map((id) => data.words[id] && data.words[id].tib).filter(Boolean).join(' ') : '';
         return h('div', { class: 'unit-row' + (done ? ' passed' : '') + (isCur ? ' current' : ''), dataset: { unit: u.id } },
           h('div', { class: 'unit-main' },
-            h('div', { class: 'unit-title' }, u.stage ? t(`read.stages.${u.stage}.title`) : t('course.part', { n: u.id.split('/')[1], total: m.units.length })),
+            h('div', { class: 'unit-title' }, u.part ? `${u.part}. ${t(`alphabet.parts.${u.part}`)}` : t('course.part', { n: u.id.split('/')[1], total: m.units.length })),
             words ? h('div', { class: 'unit-words tib' }, words, u.words.length > 3 ? ' …' : '') : null,
             h('div', { class: 'stage-state' + (done ? ' passed' : '') }, state),
           ),
           h('a', { class: 'action small' + (isCur ? ' primary' : ''), href: unitHref(u) }, done ? t('course.open') : isCur ? t('course.continue') : t('course.open')),
         );
       });
+      const examRow = m.id === ALPHABET_MODULE && mp.passed < mp.total && !examPassed(p)
+        ? h('div', { class: 'unit-row exam-row' },
+          h('div', { class: 'unit-main' }, h('div', { class: 'unit-title' }, t('alphabet.examTitle')), h('div', { class: 'stage-state' }, t('alphabet.examText'))),
+          h('a', { class: 'action small', id: 'course-exam', href: '#/course/alphabet/exam' }, t('alphabet.exam')))
+        : null;
       list.append(h('details', { class: 'module' + (mp.passed === mp.total ? ' passed' : ''), open: open || undefined, dataset: { module: m.id } },
         h('summary', {},
           h('span', { class: 'module-name' }, moduleName(ctx, m.id)),
           h('span', { class: 'counter' }, `${mp.passed}/${mp.total}`),
           h('span', { class: 'meter' }, h('span', { style: `width:${mp.total ? Math.round((100 * mp.passed) / mp.total) : 0}%` })),
         ),
+        examRow,
         ...rows,
       ));
     }
@@ -177,19 +184,196 @@ function showCourseIntro(ctx, onDone) {
   ), { onDismiss: () => choose('course') });
 }
 
-/** "Do you read the Tibetan script?" */
+/** "Do you read the Tibetan script?": yes leads to the alphabet exam, no to the letters. */
 function askCanRead(ctx, onDone) {
   const { store, t } = ctx;
   let close = null;
-  const answer = (v) => { store.update((p) => setCanRead(p, v)); close(); onDone(); };
+  const answer = (v) => { store.update((p) => setCanRead(p, v)); close(); if (v) ctx.navigate('course/alphabet/exam'); else onDone(); };
   close = popover(h('div', { class: 'onboarding' },
     h('h2', {}, t('course.canReadTitle')),
     h('p', {}, t('course.canReadText')),
     h('div', { class: 'buttons' },
-      h('button', { type: 'button', class: 'action primary', id: 'can-read-yes', onClick: () => answer(true) }, t('common.yes')),
+      h('button', { type: 'button', class: 'action primary', id: 'can-read-yes', onClick: () => answer(true) }, t('alphabet.canReadYes')),
       h('button', { type: 'button', class: 'action', id: 'can-read-no', onClick: () => answer(false) }, t('course.canReadNo')),
     ),
   ), { onDismiss: () => answer(false) });
+}
+
+// ---- the alphabet module ----
+
+function renderAlphabet(root, ctx, rest) {
+  const { store, data, t } = ctx;
+  if (rest[0] === 'exam') {
+    return renderDrill(root, ctx, { kind: 'exam', part: null, title: t('alphabet.examTitle'), intro: t('alphabet.examText'), back: '#/course', backLabel: t('course.toMap'), next: { href: '#/course', label: t('course.toMap') } });
+  }
+  const part = PARTS.find((p) => String(p.n) === rest[0]);
+  if (!part) { ctx.navigate('course'); return () => {}; }
+  const unit = findUnit(data.course, partId(part.n));
+  const step = rest[1];
+  if (!step) return renderAlphabetUnit(root, ctx, unit, part);
+  const p = store.get();
+  const cur = unitStep(p, unit);
+  const passed = unitPassed(p, unit);
+  const next = nextUnit(data.course, unit);
+  const title = `${unitName(ctx, unit)} · ${t(`alphabet.steps.${step}`)}`;
+  if (step === 'intro') return part.kind === 'sentences' ? renderFirstSentences(root, ctx, unit, part) : renderAlphabetIntro(root, ctx, unit, part);
+  if (part.kind === 'sentences') {
+    const sentences = firstSentences(ctx);
+    if (step === 'train') return renderPlay(root, ctx, { kind: 'step', unit, step: 'meaning', stepNo: 2, sentences, stepLabel: t('alphabet.steps.train'), back: `#/course/${unit.id}` });
+    if (step === 'check') return renderPlay(root, ctx, { kind: 'check', unit, stepNo: 3, tasks: sentences.map((s) => ({ sentence: s, exercise: 'tiles' })), pass: FIRST_SENTENCES_PASS, wordIds: [], stepLabel: t('alphabet.steps.check'), back: `#/course/${unit.id}` });
+  }
+  if (step === 'train') {
+    return renderDrill(root, ctx, { kind: 'train', part, title, back: `#/course/${unit.id}`, backLabel: t('course.toUnit'), next: { href: `#/course/${unit.id}/check`, label: t('alphabet.trainNext') } });
+  }
+  if (step === 'check') {
+    if (cur < ALPHA_STEPS.length && !passed) { ctx.navigate(`course/${unit.id}`); return () => {}; }
+    return renderDrill(root, ctx, { kind: 'check', part, title, back: `#/course/${unit.id}`, backLabel: t('course.toUnit'), next: next ? { href: unitHref(next), label: t('course.nextUnit') } : null });
+  }
+  ctx.navigate(`course/${unit.id}`);
+  return () => {};
+}
+
+/** The first sentences of the first set, for the last part of the alphabet. */
+function firstSentences(ctx) {
+  const first = ctx.data.sets[0];
+  return ctx.data.sentences.filter((s) => s.set === first.id).slice(0, FIRST_SENTENCES);
+}
+
+function soundText(entry, lang) {
+  return (entry.sound && (entry.sound[lang] || entry.sound.en)) || '';
+}
+
+function renderAlphabetUnit(root, ctx, unit, part) {
+  const { store, data, t } = ctx;
+  store.update((p) => setCurrentUnit(p, unit.id));
+  const p = store.get();
+  const step = unitStep(p, unit);
+  const rec = p.course.units[unit.id];
+  const passed = unitPassed(p, unit);
+  const next = nextUnit(data.course, unit);
+  const signs = part.kind === 'sentences' ? [] : partNewItems(part, data.alphabet, data.words, data.sets);
+  const preview = h('div', { class: 'unit-wordline' }, ...signs.slice(0, 16).map((x) => h('span', { class: 'tib' }, x.tib)), signs.length > 16 ? h('span', {}, '…') : null);
+  const checkTotal = part.kind === 'sentences' ? FIRST_SENTENCES : ALPHA_CHECK_SIZE;
+
+  const ladder = h('div', { class: 'ladder' });
+  ALPHA_STEPS.forEach((name, i) => {
+    const n = i + 1;
+    const isDone = passed || n < step;
+    const isCur = !passed && n === step;
+    const href = `#/course/${unit.id}/${name}`;
+    let action = null;
+    if (name === 'intro') action = h('a', { class: 'action small' + (isCur ? ' primary' : ''), href }, isCur ? t('course.start') : t('course.open'));
+    else if (name === 'train') { if (step >= 2 || passed) action = h('a', { class: 'action small' + (isCur ? ' primary' : ''), href }, isCur ? t('course.start') : t('course.repeatStep')); }
+    else if (step >= 3 || passed) action = h('a', { class: 'action small' + (isCur ? ' primary' : ''), href }, passed ? t('course.checkAgain') : t('course.startCheck'));
+    let state = t('course.ahead');
+    if (isDone) state = t('course.passedState');
+    else if (isCur) state = t('course.currentState');
+    ladder.append(h('div', { class: 'ladder-row' + (isDone ? ' done' : '') + (isCur ? ' current' : ''), dataset: { step: name } },
+      h('span', { class: 'ladder-num' }, isDone ? '✓' : String(n)),
+      h('div', { class: 'ladder-main' }, h('div', { class: 'ladder-title' }, t(`alphabet.steps.${name}`)), h('div', { class: 'stage-state' + (isDone ? ' passed' : '') }, state)),
+      action,
+    ));
+  });
+
+  root.append(h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
+    h('div', { class: 'label' }, t('alphabet.title')),
+    h('h2', { class: 'prompt' }, `${part.n}. ${t(`alphabet.parts.${part.n}`)}`),
+    h('p', { class: 'helper' }, t('course.part', { n: part.n, total: PARTS.length })),
+    preview,
+    passed ? h('p', { class: 'feedback good unit-passed' }, examPassed(p) && !(rec && rec.step >= PASSED) ? t('alphabet.passedByExam') : t('course.unitPassed', { best: rec ? rec.best : 0, total: checkTotal })) : null,
+    ladder,
+    h('div', { class: 'buttons' },
+      passed && next ? h('a', { class: 'action next', href: unitHref(next) }, t('course.nextUnit')) : null,
+      h('a', { class: 'action', href: '#/course' }, t('course.toMap')),
+    ),
+  )));
+  return () => {};
+}
+
+/** Step 1 of an alphabet part: the introduction and a card for every new sign. */
+function renderAlphabetIntro(root, ctx, unit, part) {
+  const { store, data, t } = ctx;
+  const dict = data.words;
+  const intro = (data.alphabet.intros || {})[String(part.n)] || {};
+  const text = intro[ctx.lang] || intro.en || '';
+  const cards = h('div', { class: 'word-cards sign-cards' });
+  const entries = partSigns(part, data.alphabet);
+  if (entries.length) {
+    for (const e of entries) {
+      const examples = (e.examples || []).map((id) => dict[id]).filter(Boolean);
+      cards.append(h('div', { class: 'word-card sign-card', dataset: { sign: e.tib } },
+        h('div', { class: 'word-card-head' },
+          h('span', { class: 'tib big' }, e.tib),
+          h('span', { class: 'sign-name' }, e.name),
+          e.tone ? h('span', { class: 'tone-badge ' + e.tone.toLowerCase() }, t(`alphabet.tone${e.tone}`)) : null,
+        ),
+        h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', e.wylie),
+        h('div', { class: 'tr' }, soundText(e, ctx.lang)),
+        examples.length ? h('div', { class: 'sign-examples' }, ...examples.map((w) => h('div', { class: 'example' }, h('span', { class: 'tib' }, w.tib), h('span', { class: 'tr' }, `${w.wylie} · ${pickTr(w.tr, ctx.lang).text}`)))) : null,
+      ));
+    }
+  } else {
+    // syllables and words: a handful of worked examples
+    const items = partNewItems(part, data.alphabet, dict, data.sets).slice(0, 6);
+    const byTib = new Map(Object.values(dict).filter((w) => !w.service).map((w) => [w.tib, w]));
+    for (const x of items) {
+      const w = byTib.get(x.tib) || byTib.get(x.tib + '་');
+      cards.append(h('div', { class: 'word-card sign-card' },
+        h('div', { class: 'word-card-head' }, h('span', { class: 'tib big' }, x.tib)),
+        h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', x.wylie),
+        w ? h('div', { class: 'tr' }, pickTr(w.tr, ctx.lang).text) : null,
+      ));
+    }
+  }
+  const step = unitStep(store.get(), unit);
+  const go = () => {
+    store.update((q) => (unitStep(q, unit) === 1 ? setUnitStep(q, unit.id, 2) : q));
+    ctx.navigate(step === 1 ? `course/${unit.id}/train` : `course/${unit.id}`);
+  };
+  root.append(h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
+    h('div', { class: 'label' }, unitName(ctx, unit)),
+    h('h2', { class: 'prompt' }, `${part.n}. ${t(`alphabet.parts.${part.n}`)}`),
+    h('p', { class: 'helper read-text' }, tibText(text)),
+    cards,
+    h('div', { class: 'buttons' },
+      h('button', { type: 'button', class: 'action primary', id: 'words-next', onClick: go }, step === 1 ? t('alphabet.introNext') : t('course.toUnit')),
+      h('a', { class: 'action', href: `#/course/${unit.id}` }, t('course.toUnit')),
+    ),
+  )));
+  return () => {};
+}
+
+/** Step 1 of the last part: the first sentences of lesson 1 with Wylie and translation. */
+function renderFirstSentences(root, ctx, unit, part) {
+  const { store, data, t } = ctx;
+  const dict = data.words;
+  const intro = (data.alphabet.intros || {})[String(part.n)] || {};
+  const text = intro[ctx.lang] || intro.en || '';
+  const list = h('div', { class: 'word-cards sign-cards' });
+  for (const s of firstSentences(ctx)) {
+    const tib = renderTib(s.words, dict);
+    list.append(h('div', { class: 'word-card sign-card' },
+      h('div', { class: 'word-card-head' }, h('span', { class: 'tib big' }, tib), audioButton(ctx, s.id, { small: true })),
+      h('div', { class: 'wylie' }, toWylie(tib)),
+      h('div', { class: 'tr' }, pickTr(s.tr, ctx.lang).text),
+    ));
+  }
+  const step = unitStep(store.get(), unit);
+  const go = () => {
+    store.update((q) => (unitStep(q, unit) === 1 ? setUnitStep(q, unit.id, 2) : q));
+    ctx.navigate(step === 1 ? `course/${unit.id}/train` : `course/${unit.id}`);
+  };
+  root.append(h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
+    h('div', { class: 'label' }, unitName(ctx, unit)),
+    h('h2', { class: 'prompt' }, `${part.n}. ${t(`alphabet.parts.${part.n}`)}`),
+    h('p', { class: 'helper read-text' }, tibText(text)),
+    list,
+    h('div', { class: 'buttons' },
+      h('button', { type: 'button', class: 'action primary', id: 'words-next', onClick: go }, step === 1 ? t('alphabet.introNext') : t('course.toUnit')),
+      h('a', { class: 'action', href: `#/course/${unit.id}` }, t('course.toUnit')),
+    ),
+  )));
+  return () => {};
 }
 
 // ---- a unit ----

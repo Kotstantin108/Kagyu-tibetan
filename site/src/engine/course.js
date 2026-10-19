@@ -8,11 +8,11 @@
 // A unit: { id: 'lesson-01/3', module: 'lesson-01', sentences: [ids], words: [ids] }
 //   words = the content words that appear for the first time in this unit,
 //   counting from the start of the course.
-// The reading course comes first as the module 'reading', one unit per stage.
+// The alphabet comes first as the module 'alphabet', one unit per part (alphabet.js).
 
 import { contentWords } from './next.js';
 import { isKnown, isDue, STATUS } from './progress.js';
-import { STAGE_IDS, stagePassed } from './letters.js';
+import { alphabetModule, examPassed, ALPHABET_MODULE } from './alphabet.js';
 import { shuffle } from './check.js';
 import { localDay } from './streak.js';
 
@@ -34,7 +34,6 @@ export const STEPS = ['words', 'tiles', 'meaning', 'recall', 'check'];
 /** `step` of a unit record: 1–5 = the current step, PASSED = the check was passed. */
 export const PASSED = STEPS.length + 1;
 
-export const READING_MODULE = 'reading';
 
 /** Cut the sentences of every set (in set order, sentence order) into units. Deterministic. */
 export function splitUnits(sentences, dict, sets) {
@@ -70,14 +69,9 @@ export function splitUnits(sentences, dict, sets) {
   return modules;
 }
 
-/** The reading module: one unit per stage of the reading course. */
-export function readingModule() {
-  return { id: READING_MODULE, units: STAGE_IDS.map((stage) => ({ id: `${READING_MODULE}/${stage}`, module: READING_MODULE, stage })) };
-}
-
-/** All modules of the course, reading first. `course` is the parsed course.json. */
+/** All modules of the course, the alphabet first. `course` is the parsed course.json. */
 export function courseModules(course) {
-  return [readingModule(), ...((course && course.modules) || [])];
+  return [alphabetModule(), ...((course && course.modules) || [])];
 }
 
 /** All units of the course in order. */
@@ -95,13 +89,12 @@ function unitRecord(progress, unitId) {
 
 /** The current step of a lesson unit (1 = words … 5 = check, PASSED = done). */
 export function unitStep(progress, unit) {
-  if (unit.stage) return unitPassed(progress, unit) ? PASSED : 1;
   const r = unitRecord(progress, unit.id);
   return r ? r.step : 1;
 }
 
 export function unitPassed(progress, unit) {
-  if (unit.stage) return Boolean(progress.course && progress.course.canRead) || stagePassed(progress, unit.stage);
+  if (unit.module === ALPHABET_MODULE && examPassed(progress)) return true;
   return unitStep(progress, unit) >= PASSED;
 }
 

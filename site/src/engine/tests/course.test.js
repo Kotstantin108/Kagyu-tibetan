@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { splitUnits, allUnits, findUnit, unitStep, unitPassed, unitAllKnown, courseProgress, currentUnit, nextUnit, stepQueue, makeCheck, passScore, reviewSession, dueCount, UNIT_WORDS, UNIT_SENTENCES, TAIL_MIN, STEPS, PASSED, CHECK_SIZE } from '../course.js';
-import { createProgress, setWordStatus, setCanRead, setCurrentUnit, seeUnitWords, markStepDone, setUnitStep, recordCheck, recordReadingRound, wordStatus, STATUS } from '../progress.js';
+import { createProgress, setWordStatus, setCurrentUnit, seeUnitWords, markStepDone, setUnitStep, recordCheck, recordAlphabetExam, wordStatus, STATUS } from '../progress.js';
 
 const DATA = new URL('../../../data/', import.meta.url);
 const load = (name) => JSON.parse(readFileSync(new URL(name, DATA), 'utf8'));
@@ -54,7 +54,7 @@ test('the shipped course.json covers every sentence once and respects the unit r
   }
   assert.equal(seen.size, sentences.length);
   const units = allUnits(course);
-  assert.equal(units[0].id, 'reading/rows1', 'the reading course comes first');
+  assert.equal(units[0].id, 'alphabet/1', 'the alphabet comes first');
   assert.ok(units.length > 60);
   assert.deepEqual(JSON.stringify(splitUnits(sentences, words, sets)), JSON.stringify(course.modules), 'course.json is what the splitter gives (run build:content)');
 });
@@ -63,17 +63,13 @@ test('unit state, the current unit and the fast check', () => {
   let p = createProgress(t0);
   const u1 = findUnit(course, 'lesson-01/1');
   const u2 = findUnit(course, 'lesson-01/2');
-  const r1 = findUnit(course, 'reading/rows1');
+  const a1 = findUnit(course, 'alphabet/1');
   assert.equal(unitStep(p, u1), 1);
   assert.equal(unitPassed(p, u1), false);
-  assert.equal(currentUnit(course, p).id, 'reading/rows1', 'a fresh learner starts with the script');
-  p = setCanRead(p, true, t0);
-  assert.equal(unitPassed(p, r1), true, 'reading units count as passed for a reader');
+  assert.equal(currentUnit(course, p).id, 'alphabet/1', 'a fresh learner starts with the alphabet');
+  p = recordAlphabetExam(p, 18, 17, t0);
+  assert.equal(unitPassed(p, a1), true, 'the alphabet exam passes its units');
   assert.equal(currentUnit(course, p).id, 'lesson-01/1');
-  p = setCanRead(p, false, t0);
-  p = recordReadingRound(p, 'rows1', 12, t0);
-  assert.equal(unitPassed(p, r1), true, 'or when the stage was passed');
-  p = setCanRead(p, true, t0);
 
   p = setCurrentUnit(p, 'lesson-01/2', t0);
   assert.equal(currentUnit(course, p).id, 'lesson-01/2', 'the unit opened last');

@@ -73,7 +73,7 @@ export function renderPlay(root, ctx, mode = null) {
   );
   const courseTitle = h('div', { class: 'course-crumb' });
   const courseCounter = h('span', { class: 'counter', id: 'course-counter' });
-  const courseBack = h('a', { class: 'course-back', href: kind === 'review' ? '#/course' : mode ? `#/course/${mode.unit.id}` : '#/course' }, kind === 'review' ? t('course.toMap') : t('course.toUnit'));
+  const courseBack = h('a', { class: 'course-back', href: kind === 'review' ? '#/course' : mode ? mode.back || `#/course/${mode.unit.id}` : '#/course' }, kind === 'review' ? t('course.toMap') : t('course.toUnit'));
   const focusBar = focusMode ? h('div', { class: 'cold-note' }, t('play.focusNote'), ' ', h('a', { href: '#/play' }, t('play.focusExit'))) : null;
   const promptLabel = h('div', { class: 'label' });
   const prompt = h('h2', { class: 'prompt' });
@@ -206,7 +206,9 @@ export function renderPlay(root, ctx, mode = null) {
   function nextStepSentence() {
     const p = store.get();
     const unit = mode.unit;
-    const queue = mode.repeat ? unitQueueAll() : stepQueue(unit, p, data.sentences, dict);
+    const rec = p.course.units[unit.id];
+    const done = new Set(rec ? rec.done : []);
+    const queue = mode.repeat ? unitQueueAll() : mode.sentences ? mode.sentences.filter((s) => !done.has(s.id)) : stepQueue(unit, p, data.sentences, dict);
     if (!queue.length) return stepFinished();
     let next = queue.find((s) => !deferred.has(s.id) && s.id !== lastSentenceId) || queue.find((s) => !deferred.has(s.id));
     if (!next) { deferred = new Set(); next = queue.find((s) => s.id !== lastSentenceId) || queue[0]; }
@@ -219,18 +221,21 @@ export function renderPlay(root, ctx, mode = null) {
   const repeatDone = new Set();
   function unitQueueAll() {
     const byId = new Map(data.sentences.map((s) => [s.id, s]));
-    return mode.unit.sentences.map((id) => byId.get(id)).filter((s) => s && !repeatDone.has(s.id));
+    return (mode.sentences || mode.unit.sentences.map((id) => byId.get(id))).filter((s) => s && !repeatDone.has(s.id));
   }
 
   function stepFinished() {
     finished = true;
     if (!mode.repeat) {
-      const i = STEPS.indexOf(mode.step);
-      store.update((p) => (stepIndexOf(p) === i + 1 ? setUnitStep(p, mode.unit.id, i + 2) : p));
+      const n = stepNo();
+      store.update((p) => (stepIndexOf(p) === n ? setUnitStep(p, mode.unit.id, n + 1) : p));
     }
     toast(t('course.stepDone'));
     ctx.navigate(`course/${mode.unit.id}`);
   }
+
+  /** The number of this screen's step in the unit's ladder. */
+  function stepNo() { return mode.stepNo || (kind === 'check' ? STEPS.length : STEPS.indexOf(mode.step) + 1); }
 
   function stepIndexOf(p) {
     const r = p.course.units[mode.unit.id];
@@ -240,7 +245,7 @@ export function renderPlay(root, ctx, mode = null) {
   // ---- course: check and review tasks ----
   function startTasks() {
     if (inCheck) {
-      tasks = makeCheck(mode.unit, data.sentences);
+      tasks = mode.tasks || makeCheck(mode.unit, data.sentences);
     } else {
       tasks = reviewSession(data.course, store.get(), data.sentences, dict, localDay());
       if (!tasks.length) { toast(t('course.nothingToReview')); ctx.navigate('course'); return; }
@@ -265,8 +270,8 @@ export function renderPlay(root, ctx, mode = null) {
   function tasksFinished() {
     finished = true;
     if (inCheck) {
-      const pass = passScore(tasks.length);
-      const unitWords = mode.unit.words;
+      const pass = mode.pass || passScore(tasks.length);
+      const unitWords = mode.wordIds || mode.unit.words;
       store.update((p) => recordCheck(p, mode.unit.id, { score, pass, wordIds: unitWords, wrongWordIds: [...wrongWords] }));
       showCheckResult(score >= pass, pass);
       return;
@@ -286,7 +291,7 @@ export function renderPlay(root, ctx, mode = null) {
         ...wrongTasks.map((s) => h('div', { class: 'example' }, h('span', { class: 'tib' }, renderTib(s.words, dict)), h('span', { class: 'tr' }, pickTr(s.tr, ctx.lang).text))),
       ) : null,
       h('div', { class: 'buttons' },
-        passed && next ? h('a', { class: 'action next', id: 'check-next-unit', href: next.stage ? `#/read/${next.stage}/course` : `#/course/${next.id}` }, t('course.nextUnit')) : null,
+        passed && next ? h('a', { class: 'action next', id: 'check-next-unit', href: `#/course/${next.id}` }, t('course.nextUnit')) : null,
         h('button', { type: 'button', class: 'action' + (passed ? '' : ' primary'), id: 'check-again', onClick: () => { finished = false; result.hidden = true; startTasks(); } }, t('course.checkAgain')),
         h('a', { class: 'action', href: `#/course/${unit.id}` }, t('course.toUnit')),
       ),
@@ -306,7 +311,7 @@ export function renderPlay(root, ctx, mode = null) {
       courseCounter.textContent = t('course.taskOf', { n: Math.min(taskIndex + 1, tasks.length), total: tasks.length });
       return;
     }
-    const stepName = kind === 'check' ? t('course.steps.check') : t(`course.steps.${mode.step}`);
+    const stepName = mode.stepLabel || (kind === 'check' ? t('course.steps.check') : t(`course.steps.${mode.step}`));
     courseTitle.textContent = `${unitName(ctx, mode.unit)} · ${stepName}`;
     if (kind === 'check') {
       courseCounter.textContent = t('course.taskOf', { n: Math.min(taskIndex + 1, tasks.length), total: tasks.length });
@@ -600,7 +605,7 @@ export function renderPlay(root, ctx, mode = null) {
     complete = true;
     failed = true;
     wrongTasks.push(pick.sentence);
-    const unitWords = new Set(mode.unit.words);
+    const unitWords = new Set(mode.unit.words || []);
     for (const id of wrongIds) if (unitWords.has(id)) wrongWords.add(id);
     setFeedback(t('course.taskWrong'), 'bad');
     showLesson();
@@ -738,10 +743,10 @@ export function renderPlay(root, ctx, mode = null) {
 
   // ---- start ----
   if (kind === 'check' || kind === 'review') {
-    if (inCheck && !(unitAllKnown(store.get(), mode.unit) || stepIndexOf(store.get()) >= STEPS.length)) { ctx.navigate(`course/${mode.unit.id}`); }
+    if (inCheck && !(unitAllKnown(store.get(), mode.unit) || stepIndexOf(store.get()) >= stepNo())) { ctx.navigate(`course/${mode.unit.id}`); }
     else startTasks();
   } else if (kind === 'step') {
-    if (!mode.repeat && stepIndexOf(store.get()) !== STEPS.indexOf(mode.step) + 1) {
+    if (!mode.repeat && stepIndexOf(store.get()) !== stepNo()) {
       // not the current step of the unit: the ladder decides where to go
       ctx.navigate(`course/${mode.unit.id}`);
     } else nextSentence();

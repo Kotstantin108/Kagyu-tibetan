@@ -437,3 +437,14 @@ details.set[open] summary { background: var(--topbar); }
 .course-result h3 { margin: 14px 0 6px; font-family: var(--sans); }
 .answer.failed { border-color: var(--rose); }
 .course-done .big-tib { font-family: var(--tib-font); font-size: 2rem; line-height: 1.8; color: var(--brand); margin: 6px 0 10px; }
+
+/* ---- the alphabet ---- */
+.read-card.reverse { font-family: var(--mono); font-size: clamp(1.8rem, 9vw, 2.6rem); letter-spacing: .04em; line-height: 1.4; padding: 26px 16px; }
+.sign-card .sign-name { color: var(--muted); font-size: .9rem; }
+.tone-badge { margin-left: auto; font-size: .72rem; font-weight: 750; padding: 4px 9px; border-radius: 999px; background: var(--badge-grey-bg); color: var(--badge-grey-text); }
+.tone-badge.h { background: var(--goldsoft); color: var(--gold-text); }
+.tone-badge.l { background: var(--badge-blue-bg); color: var(--badge-blue-text); }
+.sign-examples { margin-top: 6px; }
+.sign-examples .example { margin-top: 4px; }
+.exam-row { border-left-color: var(--gold); background: var(--note-bg); border-radius: 0 10px 10px 0; }
+.read-course-link { color: var(--brand); font-weight: 700; }

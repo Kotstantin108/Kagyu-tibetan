@@ -26,8 +26,7 @@ another device".)
   missed in the check stay "learning"). A step is done when every sentence of
   the unit was solved cleanly once; a sentence solved with a mistake or a hint
   comes back later; the solved list is kept in the progress record, so an
-  interrupted step continues. The reading course is the first module (a
-  learner who reads the script skips it). Locks are soft: any unit can be
+  interrupted step continues. The first module is the alphabet (below). Locks are soft: any unit can be
   opened, a unit whose words are all known offers its check right away.
   Reviews of due words run from the map in sessions of up to twenty
   sentences from the passed units. Practice progress and course progress are
@@ -38,7 +37,19 @@ another device".)
 - **Four exercises** on the same sentence: assemble it from word or syllable
   tiles, pick its meaning among four translations, pick the Tibetan sentence
   for a translation (recall), or type it in Wylie.
-- **Reading course** (`#/read`) for learners who do not read the script yet:
+- **Alphabet** (module 0 of the course): fifteen parts, the eight rows of the
+  alphabet, the vowel signs, subjoined and superscribed letters, prefixes and
+  suffixes, syllables and words of the course, the first sentences of lesson 1.
+  A part is a ladder of three steps: meet the signs (a card per sign with its
+  name, Wylie, tone, how it sounds in words of the interface language and two
+  example words), a training round of twelve cards (ten pass; look-alike signs
+  as distractors), a check of ten cards without the table, half of them
+  reversed (Wylie, pick the sign), eight pass. "I read Tibetan" leads to an
+  exam of twenty cards over the whole alphabet; seventeen pass the module.
+  Content: `content/letters.tsv` (every sign with its sound in five languages)
+  and `content/alphabet-intro.tsv` (the introductions), built into
+  `site/data/alphabet.json`; example words are found automatically.
+- **Reading** (`#/read`), the free trainer of the same parts:
   the thirty letters, the vowel signs, subjoined and superscribed letters,
   prefixes and suffixes, then real syllables and whole words from the course.
   Each card shows a syllable or a word and four Wylie spellings; twelve cards

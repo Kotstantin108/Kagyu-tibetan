@@ -1,0 +1,1388 @@
+{
+  "letters": [
+    {
+      "tib": "ཀ",
+      "wylie": "ka",
+      "kind": "letter",
+      "name": "ka",
+      "tone": "H",
+      "similar": [
+        "ཁ",
+        "ག",
+        "བ"
+      ],
+      "sound": {
+        "en": "k without a puff of air, as in \"skin\"; high tone",
+        "ru": "к без придыхания, как в «кот»; высокий тон",
+        "de": "k ohne Hauch, wie in „Skat“; hoher Ton",
+        "fr": "k sans souffle, comme dans « quand » ; ton haut",
+        "pl": "k bez przydechu, jak w „kot”; ton wysoki"
+      },
+      "examples": [
+        "kun",
+        "ku-shu"
+      ]
+    },
+    {
+      "tib": "ཁ",
+      "wylie": "kha",
+      "kind": "letter",
+      "name": "kha",
+      "tone": "H",
+      "similar": [
+        "ཀ",
+        "ག",
+        "ཆ"
+      ],
+      "sound": {
+        "en": "k with a strong puff of air, as in \"kick\"; high tone",
+        "ru": "к с сильным выдохом, как «к-х»; высокий тон",
+        "de": "k mit kräftigem Hauch, wie in „Kante“; hoher Ton",
+        "fr": "k suivi d’un souffle, comme un « k-h » ; ton haut",
+        "pl": "k z mocnym przydechem, jak „k-h”; ton wysoki"
+      },
+      "examples": [
+        "khang-pa",
+        "khong"
+      ]
+    },
+    {
+      "tib": "ག",
+      "wylie": "ga",
+      "kind": "letter",
+      "name": "ga",
+      "tone": "L",
+      "similar": [
+        "ཀ",
+        "ཁ",
+        "ཨ"
+      ],
+      "sound": {
+        "en": "between g and k, with a light puff; low tone",
+        "ru": "между г и к, с лёгким выдохом; низкий тон",
+        "de": "zwischen g und k, leicht behaucht; tiefer Ton",
+        "fr": "entre g et k, légèrement soufflé ; ton bas",
+        "pl": "między g a k, z lekkim przydechem; ton niski"
+      },
+      "examples": [
+        "gi",
+        "go-'phang"
+      ]
+    },
+    {
+      "tib": "ང",
+      "wylie": "nga",
+      "kind": "letter",
+      "name": "nga",
+      "tone": "L",
+      "similar": [
+        "ད",
+        "ར",
+        "ཏ"
+      ],
+      "sound": {
+        "en": "ng as in \"sing\", also at the start of a syllable; low tone",
+        "ru": "носовое «нг», как в английском sing, в том числе в начале слога; низкий тон",
+        "de": "ng wie in „singen“, auch am Silbenanfang; tiefer Ton",
+        "fr": "ng comme dans « parking », aussi en début de syllabe ; ton bas",
+        "pl": "ng jak w „bank”, także na początku sylaby; ton niski"
+      },
+      "examples": [
+        "ngan-pa",
+        "ngo-bo"
+      ]
+    },
+    {
+      "tib": "ཅ",
+      "wylie": "ca",
+      "kind": "letter",
+      "name": "ca",
+      "tone": "H",
+      "similar": [
+        "ཆ",
+        "ཙ",
+        "ཚ"
+      ],
+      "sound": {
+        "en": "ch without a puff, as in \"catch\"; high tone",
+        "ru": "ч без придыхания, мягкое, как в «чай»; высокий тон",
+        "de": "tsch ohne Hauch, wie in „Matsch“; hoher Ton",
+        "fr": "tch sans souffle, comme dans « tchèque » ; ton haut",
+        "pl": "cz bez przydechu, miękkie jak „ć”; ton wysoki"
+      },
+      "examples": [
+        "cig",
+        "cag"
+      ]
+    },
+    {
+      "tib": "ཆ",
+      "wylie": "cha",
+      "kind": "letter",
+      "name": "cha",
+      "tone": "H",
+      "similar": [
+        "ཅ",
+        "ཚ",
+        "ཁ"
+      ],
+      "sound": {
+        "en": "ch with a strong puff, as in \"church\"; high tone",
+        "ru": "ч с сильным выдохом, «ч-х»; высокий тон",
+        "de": "tsch mit kräftigem Hauch; hoher Ton",
+        "fr": "tch suivi d’un souffle ; ton haut",
+        "pl": "cz z mocnym przydechem; ton wysoki"
+      },
+      "examples": [
+        "chos",
+        "chu"
+      ]
+    },
+    {
+      "tib": "ཇ",
+      "wylie": "ja",
+      "kind": "letter",
+      "name": "ja",
+      "tone": "L",
+      "similar": [
+        "ཛ",
+        "ཟ",
+        "ཞ"
+      ],
+      "sound": {
+        "en": "between j and ch, as in \"jam\" said softly; low tone",
+        "ru": "между дж и ч, как в «джем»; низкий тон",
+        "de": "zwischen dsch und tsch, wie in „Dschungel“; tiefer Ton",
+        "fr": "entre dj et tch, comme dans « djinn » ; ton bas",
+        "pl": "między dż a cz, jak w „dżem”; ton niski"
+      },
+      "examples": [
+        "ji",
+        "jo-bo"
+      ]
+    },
+    {
+      "tib": "ཉ",
+      "wylie": "nya",
+      "kind": "letter",
+      "name": "nya",
+      "tone": "L",
+      "similar": [
+        "ཇ",
+        "ཛ",
+        "ཐ"
+      ],
+      "sound": {
+        "en": "ny as in \"canyon\"; low tone",
+        "ru": "нь, как в «няня»; низкий тон",
+        "de": "nj wie in „Kognak“; tiefer Ton",
+        "fr": "gn comme dans « agneau » ; ton bas",
+        "pl": "ń jak w „niania”; ton niski"
+      },
+      "examples": [
+        "nyi-ma",
+        "nyan-thos"
+      ]
+    },
+    {
+      "tib": "ཏ",
+      "wylie": "ta",
+      "kind": "letter",
+      "name": "ta",
+      "tone": "H",
+      "similar": [
+        "ན",
+        "ང",
+        "ད"
+      ],
+      "sound": {
+        "en": "t without a puff, as in \"stop\"; high tone",
+        "ru": "т без придыхания, как в «том»; высокий тон",
+        "de": "t ohne Hauch, wie in „Stern“; hoher Ton",
+        "fr": "t sans souffle, comme dans « table » ; ton haut",
+        "pl": "t bez przydechu, jak w „tam”; ton wysoki"
+      },
+      "examples": [
+        "to",
+        "tu"
+      ]
+    },
+    {
+      "tib": "ཐ",
+      "wylie": "tha",
+      "kind": "letter",
+      "name": "tha",
+      "tone": "H",
+      "similar": [
+        "ཏ",
+        "ཉ",
+        "ཆ"
+      ],
+      "sound": {
+        "en": "t with a strong puff, as in \"top\"; high tone",
+        "ru": "т с сильным выдохом, «т-х»; высокий тон",
+        "de": "t mit kräftigem Hauch, wie in „Tee“; hoher Ton",
+        "fr": "t suivi d’un souffle ; ton haut",
+        "pl": "t z mocnym przydechem; ton wysoki"
+      },
+      "examples": [
+        "thabs",
+        "theg-pa"
+      ]
+    },
+    {
+      "tib": "ད",
+      "wylie": "da",
+      "kind": "letter",
+      "name": "da",
+      "tone": "L",
+      "similar": [
+        "ང",
+        "ར",
+        "ན"
+      ],
+      "sound": {
+        "en": "between d and t, with a light puff; low tone",
+        "ru": "между д и т, с лёгким выдохом; низкий тон",
+        "de": "zwischen d und t, leicht behaucht; tiefer Ton",
+        "fr": "entre d et t, légèrement soufflé ; ton bas",
+        "pl": "między d a t, z lekkim przydechem; ton niski"
+      },
+      "examples": [
+        "dang",
+        "de"
+      ]
+    },
+    {
+      "tib": "ན",
+      "wylie": "na",
+      "kind": "letter",
+      "name": "na",
+      "tone": "L",
+      "similar": [
+        "ཏ",
+        "ང",
+        "ཟ"
+      ],
+      "sound": {
+        "en": "n as in \"no\"; low tone",
+        "ru": "н, как в «нос»; низкий тон",
+        "de": "n wie in „nein“; tiefer Ton",
+        "fr": "n comme dans « nord » ; ton bas",
+        "pl": "n jak w „nos”; ton niski"
+      },
+      "examples": [
+        "nag-po",
+        "ni"
+      ]
+    },
+    {
+      "tib": "པ",
+      "wylie": "pa",
+      "kind": "letter",
+      "name": "pa",
+      "tone": "H",
+      "similar": [
+        "ཕ",
+        "བ",
+        "ཀ"
+      ],
+      "sound": {
+        "en": "p without a puff, as in \"spin\"; high tone",
+        "ru": "п без придыхания, как в «пол»; высокий тон",
+        "de": "p ohne Hauch, wie in „Spiel“; hoher Ton",
+        "fr": "p sans souffle, comme dans « pas » ; ton haut",
+        "pl": "p bez przydechu, jak w „pole”; ton wysoki"
+      },
+      "examples": [
+        "pa",
+        "par"
+      ]
+    },
+    {
+      "tib": "ཕ",
+      "wylie": "pha",
+      "kind": "letter",
+      "name": "pha",
+      "tone": "H",
+      "similar": [
+        "པ",
+        "བ",
+        "ཨ"
+      ],
+      "sound": {
+        "en": "p with a strong puff, as in \"pin\"; high tone",
+        "ru": "п с сильным выдохом, «п-х»; высокий тон",
+        "de": "p mit kräftigem Hauch, wie in „Pass“; hoher Ton",
+        "fr": "p suivi d’un souffle ; ton haut",
+        "pl": "p z mocnym przydechem; ton wysoki"
+      },
+      "examples": [
+        "pha",
+        "phan"
+      ]
+    },
+    {
+      "tib": "བ",
+      "wylie": "ba",
+      "kind": "letter",
+      "name": "ba",
+      "tone": "L",
+      "similar": [
+        "པ",
+        "ཕ",
+        "ཀ"
+      ],
+      "sound": {
+        "en": "between b and p, with a light puff; low tone",
+        "ru": "между б и п, с лёгким выдохом; низкий тон",
+        "de": "zwischen b und p, leicht behaucht; tiefer Ton",
+        "fr": "entre b et p, légèrement soufflé ; ton bas",
+        "pl": "między b a p, z lekkim przydechem; ton niski"
+      },
+      "examples": [
+        "bod",
+        "bu"
+      ]
+    },
+    {
+      "tib": "མ",
+      "wylie": "ma",
+      "kind": "letter",
+      "name": "ma",
+      "tone": "L",
+      "similar": [
+        "ས",
+        "ཤ",
+        "ཨ"
+      ],
+      "sound": {
+        "en": "m as in \"mother\"; low tone",
+        "ru": "м, как в «мама»; низкий тон",
+        "de": "m wie in „Mutter“; tiefer Ton",
+        "fr": "m comme dans « mère » ; ton bas",
+        "pl": "m jak w „mama”; ton niski"
+      },
+      "examples": [
+        "me",
+        "mi"
+      ]
+    },
+    {
+      "tib": "ཙ",
+      "wylie": "tsa",
+      "kind": "letter",
+      "name": "tsa",
+      "tone": "H",
+      "similar": [
+        "ཚ",
+        "ཅ",
+        "ཛ"
+      ],
+      "sound": {
+        "en": "ts without a puff, as in \"cats\"; high tone",
+        "ru": "ц без придыхания, как в «цель»; высокий тон",
+        "de": "z ohne Hauch, wie in „Zahl“; hoher Ton",
+        "fr": "ts sans souffle, comme dans « tsé-tsé » ; ton haut",
+        "pl": "c bez przydechu, jak w „cel”; ton wysoki"
+      },
+      "examples": [
+        "tsam"
+      ]
+    },
+    {
+      "tib": "ཚ",
+      "wylie": "tsha",
+      "kind": "letter",
+      "name": "tsha",
+      "tone": "H",
+      "similar": [
+        "ཙ",
+        "ཆ",
+        "ཛ"
+      ],
+      "sound": {
+        "en": "ts with a strong puff, \"ts-h\"; high tone",
+        "ru": "ц с сильным выдохом, «ц-х»; высокий тон",
+        "de": "z mit kräftigem Hauch; hoher Ton",
+        "fr": "ts suivi d’un souffle ; ton haut",
+        "pl": "c z mocnym przydechem; ton wysoki"
+      },
+      "examples": [
+        "tsho",
+        "tsha-po"
+      ]
+    },
+    {
+      "tib": "ཛ",
+      "wylie": "dza",
+      "kind": "letter",
+      "name": "dza",
+      "tone": "L",
+      "similar": [
+        "ཙ",
+        "ཇ",
+        "ཟ"
+      ],
+      "sound": {
+        "en": "between dz and ts, as in \"adze\"; low tone",
+        "ru": "между дз и ц, как в «дзен»; низкий тон",
+        "de": "zwischen ds und z, wie in „Dsungarei“; tiefer Ton",
+        "fr": "entre dz et ts, comme dans « pizza » à l’italienne ; ton bas",
+        "pl": "między dz a c, jak w „dzwon”; ton niski"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཝ",
+      "wylie": "wa",
+      "kind": "letter",
+      "name": "wa",
+      "tone": "L",
+      "similar": [
+        "ཟ",
+        "ཞ",
+        "འ"
+      ],
+      "sound": {
+        "en": "w as in \"water\"; low tone; a rare letter",
+        "ru": "в губное, как английское w; низкий тон; редкая буква",
+        "de": "w wie im Englischen „water“; tiefer Ton; seltener Buchstabe",
+        "fr": "w comme dans « ouate » ; ton bas ; lettre rare",
+        "pl": "w jak angielskie „w”, łagodne; ton niski; rzadka litera"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཞ",
+      "wylie": "zha",
+      "kind": "letter",
+      "name": "zha",
+      "tone": "L",
+      "similar": [
+        "ཟ",
+        "ཝ",
+        "ཇ"
+      ],
+      "sound": {
+        "en": "zh as in \"measure\", said with a low tone; often like sh",
+        "ru": "ж мягкое, как в «жить», с низким тоном; часто звучит как ш",
+        "de": "weiches sch wie in „Garage“, mit tiefem Ton; oft wie sch",
+        "fr": "j comme dans « jour », avec un ton bas ; souvent comme ch",
+        "pl": "ż miękkie, jak w „żona”, z niskim tonem; często jak sz"
+      },
+      "examples": [
+        "zhig",
+        "zhe-sdang"
+      ]
+    },
+    {
+      "tib": "ཟ",
+      "wylie": "za",
+      "kind": "letter",
+      "name": "za",
+      "tone": "L",
+      "similar": [
+        "ཞ",
+        "ཝ",
+        "ཛ"
+      ],
+      "sound": {
+        "en": "z as in \"zoo\", with a low tone; often like s",
+        "ru": "з, как в «зима», с низким тоном; часто звучит как с",
+        "de": "stimmhaftes s wie in „Sonne“, tiefer Ton; oft wie ss",
+        "fr": "z comme dans « zéro », ton bas ; souvent comme s",
+        "pl": "z jak w „zima”, z niskim tonem; często jak s"
+      },
+      "examples": [
+        "zab-mo",
+        "za-khang"
+      ]
+    },
+    {
+      "tib": "འ",
+      "wylie": "'a",
+      "kind": "letter",
+      "name": "a-chung",
+      "tone": "L",
+      "similar": [
+        "ཨ",
+        "ཝ",
+        "ཕ"
+      ],
+      "sound": {
+        "en": "a silent carrier: a vowel sound with a low tone; written as an apostrophe in Wylie",
+        "ru": "немая опора гласного: звучит гласный с низким тоном; в Вайли пишется апострофом",
+        "de": "ein stummer Träger: der Vokal klingt mit tiefem Ton; in Wylie ein Apostroph",
+        "fr": "un support muet : la voyelle sonne avec un ton bas ; apostrophe en Wylie",
+        "pl": "niemy nośnik: samogłoska brzmi z niskim tonem; w Wylie apostrof"
+      },
+      "examples": [
+        "'i",
+        "'od-dpag-med"
+      ]
+    },
+    {
+      "tib": "ཡ",
+      "wylie": "ya",
+      "kind": "letter",
+      "name": "ya",
+      "tone": "L",
+      "similar": [
+        "ཝ",
+        "ཤ",
+        "འ"
+      ],
+      "sound": {
+        "en": "y as in \"yes\"; low tone",
+        "ru": "й, как в «йог»; низкий тон",
+        "de": "j wie in „ja“; tiefer Ton",
+        "fr": "y comme dans « yoga » ; ton bas",
+        "pl": "j jak w „jak”; ton niski"
+      },
+      "examples": [
+        "yin",
+        "yon-tan"
+      ]
+    },
+    {
+      "tib": "ར",
+      "wylie": "ra",
+      "kind": "letter",
+      "name": "ra",
+      "tone": "L",
+      "similar": [
+        "ང",
+        "ད",
+        "ལ"
+      ],
+      "sound": {
+        "en": "r, lightly rolled; low tone",
+        "ru": "р, слегка раскатистое; низкий тон",
+        "de": "r, leicht gerollt; tiefer Ton",
+        "fr": "r légèrement roulé ; ton bas",
+        "pl": "r lekko drżące; ton niski"
+      },
+      "examples": [
+        "rang-rgyal",
+        "rang"
+      ]
+    },
+    {
+      "tib": "ལ",
+      "wylie": "la",
+      "kind": "letter",
+      "name": "la",
+      "tone": "L",
+      "similar": [
+        "ར",
+        "ང",
+        "ཨ"
+      ],
+      "sound": {
+        "en": "l as in \"light\"; low tone",
+        "ru": "л, как в «лампа»; низкий тон",
+        "de": "l wie in „Licht“; tiefer Ton",
+        "fr": "l comme dans « lune » ; ton bas",
+        "pl": "l jak w „lampa”; ton niski"
+      },
+      "examples": [
+        "lam",
+        "lag-pa"
+      ]
+    },
+    {
+      "tib": "ཤ",
+      "wylie": "sha",
+      "kind": "letter",
+      "name": "sha",
+      "tone": "H",
+      "similar": [
+        "ཨ",
+        "ཧ",
+        "མ"
+      ],
+      "sound": {
+        "en": "sh as in \"ship\"; high tone",
+        "ru": "ш мягкое, ближе к «щ»; высокий тон",
+        "de": "sch wie in „Schiff“; hoher Ton",
+        "fr": "ch comme dans « chat » ; ton haut",
+        "pl": "sz miękkie, bliżej „ś”; ton wysoki"
+      },
+      "examples": [
+        "shig",
+        "shes-rab"
+      ]
+    },
+    {
+      "tib": "ས",
+      "wylie": "sa",
+      "kind": "letter",
+      "name": "sa",
+      "tone": "H",
+      "similar": [
+        "མ",
+        "ཤ",
+        "ཨ"
+      ],
+      "sound": {
+        "en": "s as in \"sun\"; high tone",
+        "ru": "с, как в «сон»; высокий тон",
+        "de": "scharfes s wie in „Fass“; hoher Ton",
+        "fr": "s comme dans « soleil » ; ton haut",
+        "pl": "s jak w „sen”; ton wysoki"
+      },
+      "examples": [
+        "sa",
+        "sogs"
+      ]
+    },
+    {
+      "tib": "ཧ",
+      "wylie": "ha",
+      "kind": "letter",
+      "name": "ha",
+      "tone": "H",
+      "similar": [
+        "ཤ",
+        "ཨ",
+        "ཚ"
+      ],
+      "sound": {
+        "en": "h as in \"hat\"; high tone",
+        "ru": "х лёгкое, как английское h; высокий тон",
+        "de": "h wie in „Hut“; hoher Ton",
+        "fr": "h soufflé, comme en anglais « hat » ; ton haut",
+        "pl": "h lekkie, jak angielskie „h”; ton wysoki"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཨ",
+      "wylie": "a",
+      "kind": "letter",
+      "name": "a-chen",
+      "tone": "H",
+      "similar": [
+        "ཤ",
+        "ཧ",
+        "འ"
+      ],
+      "sound": {
+        "en": "a vowel with no consonant, said with a high tone; the letter that carries a lone vowel",
+        "ru": "гласный без согласного, с высоким тоном; буква-носитель одинокого гласного",
+        "de": "ein Vokal ohne Konsonant, mit hohem Ton; der Träger eines alleinstehenden Vokals",
+        "fr": "une voyelle sans consonne, ton haut ; la lettre qui porte une voyelle seule",
+        "pl": "samogłoska bez spółgłoski, z wysokim tonem; litera niosąca samotną samogłoskę"
+      },
+      "examples": [
+        "a-ma",
+        "a-ri"
+      ]
+    },
+    {
+      "tib": "ཨི",
+      "wylie": "i",
+      "kind": "vowel",
+      "name": "gi-gu",
+      "tone": null,
+      "similar": [
+        "ཨེ",
+        "ཨོ",
+        "ཨུ"
+      ],
+      "sound": {
+        "en": "i as in \"machine\"; the sign sits above the letter",
+        "ru": "и, как в «мир»; знак стоит над буквой",
+        "de": "i wie in „Miete“; das Zeichen steht über dem Buchstaben",
+        "fr": "i comme dans « lire » ; le signe se place au-dessus",
+        "pl": "i jak w „mir”; znak stoi nad literą"
+      },
+      "examples": [
+        "kyi",
+        "'di"
+      ]
+    },
+    {
+      "tib": "ཨུ",
+      "wylie": "u",
+      "kind": "vowel",
+      "name": "zhabs-kyu",
+      "tone": null,
+      "similar": [
+        "ཨོ",
+        "ཨི",
+        "ཨེ"
+      ],
+      "sound": {
+        "en": "u as in \"rule\"; the sign hangs below the letter",
+        "ru": "у, как в «луна»; знак висит под буквой",
+        "de": "u wie in „Mut“; das Zeichen hängt unter dem Buchstaben",
+        "fr": "ou comme dans « roue » ; le signe pend sous la lettre",
+        "pl": "u jak w „luna”; znak wisi pod literą"
+      },
+      "examples": [
+        "sku",
+        "gsum"
+      ]
+    },
+    {
+      "tib": "ཨེ",
+      "wylie": "e",
+      "kind": "vowel",
+      "name": "'greng-bu",
+      "tone": null,
+      "similar": [
+        "ཨི",
+        "ཨོ",
+        "ཨུ"
+      ],
+      "sound": {
+        "en": "e as in \"bed\", a little closed; the sign sits above the letter",
+        "ru": "э, как в «эти», чуть закрытое; знак стоит над буквой",
+        "de": "e wie in „Weg“; das Zeichen steht über dem Buchstaben",
+        "fr": "é comme dans « thé » ; le signe se place au-dessus",
+        "pl": "e jak w „ten”, nieco zamknięte; znak stoi nad literą"
+      },
+      "examples": [
+        "de",
+        "me"
+      ]
+    },
+    {
+      "tib": "ཨོ",
+      "wylie": "o",
+      "kind": "vowel",
+      "name": "na-ro",
+      "tone": null,
+      "similar": [
+        "ཨེ",
+        "ཨི",
+        "ཨུ"
+      ],
+      "sound": {
+        "en": "o as in \"more\"; the sign sits above the letter",
+        "ru": "о, как в «дом»; знак стоит над буквой",
+        "de": "o wie in „Mond“; das Zeichen steht über dem Buchstaben",
+        "fr": "o comme dans « mot » ; le signe se place au-dessus",
+        "pl": "o jak w „dom”; znak stoi nad literą"
+      },
+      "examples": [
+        "chos",
+        "mchog"
+      ]
+    },
+    {
+      "tib": "ཀྱ",
+      "wylie": "kya",
+      "kind": "subjoined",
+      "name": "ya-tak",
+      "tone": null,
+      "similar": [
+        "ཀྲ",
+        "ཀླ",
+        "ཀྭ"
+      ],
+      "sound": {
+        "en": "a small ya under the letter adds a y: kya; ཕྱ, བྱ, མྱ turn into ch-like sounds",
+        "ru": "маленькое ya под буквой добавляет й: кья; ཕྱ, བྱ, མྱ звучат как ч, дж, нь",
+        "de": "ein kleines ya unter dem Buchstaben fügt ein j hinzu: kja; ཕྱ, བྱ, མྱ werden zu tsch-artigen Lauten",
+        "fr": "un petit ya sous la lettre ajoute un y : kya ; ཕྱ, བྱ, མྱ deviennent des sons proches de tch",
+        "pl": "małe ya pod literą dodaje j: kja; ཕྱ, བྱ, མྱ brzmią jak cz, dż, ń"
+      },
+      "examples": [
+        "kyi",
+        "brgyad"
+      ]
+    },
+    {
+      "tib": "ཀྲ",
+      "wylie": "kra",
+      "kind": "subjoined",
+      "name": "ra-tak",
+      "tone": null,
+      "similar": [
+        "ཀྱ",
+        "ཀླ",
+        "ཀྭ"
+      ],
+      "sound": {
+        "en": "a small ra under the letter makes a retroflex: kra sounds like \"tra\" with the tongue curled back",
+        "ru": "маленькое ra под буквой даёт «тр» с загнутым назад языком: ཀྲ звучит как тра",
+        "de": "ein kleines ra unter dem Buchstaben ergibt ein retroflexes tr: ཀྲ klingt wie „tra“",
+        "fr": "un petit ra sous la lettre donne un tr rétroflexe : ཀྲ se dit « tra »",
+        "pl": "małe ra pod literą daje „tr” z językiem cofniętym: ཀྲ brzmi jak tra"
+      },
+      "examples": [
+        "drug",
+        "sgrol-ma"
+      ]
+    },
+    {
+      "tib": "ཀླ",
+      "wylie": "kla",
+      "kind": "subjoined",
+      "name": "la-tak",
+      "tone": null,
+      "similar": [
+        "ཀྱ",
+        "ཀྲ",
+        "ཀྭ"
+      ],
+      "sound": {
+        "en": "a small la under the letter: the letter above falls silent, only la is heard; ཟླ is the exception, it sounds like da",
+        "ru": "маленькое la под буквой: верхняя буква молчит, слышно только ла; исключение ཟླ, оно звучит как да",
+        "de": "ein kleines la unter dem Buchstaben: der obere Buchstabe verstummt, man hört nur la; Ausnahme ཟླ, es klingt wie da",
+        "fr": "un petit la sous la lettre : la lettre du dessus se tait, on n’entend que la ; exception ཟླ, qui se dit da",
+        "pl": "małe la pod literą: górna litera milknie, słychać tylko la; wyjątek ཟླ, brzmi jak da"
+      },
+      "examples": [
+        "slob-ma",
+        "bla-ma"
+      ]
+    },
+    {
+      "tib": "ཀྭ",
+      "wylie": "kwa",
+      "kind": "subjoined",
+      "name": "wa-zur",
+      "tone": null,
+      "similar": [
+        "ཀྱ",
+        "ཀྲ",
+        "ཀླ"
+      ],
+      "sound": {
+        "en": "a small wa under the letter changes nothing in the sound: kwa is read ka",
+        "ru": "маленькое wa под буквой на звук не влияет: ཀྭ читается ка",
+        "de": "ein kleines wa unter dem Buchstaben ändert den Laut nicht: ཀྭ liest man ka",
+        "fr": "un petit wa sous la lettre ne change rien au son : ཀྭ se lit ka",
+        "pl": "małe wa pod literą nie zmienia dźwięku: ཀྭ czyta się ka"
+      },
+      "examples": [
+        "grwa-pa"
+      ]
+    },
+    {
+      "tib": "རྐ",
+      "wylie": "rka",
+      "kind": "superscribed",
+      "name": "ra-go",
+      "tone": null,
+      "similar": [
+        "ལྐ",
+        "སྐ",
+        "ཀ"
+      ],
+      "sound": {
+        "en": "a ra on top of the letter is silent; it makes a low-tone letter sound firm and high: རྒ is ga with a high tone",
+        "ru": "ra над буквой не произносится; оно делает низкую букву твёрдой и высокой: རྒ звучит как га с высоким тоном",
+        "de": "ein ra über dem Buchstaben ist stumm; es macht einen tiefen Buchstaben fest und hoch: རྒ klingt wie ga mit hohem Ton",
+        "fr": "un ra au-dessus de la lettre est muet ; il rend une lettre basse ferme et haute : རྒ se dit ga avec un ton haut",
+        "pl": "ra nad literą jest nieme; nadaje niskiej literze twardość i wysoki ton: རྒ brzmi jak ga z wysokim tonem"
+      },
+      "examples": [
+        "rta",
+        "rnams"
+      ]
+    },
+    {
+      "tib": "ལྐ",
+      "wylie": "lka",
+      "kind": "superscribed",
+      "name": "la-go",
+      "tone": null,
+      "similar": [
+        "རྐ",
+        "སྐ",
+        "ཀ"
+      ],
+      "sound": {
+        "en": "a la on top of the letter is silent, like ra-go; ལྷ is the one stack that keeps its sound: lha",
+        "ru": "la над буквой не произносится, как и ra-go; единственный стек со звуком — ལྷ, лха",
+        "de": "ein la über dem Buchstaben ist stumm, wie ra-go; nur ལྷ behält seinen Laut: lha",
+        "fr": "un la au-dessus de la lettre est muet, comme ra-go ; seul ལྷ garde son son : lha",
+        "pl": "la nad literą jest nieme, jak ra-go; jedynie ལྷ zachowuje dźwięk: lha"
+      },
+      "examples": [
+        "lha",
+        "lha-mo"
+      ]
+    },
+    {
+      "tib": "སྐ",
+      "wylie": "ska",
+      "kind": "superscribed",
+      "name": "sa-go",
+      "tone": null,
+      "similar": [
+        "རྐ",
+        "ལྐ",
+        "ཀ"
+      ],
+      "sound": {
+        "en": "a sa on top of the letter is silent and works like ra-go: སྒ is ga with a high tone",
+        "ru": "sa над буквой не произносится и работает как ra-go: སྒ звучит как га с высоким тоном",
+        "de": "ein sa über dem Buchstaben ist stumm und wirkt wie ra-go: སྒ klingt wie ga mit hohem Ton",
+        "fr": "un sa au-dessus de la lettre est muet et agit comme ra-go : སྒ se dit ga avec un ton haut",
+        "pl": "sa nad literą jest nieme i działa jak ra-go: སྒ brzmi jak ga z wysokim tonem"
+      },
+      "examples": [
+        "sku",
+        "stong"
+      ]
+    },
+    {
+      "tib": "ག",
+      "wylie": "g",
+      "kind": "prefix",
+      "name": "prefix ga",
+      "tone": null,
+      "similar": [
+        "ད",
+        "བ",
+        "མ"
+      ],
+      "sound": {
+        "en": "a prefix is written before the root letter and is silent: དགོན is read gön",
+        "ru": "приставка пишется перед корневой буквой и не произносится: དགོན читается гён",
+        "de": "ein Präfix steht vor dem Wurzelbuchstaben und ist stumm: དགོན liest man gön",
+        "fr": "un préfixe s’écrit avant la lettre radicale et reste muet : དགོན se lit gön",
+        "pl": "przedrostek pisze się przed literą rdzenną i jest niemy: དགོན czyta się gön"
+      },
+      "examples": [
+        "gsum",
+        "gnyis"
+      ]
+    },
+    {
+      "tib": "ད",
+      "wylie": "d",
+      "kind": "prefix",
+      "name": "prefix da",
+      "tone": null,
+      "similar": [
+        "ག",
+        "བ",
+        "མ"
+      ],
+      "sound": {
+        "en": "silent prefix: དམར is read mar",
+        "ru": "немая приставка: དམར читается мар",
+        "de": "stummes Präfix: དམར liest man mar",
+        "fr": "préfixe muet : དམར se lit mar",
+        "pl": "niemy przedrostek: དམར czyta się mar"
+      },
+      "examples": [
+        "dgu",
+        "dpal"
+      ]
+    },
+    {
+      "tib": "བ",
+      "wylie": "b",
+      "kind": "prefix",
+      "name": "prefix ba",
+      "tone": null,
+      "similar": [
+        "ག",
+        "ད",
+        "མ"
+      ],
+      "sound": {
+        "en": "silent prefix: བཟང is read zang",
+        "ru": "немая приставка: བཟང читается занг",
+        "de": "stummes Präfix: བཟང liest man sang",
+        "fr": "préfixe muet : བཟང se lit zang",
+        "pl": "niemy przedrostek: བཟང czyta się zang"
+      },
+      "examples": [
+        "bzhi",
+        "bdun"
+      ]
+    },
+    {
+      "tib": "མ",
+      "wylie": "m",
+      "kind": "prefix",
+      "name": "prefix ma",
+      "tone": null,
+      "similar": [
+        "ག",
+        "ད",
+        "བ"
+      ],
+      "sound": {
+        "en": "silent prefix: མཐོ is read tho",
+        "ru": "немая приставка: མཐོ читается тхо",
+        "de": "stummes Präfix: མཐོ liest man tho",
+        "fr": "préfixe muet : མཐོ se lit tho",
+        "pl": "niemy przedrostek: མཐོ czyta się tho"
+      },
+      "examples": [
+        "mchog",
+        "mdo"
+      ]
+    },
+    {
+      "tib": "འ",
+      "wylie": "'",
+      "kind": "prefix",
+      "name": "prefix a-chung",
+      "tone": null,
+      "similar": [
+        "ག",
+        "ད",
+        "བ"
+      ],
+      "sound": {
+        "en": "silent prefix: འགྲོ is read dro",
+        "ru": "немая приставка: འགྲོ читается дро",
+        "de": "stummes Präfix: འགྲོ liest man dro",
+        "fr": "préfixe muet : འགྲོ se lit dro",
+        "pl": "niemy przedrostek: འགྲོ czyta się dro"
+      },
+      "examples": [
+        "'di",
+        "'khor"
+      ]
+    },
+    {
+      "tib": "ག",
+      "wylie": "g",
+      "kind": "suffix",
+      "name": "suffix ga",
+      "tone": null,
+      "similar": [
+        "ང",
+        "ད",
+        "བ"
+      ],
+      "sound": {
+        "en": "a suffix comes after the root (and its vowel); ག is heard as a soft k: ཡག is yak",
+        "ru": "суффикс стоит после корня и его гласного; ག слышится как мягкое к: ཡག — як",
+        "de": "ein Suffix steht nach der Wurzel und ihrem Vokal; ག klingt wie ein weiches k: ཡག ist jak",
+        "fr": "un suffixe suit la racine et sa voyelle ; ག s’entend comme un k doux : ཡག se dit yak",
+        "pl": "przyrostek stoi po rdzeniu i jego samogłosce; ག słychać jak miękkie k: ཡག to jak"
+      },
+      "examples": [
+        "mchog",
+        "zhig"
+      ]
+    },
+    {
+      "tib": "ང",
+      "wylie": "ng",
+      "kind": "suffix",
+      "name": "suffix nga",
+      "tone": null,
+      "similar": [
+        "ག",
+        "ད",
+        "ན"
+      ],
+      "sound": {
+        "en": "ང closes the syllable with ng: ཁང is khang",
+        "ru": "ང закрывает слог носовым нг: ཁང — кханг",
+        "de": "ང schließt die Silbe mit ng: ཁང ist khang",
+        "fr": "ང ferme la syllabe par ng : ཁང se dit khang",
+        "pl": "ང zamyka sylabę przez ng: ཁང to khang"
+      },
+      "examples": [
+        "dang",
+        "dbang"
+      ]
+    },
+    {
+      "tib": "ད",
+      "wylie": "d",
+      "kind": "suffix",
+      "name": "suffix da",
+      "tone": null,
+      "similar": [
+        "ག",
+        "ང",
+        "ན"
+      ],
+      "sound": {
+        "en": "ད is silent but changes the vowel: a becomes e, o becomes ö, u becomes ü: བོད is bö",
+        "ru": "ད не произносится, но меняет гласный: а → э, о → ö, у → ü: བོད — бё",
+        "de": "ད ist stumm, verändert aber den Vokal: a wird e, o wird ö, u wird ü: བོད ist bö",
+        "fr": "ད est muet mais change la voyelle : a devient è, o devient ö, u devient ü : བོད se dit bö",
+        "pl": "ད jest nieme, ale zmienia samogłoskę: a → e, o → ö, u → ü: བོད to bö"
+      },
+      "examples": [
+        "brgyad",
+        "bod"
+      ]
+    },
+    {
+      "tib": "ན",
+      "wylie": "n",
+      "kind": "suffix",
+      "name": "suffix na",
+      "tone": null,
+      "similar": [
+        "ང",
+        "ད",
+        "ལ"
+      ],
+      "sound": {
+        "en": "ན is heard as n and changes a, o, u like ད: ཡོན is yön",
+        "ru": "ན слышится как н и меняет а, о, у так же, как ད: ཡོན — ён",
+        "de": "ན klingt als n und verändert a, o, u wie ད: ཡོན ist jön",
+        "fr": "ན s’entend n et change a, o, u comme ད : ཡོན se dit yön",
+        "pl": "ན słychać jak n i zmienia a, o, u jak ད: ཡོན to jön"
+      },
+      "examples": [
+        "yin",
+        "kun"
+      ]
+    },
+    {
+      "tib": "བ",
+      "wylie": "b",
+      "kind": "suffix",
+      "name": "suffix ba",
+      "tone": null,
+      "similar": [
+        "ག",
+        "ད",
+        "མ"
+      ],
+      "sound": {
+        "en": "བ is heard as a soft p or w: ཐུབ is thup",
+        "ru": "བ слышится как мягкое п или в: ཐུབ — тхуп",
+        "de": "བ klingt wie ein weiches p oder w: ཐུབ ist thup",
+        "fr": "བ s’entend comme un p doux ou un w : ཐུབ se dit thup",
+        "pl": "བ słychać jak miękkie p lub w: ཐུབ to thup"
+      },
+      "examples": [
+        "slob-ma",
+        "zab-mo"
+      ]
+    },
+    {
+      "tib": "མ",
+      "wylie": "m",
+      "kind": "suffix",
+      "name": "suffix ma",
+      "tone": null,
+      "similar": [
+        "བ",
+        "ང",
+        "ན"
+      ],
+      "sound": {
+        "en": "མ closes the syllable with m: ལམ is lam",
+        "ru": "མ закрывает слог звуком м: ལམ — лам",
+        "de": "མ schließt die Silbe mit m: ལམ ist lam",
+        "fr": "མ ferme la syllabe par m : ལམ se dit lam",
+        "pl": "མ zamyka sylabę przez m: ལམ to lam"
+      },
+      "examples": [
+        "lam",
+        "gsum"
+      ]
+    },
+    {
+      "tib": "འ",
+      "wylie": "'",
+      "kind": "suffix",
+      "name": "suffix a-chung",
+      "tone": null,
+      "similar": [
+        "ག",
+        "ད",
+        "བ"
+      ],
+      "sound": {
+        "en": "འ as a suffix is silent and lengthens the vowel: དགའ is ga",
+        "ru": "འ как суффикс не звучит и удлиняет гласный: དགའ — га",
+        "de": "འ als Suffix ist stumm und dehnt den Vokal: དགའ ist ga",
+        "fr": "འ en suffixe est muet et allonge la voyelle : དགའ se dit ga",
+        "pl": "འ jako przyrostek jest nieme i wydłuża samogłoskę: དགའ to ga"
+      },
+      "examples": [
+        "bka'",
+        "mkha'-'gro"
+      ]
+    },
+    {
+      "tib": "ར",
+      "wylie": "r",
+      "kind": "suffix",
+      "name": "suffix ra",
+      "tone": null,
+      "similar": [
+        "ལ",
+        "ང",
+        "ད"
+      ],
+      "sound": {
+        "en": "ར is heard as r: བར is bar",
+        "ru": "ར слышится как р: བར — бар",
+        "de": "ར klingt als r: བར ist bar",
+        "fr": "ར s’entend r : བར se dit bar",
+        "pl": "ར słychać jak r: བར to bar"
+      },
+      "examples": [
+        "'khor",
+        "dmar-po"
+      ]
+    },
+    {
+      "tib": "ལ",
+      "wylie": "l",
+      "kind": "suffix",
+      "name": "suffix la",
+      "tone": null,
+      "similar": [
+        "ར",
+        "ན",
+        "ད"
+      ],
+      "sound": {
+        "en": "ལ is heard as l and changes a, o, u like ད: ཡུལ is yül",
+        "ru": "ལ слышится как л и меняет а, о, у так же, как ད: ཡུལ — юль",
+        "de": "ལ klingt als l und verändert a, o, u wie ད: ཡུལ ist jül",
+        "fr": "ལ s’entend l et change a, o, u comme ད : ཡུལ se dit yül",
+        "pl": "ལ słychać jak l i zmienia a, o, u jak ད: ཡུལ to jül"
+      },
+      "examples": [
+        "dpal",
+        "rgyal-mo"
+      ]
+    },
+    {
+      "tib": "ས",
+      "wylie": "s",
+      "kind": "suffix",
+      "name": "suffix sa",
+      "tone": null,
+      "similar": [
+        "ད",
+        "ག",
+        "ང"
+      ],
+      "sound": {
+        "en": "ས is silent and changes the vowel like ད: ཆོས is chö; a second suffix ས after another suffix is silent too: བསྒྲུབས",
+        "ru": "ས не произносится и меняет гласный, как ད: ཆོས — чё; второй суффикс ས после другого суффикса тоже нем: བསྒྲུབས",
+        "de": "ས ist stumm und verändert den Vokal wie ད: ཆོས ist chö; ein zweites Suffix ས nach einem anderen Suffix ist ebenfalls stumm: བསྒྲུབས",
+        "fr": "ས est muet et change la voyelle comme ད : ཆོས se dit chö ; un second suffixe ས après un autre suffixe est muet aussi : བསྒྲུབས",
+        "pl": "ས jest nieme i zmienia samogłoskę jak ད: ཆོས to czö; drugi przyrostek ས po innym przyrostku też jest niemy: བསྒྲུབས"
+      },
+      "examples": [
+        "chos",
+        "rnams"
+      ]
+    }
+  ],
+  "intros": {
+    "1": {
+      "en": "The Tibetan alphabet has thirty letters, each with the vowel a built in. They go in rows of four: a plain letter, the same with a puff of air, a soft one, a nasal. The first row: ka, kha, ga, nga.",
+      "ru": "В тибетском алфавите тридцать букв, и в каждой уже сидит гласный а. Они идут строками по четыре: простая буква, та же с выдохом, мягкая, носовая. Первая строка: ka, kha, ga, nga.",
+      "de": "Das tibetische Alphabet hat dreißig Buchstaben, jeder trägt den Vokal a in sich. Sie stehen in Reihen zu vier: ein einfacher Buchstabe, derselbe mit Hauch, ein weicher, ein nasaler. Die erste Reihe: ka, kha, ga, nga.",
+      "fr": "L’alphabet tibétain a trente lettres, chacune avec la voyelle a incorporée. Elles vont par rangées de quatre : une lettre simple, la même avec un souffle, une douce, une nasale. Première rangée : ka, kha, ga, nga.",
+      "pl": "Alfabet tybetański ma trzydzieści liter, a każda ma w sobie samogłoskę a. Idą rzędami po cztery: litera prosta, ta sama z przydechem, miękka, nosowa. Pierwszy rząd: ka, kha, ga, nga."
+    },
+    "2": {
+      "en": "The second row is the same pattern one step forward in the mouth: ca, cha, ja, nya. The sounds are like ch, ch with a puff, j, ny.",
+      "ru": "Вторая строка повторяет тот же узор чуть ближе к передним зубам: ca, cha, ja, nya. Звучат как ч, ч с выдохом, дж, нь.",
+      "de": "Die zweite Reihe wiederholt das Muster etwas weiter vorn im Mund: ca, cha, ja, nya. Die Laute sind tsch, tsch mit Hauch, dsch, nj.",
+      "fr": "La deuxième rangée reprend le même schéma un peu plus en avant dans la bouche : ca, cha, ja, nya. Les sons sont tch, tch soufflé, dj, gn.",
+      "pl": "Drugi rząd powtarza ten sam wzór nieco bliżej zębów: ca, cha, ja, nya. Brzmią jak cz, cz z przydechem, dż, ń."
+    },
+    "3": {
+      "en": "The third row is the t family: ta, tha, da, na. Again plain, with a puff, soft, nasal.",
+      "ru": "Третья строка — семейство т: ta, tha, da, na. Снова простая, с выдохом, мягкая, носовая.",
+      "de": "Die dritte Reihe ist die t-Familie: ta, tha, da, na. Wieder einfach, mit Hauch, weich, nasal.",
+      "fr": "La troisième rangée est la famille du t : ta, tha, da, na. Encore simple, soufflée, douce, nasale.",
+      "pl": "Trzeci rząd to rodzina t: ta, tha, da, na. Znów prosta, z przydechem, miękka, nosowa."
+    },
+    "4": {
+      "en": "The fourth row is the p family: pa, pha, ba, ma. With it you have the sixteen letters that make up half of the alphabet.",
+      "ru": "Четвёртая строка — семейство п: pa, pha, ba, ma. С ней у вас шестнадцать букв, половина алфавита.",
+      "de": "Die vierte Reihe ist die p-Familie: pa, pha, ba, ma. Damit hast du sechzehn Buchstaben, die Hälfte des Alphabets.",
+      "fr": "La quatrième rangée est la famille du p : pa, pha, ba, ma. Avec elle vous avez seize lettres, la moitié de l’alphabet.",
+      "pl": "Czwarty rząd to rodzina p: pa, pha, ba, ma. Z nim masz szesnaście liter, połowę alfabetu."
+    },
+    "5": {
+      "en": "The fifth row: tsa, tsha, dza and the rare wa. The first three follow the familiar pattern; wa stands on its own.",
+      "ru": "Пятая строка: tsa, tsha, dza и редкая wa. Первые три идут по знакомому узору, wa стоит особняком.",
+      "de": "Die fünfte Reihe: tsa, tsha, dza und das seltene wa. Die ersten drei folgen dem bekannten Muster; wa steht für sich.",
+      "fr": "Cinquième rangée : tsa, tsha, dza et le rare wa. Les trois premiers suivent le schéma connu ; wa est à part.",
+      "pl": "Piąty rząd: tsa, tsha, dza i rzadkie wa. Pierwsze trzy idą znanym wzorem; wa stoi osobno."
+    },
+    "6": {
+      "en": "The sixth row: zha, za, the silent carrier a-chung, and ya. The letter a-chung is written as an apostrophe in Wylie and carries a vowel with a low tone.",
+      "ru": "Шестая строка: zha, za, немая опора a-chung и ya. Буква a-chung пишется в Вайли апострофом и несёт гласный с низким тоном.",
+      "de": "Die sechste Reihe: zha, za, der stumme Träger a-chung und ya. Der Buchstabe a-chung wird in Wylie als Apostroph geschrieben und trägt einen Vokal mit tiefem Ton.",
+      "fr": "Sixième rangée : zha, za, le support muet a-chung et ya. La lettre a-chung s’écrit par une apostrophe en Wylie et porte une voyelle à ton bas.",
+      "pl": "Szósty rząd: zha, za, niemy nośnik a-chung i ya. Litera a-chung w Wylie to apostrof i niesie samogłoskę z niskim tonem."
+    },
+    "7": {
+      "en": "The seventh row: ra, la, sha, sa. Four letters you will meet in almost every sentence.",
+      "ru": "Седьмая строка: ra, la, sha, sa. Четыре буквы, которые встретятся почти в каждом предложении.",
+      "de": "Die siebte Reihe: ra, la, sha, sa. Vier Buchstaben, die dir in fast jedem Satz begegnen.",
+      "fr": "Septième rangée : ra, la, sha, sa. Quatre lettres que vous rencontrerez dans presque chaque phrase.",
+      "pl": "Siódmy rząd: ra, la, sha, sa. Cztery litery, które spotkasz niemal w każdym zdaniu."
+    },
+    "8": {
+      "en": "The last row has two letters: ha and a-chen. A-chen carries a lone vowel: when a syllable starts with a vowel sound, it is written on ཨ.",
+      "ru": "Последняя строка из двух букв: ha и a-chen. A-chen несёт одинокий гласный: когда слог начинается с гласного звука, его пишут на ཨ.",
+      "de": "Die letzte Reihe hat zwei Buchstaben: ha und a-chen. A-chen trägt einen alleinstehenden Vokal: beginnt eine Silbe mit einem Vokallaut, schreibt man ihn auf ཨ.",
+      "fr": "La dernière rangée a deux lettres : ha et a-chen. A-chen porte une voyelle seule : quand une syllabe commence par un son de voyelle, on l’écrit sur ཨ.",
+      "pl": "Ostatni rząd ma dwie litery: ha i a-chen. A-chen niesie samotną samogłoskę: gdy sylaba zaczyna się od samogłoski, pisze się ją na ཨ."
+    },
+    "9": {
+      "en": "Every letter has the vowel a built in. Four small signs change it: gi-gu above for i, zhabs-kyu below for u, ’greng-bu above for e, na-ro above for o. ཀ ka becomes ཀི ki, ཀུ ku, ཀེ ke, ཀོ ko.",
+      "ru": "В каждой букве уже сидит гласный а. Четыре маленьких знака меняют его: gi-gu сверху даёт и, zhabs-kyu снизу у, ’greng-bu сверху э, na-ro сверху о. ཀ ka превращается в ཀི ki, ཀུ ku, ཀེ ke, ཀོ ko.",
+      "de": "Jeder Buchstabe trägt den Vokal a in sich. Vier kleine Zeichen ändern ihn: gi-gu oben für i, zhabs-kyu unten für u, ’greng-bu oben für e, na-ro oben für o. ཀ ka wird zu ཀི ki, ཀུ ku, ཀེ ke, ཀོ ko.",
+      "fr": "Chaque lettre porte la voyelle a. Quatre petits signes la changent : gi-gu au-dessus pour i, zhabs-kyu en dessous pour u, ’greng-bu au-dessus pour e, na-ro au-dessus pour o. ཀ ka devient ཀི ki, ཀུ ku, ཀེ ke, ཀོ ko.",
+      "pl": "Każda litera ma w sobie samogłoskę a. Cztery małe znaki ją zmieniają: gi-gu u góry daje i, zhabs-kyu u dołu u, ’greng-bu u góry e, na-ro u góry o. ཀ ka staje się ཀི ki, ཀུ ku, ཀེ ke, ཀོ ko."
+    },
+    "10": {
+      "en": "Four letters can hang under another letter in a small form: ya, ra, la, wa. In Wylie the subjoined letter is simply written after the main one: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa.",
+      "ru": "Четыре буквы могут подвешиваться под другую в уменьшенном виде: ya, ra, la, wa. В Вайли подписная буква просто пишется после главной: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa.",
+      "de": "Vier Buchstaben können in kleiner Form unter einen anderen hängen: ya, ra, la, wa. In Wylie steht der untergeschriebene Buchstabe einfach nach dem Hauptbuchstaben: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa.",
+      "fr": "Quatre lettres peuvent se suspendre sous une autre, en petit : ya, ra, la, wa. En Wylie la lettre souscrite s’écrit simplement après la principale : ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa.",
+      "pl": "Cztery litery mogą zawisnąć pod inną w małej formie: ya, ra, la, wa. W Wylie literę podpisaną pisze się po prostu po głównej: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa."
+    },
+    "11": {
+      "en": "Three letters can sit on top of another: ra, la, sa. Wylie writes the top letter first: རྐ rka, ལྐ lka, སྐ ska. The top letter is silent in speech but changes the tone of the letter below.",
+      "ru": "Три буквы могут стоять над другой: ra, la, sa. В Вайли верхняя буква пишется первой: རྐ rka, ལྐ lka, སྐ ska. В речи верхняя буква молчит, но меняет тон нижней.",
+      "de": "Drei Buchstaben können auf einem anderen sitzen: ra, la, sa. Wylie schreibt den oberen Buchstaben zuerst: རྐ rka, ལྐ lka, སྐ ska. Beim Sprechen ist der obere stumm, verändert aber den Ton des unteren.",
+      "fr": "Trois lettres peuvent se poser sur une autre : ra, la, sa. Le Wylie écrit la lettre du haut en premier : རྐ rka, ལྐ lka, སྐ ska. À l’oral la lettre du haut est muette mais change le ton de celle du dessous.",
+      "pl": "Trzy litery mogą stać nad inną: ra, la, sa. Wylie pisze górną literę jako pierwszą: རྐ rka, ལྐ lka, སྐ ska. W mowie górna litera milczy, ale zmienia ton dolnej."
+    },
+    "12": {
+      "en": "A syllable is built around its root letter: prefix · superscribed · root · subjoined · vowel · suffix · second suffix. The vowel sign marks the root. Five letters can be prefixes (ga da ba ma ’a), ten can be suffixes (ga nga da na ba ma ’a ra la sa). Example: བསྒྲུབས bsgrubs has the root ག with sa on top, ra below, u, suffix བ and a second suffix ས; it is read drup.",
+      "ru": "Слог строится вокруг корневой буквы: приставка · надписная · корень · подписная · гласный · суффикс · второй суффикс. Знак гласного стоит на корне. Приставками бывают пять букв (ga da ba ma ’a), суффиксами десять (ga nga da na ba ma ’a ra la sa). Пример: в བསྒྲུབས bsgrubs корень ག с sa сверху и ra снизу, гласный у, суффикс བ и второй суффикс ས; читается друп.",
+      "de": "Eine Silbe ist um ihren Wurzelbuchstaben gebaut: Präfix · übergeschrieben · Wurzel · untergeschrieben · Vokal · Suffix · zweites Suffix. Das Vokalzeichen markiert die Wurzel. Fünf Buchstaben können Präfix sein (ga da ba ma ’a), zehn Suffix (ga nga da na ba ma ’a ra la sa). Beispiel: བསྒྲུབས bsgrubs hat die Wurzel ག mit sa darüber, ra darunter, u, Suffix བ und zweites Suffix ས; man liest drup.",
+      "fr": "Une syllabe se construit autour de sa lettre radicale : préfixe · suscrite · racine · souscrite · voyelle · suffixe · second suffixe. Le signe de voyelle marque la racine. Cinq lettres peuvent être préfixes (ga da ba ma ’a), dix suffixes (ga nga da na ba ma ’a ra la sa). Exemple : བསྒྲུབས bsgrubs a la racine ག avec sa au-dessus, ra en dessous, u, le suffixe བ et le second suffixe ས ; on lit droup.",
+      "pl": "Sylaba buduje się wokół litery rdzennej: przedrostek · nadpisana · rdzeń · podpisana · samogłoska · przyrostek · drugi przyrostek. Znak samogłoski stoi na rdzeniu. Przedrostkiem może być pięć liter (ga da ba ma ’a), przyrostkiem dziesięć (ga nga da na ba ma ’a ra la sa). Przykład: བསྒྲུབས bsgrubs ma rdzeń ག z sa u góry, ra u dołu, u, przyrostek བ i drugi przyrostek ས; czyta się drup."
+    },
+    "13": {
+      "en": "To read a syllable, find its root: the letter with the vowel sign, or the letter with something on top or below, or the second letter of a bare pair. Then read prefix and suffix as silent or as they change the vowel. Real syllables of the course follow.",
+      "ru": "Чтобы прочитать слог, найдите корень: букву со знаком гласного, или букву с надписной либо подписной, или вторую букву в голой паре. Потом учтите приставку и суффикс: они молчат или меняют гласный. Дальше настоящие слоги курса.",
+      "de": "Um eine Silbe zu lesen, such die Wurzel: den Buchstaben mit dem Vokalzeichen, oder den mit etwas darüber oder darunter, oder den zweiten eines nackten Paares. Dann lies Präfix und Suffix als stumm oder nach ihrer Wirkung auf den Vokal. Es folgen echte Silben des Kurses.",
+      "fr": "Pour lire une syllabe, trouvez sa racine : la lettre qui porte le signe de voyelle, ou celle qui a quelque chose dessus ou dessous, ou la seconde d’une paire nue. Puis lisez préfixe et suffixe comme muets ou selon leur effet sur la voyelle. Suivent de vraies syllabes du cours.",
+      "pl": "Aby przeczytać sylabę, znajdź rdzeń: literę ze znakiem samogłoski, albo tę z czymś nad lub pod sobą, albo drugą w gołej parze. Potem uwzględnij przedrostek i przyrostek: milczą albo zmieniają samogłoskę. Dalej prawdziwe sylaby z kursu."
+    },
+    "14": {
+      "en": "Words are syllables separated by the tsheg dot. Read them one syllable at a time; in Wylie the syllables are separated by spaces: དགོན་པ་ dgon pa. These are whole words of the course.",
+      "ru": "Слова — это слоги, разделённые точкой-цегом. Читайте их по слогу; в Вайли слоги разделяются пробелами: དགོན་པ་ dgon pa. Здесь целые слова курса.",
+      "de": "Wörter sind Silben, getrennt durch den Tsheg-Punkt. Lies sie Silbe für Silbe; in Wylie trennen Leerzeichen die Silben: དགོན་པ་ dgon pa. Hier ganze Wörter des Kurses.",
+      "fr": "Les mots sont des syllabes séparées par le point tsheg. Lisez-les syllabe par syllabe ; en Wylie les syllabes sont séparées par des espaces : དགོན་པ་ dgon pa. Voici des mots entiers du cours.",
+      "pl": "Słowa to sylaby rozdzielone kropką tsheg. Czytaj je sylaba po sylabie; w Wylie sylaby rozdziela spacja: དགོན་པ་ dgon pa. Oto całe słowa z kursu."
+    },
+    "15": {
+      "en": "Now a whole sentence. Here are the first sentences of lesson 1 with their Wylie and translation; a sentence ends with the shad stroke །. Read them aloud, then pick their meanings and build them from tiles.",
+      "ru": "Теперь целое предложение. Вот первые предложения урока 1 с Вайли и переводом; предложение заканчивается чертой-шэ །. Прочитайте их вслух, потом выберите их смысл и соберите из плиток.",
+      "de": "Jetzt ein ganzer Satz. Hier sind die ersten Sätze von Lektion 1 mit Wylie und Übersetzung; ein Satz endet mit dem Strich Shad །. Lies sie laut, dann wähle ihre Bedeutung und baue sie aus Kacheln.",
+      "fr": "Maintenant une phrase entière. Voici les premières phrases de la leçon 1 avec leur Wylie et leur traduction ; une phrase se termine par le trait shad །. Lisez-les à voix haute, puis choisissez leur sens et construisez-les avec les tuiles.",
+      "pl": "Teraz całe zdanie. Oto pierwsze zdania lekcji 1 z Wylie i tłumaczeniem; zdanie kończy się kreską shad །. Przeczytaj je na głos, potem wybierz ich znaczenie i ułóż z kafelków."
+    }
+  }
+}

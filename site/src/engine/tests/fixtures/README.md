@@ -22,3 +22,4 @@ Rules:
 | progress-2026-10-13.json | 3cc6b72, c4fdec7 | spaced repetition (`level`, `due`); settings `exercise`, `showWylie`, `voice`, `theme`, `onboarded` |
 | progress-2026-10-15.json | 9c7cf80 | `reading` (the reading course); exercise `recall` |
 | progress-2026-10-19.json | the course | `course` (units, current, canRead); setting `home` |
+| progress-2026-10-19b.json | the alphabet | `course.alphabetExam`; `reading` keyed by alphabet parts (older stage ids are migrated on load) |

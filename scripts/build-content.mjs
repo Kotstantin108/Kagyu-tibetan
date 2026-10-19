@@ -1,4 +1,4 @@
-// Builds site/data/{words,sentences,sets,course}.json and CONTENT_REVIEW.md
+// Builds site/data/{words,sentences,sets,course,alphabet}.json and CONTENT_REVIEW.md
 // from the authoring files in content/.
 //
 //   node scripts/build-content.mjs
@@ -12,6 +12,8 @@
 //                          flags: comma-separated, e.g. "fused", "lemma=བླ་མ་"
 //   content/sentences.tsv  page | tib | enOrigin | en | ru | noteEn | noteRu
 //                          enOrigin: textbook | machine
+//   content/letters.tsv    tib | wylie | kind | name | tone | similar | en | ru | de | fr | pl   (the alphabet)
+//   content/alphabet-intro.tsv  part | en | ru | de | fr | pl   (introductions of the alphabet parts)
 //   content/lang-<xx>.tsv  extra languages, keyed by the English text:
 //                          @sets / @words / @sentences / @notes sections,
 //                          lines "english | translation"
@@ -296,6 +298,55 @@ writeFileSync(join(OUT, 'sentences.json'), JSON.stringify(sentences, null, 2) + 
 const course = { modules: splitUnits(sentences, wordsOut, sets) };
 writeFileSync(join(OUT, 'course.json'), JSON.stringify(course, null, 2) + '\n');
 
+// ---- the alphabet ----
+const ALPHA_LANGS = ['en', 'ru', 'de', 'fr', 'pl'];
+const firstSyllable = (w) => (w.wylie || '').split(/[\s/]+/)[0] || '';
+const wordOrder = Object.entries(wordsOut).filter(([, w]) => !w.service && w.wylie).map(([id, w]) => ({ id, w, rank: setOrder.get(w.set) ?? 1e6, syl: (w.tib.match(/་/g) || []).length }))
+  .sort((a, b) => a.rank - b.rank || a.syl - b.syl);
+// which words show a sign: a test on the Wylie of the first syllable
+function exampleTest(e) {
+  const esc = e.wylie.replace(/'/g, "'");
+  switch (e.kind) {
+    case 'letter': {
+      // the consonant of the letter (ka -> k, 'a -> ', a -> nothing), then a vowel or a subjoined letter and a vowel
+      if (e.wylie === 'a') return (s) => /^[aeiou]/.test(s);
+      const cons = e.wylie.replace(/a$/, '');
+      // a vowel right after the consonant (kun, bod); a subjoined letter would change the sound
+      const re = new RegExp(`^${cons}[aeiou]`);
+      return (s) => re.test(s);
+    }
+    case 'vowel': return (s) => new RegExp(`^[^aeiou]+${esc}[^aeiou]*$`).test(s);
+    case 'subjoined': {
+      const sub = { kya: /(?:^|[^n])(?:kh?|g|ph?|b|m)y[aeiou]/, kra: /(?:kh?|g|th?|d|ph?|b|m|s|h)r[aeiou]/, kla: /(?:k|g|b|z|r|s)l[aeiou]/, kwa: /[a-z]w[aeiou]/ }[e.wylie];
+      return (s) => sub.test(s);
+    }
+    case 'superscribed': {
+      const top = { rka: /^r[kgcjtdnbmts]/, lka: /^l[kgcjtdpbh]/, ska: /^s[kgnjtdpbm]/ }[e.wylie];
+      return (s) => top.test(s);
+    }
+    case 'prefix': return (s) => new RegExp(`^${esc}[^aeiouyrlw]`).test(s) && !(e.wylie === "'" && /^'[aeiou]/.test(s));
+    case 'suffix': return (s) => new RegExp(`[aeiou]${esc}$`).test(s) || (e.wylie === 's' && /[aeiou][gnbm]s$/.test(s));
+    default: return () => false;
+  }
+}
+const letterRows = readRows('letters').map((r) => {
+  const [tib, wylie, kind, name, tone, similar, ...sounds] = r.cols;
+  if (sounds.length !== ALPHA_LANGS.length) errors.push(`${r.line}: expected ${6 + ALPHA_LANGS.length} columns`);
+  return { tib, wylie, kind, name, tone: tone === '-' ? null : tone, similar: similar ? similar.split(/\s+/) : [], sound: Object.fromEntries(ALPHA_LANGS.map((l, i) => [l, sounds[i] || ''])) };
+});
+for (const e of letterRows) {
+  const test = exampleTest(e);
+  e.examples = wordOrder.filter(({ w }) => test(firstSyllable(w))).slice(0, 2).map((x) => x.id);
+  if (!e.examples.length) warnings.push(`alphabet: no example word for ${e.kind} ${e.tib} ${e.wylie}`);
+}
+const intros = {};
+for (const r of readRows('alphabet-intro')) {
+  const [part, ...texts] = r.cols;
+  if (texts.length !== ALPHA_LANGS.length) errors.push(`${r.line}: expected ${1 + ALPHA_LANGS.length} columns`);
+  intros[part] = Object.fromEntries(ALPHA_LANGS.map((l, i) => [l, texts[i] || '']));
+}
+writeFileSync(join(OUT, 'alphabet.json'), JSON.stringify({ letters: letterRows, intros }, null, 2) + '\n');
+
 // ---- CONTENT_REVIEW.md ----
 let notes = '';
 try { notes = readFileSync(join(CONTENT, 'review-notes.md'), 'utf8'); } catch { notes = ''; }
@@ -339,4 +390,6 @@ L.push('');
 writeFileSync(join(ROOT, 'CONTENT_REVIEW.md'), L.join('\n'));
 
 const langSummary = extraLangs.map((l) => `${l}: ${langStats[l].sentences}/${sentences.length} sentences, ${langStats[l].words} words, ${langStats[l].missing.length} missing`).join('; ');
+if (errors.length) { console.error('BUILD ERRORS:'); for (const e of errors) console.error('  ' + e); process.exit(1); }
+for (const w of warnings.filter((x) => x.startsWith('alphabet'))) console.warn('warning: ' + w);
 console.log(`sets: ${sets.length}, units: ${course.modules.reduce((n, m) => n + m.units.length, 0)}, words: ${Object.keys(wordsOut).length}, sentences: ${sentences.length}, fused surfaces: ${surfaces.size - byTib.size}${langSummary ? '; ' + langSummary : ''}`);

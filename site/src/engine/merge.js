@@ -77,6 +77,11 @@ export function mergeProgress(localRaw, remoteRaw, now = new Date()) {
   out.course.started = local.course.started || remote.course.started;
   out.course.canRead = newer.course.canRead !== null ? newer.course.canRead : older.course.canRead;
   out.course.current = newer.course.current || older.course.current;
+  const ea = local.course.alphabetExam;
+  const eb = remote.course.alphabetExam;
+  out.course.alphabetExam = ea && eb
+    ? { best: Math.max(ea.best, eb.best), attempts: Math.max(ea.attempts, eb.attempts), passedAt: ea.passedAt && eb.passedAt ? (later(eb.passedAt, ea.passedAt) ? ea.passedAt : eb.passedAt) : ea.passedAt || eb.passedAt }
+    : ea || eb || null;
 
   const ls = local.streak;
   const rs = remote.streak;

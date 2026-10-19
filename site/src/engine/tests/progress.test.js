@@ -71,12 +71,12 @@ test('normalizeProgress tolerates garbage', () => {
 
 test('reading rounds keep the count and the best score, and survive normalisation', () => {
   let p = createProgress(t0);
-  p = recordReadingRound(p, 'rows1', 9, t0);
-  p = recordReadingRound(p, 'rows1', 12, t0);
-  p = recordReadingRound(p, 'rows1', 7, t0);
-  assert.deepEqual(p.reading.rows1, { rounds: 3, best: 12, updatedAt: t0.toISOString() });
-  const n = normalizeProgress({ reading: { rows1: { rounds: 2, best: 'x' }, bad: null } }, t0);
-  assert.deepEqual(n.reading, { rows1: { rounds: 2, best: 0, updatedAt: t0.toISOString() } });
+  p = recordReadingRound(p, 'alphabet/1', 9, t0);
+  p = recordReadingRound(p, 'alphabet/1', 12, t0);
+  p = recordReadingRound(p, 'alphabet/1', 7, t0);
+  assert.deepEqual(p.reading['alphabet/1'], { rounds: 3, best: 12, updatedAt: t0.toISOString() });
+  const n = normalizeProgress({ reading: { 'alphabet/1': { rounds: 2, best: 'x' }, bad: null } }, t0);
+  assert.deepEqual(n.reading, { 'alphabet/1': { rounds: 2, best: 0, updatedAt: t0.toISOString() } });
   assert.deepEqual(normalizeProgress({}, t0).reading, {});
   assert.equal(normalizeProgress({ settings: { exercise: 'recall' } }).settings.exercise, 'recall');
 });

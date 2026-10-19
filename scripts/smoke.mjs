@@ -7,8 +7,8 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { join, extname } from 'node:path';
 import { chromium } from 'playwright';
-import { syllableToWylie } from '../site/src/engine/wylie.js';
-import { STAGE_IDS } from '../site/src/engine/letters.js';
+import { syllableToWylie, toWylie } from '../site/src/engine/wylie.js';
+import { PARTS, OLD_STAGE_PARTS } from '../site/src/engine/alphabet.js';
 import { contentWords } from '../site/src/engine/next.js';
 import { renderTib } from '../site/src/engine/tib.js';
 import { findUnit, allUnits } from '../site/src/engine/course.js';
@@ -122,8 +122,8 @@ await page.waitForSelector('.rack .tile');
 // reading course: a full round of the first stage, answered with the transliterator
 await page.goto(`${base}/index.html#/read`);
 await page.waitForSelector('.stage');
-check((await page.$$('.stage')).length === STAGE_IDS.length, `reading: ${STAGE_IDS.length} stages listed`);
-await page.click('.stage[data-stage="rows1"] a.action');
+check((await page.$$('.stage')).length === PARTS.length - 1, `reading: ${PARTS.length - 1} parts of the alphabet listed as a free trainer`);
+await page.click('.stage[data-stage="1"] a.action');
 await page.waitForSelector('.read-card');
 for (let i = 0; i < 12; i++) {
   const tib = await page.$eval('.read-card', (e) => e.textContent);
@@ -136,7 +136,7 @@ for (let i = 0; i < 12; i++) {
   await page.waitForFunction(() => !document.querySelector('.read-result').hidden || document.querySelector('.feedback').textContent === '');
 }
 check((await page.$eval('.read-result', (e) => !e.hidden && /12 of 12/.test(e.textContent))), 'reading: a full round of the letters is scored 12 of 12');
-check((await page.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).reading.rows1.best)) === 12, 'reading: the best score is recorded in the progress');
+check((await page.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).reading['alphabet/1'].best)) === 12, 'reading: the best score is recorded in the progress');
 
 // pronunciation: off by default, the setting shows the listen buttons
 await page.goto(`${base}/index.html#/settings`);
@@ -189,7 +189,8 @@ await page.goto(`${base}/index.html#/course`);
 await page.waitForSelector('#course-intro-start');
 await page.click('#course-intro-start');
 await page.waitForSelector('#course-continue');
-check((await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); return p.course.started && p.settings.home === 'course' && p.course.canRead === true; })), 'course: an old learner who chose the course has it started, the script question skipped (known words)');
+check((await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); return p.course.started && p.settings.home === 'course' && p.course.canRead === null; })), 'course: an old learner who chose the course has it started, without the script question');
+check((await page.$('#course-exam')) !== null, 'course: an old learner sees the alphabet exam on the map');
 
 // the course from scratch, in its own profile: welcome, the script question, the map, a unit, its words, the tiles step, a check
 {
@@ -208,11 +209,61 @@ check((await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('ti
   check(/#\/course$/.test(c.url()), 'course: a new learner lands on #/course');
   await c.click('.popover .onboarding .action.primary');
   await c.waitForSelector('#can-read-no');
-  await c.click('#can-read-yes');
+  await c.click('#can-read-no');
   await c.waitForSelector('#course-continue');
   check((await c.$$('.module')).length === 1 + course.modules.length, `course: ${1 + course.modules.length} modules on the map`);
-  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/lesson-01/1', 'course: "Continue" points at the first lesson unit for a reader');
-  check((await c.$$('.unit-row')).length === allUnits(course).length, 'course: every unit listed');
+  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/alphabet/1', 'course: "Continue" points at the first part of the alphabet');
+  check((await c.$$('.unit-row:not(.exam-row)')).length === allUnits(course).length, 'course: every unit listed');
+  check((await c.$('#course-exam')) !== null, 'course: the alphabet module offers the exam');
+
+  // the alphabet: meet the signs, a training round, the check; then the exam
+  const solveDrill = async (count, label) => {
+    for (let i = 0; i < count; i++) {
+      await c.waitForSelector('.read-card:not([hidden])');
+      const reverse = await c.$eval('.read-card', (e) => e.classList.contains('reverse'));
+      const shown = await c.$eval('.read-card', (e) => e.textContent);
+      let hit = false;
+      for (const b of await c.$$('.read-options .option')) {
+        const text = await b.$eval('.option-wylie, .option-tib', (e) => e.textContent);
+        const ok = reverse ? toWylie(text) === shown : text === toWylie(shown);
+        if (ok) { await b.click(); hit = true; break; }
+      }
+      if (!hit) { check(false, `${label}: no right option for ${shown}`); return false; }
+      await c.waitForFunction(() => !document.querySelector('.read-result').hidden || document.querySelector('.feedback').textContent === '');
+    }
+    return true;
+  };
+  await c.click('#course-continue');
+  await c.waitForSelector('.ladder');
+  check((await c.$$('.ladder-row')).length === 3, 'alphabet: a part shows three steps');
+  await c.click('.ladder-row[data-step="intro"] a.action');
+  await c.waitForSelector('#words-next');
+  check((await c.$$('.sign-card')).length === 4, 'alphabet: the first part introduces four letters');
+  check((await c.$$eval('.sign-card .tone-badge', (els) => els.length)) === 4, 'alphabet: every letter card shows its tone');
+  await c.click('#words-next');
+  await c.waitForSelector('.read-card');
+  check(/#\/course\/alphabet\/1\/train$/.test(c.url()), 'alphabet: the training opened after the introduction');
+  if (await solveDrill(12, 'alphabet training')) {
+    check((await c.$eval('.read-result', (e) => !e.hidden && /12/.test(e.textContent))), 'alphabet: the training round is scored');
+    await c.waitForSelector('#drill-on:not([hidden])');
+    await c.click('#drill-on');
+    await c.waitForSelector('.read-card');
+    check(/#\/course\/alphabet\/1\/check$/.test(c.url()), 'alphabet: the check opened after a passed training');
+    if (await solveDrill(10, 'alphabet check')) {
+      const rec = await c.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).course.units['alphabet/1']);
+      check(rec && rec.step === 6 && rec.best === 10, 'alphabet: the check passed the first part');
+    }
+  }
+  await c.goto(`${base}/index.html#/course/alphabet/exam`);
+  await c.waitForSelector('.read-card');
+  if (await solveDrill(20, 'alphabet exam')) {
+    const exam = await c.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).course.alphabetExam);
+    check(exam && exam.best === 20 && exam.passedAt, 'alphabet: the exam is recorded as passed');
+  }
+  await c.goto(`${base}/index.html#/course`);
+  await c.waitForSelector('#course-continue');
+  check((await c.$eval('.module[data-module="alphabet"]', (e) => e.classList.contains('passed'))), 'alphabet: the module is passed after the exam');
+  check((await c.$eval('#course-continue', (a) => a.getAttribute('href'))) === '#/course/lesson-01/1', 'course: "Continue" moves on to the first lesson unit');
   await c.click('#course-continue');
   await c.waitForSelector('.ladder');
   check((await c.$$('.ladder-row')).length === 5, 'course: the unit shows five steps');
@@ -302,7 +353,7 @@ check((await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('ti
 
 // records written by earlier versions of the site load with nothing lost (site/src/engine/tests/fixtures)
 const contains = (whole, part) => Object.entries(part).every(([k, v]) => (v && typeof v === 'object' ? whole[k] && typeof whole[k] === 'object' && contains(whole[k], v) : whole[k] === v));
-for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json']) {
+for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json', 'progress-2026-10-19b.json']) {
   const fixture = JSON.parse(await readFile(new URL(`../site/src/engine/tests/fixtures/${name}`, import.meta.url), 'utf8'));
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
   const old = await ctx.newPage();
@@ -316,8 +367,12 @@ for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json']) {
   const nums = await old.$$eval('.stat-grid .stat .num', (els) => els.map((e) => e.textContent));
   const known = Object.values(fixture.words).filter((w) => w.status === 'known').length;
   const solved = Object.values(fixture.sentences).reduce((n, s) => n + s.solved, 0);
-  const passed = Object.values(fixture.reading || {}).filter((r) => r.best >= 10).length;
-  check(nums[1] === String(fixture.streak.best) && nums[2] === String(known) && nums[5] === String(solved) && nums[6] === `${passed}/${STAGE_IDS.length}`,
+  // the alphabet parts the stored record passes: old stages with a pass mark, plus explicit units and the exam
+  const alphaParts = new Set();
+  for (const [id, r] of Object.entries(fixture.reading || {})) if (r.best >= 10) for (const n of OLD_STAGE_PARTS[id] || []) alphaParts.add(n);
+  for (const [id, u] of Object.entries((fixture.course || {}).units || {})) if (id.startsWith('alphabet/') && u.step >= 6) alphaParts.add(Number(id.split('/')[1]));
+  const passed = alphaParts.size;
+  check(nums[1] === String(fixture.streak.best) && nums[2] === String(known) && nums[5] === String(solved) && nums[6] === `${passed}/${PARTS.length}`,
     `${name}: progress screen shows the stored best streak, known words, solved sentences and reading stages (${nums.join(' ')})`);
   check((await old.evaluate(() => document.documentElement.lang)) === fixture.settings.lang, `${name}: the stored interface language is used`);
   await old.goto(`${base}/index.html#/dict`);
@@ -326,15 +381,22 @@ for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json']) {
   if (fixture.reading) {
     await old.goto(`${base}/index.html#/read`);
     await old.waitForSelector('.stage');
-    check((await old.$$eval('.stage.passed', (els) => els.map((e) => e.dataset.stage))).join() === Object.keys(fixture.reading).filter((id) => fixture.reading[id].best >= 10).join(), `${name}: reading list marks the passed stages`);
+    const readPassed = new Set();
+    for (const [id, r] of Object.entries(fixture.reading)) if (r.best >= 10) for (const n of OLD_STAGE_PARTS[id] || [Number(id.split('/')[1])]) readPassed.add(String(n));
+    check((await old.$$eval('.stage.passed', (els) => els.map((e) => e.dataset.stage))).join() === [...readPassed].join(), `${name}: reading list marks the passed parts`);
   }
   if (fixture.course) {
     await old.goto(`${base}/index.html#/course`);
     await old.waitForSelector('#course-continue');
     check((await old.$eval('#course-continue', (a) => a.getAttribute('href'))) === `#/course/${fixture.course.current}`, `${name}: the course continues at the stored unit`);
-    check((await old.$eval('.unit-row[data-unit="lesson-01/1"]', (e) => e.classList.contains('passed'))), `${name}: the passed unit is marked`);
+    const passedUnit = Object.keys(fixture.course.units).find((id) => fixture.course.units[id].step >= 6);
+    check((await old.$eval(`.unit-row[data-unit="${passedUnit}"]`, (e) => e.classList.contains('passed'))), `${name}: the passed unit ${passedUnit} is marked`);
   }
-  check(contains(await old.evaluate(() => JSON.parse(localStorage.getItem('tib-progress'))), fixture), `${name}: nothing of the stored record is lost after using the site`);
+  const expected = { ...fixture, reading: {} };
+  for (const [id, r] of Object.entries(fixture.reading || {})) { const parts = OLD_STAGE_PARTS[id]; if (parts) for (const n of parts) expected.reading[`alphabet/${n}`] = { best: r.best }; else expected.reading[id] = r; }
+  // the store writes only on a change: the record is either still the stored one or its migrated form
+  const storedNow = await old.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')));
+  check(contains(storedNow, fixture) || contains(storedNow, expected), `${name}: nothing of the stored record is lost after using the site`);
   await ctx.close();
 }
 

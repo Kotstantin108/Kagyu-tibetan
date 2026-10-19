@@ -8,9 +8,25 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { createProgress, normalizeProgress, recordSolved, recordReadingRound, setSetting, setWordStatus, wordStatus, dueWords, STATUS } from '../progress.js';
 import { mergeProgress } from '../merge.js';
+import { OLD_STAGE_PARTS } from '../alphabet.js';
+
+/**
+ * What a stored record must look like after loading: the same, except that the
+ * old reading-course stages (rows1 … fullwords) live on as alphabet parts.
+ */
+export function expectedAfterLoad(raw) {
+  if (!raw.reading) return raw;
+  const reading = {};
+  for (const [id, r] of Object.entries(raw.reading)) {
+    const parts = OLD_STAGE_PARTS[id];
+    if (!parts) { reading[id] = r; continue; }
+    for (const n of parts) reading[`alphabet/${n}`] = { best: r.best };
+  }
+  return { ...raw, reading };
+}
 
 const DIR = join(new URL('.', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'), 'fixtures');
-const FILES = readdirSync(DIR).filter((f) => /^progress-\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
+const FILES = readdirSync(DIR).filter((f) => /^progress-\d{4}-\d{2}-\d{2}[a-z]?\.json$/.test(f)).sort();
 const fixtures = FILES.map((f) => ({ name: f, raw: JSON.parse(readFileSync(join(DIR, f), 'utf8')) }));
 const now = new Date('2026-10-16T08:00:00Z');
 
@@ -34,7 +50,7 @@ test('there is a fixture for every released shape of the record', () => {
 for (const { name, raw } of fixtures) {
   test(`${name}: loading keeps every word, sentence, streak, reading and setting`, () => {
     const p = normalizeProgress(JSON.parse(JSON.stringify(raw)), now);
-    assertContains(p, raw);
+    assertContains(p, expectedAfterLoad(raw));
     // the fields the old version did not have get their defaults, not garbage
     for (const key of Object.keys(createProgress(now))) assert.ok(key in p, `${key} missing after load`);
     for (const w of Object.values(p.words)) {
@@ -49,19 +65,19 @@ for (const { name, raw } of fixtures) {
     for (const id of known) assert.equal(wordStatus(p, id), STATUS.KNOWN, `${id} is still known`);
     assert.doesNotThrow(() => dueWords(p, '2026-10-16'));
     p = recordSolved(p, 's004', { newWordIds: ['nyi-ma'], seenIds: ['nyi-ma', 'tsha-po'] }, now);
-    p = recordReadingRound(p, 'vowels', 11, now);
+    p = recordReadingRound(p, 'alphabet/9', 11, now);
     p = setWordStatus(p, 'khang-pa', STATUS.KNOWN, now);
     p = setSetting(p, 'theme', 'dark', now);
-    assertContains(p, { ...raw, updatedAt: now.toISOString(), settings: { ...raw.settings, theme: 'dark' } });
+    assertContains(p, { ...expectedAfterLoad(raw), updatedAt: now.toISOString(), settings: { ...raw.settings, theme: 'dark' } });
     assert.equal(wordStatus(p, 'nyi-ma'), STATUS.KNOWN);
-    assert.equal(p.reading.vowels.best, 11);
+    assert.equal(p.reading['alphabet/9'].best, 11);
   });
 
   test(`${name}: a sync merge with an empty remote record changes nothing`, () => {
     const merged = mergeProgress(raw, null, now);
-    assertContains(merged, raw);
+    assertContains(merged, expectedAfterLoad(raw));
     const twice = mergeProgress(raw, raw, now);
-    assertContains(twice, raw);
+    assertContains(twice, expectedAfterLoad(raw));
   });
 
   test(`${name}: an export file of it loads back unchanged`, () => {
@@ -86,7 +102,7 @@ test('a record built by the current engine survives a save and a load', () => {
   let p = createProgress(now);
   p = recordSolved(p, 's001', { newWordIds: ['dgon-pa'], seenIds: ['dgon-pa', 'dmar-po'] }, now);
   p = setWordStatus(p, 'dmar-po', STATUS.KNOWN, now);
-  p = recordReadingRound(p, 'rows1', 12, now);
+  p = recordReadingRound(p, 'alphabet/1', 12, now);
   p = setSetting(p, 'lang', 'ru', now);
   p = setSetting(p, 'onboarded', true, now);
   const stored = JSON.parse(JSON.stringify(p));

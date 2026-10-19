@@ -6,7 +6,6 @@ import { wordStatus, dueWords, upcomingWords, STATUS } from '../engine/progress.
 import { effectiveStreak, remainingToday, localDay } from '../engine/streak.js';
 import { hardWords } from '../engine/hard.js';
 import { STREAK_MIN_PER_DAY } from '../engine/config.js';
-import { STAGE_IDS, stagePassed } from '../engine/letters.js';
 import { courseProgress, courseModules, moduleProgress } from '../engine/course.js';
 
 const PROMO_KEY = 'tib-sync-promo-dismissed';
@@ -36,7 +35,7 @@ export function renderStats(root, ctx) {
       stat(learning, t('stats.learning')),
       stat(due, t('stats.due')),
       stat(solved, t('stats.solved')),
-      stat(`${STAGE_IDS.filter((id) => stagePassed(p, id)).length}/${STAGE_IDS.length}`, t('stats.reading')),
+      stat(`${moduleProgress(courseModules(data.course)[0], p).passed}/${moduleProgress(courseModules(data.course)[0], p).total}`, t('stats.reading')),
       stat(`${courseProgress(data.course, p).passed}/${courseProgress(data.course, p).total}`, t('stats.course')),
     ),
     h('p', { class: 'helper', style: 'margin-top:12px' }, remaining === 0 ? t('stats.todayDone') : t('stats.today', { n: Math.min(todayCount, STREAK_MIN_PER_DAY), min: STREAK_MIN_PER_DAY })),

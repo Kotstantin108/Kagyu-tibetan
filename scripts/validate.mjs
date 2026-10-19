@@ -1,4 +1,4 @@
-// Validates site/data/{words,sentences,sets,course}.json.
+// Validates site/data/{words,sentences,sets,course,alphabet}.json.
 //   node scripts/validate.mjs
 // Exit code 1 on errors; warnings do not fail the run.
 
@@ -26,6 +26,28 @@ const { data: sets } = readJson('sets.json');
 const { raw: wordsRaw, data: words } = readJson('words.json');
 const { data: sentences } = readJson('sentences.json');
 const { data: course } = readJson('course.json');
+const { data: alphabet } = readJson('alphabet.json');
+
+// ---- the alphabet: counts, every language, look-alikes and examples that exist ----
+{
+  const want = { letter: 30, vowel: 4, subjoined: 4, superscribed: 3, prefix: 5, suffix: 10 };
+  const letters = alphabet.letters || [];
+  for (const [kind, n] of Object.entries(want)) {
+    const have = letters.filter((l) => l.kind === kind).length;
+    if (have !== n) err(`alphabet: ${have} entries of kind ${kind}, expected ${n}`);
+  }
+  const glyphs = new Set(letters.filter((l) => l.kind === 'letter').map((l) => l.tib));
+  for (const l of letters) {
+    for (const lang of ['en', 'ru', 'de', 'fr', 'pl']) if (!l.sound || !l.sound[lang]) err(`alphabet: ${l.tib} (${l.kind}) has no sound text in ${lang}`);
+    if (l.kind === 'letter') for (const s of l.similar || []) if (!glyphs.has(s)) err(`alphabet: ${l.tib}: look-alike ${s} is not a letter`);
+    for (const id of l.examples || []) if (!words[id]) err(`alphabet: ${l.tib}: example word ${id} does not exist`);
+  }
+  for (let n = 1; n <= 15; n++) {
+    const intro = (alphabet.intros || {})[String(n)];
+    if (!intro) { err(`alphabet: no introduction for part ${n}`); continue; }
+    for (const lang of ['en', 'ru', 'de', 'fr', 'pl']) if (!intro[lang]) err(`alphabet: part ${n} has no introduction in ${lang}`);
+  }
+}
 
 // ---- course units: the shipped file must be what the splitter gives for this content ----
 {
