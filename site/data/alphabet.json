@@ -49,7 +49,7 @@
         {
           "tib": "ཁ",
           "clip": "msu-0f41",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "mouth",
             "ru": "рот",
@@ -109,7 +109,7 @@
         {
           "tib": "ང",
           "clip": "msu-0f44",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "I",
             "ru": "я",
@@ -120,8 +120,8 @@
         },
         {
           "tib": "ངུ",
-          "clip": "spell-0f44-0f74",
-          "spelled": true,
+          "clip": "msu-0f44-0f74",
+          "spelled": "spell-0f44-0f74",
           "tr": {
             "en": "to cry",
             "ru": "плакать",
@@ -132,8 +132,8 @@
         },
         {
           "tib": "ངོ",
-          "clip": "spell-0f44-0f7c",
-          "spelled": true,
+          "clip": "msu-0f44-0f7c",
+          "spelled": "spell-0f44-0f7c",
           "tr": {
             "en": "face",
             "ru": "лицо",
@@ -193,7 +193,7 @@
         {
           "tib": "ཆ",
           "clip": "msu-0f46",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "pair",
             "ru": "пара",
@@ -204,8 +204,8 @@
         },
         {
           "tib": "ཆུ",
-          "clip": "spell-0f46-0f74",
-          "spelled": true,
+          "clip": "msu-0f46-0f74",
+          "spelled": "spell-0f46-0f74",
           "tr": {
             "en": "water",
             "ru": "вода",
@@ -242,7 +242,7 @@
         {
           "tib": "ཇ",
           "clip": "msu-0f47",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "tea",
             "ru": "чай",
@@ -279,7 +279,7 @@
         {
           "tib": "ཉ",
           "clip": "msu-0f49",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "fish",
             "ru": "рыба",
@@ -385,7 +385,7 @@
         {
           "tib": "ན",
           "clip": "msu-0f53",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "to be ill",
             "ru": "болеть",
@@ -445,7 +445,7 @@
         {
           "tib": "ཕ",
           "clip": "msu-0f55",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "father",
             "ru": "отец",
@@ -456,8 +456,8 @@
         },
         {
           "tib": "ཕུ",
-          "clip": "spell-0f55-0f74",
-          "spelled": true,
+          "clip": "msu-0f55-0f74",
+          "spelled": "spell-0f55-0f74",
           "tr": {
             "en": "to blow",
             "ru": "дуть",
@@ -494,7 +494,7 @@
         {
           "tib": "བ",
           "clip": "msu-0f56",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "cow",
             "ru": "корова",
@@ -531,7 +531,7 @@
         {
           "tib": "མ",
           "clip": "msu-0f58",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "mother",
             "ru": "мать",
@@ -542,8 +542,8 @@
         },
         {
           "tib": "མི",
-          "clip": "spell-0f58-0f72",
-          "spelled": true,
+          "clip": "msu-0f58-0f72",
+          "spelled": "spell-0f58-0f72",
           "tr": {
             "en": "person",
             "ru": "человек",
@@ -554,8 +554,8 @@
         },
         {
           "tib": "མེ",
-          "clip": "spell-0f58-0f7a",
-          "spelled": true,
+          "clip": "msu-0f58-0f7a",
+          "spelled": "spell-0f58-0f7a",
           "tr": {
             "en": "fire",
             "ru": "огонь",
@@ -654,7 +654,7 @@
         {
           "tib": "ཝ",
           "clip": "msu-0f5d",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "fox",
             "ru": "лиса",
@@ -690,8 +690,8 @@
       "words": [
         {
           "tib": "ཞོ",
-          "clip": "spell-0f5e-0f7c",
-          "spelled": true,
+          "clip": "msu-0f5e-0f7c",
+          "spelled": "spell-0f5e-0f7c",
           "tr": {
             "en": "yogurt",
             "ru": "йогурт",
@@ -728,7 +728,7 @@
         {
           "tib": "ཟ",
           "clip": "msu-0f5f",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "to eat",
             "ru": "есть",
@@ -788,7 +788,7 @@
         {
           "tib": "ཡ",
           "clip": "msu-0f61",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "one of a pair",
             "ru": "один из пары",
@@ -825,7 +825,7 @@
         {
           "tib": "ར",
           "clip": "msu-0f62",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "goat",
             "ru": "коза",
@@ -836,8 +836,8 @@
         },
         {
           "tib": "རི",
-          "clip": "spell-0f62-0f72",
-          "spelled": true,
+          "clip": "msu-0f62-0f72",
+          "spelled": "spell-0f62-0f72",
           "tr": {
             "en": "mountain",
             "ru": "гора",
@@ -848,8 +848,8 @@
         },
         {
           "tib": "རོ",
-          "clip": "spell-0f62-0f7c",
-          "spelled": true,
+          "clip": "msu-0f62-0f7c",
+          "spelled": "spell-0f62-0f7c",
           "tr": {
             "en": "corpse",
             "ru": "труп",
@@ -909,7 +909,7 @@
         {
           "tib": "ཤ",
           "clip": "msu-0f64",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "meat",
             "ru": "мясо",
@@ -920,8 +920,8 @@
         },
         {
           "tib": "ཤི",
-          "clip": "spell-0f64-0f72",
-          "spelled": true,
+          "clip": "msu-0f64-0f72",
+          "spelled": "spell-0f64-0f72",
           "tr": {
             "en": "to die",
             "ru": "умереть",
@@ -932,8 +932,8 @@
         },
         {
           "tib": "ཤུ",
-          "clip": "spell-0f64-0f74",
-          "spelled": true,
+          "clip": "msu-0f64-0f74",
+          "spelled": "spell-0f64-0f74",
           "tr": {
             "en": "to whistle",
             "ru": "свистеть",
@@ -944,8 +944,8 @@
         },
         {
           "tib": "ཤོ",
-          "clip": "spell-0f64-0f7c",
-          "spelled": true,
+          "clip": "msu-0f64-0f7c",
+          "spelled": "spell-0f64-0f7c",
           "tr": {
             "en": "dice",
             "ru": "игральные кости",
@@ -982,7 +982,7 @@
         {
           "tib": "ས",
           "clip": "msu-0f66",
-          "spelled": false,
+          "spelled": null,
           "tr": {
             "en": "earth, ground",
             "ru": "земля",
@@ -993,8 +993,8 @@
         },
         {
           "tib": "སོ",
-          "clip": "spell-0f66-0f7c",
-          "spelled": true,
+          "clip": "msu-0f66-0f7c",
+          "spelled": "spell-0f66-0f7c",
           "tr": {
             "en": "tooth",
             "ru": "зуб",
@@ -3130,7 +3130,94 @@
     "ལས་ཀ་བྱེད": "msu-0f63-0f66-0f0b-0f40-0f0b-0f56-0fb1-0f7a-0f51",
     "ངས་སློབ་སྦྱོང་བྱེད་ཀྱི་ཡོད": "msu-0f44-0f66-0f0b-0f66-0fb3-0f7c-0f56-0f0b-0f66-0fa6-0fb1-0f7c-0f44-0f0b-0f56-0fb1-0f7a-0f51-0f0b-0f40-0fb1-0f72-0f0b-0f61-0f7c-0f51",
     "ངས": "msu-0f44-0f66",
-    "ཀྱི་ཡོད": "msu-0f40-0fb1-0f72-0f0b-0f61-0f7c-0f51"
+    "ཀྱི་ཡོད": "msu-0f40-0fb1-0f72-0f0b-0f61-0f7c-0f51",
+    "མི": "msu-0f58-0f72",
+    "རི": "msu-0f62-0f72",
+    "ཤི": "msu-0f64-0f72",
+    "ངུ": "msu-0f44-0f74",
+    "ཆུ": "msu-0f46-0f74",
+    "ཕུ": "msu-0f55-0f74",
+    "ཤུ": "msu-0f64-0f74",
+    "མེ": "msu-0f58-0f7a",
+    "ངོ": "msu-0f44-0f7c",
+    "ཞོ": "msu-0f5e-0f7c",
+    "རོ": "msu-0f62-0f7c",
+    "ཤོ": "msu-0f64-0f7c",
+    "སོ": "msu-0f66-0f7c",
+    "ལག་པ": "msu-0f63-0f42-0f0b-0f54",
+    "པད་མ": "msu-0f54-0f51-0f0b-0f58",
+    "བན་དེ": "msu-0f56-0f53-0f0b-0f51-0f7a",
+    "ཐབ་ཚང": "msu-0f50-0f56-0f0b-0f5a-0f44",
+    "ཟམ་པ": "msu-0f5f-0f58-0f0b-0f54",
+    "འཇའ": "msu-0f60-0f47-0f60",
+    "ཆར་པ": "msu-0f46-0f62-0f0b-0f54",
+    "བལ": "msu-0f56-0f63",
+    "ལས་ཀ": "msu-0f63-0f66-0f0b-0f40",
+    "མིག་ཆུ": "msu-0f58-0f72-0f42-0f0b-0f46-0f74",
+    "ཆེན་པོ": "msu-0f46-0f7a-0f53-0f0b-0f54-0f7c",
+    "ཞིམ་པོ": "msu-0f5e-0f72-0f58-0f0b-0f54-0f7c",
+    "ལེའུ་ཚན": "msu-0f63-0f7a-0f60-0f74-0f0b-0f5a-0f53",
+    "འུར་ཤོབ": "msu-0f60-0f74-0f62-0f0b-0f64-0f7c-0f56",
+    "རིལ་རིལ": "msu-0f62-0f72-0f63-0f0b-0f62-0f72-0f63",
+    "གོས་ཐུང": "msu-0f42-0f7c-0f66-0f0b-0f50-0f74-0f44",
+    "ཇ་ཚགས": "msu-0f47-0f0b-0f5a-0f42-0f66",
+    "གངས": "msu-0f42-0f44-0f66",
+    "ཆར་ཁེབས": "msu-0f46-0f62-0f0b-0f41-0f7a-0f56-0f66",
+    "སེམས་ཅན": "msu-0f66-0f7a-0f58-0f66-0f0b-0f45-0f53",
+    "ཐམས་ཅད": "msu-0f50-0f58-0f66-0f0b-0f45-0f51",
+    "ཕྱིནད": "msu-0f55-0fb1-0f72-0f53-0f51",
+    "བསྟནད": "msu-0f56-0f66-0f9f-0f53-0f51",
+    "བསྐོརད": "msu-0f56-0f66-0f90-0f7c-0f62-0f51",
+    "གྱུརད": "msu-0f42-0fb1-0f74-0f62-0f51",
+    "སྩལད་བ": "msu-0f66-0fa9-0f63-0f51-0f0b-0f56",
+    "དགར": "msu-0f51-0f42-0f62",
+    "བདག": "msu-0f56-0f51-0f42",
+    "འབར": "msu-0f60-0f56-0f62",
+    "མཛངས": "msu-0f58-0f5b-0f44-0f66",
+    "གནན": "msu-0f42-0f53-0f53",
+    "དམར": "msu-0f51-0f58-0f62",
+    "གཡག": "msu-0f42-0f61-0f42",
+    "ཁ་བ": "msu-0f41-0f0b-0f56",
+    "རེ་བ": "msu-0f62-0f7a-0f0b-0f56",
+    "བདེ་བ": "msu-0f56-0f51-0f7a-0f0b-0f56",
+    "རྒོ་བ": "msu-0f62-0f92-0f7c-0f0b-0f56",
+    "བྱ་བ": "msu-0f56-0fb1-0f0b-0f56",
+    "དབེན་པ": "msu-0f51-0f56-0f7a-0f53-0f0b-0f54",
+    "དབྱར་ཁ": "msu-0f51-0f56-0fb1-0f62-0f0b-0f41",
+    "དབྱིབས": "msu-0f51-0f56-0fb1-0f72-0f56-0f66",
+    "དབྲལ": "msu-0f51-0f56-0fb2-0f63",
+    "དབུལ་པོ": "msu-0f51-0f56-0f74-0f63-0f0b-0f54-0f7c",
+    "དབྱུག་པ": "msu-0f51-0f56-0fb1-0f74-0f42-0f0b-0f54",
+    "ཞབས་ཀྱུ": "msu-0f5e-0f56-0f66-0f0b-0f40-0fb1-0f74",
+    "ཁྱི": "msu-0f41-0fb1-0f72",
+    "ཕྱུ་པ": "msu-0f55-0fb1-0f74-0f0b-0f54",
+    "ཕྱི་ལོགས": "msu-0f55-0fb1-0f72-0f0b-0f63-0f7c-0f42-0f66",
+    "བྱ་ཤ": "msu-0f56-0fb1-0f0b-0f64",
+    "རོགས་པ་བྱེད": "msu-0f62-0f7c-0f42-0f66-0f0b-0f54-0f0b-0f56-0fb1-0f7a-0f51",
+    "ཁྱི་ཉར་མ་མྱོང": "msu-0f41-0fb1-0f72-0f0b-0f49-0f62-0f0b-0f58-0f0b-0f58-0fb1-0f7c-0f44",
+    "ཀྲུང་གོ": "msu-0f40-0fb2-0f74-0f44-0f0b-0f42-0f7c",
+    "ཉལ་ཁྲི": "msu-0f49-0f63-0f0b-0f41-0fb2-0f72",
+    "གྲང་མོ": "msu-0f42-0fb2-0f44-0f0b-0f58-0f7c",
+    "དྲི་བ": "msu-0f51-0fb2-0f72-0f0b-0f56",
+    "དྲུག": "msu-0f51-0fb2-0f74-0f42",
+    "ཕྲེང་ང": "msu-0f55-0fb2-0f7a-0f44-0f0b-0f44",
+    "ཕོ་བྲང": "msu-0f55-0f7c-0f0b-0f56-0fb2-0f44",
+    "ཆབ་སྲིད": "msu-0f46-0f56-0f0b-0f66-0fb2-0f72-0f51",
+    "ཧྲང་ཧེ": "msu-0f67-0fb2-0f44-0f0b-0f67-0f7a",
+    "ཀློག": "msu-0f40-0fb3-0f7c-0f42",
+    "ཀླད་པ": "msu-0f40-0fb3-0f51-0f0b-0f54",
+    "བླ་མ": "msu-0f56-0fb3-0f0b-0f58",
+    "རླུང": "msu-0f62-0fb3-0f74-0f44",
+    "ལས་སླ་པོ": "msu-0f63-0f66-0f0b-0f66-0fb3-0f0b-0f54-0f7c",
+    "ཟླ་བ": "msu-0f5f-0fb3-0f0b-0f56",
+    "ཉྭ་རིལ": "msu-0f49-0fad-0f0b-0f62-0f72-0f63",
+    "དྭ་ཕྲུག": "msu-0f51-0fad-0f0b-0f55-0fb2-0f74-0f42",
+    "ལ་དྭགས": "msu-0f63-0f0b-0f51-0fad-0f42-0f66",
+    "ཞྭ་མོ": "msu-0f5e-0fad-0f0b-0f58-0f7c",
+    "རྭ་ཅོ": "msu-0f62-0fad-0f0b-0f45-0f7c",
+    "ཤྭ་བ": "msu-0f64-0fad-0f0b-0f56",
+    "སློབ་གྲྭ": "msu-0f66-0fb3-0f7c-0f56-0f0b-0f42-0fb2-0fad",
+    "ཧྭ་ཤང": "msu-0f67-0fad-0f0b-0f64-0f44"
   },
   "phrases": [
     {

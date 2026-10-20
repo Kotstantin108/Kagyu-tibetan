@@ -336,6 +336,8 @@ Słowa kursu z każdym znakiem: འདི་ „ten”, ཀྱི་ „partyku�
 
 Znak samogłoski jest ważny nie tylko dla dźwięku. Stoi zawsze na literze rdzennej sylaby, a gdy sylaba ma kilka liter, właśnie znak podpowiada, która z nich jest główna. To stanie się podstawowym chwytem czytania w części o sylabach.
 
+Nieznany zapis Tybetańczycy czytają na głos litera po literze, a dla sylaby ze znakiem samogłoski brzmi to tak: nazwa litery, nazwa znaku, powstała sylaba. ངོ „twarz” literuje się „nga, na-ro, ngo”, ངུ „płakać” „nga, zhabs-kyu, ngu”. Samo słowo jest na końcu i jest krótkie, jedna sylaba; wszystko przed nim mówi tylko, z czego sylaba się składa. Nagrania „literowanie” na kartach kursu idą w tej kolejności, najpierw rozbiór, potem słowo, a zwykły przycisk odtwarza samo słowo.
+
 ## alphabet/10
 
 Litera tybetańska może stać nie tylko w wierszu, lecz także pod inną literą, w pomniejszonej postaci. Takich liter podpisanych są cztery: ya, ra, la i wa. Powstaje stos: litera główna u góry, mała pod nią, a znak samogłoski, jeśli jest, należy do całego stosu. W Wylie stos zapisuje się po prostu literami po kolei: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa. W polskim piśmie nic podobnego nie ma; najbliżej tego są dwuznaki, jak sz czy rz, gdzie dwa znaki czyta się jako jeden dźwięk.

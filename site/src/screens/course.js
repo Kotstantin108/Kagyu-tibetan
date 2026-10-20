@@ -80,8 +80,20 @@ function letterWords(ctx, e) {
   if (!e.words || !e.words.length) return null;
   return h('div', { class: 'sign-examples spelled' },
     h('div', { class: 'fine' }, ctx.t('alphabet.letterWords')),
-    ...e.words.map((x) => h('div', { class: 'example' }, h('span', { class: 'tib' }, x.tib), ' ', x.clip ? (x.spelled ? spellButton(ctx, x.tib) : audioButton(ctx, x.clip, { small: true })) : null, h('span', { class: 'tr' }, pickTr(x.tr, ctx.lang).text))),
+    ...e.words.map((x) => h('div', { class: 'example' }, h('span', { class: 'tib' }, x.tib), ' ', x.clip ? audioButton(ctx, x.clip, { small: true }) : null, ' ', x.spelled ? spellButton(ctx, x.tib) : null, h('span', { class: 'tr' }, pickTr(x.tr, ctx.lang).text))),
+    spellNote(ctx, e.words.some((x) => x.spelled)),
   );
+}
+
+/** One line under a block of spelled-out words: what "spell it" plays (the Tibetan way of spelling aloud). */
+function spellNote(ctx, shown) {
+  return shown && ctx.store.get().settings.recordings !== false ? h('p', { class: 'fine spell-note' }, ctx.t('alphabet.spellNote')) : null;
+}
+
+/** The plain reading of a spelled-out word, when the tail of its clip was cut (alphabet.json `words`). */
+function plainButton(ctx, tib) {
+  const clip = ctx.data.alphabet.words && ctx.data.alphabet.words[tib];
+  return clip ? audioButton(ctx, clip, { small: true }) : null;
 }
 
 /** The words a sign card shows spelled out by a native speaker (alphabet.json letters[].spelled, from content/spelled-words.tsv). */
@@ -89,7 +101,8 @@ function spelledExamples(ctx, e) {
   if (!e.spelled || !e.spelled.length || ctx.store.get().settings.recordings === false) return null;
   return h('div', { class: 'sign-examples spelled' },
     h('div', { class: 'fine' }, ctx.t('alphabet.spelledExamples')),
-    ...e.spelled.map((x) => h('div', { class: 'example' }, h('span', { class: 'tib' }, x.tib), ' ', spellButton(ctx, x.tib), h('span', { class: 'tr' }, pickTr(x.tr, ctx.lang).text))),
+    ...e.spelled.map((x) => h('div', { class: 'example' }, h('span', { class: 'tib' }, x.tib), ' ', plainButton(ctx, x.tib), ' ', spellButton(ctx, x.tib), h('span', { class: 'tr' }, pickTr(x.tr, ctx.lang).text))),
+    spellNote(ctx, true),
   );
 }
 

@@ -164,6 +164,7 @@ export default {
     wylieLabel: 'Wylie',
     spell: 'literowanie',
     spelledExamples: 'Słowa literowane',
+    spellNote: 'Literowanie po tybetańsku: nazwa litery, nazwa znaku samogłoski, powstała sylaba (ང, ཞབས་ཀྱུ, ངུ). Ostatnie słowo nagrania to samo słowo; zwykły przycisk odtwarza tylko je.',
     letterWords: 'Słowa z tą literą',
     sanskritLetters: 'Znaki dla słów sanskryckich',
     sanskritNote: 'Sześć liter odwróconych i pięć „ciężkich” zapisuje sanskryckie dźwięki mantr i imion; kurs ich nie ćwiczy.',

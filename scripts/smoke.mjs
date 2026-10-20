@@ -166,6 +166,8 @@ check((await page.$$('.sign-card.sanskrit')).length === 11, 'alphabet: the last 
 await page.goto(`${base}/index.html#/course/alphabet/4/intro`);
 await page.waitForSelector('#words-next');
 check((await page.$$('.sign-card .spelled .example')).length >= 3, 'alphabet: the letter cards show the single-letter words with their recordings');
+check((await page.$$eval('.sign-card .spelled .example', (es) => es.filter((e) => e.querySelector('.audio-btn:not(.spell)') && e.querySelector('.audio-btn.spell')).length)) >= 1, 'alphabet: a spelled-out word has both the plain reading and the spelling');
+check((await page.$('.sign-card .spell-note')) !== null, 'alphabet: the spelling note is shown under the spelled-out words');
 await page.goto(`${base}/index.html#/read`);
 await page.waitForSelector('.phrases');
 check((await page.$$('.phrase-row .audio-btn')).length === 23, 'reading: the colloquial phrases are listed with listen buttons');

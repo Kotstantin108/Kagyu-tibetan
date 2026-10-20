@@ -164,6 +164,7 @@ export default {
     wylieLabel: 'Wylie',
     spell: 'spell it',
     spelledExamples: 'Words spelled out',
+    spellNote: 'Spelling aloud, the Tibetan way: the name of the letter, the name of the vowel sign, the syllable they make (ང, ཞབས་ཀྱུ, ངུ). The last word of the recording is the word itself; the plain button plays only that.',
     letterWords: 'Words of this letter',
     sanskritLetters: 'Signs for Sanskrit words',
     sanskritNote: 'Six reversed letters and five heavy ones write the Sanskrit sounds of mantras and names; the course does not drill them.',

@@ -164,6 +164,7 @@ export default {
     wylieLabel: 'Wylie',
     spell: 'épelé',
     spelledExamples: 'Mots épelés',
+    spellNote: 'Épeler à la tibétaine : le nom de la lettre, le nom du signe de voyelle, la syllabe obtenue (ང, ཞབས་ཀྱུ, ངུ). Le dernier mot de l’enregistrement est le mot lui-même ; le bouton ordinaire ne joue que celui-là.',
     letterWords: 'Mots de cette lettre',
     sanskritLetters: 'Signes pour les mots sanskrits',
     sanskritNote: 'Six lettres retournées et cinq lettres « lourdes » notent les sons sanskrits des mantras et des noms ; le cours ne les entraîne pas.',

@@ -328,6 +328,8 @@ Wörter des Kurses mit jedem Zeichen: འདི་ „dieser“ und ཀྱི་
 
 Das Vokalzeichen ist nicht nur für den Klang wichtig. Es steht immer auf dem Wurzelbuchstaben der Silbe, und wenn eine Silbe mehrere Buchstaben hat, verrät das Zeichen, welcher der Hauptbuchstabe ist. Das wird im Teil über die Silben zum wichtigsten Griff beim Lesen.
 
+Eine unbekannte Schreibung lesen Tibeter laut Buchstabe für Buchstabe, und bei einer Silbe mit Vokalzeichen klingt das so: der Name des Buchstabens, der Name des Zeichens, die entstandene Silbe. ངོ „Gesicht“ wird „nga, na-ro, ngo“ buchstabiert, ངུ „weinen“ „nga, zhabs-kyu, ngu“. Das Wort selbst kommt zuletzt und ist kurz, eine Silbe; alles davor sagt nur, woraus die Silbe besteht. Die Aufnahmen „buchstabieren“ auf den Karten des Kurses folgen dieser Reihenfolge, erst die Zerlegung, dann das Wort, und die gewöhnliche Taste spielt das Wort allein.
+
 ## alphabet/10
 
 Ein tibetischer Buchstabe kann nicht nur in der Zeile stehen, sondern auch unter einem anderen Buchstaben, in verkleinerter Form. Solche untergeschriebenen Buchstaben gibt es vier: ya, ra, la und wa. Es entsteht ein Stapel: der Hauptbuchstabe oben, der kleine darunter, und das Vokalzeichen, wenn eines da ist, gehört zum ganzen Stapel. In Wylie schreibt man den Stapel einfach hintereinander: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa. Die deutsche Schrift kennt nichts Vergleichbares; am nächsten kommt die Ligatur, bei der zwei Zeichen zu einer Figur verschmelzen.

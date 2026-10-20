@@ -164,6 +164,7 @@ export default {
     wylieLabel: 'Wylie',
     spell: 'buchstabiert',
     spelledExamples: 'Wörter buchstabiert',
+    spellNote: 'Buchstabieren auf tibetische Art: der Name des Buchstabens, der Name des Vokalzeichens, die entstandene Silbe (ང, ཞབས་ཀྱུ, ངུ). Das letzte Wort der Aufnahme ist das Wort selbst; die gewöhnliche Taste spielt nur dieses.',
     letterWords: 'Wörter mit diesem Buchstaben',
     sanskritLetters: 'Zeichen für Sanskritwörter',
     sanskritNote: 'Sechs gespiegelte und fünf „schwere“ Buchstaben schreiben die Sanskritlaute der Mantras und Namen; der Kurs übt sie nicht.',

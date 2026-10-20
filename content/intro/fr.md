@@ -326,6 +326,8 @@ Des mots du cours pour chaque signe : འདི་ « ceci » et ཀྱི་ «
 
 Le signe-voyelle ne compte pas seulement pour le son. Il se place toujours sur la lettre radicale de la syllabe, et quand une syllabe comporte plusieurs lettres, c’est lui qui dit laquelle est la principale. Ce sera le premier outil de la partie sur les syllabes.
 
+Les Tibétains lisent une graphie inconnue à voix haute lettre par lettre, et pour une syllabe avec un signe de voyelle cela donne : le nom de la lettre, le nom du signe, la syllabe obtenue. ངོ « visage » s’épelle « nga, na-ro, ngo », ངུ « pleurer » « nga, zhabs-kyu, ngu ». Le mot lui-même vient en dernier et il est court, une syllabe ; tout ce qui précède dit seulement de quoi la syllabe est faite. Les enregistrements « épeler » sur les cartes du cours suivent cet ordre, l’analyse d’abord puis le mot, et le bouton ordinaire ne joue que le mot.
+
 ## alphabet/10
 
 Une lettre tibétaine peut se placer non seulement dans la ligne, mais aussi sous une autre lettre, en petit. Quatre lettres se souscrivent ainsi : ya, ra, la et wa. On obtient une pile : la lettre principale en haut, la petite en dessous, et le signe-voyelle, s’il y en a un, vaut pour toute la pile. En Wylie, la pile s’écrit simplement à la suite : ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa. L’écriture française n’a rien de tel, mais le principe est celui d’une ligature : deux signes se lisent d’un seul coup, comme une syllabe.

@@ -387,9 +387,10 @@ for (const r of readRows('letter-words')) {
   const e = byLetter.get(letter);
   if (!e) { errors.push(`${r.line}: no letter ${letter}`); continue; }
   if (trs.length !== ALPHA_LANGS.length) errors.push(`${r.line}: expected ${2 + ALPHA_LANGS.length} columns`);
-  const clip = wordClips[tib] || spelling[tib] || null;
-  if (!clip) warnings.push(`letter-words: no clip of ${tib}`);
-  (e.words = e.words || []).push({ tib, clip, spelled: !wordClips[tib] && Boolean(spelling[tib]), tr: Object.fromEntries(ALPHA_LANGS.map((l, i) => [l, trs[i] || ''])) });
+  // clip: the plain reading (word-audio.tsv, for the spelled-out words the tail cut by scripts/tools/spell-tail.py); spelled: the spelled-out clip
+  const clip = wordClips[tib] || null;
+  if (!clip && !spelling[tib]) warnings.push(`letter-words: no clip of ${tib}`);
+  (e.words = e.words || []).push({ tib, clip, spelled: spelling[tib] || null, tr: Object.fromEntries(ALPHA_LANGS.map((l, i) => [l, trs[i] || ''])) });
 }
 const phrases = [];
 for (const r of readRows('phrases')) {

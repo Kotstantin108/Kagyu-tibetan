@@ -330,6 +330,8 @@ Course words with each sign: འདི་ "this" and ཀྱི་ "of" with i; �
 
 The vowel sign matters for more than the sound. It always stands on the root letter of the syllable, and when a syllable has several letters, the sign shows which of them is the main one. That becomes the chief method of reading in the part on syllables.
 
+Tibetans read an unfamiliar spelling aloud letter by letter, and for a syllable with a vowel sign it goes: the name of the letter, the name of the sign, the syllable they make. ངོ "face" is spelled "nga, na-ro, ngo", ངུ "to cry" is "nga, zhabs-kyu, ngu". The word itself comes last and is short, one syllable; everything before it only says what the syllable is made of. The "spell it" recordings on the cards of this course follow that order, the analysis first and then the word, and the plain button plays the word alone.
+
 ## alphabet/10
 
 A Tibetan letter can stand not only in the line but under another letter, in a small form. There are four such subjoined letters: ya, ra, la and wa. The result is a stack: the main letter on top, the small one beneath it, and the vowel sign, if there is one, belongs to the whole stack. Wylie writes a stack simply in sequence: ཀྱ kya, ཀྲ kra, ཀླ kla, ཀྭ kwa. English writing has nothing like it; the nearest idea is that two signs are read as one syllable.
