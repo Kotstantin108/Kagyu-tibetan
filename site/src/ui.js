@@ -100,7 +100,8 @@ export function audioButton(ctx, requested, { small = false } = {}) {
     player.pause();
     if (playingBtn) playingBtn.classList.remove('playing');
     playingBtn = btn;
-    player.src = `${base.replace(/\/+$/, '')}/${clipId}.mp3`;
+    // the deploy version in the query: clips are cached for a week, a recut clip must still reach everyone after a deploy
+    player.src = `${base.replace(/\/+$/, '')}/${clipId}.mp3?v=${encodeURIComponent(ctx.config.VERSION || 'dev')}`;
     player.onplay = () => btn.classList.add('playing');
     player.onended = player.onpause = () => btn.classList.remove('playing');
     player.onerror = () => { btn.classList.remove('playing'); toast(ctx.t('play.audioMissing')); };

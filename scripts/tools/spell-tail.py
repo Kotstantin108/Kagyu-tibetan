@@ -8,12 +8,16 @@
 #
 #   python scripts/tools/spell-tail.py            # cut + append rows
 #   python scripts/tools/spell-tail.py --dry-run  # report only
+#   python scripts/tools/spell-tail.py --redo     # drop the rows of an earlier run and cut again
 #
 # Needs ffmpeg/ffprobe on PATH and the source m4a files in textbooks/msu-audio/.
 # The tail must look like one spoken word: 0.25-1.4 s and at most 60 % of the
-# spelled clip; other clips are reported and skipped (recut by hand).
+# spelled clip; other clips are reported and skipped (recut by hand). The name
+# of the last letter or vowel sign often runs into the word without a pause
+# ("zhabs-kyu ngu"), so a tail longer than its syllables warrant is cut again at
+# the deepest dip of its loudness envelope (10 ms RMS).
 
-import subprocess, re, os, io, sys
+import subprocess, re, os, io, sys, array, math
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..'))
@@ -21,6 +25,8 @@ SRC = os.path.join(ROOT, 'textbooks', 'msu-audio')
 OUT = os.path.join(SRC, 'clips')
 CONTENT = os.path.join(ROOT, 'content')
 DRY = '--dry-run' in sys.argv
+REDO = '--redo' in sys.argv
+MARK = '# The whole-word reading at the end of each spelled-out clip (spelling-audio.tsv), cut by scripts/tools/spell-tail.py:\n'
 
 def run(args):
     p = subprocess.run(args, capture_output=True)
@@ -70,8 +76,44 @@ def shorten(f, tail, tib):
         if len(segs) >= 2 and segs[-1][1] - segs[-1][0] >= 0.25 and segs[-1][1] - segs[-1][0] < e - b - 0.15: return segs[-1]
     return tail
 
+def envelope(f, b, e):
+    """Loudness in dB per 10 ms of [b, e] of file f (16 kHz mono PCM), smoothed over 30 ms."""
+    p = subprocess.run(['ffmpeg', '-v', 'error', '-ss', f'{b:.3f}', '-to', f'{e:.3f}', '-i', f, '-f', 's16le', '-ac', '1', '-ar', '16000', '-'], capture_output=True)
+    a = array.array('h'); a.frombytes(p.stdout)
+    w = 160
+    raw = [20 * math.log10(math.sqrt(sum(x * x for x in a[i:i + w]) / w) / 32768 + 1e-9) for i in range(0, len(a) - w, w)]
+    return [sum(raw[max(0, i - 1):i + 2]) / len(raw[max(0, i - 1):i + 2]) for i in range(len(raw))]
+
+def trim_to_syllables(f, tail, tib):
+    """A word of n syllables should take about 0.65 s + 0.35 s per extra syllable; while the tail is longer,
+    cut it at the deepest dip of its envelope that leaves a plausible word after it."""
+    n = max(1, len([x for x in tib.split('་') if x]))
+    limit = 0.65 + 0.35 * (n - 1)
+    b, e = tail
+    for _ in range(2):
+        if e - b <= limit: break
+        env = envelope(f, b, e)
+        if len(env) < 40: break
+        lo, hi = 15, len(env) - 25  # the dip may not be in the first 150 ms or the last 250 ms
+        k = min(range(lo, hi), key=lambda i: env[i])
+        after = max(env[k:])
+        before = max(env[:k])
+        if after - env[k] < 10 or before - env[k] < 10: break
+        # the dip is the end of the previous name decaying; start the word where the loudness rises again
+        i = k
+        while i + 1 < len(env) and env[i + 1] <= env[k] + 6: i += 1
+        b = b + max(k, i - 2) * 0.01
+    return (b, e)
+
 def main():
+    path = os.path.join(CONTENT, 'word-audio.tsv')
+    if REDO:
+        text = io.open(path, encoding='utf8').read()
+        if MARK in text and not DRY: io.open(path, 'w', encoding='utf8', newline='\n').write(text[:text.index(MARK)])
     have = {r[0] for r in rows('word-audio.tsv')}
+    if REDO and DRY:
+        text = io.open(path, encoding='utf8').read()
+        if MARK in text: have -= {l.split('|')[0].strip() for l in text[text.index(MARK):].split('\n') if l.strip() and not l.startswith('#')}
     added, skipped = [], []
     for tib, clip, src, start, end in rows('spelling-audio.tsv'):
         if tib in have: continue
@@ -81,6 +123,7 @@ def main():
         tail, why = tail_of(f, start, end)
         if not tail: skipped.append(f'{tib} ({clip}): {why}'); continue
         tail = shorten(f, tail, tib)
+        tail = trim_to_syllables(f, tail, tib)
         b, e = max(start, tail[0] - 0.05), min(end, tail[1] + 0.10)
         cid = 'msu-' + '-'.join('%04x' % ord(c) for c in tib)
         if not DRY:
@@ -90,10 +133,9 @@ def main():
             if err.strip(): skipped.append(f'{tib}: ffmpeg {err.strip()[:100]}'); continue
         added.append((tib, cid, src, round(b, 2), round(e, 2)))
     if added and not DRY:
-        path = os.path.join(CONTENT, 'word-audio.tsv')
         text = io.open(path, encoding='utf8').read()
         if not text.endswith('\n'): text += '\n'
-        text += '# The whole-word reading at the end of each spelled-out clip (spelling-audio.tsv), cut by scripts/tools/spell-tail.py:\n'
+        text += MARK
         text += ''.join(f'{t} | {c} | {s} | {b} | {e}\n' for t, c, s, b, e in added)
         io.open(path, 'w', encoding='utf8', newline='\n').write(text)
     print(f'{len(added)} tails cut' + (' (dry run)' if DRY else '') + f', {len(skipped)} skipped')
