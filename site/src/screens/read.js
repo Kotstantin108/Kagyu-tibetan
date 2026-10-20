@@ -44,7 +44,7 @@ export function renderRead(root, ctx) {
   }
   // colloquial phrases read by a native speaker (alphabet.json `phrases`, from content/phrases.tsv), a listening extra
   const phrases = (data.alphabet.phrases || []).filter((x) => x.clip);
-  if (phrases.length && p.settings.voice) {
+  if (phrases.length && p.settings.recordings !== false) {
     body.append(h('details', { class: 'phrases' },
       h('summary', {}, `${t('read.phrases')} (${phrases.length})`),
       h('p', { class: 'fine' }, t('read.phrasesNote')),

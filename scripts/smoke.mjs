@@ -60,7 +60,7 @@ check((await page.$eval('#tashi-bubble', (e) => e.hidden)), 'Yak Tashi is quiet 
 const progressBefore = await page.evaluate(() => localStorage.getItem('tib-progress'));
 await page.click('.chip');
 await page.waitForSelector('.popover .big-tib');
-check((await page.$('.popover .audio-btn')) === null, 'word card has no listen button while the voice setting is off');
+check((await page.$('.popover .audio-btn[data-kind="synth"]')) === null, 'word card has no synthesised listen button while the voice setting is off');
 await page.keyboard.press('Escape');
 await page.waitForSelector('.popover', { state: 'detached' });
 await page.click('#btn-grammar');
@@ -143,13 +143,17 @@ for (let i = 0; i < 12; i++) {
 check((await page.$eval('.read-result', (e) => !e.hidden && /12 of 12/.test(e.textContent))), 'reading: a full round of the letters is scored 12 of 12');
 check((await page.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).reading['alphabet/1'].best)) === 12, 'reading: the best score is recorded in the progress');
 
-// pronunciation: off by default, the setting shows the listen buttons
+// pronunciation: the native recordings are on by default, the synthesised voice needs its setting
+await page.goto(`${base}/index.html#/dict`);
+await page.waitForSelector('.word-row', { state: 'attached' });
+check((await page.$('.word-row .audio-btn[data-kind="synth"]')) === null && (await page.$('.word-row .audio-btn[data-kind="native"]')) !== null, 'dictionary: by default only the words with a native recording have a listen button');
 await page.goto(`${base}/index.html#/settings`);
-await page.waitForSelector('#settings-voice');
+await page.waitForSelector('#settings-recordings');
+check((await page.$eval('#settings-recordings', (b) => b.checked)) && !(await page.$eval('#settings-voice', (b) => b.checked)), 'settings: recordings on, synthesised voice off by default');
 await page.click('#settings-voice');
 await page.goto(`${base}/index.html#/dict`);
 await page.waitForSelector('.word-row', { state: 'attached' });
-check((await page.$('.word-row .audio-btn')) !== null, 'dictionary shows listen buttons after enabling the voice setting');
+check((await page.$('.word-row .audio-btn[data-kind="synth"]')) !== null, 'dictionary shows synthesised listen buttons after enabling the voice setting');
 await page.goto(`${base}/index.html#/course/alphabet/1/intro`);
 await page.waitForSelector('#words-next');
 check((await page.$$('.sign-card .word-card-head .audio-btn')).length === 4, 'alphabet: the letter cards show listen buttons (native recordings of the signs)');

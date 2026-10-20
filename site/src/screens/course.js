@@ -86,7 +86,7 @@ function letterWords(ctx, e) {
 
 /** The words a sign card shows spelled out by a native speaker (alphabet.json letters[].spelled, from content/spelled-words.tsv). */
 function spelledExamples(ctx, e) {
-  if (!e.spelled || !e.spelled.length || !ctx.store.get().settings.voice) return null;
+  if (!e.spelled || !e.spelled.length || ctx.store.get().settings.recordings === false) return null;
   return h('div', { class: 'sign-examples spelled' },
     h('div', { class: 'fine' }, ctx.t('alphabet.spelledExamples')),
     ...e.spelled.map((x) => h('div', { class: 'example' }, h('span', { class: 'tib' }, x.tib), ' ', spellButton(ctx, x.tib), h('span', { class: 'tr' }, pickTr(x.tr, ctx.lang).text))),

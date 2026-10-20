@@ -80,9 +80,12 @@ another device".)
 - **Hard words** (misplaced more than once) are listed on the progress screen
   and can be practised on their own (`#/play/hard`).
 - **Grammar reference**: the textbook's notes by lesson, each with examples.
-- **Pronunciation** (off by default, Settings → "Pronunciation buttons"): a
-  listen button on every word (dictionary, word card) and sentence (meaning
-  exercise, solved sentence). The clips are synthesised with the OpenPecha
+- **Pronunciation**, two settings: "Native recordings" (on by default) plays
+  the recordings of the open textbook *Basic Tibetan* on the letter cards,
+  the spelled-out and single-letter words, the course words a native speaker
+  has read and the colloquial phrases; "Synthesised voice" (off by default)
+  adds a listen button to every other word (dictionary, word card) and
+  sentence (meaning exercise, solved sentence), synthesised with the OpenPecha
   Tibetan voice (`openpecha/op-mms-ft-v3`, Meta MMS fine-tuned, non-commercial
   licence of the base model); a Tibetan reader found it fast but acceptable on
   one- and two-syllable words and wrong on longer ones, hence the opt-in. See

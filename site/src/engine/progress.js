@@ -13,8 +13,9 @@
 //             alphabetExam: { best, attempts, passedAt } | null,
 //             theory: [module ids and alphabet part ids whose theory page was read] }
 //   reading: keys are alphabet parts 'alphabet/1' … (older records had stage ids rows1 … fullwords; they are migrated on load)
-//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, voice, theme, onboarded,
-//              home: 'course'|'play'|null, tashi (the mascot is shown), tashiMet (he introduced himself) }
+//   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie,
+//              voice (the synthesised clips of words and sentences, off by default), recordings (the native recordings, on by default),
+//              theme, onboarded, home: 'course'|'play'|null, tashi (the mascot is shown), tashiMet (he introduced himself) }
 // }
 
 import { SCHEMA_VERSION, REVIEW_INTERVALS, MANUAL_KNOWN_LEVEL } from './config.js';
@@ -33,7 +34,7 @@ export function createProgress(now = new Date()) {
     streak: { current: 0, best: 0, lastDay: null, todayDate: null, todayCount: 0 },
     reading: {},
     course: { started: false, canRead: null, current: null, units: {}, alphabetExam: null, theory: [] },
-    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, theme: 'auto', onboarded: false, home: null, tashi: true, tashiMet: false },
+    settings: { tileMode: 'words', exercise: 'tiles', lang: null, showWylie: false, voice: false, recordings: true, theme: 'auto', onboarded: false, home: null, tashi: true, tashiMet: false },
   };
 }
 
@@ -126,6 +127,7 @@ export function normalizeProgress(raw, now = new Date()) {
       lang: typeof s.lang === 'string' ? s.lang : null,
       showWylie: s.showWylie === true,
       voice: s.voice === true,
+      recordings: s.recordings !== false,
       theme: ['light', 'dark'].includes(s.theme) ? s.theme : 'auto',
       onboarded: s.onboarded === true,
       home: ['course', 'play'].includes(s.home) ? s.home : null,

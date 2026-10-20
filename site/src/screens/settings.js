@@ -31,6 +31,9 @@ export function renderSettings(root, ctx) {
   const modeSel = select('settings-tiles', p.settings.tileMode, [['words', t('play.modeWords')], ['syllables', t('play.modeSyllables')]], (v) => store.update((q) => setSetting(q, 'tileMode', v)));
   const wylieBox = h('input', { type: 'checkbox', id: 'settings-wylie', checked: p.settings.showWylie === true });
   wylieBox.addEventListener('change', () => store.update((q) => setSetting(q, 'showWylie', wylieBox.checked)));
+  // pronunciation: the native recordings (on by default) and the synthesised clips (off by default), see ui.js audioButton
+  const recBox = ctx.config.AUDIO_BASE ? h('input', { type: 'checkbox', id: 'settings-recordings', checked: p.settings.recordings !== false }) : null;
+  if (recBox) recBox.addEventListener('change', () => store.update((q) => setSetting(q, 'recordings', recBox.checked)));
   const voiceBox = ctx.config.AUDIO_BASE ? h('input', { type: 'checkbox', id: 'settings-voice', checked: p.settings.voice === true }) : null;
   if (voiceBox) voiceBox.addEventListener('change', () => store.update((q) => setSetting(q, 'voice', voiceBox.checked)));
   const tashiBox = h('input', { type: 'checkbox', id: 'settings-tashi', checked: p.settings.tashi !== false });
@@ -117,6 +120,7 @@ export function renderSettings(root, ctx) {
       h('div', { class: 'field' }, h('label', { for: 'settings-home' }, t('settings.home')), homeSel),
       h('div', { class: 'field' }, h('label', { for: 'settings-tiles' }, t('settings.tileMode')), modeSel),
       h('div', { class: 'field check' }, h('label', { for: 'settings-wylie' }, wylieBox, ' ', t('settings.showWylie'))),
+      recBox ? h('div', { class: 'field check' }, h('label', { for: 'settings-recordings' }, recBox, ' ', t('settings.recordings')), h('p', { class: 'helper' }, t('settings.recordingsNote'))) : null,
       voiceBox ? h('div', { class: 'field check' }, h('label', { for: 'settings-voice' }, voiceBox, ' ', t('settings.voice')), h('p', { class: 'helper' }, t('settings.voiceNote'))) : null,
       h('div', { class: 'field check' }, h('label', { for: 'settings-tashi' }, tashiBox, ' ', t('settings.tashi')), h('p', { class: 'helper' }, t('settings.tashiNote'))),
     )),

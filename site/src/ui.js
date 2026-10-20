@@ -53,20 +53,45 @@ export function popover(content, { onDismiss = null } = {}) {
   return close;
 }
 
-// ---- pronunciation clips (synthesised, see README "Audio") ----
+// ---- pronunciation clips (see README "Audio") ----
+// Two kinds, two settings: the native recordings of the open textbook Basic Tibetan
+// (clip ids sign-*, spell-*, msu-*, phrase-*; setting `recordings`, on by default) and
+// the synthesised clips of words and sentences (w-<id>, s<n>; setting `voice`, off by
+// default because that voice misreads longer words). A word that a native speaker has
+// read plainly (alphabet.json `words`) plays that recording instead of its w-<id>.
 let player = null;
 let playingBtn = null;
 
+/** The clip to play for `clipId` and its kind: { id, kind: 'native'|'synth' }. */
+export function resolveClip(ctx, clipId) {
+  const m = /^w-(.+)$/.exec(clipId);
+  if (m) {
+    const w = ctx.data && ctx.data.words && ctx.data.words[m[1]];
+    const map = ctx.data && ctx.data.alphabet && ctx.data.alphabet.words;
+    const native = w && map && (map[w.tib] || map[String(w.tib).replace(/་$/, '')]);
+    if (native) return { id: native, kind: 'native' };
+  }
+  return { id: clipId, kind: /^(w-|s\d)/.test(clipId) ? 'synth' : 'native' };
+}
+
+/** True when the setting for this kind of clip is on. */
+export function clipEnabled(ctx, kind) {
+  const s = ctx.store.get().settings;
+  return kind === 'native' ? s.recordings !== false : s.voice === true;
+}
+
 /**
- * A round "listen" button for a word (`w-<id>`) or a sentence (`s123`).
- * Returns null when AUDIO_BASE is not configured or the voice setting is off (default:
- * the voice is synthesised and still rough on longer words). Clips are fetched on demand.
+ * A round "listen" button for a word (`w-<id>`), a sentence (`s123`) or a native clip.
+ * Returns null when AUDIO_BASE is not configured or the setting for that kind of clip
+ * is off. Clips are fetched on demand.
  */
-export function audioButton(ctx, clipId, { small = false } = {}) {
+export function audioButton(ctx, requested, { small = false } = {}) {
   const base = ctx.config.AUDIO_BASE;
-  if (!base || !ctx.store.get().settings.voice) return null;
+  if (!base) return null;
+  const { id: clipId, kind } = resolveClip(ctx, requested);
+  if (!clipEnabled(ctx, kind)) return null;
   const size = small ? 16 : 20;
-  const btn = h('button', { type: 'button', class: 'audio-btn' + (small ? ' small' : ''), 'aria-label': ctx.t('play.listen'), title: ctx.t('play.listen') });
+  const btn = h('button', { type: 'button', class: 'audio-btn' + (small ? ' small' : ''), 'data-kind': kind, 'aria-label': ctx.t('play.listen'), title: ctx.t('play.listen') });
   btn.innerHTML = `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
