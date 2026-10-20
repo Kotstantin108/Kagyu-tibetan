@@ -60,7 +60,7 @@ check((await page.$eval('#tashi-bubble', (e) => e.hidden)), 'Yak Tashi is quiet 
 const progressBefore = await page.evaluate(() => localStorage.getItem('tib-progress'));
 await page.click('.chip');
 await page.waitForSelector('.popover .big-tib');
-check((await page.$('.popover .audio-btn[data-kind="synth"]')) === null, 'word card has no synthesised listen button while the voice setting is off');
+check((await page.$('.popover .audio-btn[data-kind="synth"]')) === null, 'word card has no synthesised listen button (only native recordings are played)');
 await page.keyboard.press('Escape');
 await page.waitForSelector('.popover', { state: 'detached' });
 await page.click('#btn-grammar');
@@ -143,17 +143,19 @@ for (let i = 0; i < 12; i++) {
 check((await page.$eval('.read-result', (e) => !e.hidden && /12 of 12/.test(e.textContent))), 'reading: a full round of the letters is scored 12 of 12');
 check((await page.evaluate(() => JSON.parse(localStorage.getItem('tib-progress')).reading['alphabet/1'].best)) === 12, 'reading: the best score is recorded in the progress');
 
-// pronunciation: the native recordings are on by default, the synthesised voice needs its setting
+// pronunciation: only native recordings, on by default; there is no synthesised voice any more
 await page.goto(`${base}/index.html#/dict`);
 await page.waitForSelector('.word-row', { state: 'attached' });
-check((await page.$('.word-row .audio-btn[data-kind="synth"]')) === null && (await page.$('.word-row .audio-btn[data-kind="native"]')) !== null, 'dictionary: by default only the words with a native recording have a listen button');
+check((await page.$('.word-row .audio-btn[data-kind="synth"]')) === null && (await page.$('.word-row .audio-btn[data-kind="native"]')) !== null, 'dictionary: only the words with a native recording have a listen button');
+check((await page.$$eval('.word-row', (rows) => rows.filter((r) => !r.querySelector('.audio-btn')).length)) > 0, 'dictionary: words without a recording have no listen button');
 await page.goto(`${base}/index.html#/settings`);
 await page.waitForSelector('#settings-recordings');
-check((await page.$eval('#settings-recordings', (b) => b.checked)) && !(await page.$eval('#settings-voice', (b) => b.checked)), 'settings: recordings on, synthesised voice off by default');
-await page.click('#settings-voice');
+check((await page.$eval('#settings-recordings', (b) => b.checked)) && (await page.$('#settings-voice')) === null, 'settings: recordings on by default, no synthesised-voice setting');
+await page.click('#settings-recordings');
 await page.goto(`${base}/index.html#/dict`);
 await page.waitForSelector('.word-row', { state: 'attached' });
-check((await page.$('.word-row .audio-btn[data-kind="synth"]')) !== null, 'dictionary shows synthesised listen buttons after enabling the voice setting');
+check((await page.$('.word-row .audio-btn')) === null, 'dictionary shows no listen buttons after turning the recordings off');
+await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); p.settings.recordings = true; localStorage.setItem('tib-progress', JSON.stringify(p)); });
 await page.goto(`${base}/index.html#/course/alphabet/1/intro`);
 await page.waitForSelector('#words-next');
 check((await page.$$('.sign-card .word-card-head .audio-btn')).length === 4, 'alphabet: the letter cards show listen buttons (native recordings of the signs)');
@@ -171,7 +173,6 @@ check((await page.$('.sign-card .spell-note')) !== null, 'alphabet: the spelling
 await page.goto(`${base}/index.html#/read`);
 await page.waitForSelector('.phrases');
 check((await page.$$('.phrase-row .audio-btn')).length === 23, 'reading: the colloquial phrases are listed with listen buttons');
-await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('tib-progress')); p.settings.voice = false; localStorage.setItem('tib-progress', JSON.stringify(p)); });
 
 for (const route of ['dict', 'grammar', 'stats', 'settings', 'support']) {
   await page.goto(`${base}/index.html#/${route}`);

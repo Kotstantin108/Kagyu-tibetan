@@ -5,8 +5,8 @@
 // REPO_URL:         the GitHub repository; "Report a problem" falls back to a prefilled issue there.
 // REPORT_API:       endpoint of the report-api service (server/report-api) that files issues
 //                   for users without a GitHub account; empty = use the prefilled-issue link only.
-// AUDIO_BASE:       folder with pronunciation clips <id>.mp3 (words w-<id>, sentences s123), made by
-//                   scripts/tools/tts-build.py on the server; empty = no listen buttons.
+// AUDIO_BASE:       folder with the pronunciation clips <id>.mp3 (native recordings cut by
+//                   scripts/tools/msu-audio.py, see README "Audio"); empty = no listen buttons.
 // VERSION:          written by the deploy workflow (git sha); "dev" locally.
 self.TIB_CONFIG = {
   SITE_URL: 'https://tibetan.itjoy.space',

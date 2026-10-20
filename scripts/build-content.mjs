@@ -398,7 +398,7 @@ for (const r of readRows('phrases')) {
   if (!phraseClips[tib]) warnings.push(`phrases: no clip of ${tib}`);
   phrases.push({ tib, phon, clip: phraseClips[tib] || null, tr: Object.fromEntries(ALPHA_LANGS.map((l, i) => [l, trs[i] || ''])) });
 }
-// `words`: tib → clip of every word read plainly by a native speaker; the app plays it instead of the synthesised w-<id>
+// `words`: tib → clip of every word read plainly by a native speaker; the app plays it for the word w-<id>
 writeFileSync(join(OUT, 'alphabet.json'), JSON.stringify({ letters: letterRows, intros, audio: signAudio, spelling, words: wordClips, phrases }, null, 2) + '\n');
 
 // ---- the theory texts: content/intro/<lang>.md → intro.json, Tibetan runs segmented into tappable words ----

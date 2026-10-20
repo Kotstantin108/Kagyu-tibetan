@@ -14,7 +14,7 @@
 //             theory: [module ids and alphabet part ids whose theory page was read] }
 //   reading: keys are alphabet parts 'alphabet/1' … (older records had stage ids rows1 … fullwords; they are migrated on load)
 //   settings: { tileMode: 'words'|'syllables', exercise: 'tiles'|'meaning'|'recall'|'wylie', lang, showWylie, showPhon,
-//              voice (the synthesised clips of words and sentences, off by default), recordings (the native recordings, on by default),
+//              voice (unused since 2026-10-20, kept so stored records stay valid), recordings (the native recordings, on by default),
 //              theme, onboarded, home: 'course'|'play'|null, tashi (the mascot is shown), tashiMet (he introduced himself) }
 // }
 

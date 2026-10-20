@@ -33,11 +33,9 @@ export function renderSettings(root, ctx) {
   wylieBox.addEventListener('change', () => store.update((q) => setSetting(q, 'showWylie', wylieBox.checked)));
   const phonBox = h('input', { type: 'checkbox', id: 'settings-phon', checked: p.settings.showPhon === true });
   phonBox.addEventListener('change', () => store.update((q) => setSetting(q, 'showPhon', phonBox.checked)));
-  // pronunciation: the native recordings (on by default) and the synthesised clips (off by default), see ui.js audioButton
+  // pronunciation: the native recordings (on by default), see ui.js audioButton
   const recBox = ctx.config.AUDIO_BASE ? h('input', { type: 'checkbox', id: 'settings-recordings', checked: p.settings.recordings !== false }) : null;
   if (recBox) recBox.addEventListener('change', () => store.update((q) => setSetting(q, 'recordings', recBox.checked)));
-  const voiceBox = ctx.config.AUDIO_BASE ? h('input', { type: 'checkbox', id: 'settings-voice', checked: p.settings.voice === true }) : null;
-  if (voiceBox) voiceBox.addEventListener('change', () => store.update((q) => setSetting(q, 'voice', voiceBox.checked)));
   const tashiBox = h('input', { type: 'checkbox', id: 'settings-tashi', checked: p.settings.tashi !== false });
   tashiBox.addEventListener('change', () => store.update((q) => setSetting(q, 'tashi', tashiBox.checked)));
 
@@ -124,7 +122,6 @@ export function renderSettings(root, ctx) {
       h('div', { class: 'field check' }, h('label', { for: 'settings-wylie' }, wylieBox, ' ', t('settings.showWylie'))),
       h('div', { class: 'field check' }, h('label', { for: 'settings-phon' }, phonBox, ' ', t('settings.showPhon')), h('p', { class: 'helper' }, t('settings.phonHint'))),
       recBox ? h('div', { class: 'field check' }, h('label', { for: 'settings-recordings' }, recBox, ' ', t('settings.recordings')), h('p', { class: 'helper' }, t('settings.recordingsNote'))) : null,
-      voiceBox ? h('div', { class: 'field check' }, h('label', { for: 'settings-voice' }, voiceBox, ' ', t('settings.voice')), h('p', { class: 'helper' }, t('settings.voiceNote'))) : null,
       h('div', { class: 'field check' }, h('label', { for: 'settings-tashi' }, tashiBox, ' ', t('settings.tashi')), h('p', { class: 'helper' }, t('settings.tashiNote'))),
     )),
     h('section', { class: 'panel' }, h('div', { class: 'panel-body' },
