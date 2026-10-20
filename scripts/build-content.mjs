@@ -18,6 +18,7 @@
 //   content/spelling-audio.tsv, word-audio.tsv, phrase-audio.tsv   the other clips of the same recordings
 //   content/spelled-words.tsv  tib | <kind>:<wylie> | en | ru | de | fr | pl   (spelled words shown on the sign cards)
 //   content/phrases.tsv  tib | phonetics | en | ru | de | fr | pl   (colloquial phrases of the Reading section)
+//   content/letter-words.tsv  tib | letter | en | ru | de | fr | pl   (single-letter words shown on the letter cards)
 //   content/intro/<lang>.md     the theory text of every lesson (## <set id> sections; see content/intro/PROMPT.md)
 //   content/lang-<xx>.tsv  extra languages, keyed by the English text:
 //                          @sets / @words / @sentences / @notes sections,
@@ -343,7 +344,7 @@ const letterRows = readRows('letters').map((r) => {
 for (const e of letterRows) {
   const test = exampleTest(e);
   e.examples = wordOrder.filter(({ w }) => test(firstSyllable(w))).slice(0, 2).map((x) => x.id);
-  if (!e.examples.length) warnings.push(`alphabet: no example word for ${e.kind} ${e.tib} ${e.wylie}`);
+  if (!e.examples.length && e.kind !== 'sanskrit') warnings.push(`alphabet: no example word for ${e.kind} ${e.tib} ${e.wylie}`);
 }
 const intros = {};
 for (const r of readRows('alphabet-intro')) {
@@ -375,6 +376,20 @@ for (const r of readRows('spelled-words')) {
   if (trs.length !== ALPHA_LANGS.length) errors.push(`${r.line}: expected ${2 + ALPHA_LANGS.length} columns`);
   if (!spelling[tib]) { warnings.push(`spelled-words: no clip of ${tib}`); continue; }
   (e.spelled = e.spelled || []).push({ tib, clip: spelling[tib], tr: Object.fromEntries(ALPHA_LANGS.map((l, i) => [l, trs[i] || ''])) });
+}
+// single-letter words shown on the letter cards (content/letter-words.tsv: tib | letter | en | ru | de | fr | pl), read plainly
+// (word-audio.tsv) or spelled out (spelling-audio.tsv)
+const wordClips = {};
+for (const r of readRows('word-audio')) { const [tib, clip] = r.cols; if (tib && clip) wordClips[tib] = clip; }
+const byLetter = new Map(letterRows.filter((e) => e.kind === 'letter').map((e) => [e.tib, e]));
+for (const r of readRows('letter-words')) {
+  const [tib, letter, ...trs] = r.cols;
+  const e = byLetter.get(letter);
+  if (!e) { errors.push(`${r.line}: no letter ${letter}`); continue; }
+  if (trs.length !== ALPHA_LANGS.length) errors.push(`${r.line}: expected ${2 + ALPHA_LANGS.length} columns`);
+  const clip = wordClips[tib] || spelling[tib] || null;
+  if (!clip) warnings.push(`letter-words: no clip of ${tib}`);
+  (e.words = e.words || []).push({ tib, clip, spelled: !wordClips[tib] && Boolean(spelling[tib]), tr: Object.fromEntries(ALPHA_LANGS.map((l, i) => [l, trs[i] || ''])) });
 }
 const phrases = [];
 for (const r of readRows('phrases')) {

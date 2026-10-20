@@ -312,6 +312,8 @@ Il est utile à présent de voir les trente lettres ensemble. Hautes : ཀ ཁ �
 
 Le cours passe ensuite des lettres à la syllabe : aux signes-voyelles, aux lettres qui s’écrivent sous d’autres et au-dessus d’autres, puis aux préfixes et aux suffixes. C’est de ces parties que se compose la lecture.
 
+Outre les trente lettres, l’écriture possède onze signes pour les mots sanskrits : six lettres retournées, ཊ ཋ ཌ ཎ ཥ et ཀྵ, qui notent les sons rétroflexes des mantras et des noms, et cinq lettres « lourdes », གྷ ཛྷ ཌྷ བྷ དྷ, une lettre avec ཧ en dessous pour les aspirées sonores. Dans la prononciation tibétaine, elles se lisent comme les simples ཏ ཐ ད ན ཤ et ག ཛ ད བ ད. Le cours ne les entraîne pas, mais leurs cartes avec enregistrements sont dans cette partie, pour les reconnaître dans les mantras.
+
 ## alphabet/9
 
 En français, les voyelles sont des lettres comme les autres, écrites dans la ligne. Le tibétain fait autrement : la voyelle a est déjà contenue dans chaque lettre, et les quatre autres voyelles se notent par de petits signes placés au-dessus ou en dessous de la lettre. L’absence de signe signifie a.
@@ -369,6 +371,8 @@ Le reste n’est qu’application des parties précédentes. Une fois la racine 
 Quelques syllabes du cours à analyser. ཆོས : racine ཆ avec le signe o, suffixe ས ; tchö. སློབ : suscrite ས, racine ལ, signe o, suffixe བ ; lop. རྙིང : suscrite ར, racine ཉ avec le signe i, suffixe ང ; gning avec un ton haut. མཆོག : préfixe མ, racine ཆ, signe o, suffixe ག ; tchok. བདེ : préfixe བ, racine ད avec le signe é ; dé. འབྱོར : préfixe འ, racine བ avec ཡ souscrit et le signe o, suffixe ར ; djor. རྫོགས : suscrite ར, racine ཛ, signe o, suffixe ག, second suffixe ས ; dzok. ཕྱག : racine ཕ avec ཡ souscrit, suffixe ག ; tchak. སྒྲོལ : suscrite ས, racine ག, souscrite ར, signe o, suffixe ལ ; dröl.
 
 Toutes les syllabes de l’entraînement viennent de mots du cours, où chacune reviendra : ཆོས་ « Dharma », སློབ་མ་ « étudiant », རྙིང་པ་ « vieux », མཆོག་ « suprême », བདེ་བ་ « bonheur », རྣལ་འབྱོར་པ་ « yogi », རྫོགས་པ་ « perfection », ཕྱག་རྒྱ་ « mudrā », སྒྲོལ་མ་ « Tārā ». Rien ne presse : l’analyse pas à pas est lente au début, mais après quelques dizaines de syllabes elle devient un simple coup d’œil.
+
+Deux listes du manuel Basic Tibetan fixent la règle des lettres nues. Dans une paire, la racine est toujours la première : ངག « parole », ཆང « bière », ནད « maladie », ཉན « écouter », ཁབ « aiguille », ལམ « chemin », ཆར « pluie », བལ « laine », རས « tissu », ཟད « s’épuiser ». Et dans les quatorze combinaisons de trois lettres terminées par ས, la racine est aussi la première lettre, ས étant le second suffixe : གངས « neige », ནགས « forêt », ནངས « lendemain matin », ཁམས « la région du Kham », བགས « peu à peu », བངས « être trempé », བབས « descendre », ལགས « particule de politesse », ལངས « se lever », རགས « obtenir », རངས « se réjouir », རབས « génération », རམས « indigo », སངས « purifier ».
 
 ## alphabet/14
 

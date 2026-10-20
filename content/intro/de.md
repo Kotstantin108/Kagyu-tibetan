@@ -314,6 +314,8 @@ Jetzt ist es nützlich, alle dreißig Buchstaben als Ganzes zu sehen. Hoch: ཀ 
 
 Danach geht der Kurs von den Buchstaben zur Silbe über: zu den Vokalzeichen, zu den Buchstaben, die unter und über andere geschrieben werden, und zu den Präfixen und Suffixen. Aus diesen Teilen setzt sich das Lesen zusammen.
 
+Neben den dreißig Buchstaben hat die Schrift elf Zeichen für Sanskritwörter: sechs gespiegelte Buchstaben, ཊ ཋ ཌ ཎ ཥ und ཀྵ, für die retroflexen Laute der Mantras und Namen, und fünf „schwere“ Buchstaben, གྷ ཛྷ ཌྷ བྷ དྷ, ein Buchstabe mit ཧ darunter für die stimmhaften Aspiraten. In der tibetischen Aussprache klingen sie wie die gewöhnlichen ཏ ཐ ད ན ཤ und ག ཛ ད བ ད. Der Kurs übt sie nicht, aber ihre Karten mit Aufnahmen stehen in diesem Teil, damit man sie in Mantras erkennt.
+
 ## alphabet/9
 
 Im Deutschen sind die Vokale Buchstaben in der Zeile wie die Konsonanten: a, e, i, o, u stehen neben ihnen, gleich groß. Im Tibetischen ist es anders: der Vokal a steckt schon in jedem Buchstaben, und die übrigen vier Vokale werden durch kleine Zeichen angezeigt, die über oder unter den Buchstaben gesetzt werden. Kein Zeichen bedeutet a.
@@ -371,6 +373,8 @@ Der Rest ist die Anwendung der Regeln aus den vorigen Teilen. Ist die Wurzel gef
 Einige Silben des Kurses zum Zerlegen. ཆོས: Wurzel ཆ mit o, Suffix ས: tschö. སློབ: oben ས, Wurzel ལ, Zeichen o, Suffix བ: lop. རྙིང: oben ར, Wurzel ཉ mit i, Suffix ང: njing mit hohem Ton. མཆོག: Präfix མ, Wurzel ཆ, Zeichen o, Suffix ག: tschok. བདེ: Präfix བ, Wurzel ད mit e: de. འབྱོར: Präfix འ, Wurzel བ mit ཡ darunter und o, Suffix ར: dschor. རྫོགས: oben ར, Wurzel ཛ, Zeichen o, Suffix ག, zweites Suffix ས: dsok. ཕྱག: Wurzel ཕ mit ཡ darunter, Suffix ག: tschak. སྒྲོལ: oben ས, Wurzel ག, darunter ར, Zeichen o, Suffix ལ: dröl.
 
 Im Training dieses Teils stammen alle Silben aus Wörtern des Kurses, sodass jede später in Wörtern und Sätzen wiederkehrt: ཆོས་ „Dharma“, སློབ་མ་ „Schüler“, རྙིང་པ་ „alt“, མཆོག་ „höchst“, བདེ་བ་ „Glück“, རྣལ་འབྱོར་པ་ „Yogi“, རྫོགས་པ་ „Vollkommenheit“, ཕྱག་རྒྱ་ „Symbol, Mudrā“, སྒྲོལ་མ་ „Tārā“. Eile ist nicht nötig: das schrittweise Zerlegen ist anfangs langsam, aber nach ein paar Dutzend Silben wird daraus ein einziger Blick.
+
+Zwei Listen aus dem Lehrbuch Basic Tibetan festigen die Regel über nackte Buchstaben. In einem Paar ist die Wurzel immer der erste: ངག „Rede“, ཆང „Bier“, ནད „Krankheit“, ཉན „hören“, ཁབ „Nadel“, ལམ „Weg“, ཆར „Regen“, བལ „Wolle“, རས „Stoff“, ཟད „erschöpft sein“. Und in den vierzehn dreibuchstabigen Verbindungen auf ས ist die Wurzel ebenfalls der erste Buchstabe, ས das zweite Suffix: གངས „Schnee“, ནགས „Wald“, ནངས „nächster Morgen“, ཁམས „die Region Kham“, བགས „allmählich“, བངས „durchnässt werden“, བབས „hinabsteigen“, ལགས „Höflichkeitspartikel“, ལངས „aufstehen“, རགས „erhalten“, རངས „sich freuen“, རབས „Generation“, རམས „Indigo“, སངས „reinigen“.
 
 ## alphabet/14
 

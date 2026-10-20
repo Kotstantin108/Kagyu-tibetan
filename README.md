@@ -288,7 +288,14 @@ prefix, suffix and subjoined cards with their meanings
 `w-<id>.mp3` of the same syllable on the server (the synthetic ones are kept
 in `audio/tts-replaced/`); and 23 colloquial phrases (`phrase-*.mp3`,
 `content/phrase-audio.tsv` + `content/phrases.tsv`) listed at the end of the
-Reading section as a listening extra.
+Reading section as a listening extra. The vocabulary recordings of the
+book's chapters 4–10 (`textbooks/msu-audio/vocab/`, cut with
+`--extra vocab-spec.json`) gave 215 more plain word clips, of which the
+ones that are course words replaced their synthetic clips on the server.
+The single-letter words of the book are shown on the letter cards with their
+recordings (`content/letter-words.tsv`), and the eleven signs for Sanskrit
+words (`kind sanskrit` in `letters.tsv`, recorded) appear with the last row
+of letters, not drilled.
 
 ## Server
 

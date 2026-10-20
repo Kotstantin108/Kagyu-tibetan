@@ -31,7 +31,7 @@ const { data: intro } = readJson('intro.json');
 
 // ---- the alphabet: counts, every language, look-alikes and examples that exist ----
 {
-  const want = { letter: 30, vowel: 4, subjoined: 4, superscribed: 3, prefix: 5, suffix: 10 };
+  const want = { letter: 30, vowel: 4, subjoined: 4, superscribed: 3, prefix: 5, suffix: 10, sanskrit: 11 };
   const letters = alphabet.letters || [];
   for (const [kind, n] of Object.entries(want)) {
     const have = letters.filter((l) => l.kind === kind).length;

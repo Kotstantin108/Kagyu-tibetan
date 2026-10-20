@@ -75,6 +75,15 @@ function theoryLadderRow(ctx, p, unit) {
   );
 }
 
+/** The single-letter words of a letter card, read or spelled by a native speaker (alphabet.json letters[].words, from content/letter-words.tsv). */
+function letterWords(ctx, e) {
+  if (!e.words || !e.words.length) return null;
+  return h('div', { class: 'sign-examples spelled' },
+    h('div', { class: 'fine' }, ctx.t('alphabet.letterWords')),
+    ...e.words.map((x) => h('div', { class: 'example' }, h('span', { class: 'tib' }, x.tib), ' ', x.clip ? (x.spelled ? spellButton(ctx, x.tib) : audioButton(ctx, x.clip, { small: true })) : null, h('span', { class: 'tr' }, pickTr(x.tr, ctx.lang).text))),
+  );
+}
+
 /** The words a sign card shows spelled out by a native speaker (alphabet.json letters[].spelled, from content/spelled-words.tsv). */
 function spelledExamples(ctx, e) {
   if (!e.spelled || !e.spelled.length || !ctx.store.get().settings.voice) return null;
@@ -108,6 +117,7 @@ function showSign(ctx, tib) {
       h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', e.wylie),
       h('p', { class: 'tr' }, soundText(e, ctx.lang)),
       examples.length ? h('div', { class: 'sign-examples' }, ...examples.map((w) => h('div', { class: 'example' }, h('span', { class: 'tib' }, w.tib), h('span', { class: 'tr' }, `${w.wylie} · ${pickTr(w.tr, ctx.lang).text}`)))) : null,
+      letterWords(ctx, e),
       spelledExamples(ctx, e),
     );
   });
@@ -447,8 +457,21 @@ function renderAlphabetIntro(root, ctx, unit, part) {
         h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', e.wylie),
         h('div', { class: 'tr' }, soundText(e, ctx.lang)),
         examples.length ? h('div', { class: 'sign-examples' }, ...examples.map((w) => h('div', { class: 'example' }, h('span', { class: 'tib' }, w.tib), h('span', { class: 'tr' }, `${w.wylie} · ${pickTr(w.tr, ctx.lang).text}`)))) : null,
+        letterWords(ctx, e),
         spelledExamples(ctx, e),
       ));
+    }
+    // the last row of letters also shows the eleven signs for Sanskrit words (not drilled)
+    const sanskrit = part.kind === 'letters' && part.row === 7 ? (data.alphabet.letters || []).filter((x) => x.kind === 'sanskrit') : [];
+    if (sanskrit.length) {
+      cards.append(h('div', { class: 'sign-group' }, h('div', { class: 'label' }, t('alphabet.sanskritLetters')), h('p', { class: 'helper' }, t('alphabet.sanskritNote'))));
+      for (const e of sanskrit) {
+        cards.append(h('div', { class: 'word-card sign-card sanskrit', dataset: { sign: e.tib } },
+          h('div', { class: 'word-card-head' }, h('span', { class: 'tib big' }, e.tib), signAudio(ctx, e.tib), h('span', { class: 'sign-name' }, e.name)),
+          h('div', { class: 'wylie' }, t('alphabet.wylieLabel'), ': ', e.wylie),
+          h('div', { class: 'tr' }, soundText(e, ctx.lang)),
+        ));
+      }
     }
   } else {
     // syllables and words: a handful of worked examples

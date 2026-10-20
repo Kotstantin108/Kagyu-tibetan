@@ -239,7 +239,10 @@ h1, h2, h3, .prompt, .brand-title, .stat .num { font-family: var(--serif); }
 .audio-btn.spell { display: inline-flex; align-items: center; gap: 4px; width: auto; height: 28px; padding: 0 10px 0 6px; border-radius: 999px; font-size: .78rem; line-height: 1; }
 .audio-btn.spell svg { width: 14px; height: 14px; }
 .sign-examples.spelled .fine { margin: 8px 0 4px; }
-.sign-examples.spelled .example { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.sign-group { grid-column: 1 / -1; margin-top: 10px; }
+.sign-group .helper { margin: 4px 0 0; }
+.sign-examples.spelled .example { display: flex; flex-direction: row; align-items: center; gap: 10px; flex-wrap: wrap; }
+.sign-examples.spelled .example .tr { flex: 1 1 8em; }
 .phrases { margin-top: 18px; }
 .phrases summary { cursor: pointer; font-weight: 600; }
 .phrase-row { padding: 8px 0; border-top: 1px solid var(--sep); }

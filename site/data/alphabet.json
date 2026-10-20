@@ -44,6 +44,20 @@
       "examples": [
         "khang-pa",
         "khong"
+      ],
+      "words": [
+        {
+          "tib": "ཁ",
+          "clip": "msu-0f41",
+          "spelled": false,
+          "tr": {
+            "en": "mouth",
+            "ru": "рот",
+            "de": "Mund",
+            "fr": "bouche",
+            "pl": "usta"
+          }
+        }
       ]
     },
     {
@@ -90,6 +104,44 @@
       "examples": [
         "ngan-pa",
         "ngo-bo"
+      ],
+      "words": [
+        {
+          "tib": "ང",
+          "clip": "msu-0f44",
+          "spelled": false,
+          "tr": {
+            "en": "I",
+            "ru": "я",
+            "de": "ich",
+            "fr": "je",
+            "pl": "ja"
+          }
+        },
+        {
+          "tib": "ངུ",
+          "clip": "spell-0f44-0f74",
+          "spelled": true,
+          "tr": {
+            "en": "to cry",
+            "ru": "плакать",
+            "de": "weinen",
+            "fr": "pleurer",
+            "pl": "płakać"
+          }
+        },
+        {
+          "tib": "ངོ",
+          "clip": "spell-0f44-0f7c",
+          "spelled": true,
+          "tr": {
+            "en": "face",
+            "ru": "лицо",
+            "de": "Gesicht",
+            "fr": "visage",
+            "pl": "twarz"
+          }
+        }
       ]
     },
     {
@@ -136,6 +188,32 @@
       "examples": [
         "chos",
         "chu"
+      ],
+      "words": [
+        {
+          "tib": "ཆ",
+          "clip": "msu-0f46",
+          "spelled": false,
+          "tr": {
+            "en": "pair",
+            "ru": "пара",
+            "de": "Paar",
+            "fr": "paire",
+            "pl": "para"
+          }
+        },
+        {
+          "tib": "ཆུ",
+          "clip": "spell-0f46-0f74",
+          "spelled": true,
+          "tr": {
+            "en": "water",
+            "ru": "вода",
+            "de": "Wasser",
+            "fr": "eau",
+            "pl": "woda"
+          }
+        }
       ]
     },
     {
@@ -159,6 +237,20 @@
       "examples": [
         "ji",
         "jo-bo"
+      ],
+      "words": [
+        {
+          "tib": "ཇ",
+          "clip": "msu-0f47",
+          "spelled": false,
+          "tr": {
+            "en": "tea",
+            "ru": "чай",
+            "de": "Tee",
+            "fr": "thé",
+            "pl": "herbata"
+          }
+        }
       ]
     },
     {
@@ -182,6 +274,20 @@
       "examples": [
         "nyi-ma",
         "nyan-thos"
+      ],
+      "words": [
+        {
+          "tib": "ཉ",
+          "clip": "msu-0f49",
+          "spelled": false,
+          "tr": {
+            "en": "fish",
+            "ru": "рыба",
+            "de": "Fisch",
+            "fr": "poisson",
+            "pl": "ryba"
+          }
+        }
       ]
     },
     {
@@ -274,6 +380,20 @@
       "examples": [
         "nag-po",
         "ni"
+      ],
+      "words": [
+        {
+          "tib": "ན",
+          "clip": "msu-0f53",
+          "spelled": false,
+          "tr": {
+            "en": "to be ill",
+            "ru": "болеть",
+            "de": "krank sein",
+            "fr": "être malade",
+            "pl": "chorować"
+          }
+        }
       ]
     },
     {
@@ -320,6 +440,32 @@
       "examples": [
         "pha",
         "phan"
+      ],
+      "words": [
+        {
+          "tib": "ཕ",
+          "clip": "msu-0f55",
+          "spelled": false,
+          "tr": {
+            "en": "father",
+            "ru": "отец",
+            "de": "Vater",
+            "fr": "père",
+            "pl": "ojciec"
+          }
+        },
+        {
+          "tib": "ཕུ",
+          "clip": "spell-0f55-0f74",
+          "spelled": true,
+          "tr": {
+            "en": "to blow",
+            "ru": "дуть",
+            "de": "blasen",
+            "fr": "souffler",
+            "pl": "dmuchać"
+          }
+        }
       ]
     },
     {
@@ -343,6 +489,20 @@
       "examples": [
         "bod",
         "bu"
+      ],
+      "words": [
+        {
+          "tib": "བ",
+          "clip": "msu-0f56",
+          "spelled": false,
+          "tr": {
+            "en": "cow",
+            "ru": "корова",
+            "de": "Kuh",
+            "fr": "vache",
+            "pl": "krowa"
+          }
+        }
       ]
     },
     {
@@ -366,6 +526,44 @@
       "examples": [
         "me",
         "mi"
+      ],
+      "words": [
+        {
+          "tib": "མ",
+          "clip": "msu-0f58",
+          "spelled": false,
+          "tr": {
+            "en": "mother",
+            "ru": "мать",
+            "de": "Mutter",
+            "fr": "mère",
+            "pl": "matka"
+          }
+        },
+        {
+          "tib": "མི",
+          "clip": "spell-0f58-0f72",
+          "spelled": true,
+          "tr": {
+            "en": "person",
+            "ru": "человек",
+            "de": "Mensch",
+            "fr": "personne",
+            "pl": "człowiek"
+          }
+        },
+        {
+          "tib": "མེ",
+          "clip": "spell-0f58-0f7a",
+          "spelled": true,
+          "tr": {
+            "en": "fire",
+            "ru": "огонь",
+            "de": "Feuer",
+            "fr": "feu",
+            "pl": "ogień"
+          }
+        }
       ]
     },
     {
@@ -451,7 +649,21 @@
         "fr": "w comme dans « ouate » ; ton bas ; lettre rare",
         "pl": "w jak angielskie „w”, łagodne; ton niski; rzadka litera"
       },
-      "examples": []
+      "examples": [],
+      "words": [
+        {
+          "tib": "ཝ",
+          "clip": "msu-0f5d",
+          "spelled": false,
+          "tr": {
+            "en": "fox",
+            "ru": "лиса",
+            "de": "Fuchs",
+            "fr": "renard",
+            "pl": "lis"
+          }
+        }
+      ]
     },
     {
       "tib": "ཞ",
@@ -474,6 +686,20 @@
       "examples": [
         "zhig",
         "zhe-sdang"
+      ],
+      "words": [
+        {
+          "tib": "ཞོ",
+          "clip": "spell-0f5e-0f7c",
+          "spelled": true,
+          "tr": {
+            "en": "yogurt",
+            "ru": "йогурт",
+            "de": "Joghurt",
+            "fr": "yaourt",
+            "pl": "jogurt"
+          }
+        }
       ]
     },
     {
@@ -497,6 +723,20 @@
       "examples": [
         "zab-mo",
         "za-khang"
+      ],
+      "words": [
+        {
+          "tib": "ཟ",
+          "clip": "msu-0f5f",
+          "spelled": false,
+          "tr": {
+            "en": "to eat",
+            "ru": "есть",
+            "de": "essen",
+            "fr": "manger",
+            "pl": "jeść"
+          }
+        }
       ]
     },
     {
@@ -543,6 +783,20 @@
       "examples": [
         "yin",
         "yon-tan"
+      ],
+      "words": [
+        {
+          "tib": "ཡ",
+          "clip": "msu-0f61",
+          "spelled": false,
+          "tr": {
+            "en": "one of a pair",
+            "ru": "один из пары",
+            "de": "eines von einem Paar",
+            "fr": "l’un d’une paire",
+            "pl": "jedno z pary"
+          }
+        }
       ]
     },
     {
@@ -566,6 +820,44 @@
       "examples": [
         "rang-rgyal",
         "rang"
+      ],
+      "words": [
+        {
+          "tib": "ར",
+          "clip": "msu-0f62",
+          "spelled": false,
+          "tr": {
+            "en": "goat",
+            "ru": "коза",
+            "de": "Ziege",
+            "fr": "chèvre",
+            "pl": "koza"
+          }
+        },
+        {
+          "tib": "རི",
+          "clip": "spell-0f62-0f72",
+          "spelled": true,
+          "tr": {
+            "en": "mountain",
+            "ru": "гора",
+            "de": "Berg",
+            "fr": "montagne",
+            "pl": "góra"
+          }
+        },
+        {
+          "tib": "རོ",
+          "clip": "spell-0f62-0f7c",
+          "spelled": true,
+          "tr": {
+            "en": "corpse",
+            "ru": "труп",
+            "de": "Leichnam",
+            "fr": "cadavre",
+            "pl": "zwłoki"
+          }
+        }
       ]
     },
     {
@@ -612,6 +904,56 @@
       "examples": [
         "shig",
         "shes-rab"
+      ],
+      "words": [
+        {
+          "tib": "ཤ",
+          "clip": "msu-0f64",
+          "spelled": false,
+          "tr": {
+            "en": "meat",
+            "ru": "мясо",
+            "de": "Fleisch",
+            "fr": "viande",
+            "pl": "mięso"
+          }
+        },
+        {
+          "tib": "ཤི",
+          "clip": "spell-0f64-0f72",
+          "spelled": true,
+          "tr": {
+            "en": "to die",
+            "ru": "умереть",
+            "de": "sterben",
+            "fr": "mourir",
+            "pl": "umrzeć"
+          }
+        },
+        {
+          "tib": "ཤུ",
+          "clip": "spell-0f64-0f74",
+          "spelled": true,
+          "tr": {
+            "en": "to whistle",
+            "ru": "свистеть",
+            "de": "pfeifen",
+            "fr": "siffler",
+            "pl": "gwizdać"
+          }
+        },
+        {
+          "tib": "ཤོ",
+          "clip": "spell-0f64-0f7c",
+          "spelled": true,
+          "tr": {
+            "en": "dice",
+            "ru": "игральные кости",
+            "de": "Würfel",
+            "fr": "dé",
+            "pl": "kości do gry"
+          }
+        }
       ]
     },
     {
@@ -635,6 +977,32 @@
       "examples": [
         "sa",
         "sogs"
+      ],
+      "words": [
+        {
+          "tib": "ས",
+          "clip": "msu-0f66",
+          "spelled": false,
+          "tr": {
+            "en": "earth, ground",
+            "ru": "земля",
+            "de": "Erde",
+            "fr": "terre",
+            "pl": "ziemia"
+          }
+        },
+        {
+          "tib": "སོ",
+          "clip": "spell-0f66-0f7c",
+          "spelled": true,
+          "tr": {
+            "en": "tooth",
+            "ru": "зуб",
+            "de": "Zahn",
+            "fr": "dent",
+            "pl": "ząb"
+          }
+        }
       ]
     },
     {
@@ -1897,6 +2265,204 @@
           }
         }
       ]
+    },
+    {
+      "tib": "ཊ",
+      "wylie": "T",
+      "kind": "sanskrit",
+      "name": "reversed ta",
+      "tone": null,
+      "similar": [
+        "ཏ"
+      ],
+      "sound": {
+        "en": "the retroflex t of Sanskrit words, a mirrored ཏ; read like ཏ",
+        "ru": "церебральное т санскритских слов, зеркальная ཏ; читается как ཏ",
+        "de": "das retroflexe t der Sanskritwörter, ein gespiegeltes ཏ; gelesen wie ཏ",
+        "fr": "le t rétroflexe des mots sanskrits, un ཏ retourné ; se lit comme ཏ",
+        "pl": "retrofleksyjne t słów sanskryckich, odwrócone ཏ; czyta się jak ཏ"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཋ",
+      "wylie": "Th",
+      "kind": "sanskrit",
+      "name": "reversed tha",
+      "tone": null,
+      "similar": [
+        "ཐ"
+      ],
+      "sound": {
+        "en": "the retroflex th of Sanskrit words, a mirrored ཐ; read like ཐ",
+        "ru": "церебральное тх санскритских слов, зеркальная ཐ; читается как ཐ",
+        "de": "das retroflexe th der Sanskritwörter, ein gespiegeltes ཐ; gelesen wie ཐ",
+        "fr": "le th rétroflexe des mots sanskrits, un ཐ retourné ; se lit comme ཐ",
+        "pl": "retrofleksyjne th słów sanskryckich, odwrócone ཐ; czyta się jak ཐ"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཌ",
+      "wylie": "D",
+      "kind": "sanskrit",
+      "name": "reversed da",
+      "tone": null,
+      "similar": [
+        "ད"
+      ],
+      "sound": {
+        "en": "the retroflex d of Sanskrit words, a mirrored ད; read like ད",
+        "ru": "церебральное д санскритских слов, зеркальная ད; читается как ད",
+        "de": "das retroflexe d der Sanskritwörter, ein gespiegeltes ད; gelesen wie ད",
+        "fr": "le d rétroflexe des mots sanskrits, un ད retourné ; se lit comme ད",
+        "pl": "retrofleksyjne d słów sanskryckich, odwrócone ད; czyta się jak ད"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཎ",
+      "wylie": "N",
+      "kind": "sanskrit",
+      "name": "reversed na",
+      "tone": null,
+      "similar": [
+        "ན"
+      ],
+      "sound": {
+        "en": "the retroflex n of Sanskrit words, a mirrored ན; read like ན",
+        "ru": "церебральное н санскритских слов, зеркальная ན; читается как ན",
+        "de": "das retroflexe n der Sanskritwörter, ein gespiegeltes ན; gelesen wie ན",
+        "fr": "le n rétroflexe des mots sanskrits, un ན retourné ; se lit comme ན",
+        "pl": "retrofleksyjne n słów sanskryckich, odwrócone ན; czyta się jak ན"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཥ",
+      "wylie": "Sh",
+      "kind": "sanskrit",
+      "name": "reversed sha",
+      "tone": null,
+      "similar": [
+        "ཤ"
+      ],
+      "sound": {
+        "en": "the Sanskrit ṣ, a mirrored ཤ; read like ཤ",
+        "ru": "санскритское ṣ, зеркальная ཤ; читается как ཤ",
+        "de": "das Sanskrit-ṣ, ein gespiegeltes ཤ; gelesen wie ཤ",
+        "fr": "le ṣ sanskrit, un ཤ retourné ; se lit comme ཤ",
+        "pl": "sanskryckie ṣ, odwrócone ཤ; czyta się jak ཤ"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཀྵ",
+      "wylie": "k+Sh",
+      "kind": "sanskrit",
+      "name": "ka-sha",
+      "tone": null,
+      "similar": [
+        "ཀ"
+      ],
+      "sound": {
+        "en": "the Sanskrit kṣa, ཀ with ཥ below; read kya",
+        "ru": "санскритское kṣa, ཀ с подписной ཥ; читается кья",
+        "de": "das Sanskrit-kṣa, ཀ mit ཥ darunter; gelesen kya",
+        "fr": "le kṣa sanskrit, ཀ avec ཥ en dessous ; se lit kya",
+        "pl": "sanskryckie kṣa, ཀ z ཥ pod spodem; czyta się kja"
+      },
+      "examples": []
+    },
+    {
+      "tib": "གྷ",
+      "wylie": "g+h",
+      "kind": "sanskrit",
+      "name": "heavy ga",
+      "tone": null,
+      "similar": [
+        "ག"
+      ],
+      "sound": {
+        "en": "the Sanskrit gha, ག with ཧ below; read like ག",
+        "ru": "санскритское gha, ག с подписной ཧ; читается как ག",
+        "de": "das Sanskrit-gha, ག mit ཧ darunter; gelesen wie ག",
+        "fr": "le gha sanskrit, ག avec ཧ en dessous ; se lit comme ག",
+        "pl": "sanskryckie gha, ག z ཧ pod spodem; czyta się jak ག"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཛྷ",
+      "wylie": "dz+h",
+      "kind": "sanskrit",
+      "name": "heavy dza",
+      "tone": null,
+      "similar": [
+        "ཛ"
+      ],
+      "sound": {
+        "en": "the Sanskrit jha, ཛ with ཧ below; read like ཛ",
+        "ru": "санскритское jha, ཛ с подписной ཧ; читается как ཛ",
+        "de": "das Sanskrit-jha, ཛ mit ཧ darunter; gelesen wie ཛ",
+        "fr": "le jha sanskrit, ཛ avec ཧ en dessous ; se lit comme ཛ",
+        "pl": "sanskryckie jha, ཛ z ཧ pod spodem; czyta się jak ཛ"
+      },
+      "examples": []
+    },
+    {
+      "tib": "ཌྷ",
+      "wylie": "D+h",
+      "kind": "sanskrit",
+      "name": "heavy reversed da",
+      "tone": null,
+      "similar": [
+        "ཌ"
+      ],
+      "sound": {
+        "en": "the Sanskrit ḍha, ཌ with ཧ below; read like ད",
+        "ru": "санскритское ḍha, ཌ с подписной ཧ; читается как ད",
+        "de": "das Sanskrit-ḍha, ཌ mit ཧ darunter; gelesen wie ད",
+        "fr": "le ḍha sanskrit, ཌ avec ཧ en dessous ; se lit comme ད",
+        "pl": "sanskryckie ḍha, ཌ z ཧ pod spodem; czyta się jak ད"
+      },
+      "examples": []
+    },
+    {
+      "tib": "བྷ",
+      "wylie": "b+h",
+      "kind": "sanskrit",
+      "name": "heavy ba",
+      "tone": null,
+      "similar": [
+        "བ"
+      ],
+      "sound": {
+        "en": "the Sanskrit bha, བ with ཧ below; read like བ",
+        "ru": "санскритское bha, བ с подписной ཧ; читается как བ",
+        "de": "das Sanskrit-bha, བ mit ཧ darunter; gelesen wie བ",
+        "fr": "le bha sanskrit, བ avec ཧ en dessous ; se lit comme བ",
+        "pl": "sanskryckie bha, བ z ཧ pod spodem; czyta się jak བ"
+      },
+      "examples": []
+    },
+    {
+      "tib": "དྷ",
+      "wylie": "d+h",
+      "kind": "sanskrit",
+      "name": "heavy da",
+      "tone": null,
+      "similar": [
+        "ད"
+      ],
+      "sound": {
+        "en": "the Sanskrit dha, ད with ཧ below; read like ད",
+        "ru": "санскритское dha, ད с подписной ཧ; читается как ད",
+        "de": "das Sanskrit-dha, ད mit ཧ darunter; gelesen wie ད",
+        "fr": "le dha sanskrit, ད avec ཧ en dessous ; se lit comme ད",
+        "pl": "sanskryckie dha, ད z ཧ pod spodem; czyta się jak ད"
+      },
+      "examples": []
     }
   ],
   "intros": {

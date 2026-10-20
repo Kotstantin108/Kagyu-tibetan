@@ -322,6 +322,8 @@ Teraz warto zobaczyć wszystkie trzydzieści liter razem. Wysokie: ཀ ཁ ཅ �
 
 Dalej kurs przechodzi od liter do sylaby: do znaków samogłosek, do liter pisanych pod innymi i nad innymi, do przedrostków i przyrostków. Z tych części składa się czytanie.
 
+Oprócz trzydziestu liter pismo ma jedenaście znaków dla słów sanskryckich: sześć liter odwróconych, ཊ ཋ ཌ ཎ ཥ i ཀྵ, którymi zapisuje się retrofleksyjne dźwięki mantr i imion, oraz pięć liter „ciężkich”, གྷ ཛྷ ཌྷ བྷ དྷ, czyli literę z ཧ pod spodem dla dźwięcznych przydechowych. W tybetańskiej mowie czyta się je jak zwykłe ཏ ཐ ད ན ཤ i ག ཛ ད བ ད. Kurs ich nie ćwiczy, ale ich karty z nagraniami są w tej części, by rozpoznawać je w mantrach.
+
 ## alphabet/9
 
 Po polsku samogłoski to takie same litery w wierszu jak spółgłoski: w słowie „dom” o stoi między d a m. Po tybetańsku jest inaczej: samogłoska a tkwi już w każdej literze, a pozostałe cztery samogłoski oznacza się małymi znakami stawianymi nad literą lub pod nią. Brak znaku oznacza a.
@@ -379,6 +381,8 @@ Reszta to stosowanie reguł z poprzednich części. Po znalezieniu rdzenia trzeb
 Kilka sylab kursu do rozbioru. ཆོས: rdzeń ཆ ze znakiem o, przyrostek ས, czyli czö. སློབ: nadpisane ས, rdzeń ལ, znak o, przyrostek བ, czyli lop. རྙིང: nadpisane ར, rdzeń ཉ ze znakiem i, przyrostek ང, czyli ńing z wysokim tonem. མཆོག: przedrostek མ, rdzeń ཆ, znak o, przyrostek ག, czyli czok. བདེ: przedrostek བ, rdzeń ད ze znakiem e, czyli de. འབྱོར: przedrostek འ, rdzeń བ z podpisanym ཡ i znakiem o, przyrostek ར, czyli dżor. རྫོགས: nadpisane ར, rdzeń ཛ, znak o, przyrostek ག, drugi przyrostek ས, czyli dzok. ཕྱག: rdzeń ཕ z podpisanym ཡ, przyrostek ག, czyli czhak. སྒྲོལ: nadpisane ས, rdzeń ག, podpisane ར, znak o, przyrostek ལ, czyli dröl.
 
 W treningu tej części wszystkie sylaby pochodzą ze słów kursu, więc każdą z nich spotka się potem w słowach i zdaniach: ཆོས་ „Dharma”, སློབ་མ་ „uczeń”, རྙིང་པ་ „stary”, མཆོག་ „najwyższy”, བདེ་བ་ „szczęście”, རྣལ་འབྱོར་པ་ „jogin”, རྫོགས་པ་ „doskonałość”, ཕྱག་རྒྱ་ „mudra”, སྒྲོལ་མ་ „Tara”. Nie ma co się spieszyć: rozbiór sylaby krok po kroku jest z początku powolny, ale po kilkudziesięciu sylabach zamienia się w jedno spojrzenie.
+
+Dwie listy z podręcznika Basic Tibetan utrwalają regułę o gołych literach. W parze rdzeniem jest zawsze pierwsza: ངག „mowa”, ཆང „piwo”, ནད „choroba”, ཉན „słuchać”, ཁབ „igła”, ལམ „droga”, ཆར „deszcz”, བལ „wełna”, རས „tkanina”, ཟད „wyczerpać się”. I w czternastu trzyliterowych połączeniach zakończonych na ས rdzeniem też jest pierwsza litera, a ས to drugi przyrostek: གངས „śnieg”, ནགས „las”, ནངས „następny poranek”, ཁམས „region Kham”, བགས „stopniowo”, བངས „przemoknąć”, བབས „schodzić”, ལགས „partykuła grzecznościowa”, ལངས „wstawać”, རགས „otrzymać”, རངས „cieszyć się”, རབས „pokolenie”, རམས „indygo”, སངས „oczyścić”.
 
 ## alphabet/14
 

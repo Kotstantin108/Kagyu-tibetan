@@ -316,6 +316,8 @@ Now it is useful to see all thirty letters together. High: ཀ ཁ ཅ ཆ ཏ �
 
 From here the course moves from letters to the syllable: to the vowel signs, to the letters written under and above others, and to prefixes and suffixes. Reading is put together from those parts.
 
+Besides the thirty letters the script has eleven signs for Sanskrit words: six reversed letters, ཊ ཋ ཌ ཎ ཥ and ཀྵ, which write the retroflex sounds of mantras and names, and five "heavy" letters, གྷ ཛྷ ཌྷ བྷ དྷ, a letter with ཧ below for the voiced aspirates. In Tibetan speech they are read like the plain ཏ ཐ ད ན ཤ and ག ཛ ད བ ད. The course does not drill them, but their cards with recordings are in this part, so that they can be recognised in mantras.
+
 ## alphabet/9
 
 In English the vowels are letters in the line, just like the consonants. Tibetan does it differently: the vowel a is already contained in every letter, and the other four vowels are shown by small signs placed above or below the letter. No sign means a.
@@ -373,6 +375,8 @@ The rest applies the rules of the earlier parts. Once the root is found, see whe
 A few syllables of the course to take apart. ཆོས: root ཆ with the sign o, suffix ས: chö. སློབ: superscribed ས, root ལ, sign o, suffix བ: lop. རྙིང: superscribed ར, root ཉ with the sign i, suffix ང: nying with a high tone. མཆོག: prefix མ, root ཆ, sign o, suffix ག: chok. བདེ: prefix བ, root ད with the sign e: de. འབྱོར: prefix འ, root བ with subjoined ཡ and the sign o, suffix ར: jor. རྫོགས: superscribed ར, root ཛ, sign o, suffix ག, second suffix ས: dzok. ཕྱག: root ཕ with subjoined ཡ, suffix ག: chak. སྒྲོལ: superscribed ས, root ག, subjoined ར, sign o, suffix ལ: dröl.
 
 In the training of this part every syllable is taken from a word of the course, so each will be met again in words and sentences: ཆོས་ "Dharma", སློབ་མ་ "student", རྙིང་པ་ "old", མཆོག་ "supreme", བདེ་བ་ "happiness", རྣལ་འབྱོར་པ་ "yogin", རྫོགས་པ་ "perfection", ཕྱག་རྒྱ་ "mudrā", སྒྲོལ་མ་ "Tārā". Taking a syllable apart is slow at first; after a couple of dozen syllables it becomes a glance.
+
+Two lists from the textbook Basic Tibetan fix the rule about bare letters. In a pair the root is always the first: ངག "speech", ཆང "beer", ནད "illness", ཉན "to listen", ཁབ "needle", ལམ "road", ཆར "rain", བལ "wool", རས "cloth", ཟད "to be exhausted". And in the fourteen three-letter combinations ending in ས the root is the first letter too, with ས as the second suffix: གངས "snow", ནགས "forest", ནངས "next morning", ཁམས "the Kham region", བགས "gradually", བངས "to get soaked", བབས "to descend", ལགས "polite particle", ལངས "to get up", རགས "to obtain", རངས "to be delighted", རབས "generation", རམས "indigo", སངས "to clear away".
 
 ## alphabet/14
 

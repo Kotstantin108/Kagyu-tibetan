@@ -22,6 +22,8 @@ import subprocess, re, os, io, sys, json, statistics
 
 SRC, OUT = sys.argv[1], sys.argv[2]
 os.makedirs(OUT, exist_ok=True)
+# --extra <json>: more recordings, [{"file": ..., "mode": ..., "items": [...]}] (the vocabulary lists of chapters 4-10)
+EXTRA = json.load(io.open(sys.argv[sys.argv.index('--extra') + 1], encoding='utf8')) if '--extra' in sys.argv else []
 
 ROWS = 'ཀ ཁ ག ང ཅ ཆ ཇ ཉ ཏ ཐ ད ན པ ཕ བ མ ཙ ཚ ཛ ཝ ཞ ཟ འ ཡ ར ལ ཤ ས ཧ ཨ'.split()
 V = ['ི', 'ུ', 'ེ', 'ོ']
@@ -58,7 +60,8 @@ SPEC = [
     ('Frequent-Expressions-3-1.m4a', 'phrase', 'སྐུ་ཁམས་བཟང་། དགོངས་དག གཟབ་གཟབ་གནང་གོ། སྤྲོ་པོ་གནང་གོ། བཀའ་དྲིན་ཆེ། རྗེས་མར་མཇལ་ཡོང་།'.split()),
 ]
 # the longest clip of a recording may be this many times the median one (a spelled two-syllable word against a one-syllable one)
-MAX_RATIO = {'sign': 2.2, 'word': 2.2, 'spelled': 4.0, 'phrase': 3.0}
+MAX_RATIO = {'sign': 2.2, 'word': 4.0, 'spelled': 4.0, 'phrase': 3.0}
+SPEC += [(x['file'], x['mode'], x['items']) for x in EXTRA]
 PREFIX = {'sign': 'sign', 'word': 'msu', 'spelled': 'spell', 'phrase': 'phrase'}
 
 def run(args):
