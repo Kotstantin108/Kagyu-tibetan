@@ -452,6 +452,58 @@ for (const name of ['progress-2026-10-12.json', 'progress-2026-10-19.json', 'pro
   await ctx.close();
 }
 
+// the editor page (edit.html): the API is mocked in the browser, the real one is report-api on the server
+{
+  const ectx = await browser.newContext({ viewport: { width: 1100, height: 800 } });
+  const ed = await ectx.newPage();
+  ed.on('pageerror', (e) => errors.push(`edit: ${e}`));
+  const SHA = 'a'.repeat(40);
+  const repo = { 'content/intro/ru.md': '# Русский\n\n## lesson-01\n\nПервый абзац ཆོས་ «Дхарма».\n\nВторой.\n\n## alphabet/1\n\nБуквы.\n', 'content/words.tsv': '# tib | en\nཆོས་ | Dharma\n' };
+  const puts = [];
+  await ed.route('**/api/edit/**', async (route) => {
+    const req = route.request();
+    const u = new URL(req.url());
+    const json = (status, body) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
+    if (req.headers().authorization !== 'Bearer pw') return json(401, { ok: false, error: 'password' });
+    if (u.pathname.endsWith('/files')) return json(200, { ok: true, branch: 'main', files: Object.keys(repo).sort() });
+    const path = u.searchParams.get('path') || (req.postDataJSON() || {}).path;
+    if (req.method() === 'GET') return json(200, { ok: true, path, sha: SHA, content: repo[path] });
+    const body = req.postDataJSON();
+    puts.push(body);
+    repo[path] = body.content;
+    return json(200, { ok: true, sha: 'b'.repeat(40), commit: { sha: 'c'.repeat(40), url: 'https://github.com/x/y/commit/ccc' } });
+  });
+  await ed.route('https://api.github.com/**', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: '{"workflow_runs":[]}' }));
+  await ed.goto(`${base}/edit.html`);
+  await ed.fill('#password', 'wrong');
+  await ed.click('#login button[type=submit]');
+  await ed.waitForSelector('#login-status:not(.hidden)');
+  check((await ed.$eval('#login-status', (e) => e.textContent)) === 'Wrong password.', 'editor: a wrong password is reported');
+  await ed.fill('#password', 'pw');
+  await ed.click('#login button[type=submit]');
+  await ed.waitForSelector('#sections button');
+  check((await ed.$$eval('#langs button', (bs) => bs.map((b) => b.textContent))).join() === 'Русский', 'editor: only languages whose file exists are offered');
+  check((await ed.$$eval('#sections .id', (es) => es.map((e) => e.textContent))).join() === 'lesson-01,alphabet/1', 'editor: the sections of the file are listed');
+  check((await ed.$eval('#sections li:first-child .name', (e) => e.textContent)).startsWith('Урок 1'), 'editor: lesson names come from the course data');
+  await ed.click('#sections li:first-child button');
+  await ed.waitForSelector('#pane:not(.hidden)');
+  check((await ed.$eval('#text', (t) => t.value)) === 'Первый абзац ཆོས་ «Дхарма».\n\nВторой.', 'editor: a section opens with its paragraphs only');
+  check((await ed.$eval('#open', (a) => a.getAttribute('href'))) === './#/course/lesson-01/theory', 'editor: link to the page in the app');
+  await ed.fill('#text', 'Первый абзац ཆོས་ «Дхарма».\n\nВторой, исправленный.\n');
+  await ed.fill('#note', 'typo');
+  await ed.click('#save');
+  await ed.waitForSelector('#status.good');
+  check(puts.length === 1 && puts[0].path === 'content/intro/ru.md' && puts[0].sha === SHA && puts[0].message === 'typo', 'editor: save sends the file path, its sha and the note');
+  check(puts[0] && puts[0].content === '# Русский\n\n## lesson-01\n\nПервый абзац ཆོས་ «Дхарма».\n\nВторой, исправленный.\n\n## alphabet/1\n\nБуквы.\n', 'editor: only the edited section changes in the file');
+  check((await ed.$eval('#status a', (a) => a.textContent)) === 'ccccccc', 'editor: the commit is linked after saving');
+  await ed.click('#modes button[data-mode="files"]');
+  await ed.waitForSelector('#files button');
+  await ed.click('#files li:last-child button');
+  await ed.waitForFunction(() => document.getElementById('text').classList.contains('raw'));
+  check((await ed.$eval('#text', (t) => t.value)) === repo['content/words.tsv'], 'editor: a TSV file opens whole in the raw mode');
+  await ectx.close();
+}
+
 check(errors.length === 0, `no console errors${errors.length ? ': ' + errors.join(' | ') : ''}`);
 
 await browser.close();

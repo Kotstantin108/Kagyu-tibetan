@@ -248,6 +248,38 @@ test (job `check`), then two deploy jobs (server set up and first deployed on
 
 All paths in the app are relative, so it also works from a sub-path.
 
+## Editor page
+
+`https://tibetan.itjoy.space/edit.html` (`site/edit.html`, `site/src/edit/`) is a
+password-protected editor for the course sources: the theory texts
+(`content/intro/<lang>.md`, one section per lesson or alphabet part, opened
+one section at a time) and, in the "Files" mode, any `content/*.tsv` table as
+a whole. Nothing is stored on the server: a save is a commit on `main` made
+through the GitHub Contents API by `server/report-api/edit-api.mjs` (mounted
+under `/api/edit/` in report-api), so
+
+1. the deploy workflow runs, rebuilds `site/data` from `content/` and
+   publishes the site (the page shows the state of that run and says when the
+   change is live; a failed build leaves the site as it was and the commit on
+   `main` to be fixed);
+2. the `check` job commits the rebuilt `site/data` and `CONTENT_REVIEW.md`
+   back to `main`, so the repository stays consistent;
+3. on any computer the change arrives with `git pull`, nothing has to be
+   fetched from the server.
+
+The workflow builds the data itself in every job, so a push with a stale
+`site/data` is harmless too.
+
+Server side: `EDIT_PASSWORD` in `/etc/report-api.env` (empty = editing off,
+`/api/edit/*` answers 503), `EDIT_GITHUB_TOKEN` = a fine-grained personal
+access token with **Contents: read and write** on this repository (empty =
+`GITHUB_TOKEN` is used, which then needs that permission in addition to
+Issues: write), `EDIT_BRANCH` (default `main`). The editor may touch only
+`content/intro/<lang>.md` and `content/*.tsv`; wrong passwords are limited
+to ten an hour per address; a save sends the file's sha, so two people editing
+the same file get a conflict message instead of overwriting each other.
+"Remember on this device" keeps the password in the browser's localStorage.
+
 ## Audio
 
 Pronunciation clips live only on the server in
@@ -322,7 +354,12 @@ of letters, not drilled.
   `curl -I https://tibetan.itjoy.space/fonts/NotoSerifTibetan-Regular.woff2`
   (`font/woff2`, `immutable`), and the browser smoke test against the live site:
   `SMOKE_URL=https://tibetan.itjoy.space node scripts/smoke.mjs`.
-- **report-api** (issues filed from the app, `server/report-api/`): service
-  `report-api.service` run as its own user, listening on `127.0.0.1:8091`;
-  its GitHub token lives in `/etc/report-api.env` (`GITHUB_TOKEN=…`, mode 600,
-  never in the repository).
+- **report-api** (issues filed from the app and the editor page's API,
+  `server/report-api/`): service `report-api.service` run as its own user,
+  listening on `127.0.0.1:8091`; its GitHub tokens and the editor password
+  live in `/etc/report-api.env` (`GITHUB_TOKEN=…`, `EDIT_PASSWORD=…`,
+  `EDIT_GITHUB_TOKEN=…`, mode 600, never in the repository). Re-apply after a
+  change to the service: `ssh root@itjoy.space rm -rf /tmp/tibetan-server`
+  (with the folder already there `scp -r` would nest a copy inside it and the
+  old `setup.sh` would run), then `scp -r server root@itjoy.space:/tmp/tibetan-server`
+  and `ssh root@itjoy.space 'bash /tmp/tibetan-server/setup.sh'`.

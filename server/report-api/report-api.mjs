@@ -16,6 +16,8 @@
 //   -> 429 { ok: false, error: 'rate_limit' }  more than 5 reports an hour from one address
 //   -> 502 { ok: false, error: 'github' }  GitHub did not accept it
 // GET  /api/health  -> 200 { ok: true }
+// /api/edit/*       the editor page's API (password-protected edits of the course sources, see edit-api.mjs);
+//                   enabled by EDIT_PASSWORD, commits with EDIT_GITHUB_TOKEN (default GITHUB_TOKEN) to EDIT_BRANCH (main)
 //
 // Spam protection: 5 requests per hour per IP (in memory), the hidden `website`
 // field must stay empty, and one issue per sentence/word per day: an open issue
@@ -24,6 +26,7 @@
 
 import http from 'node:http';
 import { pathToFileURL } from 'node:url';
+import { handleEdit, makeContents, EDIT_LIMITS } from './edit-api.mjs';
 
 export const LIMITS = { messageMin: 10, messageMax: 2000, tibMax: 400, translationMax: 1000, bodyMax: 16 * 1024, perHour: 5 };
 const ID_RE = /^[a-z0-9'\-.]+$/;
@@ -165,7 +168,11 @@ function readJson(req, max) {
   });
 }
 
-export function createServer({ github, allowedOrigins, limiter = new RateLimiter(), index = new DailyIndex(), log = console.log }) {
+/**
+ * The HTTP server. `edit` (optional): { password, contents } from edit-api.mjs; without it /api/edit/* answers 503.
+ * Wrong editor passwords are limited per address with `wrongLimiter` (ten an hour by default).
+ */
+export function createServer({ github, allowedOrigins, limiter = new RateLimiter(), index = new DailyIndex(), log = console.log, edit = null, wrongLimiter = new RateLimiter(EDIT_LIMITS.wrongPerHour) }) {
   const send = (res, status, data, origin) => {
     const headers = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' };
     if (origin) { headers['Access-Control-Allow-Origin'] = origin; headers.Vary = 'Origin'; }
@@ -178,12 +185,15 @@ export function createServer({ github, allowedOrigins, limiter = new RateLimiter
     const allowed = origin && allowedOrigins.includes(origin) ? origin : null;
     if (origin && !allowed) return send(res, 403, { ok: false, error: 'origin' });
     if (req.method === 'OPTIONS') {
-      res.writeHead(204, { 'Access-Control-Allow-Origin': allowed || '', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Max-Age': '600', Vary: 'Origin' });
+      res.writeHead(204, { 'Access-Control-Allow-Origin': allowed || '', 'Access-Control-Allow-Methods': 'GET, POST, PUT, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Max-Age': '600', Vary: 'Origin' });
       return res.end();
     }
-    if (req.method === 'GET' && url.pathname === '/api/health') return send(res, 200, { ok: true }, allowed);
-    if (req.method !== 'POST' || url.pathname !== '/api/report') return send(res, 404, { ok: false, error: 'not_found' }, allowed);
     const ip = String(req.headers['x-real-ip'] || (req.headers['x-forwarded-for'] || '').split(',')[0] || req.socket.remoteAddress || '').trim();
+    if (req.method === 'GET' && url.pathname === '/api/health') return send(res, 200, { ok: true }, allowed);
+    if (url.pathname.startsWith('/api/edit/')) {
+      return handleEdit(req, url, { password: edit && edit.password, contents: edit && edit.contents, wrong: wrongLimiter, ip, log, send: (status, data) => send(res, status, data, allowed), readJson: (max) => readJson(req, max) });
+    }
+    if (req.method !== 'POST' || url.pathname !== '/api/report') return send(res, 404, { ok: false, error: 'not_found' }, allowed);
     if (!limiter.allow(ip)) return send(res, 429, { ok: false, error: 'rate_limit' }, allowed);
     let body;
     try { body = await readJson(req, LIMITS.bodyMax); } catch (err) { return send(res, err.message === 'too_large' ? 413 : 400, { ok: false, error: err.message }, allowed); }
@@ -207,8 +217,11 @@ function main() {
   const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'https://tibetan.itjoy.space').split(',').map((s) => s.trim()).filter(Boolean);
   const host = process.env.HOST || '127.0.0.1';
   const port = Number(process.env.PORT || 8091);
-  const server = createServer({ github: makeGitHub({ token, repo }), allowedOrigins, log: (m) => console.log(new Date().toISOString(), m) });
-  server.listen(port, host, () => console.log(`report-api listening on http://${host}:${port} for ${repo}, origins: ${allowedOrigins.join(' ')}`));
+  const password = process.env.EDIT_PASSWORD || '';
+  const branch = process.env.EDIT_BRANCH || 'main';
+  const edit = password ? { password, contents: makeContents({ token: process.env.EDIT_GITHUB_TOKEN || token, repo, branch }) } : null;
+  const server = createServer({ github: makeGitHub({ token, repo }), allowedOrigins, edit, log: (m) => console.log(new Date().toISOString(), m) });
+  server.listen(port, host, () => console.log(`report-api listening on http://${host}:${port} for ${repo}, origins: ${allowedOrigins.join(' ')}, editor: ${edit ? `on (${branch})` : 'off'}`));
   for (const sig of ['SIGINT', 'SIGTERM']) process.on(sig, () => server.close(() => process.exit(0)));
 }
 

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Editor · Tibetan Tiles</title>
+<link rel="icon" href="./icons/icon-96.png">
+<style>
+@font-face { font-family: "Noto Serif Tibetan"; src: url("./fonts/NotoSerifTibetan-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+:root {
+  color-scheme: light;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --tib: "Noto Serif Tibetan", "Microsoft Himalaya", "Kailasa", "Jomolhari", sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --bg: #efe6d2; --panel: #fcf8ee; --border: #d6c6a4; --sep: #ece3cd; --input-bg: #fffdf6;
+  --text: #2a2730; --muted: #6d6459; --heading: #1f3a5f; --primary: #7a1f2e; --on-primary: #f5d98f;
+  --good-bg: #e6f2e6; --good-text: #1f5b44; --bad-bg: #fbe9ea; --bad-text: #8f2f3e; --warn-bg: #f5e5b6; --warn-text: #8a5f12;
+  --active-bg: #e3ebf5; --focus: #3b6fb6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #131826; --panel: #1b2134; --border: #3a4258; --sep: #2a3146; --input-bg: #171c2b;
+    --text: #e8e2d4; --muted: #a39b8c; --heading: #c6d2e6; --primary: #c99a2e; --on-primary: #1f1a10;
+    --good-bg: #1f3a30; --good-text: #bfe3cf; --bad-bg: #4a2229; --bad-text: #f3c9ce; --warn-bg: #4a3a12; --warn-text: #f5e5b6;
+    --active-bg: #26304a; --focus: #7ea6e0;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.45; }
+header { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--border); background: var(--panel); flex-wrap: wrap; }
+header h1 { font-size: 1.05rem; margin: 0; color: var(--heading); }
+header .spacer { flex: 1; }
+header a { color: var(--heading); }
+main { padding: 16px; max-width: 1200px; margin: 0 auto; }
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.login { max-width: 420px; margin: 10vh auto; display: grid; gap: 10px; }
+.login h2 { margin: 0 0 4px; font-size: 1.1rem; color: var(--heading); }
+.login p { margin: 0; color: var(--muted); font-size: .92rem; }
+label.row { display: flex; align-items: center; gap: 8px; font-size: .92rem; color: var(--muted); }
+input[type=password], input[type=text], select, textarea { width: 100%; font: inherit; color: var(--text); background: var(--input-bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--focus); outline-offset: 1px; }
+button { font: inherit; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--text); padding: 7px 14px; cursor: pointer; }
+button.primary { background: var(--primary); color: var(--on-primary); border-color: var(--primary); font-weight: 600; }
+button:disabled { opacity: .55; cursor: default; }
+.layout { display: grid; grid-template-columns: 280px 1fr; gap: 16px; align-items: start; }
+@media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.tabs button { padding: 5px 10px; }
+.tabs button[aria-pressed=true] { background: var(--active-bg); border-color: var(--focus); font-weight: 600; }
+.list { list-style: none; margin: 0; padding: 0; max-height: 70vh; overflow: auto; border-top: 1px solid var(--sep); }
+.list li { border-bottom: 1px solid var(--sep); }
+.list button { display: block; width: 100%; text-align: left; border: 0; border-radius: 0; background: none; padding: 7px 8px; line-height: 1.3; }
+.list button[aria-current=true] { background: var(--active-bg); }
+.list .id { font-family: var(--mono); font-size: .8rem; color: var(--muted); display: block; }
+.list .name { font-size: .9rem; }
+.editor h2 { margin: 0; font-size: 1rem; color: var(--heading); }
+.editor .meta { color: var(--muted); font-size: .85rem; margin: 2px 0 10px; display: flex; gap: 12px; flex-wrap: wrap; }
+textarea.text { min-height: 50vh; resize: vertical; font-family: var(--sans), var(--tib); font-size: 1.02rem; line-height: 1.75; tab-size: 4; }
+textarea.text.raw { font-family: var(--mono), var(--tib); font-size: .9rem; line-height: 1.6; white-space: pre; overflow-x: auto; }
+.bar { display: flex; gap: 10px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+.bar input[type=text] { flex: 1; min-width: 200px; }
+.status { margin-top: 10px; padding: 8px 12px; border-radius: 8px; font-size: .92rem; background: var(--sep); }
+.status.good { background: var(--good-bg); color: var(--good-text); }
+.status.bad { background: var(--bad-bg); color: var(--bad-text); }
+.status.warn { background: var(--warn-bg); color: var(--warn-text); }
+.status a { color: inherit; }
+.hint { color: var(--muted); font-size: .85rem; margin: 8px 0 0; }
+.empty { color: var(--muted); padding: 24px; text-align: center; }
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Editor · Tibetan Tiles</h1>
+  <span id="build" class="hint"></span>
+  <span class="spacer"></span>
+  <a href="./" id="app-link">Open the app</a>
+  <button id="logout" class="hidden" type="button">Log out</button>
+</header>
+<main>
+  <form id="login" class="card login">
+    <h2>Editor password</h2>
+    <p>Edits are saved as commits to the repository; the site rebuilds itself within a few minutes.</p>
+    <input id="password" type="password" autocomplete="current-password" placeholder="Password" required>
+    <label class="row"><input id="remember" type="checkbox"> Remember on this device</label>
+    <button class="primary" type="submit">Enter</button>
+    <div id="login-status" class="status hidden"></div>
+  </form>
+
+  <div id="work" class="layout hidden">
+    <aside class="card">
+      <div class="tabs" id="modes">
+        <button type="button" data-mode="articles" aria-pressed="true">Theory texts</button>
+        <button type="button" data-mode="files" aria-pressed="false">Files</button>
+      </div>
+      <div id="articles-side">
+        <div class="tabs" id="langs"></div>
+        <ul class="list" id="sections"></ul>
+      </div>
+      <div id="files-side" class="hidden">
+        <ul class="list" id="files"></ul>
+      </div>
+    </aside>
+    <section class="card editor" id="editor">
+      <div id="empty" class="empty">Choose a text on the left.</div>
+      <div id="pane" class="hidden">
+        <h2 id="title"></h2>
+        <div class="meta"><span id="path"></span><a id="open" target="_blank" rel="noopener">Open this page in the app</a></div>
+        <textarea id="text" class="text" spellcheck="true"></textarea>
+        <div class="bar">
+          <input id="note" type="text" maxlength="200" placeholder="What changed (goes into the commit message, optional)">
+          <button id="revert" type="button">Revert</button>
+          <button id="save" class="primary" type="button">Save</button>
+        </div>
+        <div id="status" class="status hidden"></div>
+        <p class="hint">Paragraphs are separated by blank lines. Tibetan words in the text must be words of the course (they become tappable); the build warns about others. Ctrl+S saves.</p>
+      </div>
+    </section>
+  </div>
+</main>
+<script src="./config.js"></script>
+<script type="module" src="./src/edit/editor.js"></script>
+</body>
+</html>

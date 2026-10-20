@@ -10,6 +10,7 @@ id report-api >/dev/null 2>&1 || useradd --system --no-create-home --shell /usr/
 
 install -d -m 755 -o root -g root /opt/report-api
 install -m 644 -o root -g root "$HERE/report-api.mjs" /opt/report-api/report-api.mjs
+install -m 644 -o root -g root "$HERE/edit-api.mjs" /opt/report-api/edit-api.mjs
 install -m 644 -o root -g root "$HERE/report-api.service" /etc/systemd/system/report-api.service
 
 if [ ! -e /etc/report-api.env ]; then
@@ -19,6 +20,16 @@ if [ ! -e /etc/report-api.env ]; then
 GITHUB_TOKEN=
 GITHUB_REPO=Kotstantin108/Kagyu-tibetan
 ALLOWED_ORIGINS=https://tibetan.itjoy.space
+EOF
+fi
+# the editor page (site/edit.html, server/report-api/edit-api.mjs): add the keys once, empty = editing off
+if ! grep -q '^EDIT_PASSWORD=' /etc/report-api.env; then
+  cat >> /etc/report-api.env <<'EOF'
+# Editor page (/edit.html): the password, and a token with "Contents: write" on the repository
+# (EDIT_GITHUB_TOKEN; empty = use GITHUB_TOKEN). Empty EDIT_PASSWORD switches editing off.
+EDIT_PASSWORD=
+EDIT_GITHUB_TOKEN=
+EDIT_BRANCH=main
 EOF
 fi
 chmod 600 /etc/report-api.env

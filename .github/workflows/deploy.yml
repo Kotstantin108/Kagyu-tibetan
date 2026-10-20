@@ -23,11 +23,15 @@ env:
 jobs:
   check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # to commit the rebuilt site/data back (edits from the editor page change content/ only)
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Build the course data from content/
+        run: node scripts/build-content.mjs
       - name: Validate course data
         run: node scripts/validate.mjs
       - name: Run unit tests
@@ -36,6 +40,18 @@ jobs:
         run: npm install --no-save playwright && npx playwright install --with-deps chromium
       - name: Browser smoke test
         run: node scripts/smoke.mjs
+      - name: Commit the rebuilt data back
+        # A save on the editor page (site/edit.html) commits content/ only; the generated
+        # site/data and CONTENT_REVIEW.md are kept in the repository, so put them back in
+        # sync here. The push uses GITHUB_TOKEN and therefore starts no new run.
+        if: github.event_name == 'push'
+        run: |
+          if git diff --quiet -- site/data CONTENT_REVIEW.md; then echo "site/data is up to date"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data CONTENT_REVIEW.md
+          git commit -m "Rebuild the course data after a content edit"
+          git push || echo "::warning::could not push the rebuilt data (main moved on?); the next build will redo it"
 
   deploy-server:
     needs: check
@@ -47,6 +63,11 @@ jobs:
       url: https://tibetan.itjoy.space/
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the course data from content/
+        run: node scripts/build-content.mjs
       - name: Stamp the version
         run: |
           sed -i "s/VERSION: 'dev'/VERSION: '${GITHUB_SHA::7}'/" site/config.js
@@ -75,6 +96,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the course data from content/
+        run: node scripts/build-content.mjs
       - name: Stamp the version
         run: |
           sed -i "s/VERSION: 'dev'/VERSION: '${GITHUB_SHA::7}'/" site/config.js
