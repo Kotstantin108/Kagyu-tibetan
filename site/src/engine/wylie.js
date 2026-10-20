@@ -29,7 +29,7 @@ const PREFIX_COMBOS = {
 };
 const SUFFIXES = new Set(['g', 'ng', 'd', 'n', 'b', 'm', "'", 'r', 'l', 's']);
 
-function parseSyllable(syl) {
+export function parseSyllable(syl) {
   const units = [];
   let cur = null;
   for (const ch of syl) {
@@ -59,7 +59,7 @@ function parseSyllable(syl) {
   return units;
 }
 
-function rootIndex(units) {
+export function rootIndex(units) {
   const n = units.length;
   if (n <= 1) return 0;
   const u0 = units[0];

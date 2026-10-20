@@ -353,6 +353,8 @@ export default {
     themeToggle: 'Dark theme',
     tileMode: 'Tiles',
     showWylie: 'Show Wylie under the tiles',
+    showPhon: 'Show pronunciation under the tiles',
+    phonHint: 'How the word is read in Lhasa Tibetan, in the simplified THL transcription used in books on Buddhism: ö and ü as in German, é as in French, ng as in “sing”; a word is written as one piece, without tones.',
     data: 'Your progress',
     export: 'Export to a file',
     import: 'Import from a file',

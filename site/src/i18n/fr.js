@@ -353,6 +353,8 @@ export default {
     themeToggle: 'Thème sombre',
     tileMode: 'Tuiles',
     showWylie: 'Afficher le Wylie sous les tuiles',
+    showPhon: 'Afficher la prononciation sous les tuiles',
+    phonHint: 'Comment le mot se lit en tibétain de Lhassa, dans la transcription simplifiée THL des livres sur le bouddhisme : ö et ü comme en allemand, é comme en français, ng comme dans l’anglais « sing » ; le mot s’écrit d’un seul tenant, sans les tons.',
     data: 'Vos progrès',
     export: 'Exporter dans un fichier',
     import: 'Importer depuis un fichier',

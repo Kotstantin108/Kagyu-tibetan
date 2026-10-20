@@ -12,6 +12,7 @@ import { courseModules, allUnits, findUnit, unitStep, unitPassed, unitAllKnown, 
 import { startCourse, setCanRead, setCurrentUnit, seeUnitWords, setUnitStep, setSetting, wordStatus, markTheory, STATUS } from '../engine/progress.js';
 import { PARTS, partOf, partId, partSigns, partNewItems, examPassed, ALPHABET_MODULE, ALPHA_STEPS, ALPHA_CHECK_SIZE, FIRST_SENTENCES, FIRST_SENTENCES_PASS } from '../engine/alphabet.js';
 import { toWylie } from '../engine/wylie.js';
+import { toPhonetics } from '../engine/phonetics.js';
 import { renderDrill } from './drill.js';
 import { contentWords } from '../engine/next.js';
 import { effectiveStreak, localDay } from '../engine/streak.js';
@@ -142,7 +143,7 @@ function showPieceWords(ctx, ids) {
   const { data, t } = ctx;
   const rows = ids.filter((id) => data.words[id]).map((id) => data.words[id]).map((w, i) => h('div', { class: 'theory-word' },
     h('p', { class: 'big-tib' }, w.tib, ' ', audioButton(ctx, `w-${ids.filter((id) => data.words[id])[i]}`, { small: true }), ' ', spellButton(ctx, w.tib)),
-    h('div', { class: 'wylie' }, w.wylie, w.pos ? ` · ${w.pos}` : ''),
+    h('div', { class: 'wylie' }, w.wylie, ' · ', h('span', { class: 'phon' }, toPhonetics(w.tib)), w.pos ? ` · ${w.pos}` : ''),
     h('p', { class: 'tr' }, pickTr(w.tr, ctx.lang).text),
   ));
   if (!rows.length) return;
@@ -650,7 +651,7 @@ function renderWords(root, ctx, unit) {
         spellButton(ctx, w.tib),
         h('span', { class: `status-dot ${st}`, title: t(`status.${st}`) }),
       ),
-      h('div', { class: 'wylie' }, w.wylie, ' · ', w.pos),
+      h('div', { class: 'wylie' }, w.wylie, ' · ', h('span', { class: 'phon' }, toPhonetics(w.tib)), ' · ', w.pos),
       h('div', { class: 'tr' }, pickTr(w.tr, ctx.lang).text),
       example ? h('div', { class: 'example' }, h('span', { class: 'tib' }, renderTib(example.words, dict)), h('span', { class: 'tr' }, pickTr(example.tr, ctx.lang).text)) : null,
     ));

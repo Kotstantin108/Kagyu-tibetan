@@ -353,6 +353,8 @@ export default {
     themeToggle: 'Ciemny motyw',
     tileMode: 'Kafelki',
     showWylie: 'Pokazuj Wylie pod kafelkami',
+    showPhon: 'Pokazuj wymowę pod kafelkami',
+    phonHint: 'Jak słowo czyta się po lhaskim, w uproszczonej łacińskiej transkrypcji THL używanej w książkach o buddyzmie: ö i ü jak w niemieckim, é jak we francuskim, ng jak w angielskim „sing”; słowo pisze się łącznie, bez tonów.',
     data: 'Twoje postępy',
     export: 'Eksportuj do pliku',
     import: 'Importuj z pliku',

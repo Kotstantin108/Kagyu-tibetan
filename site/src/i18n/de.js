@@ -353,6 +353,8 @@ export default {
     themeToggle: 'Dunkles Design',
     tileMode: 'Kacheln',
     showWylie: 'Wylie unter den Kacheln anzeigen',
+    showPhon: 'Aussprache unter den Kacheln anzeigen',
+    phonHint: 'Wie das Wort im Lhasa-Tibetischen gelesen wird, in der vereinfachten THL-Umschrift der Buddhismus-Literatur: ö und ü wie im Deutschen, é wie im Französischen, ng wie in „singen“; ein Wort wird zusammengeschrieben, ohne Töne.',
     data: 'Dein Fortschritt',
     export: 'In Datei exportieren',
     import: 'Aus Datei importieren',

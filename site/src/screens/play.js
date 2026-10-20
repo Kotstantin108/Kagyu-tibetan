@@ -17,6 +17,7 @@ import { pickNext, contentWords, unknownWords, dueWordsIn } from '../engine/next
 import { checkAnswer, shuffle, checkWylie, pickOptions, pickTibOptions } from '../engine/check.js';
 import { renderTib, splitSyllables, fuseParticle, stripTsheg } from '../engine/tib.js';
 import { toWylie, syllableToWylie, CONSONANT_TABLE, VOWEL_TABLE } from '../engine/wylie.js';
+import { toPhonetics, phoneticSyllables } from '../engine/phonetics.js';
 import { revealWord, wordError, recordSolved, setWordStatus, setSetting, wordStatus, markStepDone, setUnitStep, recordCheck, STATUS } from '../engine/progress.js';
 import { registerSolve, localDay } from '../engine/streak.js';
 import { hardWords } from '../engine/hard.js';
@@ -137,6 +138,9 @@ export function renderPlay(root, ctx, mode = null) {
     return EXERCISES.includes(settings().exercise) ? settings().exercise : 'tiles';
   }
   function showWylie() { return settings().showWylie === true; }
+  function showPhon() { return settings().showPhon === true; }
+  /** Either line under the tiles (hidden in the check, where the tiles carry no hints). */
+  function tileSub() { return !inCheck && (showWylie() || showPhon()); }
 
   function setExercise(ex) {
     if (ex === exercise()) return;
@@ -147,13 +151,24 @@ export function renderPlay(root, ctx, mode = null) {
   function buildTiles() {
     const out = [];
     let k = 0;
+    // the pronunciation of a fused particle is the last syllable of the fused form (bla ma + s -> la mé),
+    // so the word before it is kept while the particles are glued on
+    let fusedTib = '';
     for (const id of pick.sentence.words) {
       const w = dict[id];
       if (!w || w.service) continue;
+      if (w.fused && fusedTib) {
+        fusedTib = fuseParticle(fusedTib, w.tib);
+        const syls = phoneticSyllables(fusedTib);
+        out.push({ key: k++, text: w.tib, wylie: toWylie(w.tib), phon: syls[syls.length - 1] || '', wordId: id });
+        continue;
+      }
+      fusedTib = w.tib;
       if (tileMode() === 'syllables' && !w.fused) {
-        for (const s of splitSyllables(w.tib)) out.push({ key: k++, text: s, wylie: syllableToWylie(stripTsheg(s)), wordId: id });
+        const phon = phoneticSyllables(w.tib);
+        splitSyllables(w.tib).forEach((s, i) => out.push({ key: k++, text: s, wylie: syllableToWylie(stripTsheg(s)), phon: phon[i] || '', wordId: id }));
       } else {
-        out.push({ key: k++, text: w.tib, wylie: toWylie(w.tib), wordId: id });
+        out.push({ key: k++, text: w.tib, wylie: toWylie(w.tib), phon: toPhonetics(w.tib), wordId: id });
       }
     }
     return out;
@@ -360,7 +375,7 @@ export function renderPlay(root, ctx, mode = null) {
     const report = reportControl(ctx, { kind: 'word', id: wordId, tib: w.tib, translation: tr.text, fallbackUrl: wordIssueUrl(ctx.config, wordId, w, tr.text, ctx.lang) });
     close = popover(h('div', {},
       h('p', { class: 'big-tib' }, w.tib, ' ', audioButton(ctx, `w-${wordId}`), ' ', spellButton(ctx, w.tib)),
-      h('div', { class: 'wylie' }, w.wylie, ' · ', t(`status.${wordStatus(store.get(), wordId)}`)),
+      h('div', { class: 'wylie' }, w.wylie, ' · ', h('span', { class: 'phon' }, toPhonetics(w.tib)), ' · ', t(`status.${wordStatus(store.get(), wordId)}`)),
       h('p', { class: 'tr' }, tr.text, tr.fallback ? ` (${tr.lang})` : ''),
       h('div', { class: 'buttons' },
         h('button', { type: 'button', class: 'action primary', onClick: () => mark(STATUS.KNOWN) }, t('play.know')),
@@ -420,7 +435,7 @@ export function renderPlay(root, ctx, mode = null) {
     const n = from === 'rack' ? rack.indexOf(key) + 1 : 0;
     const btn = h('button', {
       type: 'button',
-      class: 'tile' + (isNew(x.wordId) && !complete ? ' new' : '') + (hintedKey === key && from === 'rack' ? ' hinted' : '') + (showWylie() && !inCheck ? ' with-wylie' : ''),
+      class: 'tile' + (isNew(x.wordId) && !complete ? ' new' : '') + (hintedKey === key && from === 'rack' ? ' hinted' : '') + (tileSub() ? ' with-wylie' : ''),
       'aria-label': x.text + (n && n <= 9 ? ` (${n})` : ''),
       onClick: () => {
         if (complete) return;
@@ -429,7 +444,7 @@ export function renderPlay(root, ctx, mode = null) {
         hintedKey = null;
         render();
       },
-    }, h('span', { class: 'tile-text' }, x.text), showWylie() && !inCheck ? h('span', { class: 'tile-wylie' }, x.wylie) : null);
+    }, h('span', { class: 'tile-text' }, x.text), showWylie() && !inCheck ? h('span', { class: 'tile-wylie' }, x.wylie) : null, showPhon() && !inCheck ? h('span', { class: 'tile-phon phon' }, x.phon) : null);
     const help = inCheck ? null : h('button', { type: 'button', class: 'tile-help', 'aria-label': t('play.wordHelp'), onClick: (e) => { e.stopPropagation(); showWord(x.wordId); } }, '?');
     return h('span', { class: 'tile-wrap' }, btn, help);
   }

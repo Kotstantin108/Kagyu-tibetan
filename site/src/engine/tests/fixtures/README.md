@@ -26,3 +26,4 @@ Rules:
 | progress-2026-10-19c.json | Yak Tashi | settings `tashi` (the mascot is shown), `tashiMet` (he introduced himself) |
 | progress-2026-10-19d.json | the theory pages | `course.theory` (modules whose theory page was read) |
 | progress-2026-10-20.json | native recordings by default | setting `recordings` (the native recordings; `voice` now means the synthesised clips only) |
+| progress-2026-10-20b.json | pronunciation under the tiles | setting `showPhon` (the THL pronunciation under the tiles, beside `showWylie`) |

@@ -4,6 +4,7 @@ import { h, clear, audioButton, spellButton } from '../ui.js';
 import { pickTr } from '../i18n/index.js';
 import { setWordStatus, wordStatus, isDue, STATUS } from '../engine/progress.js';
 import { renderTib } from '../engine/tib.js';
+import { toPhonetics, foldPhonetics } from '../engine/phonetics.js';
 import { localDay } from '../engine/streak.js';
 import { wordIssueUrl, reportControl } from '../report.js';
 
@@ -32,6 +33,7 @@ export function renderDict(root, ctx) {
     if (!q) return true;
     if (w.tib.includes(q)) return true;
     if (w.wylie.toLowerCase().includes(q)) return true;
+    if (foldPhonetics(toPhonetics(w.tib)).includes(foldPhonetics(q))) return true;
     return Object.values(w.tr).some((s) => s && s.toLowerCase().includes(q));
   }
 
@@ -54,7 +56,7 @@ export function renderDict(root, ctx) {
     const tr = pickTr(w.tr, ctx.lang);
     const st = wordStatus(p, id);
     const e = p.words[id];
-    let meta = `${w.wylie} · ${w.pos} · ${t(`status.${st}`)}`;
+    let meta = ` · ${w.pos} · ${t(`status.${st}`)}`;
     if (st === STATUS.KNOWN && e && e.due) meta += isDue(p, id, today) ? ` · ${t('dict.dueNow')}` : ` · ${t('dict.dueOn', { date: e.due })}`;
     const examples = examplesOf.get(id) || [];
     const exBox = h('div', { class: 'examples', hidden: true });
@@ -77,7 +79,7 @@ export function renderDict(root, ctx) {
       h('div', {},
         h('div', { class: 'tib' }, w.tib, ' ', audioButton(ctx, `w-${id}`, { small: true }), ' ', spellButton(ctx, w.tib)),
         h('div', { class: 'tr' }, tr.text, tr.fallback ? ` (${tr.lang})` : ''),
-        h('div', { class: 'meta' }, meta),
+        h('div', { class: 'meta' }, w.wylie, ' · ', h('span', { class: 'phon' }, toPhonetics(w.tib)), meta),
         exBtn,
         exBox,
       ),
