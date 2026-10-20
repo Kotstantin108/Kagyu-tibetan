@@ -12,7 +12,7 @@ The particle པ་ "one associated with" turns a word into the person connected
 
 The members of a list are joined by དང་ "and": དགེ་བ་དང་མི་དགེ་བ་ "virtue and non-virtue", ཐབས་དང་ཤེས་རབ་ "method and wisdom". A list often closes with a number totalling its members, where English adds nothing: སངས་རྒྱས་དང་ཆོས་དང་དགེ་འདུན་གསུམ་ "Buddha, Dharma, and Saṅgha". An open list ends with ལ་སོགས་པ་ "and so forth", often shortened to སོགས་ "etc.": སྦྱིན་པ་དང་ཚུལ་ཁྲིམས་དང་བཟོད་པ་ལ་སོགས་པ་ "generosity, discipline, patience, and so forth".
 
-After words of possession, separation and relation the same དང་ "and" means "with" or "from": དཔལ་དང་ལྡན་པ་ "endowed with glory", སྤྲོས་པ་དང་བྲལ་བ་ "free from mental constructs", བླ་མ་དང་འབྲེལ་བ་ "associated with the guru".
+After words of possession, separation and relation, the same དང་ "and" means "with" or "from": དཔལ་དང་ལྡན་པ་ "endowed with glory", སྤྲོས་པ་དང་བྲལ་བ་ "free from mental constructs", བླ་མ་དང་འབྲེལ་བ་ "associated with the guru".
 
 ## lesson-02
 
