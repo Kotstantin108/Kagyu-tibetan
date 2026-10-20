@@ -79,121 +79,121 @@
   {
     "id": "bialek-01",
     "name": {
-      "ru": "Bialek 1. Именная группа",
-      "en": "Bialek 1. The noun phrase",
-      "de": "Bialek 1. Die Nominalphrase",
-      "fr": "Bialek 1. Le groupe nominal",
-      "pl": "Bialek 1. Grupa nominalna"
+      "ru": "Урок 8. Именная группа",
+      "en": "Lesson 8. The noun phrase",
+      "de": "Lektion 8. Die Nominalphrase",
+      "fr": "Leçon 8. Le groupe nominal",
+      "pl": "Lekcja 8. Grupa nominalna"
     },
     "order": 8
   },
   {
     "id": "bialek-02",
     "name": {
-      "ru": "Bialek 2. Порядок слов, связка yin и число",
-      "en": "Bialek 2. Word order, the copula yin and number",
-      "de": "Bialek 2. Wortstellung, die Kopula yin und der Numerus",
-      "fr": "Bialek 2. L’ordre des mots, la copule yin et le nombre",
-      "pl": "Bialek 2. Szyk zdania, łącznik yin i liczba"
+      "ru": "Урок 9. Порядок слов, связка yin и число",
+      "en": "Lesson 9. Word order, the copula yin and number",
+      "de": "Lektion 9. Wortstellung, die Kopula yin und der Numerus",
+      "fr": "Leçon 9. L’ordre des mots, la copule yin et le nombre",
+      "pl": "Lekcja 9. Szyk zdania, łącznik yin i liczba"
     },
     "order": 9
   },
   {
     "id": "bialek-03",
     "name": {
-      "ru": "Bialek 3. Локатив, датив, генитив и связка yod",
-      "en": "Bialek 3. Locative, dative, genitive and the copula yod",
-      "de": "Bialek 3. Lokativ, Dativ, Genitiv und die Kopula yod",
-      "fr": "Bialek 3. Locatif, datif, génitif et la copule yod",
-      "pl": "Bialek 3. Miejscownik, celownik, dopełniacz i łącznik yod"
+      "ru": "Урок 10. Локатив, датив, генитив и связка yod",
+      "en": "Lesson 10. Locative, dative, genitive and the copula yod",
+      "de": "Lektion 10. Lokativ, Dativ, Genitiv und die Kopula yod",
+      "fr": "Leçon 10. Locatif, datif, génitif et la copule yod",
+      "pl": "Lekcja 10. Miejscownik, celownik, dopełniacz i łącznik yod"
     },
     "order": 10
   },
   {
     "id": "bialek-04",
     "name": {
-      "ru": "Bialek 4. Непереходные глаголы и терминатив",
-      "en": "Bialek 4. Intransitive verbs and the terminative",
-      "de": "Bialek 4. Intransitive Verben und der Terminativ",
-      "fr": "Bialek 4. Les verbes intransitifs et le terminatif",
-      "pl": "Bialek 4. Czasowniki nieprzechodnie i terminatyw"
+      "ru": "Урок 11. Непереходные глаголы и терминатив",
+      "en": "Lesson 11. Intransitive verbs and the terminative",
+      "de": "Lektion 11. Intransitive Verben und der Terminativ",
+      "fr": "Leçon 11. Les verbes intransitifs et le terminatif",
+      "pl": "Lekcja 11. Czasowniki nieprzechodnie i terminatyw"
     },
     "order": 11
   },
   {
     "id": "bialek-05",
     "name": {
-      "ru": "Bialek 5. Переходные глаголы и эргатив",
-      "en": "Bialek 5. Transitive verbs and the ergative",
-      "de": "Bialek 5. Transitive Verben und der Ergativ",
-      "fr": "Bialek 5. Les verbes transitifs et l’ergatif",
-      "pl": "Bialek 5. Czasowniki przechodnie i ergatyw"
+      "ru": "Урок 12. Переходные глаголы и эргатив",
+      "en": "Lesson 12. Transitive verbs and the ergative",
+      "de": "Lektion 12. Transitive Verben und der Ergativ",
+      "fr": "Leçon 12. Les verbes transitifs et l’ergatif",
+      "pl": "Lekcja 12. Czasowniki przechodnie i ergatyw"
     },
     "order": 12
   },
   {
     "id": "bialek-06",
     "name": {
-      "ru": "Bialek 6. Элатив, делатив, отрицание и повеление",
-      "en": "Bialek 6. Elative, delative, negation and the imperative",
-      "de": "Bialek 6. Elativ, Delativ, Verneinung und Imperativ",
-      "fr": "Bialek 6. Élatif, délatif, négation et impératif",
-      "pl": "Bialek 6. Elatyw, delatyw, przeczenie i tryb rozkazujący"
+      "ru": "Урок 13. Элатив, делатив, отрицание и повеление",
+      "en": "Lesson 13. Elative, delative, negation and the imperative",
+      "de": "Lektion 13. Elativ, Delativ, Verneinung und Imperativ",
+      "fr": "Leçon 13. Élatif, délatif, négation et impératif",
+      "pl": "Lekcja 13. Elatyw, delatyw, przeczenie i tryb rozkazujący"
     },
     "order": 13
   },
   {
     "id": "bialek-07",
     "name": {
-      "ru": "Bialek 7. Именные частицы",
-      "en": "Bialek 7. Nominal particles",
-      "de": "Bialek 7. Nominalpartikeln",
-      "fr": "Bialek 7. Les particules nominales",
-      "pl": "Bialek 7. Partykuły nominalne"
+      "ru": "Урок 14. Именные частицы",
+      "en": "Lesson 14. Nominal particles",
+      "de": "Lektion 14. Nominalpartikeln",
+      "fr": "Leçon 14. Les particules nominales",
+      "pl": "Lekcja 14. Partykuły nominalne"
     },
     "order": 14
   },
   {
     "id": "bialek-08",
     "name": {
-      "ru": "Bialek 8. Конвербы, сочинительная частица и регистр речи",
-      "en": "Bialek 8. Converbs, the coordinative particle and speech register",
-      "de": "Bialek 8. Konverben, die koordinierende Partikel und das Sprachregister",
-      "fr": "Bialek 8. Converbes, particule de coordination et registre de langue",
-      "pl": "Bialek 8. Konwerby, partykuła łącząca i rejestr mowy"
+      "ru": "Урок 15. Конвербы, сочинительная частица и регистр речи",
+      "en": "Lesson 15. Converbs, the coordinative particle and speech register",
+      "de": "Lektion 15. Konverben, die koordinierende Partikel und das Sprachregister",
+      "fr": "Leçon 15. Converbes, particule de coordination et registre de langue",
+      "pl": "Lekcja 15. Konwerby, partykuła łącząca i rejestr mowy"
     },
     "order": 15
   },
   {
     "id": "bialek-09",
     "name": {
-      "ru": "Bialek 9. Герундиальная, фокусная и уменьшительная частицы",
-      "en": "Bialek 9. The gerundial, focus and diminutive particles",
-      "de": "Bialek 9. Gerundial-, Fokus- und Diminutivpartikel",
-      "fr": "Bialek 9. Particules gérondive, de focalisation et diminutive",
-      "pl": "Bialek 9. Partykuły gerundialna, fokusowa i zdrabniająca"
+      "ru": "Урок 16. Герундиальная, фокусная и уменьшительная частицы",
+      "en": "Lesson 16. The gerundial, focus and diminutive particles",
+      "de": "Lektion 16. Gerundial-, Fokus- und Diminutivpartikel",
+      "fr": "Leçon 16. Particules gérondive, de focalisation et diminutive",
+      "pl": "Lekcja 16. Partykuły gerundialna, fokusowa i zdrabniająca"
     },
     "order": 16
   },
   {
     "id": "bialek-10",
     "name": {
-      "ru": "Bialek 10. Уступительная частица и послелоги",
-      "en": "Bialek 10. The concessive particle and postpositions",
-      "de": "Bialek 10. Die Konzessivpartikel und Postpositionen",
-      "fr": "Bialek 10. La particule concessive et les postpositions",
-      "pl": "Bialek 10. Partykuła przyzwalająca i poimki"
+      "ru": "Урок 17. Уступительная частица и послелоги",
+      "en": "Lesson 17. The concessive particle and postpositions",
+      "de": "Lektion 17. Die Konzessivpartikel und Postpositionen",
+      "fr": "Leçon 17. La particule concessive et les postpositions",
+      "pl": "Lekcja 17. Partykuła przyzwalająca i poimki"
     },
     "order": 17
   },
   {
     "id": "bialek-11",
     "name": {
-      "ru": "Bialek 11. Вопросы, номинализация и относительные обороты",
-      "en": "Bialek 11. Questions, nominalisation and relative clauses",
-      "de": "Bialek 11. Fragen, Nominalisierung und Relativsätze",
-      "fr": "Bialek 11. Questions, nominalisation et propositions relatives",
-      "pl": "Bialek 11. Pytania, nominalizacja i zdania względne"
+      "ru": "Урок 18. Вопросы, номинализация и относительные обороты",
+      "en": "Lesson 18. Questions, nominalisation and relative clauses",
+      "de": "Lektion 18. Fragen, Nominalisierung und Relativsätze",
+      "fr": "Leçon 18. Questions, nominalisation et propositions relatives",
+      "pl": "Lekcja 18. Pytania, nominalizacja i zdania względne"
     },
     "order": 18
   }

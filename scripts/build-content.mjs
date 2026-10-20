@@ -41,7 +41,6 @@ import { parseIntroMarkdown, tokenizeParagraph } from '../site/src/engine/theory
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
 const OUT = join(ROOT, 'site', 'data');
-const BOOK = 'RYI Grammar Handbook';
 
 const errors = [];
 const warnings = [];
@@ -72,19 +71,17 @@ function normTib(s) {
   return t;
 }
 
-function lessonLabel(setId) {
-  const m = setId && setId.match(/(\d+)/);
-  return m ? `lesson ${Number(m[1])}` : setId;
-}
-
 // ---- sets ----
 const sets = readRows('sets').map((r, i) => {
-  const [id, en, ru, book] = r.cols;
-  return { id, name: { ru, en }, order: i + 1, book: book || BOOK };
+  const [id, en, ru] = r.cols;
+  return { id, name: { ru, en }, order: i + 1 };
 });
 const setOrder = new Map(sets.map((s) => [s.id, s.order]));
-const setBook = new Map(sets.map((s) => [s.id, s.book]));
-for (const s of sets) delete s.book;
+
+/** "lesson N" by the set's place in the course (the source line of a word or sentence; the page number is a separate field). */
+function lessonLabel(setId) {
+  return setOrder.has(setId) ? `lesson ${setOrder.get(setId)}` : setId;
+}
 
 // ---- words ----
 const words = {};
@@ -116,8 +113,9 @@ for (const r of readRows('words')) {
     wylie,
     pos: pos || 'noun',
     set: r.set,
-    source: `${setBook.get(r.set) || BOOK}, ${lessonLabel(r.set)}, p. ${page || '?'}`,
-    trOrigin: { ru: 'machine', en: 'textbook' },
+    source: lessonLabel(r.set),
+    page: page || '',
+    trOrigin: { ru: 'machine', en: 'original' },
   };
   if (flags.fused) w.fused = true;
   if (flags.lemma) w.lemma = normTib(flags.lemma);
@@ -214,8 +212,9 @@ for (const r of readRows('sentences')) {
     words: ids,
     tr: { ru, en },
     set: r.set,
-    source: `${setBook.get(r.set) || BOOK}, ${lessonLabel(r.set)}, p. ${page || '?'}`,
-    trOrigin: { ru: 'machine', en: enOrigin === 'textbook' ? 'textbook' : 'machine' },
+    source: lessonLabel(r.set),
+    page: page || '',
+    trOrigin: { ru: 'machine', en: enOrigin === 'textbook' ? 'original' : 'machine' },
   };
   if (noteEn || noteRu) s.note = { ru: noteRu || '', en: noteEn || '' };
   if (!en) warnings.push(`${where}: no en`);
