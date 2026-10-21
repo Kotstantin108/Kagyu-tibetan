@@ -184,6 +184,7 @@ h1, h2, h3, .prompt, .brand-title, .stat .num { font-family: var(--serif); }
 .prompt.tib { font-family: var(--tib-font); font-weight: 400; font-size: clamp(1.7rem, 6vw, 2.4rem); line-height: 1.9; }
 .helper { margin: 0; color: var(--muted); font-size: .88rem; }
 .fine { font-size: .74rem; color: var(--fine); margin: 6px 0 0; }
+.course-lead { margin: 0 0 14px; font-size: .8rem; }
 .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 18px 0 8px; }
 .section-head h2 { margin: 0; font-family: var(--sans); font-size: .9rem; letter-spacing: .02em; color: var(--heading); }
 .counter { color: var(--muted); font-size: .76rem; }

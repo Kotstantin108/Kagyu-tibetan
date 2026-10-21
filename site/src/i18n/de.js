@@ -92,6 +92,7 @@ export default {
   },
   course: {
     part: 'Teil {n} von {total}',
+    lead: 'Klassisches Tibetisch: die Schriftsprache der alten Texte, ihre Grammatik und das Lesen. Nicht das heute gesprochene Tibetisch.',
     continueLabel: 'Weiter',
     continue: 'Weiter',
     start: 'Starten',
@@ -263,7 +264,7 @@ export default {
     tipRead: 'Noch neu in der Schrift?',
     tipReadLink: 'Beginne mit den Buchstaben und Silben.',
     title: 'Willkommen!',
-    text: 'Du lernst klassisches Tibetisch an den Sätzen des Kurses. Der Kurs führt dich Teil für Teil; unter „Üben“ wählst du die Übungen selbst.',
+    text: 'Du lernst klassisches Tibetisch, die Schriftsprache der alten Texte (nicht das heute gesprochene Tibetisch), an den Sätzen des Kurses. Der Kurs führt dich Teil für Teil; unter „Üben“ wählst du die Übungen selbst.',
     tip1: 'Goldene Kacheln sind neue Wörter. Tippe auf das ? einer Kachel, um die Bedeutung zu sehen.',
     tip2: 'Drei Sätze am Tag halten deine Serie am Leben.',
     tip3: 'Bekannte Wörter kommen nach 1, 3, 7, 14 Tagen usw. zur Wiederholung zurück.',

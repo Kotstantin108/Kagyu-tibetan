@@ -92,6 +92,7 @@ export default {
   },
   course: {
     part: 'Partie {n} sur {total}',
+    lead: 'Le tibétain classique : la langue écrite des textes anciens, sa grammaire et sa lecture. Pas le tibétain parlé d’aujourd’hui.',
     continueLabel: 'Continuer',
     continue: 'Continuer',
     start: 'Commencer',
@@ -263,7 +264,7 @@ export default {
     tipRead: 'L’écriture est nouvelle pour vous ?',
     tipReadLink: 'Commencez par les lettres et les syllabes.',
     title: 'Bienvenue !',
-    text: 'Vous apprendrez le tibétain classique sur les phrases du cours. Le cours vous guide partie par partie ; dans « Entraînement » vous choisissez les exercices vous-même.',
+    text: 'Vous apprendrez le tibétain classique, la langue écrite des textes anciens (pas le tibétain parlé d’aujourd’hui), sur les phrases du cours. Le cours vous guide partie par partie ; dans « Entraînement » vous choisissez les exercices vous-même.',
     tip1: 'Les tuiles dorées sont les mots nouveaux. Touchez le ? d’une tuile pour voir son sens.',
     tip2: 'Trois phrases par jour entretiennent votre série.',
     tip3: 'Les mots connus reviennent en révision après 1, 3, 7, 14 jours et ainsi de suite.',

@@ -235,7 +235,7 @@ function renderMap(root, ctx) {
     const { passed, total } = courseProgress(course, p);
     const due = dueCount(p, data.words);
 
-    const top = h('div', { class: 'panel-body' });
+    const top = h('div', { class: 'panel-body' }, h('p', { class: 'fine course-lead' }, t('course.lead')));
     if (cur) {
       const step = unitStep(p, cur);
       const theoryFirst = needsTheory(p, cur, data.intro);
