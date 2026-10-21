@@ -92,7 +92,7 @@ export default {
   },
   course: {
     part: 'Part {n} of {total}',
-    lead: 'Classical Tibetan: the written language of the old texts, its grammar and reading. Not the spoken Tibetan of today.',
+    lead: 'Classical Tibetan: the written language of the old texts, its grammar and reading.',
     continueLabel: 'Continue',
     continue: 'Continue',
     start: 'Start',
@@ -264,7 +264,7 @@ export default {
     tipRead: 'New to the script?',
     tipReadLink: 'Start with the letters and syllables.',
     title: 'Welcome!',
-    text: 'You will learn Classical Tibetan, the written language of the old texts (not the spoken Tibetan of today), from the sentences of the course. The course leads you part by part; in Practice you pick the exercises yourself.',
+    text: 'You will learn Classical Tibetan, the written language of the old texts, from the sentences of the course. The course leads you part by part; in Practice you pick the exercises yourself.',
     tip1: 'Golden tiles are new words. Tap the ? on a tile to see its meaning.',
     tip2: 'Three sentences a day keep your streak alive.',
     tip3: 'Known words come back for review after 1, 3, 7, 14 days and so on.',

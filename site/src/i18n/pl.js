@@ -92,7 +92,7 @@ export default {
   },
   course: {
     part: 'Część {n} z {total}',
-    lead: 'Klasyczny tybetański: język pisany dawnych tekstów, jego gramatyka i czytanie. Nie współczesny tybetański mówiony.',
+    lead: 'Klasyczny tybetański: język pisany dawnych tekstów, jego gramatyka i czytanie.',
     continueLabel: 'Kontynuuj',
     continue: 'Kontynuuj',
     start: 'Zacznij',
@@ -264,7 +264,7 @@ export default {
     tipRead: 'Pismo jest dla ciebie nowe?',
     tipReadLink: 'Zacznij od liter i sylab.',
     title: 'Witaj!',
-    text: 'Będziesz uczyć się klasycznego tybetańskiego, języka pisanego dawnych tekstów (nie współczesnego tybetańskiego mówionego), na zdaniach kursu. Kurs prowadzi część po części; w „Ćwiczeniach” sam wybierasz zadania.',
+    text: 'Będziesz uczyć się klasycznego tybetańskiego, języka pisanego dawnych tekstów, na zdaniach kursu. Kurs prowadzi część po części; w „Ćwiczeniach” sam wybierasz zadania.',
     tip1: 'Złote kafelki to nowe słowa. Dotknij ? na kafelku, aby zobaczyć znaczenie.',
     tip2: 'Trzy zdania dziennie podtrzymują serię.',
     tip3: 'Znane słowa wracają do powtórki po 1, 3, 7, 14 dniach i tak dalej.',
